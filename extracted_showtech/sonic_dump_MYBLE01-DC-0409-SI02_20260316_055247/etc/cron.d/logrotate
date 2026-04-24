@@ -1,3 +1,0 @@
-# Attempt to rotate system logs once every 5 minutes.
-# This wrapper will logrotate as well as cleans old archive files
-*/5 * * * * root /usr/bin/log-rotate.sh > /dev/null 2>&1

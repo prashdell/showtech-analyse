@@ -1,0 +1,121 @@
+{
+  "lesson_id": "lesson_snc_production_intelligence_20260424_200000",
+  "skill_name": "snc_intelligence_analysis",
+  "lesson_type": "production_intelligence",
+  "content": {
+    "success_patterns": [
+      "snc_memory_pattern_analysis",
+      "snc_interface_temperature_pattern",
+      "snc_service_failure_pattern",
+      "snc_platform_correlation_pattern",
+      "snc_customer_impact_pattern",
+      "snc_root_cause_pattern",
+      "snc_solution_pattern",
+      "snc_prevention_pattern"
+    ],
+    "context_factors": {
+      "source": "SNC JIRA Production Database",
+      "total_issues_processed": 5,
+      "confidence_range": "90-95%",
+      "production_deployments": "Multiple customer deployments",
+      "analysis_steps": 8,
+      "intelligence_sources": [
+        "snc_intelligence_base.json",
+        "snc_inventory.json",
+        "processed_issues.json",
+        "intelligence_analysis.json"
+      ],
+      "last_sync": "2026-04-22T10:54:04.063591",
+      "data_quality": "High - Production verified"
+    },
+    "intelligence_categories": {
+      "memory_patterns": {
+        "syncd_memory_leak": {
+          "description": "Gradual memory leak in syncd process after 7 days uptime",
+          "pattern": "Memory usage increases from 2GB to 8GB over time",
+          "platform_correlation": ["Dell S5248F", "Dell S4000"],
+          "detection": "Monitor syncd process memory growth",
+          "solution": "Service restart provides temporary relief",
+          "prevention": "Monitor memory usage >6GB threshold",
+          "customer_impact": "High - System instability",
+          "frequency": "Recurring after 7 days uptime"
+        },
+        "host_server_growth": {
+          "description": "Consistent memory growth in sonic-host-server container",
+          "pattern": "2MB/day growth pattern observed",
+          "platform_correlation": ["All platforms"],
+          "detection": "Monitor container memory trends",
+          "solution": "Container memory limits implementation",
+          "prevention": "Automated memory monitoring",
+          "customer_impact": "Medium - Performance degradation",
+          "frequency": "Daily"
+        }
+      },
+      "interface_patterns": {
+        "temperature_spikes": {
+          "description": "Interface temperature spikes causing link flaps",
+          "pattern": "Temperature >75°C triggers interface instability",
+          "platform_correlation": ["Dell S5248F", "Dell S4000"],
+          "detection": "Monitor interface temperature sensors",
+          "solution": "Check airflow and fan operation",
+          "prevention": "Maintain ambient temperature 18-27°C",
+          "customer_impact": "Critical - Link flapping",
+          "frequency": "Under high load conditions"
+        },
+        "physical_layer_degradation": {
+          "description": "Physical layer issues causing interface problems",
+          "pattern": "AMPS_LOCK/AM_LOCK failures",
+          "platform_correlation": ["Dell platforms"],
+          "detection": "Physical layer diagnostics",
+          "solution": "Hardware inspection and replacement",
+          "prevention": "Regular physical layer monitoring",
+          "customer_impact": "High - Packet loss",
+          "frequency": "Progressive degradation"
+        }
+      },
+      "service_patterns": {
+        "bgp_docker_instability": {
+          "description": "BGP docker process exits unexpectedly",
+          "pattern": "Process zebra exited unexpectedly",
+          "platform_correlation": ["All platforms", "SONiC 4.5.0"],
+          "detection": "Monitor BGP docker status",
+          "solution": "Manual docker restart of bgp container",
+          "prevention": "Monitor BGP service health",
+          "customer_impact": "High - Routing disruption",
+          "frequency": "Intermittent"
+        },
+        "container_restart_pattern": {
+          "description": "Container restart patterns indicate underlying issues",
+          "pattern": "Multiple container restarts within short timeframe",
+          "platform_correlation": ["Resource constrained platforms"],
+          "detection": "Container uptime monitoring",
+          "solution": "Resource allocation optimization",
+          "prevention": "Resource monitoring and alerts",
+          "customer_impact": "Medium - Service interruption",
+          "frequency": "Resource dependent"
+        }
+      }
+    }
+  },
+  "confidence": 0.93,
+  "impact": "high",
+  "timestamp": "2026-04-24T20:00:00.000000",
+  "execution_time": 2.8,
+  "captured_by": "snc_intelligence_integration",
+  "metadata": {
+    "source_files": [
+      "knowledge/snc_intelligence_base.json",
+      "knowledge/snc_inventory.json", 
+      "knowledge/processed_issues.json",
+      "knowledge/intelligence_analysis.json"
+    ],
+    "integration_method": "knowledge_base_merge",
+    "data_validation": "production_verified",
+    "applicable_skills": [
+      "sonic_memory_analyzer",
+      "sonic_interface_connectivity_triage",
+      "sonic_container_health_triage",
+      "sonic_service_dependency_mapping"
+    ]
+  }
+}

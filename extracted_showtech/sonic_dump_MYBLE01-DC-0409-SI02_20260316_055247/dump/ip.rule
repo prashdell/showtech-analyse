@@ -1,7 +1,0 @@
-1000:	from all lookup [l3mdev-table]
-1002:	from all lookup local
-1003:	from 10.92.56.60 lookup 5000
-1005:	from all to 10.7.7.7 lookup 5000
-1005:	from all to 10.8.8.8 lookup 5000
-32766:	from all lookup main
-32767:	from all lookup default

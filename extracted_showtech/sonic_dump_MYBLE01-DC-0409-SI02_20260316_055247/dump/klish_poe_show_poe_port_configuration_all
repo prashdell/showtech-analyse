@@ -1,7 +1,0 @@
---ts-sonic--# show poe port configuration all | no-more 
- 
----------------------------------------------------------------------------------------------------------
-              Admin                 Power Limit   Power Limit    High     Power-Up      Detection         
-Port          Mode       Priority      (mW)          Type        Power      Mode          Type           
----------------------------------------------------------------------------------------------------------
- 

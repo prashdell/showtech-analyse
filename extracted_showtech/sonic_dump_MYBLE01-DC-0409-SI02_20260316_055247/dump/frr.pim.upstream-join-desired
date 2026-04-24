@@ -1,4 +1,0 @@
-VRF: default
-Source          Group           EvalJD
-VRF: mgmt
-Source          Group           EvalJD

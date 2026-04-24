@@ -1,5 +1,0 @@
-SONIC_VERSION=4.5.0-Enterprise_Standard
-PLATFORM=x86_64-dellemc_s5248f_c3538-r0
-HWSKU=DellEMC-S5248f-P-25G-DPB
-DEVICE_TYPE=LeafRouter
-ASIC_TYPE=broadcom

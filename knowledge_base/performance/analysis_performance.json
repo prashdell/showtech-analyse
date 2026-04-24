@@ -1,0 +1,58 @@
+{
+  "analyses": [
+    {
+      "timestamp": "2026-04-24T22:03:18.877463",
+      "health_score": 8.5,
+      "total_issues": 0,
+      "critical_issues": 0,
+      "execution_time": 30.0
+    },
+    {
+      "timestamp": "2026-04-24T22:04:35.192635",
+      "health_score": 8.5,
+      "total_issues": 0,
+      "critical_issues": 0,
+      "execution_time": 30.0
+    },
+    {
+      "timestamp": "2026-04-24T22:28:14.566966",
+      "health_score": 0,
+      "total_issues": 0,
+      "critical_issues": 0,
+      "execution_time": 0
+    },
+    {
+      "timestamp": "2026-04-24T22:28:47.185570",
+      "health_score": 0,
+      "total_issues": 0,
+      "critical_issues": 0,
+      "execution_time": 0
+    },
+    {
+      "timestamp": "2026-04-24T22:29:08.107780",
+      "health_score": 0,
+      "total_issues": 0,
+      "critical_issues": 0,
+      "execution_time": 0
+    },
+    {
+      "timestamp": "2026-04-24T22:29:26.185834",
+      "health_score": 0,
+      "total_issues": 0,
+      "critical_issues": 0,
+      "execution_time": 0
+    },
+    {
+      "timestamp": "2026-04-24T22:29:26.858751",
+      "health_score": 0,
+      "total_issues": 0,
+      "critical_issues": 0,
+      "execution_time": 600.0
+    }
+  ],
+  "summary": {
+    "total_analyses": 7,
+    "average_health_score": 2.4285714285714284,
+    "last_analysis": "2026-04-24T22:29:26.858751"
+  }
+}

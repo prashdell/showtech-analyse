@@ -1,9 +1,0 @@
-
-UDP forwarding  : Disabled
-
-UDP rate limit  : 600 pps
-
-UDP forwarding enabled on the ports: TFTP , NTP , DNS , TACACS , NetBios-Name-Server , NetBios-Datagram-Server
-
-UDP forwarding disabled on the ports: 
-

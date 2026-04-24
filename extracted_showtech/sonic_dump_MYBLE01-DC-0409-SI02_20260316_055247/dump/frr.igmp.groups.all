@@ -1,8 +1,0 @@
-VRF: default
-Total IGMP groups: 0
-Watermark warn limit(Not Set): 0
-Interface        Address         Group           Mode Timer    Srcs V Uptime  
-VRF: mgmt
-Total IGMP groups: 0
-Watermark warn limit(Not Set): 0
-Interface        Address         Group           Mode Timer    Srcs V Uptime  

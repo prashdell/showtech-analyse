@@ -1,4 +1,0 @@
-VRF: default
-Interface         Address          Source           Group            Membership
-VRF: mgmt
-Interface         Address          Source           Group            Membership

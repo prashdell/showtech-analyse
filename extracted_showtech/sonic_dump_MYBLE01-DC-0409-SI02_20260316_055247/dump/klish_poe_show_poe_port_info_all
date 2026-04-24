@@ -1,8 +1,0 @@
---ts-sonic--# show poe port info all | no-more 
- 
--------------------------------------------------------------------------------------------------------------
-                Class     Class     Output   Output    Output                                Fault             
-Port          Requested  Assigned   Power    Current   Voltage   Temp    Status             Status         
-                                    (mW)      (mA)       (V)     (C)     
--------------------------------------------------------------------------------------------------------------
- 

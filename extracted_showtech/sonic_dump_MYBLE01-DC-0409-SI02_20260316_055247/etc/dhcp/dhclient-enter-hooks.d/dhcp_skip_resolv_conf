@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# DHCLIENT entry hook to restrict creating resolv.conf
-# by dhclient-script, since it is handled by hostcfgd
-#
-
-make_resolv_conf() {
-    :
-}

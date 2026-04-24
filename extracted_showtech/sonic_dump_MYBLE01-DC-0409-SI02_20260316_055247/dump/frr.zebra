@@ -1,5 +1,0 @@
-                            Route      Route      Neighbor   LSP        LSP
-VRF                         Installs   Removals    Updates   Installs   Removals
-default                          235        101          0          0          0
-mgmt                               3          0          0          0          0
-Routes purged without selection: 0

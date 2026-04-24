@@ -1,8 +1,0 @@
-VRF: default
-Codes: J -> Pim Join, I -> IGMP Report, S -> Source, * -> Inherited from (*,G), V -> VxLAN, M -> Muted
-Active Source           Group            RPT  IIF               OIL
-
-VRF: mgmt
-Codes: J -> Pim Join, I -> IGMP Report, S -> Source, * -> Inherited from (*,G), V -> VxLAN, M -> Muted
-Active Source           Group            RPT  IIF               OIL
-

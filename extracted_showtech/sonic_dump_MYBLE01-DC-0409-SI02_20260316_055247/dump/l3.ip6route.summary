@@ -1,8 +1,0 @@
-l3 ip6route show
-Unit 0, Total Number of IPv6 entries: 32768 (IPv6/64 0, IPv6/128 32768)
-Max number of ECMP paths 128
-Free IPv6 entries available: 10238 (IPv6/64 0, IPv6/128 10238)
-#     VRF     Net addr                                     Next Hop Mac        INTF MODID PORT PRIO CLASS HIT VLAN
-16384 0        fe80:0000:0000:0000:0000:0000:0000:0000/10  00:00:00:00:00:00 132827    0     0     0    2 n
-2048  0        0000:0000:0000:0000:0000:0000:0000:0000/0  00:00:00:00:00:00 132826    0     0     0    0 y
-drivshell>

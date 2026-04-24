@@ -1,4 +1,0 @@
-^(\w{3} [ :0-9]{11}|[0-9T:.+-]{32}) [._[:alnum:]-]+ radsecproxy\[[[:digit:]]+\]: (Accounting-Response|Access-(Accept|Reject)) for user [@._[:alnum:]-]+ (stationid [.:[:xdigit:]-]+ )?from [._[:alnum:]-]+( \([[:print:]]+\))? to [._[:alnum:]-]+ \([.:[:xdigit:]]+\)( operator [[:print:]]+)?$
-^(\w{3} [ :0-9]{11}|[0-9T:.+-]{32}) [._[:alnum:]-]+ radsecproxy\[[[:digit:]]+\]: Access-Accept \(response to Status-Server\) from [._[:alnum:]-]+ to [._[:alnum:]-]+ \([.:[:xdigit:]]+\)( operator [._[:alnum:]-]+)?$
-^(\w{3} [ :0-9]{11}|[0-9T:.+-]{32}) [._[:alnum:]-]+ radsecproxy\[[[:digit:]]+\]: replyh: got status server response from [._[:alnum:]-]+$
-^(\w{3} [ :0-9]{11}|[0-9T:.+-]{32}) [._[:alnum:]-]+ radsecproxy\[[[:digit:]]+\]: missing response to Access-Request for user [@._[:alnum:]-]+ (stationid [.:[:xdigit:]-]+ )?from [._[:alnum:]-]+ \([.:[:xdigit:]]+\) to [._[:alnum:]-]+$

@@ -1,9 +1,0 @@
-VLAN  SVI             L2-VNI   VXLAN-IF        # Members
-802   Vlan802         0        -               1
-1101  Vlan1101        0        -               1
-803   Vlan803         0        -               1
-1102  Vlan1102        0        -               1
-677   Vlan677         0        -               1
-2000  Vlan2000        0        -               1
-678   Vlan678         0        -               1
-809   Vlan809         0        -               1

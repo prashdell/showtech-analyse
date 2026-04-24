@@ -1,9 +1,0 @@
-# Restore preserved directories
-
-
-BACKUP_DIR=/host/backup/dir_preserve
-if [ -d ${BACKUP_DIR} ]; then
-    [ -e ${BACKUP_DIR}/dir_preserve.tar.gz ] && tar -C / -zxvf ${BACKUP_DIR}/dir_preserve.tar.gz
-    # Destroy all backup data
-    rm  -rf ${BACKUP_DIR}
-fi

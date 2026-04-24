@@ -1,2 +1,0 @@
-  11315 ?        Ssl    0:01 /sbin/dhclient -6 -pf /run/dhclient6.eth0.pid -lf /var/lib/dhcp/dhclient6.eth0.leases eth0 -nw -D LL
-2390684 ?        SN     0:00 grep dhclient
