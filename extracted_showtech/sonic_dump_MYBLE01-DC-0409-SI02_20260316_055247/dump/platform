@@ -1,0 +1,100 @@
+TlvInfo Header:
+   Id String:    TlvInfo
+   Version:      1
+   Total Length: 181
+TLV Name             Code Len Value
+-------------------- ---- --- -----
+Product Name         0x21   9 S5248F-ON
+Part Number          0x22   6 05K640
+Serial Number        0x23  20 TH05K640CET0059K0NX0
+Base MAC Address     0x24   6 B4:E9:B8:E7:CE:00
+Manufacture Date     0x25  19 09/20/2025 13:01:20
+Device Version       0x26   1 1
+Label Revision       0x27   3 A01
+Platform Name        0x28  30 X86_64-dellemc_s5248f_c3538-r0
+ONIE Version         0x29  10 3.40.1.1-9
+MAC Addresses        0x2A   2 256
+Manufacturer         0x2B   5 CET00
+Manufacture Country  0x2C   2 TH
+Vendor Name          0x2D   8 Dell EMC
+Diag Version         0x2E  11 3.40.4.1-10
+Service Tag          0x2F   7 B4RFSR3
+Vendor Extension     0xFD   4 0x00 0x00 0x02 0xA2 
+CRC-32               0xFE   4 0x8B818577
+(checksum valid)
+
+PSU    Status    LED
+-----  --------  -----
+PSU 1  OK        green
+PSU 2  OK        green
+
+PSU 1: OK
+Type: AC
+Manufacturer Id: DELL
+Model: 0D0F72A00
+Serial Number: CNLOD005812239
+Input Voltage (mV): 238700.0
+Input Current (mA): 300.0
+Input Power (mW): 70000.0
+Output Voltage (mV): 12400.0
+Output Current (mA): 4500.0
+Output Power (mW): 60000.0
+Fan Direction: Exhaust
+Fan Speed (RPM): 8280
+Temperature: 39.0
+
+PSU 2: OK
+Type: AC
+Manufacturer Id: DELL
+Model: 0D0F72A00
+Serial Number: CNLOD005812376
+Input Voltage (mV): 238700.0
+Input Current (mA): 300.0
+Input Power (mW): 50000.0
+Output Voltage (mV): 12400.0
+Output Current (mA): 3500.0
+Output Power (mW): 40000.0
+Fan Direction: Exhaust
+Fan Speed (RPM): 8280
+Temperature: 35.0
+
+Device Model : M.2 (S42) 3IE4
+Health       : 99.833%
+Temperature  : 28C
+
+              Sensor    Temperature    High TH    Low TH    Crit High TH    Crit Low TH    Warning          Timestamp
+--------------------  -------------  ---------  --------  --------------  -------------  ---------  -----------------
+        CPU On-board             25       90.0         0            94.0            N/A      False  20260316 05:55:16
+       ASIC On-board             25       78.0         0            80.0            N/A      False  20260316 05:55:17
+   System Front Left             19       64.0         0            67.0            N/A      False  20260316 05:55:19
+ System Front Middle             20        N/A         0             N/A            N/A      False  20260316 05:55:20
+  System Front Right             18        N/A         0             N/A            N/A      False  20260316 05:55:21
+Inlet Airflow Sensor             18        N/A         0             N/A            N/A      False  20260316 05:55:21
+ PSU1 Airflow Sensor             19        N/A         0             N/A            N/A      False  20260316 05:55:22
+ PSU2 Airflow Sensor             21        N/A         0             N/A            N/A      False  20260316 05:55:23
+
+  Drawer    LED          FAN    Speed    Direction    Presence    Status          Timestamp
+--------  -----  -----------  -------  -----------  ----------  --------  -----------------
+FanTray1    off        FAN 1  8880RPM      exhaust     Present        OK  20260316 05:55:01
+FanTray1    off        FAN 2  7800RPM      exhaust     Present        OK  20260316 05:55:02
+FanTray2    off        FAN 3  8880RPM      exhaust     Present        OK  20260316 05:55:04
+FanTray2    off        FAN 4  7680RPM      exhaust     Present        OK  20260316 05:55:05
+FanTray3    off        FAN 5  8760RPM      exhaust     Present        OK  20260316 05:55:09
+FanTray3    off        FAN 6  7920RPM      exhaust     Present        OK  20260316 05:55:10
+FanTray4    off        FAN 7  8760RPM      exhaust     Present        OK  20260316 05:55:12
+FanTray4    off        FAN 8  7800RPM      exhaust     Present        OK  20260316 05:55:12
+     N/A    off  PSU 1 FAN 1  8280RPM      exhaust     Present        OK  20260316 05:55:13
+     N/A    off  PSU 2 FAN 1  8280RPM      exhaust     Present        OK  20260316 05:55:14
+
+I2C error stats collection is not supported on this platform
+
+Chassis    Module    Component         Version      Description
+---------  --------  ----------------  -----------  ---------------------------------------------------------------------------------------------------------
+S5248F-ON  N/A       BIOS              3.40.0.9-17  Performs initialization of hardware components during booting
+                     FPGA              3.4          Used for managing the system LEDs
+                     BMC               1.08         Platform management controller for on-board temperature monitoring, in-chassis power, Fan and LED control
+                     System CPLD       0.9          Used for managing the CPU power sequence and CPU states
+                     Secondary CPLD 1  1.0          Used for managing SFP28/QSFP28 port transceivers (SFP28 1-24, QSFP28 1-4)
+                     Secondary CPLD 2  1.0          Used for managing SFP28/QSFP28 port transceivers (SFP28 25-48, QSFP28 5-8)
+                     PCIe              2.6          ASIC PCIe firmware
+

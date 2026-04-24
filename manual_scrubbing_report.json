@@ -1,0 +1,112 @@
+{
+  "scrubbing_timestamp": "2026-04-23T07:44:38.224946",
+  "total_actions": 14,
+  "actions_by_type": {
+    "SERIAL-REDACTED": 4734,
+    "SERIAL_NUMBER": 8875,
+    "JSON_FILE": 2,
+    "MARKDOWN_FILE": 1,
+    "PYTHON_FILE": 1
+  },
+  "files_processed": 5,
+  "detailed_log": [
+    {
+      "timestamp": "2026-04-23T07:44:38.049865",
+      "file": "current",
+      "data_type": "SERIAL-REDACTED",
+      "count": 3420,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.070842",
+      "file": "current",
+      "data_type": "SERIAL_NUMBER",
+      "count": 6437,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.081844",
+      "file": "data/comprehensive_show_tech_inventory.json",
+      "data_type": "JSON_FILE",
+      "count": 1,
+      "action": "size_changed_from_262514_to_267082"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.113718",
+      "file": "current",
+      "data_type": "SERIAL-REDACTED",
+      "count": 1311,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.135743",
+      "file": "current",
+      "data_type": "SERIAL_NUMBER",
+      "count": 2432,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.176941",
+      "file": "data/comprehensive_deep_dive_memory.json",
+      "data_type": "JSON_FILE",
+      "count": 1,
+      "action": "size_changed_from_204417_to_206205"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.209047",
+      "file": "current",
+      "data_type": "SERIAL-REDACTED",
+      "count": 1,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.209047",
+      "file": "current",
+      "data_type": "SERIAL_NUMBER",
+      "count": 2,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.209047",
+      "file": "current",
+      "data_type": "SERIAL-REDACTED",
+      "count": 1,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.209047",
+      "file": "current",
+      "data_type": "SERIAL_NUMBER",
+      "count": 2,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.209047",
+      "file": "current",
+      "data_type": "SERIAL-REDACTED",
+      "count": 1,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.209047",
+      "file": "current",
+      "data_type": "SERIAL_NUMBER",
+      "count": 2,
+      "action": "replaced_with_placeholder"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.209047",
+      "file": "showtechshare/static_docs/markdown/quick_reference.md",
+      "data_type": "MARKDOWN_FILE",
+      "count": 1,
+      "action": "size_changed_from_7875_to_7907"
+    },
+    {
+      "timestamp": "2026-04-23T07:44:38.224946",
+      "file": "showtechshare/api_service/server.py",
+      "data_type": "PYTHON_FILE",
+      "count": 1,
+      "action": "size_changed_from_12353_to_12353"
+    }
+  ]
+}

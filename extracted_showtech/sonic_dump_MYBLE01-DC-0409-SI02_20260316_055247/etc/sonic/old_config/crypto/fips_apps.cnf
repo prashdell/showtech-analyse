@@ -1,0 +1,7 @@
+firmware-update
+ntpd
+rsyslogd
+snmpd
+sonic-installer
+ssh
+sshd

@@ -1,0 +1,72 @@
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:         +0.0°C  (crit = +94.0°C)
+
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +24.0°C  (high = +74.0°C, crit = +94.0°C)
+Core 2:        +22.0°C  (high = +74.0°C, crit = +94.0°C)
+Core 6:        +24.0°C  (high = +74.0°C, crit = +94.0°C)
+Core 8:        +22.0°C  (high = +74.0°C, crit = +94.0°C)
+Core 12:       +24.0°C  (high = +74.0°C, crit = +94.0°C)
+
+
+Onboard Temperature Sensors:
+  PT_Left_temp:                     19 degrees C      
+  PT_Mid_temp:                      20 degrees C      
+  PT_Right_temp:                    19 degrees C      
+  Broadcom Temp:                    25 degrees C      
+  Inlet Airflow Temp:               18 degrees C      
+  CPU Temp:                         25 degrees C      
+
+Fan Trays:
+  Fan Tray 1:
+    Fan1 Speed:                     8880 RPM          
+    Fan2 Speed:                     7800 RPM          
+    Fan1 State:                     Normal
+    Fan2 State:                     Normal
+    Airflow:                        Exhaust
+  Fan Tray 2:
+    Fan1 Speed:                     8880 RPM          
+    Fan2 Speed:                     7680 RPM          
+    Fan1 State:                     Normal
+    Fan2 State:                     Normal
+    Airflow:                        Exhaust
+  Fan Tray 3:
+    Fan1 Speed:                     8760 RPM          
+    Fan2 Speed:                     7920 RPM          
+    Fan1 State:                     Normal
+    Fan2 State:                     Normal
+    Airflow:                        Exhaust
+  Fan Tray 4:
+    Fan1 Speed:                     8760 RPM          
+    Fan2 Speed:                     7920 RPM          
+    Fan1 State:                     Normal
+    Fan2 State:                     Normal
+    Airflow:                        Exhaust
+
+PSUs:
+    PSU1:
+       FAN Normal Temperature:         39 degrees C      
+       FAN AirFlow Temperature:        19 degrees C      
+       FAN RPM:                        8400 RPM          
+       Input Voltage:                  238.70 Volts      
+       Output Voltage:                 12.40 Volts       
+       Input Power:                    80 Watts          
+       Output Power:                   50 Watts          
+       Input Current:                  0.32 Amps         
+       Output Current:                 4.50 Amps         
+       Airflow:                        Exhaust
+    PSU2:
+       FAN Normal Temperature:         35 degrees C      
+       FAN AirFlow Temperature:        21 degrees C      
+       FAN RPM:                        8400 RPM          
+       Input Voltage:                  238.70 Volts      
+       Output Voltage:                 12.40 Volts       
+       Input Power:                    50 Watts          
+       Output Power:                   40 Watts          
+       Input Current:                  0.32 Amps         
+       Output Current:                 3.50 Amps         
+       Airflow:                        Exhaust
+
+    Total Power:                       130 Watts         

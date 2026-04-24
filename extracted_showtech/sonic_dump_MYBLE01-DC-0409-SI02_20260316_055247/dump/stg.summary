@@ -1,0 +1,33 @@
+stg show
+STG 0: contains 0 VLANs
+  Disable: ce,xe
+STG 1: contains 13 VLANs (1,4095,28673,29349-29350,29474-29475,29481,29773-29774,29792,30672,45055)
+  Forward: ce,xe
+STG 2: contains 1 VLAN (1101)
+  Disable: ce1,ce3-ce7,xe1,xe3-xe47
+  Forward: ce0,ce2,xe0,xe2
+STG 3: contains 1 VLAN (1102)
+  Disable: ce1,ce3-ce7,xe1,xe3-xe26,xe28-xe47
+  Forward: ce0,ce2,xe0,xe2,xe27
+STG 4: contains 1 VLAN (1120)
+  Disable: ce,xe0,xe2,xe4-xe47
+  Forward: xe1,xe3
+STG 5: contains 1 VLAN (2000)
+  Disable: ce1,ce3-ce7,xe
+  Forward: ce0,ce2
+STG 6: contains 1 VLAN (677)
+  Disable: ce1,ce3-ce7,xe1,xe3,xe6-xe47
+  Forward: ce0,ce2,xe0,xe2,xe4-xe5
+STG 7: contains 1 VLAN (678)
+  Disable: ce1,ce3-ce7,xe0-xe3,xe6-xe10,xe12-xe47
+  Forward: ce0,ce2,xe4-xe5,xe11
+STG 8: contains 1 VLAN (802)
+  Disable: ce1,ce3-ce7,xe0-xe19,xe21-xe47
+  Forward: ce0,ce2,xe20
+STG 9: contains 1 VLAN (803)
+  Disable: ce1,ce3-ce7,xe0-xe21,xe23-xe47
+  Forward: ce0,ce2,xe22
+STG 10: contains 1 VLAN (809)
+  Disable: ce1,ce3-ce7,xe0-xe20,xe22-xe47
+  Forward: ce0,ce2,xe21
+drivshell>

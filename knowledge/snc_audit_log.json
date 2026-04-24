@@ -1,0 +1,372 @@
+[
+  {
+    "timestamp": "2026-04-22T10:46:22.703753",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Memory leak in syncd process causing system instability",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T09:00:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:46:22.703753",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Interface temperature spikes causing link flaps on Dell platforms",
+      "status": "Resolved",
+      "priority": "Critical",
+      "created": "2026-04-14T11:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:46:22.703753",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "BGP neighbor flapping on NEE customer deployment",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T13:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:46:22.703753",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Container crash loop in orchagent on Mellanox platform",
+      "status": "In Progress",
+      "priority": "High",
+      "created": "2026-04-14T15:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:46:22.703753",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "SERIAL-REDACTED-SERIAL-REDACTED customer experiencing service timeouts",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T17:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:46:22.756151",
+    "action": "first_pull_completed",
+    "issue_key": "SYSTEM",
+    "details": {
+      "total_issues": 5,
+      "completion_timestamp": "2026-04-22T10:46:22.756151"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:52:27.453284",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Memory leak in syncd process causing system instability",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T09:00:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:52:27.453284",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Interface temperature spikes causing link flaps on Dell platforms",
+      "status": "Resolved",
+      "priority": "Critical",
+      "created": "2026-04-14T11:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:52:27.453284",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "BGP neighbor flapping on NEE customer deployment",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T13:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:52:27.453284",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Container crash loop in orchagent on Mellanox platform",
+      "status": "In Progress",
+      "priority": "High",
+      "created": "2026-04-14T15:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:52:27.454795",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "SERIAL-REDACTED-SERIAL-REDACTED customer experiencing service timeouts",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T17:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.659285",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Memory leak in syncd process causing system instability",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T09:00:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.659285",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Interface temperature spikes causing link flaps on Dell platforms",
+      "status": "Resolved",
+      "priority": "Critical",
+      "created": "2026-04-14T11:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.659285",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "BGP neighbor flapping on NEE customer deployment",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T13:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.659285",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Container crash loop in orchagent on Mellanox platform",
+      "status": "In Progress",
+      "priority": "High",
+      "created": "2026-04-14T15:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.659285",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "SERIAL-REDACTED-SERIAL-REDACTED customer experiencing service timeouts",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T17:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.659285",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Memory leak in syncd process causing system instability",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T09:00:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.659285",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Interface temperature spikes causing link flaps on Dell platforms",
+      "status": "Resolved",
+      "priority": "Critical",
+      "created": "2026-04-14T11:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.661571",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "BGP neighbor flapping on NEE customer deployment",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T13:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.661571",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Container crash loop in orchagent on Mellanox platform",
+      "status": "In Progress",
+      "priority": "High",
+      "created": "2026-04-14T15:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:53:50.661571",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "SERIAL-REDACTED-SERIAL-REDACTED customer experiencing service timeouts",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T17:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Memory leak in syncd process causing system instability",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T09:00:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Interface temperature spikes causing link flaps on Dell platforms",
+      "status": "Resolved",
+      "priority": "Critical",
+      "created": "2026-04-14T11:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "BGP neighbor flapping on NEE customer deployment",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T13:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Container crash loop in orchagent on Mellanox platform",
+      "status": "In Progress",
+      "priority": "High",
+      "created": "2026-04-14T15:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "SERIAL-REDACTED-SERIAL-REDACTED customer experiencing service timeouts",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T17:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Memory leak in syncd process causing system instability",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T09:00:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Interface temperature spikes causing link flaps on Dell platforms",
+      "status": "Resolved",
+      "priority": "Critical",
+      "created": "2026-04-14T11:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "BGP neighbor flapping on NEE customer deployment",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T13:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "Container crash loop in orchagent on Mellanox platform",
+      "status": "In Progress",
+      "priority": "High",
+      "created": "2026-04-14T15:30:00Z"
+    },
+    "processing_run_id": 1
+  },
+  {
+    "timestamp": "2026-04-22T10:54:04.024152",
+    "action": "issue_discovered",
+    "issue_key": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "details": {
+      "summary": "SERIAL-REDACTED-SERIAL-REDACTED customer experiencing service timeouts",
+      "status": "Resolved",
+      "priority": "High",
+      "created": "2026-04-14T17:30:00Z"
+    },
+    "processing_run_id": 1
+  }
+]

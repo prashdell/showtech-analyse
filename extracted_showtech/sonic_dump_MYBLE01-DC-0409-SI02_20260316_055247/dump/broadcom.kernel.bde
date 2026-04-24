@@ -1,0 +1,14 @@
+Broadcom Device Enumerator (linux-kernel-bde)
+Module parameters:
+	maxpayload=128
+	usemsi=0
+	isrtickms=1000
+	pci_bridge_setup=1
+	dmasize=32M
+	himem=(null)
+	himemaddr=(null)
+DMA Memory (kernel-chunk): 33554432 bytes, 0 used, 33554432 free, local mmap
+Devices:
+	0 (swi) : PCI device 02:00.0 0x14e4:0xb873:1:0xdf800000:0xdf000000:16
+		imask:imask2:fmask 0x0:0x33333330:0xffffffff  unique_id=0x200 inst_id INVALID
+		interrupts:prev:stuck 102245307:0:0

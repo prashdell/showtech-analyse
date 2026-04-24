@@ -1,0 +1,11 @@
+[Unit]
+Description=AAA Statistics Collection daemon
+Requires=hostcfgd.service
+After=updategraph.service interfaces-config.service hostcfgd.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/aaastatsd
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,364 @@
+CPU Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Mirror Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+KNET Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  0            4787435           0  cdp,ttl_error
+  7              17307           0  ip2me
+  8                 25           0  icmp,icmpv6
+  10             80154           0  arp_req,arp_resp,neigh_discovery
+  14           1245865           0  bgp,bgpv6
+  16                 6           0  iccp
+  17            694305           0  vrrp,vrrpv6
+  18            370701          10  lldp
+                                 3    Link down
+                                 7    Kernel netstack drop
+  20          15607870           0  bfdv6,bfd
+  21           2780136           0  stp,pvrst
+  23             46352           0  lacp
+Total         25630156          10
+
+Ethernet0 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  18             46333           1  lldp
+                                 1    Kernel netstack drop
+Total            46333           1
+
+Ethernet1 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  0              44303           0  cdp,ttl_error
+  10              8723           0  arp_req,arp_resp,neigh_discovery
+  14             51297           0  bgp,bgpv6
+  18             69509           1  lldp
+                                 1    Link down
+  20           2612766           0  bfdv6,bfd
+Total          2786598           1
+
+Ethernet2 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  18             46337           0  lldp
+Total            46337           0
+
+Ethernet3 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  0              20837           0  cdp,ttl_error
+  10              9220           0  arp_req,arp_resp,neigh_discovery
+  14             49929           0  bgp,bgpv6
+  18             69509           1  lldp
+                                 1    Link down
+  20           2620608           0  bfdv6,bfd
+Total          2770103           1
+
+Ethernet4 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  18             46334           1  lldp
+                                 1    Link down
+Total            46334           1
+
+Ethernet5 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  18             46335           0  lldp
+Total            46335           0
+
+Ethernet6 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet7 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet8 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet9 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet10 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet11 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet12 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet13 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet14 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet15 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet16 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet17 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet18 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet19 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet20 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  7               8245           0  ip2me
+  8                 10           0  icmp,icmpv6
+  10              3240           0  arp_req,arp_resp,neigh_discovery
+  14             86395           0  bgp,bgpv6
+  16                 3           0  iccp
+  20            613435           0  bfdv6,bfd
+Total           711328           0
+
+Ethernet21 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  0             126314           0  cdp,ttl_error
+  10              3193           0  arp_req,arp_resp,neigh_discovery
+  14             86346           0  bgp,bgpv6
+  20            613416           0  bfdv6,bfd
+Total           829269           0
+
+Ethernet22 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet23 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet24 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet25 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet26 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet27 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  18                 3           0  lldp
+Total                3           0
+
+Ethernet28 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet29 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet30 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet31 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet32 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet33 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet34 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet35 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet36 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet37 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet38 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet39 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet40 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet41 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet42 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet43 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet44 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet45 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet46 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet47 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet48 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  0            2305301           0  cdp,ttl_error
+  7               4688           0  ip2me
+  8                 10           0  icmp,icmpv6
+  10             24434           0  arp_req,arp_resp,neigh_discovery
+  14            918526           0  bgp,bgpv6
+  16                 2           0  iccp
+  18             23171           3  lldp
+                                 3    Kernel netstack drop
+  20           6964354           0  bfdv6,bfd
+  21           2780136           0  stp,pvrst
+  23             23176           0  lacp
+Total         13043798           3
+
+Ethernet52 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet56 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+  0            2290680           0  cdp,ttl_error
+  7               4374           0  ip2me
+  8                  5           0  icmp,icmpv6
+  10             31344           0  arp_req,arp_resp,neigh_discovery
+  14             53372           0  bgp,bgpv6
+  16                 1           0  iccp
+  17            694305           0  vrrp,vrrpv6
+  18             23170           3  lldp
+                                 3    Kernel netstack drop
+  20           2183291           0  bfdv6,bfd
+  23             23176           0  lacp
+Total          5303718           3
+
+Ethernet60 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet64 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet68 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet72 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Ethernet76 Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+
+Drop-Mirror Rx Queue Stats
+Queue          Rx Pkts   Rx errors  Description
+----------  ----------  ----------  --------------------------------
+Total                0           0
+

@@ -1,0 +1,34 @@
+{
+  "lesson_id": "lesson_container_health_triage_20260424_142213",
+  "skill_name": "sonic_container_health_triage",
+  "lesson_type": "container_analysis",
+  "content": {
+    "success_patterns": [
+      "container_state_validation_pattern",
+      "container_resource_analysis_pattern",
+      "container_log_analysis_pattern",
+      "container_orchestration_pattern",
+      "container_image_analysis_pattern",
+      "system_impact_pattern",
+      "multi_instance_health_pattern",
+      "service_dependency_pattern"
+    ],
+    "context_factors": {
+      "archive_intelligence": "284_archive_production_intelligence",
+      "confidence_range": "92-98%",
+      "source_files_range": "800-1600_files_per_instance",
+      "analysis_steps": 6,
+      "docker_error_rates": "0.10-0.70%",
+      "critical_containers": [
+        "syncd",
+        "orchagent",
+        "bgp"
+      ]
+    }
+  },
+  "confidence": 0.94,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:22:13.433558",
+  "execution_time": 3.8,
+  "captured_by": "comprehensive_analysis"
+}

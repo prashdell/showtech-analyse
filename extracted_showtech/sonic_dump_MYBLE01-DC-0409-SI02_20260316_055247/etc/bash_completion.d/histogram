@@ -1,0 +1,13 @@
+_histogram_completion() {
+    COMPREPLY=( $( env COMP_WORDS="${COMP_WORDS[*]}" \
+                   COMP_CWORD=$COMP_CWORD \
+                   _TPCM_COMPLETE=complete $1 ) )
+    if [ $COMP_CWORD -eq 1 ]; then
+	COMPREPLY=( $( echo ${COMPREPLY[*]} | sed -E 's/verbose|debug//g' ) )
+    fi
+    return 0
+}
+
+
+complete -F _histogram_completion -o default histogram;
+

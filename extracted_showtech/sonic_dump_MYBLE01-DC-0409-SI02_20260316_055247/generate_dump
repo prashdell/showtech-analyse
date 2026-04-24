@@ -1,0 +1,3078 @@
+#!/bin/bash
+#
+# Generate Sysdump
+# creates a snapshot of system state for debugging later.
+#
+
+set -u
+
+trap 'handle_signal' HUP INT QUIT TERM KILL ABRT ALRM
+
+source /usr/bin/logrotate-utils.sh
+
+TRACKPROGRESS=false
+update_db_state()
+{
+    if [ ! $TRACKPROGRESS ] ; then
+        return
+    fi
+    outpfl=${2:+output-filename $2}
+    timelogfl=${3:+timeinfo-filename $3}
+    /usr/local/bin/sonic-db-cli STATE_DB hmset "SHOW_TECHSUPPORT|GLOBAL" progress-state "${1}" ${outpfl} ${timelogfl} > /dev/null
+    update_index_list "$1"
+}
+
+TS_INDEX_CNT=0
+update_index_list()
+{
+    if [ ! -e $TECHSUPPORT_INDEX_INFO ] ; then
+        if [ "${1}" == "Starting" ] ; then
+           echo "#${1}" > $TECHSUPPORT_INDEX_INFO
+        fi
+        # else (not Starting) is post cleanup
+        return
+    fi
+    tar tf $TARFILE > ${TECHSUPPORT_INDEX_INFO}_new
+    tail +$TS_INDEX_CNT ${TECHSUPPORT_INDEX_INFO}_new >> $TECHSUPPORT_INDEX_INFO
+    TS_INDEX_CNT=$((`wc -l < ${TECHSUPPORT_INDEX_INFO}_new` + 1))
+    rm ${TECHSUPPORT_INDEX_INFO}_new
+    echo "#${1}" >> $TECHSUPPORT_INDEX_INFO
+}
+
+cleanup_dump_files(){
+
+    if [[ ! -e /var/dump ]]; then
+        return
+    fi
+
+    # Clean up the older techsupport files
+    DCNT=5
+    LOG_SIZE_MB=$(df -m /var/log |awk 'NR==2{print int($2)}')
+    if [[ ${LOG_SIZE_MB} -lt 1024 ]]; then
+        DCNT=2
+    fi
+
+    # Clean up the older techsupport gz files 
+    find /var/dump/* -name 'sonic_dump_*.tar.gz' -printf "%T+ %p\n"|sort -nr|awk 'NR>'${DCNT}'{print $2}'|xargs -I{} rm -f "{}"
+
+    # Clean up the uncleaned directories and tar files if it stays for more than 60 minutes
+    find /var/dump/* -name 'sonic_dump_*.tar' -mmin +60 -printf "%T+ %p\n"|sort -nr|awk '{print $2}'|xargs -I{} rm -f "{}"
+    find /var/dump/* -type d -name "sonic_dump_*" -mmin +60 -exec rm -rf "{}" \;
+}
+
+cleanup_tmpfiles() {
+    if [ -e $TARDIR ] ; then
+        rm $V -rf $TARDIR
+    fi
+    if [ -e $TECHSUPPORT_TIME_INFO ] ; then
+        rm $V -rf $TECHSUPPORT_TIME_INFO
+    fi
+    if [ -e $TECHSUPPORT_INDEX_INFO ] ; then
+        rm $V -rf $TECHSUPPORT_INDEX_INFO
+    fi
+    if [ -e $TECHSUPPORT_INDEX_FILE ] ; then
+        rm $V -rf $TECHSUPPORT_INDEX_FILE
+    fi
+    if [ -e $TECHSUPPORT_SAVE_PROC_INFO ] ; then
+        rm $V -rf $TECHSUPPORT_SAVE_PROC_INFO
+    fi
+    if [ -e $REFERENCE_FILE ] ; then
+        rm $V -rf $REFERENCE_FILE
+    fi
+
+    # Clean up the /var/dump files
+    cleanup_dump_files
+
+}
+
+handle_signal()
+{
+    echo "Generate Dump received interrupt"
+    if [ -e /var/run/techsupport.inprogress ] ; then
+	   enable_logrotate
+    fi
+    cleanup_tmpfiles
+    rm $V -rf $TARFILE
+    update_db_state Canceled
+    sync
+    exit 1
+}
+
+ERROR_TAR_FAILED=5
+ERROR_PROCFS_SAVE_FAILED=6
+ERROR_INVALID_ARGUMENT=10
+
+TAR=tar
+FIND=find
+MKDIR=mkdir
+RM=rm
+LN=ln
+GZIP=gzip
+CP=cp
+MV=mv
+GREP=grep
+TOUCH=touch
+V=
+ALLOW_PROCESS_STOP=
+NOOP=false
+DO_COMPRESS=true
+CMD_PREFIX=
+SINCE_DATE="@0" # default is set to January 1, 1970 at 00:00:00 GMT
+REFERENCE_FILE=/tmp/reference
+TECHSUPPORT_TIME_INFO=`mktemp "/tmp/techsupport_time_info.XXXXXXXXXX"`
+TECHSUPPORT_INDEX_INFO=`mktemp "/tmp/techsupport_index_info.XXXXXXXXXX"`
+TECHSUPPORT_SAVE_PROC_INFO=/tmp/techsupport_save_proc_info
+BASE=${BASE:-sonic_dump_`hostname`_`date +%Y%m%d_%H%M%S`}
+DUMPDIR=/var/dump
+TARDIR=$DUMPDIR/$BASE
+TARFILE=$DUMPDIR/$BASE.tar
+LOGDIR=$DUMPDIR/$BASE/dump
+TECHSUPPORT_INDEX_FILE=$TARDIR/techsupport_index.html
+HOME=${HOME:-/root}
+USER=${USER:-root}
+TIMEOUT_MIN="5"
+KLISH_TIMEOUT_MIN="10"
+SKIP_BCMCMD=0
+NUM_ASICS=1
+TS_KLISH_CMDS=""
+BCMCMD_PRECHECK_TIMEOUT_MIN=2
+#Encrypted secrets are obscured using this transform.
+OBSC_TRANSFORM="s/U2FsdGVk\(\(\([A-Za-z0-9\+\/]\{4\}\)\{5,\}\)\([A-Za-z0-9\+\/]\{4\}\|[A-Za-z0-9\+\/]\{3\}=\|[A-Za-z0-9\+\/]\{2\}==\)\)/*****/g"
+OBSC_STRING="U2FsdGVk"
+
+save_bcmcmd() {
+    local start_t=$(date +%s%3N)
+    local end_t=0
+    local cmd="$1"
+    local filename=$2
+    local precheck=${3:-false}
+    local filepath="${LOGDIR}/$filename"
+    local do_gzip=${4:-false}
+    local tarpath="${BASE}/dump/$filename"
+    local timeout_cmd="timeout --foreground ${TIMEOUT_MIN}m"
+    local timeout_cmd_precheck="timeout --foreground ${BCMCMD_PRECHECK_TIMEOUT_MIN}m"
+    [ ! -d $LOGDIR ] && $MKDIR $V -p $LOGDIR
+
+    #Check BCMSHELL is busy or already in use. Only one connection allowed
+    #First command used (ie version ) used to check the shell status
+    if $precheck; then
+        echo "save_bcmcmd: waiting for command response for ${BCMCMD_PRECHECK_TIMEOUT_MIN} minutes."
+        eval "${timeout_cmd_precheck} $cmd" &> /dev/null
+        ret=$?
+        if [ $ret -ne 0 ]; then
+            if [ $ret -eq 124 ]; then
+                echo "Command: $cmd timedout after ${BCMCMD_PRECHECK_TIMEOUT_MIN} minutes."
+                SKIP_BCMCMD=1
+            fi
+        fi
+    fi
+
+    if [ $SKIP_BCMCMD -eq 1 ]; then
+        echo "Skip $cmd"
+        return 0
+    fi
+    # eval required here to re-evaluate the $cmd properly at runtime
+    # This is required if $cmd has quoted strings that should be bunched
+    # as one argument, e.g. vtysh -c "COMMAND HERE" needs to have
+    # "COMMAND HERE" bunched together as 1 arg to vtysh -c
+    if $do_gzip
+    then
+        if $NOOP; then
+            echo "${timeout_cmd} $cmd &> '${filepath}'"
+        else
+            eval "${timeout_cmd} $cmd" &> "${filepath}"
+            ret=$?
+            if [ $ret -ne 0 ]; then
+                if [ $ret -eq 124 ]; then
+                    echo "Command: $cmd timedout after ${TIMEOUT_MIN} minutes."
+                else
+                    grep "polling socket timeout: Success" ${filepath} &>/dev/null
+                    if [ $? -eq 0 ]; then
+                        echo "bcmcmd command timeout. Setting SKIP_BCMCMD to true ..."
+                        SKIP_BCMCMD=1
+                    fi
+                fi
+            fi
+        fi
+        if [ -f "${filepath}" ]; then
+            sed -i $OBSC_TRANSFORM "${filepath}"
+        fi
+        gzip ${filepath} 2>/dev/null
+        tarpath="${tarpath}.gz"
+        filepath="${filepath}.gz"
+    else
+        if $NOOP; then
+            echo "${timeout_cmd} $cmd &> '$filepath'"
+        else
+            eval "${timeout_cmd} $cmd" &> "$filepath"
+            ret=$?
+            if [ $ret -ne 0 ]; then
+                if [ $ret -eq 124 ]; then
+                    echo "Command: $cmd timedout after ${TIMEOUT_MIN} minutes."
+                else
+                    grep "polling socket timeout: Success" ${filepath} &>/dev/null
+                    if [ $? -eq 0 ]; then
+                        echo "bcmcmd command timeout. Setting SKIP_BCMCMD to true ..."
+                        SKIP_BCMCMD=1
+                    fi
+                fi
+            fi
+        fi
+        if [ -f "${filepath}" ]; then
+            sed -i $OBSC_TRANSFORM "$filepath"
+        fi
+    fi
+    ($TAR $V -rhf $TARFILE -C $DUMPDIR "$tarpath" \
+        || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting to prevent data loss.") \
+        && $RM $V -rf "$filepath"
+    end_t=$(date +%s%3N)
+    echo "[ save_bcmcmd:$cmd ] : $(($end_t-$start_t)) msec" >> $TECHSUPPORT_TIME_INFO
+}
+###############################################################################
+# Runs a comamnd and saves its output to the incrementally built tar.
+# Command gets timedout if it runs for more than TIMEOUT_MIN minutes.
+# Globals:
+#  LOGDIR
+#  BASE
+#  MKDIR
+#  TAR
+#  TARFILE
+#  DUMPDIR
+#  V
+#  RM
+#  NOOP
+# Arguments:
+#  cmd: The command to run. Make sure that arguments with spaces have quotes
+#  filename: the filename to save the output as in $BASE/dump
+#  do_gzip: (OPTIONAL) true or false. Should the output be gzipped
+# Returns:
+#  None
+###############################################################################
+save_cmd() {
+    local start_t=$(date +%s%3N)
+    local end_t=0
+    local cmd="$1"
+    local filename=$2
+    local filepath="${LOGDIR}/$filename"
+    local file="$filepath"
+    local do_gzip=${3:-false}
+    local tarpath="${BASE}/dump/$filename"
+    local timeout_cmd="timeout --foreground ${TIMEOUT_MIN}m"
+    [ ! -d $LOGDIR ] && $MKDIR $V -p $LOGDIR
+
+    # eval required here to re-evaluate the $cmd properly at runtime
+    # This is required if $cmd has quoted strings that should be bunched
+    # as one argument, e.g. vtysh -c "COMMAND HERE" needs to have
+    # "COMMAND HERE" bunched together as 1 arg to vtysh -c
+    if $do_gzip
+    then
+        tarpath="${tarpath}.gz"
+        filepath="${filepath}.gz"
+        if $NOOP; then
+            echo "${timeout_cmd} bash -c \"${cmd}\" &> '$file'"
+            if [ -f "$file" ]; then
+                sed -i $OBSC_TRANSFORM "$file"
+            fi
+            echo "gzip -c $file > $filepath"
+        else
+            eval "${timeout_cmd} bash -c \"${cmd}\"" &> "$file"
+            if [ $? -ne 0 ]; then
+                echo "Command: $cmds timedout after ${TIMEOUT_MIN} minutes."
+            fi
+            if [ -f "$file" ]; then
+                sed -i $OBSC_TRANSFORM "$file"
+            fi
+            gzip -c $file > $filepath
+        fi
+    else
+        if $NOOP; then
+            echo "${timeout_cmd} $cmd &> '$filepath'"
+        else
+            eval "${timeout_cmd} $cmd" &> "$filepath"
+            if [ $? -ne 0 ]; then
+                echo "Command: $cmd timedout after ${TIMEOUT_MIN} minutes."
+            fi
+        fi
+        if [ -f "${filepath}" ]; then
+            sed -i $OBSC_TRANSFORM "$filepath"
+        fi
+    fi
+    ($TAR $V -rhf $TARFILE -C $DUMPDIR "$tarpath" \
+        || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting to prevent data loss.") \
+        && $RM $V -rf "$filepath"
+    end_t=$(date +%s%3N)
+    echo "[ save_cmd:$cmd ] : $(($end_t-$start_t)) msec" >> $TECHSUPPORT_TIME_INFO
+}
+
+
+###############################################################################
+# Runs a given command in all namesapces in case of multi ASIC platform, in
+# default (host) namespace in single ASIC platform
+# Globals:
+#  NUM_ASICS
+# Arguments:
+#  cmd: The command to run. Make sure that arguments with spaces have quotes
+#  filename: the filename to save the output as in $BASE/dump
+#  do_gzip: (OPTIONAL) true or false. Should the output be gzipped
+# Returns:
+#  None
+###############################################################################
+save_cmd_all_ns() {
+    #echo $1
+    #echo $2
+    local do_zip=${3:-false}
+    #echo ${do_zip}
+
+    # host or default namespace
+    save_cmd "$1" "$2" "$do_zip"
+
+    if [[ ( "$NUM_ASICS" > 1 ) ]] ; then
+      for (( i=0; i<$NUM_ASICS; i++ ))
+      do
+          local cmd="sonic-netns-exec asic$i $1"
+          local file="$2.$i"
+          save_cmd "$cmd" "$file" "$do_zip"
+      done
+    fi
+}
+
+###############################################################################
+# Create a common file to store KLISH commands
+# Arguments:
+#  group_keyword: A keyword to denote the file created in tmpfs
+# Returns:
+#  Name of the temporary file create to store the KLISH commands
+###############################################################################
+prepare_klish_cmd_group()
+{
+    local group_keyword=${1:-""}
+
+    # Create a cmd_file which must be inside /tmp folder
+    if [ -z "${group_keyword}" ]; then
+        temp_file=$(mktemp "/tmp/klish_cmds.XXXXXXXXXX.txt")
+    else
+        temp_file=$(mktemp "/tmp/klish_cmds_${group_keyword}.XXXXXXXXXX.txt")
+    fi
+    chmod 755 ${temp_file}
+    echo ${temp_file}
+}
+
+###############################################################################
+# Copy the KLISH command to collect into a KLISH commands file
+# Arguments:
+#  cmd: The command to run. Make sure that arguments with spaces have quotes
+#  filename: The filename of the file where this KLISH command needs storing
+# Returns:
+#  None
+###############################################################################
+save_klish_cmd()
+{
+    local cmd="$1"
+    local cmd_file="$2"
+
+    if [ ! -z "${cmd}" ] && [ ! -z "${cmd_file}" ]; then
+        echo "${cmd}" >> ${cmd_file}
+    else
+        echo "Error: save_klish_cmd invalid arguments cmd:$cmd, cmd_file:$cmd_file"
+    fi
+}
+
+###############################################################################
+# Execute the set of KLISH commands present in a file, split the output as
+# per the commands into multiple files and store them in the final tarball
+# Arguments:
+#  cmd_file: The file name where the set of KLISH commands are stored
+#  cgrp: Denotes the command group i.e. A keyword to denote the set of commands
+#        This would appear in the splitted file names. It can be empty.
+# Returns:
+#  None
+###############################################################################
+exec_klish_cmds() {
+    # Run the KLISH commands from cmd_file
+    local start_t=$(date +%s%3N)
+    local end_t=0
+    local cmd_file="$1"
+    local cgrp=${2:-""}
+    if [ -z "${cgrp}" ]; then
+        local cmd_group=""
+    else
+        local cmd_group="${cgrp}_"
+    fi
+    # /tmp is mounted on /mnt/tmp inside the mgmt docker
+    local cmd="sudo -u admin sonic-cli prompt='--ts-sonic--' /mnt${cmd_file}"
+    local filename="klish_cmds_${cmd_group}output"
+    local filepath="${LOGDIR}/$filename"
+    local timeout_cmd="timeout --foreground ${KLISH_TIMEOUT_MIN}m"
+    [ ! -d $LOGDIR ] && $MKDIR $V -p $LOGDIR
+
+    if $NOOP; then
+        echo "${timeout_cmd} $cmd &> '$filepath'"
+    else
+        eval "${timeout_cmd} $cmd" &> "$filepath"
+        if [ $? -ne 0 ]; then
+            echo "Command: $cmd timedout after ${KLISH_TIMEOUT_MIN} minutes."
+        fi
+    fi
+    if [ -f "${filepath}" ]; then
+        sed -i $OBSC_TRANSFORM "$filepath"
+    fi
+
+    local numfiles=$(($(grep -ce '^--ts-sonic--' $filepath)-1))
+    if [ $numfiles -ne -1 ]; then
+        # Split the common output file only when data-collection is successful
+        csplit -s -f "${LOGDIR}/splitfile" $filepath /^--ts-sonic--/ "{$numfiles}"
+
+        local i=1
+        for fn in $(cat ${cmd_file} |cut -d '|' -f 1 |sed 's/ *$//g'|sed 's/ /_/g'|sed "s/^/klish_${cmd_group}/g"|sed 's/\//./g')
+        do
+            $MV "${LOGDIR}/splitfile$(printf "%.2d" $i)" "${LOGDIR}/${fn}" >/dev/null 2>&1
+            if [ $? -eq 0 ]; then
+                local tarpath="${BASE}/dump/${fn}"
+                ($TAR $V -rhf $TARFILE -C $DUMPDIR "$tarpath" \
+                    || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting to prevent data loss.") \
+                    && $RM $V -rf "${LOGDIR}/${fn}"
+            fi
+            i=$(($i+1))
+        done
+        # Remove the first splitted file and common output file
+        $RM "${LOGDIR}/splitfile00" "$filepath" >/dev/null 2>&1
+    else
+        # In case of error in data-collection, tar the common output file
+        local tarpath="${BASE}/dump/${filename}"
+        ($TAR $V -rhf $TARFILE -C $DUMPDIR "$tarpath" \
+            || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting to prevent data loss.") \
+            && $RM $V -rf "$filepath"
+    fi
+    # Remove the temporary cmd_file
+    $RM "$cmd_file" >/dev/null 2>&1
+
+    end_t=$(date +%s%3N)
+    echo "[ save_cmd:$cmd ] : $(($end_t-$start_t)) msec" >> $TECHSUPPORT_TIME_INFO
+}
+
+###############################################################################
+# Returns namespace option to be used with vtysh commmand, based on the ASIC ID.
+# Returns empty string if no ASIC ID is provided
+# Globals:
+#  None
+# Arguments:
+#  asic_id: (OPTIONAL) ASIC ID
+# Returns:
+#  vtysh namespace option
+###############################################################################
+get_vtysh_namespace() {
+    local asic_id=${1:-""}
+    local ns=""
+    if [[ ( $asic_id = "" ) ]] ; then
+        ns=""
+    else
+        ns=" -n  ${asic_id}"
+    fi
+    echo "$ns"
+}
+
+###############################################################################
+# Runs a vtysh command in all namesapces for a multi ASIC platform, and in
+# default (host) namespace in single ASIC platforms. Saves its output to the
+# incrementally built tar.
+# Globals:
+#  None
+# Arguments:
+#  cmd: the vtysh command to run. This should NOT include vtysh -c
+#  filename: The filename to save the output as.
+#  do_gzip: (OPTIONAL) true or false. Should the output be gzipped
+# Returns:
+#  None
+###############################################################################
+save_vtysh() {
+    local vtysh_cmd=$1
+    local filename=$2
+    local do_gzip=${3:-false}
+
+    if [[ ( "$NUM_ASICS" == 1 ) ]] ; then
+        save_cmd "vtysh -c '${vtysh_cmd}'" "$filename" $do_gzip
+    else
+        for (( i=0; i<$NUM_ASICS; i++ ))
+        do
+            ns_cmd=$(get_vtysh_namespace $i)
+            local cmd="vtysh $ns_cmd -c '${vtysh_cmd}'"
+            local file=$filename.$i
+            save_cmd "$cmd" "$file" "$do_gzip"
+        done
+    fi
+}
+
+###############################################################################
+# Runs an ip command and saves its output to the incrementally built tar.
+# Globals:
+#  None
+# Arguments:
+#  cmd: the ip command to run sans 'ip'
+#  filename: Files will be named 'ip.<filename>'
+#  do_gzip: (OPTIONAL) true or false. Should the output be gzipped
+# Returns:
+#  None
+###############################################################################
+save_ip() {
+    local ip_args=$1
+    local filename="ip.$2"
+    local do_gzip=${3:-false}
+    save_cmd_all_ns "ip $ip_args" "$filename" "$do_gzip"
+}
+
+###############################################################################
+# Runs an bridge command and saves its output to the incrementally built tar.
+# Globals:
+#  None
+# Arguments:
+#  cmd: the bridge command to run sans 'bridge'
+#  filename: Files will be named 'bridge.<filename>'
+#  do_gzip: (OPTIONAL) true or false. Should the output be gzipped
+# Returns:
+#  None
+###############################################################################
+save_bridge() {
+    local br_args=$1
+    local filename="bridge.$2"
+    local do_gzip=${3:-false}
+    save_cmd "bridge $br_args" "$filename" $do_gzip
+}
+
+###############################################################################
+# Iterates all neighbors and runs save_vtysh to save each neighbor's
+# advertised-routes and received-routes
+# On multi ASIC platform, collects information from all namespaces
+# Globals:
+#  None
+# Arguments:
+#  Optional arg namespace
+# Returns:
+#  None
+###############################################################################
+save_bgp_neighbor() {
+    local timeout_cmd="timeout --foreground ${TIMEOUT_MIN}m"
+    local asic_id=${1:-""}
+    local ns=$(get_vtysh_namespace $asic_id)
+
+    neighbor_list_v4=$(${timeout_cmd} vtysh $ns -c "show ip bgp neighbors" | grep "BGP neighbor is" | awk -F '[, ]' '{print $4}')
+    for word in $neighbor_list_v4; do
+        save_cmd "vtysh $ns -c \"show ip bgp neighbors $word advertised-routes\"" "ip.bgp.neighbor.$word.adv$asic_id"
+        save_cmd "vtysh $ns -c \"show ip bgp neighbors $word routes\"" "ip.bgp.neighbor.$word.rcv$asic_id"
+    done
+
+    neighbor_list_v6=$(vtysh $ns -c "show bgp ipv6 neighbors" | grep "BGP neighbor is" | awk -F '[, ]' '{print $4}' | fgrep ':')
+    for word in $neighbor_list_v6; do
+        save_cmd "vtysh $ns -c \"show bgp ipv6 neighbors $word advertised-routes\"" "ipv6.bgp.neighbor.$word.adv$asic_id"
+        save_cmd "vtysh $ns -c \"show bgp ipv6 neighbors $word routes\"" "ipv6.bgp.neighbor.$word.rcv$asic_id"
+    done
+
+    vrf_list=`${timeout_cmd} vtysh -c "show vrf" | awk -F" " '{print $2}'`
+    for vrf in $vrf_list; do
+        neighbor_list=`${timeout_cmd} vtysh -c "show ip bgp vrf $vrf neighbors" | grep "BGP neighbor is" | awk -F '[, ]' '{print $4}'`
+        for word in $neighbor_list; do
+            save_vtysh "show ip bgp vrf $vrf neighbors $word advertised-routes" "ip.bgp.neighbor.$vrf.$word.adv"
+            save_vtysh "show ip bgp vrf $vrf neighbors $word routes" "ip.bgp.neighbor.$vrf.$word.rcv"
+        done
+    done
+}
+
+###############################################################################
+# Dump the nat config, iptables rules and conntrack nat entries
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_nat_info() {
+    save_cmd "iptables -t nat -nv -L" "nat.iptables"
+    save_cmd "conntrack -j -L" "nat.conntrack"
+    save_cmd "conntrack -j -L | wc" "nat.conntrackcount"
+    save_cmd "conntrack -L" "nat.conntrackall"
+    save_cmd "conntrack -L | wc" "nat.conntrackallcount"
+    save_cmd "show nat config" "nat.config"
+}
+
+###############################################################################
+# Dump the IPMC table in application, Linux and orchagent state info
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_ipmc_info() {
+    save_cmd "ip mroute show table all" "ipmc.mroute"
+    save_cmd "show debug ipmcorch all" "ipmc.orchagent"
+    save_cmd "show debug l2mcorch all" "l2mc.orchagent"
+    save_vtysh "show ip mroute vrf all" "frr.mroute.all"
+    save_vtysh "show ip mroute vrf count" "frr.mroute.count"
+    save_vtysh "show ip multicast vrf all" "frr.multicast.all"
+    save_vtysh "show ip igmp vrf all groups" "frr.igmp.groups.all"
+    save_vtysh "show ip pim vrf all interface detail" "frr.pim.interface.detail"
+    save_vtysh "show ip pim vrf all interface traffic" "frr.pim.interface.traffic"
+    save_vtysh "show ip pim vrf all join" "frr.pim.join"
+    save_vtysh "show ip pim vrf all local-membership" "frr.pim.local-membership"
+    save_vtysh "show ip pim vrf all neighbor detail" "frr.pim.neighbor.detail"
+    save_vtysh "show ip pim vrf all nexthop" "frr.pim.nexthop"
+    save_vtysh "show ip pim vrf all rpf" "frr.pim.rpf"
+    save_vtysh "show ip pim vrf all state" "frr.pim.state"
+    save_vtysh "show ip pim vrf all upstream" "frr.pim.upstream"
+    save_vtysh "show ip pim vrf all upstream-join-desired" "frr.pim.upstream-join-desired"
+    save_vtysh "show ip pim vrf all upstream-rpf" "frr.pim.upstream-rpf"
+}
+
+###############################################################################
+# Dump the BFD information from vtysh
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_bfd_info() {
+    save_vtysh "show bfd peers" "frr.bfd.peers"
+    save_vtysh "show bfd peers counters" "frr.bfd.peers.counters"
+    save_vtysh "show bfd peers json" "frr.bfd.peers.json"
+    save_vtysh "show bfd peers counters json" "frr.bfd.peers.counters.json"
+    save_vtysh "show bfd statistics" "frr.bfd.statistics"
+    save_vtysh "debug bfd show interface" "frr.bfd.interfaces"
+    save_vtysh "debug bfd show hash" "frr.bfd.hash_tables"
+    save_vtysh "show bfd state-down-info" "frr.bfd.state_down_info"
+}
+
+###############################################################################
+# Iterates all ASIC namespaces on multi ASIC platform and on default (host)
+# namespace on single ASIC platform
+# Globals:
+#  NUM_ASICS
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_bgp_neighbor_all_ns() {
+    if [[ ( "$NUM_ASICS" == 1 ) ]] ; then
+        save_bgp_neighbor
+    else
+        for (( i=0; i<$NUM_ASICS; i++ ))
+        do
+            save_bgp_neighbor $i
+        done
+    fi
+}
+
+###############################################################################
+# Dump the nat config, iptables rules and conntrack nat entries
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_nat_info() {
+    save_cmd_all_ns "iptables -t nat -nv -L" "nat.iptables"
+    save_cmd_all_ns "conntrack -j -L" "nat.conntrack"
+    save_cmd_all_ns "conntrack -j -L | wc" "nat.conntrackcount"
+    save_cmd_all_ns "conntrack -L" "nat.conntrackall"
+    save_cmd_all_ns "conntrack -L | wc" "nat.conntrackallcount"
+    save_cmd_all_ns "show nat config" "nat.config"
+}
+
+###############################################################################
+# Save IP related info
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_ip_info() {
+    save_ip "-d link" "link"
+    save_ip "-s addr" "addr"
+    save_ip "rule" "rule"
+    save_ip "route show table all" "route"
+    save_ip "-s neigh" "neigh"
+    save_ip "-s neigh show nud noarp" "neigh.noarp"
+    save_ip "-d nexthop show" "nexthop"
+    save_cmd "ip -6 xfrm state" "ospf6.xfrm.state"
+    save_cmd "ip -6 xfrm policy" "ospf6.xfrm.policy"
+
+}
+
+###############################################################################
+# Save BGP related info
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_bgp_info() {
+    #save_vtysh "show ip bgp summary" "bgp.summary"
+    #save_vtysh "show ip bgp neighbors" "bgp.neighbors"
+    #save_vtysh "show ip bgp" "bgp.table"
+    #save_vtysh "show bgp ipv6 summary" "bgp.ipv6.summary"
+    #save_vtysh "show bgp ipv6 neighbors" "bgp.ipv6.neighbors"
+    #save_vtysh "show bgp ipv6" "bgp.ipv6.table"
+    save_bgp_neighbor_all_ns
+}
+
+###############################################################################
+# Save Redis DB contents
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_redis_info() {
+    save_redis "APPL_DB"
+    save_redis "ASIC_DB"
+    save_redis "CONFIG_DB"
+    save_redis "FLEX_COUNTER_DB"
+    save_redis "STATE_DB"
+    save_redis "GB_ASIC_DB"
+    save_redis "ERROR_DB"
+    save_redis "EVENT_DB"
+}
+
+###############################################################################
+# Given list of proc files, saves proc files to tar.
+# Globals:
+#  V
+#  TARDIR
+#  MKDIR
+#  CP
+#  DUMPDIR
+#  TAR
+#  RM
+#  BASE
+#  TARFILE
+# Arguments:
+#  *procfiles: variable-length list of proc file paths to save
+# Returns:
+#  None
+###############################################################################
+save_proc() {
+    local procfiles="$@"
+    $MKDIR $V -p $TARDIR/proc \
+        && (for f in $procfiles; do ( [ -e $f ] && $CP -ra $f $TARDIR/proc ) || echo "$f not found" > $TARDIR/$f; done) \
+        && $TAR -rhf $TARFILE -C $DUMPDIR --mode=+rw $BASE/proc \
+        && $RM -rf $TARDIR/proc
+}
+
+save_proc_net() {
+    local exclude_files="/proc/self/net/ipv6_route /proc/self/net/route"
+    local procfiles="/proc/self/net"
+    local files=$($FIND $procfiles -mindepth 1 -maxdepth 1 $(printf "! -wholename %s " ${exclude_files}))
+    $MKDIR $V -p $TARDIR/proc/net \
+        && (for f in $files; do ( [ -e $f ] && $CP -ra $f $TARDIR/proc/net ) || echo "$f not found" > $TARDIR/$f; done) \
+        && $TAR -rhf $TARFILE -C $DUMPDIR --mode=+rw $BASE/proc/net \
+        && $RM -rf $TARDIR/proc/net
+}
+
+###############################################################################
+# Dumps all fields and values from given Redis DB.
+# Arguments:
+#  DB id: id of DB for sonic-db-cli
+#  DB name: filename to which output will be saved
+# Returns:
+#  None
+###############################################################################
+save_redis() {
+    local db_name=$1
+    if [ $# -ge 2 ] && [ -n "$2" ]; then
+        local dest_file_name=$2
+    else
+        local dest_file_name="$db_name"
+    fi
+    save_cmd_all_ns "sonic-db-dump -n '$db_name' -y" "$db_name.json"
+}
+
+###############################################################################
+# SAI DUMP from syncd
+# Globals:
+#  NUM_ASICS
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_saidump() {
+    if [[ ( "$NUM_ASICS" == 1 ) ]] ; then
+        save_cmd "docker exec -it syncd saidump" "saidump"
+    else
+        for (( i=0; i<$NUM_ASICS; i++ ))
+        do
+            save_cmd "docker exec -it syncd$i saidump" "saidump$i"
+        done
+    fi
+}
+
+###############################################################################
+# Runs a 'show platform' command, append the output to 'filename' and add to the incrementally built tar.
+# Globals:
+#  LOGDIR
+#  BASE
+#  MKDIR
+#  TAR
+#  TARFILE
+#  DUMPDIR
+#  V
+#  RM
+# Arguments:
+#  type: the type of platform information
+#  filename: the filename to save the output as in $BASE/dump
+# Returns:
+#  None
+###############################################################################
+save_platform() {
+    local type="$1"
+    local filename=$2
+    local filepath="${LOGDIR}/$filename"
+    local tarpath="${BASE}/dump/$filename"
+    [ ! -d $LOGDIR ] && $MKDIR $V -p $LOGDIR
+
+    eval "show platform $type" >> "$filepath" 2>&1
+    echo $'\r' >> "$filepath"
+    if [ -f "${filepath}" ]; then
+        sed -i $OBSC_TRANSFORM "$filepath"
+    fi
+
+    ($TAR $V -uhf $TARFILE -C $DUMPDIR "$tarpath" \
+        || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting to prevent data loss.")
+}
+
+###############################################################################
+# Save platform related info
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_platform_info() {
+    save_platform "syseeprom" "platform"
+    save_platform "psustatus" "platform"
+    save_platform "psusummary" "platform"
+    save_platform "ssdhealth" "platform"
+    save_platform "temperature" "platform"
+    save_platform "fan" "platform"
+    save_platform "i2c errors" "platform"
+    save_platform "firmware status" "platform"
+}
+
+###############################################################################
+# Runs 'ipmitool' command, append the output to 'filename' and add to the incrementally built tar.
+# Globals:
+#  LOGDIR
+#  BASE
+#  MKDIR
+#  TAR
+#  TARFILE
+#  DUMPDIR
+#  V
+#  RM
+# Arguments:
+#  type: the type of ipmitool information
+#  timeout: optional. 
+# Returns:
+#  None
+###############################################################################
+save_ipmitool() {
+    local type="$1"
+    local filename="ipmitool.log"
+    local filepath="${LOGDIR}/$filename"
+    local tarpath="${BASE}/dump/$filename"
+    if [ $# -eq 2 ]; then
+	    local TIMEOUT_MIN="$2"
+    fi
+    local timeout_cmd="timeout --foreground ${TIMEOUT_MIN}m"
+    [ ! -d $LOGDIR ] && $MKDIR $V -p $LOGDIR
+
+    cmd="ipmitool $type"
+    eval "${timeout_cmd} $cmd" &>> "$filepath"
+    if [ $? -ne 0 ]; then
+        echo "Command: $cmd timedout after ${TIMEOUT_MIN} minutes."
+    fi
+    echo $'\r' >> "$filepath"
+    if [ -f "${filepath}" ]; then
+        sed -i $OBSC_TRANSFORM "$filepath"
+    fi
+
+    ($TAR $V -uhf $TARFILE -C $DUMPDIR "$tarpath" \
+        || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting to prevent data loss.")
+}
+
+
+###############################################################################
+# Save ipmitool info
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_ipmi_info() {
+    save_ipmitool "chassis status"
+    save_ipmitool "mc info"
+    save_ipmitool "mc watchdog get"
+    save_ipmitool "mc getenables"
+    save_ipmitool "mc getsysinfo system_fw_version"
+    save_ipmitool "mc getsysinfo primary_os_name"
+    save_ipmitool "fru"
+    save_ipmitool "sensor"
+    save_ipmitool "sel"
+    save_ipmitool "sel list" 10
+}
+
+
+###############################################################################
+# Runs a comamnd and saves its output to the incrementally built tar.
+# Globals:
+#  LOGDIR
+#  BASE
+#  MKDIR
+#  TAR
+#  TARFILE
+#  DUMPDIR
+#  V
+#  RM
+#  NOOP
+# Arguments:
+#  filename: the full path of the file to save
+#  base_dir: the directory in $TARDIR/ to stage the file
+#  do_gzip: (OPTIONAL) true or false. Should the output be gzipped
+# Returns:
+#  None
+###############################################################################
+save_file() {
+    local start_t=$(date +%s%3N)
+    local end_t=0
+    local orig_path=$1
+    local supp_dir=$2
+    local gz_path="$TARDIR/$supp_dir/$(basename $orig_path)"
+    local tar_path="${BASE}/$supp_dir/$(basename $orig_path)"
+    local do_gzip=${3:-true}
+    local do_tar_append=${4:-true}
+    [ ! -d "$TARDIR/$supp_dir" ] && $MKDIR $V -p "$TARDIR/$supp_dir"
+
+    local tmpDir=$(mktemp -d)
+    $CP -a $orig_path ${tmpDir}
+    local file="${tmpDir}/$(basename $orig_path)"
+
+    if $do_gzip; then
+        gz_path="${gz_path}.gz"
+        tar_path="${tar_path}.gz"
+        if [ -f "$file" ]; then
+            sed -i $OBSC_TRANSFORM "$file"
+        fi
+        if $NOOP; then
+            echo "gzip -c $file > $gz_path"
+        else
+            gzip -c $file > $gz_path
+        fi
+    else
+        if [ -z "${file##*.gz}" ]; then
+            if zgrep -e $OBSC_STRING "$file" 1>/dev/null; then
+                gunzip "$file"
+                local unzip_file=${file%.*}
+                if [ -f "${unzip_file}" ]; then
+                    sed -i $OBSC_TRANSFORM "$unzip_file"
+                fi
+                gzip "$unzip_file"
+            fi
+        else
+            if [ -f "$file" ]; then
+                sed -i $OBSC_TRANSFORM "$file"
+            fi
+        fi
+        if $NOOP; then
+            echo "cp -a $file $gz_path"
+        else
+            cp -a $file $gz_path
+        fi
+    fi
+    $RM $V -rf ${tmpDir}
+
+    if $do_tar_append; then
+        ($TAR $V -rhf $TARFILE -C $DUMPDIR "$tar_path" \
+            || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting to prevent data loss.") \
+            && $RM $V -f "$gz_path"
+    fi
+    end_t=$(date +%s%3N)
+    echo "[ save_file:$orig_path] : $(($end_t-$start_t)) msec"  >> $TECHSUPPORT_TIME_INFO
+}
+
+save_dir() {
+    local start_t=$(date +%s%3N)
+    local end_t=0
+    local orig_path=$1
+    local supp_dir=$2
+    local gz_path="$TARDIR/$supp_dir/$(basename $orig_path)"
+    local tar_path="${BASE}/$supp_dir/$(basename $orig_path)"
+    local do_gzip=${3:-true}
+    local do_tar_append=${4:-true}
+    [ ! -d "$TARDIR/$supp_dir" ] && $MKDIR $V -p "$TARDIR/$supp_dir"
+
+    if [[ ! -d "$orig_path" ]]; then
+        return
+    fi
+    if $do_gzip; then
+        local tmpDir=$(mktemp -d)
+        $CP -ra $orig_path $tmpDir
+        filepath="${tmpDir}/$(basename $orig_path)"
+
+        for file in $(find_files_in_dir "$filepath"); do
+            if [ -f "$file" ]; then
+                sed -i $OBSC_TRANSFORM "$file"
+            fi
+        done
+
+        gz_path="${gz_path}.tar.gz"
+        tar_path="${tar_path}.tar.gz"
+        cmd="$TAR $V -czf $gz_path -C $(dirname $filepath) $(basename $filepath)"
+        if $NOOP; then
+            echo $cmd
+        else
+            eval $cmd
+        fi
+    else
+        echo "Files in ${orig_path} will not be added to tar without zipping"
+        return
+    fi
+    $RM $V -rf ${tmpDir}
+
+    if $do_tar_append; then
+        ($TAR $V -rhf $TARFILE -C $DUMPDIR "$tar_path" \
+            || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting to prevent data loss.") \
+            && $RM $V -f "$gz_path"
+    fi
+    end_t=$(date +%s%3N)
+    echo "[ save_file:$orig_path] : $(($end_t-$start_t)) msec"  >> $TECHSUPPORT_TIME_INFO
+}
+
+###############################################################################
+# find_files routine
+# Globals:
+#  SINCE_DATE: list files only newer than given date
+#  REFERENCE_FILE: the file to be created as a reference to compare modification time
+# Arguments:
+#  directory: directory to search files in
+# Returns:
+#  None
+###############################################################################
+find_files() {
+    local -r directory=$1
+    $TOUCH --date="${SINCE_DATE}" "${REFERENCE_FILE}"
+    local -r find_command="find -L $directory -type f -newer ${REFERENCE_FILE}"
+
+    echo $($find_command)
+}
+
+###############################################################################
+# find_files_in_dir routine
+# Arguments:
+#  directory: search files in the directory
+# Returns:
+#  None
+###############################################################################
+find_files_in_dir() {
+    local -r directory=$1
+    local -r find_command="find $directory -type f"
+
+    echo $($find_command)
+}
+
+###############################################################################
+# disable_logrotate routine
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+disable_logrotate() {
+	
+	#Flush the in-memory logs forcefully to disk
+	logger -p NOTICE "Running show techsupport"
+	/usr/bin/in-memory.sh --force --rotate-log-all
+
+    sync; sync
+	#Inform in-memory to stop flushing logs to disk
+	touch /var/run/techsupport.inprogress
+	
+	logrotate_deactivate
+}
+
+###############################################################################
+# enable_logrotate routine
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+enable_logrotate() {
+	
+	logrotate_activate
+
+	#Inform in-memory to resume flushing logs to disk
+	rm -f /var/run/techsupport.inprogress
+
+	#Trigger the auto log rotate
+	touch /var/log/rotate/disk/syslog 
+}
+
+
+###############################################################################
+# Collect Mellanox specific information
+# Globals:
+#  CMD_PREFIX
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+collect_mellanox() {
+    local sai_dump_filename="/tmp/sai_sdk_dump_$(date +"%m_%d_%Y_%I_%M_%p")"
+    ${CMD_PREFIX}docker exec -it syncd saisdkdump -f $sai_dump_filename
+    ${CMD_PREFIX}docker exec syncd tar Ccf $(dirname $sai_dump_filename) - $(basename $sai_dump_filename) | tar Cxf /tmp/ -
+    save_file $sai_dump_filename sai_sdk_dump true
+
+    local mst_dump_filename="/tmp/mstdump"
+    local max_dump_count="3"
+    for i in $(seq 1 $max_dump_count); do
+        ${CMD_PREFIX}/usr/bin/mstdump /dev/mst/mt*conf0 > "${mst_dump_filename}${i}"
+        save_file "${mst_dump_filename}${i}" mstdump true
+    done
+}
+
+###############################################################################
+# Collect Broadcom specific information
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+collect_broadcom() {
+    save_cmd "cat /proc/bcm/knet/debug" "broadcom.knet.debug"
+    save_cmd "cat /proc/bcm/knet/dma" "broadcom.knet.dma"
+    save_cmd "cat /proc/bcm/knet/dstats" "broadcom.knet.dstats"
+    save_cmd "cat /proc/bcm/knet/link" "broadcom.knet.link"
+    save_cmd "cat /proc/bcm/knet/rate" "broadcom.knet.rate"
+    save_cmd "cat /proc/bcm/knet/stats" "broadcom.knet.stats"
+    save_cmd "cat /proc/linux-knet-cb" "broadcom.knet.cb"
+    save_cmd "cat /proc/linux-kernel-bde" "broadcom.kernel.bde"
+    save_cmd "cat /proc/linux-user-bde" "broadcom.user.bde"
+    if [ -f /tmp/swss-syncd-debug.log ]; then
+        save_file /tmp/swss-syncd-debug.log log true
+    fi
+}
+
+###############################################################################
+# Collect Arista specific information
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+collect_arista() {
+    save_cmd "cat /proc/scd" "scd"
+    save_cmd "arista syseeprom" "arista.syseeprom"
+    save_cmd "arista dump" "arista.dump"
+}
+
+###############################################################################
+# Save system journal
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_system_journal() {
+    start_t=$(date +%s%3N)
+    for file in $(find_files "/var/log/journal/$(cat /etc/machine-id)"); do
+        # don't gzip already-gzipped log files
+        if [ -z "${file##*.gz}" ]; then
+            save_file $file log false false
+        else
+            save_file $file log true false
+        fi
+    done
+
+    if [ -d "$TARDIR/log" ]; then
+        # Append the log folder from the dumpdir to the main tarball
+        ($TAR $V -rhf $TARFILE -C $DUMPDIR ${BASE}/log \
+            || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting for safety") \
+            && $RM $V -rf $TARDIR/log
+    fi
+    end_t=$(date +%s%3N)
+    echo "[ TAR /var/log/journal Files ] : $(($end_t-$start_t)) msec" >> $TECHSUPPORT_TIME_INFO
+}
+
+###############################################################################
+# Save log file
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_log_files() {
+    disable_logrotate
+
+    start_t=$(date +%s%3N)
+
+    #save details of log files present in var log
+    save_cmd "ls -ltrR /var/log" "var_log_files"
+
+    # Copy ONIE update log always
+    if [ -f "/var/log/onie-update.log" ]; then
+        save_file "/var/log/onie-update.log" log true false
+    fi
+
+    save_dir "/var/log/audit" log
+
+    # gzip up all log files individually before placing them in the incremental tarball
+    for file in $(find_files "/var/log/"); do
+        # ignore the sparse file lastlog
+        if [ "$file" = "/var/log/lastlog" ]; then
+            continue
+        fi
+
+        # ignore system journal as they are copied separately
+        if echo $file | grep -q "/var/log/journal"; then
+            continue
+        fi
+
+        # Skip the in-memory and auto-logrotate trigger log files
+        if [[ -z ${file/*ramfs*/} || -z ${file/*rotate*/} ]]; then
+            continue
+        fi
+
+        # ignore ONIE update log as it is copied separately
+        if echo $file | grep -q "/var/log/onie-update.log"; then
+            continue
+        fi
+
+        # Skip kernel audit logs as they are copied separately
+        if echo $file | grep -q "/var/log/audit/"; then
+            continue
+        fi
+
+        # don't gzip already-gzipped log files :)
+        if [ -z "${file##*.gz}" ]; then
+            save_file $file log false false
+        else
+            save_file $file log true false
+        fi
+    done
+
+    # Append the log folder from the dumpdir to the main tarball
+    ($TAR $V -rhf $TARFILE -C $DUMPDIR ${BASE}/log \
+        || abort "${ERROR_TAR_FAILED}" "tar append operation failed. Aborting for safety") \
+        && $RM $V -rf $TARDIR/log
+    end_t=$(date +%s%3N)
+    echo "[ TAR /var/log Files ] : $(($end_t-$start_t)) msec" >> $TECHSUPPORT_TIME_INFO
+
+    enable_logrotate
+}
+
+###############################################################################
+# Save crash files
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+save_crash_files() {
+    start_t=$(date +%s%3N)
+    # archive core dump files
+    for file in $(find_files "/var/core/"); do
+        # don't gzip already-gzipped log files :)
+        if [ -z "${file##*.gz}" ]; then
+            save_file $file core false
+        else
+            save_file $file core true
+        fi
+    done
+
+    # archive kernel dump files
+    [ -d /var/crash/ ] && for file in $(find_files "/var/crash/"); do
+        # don't gzip already-gzipped dmesg files :)
+        if [ ! ${file} = "/var/crash/kexec_cmd" -a ! ${file} = "/var/crash/export" ]; then
+            if [[ ${file} == *"kdump."* ]]; then
+                save_file $file kdump false
+            else
+                save_file $file kdump true
+            fi
+        fi
+    done
+    end_t=$(date +%s%3N)
+    echo "[ TAR /var/core and /var/crash Files ] : $(($end_t-$start_t)) msec" >> $TECHSUPPORT_TIME_INFO
+}
+
+###############################################################################
+# Get number of ASICs in the platform
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  ASIC Count
+###############################################################################
+get_asic_count() {
+    local cmd="show platform summary --json | python3 -c 'import sys, json; \
+               print(json.load(sys.stdin)[\"asic_count\"])'"
+    eval `echo ${cmd} 2>&1`
+}
+
+
+###############################################################################
+#
+# Globals:
+#  None
+# Arguments:
+#  As needed by the command
+# Returns:
+#  None
+###############################################################################
+bash_exec()
+{
+    echo "--------------------------------------------------------------------"
+    echo -e "$@"
+    echo "--------------------------------------------------------------------"
+    time "$@"
+    echo -e "\n\n"
+}
+BASHCMD=bash_exec
+
+###############################################################################
+# save_history_file routine to convert history file containing unix timestamp
+#       to human readable date and then save the file.
+# Globals:
+#  None
+# Arguments:
+#  - history file with unix timestamps
+#  - output file
+# Returns:
+#  None
+###############################################################################
+save_history_file() {
+    local input=$1
+    local output=$2
+    local output_file="/home/admin/${output}"
+    awk -F\# '/^#1[0-9]{9}$/ {
+        if(cmd)
+            printf "%s %s\n",ts,cmd;
+            ts=strftime("%b %d %y %T",$2); cmd="";
+    } !/^#1[0-9]{9}$/ {
+        if(cmd)
+            cmd=cmd "\n" $0;
+        else
+            cmd=$0
+    }' $input > $output_file
+    save_cmd "cat ${output_file}" $output
+    rm -f $output_file
+}
+
+######################################################################################
+# Dump the pac/mab config, authentication clients info and authentication clients history.
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+######################################################################################
+save_pac_info() {
+    # Copy all the PAC klish commands into the general TS_KLISH_CMDS file
+    save_klish_cmd "show authentication | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show authentication interface all | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show authentication clients all | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show authentication authentication-history all | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show mab | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show dot1x | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show dot1x detail all | no-more" ${TS_KLISH_CMDS}
+    save_pac_authenticated_clients_info_per_interface
+}
+
+save_pac_authenticated_clients_info_per_interface() {
+    local intf_naming_mode="$(/usr/local/bin/sonic-db-cli CONFIG_DB HGET "DEVICE_METADATA|localhost" intf_naming_mode)"
+    for key in $(/usr/local/bin/sonic-db-cli STATE_DB KEYS "PAC_AUTHENTICATED_CLIENT_OPER_TABLE|*" | cut -d '|' -f 2 | sort -uV)
+    do
+       local ifName
+       if [[ -n "${intf_naming_mode}" && ${intf_naming_mode} == "standard" ]]; then
+           ifName=$(/usr/local/bin/sonic-db-cli CONFIG_DB HGET "PORT|$key" alias)
+       else
+           ifName=$key
+       fi
+       save_klish_cmd "show authentication clients $ifName | no-more" ${TS_KLISH_CMDS}
+    done
+}
+
+######################################################################################
+# Dump the DAS Config and Operational Information.
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+######################################################################################
+save_das_info() {
+    # Copy all the DAS klish commands into the general TS_KLISH_CMDS file
+    save_klish_cmd "show radius-server dynamic-author | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show radius-server dynamic-author statistics | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show radius-server dynamic-author statistics client all | no-more" ${TS_KLISH_CMDS}
+}
+
+debugsh_exec()
+{
+    $BASHCMD debugsh -p -b 16384 $@
+}
+DEBUGSH=debugsh_exec
+
+debugsh_component_dump()
+{
+    local start_t=$(date +%s%3N)
+    local end_t=0
+    echo -e "****************************************************************************"
+    echo -e "$1 techsupport dump begin at $(date)"
+    echo -e "****************************************************************************\n\n"
+    type debugsh_$1_dump &> /dev/null && debugsh_$1_dump || echo "function debugsh_$1_dump not found."
+    echo -e "\n\n****************************************************************************"
+    echo -e "$1 techsupport dump ended at $(date)"
+    echo -e "****************************************************************************"
+    end_t=$(date +%s%3N)
+    echo "[ debugsh_component_dump $1 ] : $(($end_t-$start_t)) msec"  >> $TECHSUPPORT_TIME_INFO
+}
+
+debugsh_dump()
+{
+    local target_dir=${2:-""}
+    debugsh_component_dump $1 > "/tmp/$1_dump.log" 2>&1
+    save_file "/tmp/$1_dump.log" "debugsh/$target_dir" false
+    rm -f /tmp/$1_dump.log
+}
+
+debugsh_dasmgrd_dump()
+{
+    $DEBUGSH -c DASMGRD -e show system internal dasmgr
+}
+
+debugsh_pacmgrd_dump()
+{
+    $DEBUGSH -c PACMGRD -e show system internal pacmgr
+}
+
+debugsh_aclsvcd_dump()
+{
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd memory
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd features
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd interface
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd acl summary
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd acl details
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd fbs bindings
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd fbs classifier
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd fbs policy
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd fbs next-hop-groups
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd fbs replication-groups
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd redis-events
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd sip-grp summary
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd sip-grp details
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd vlan-cls summary
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd vlan-cls details
+    $DEBUGSH -c ACLSVCD -e show system internal aclsvcd logging state
+    $BASHCMD ebtables -L
+    $BASHCMD ebtables -L --Lc
+    $BASHCMD iptables -L -n -x -v --line-numbers
+    $BASHCMD iptables -S
+    $BASHCMD ip6tables -L -n -x -v --line-numbers
+    $BASHCMD ip6tables -S
+    $BASHCMD arptables -L -n -x -v --line-numbers
+    $BASHCMD tc filter show dev eth0 ingress
+}
+
+debugsh_acllogd_dump()
+{
+    $DEBUGSH -c ACLLOGD -e show system internal acllogd cache
+    $DEBUGSH -c ACLLOGD -e show system internal acllogd memory
+    $DEBUGSH -c ACLLOGD -e show system internal acllogd metadata
+    $DEBUGSH -c ACLLOGD -e show system internal acllogd state
+}
+
+debugsh_acllib_dump()
+{
+    $DEBUGSH -c ACLLIB_PAC -e show system internal acl-lib pac acl table 
+    $DEBUGSH -c ACLLIB_PAC -e show system internal acl-lib pac acl entries 
+    $DEBUGSH -c ACLLIB_PAC -e show system internal acl-lib pac acl bindings 
+    $DEBUGSH -c ACLLIB_PAC -e show system internal acl-lib pac allocation ids 
+    $DEBUGSH -c ACLLIB_PAC -e show system internal acl-lib pac memory
+    $DEBUGSH -c ACLLIB_PAC -e show system internal acl-lib pac sip-obj-groups
+    $DEBUGSH -c ACLLIB_PAC -e show system internal acl-lib pac vlan-classifiers
+}
+
+debugsh_aclorchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent acl table
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent acl global
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent acl counters
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent acl user-trap
+}
+
+debugsh_pbforchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent pbf egress entries
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent pbf group
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent pbf memory
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent pbf fdb entries
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent pbf neighbor entries
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent pbf nh-group
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent pbf replication-group
+}
+
+debugsh_isogrporchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent isogroup group
+}
+
+debugsh_intforchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent intf cache
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent intf vid-rid-map
+}
+
+debugsh_l2nhgorchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent l2nhg global
+}
+
+debugsh_vxlanorchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent vxlan global
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent vxlan dvni
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent vxlan diptunnel
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent vxlan mapentry
+}
+
+debugsh_vxlanmgr_dump()
+{
+    $DEBUGSH -c VXLANMGRD -e show system internal vxlanmgr global
+    $DEBUGSH -c VXLANMGRD -e show system internal vxlanmgr tunnelmap
+    $DEBUGSH -c VXLANMGRD -e show system internal vxlanmgr dvnicache
+    $BASHCMD show vxlan interface
+    $BASHCMD show vxlan vlanvnimap
+    $BASHCMD show vxlan vrfvnimap
+    $BASHCMD show vxlan remotevtep
+    $BASHCMD show vxlan remotevni all
+    $BASHCMD show vxlan remotemac all
+}
+
+debugsh_fdbsyncd_dump()
+{
+    $DEBUGSH -c FDBSYNCD -e show system internal fdbsync counter
+    $DEBUGSH -c FDBSYNCD -e show system internal fdbsync vxlan_fdb
+    $DEBUGSH -c FDBSYNCD -e show system internal fdbsync local_fdb
+    $DEBUGSH -c FDBSYNCD -e show system internal fdbsync imet
+    $DEBUGSH -c FDBSYNCD -e show system internal fdbsync netlink counter
+}
+
+debugsh_iftrackorchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent iftrack global
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent iftrack group
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent iftrack downstream
+}
+
+debugsh_policerorchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent policer policers
+}
+
+debugsh_qoswredorchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent qosorch wred-profiles
+}
+
+debugsh_syncd_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal syncd acl-counter global
+    $DEBUGSH -c SYNCD -e show system internal syncd acl-counter counters
+}
+
+debugsh_portsorch_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal portsorch stack
+    $DEBUGSH -c ORCHAGENT -e show system internal portsorch translation
+}
+
+debugsh_vlanmgrd_dump()
+{
+    $DEBUGSH -c VLANMGRD -e show system internal vlanmgr stacking
+    $DEBUGSH -c VLANMGRD -e show system internal vlanmgr translation
+}
+
+#mclag dump 
+debugsh_mclag_dump()
+{
+    domain_id=`mclagdctl dump state | grep "Domain" | cut -d ":" -f 2`
+
+    if [ -n "$domain_id" ]
+    then
+        $BASHCMD mclagdctl dump state
+        $BASHCMD mclagdctl -i $domain_id dump mac
+        $BASHCMD mclagdctl -i $domain_id dump portlist local
+        $BASHCMD mclagdctl -i $domain_id dump portlist peer
+        $BASHCMD mclagdctl -i $domain_id dump debug counters
+        $BASHCMD mclagdctl -i $domain_id dump arp
+        $BASHCMD mclagdctl -i $domain_id dump nd 
+        $BASHCMD mclagdctl -i $domain_id dump unique_ip
+        $BASHCMD mclagdctl -i $domain_id dump l2mc
+        $BASHCMD mclagdctl -i $domain_id dump irb
+        $BASHCMD mclagdctl -i $domain_id dump peer-gateway
+        $BASHCMD mclagdctl -i $domain_id dump l2mc_mrouter
+        $BASHCMD mclagdctl -i $domain_id dump vlanlist local
+    else
+        echo "mclag not configured"
+    fi
+    
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent mlag global
+}
+
+debugsh_arsorchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent arsorch profile
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent arsorch port-profile
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent arsorch port-binding
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent arsorch object
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent arsorch port-quality
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent nhgorch ars-stats
+    if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM789) ]]; then
+        $DEBUGSH -c ORCHAGENT -e show system internal orchagent nhgorch protection-nhg
+    fi
+}
+
+debugsh_nhgorchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent nhgorch nexthop-group
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent nhgorch rh-nexthop-group
+}
+
+debugsh_lvteporchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent lvtep global
+}
+
+debugsh_delayrestoreorchagent_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent delayrestore global
+}
+
+debugsh_sai_mptnl_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai mptnl tnlmap detail
+    $DEBUGSH -c SYNCD -e show system internal sai mptnl mapentry detail
+    $DEBUGSH -c SYNCD -e show system internal sai mptnl dvnimapentry detail
+    $DEBUGSH -c SYNCD -e show system internal sai mptnl cmntnl detail
+    $DEBUGSH -c SYNCD -e show system internal sai mptnl nh detail
+    $DEBUGSH -c SYNCD -e show system internal sai mptnl sip detail
+    $DEBUGSH -c SYNCD -e show system internal sai mptnl dip detail
+    $DEBUGSH -c SYNCD -e show system internal sai mptnl route detail
+    $DEBUGSH -c SYNCD -e show system internal sai mptnl global detail
+}
+
+debugsh_sai_isogrp_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai iso-grp global
+    $DEBUGSH -c SYNCD -e show system internal sai iso-grp groups
+    $DEBUGSH -c SYNCD -e show system internal sai iso-grp members
+}
+
+debugsh_sai_vlan_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai vlan sw dump
+    $DEBUGSH -c SYNCD -e show system internal sai vlan hw dump
+}
+
+debugsh_sai_vlanstack_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai vlanstack idata dump
+    $DEBUGSH -c SYNCD -e show system internal sai vlanstack stackinfo dump
+    $DEBUGSH -c SYNCD -e show system internal sai vlanstack portinfo dump
+    $DEBUGSH -c SYNCD -e show system internal sai vlanstack fwdinfo dump
+}
+
+debugsh_sai_lvtep_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai lvtep global
+}
+
+debugsh_sai_sdkapicnt_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai sdk-api cnt
+}
+
+debugsh_sai_rififpdrop_counters1_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai vlan ifp drop counters
+}
+
+debugsh_sai_rififpdrop_counters2_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai vlan ifp drop counters
+}
+
+debugsh_sai_acl_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai acl egress port groups
+    $DEBUGSH -c SYNCD -e show system internal sai acl egress port groups detail
+    $DEBUGSH -c SYNCD -e show system internal sai acl egress port info
+}
+
+debugsh_sai_ipmcgrp_dump()
+{
+    $DEBUGSH -c SYNCD -e show system internal sai ipmc group
+    $DEBUGSH -c SYNCD -e show system internal sai ipmc group members
+    $DEBUGSH -c SYNCD -e show system internal sai ipmc group members nh-intf-db
+    $DEBUGSH -c SYNCD -e show system internal sai ipmc group members nh-member-db
+}
+
+debugsh_vrrpmgrd_dump()
+{
+    $DEBUGSH -c VRRPMGRD -e show system internal sagmgr
+}
+
+debugsh_neighsyncd_dump()
+{
+    $DEBUGSH -c NEIGHSYNCD -e show system internal neighsyncd global
+    $DEBUGSH -c NEIGHSYNCD -e show system internal neighsyncd interface
+    $DEBUGSH -c NEIGHSYNCD -e show system internal neighsyncd neighCache
+    $DEBUGSH -c NEIGHSYNCD -e show system internal neighsyncd counters
+    $DEBUGSH -c NEIGHSYNCD -e show system internal neighsyncd fdbCache 
+    $DEBUGSH -c NEIGHSYNCD -e show system internal neighsyncd fdbNeighRefresh
+}
+
+debugsh_intfmgrd_dump()
+{
+    $DEBUGSH -c INTFMGRD -e show system internal intfmgr global
+    $DEBUGSH -c INTFMGRD -e show system internal sagmgr
+}
+
+debugsh_coppmgrd_dump()
+{
+    $DEBUGSH -c COPPMGRD -e show system internal coppmgr group
+    $DEBUGSH -c COPPMGRD -e show system internal coppmgr trap
+    $DEBUGSH -c COPPMGRD -e show system internal coppmgr feature
+}
+
+debugsh_copp_counters1_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent copp policers
+}
+
+debugsh_copp_counters2_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent copp policers
+}
+
+debugsh_stpmgrd_dump()
+{
+    $DEBUGSH -c STPMGRD -e show system internal stpmgr global
+}
+
+debugsh_nbrmgrd_dump()
+{
+    $DEBUGSH -c NBRMGRD -e show system internal nbrmgrd global
+    $DEBUGSH -c NBRMGRD -e show system internal nbrmgrd interface
+    $DEBUGSH -c NBRMGRD -e show system internal nbrmgrd neighCache
+    $DEBUGSH -c NBRMGRD -e show system internal nbrmgrd staticNeighCache
+}
+
+debugsh_teammgrd_dump()
+{
+    $DEBUGSH -c TEAMMGRD -e show  system internal teammgr global
+}
+
+debugsh_dhcprelaymgrd_dump()
+{
+    $DEBUGSH -c DHCPRELAYMGRD -e show  system internal dhcprelaymgr global
+}
+
+debugsh_ports_dump()
+{
+    $DEBUGSH -c ORCHAGENT -e show system internal orchagent ports pending_tasks
+    $DEBUGSH -c ORCHAGENT -e show system internal port if-reasons
+}
+
+debugsh_redirectmgr_dump()
+{
+    $DEBUGSH -c REDIRECTMGR -e show system internal redirectmgr sessions
+    $BASHCMD nft list table bridge filter
+}
+
+######################################################################################
+# Add PTP related info to the techsuport. PTP is not supported by all the chips
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+######################################################################################
+save_ptp_info() {
+    if [ -f /proc/bcm/ksync/stats ]; then
+        # Copy all the PTP klish commands into the general TS_KLISH_CMDS file
+        save_klish_cmd "show ptp | no-more" ${TS_KLISH_CMDS}
+        save_klish_cmd "show ptp clock | no-more" ${TS_KLISH_CMDS}
+        save_klish_cmd "show ptp parent | no-more" ${TS_KLISH_CMDS}
+        save_cmd "docker logs timesync" "docker.timesync.log"
+        save_cmd "lsmod | grep ptp" "ptp.modules"
+        save_cmd "cat /proc/bcm/ksync/stats" "ptp.fw_stats"
+        save_cmd "cat /proc/bcm/knet/ptp_stats" "ptp.knet_stats"
+        save_cmd "docker exec -it timesync ps -eaf" "ptp.ps"
+        save_bcmcmd "bcmcmd -t 5 mcss" "broadcom.ptp"
+        docker cp -a timesync:/etc/linuxptp/ptp4l_1.conf /home/admin/ptp4l_1.conf
+        if [ -f /home/admin/ptp4l_1.conf ]; then
+            save_file /home/admin/ptp4l_1.conf dump false false
+            rm -f /home/admin/ptp4l_1.conf
+        fi
+    else
+        ptp_support="Broadcom PTP is not supported"
+        save_cmd "echo $ptp_support" "ptp.support"
+    fi
+}
+dump_mgmt_service_profiles()
+{
+    docker exec mgmt-framework supervisorctl signal USR1 rest-server
+    docker exec telemetry supervisorctl signal USR1 telemetry
+}
+
+collect_mgmt_service_logs() {
+    local container=$1
+    local program=$2
+    if [[ -z $(docker container ls -aqf name=${container}) ]]; then
+        return
+    fi
+    # Copy logs from container to temp dir
+    local tmpDir=$(mktemp -d)
+    docker cp -a ${container}:/var/log/${program} ${tmpDir}
+    # Prefix program name to profile dump filenames to avoid confusion
+    for f in ${tmpDir}/${program}/*pprof*; do
+        mv $f ${tmpDir}/${program}/${program}_$(basename $f)
+    done
+    # Save to log directory of the dump
+    for f in ${tmpDir}/${program}/*; do
+        save_file $f log true
+    done
+    $RM $V -rf ${tmpDir}
+}
+
+###############################################################################
+# Main generate_dump routine
+# Globals:
+#  All of them.
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+main() {
+    local start_t=0
+    local end_t=0
+    local total_t=$(date +%s)
+    if [ `whoami` != root ] && ! $NOOP;
+    then
+        echo "$0: must be run as root (or in sudo)" >&2
+        cleanup_tmpfiles
+        rm $V -rf $TARFILE
+        update_db_state Exited
+        sync
+        exit 10
+    fi
+    NUM_ASICS=$(get_asic_count)
+    ${CMD_PREFIX}renice +5 -p $$ >> /dev/null
+    ${CMD_PREFIX}ionice -c 2 -n 5 -p $$ >> /dev/null
+
+    $MKDIR $V -p $TARDIR
+
+    # Start with this script so its obvious what code is responsible
+    $LN $V -s /usr/local/bin/generate_dump $TARDIR
+    $TAR $V -chf $TARFILE -C $DUMPDIR $BASE
+    $RM $V -f $TARDIR/sonic_dump
+
+    # General file for all the klish commands
+    TS_KLISH_CMDS=$(prepare_klish_cmd_group)
+
+    $TOUCH $TECHSUPPORT_TIME_INFO
+    $TOUCH $TECHSUPPORT_SAVE_PROC_INFO
+    # if old data is present clear it
+    echo $BASE > $TECHSUPPORT_TIME_INFO
+    start_t=$(date +%s%3N)
+
+    # Capture /proc state early
+    update_db_state "Collecting System proc info"
+    save_proc /proc/buddyinfo /proc/cmdline /proc/consoles \
+        /proc/cpuinfo /proc/devices /proc/diskstats /proc/dma \
+        /proc/interrupts /proc/iomem /proc/ioports /proc/kallsyms \
+        /proc/loadavg /proc/locks /proc/meminfo /proc/misc \
+        /proc/modules /proc/self/mounts \
+        /proc/pagetypeinfo /proc/partitions /proc/sched_debug /proc/slabinfo \
+        /proc/softirqs /proc/stat /proc/swaps /proc/sysvipc /proc/timer_list \
+        /proc/uptime /proc/version /proc/vmallocinfo /proc/vmstat \
+        /proc/zoneinfo \
+        || echo "${ERROR_PROCFS_SAVE_FAILED} Proc saving operation failed. Aborting  for safety." >> $TECHSUPPORT_SAVE_PROC_INFO
+
+    save_proc_net
+    end_t=$(date +%s%3N)
+    echo "[ Capture Proc State ] : $(($end_t-$start_t)) msec" >> $TECHSUPPORT_TIME_INFO
+
+    # Signal rest_server and telemetry processes to dump their profile data (cpu, heap, goroutine).
+    # They will be collected later along with other log files. Do this early to avoid skews
+    # due to the commands run by this script itself.
+    dump_mgmt_service_profiles
+
+    # Save techsupport save proc info log
+    save_file $TECHSUPPORT_SAVE_PROC_INFO log false
+
+    # Save all the processes within each docker
+    update_db_state "Collecting Application processes info"
+    save_cmd "show services" services.summary
+
+    # Save reboot cause information
+    save_cmd "show reboot-cause" reboot.cause
+
+    update_db_state "Collecting Counters-1"
+    # Need 2 snapshots to make sense of counters trend. First snapshot early.
+    counter_t=$(date +'%d/%m/%Y %H:%M:%S:%6N')
+    save_cmd "echo $counter_t" "date.counter_1"
+    save_cmd "show interface counters" "interface.counters_1"
+    save_cmd "docker exec -it bgp /usr/xdp/sample/xdp-counter BFDRX XF_BFD" "bfd_xdp_counters_1"
+    save_cmd "docker exec -it bgp /usr/xdp/sample/xdp-stats XF_BFD" "bfd_xdp_stats_1"
+    save_cmd "docker exec -it udld /usr/xdp/sample/xdp-counter UDLDRX XF_UDLD" "udld_xdp_counters_1"
+    save_cmd "docker exec -it udld /usr/xdp/sample/xdp-stats XF_UDLD" "udld_xdp_stats_1"
+    save_cmd "show queue counters" "queue.counters_1" 
+    save_cmd "show interface pktdrops nonzero" "interface.pktdrops_1"
+    save_cmd "show vxlan counters" "vxlan.counters_1"
+    save_cmd "ras-mc-ctl --errors" "ras-mc-ctl-errors.summary"
+    debugsh_dump copp_counters1 orchagent
+    debugsh_dump sai_rififpdrop_counters1 sai
+    save_redis "COUNTERS_DB" "COUNTERS_DB_1"
+    local asic="$(/usr/local/bin/sonic-cfggen -y /etc/sonic/sonic_version.yml -v asic_type)"
+    if [ "$asic" = "broadcom" ]; then
+        save_bcmcmd "bcmcmd \"cstat *\"" "cstat.summary_1"
+    fi
+
+    # Ethernet interface naming
+    local intfEthernet="Eth" 
+    local ifnamingmode="$(/usr/local/bin/sonic-cfggen -d -v DEVICE_METADATA.localhost.intf_naming_mode)"
+    if [ -z "$ifnamingmode" -o "$ifnamingmode" = "native" ] ; then
+         intfEthernet="Ethernet" 
+    fi
+
+    # Use a file TS_KLISH_CMDS_COUNTERS_1 to store first snapshot of all the counters related klish commands
+    TS_KLISH_CMDS_COUNTERS_1=$(prepare_klish_cmd_group "counters_1")
+    save_klish_cmd "show interface counters | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show interface dropcounters | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show vxlan counters | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show interface phy status | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show interface phy counters | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue counters | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue watermark CPU | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue watermark multicast | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue watermark unicast | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue watermark percentage CPU | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue watermark percentage multicast | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue watermark percentage unicast | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue persistent-watermark CPU | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue persistent-watermark multicast | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue persistent-watermark unicast | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue persistent-watermark percentage CPU | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue persistent-watermark percentage multicast | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue persistent-watermark percentage unicast | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show queue wred-ecn counters | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show priority-group watermark shared | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show priority-group watermark headroom | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show priority-group watermark percentage headroom | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show priority-group watermark percentage shared | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show priority-group persistent-watermark shared | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show priority-group persistent-watermark headroom | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show priority-group persistent-watermark percentage headroom | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show priority-group persistent-watermark percentage shared | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show buffer-pool watermark | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show buffer-pool watermark percentage | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show buffer-pool persistent-watermark | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show buffer-pool persistent-watermark percentage | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show qos interface ${intfEthernet} all priority-flow-control statistics | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    save_klish_cmd "show qos interface ${intfEthernet} all queue all priority-flow-control watchdog-statistics | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM789) ]]; then
+        save_klish_cmd "show interface counters flf | no-more" ${TS_KLISH_CMDS_COUNTERS_1}
+    fi
+    # Execute the counters related klish commands
+    exec_klish_cmds ${TS_KLISH_CMDS_COUNTERS_1} "counters_1"
+
+    if [ -d "/proc/linux_ngknet" ]; then
+        save_cmd "cat /proc/linux_ngknet/pkt_stats" "ngknet_pkt.stats_1"
+        save_cmd "cat /proc/linux_ngknet/netif_info" "ngknet_netif.info_1"
+        save_cmd "cat /proc/linux_ngknet/filter_info" "ngknet_filter.info_1"
+        save_cmd "cat /proc/linux_ngknetcb" "ngknetcb.stats_1"
+    else 
+        save_cmd "cat /proc/bcm/knet/dstats" "knet_drop.counters_1"
+        save_cmd "cat /proc/bcm/knet/stats" "knet_filter.counters_1"
+    fi
+    if [ -e /usr/local/bin/softnet_stat.sh ]; then
+        save_cmd "softnet_stat.sh" "softnet_queue.counters_1"
+    fi
+    if [ -e /proc/bcm/knet/rx_drop ]; then
+        save_cmd "cat /proc/bcm/knet/rx_drop" "knet_queue.counters_1" 
+    fi
+    if [ -e /proc/bcm/knet/strip_vlan ]; then
+        save_cmd "cat /proc/bcm/knet/strip_vlan" "knet_strip_vlan.info"
+    fi
+    if [[ ! -z $(lspci | grep -e b88 -e b78 -e b99) ]]; then
+        save_bcmcmd "bcmcmd \"estat show drop\"" "bcm_drop.counters_1"
+    fi
+    if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM5688) ]]; then
+        save_bcmcmd "bcmcmd \"estat show drop\"" "bcm_drop.counters_3"
+    fi
+    if [[ ! -z $(lspci | grep -e b88 -e b78) ]]; then
+        save_bcmcmd "bcmcmd \"bsh -c 'lt traverse -l ING_VLAN_XLATE_1_TABLE' \"" "ing_vlan_xlate_1_table"
+        save_bcmcmd "bcmcmd \"bsh -c 'lt traverse -l ING_VLAN_XLATE_2_TABLE' \"" "ing_vlan_xlate_2_table"
+        save_bcmcmd "bcmcmd \"bsh -c 'lt traverse -l ING_VLAN_XLATE_3_TABLE' \"" "ing_vlan_xlate_3_table"
+        save_bcmcmd "bcmcmd \"bsh -c 'lt traverse -l EGR_VLAN_TRANSLATION' \"" "egr_vlan_xlate_table"
+    fi
+    if [ -e /proc/bcm/knet-cb/stats/rx_queue ]; then
+        save_cmd "show knet stats rx-queue -v" "knet_rx_queue.counters_1"
+        save_cmd "show knet stats rx-queue -av" "knet_rx_queue_if.counters_1"
+    fi
+    if [ -e /proc/bcm/knet-cb/stats/pkt_type ]; then
+        save_cmd "show knet stats pkt-type -v" "knet_pkt_type.counters_1"
+        save_cmd "show knet stats pkt-type -av" "knet_pkt_type_if.counters_1"
+    fi
+    save_cmd "find /sys/devices/virtual/net/Ethernet*  -name state -print -exec cat {} \;" "txq.state"
+    save_cmd "netstat -i" "netstat.counters_1"
+    #save_cmd "ifconfig -a" "ifconfig.counters_1"
+    save_cmd "netstat -a" "netstat.all"
+
+    update_db_state "Collecting Networking info"
+    save_vtysh "show ip ospf vrf all interface traffic" "ospf.traffic.counters_1"
+    save_vtysh "show ip ospf6 vrf all interface traffic" "ospf6.traffic.counters_1"
+    # NTP snapshot 1
+    save_cmd "show ntp --detail --verbose" "ntp.detail_1"
+
+    save_cmd "show interfaces portchannel" "portchannel.summary"
+    save_cmd "show interfaces portchannel json" "portchannel.details"
+
+    save_klish_cmd "show PortChannel summary | no-more" ${TS_KLISH_CMDS}
+
+    save_cmd "show vlan brief" "vlan.summary"
+    
+    save_cmd "systemd-analyze blame" "systemd.analyze.blame"
+    save_cmd "systemd-analyze dump" "systemd.analyze.dump"
+    save_cmd "systemd-analyze plot" "systemd.analyze.plot.svg"
+
+    save_platform_info
+    #get info from ipmitool if available
+    ipmitool bmc info > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        save_ipmi_info
+    fi
+
+    save_cmd "show version" "version"
+    save_cmd "show platform summary" "platform.summary"
+    save_cmd "cat /host/machine.conf" "machine.conf"
+    save_cmd "docker stats --no-stream" "docker.stats"
+
+    save_cmd "sensors" "sensors"
+    save_cmd "lspci -vvv -xx" "lspci"
+    save_cmd "dmidecode" "dmidecode"
+    save_cmd "lsusb -v" "lsusb"
+    save_cmd "sysctl -a" "sysctl"
+    save_cmd "nft list ruleset" "nft.ruleset"
+    save_cmd "netstat -ng" "netstat.ng"
+    save_cmd "ss -peima" "ss.all"
+    save_cmd "watchdogutil dump" "watchdogutil.dump"
+
+    save_ptp_info
+
+    save_bridge "-d -s fdb show" "fdb"
+    save_bridge "vlan show" "vlan"
+    save_bridge "-d link show" "link"
+    save_bridge "vlan suppressionshow dev Bridge" "suppression"
+    save_bridge "-d -s mdb show" "mdb"
+
+    save_vtysh "show running-config" "frr.running_config"
+    save_vtysh "show nexthop-group rib" "frr.nhg"
+    save_vtysh "show ip route vrf all nexthop-group" "frr.ip_route"
+    save_vtysh "show ipv6 route vrf all nexthop-group" "frr.ip6_route"
+    save_vtysh "show zebra fpm stats" "frr.fpm.stats"
+    save_vtysh "show zebra dplane detailed" "frr.dplane"
+    save_vtysh "show interface vrf all" "frr.interfaces"
+    save_vtysh "show interface vlan all" "frr.vlan.interfaces"
+    save_vtysh "show zebra client summary" "frr.client"
+    save_vtysh "show ip bgp vrf all nexthop detail" "bgp.nexthop"
+    save_vtysh "show ip bgp vrf all summary" "bgp.summary"
+    save_vtysh "show bgp vrf all ipv4 neighbors" "bgp.neighbors"
+    save_vtysh "show bgp vrf all ipv4 verbose" "bgp.table" true
+    save_vtysh "show bgp vrf all ipv6 summary" "bgp.ipv6.summary"
+    save_vtysh "show bgp vrf all ipv6 neighbors" "bgp.ipv6.neighbors"
+    save_vtysh "show bgp vrf all ipv6 verbose" "bgp.ipv6.table" true
+    save_vtysh "show ip bgp vrf all statistics aggregate-addresses" "bgp.stats.aggr"
+    save_vtysh "show bgp vrf all ipv6 statistics aggregate-addresses" "bgp.ipv6.stats.aggr"
+
+    # OSPF specific dumps
+    save_vtysh "show ip ospf vrf all" "ospf.router.all"
+    save_vtysh "show ip ospf vrf all border-routers" "ospf.abr.all"
+    save_vtysh "show ip ospf vrf all interface" "ospf.interface.all"
+    save_vtysh "show ip ospf vrf all neighbor" "ospf.nbr.all"
+    save_vtysh "show ip ospf vrf all neighbor detail" "ospf.nbr.detail"
+    save_vtysh "show ip ospf vrf all route" "ospf.route.all"
+    save_vtysh "show ip ospf vrf all graceful-restart helper detail" "ospf.gr.detail"
+    save_vtysh "show ip ospf vrf all summary-address detail" "ospf.summary.address.detail"
+    save_vtysh "show ip route vrf all ospf" "ospf.iproute.all"
+    save_vtysh "show ip ospf vrf all database" "ospf.database.all"
+    save_vtysh "show ip ospf vrf all database summary" "ospf.database.summary"
+    save_vtysh "show ip ospf vrf all database asbr-summary" "ospf.database.asbr"
+    save_vtysh "show ip ospf vrf all database external" "ospf.database.external"
+    save_vtysh "show ip ospf vrf all database network" "ospf.database.network"
+    save_vtysh "show ip ospf vrf all database router" "ospf.database.router"
+    save_vtysh "show ip ospf vrf all database self-originate" "ospf.database.selforig"
+    save_vtysh "show ip ospf vrf all database max-age" "ospf.database.maxage"
+
+    # OSPFv3 specific dumps
+    save_vtysh "show ipv6 ospf6 vrf all" "ospf6.router.all"
+    save_vtysh "show ipv6 ospf6 vrf all border-routers detail" "ospf6.abr.all"
+    save_vtysh "show ipv6 ospf6 vrf all interface" "ospf6.interface.all"
+    save_vtysh "show ipv6 ospf6 vrf all neighbor" "ospf6.nbr.all"
+    save_vtysh "show ipv6 ospf6 vrf all neighbor detail" "ospf6.nbr.detail"
+    save_vtysh "show ipv6 ospf6 vrf all route" "ospf6.route.all"
+    save_vtysh "show ipv6 ospf6 vrf all route detail" "ospf6.route.detail"
+    save_vtysh "show ipv6 route vrf all ospf6" "ospf6.ipv6route.all"
+    save_vtysh "show ipv6 ospf6 vrf all graceful-restart helper detail" "ospf6.gr.detail"
+    save_vtysh "show ipv6 ospf6 vrf all linkstate detail" "ospf6.linkstate.detail"
+    save_vtysh "show ipv6 ospf6 vrf all redistribute" "ospf6.redistribute.external"
+    save_vtysh "show ipv6 ospf6 vrf all summary-address detail" "ospf6.summary.address.detail"
+    save_vtysh "show ipv6 ospf6 vrf all database" "ospf6.database.all"
+    save_vtysh "show ipv6 ospf6 vrf all database detail" "ospf6.database.detail"
+    save_vtysh "show ipv6 ospf6 vrf all database as-external" "ospf6.database.as.external"
+    save_vtysh "show ipv6 ospf6 vrf all database inter-prefix" "ospf6.database.inter.prefix" 
+    save_vtysh "show ipv6 ospf6 vrf all database inter-router" "ospf6.database.inter.router"
+    save_vtysh "show ipv6 ospf6 vrf all database internal" "ospf6.database.internal"
+    save_vtysh "show ipv6 ospf6 vrf all database intra-prefix" "ospf6.database.intra.prefix"
+    save_vtysh "show ipv6 ospf6 vrf all database link" "ospf6.database.link"
+    save_vtysh "show ipv6 ospf6 vrf all database network" "ospf6.database.network"
+    save_vtysh "show ipv6 ospf6 vrf all database router" "ospf6.database.router"
+    save_vtysh "show ipv6 ospf6 vrf all database self-originated" "ospf6.database.selforig"
+    save_vtysh "show ipv6 ospf6 vrf all database type-7" "ospf6.database.type7"
+
+    # FRR/EVPN specific dump
+    save_vtysh "show bgp l2vpn evpn summary" "bgp.evpn.summary"
+    save_vtysh "show bgp l2vpn evpn route detail debug" "bgp.evpn.routes" true
+    save_vtysh "show bgp l2vpn evpn route vni all detail debug" "bgp.evpn.vpn.routes" true
+    save_vtysh "show bgp route-node stats" "bgp.route.node.stats"
+    save_vtysh "show evpn vni detail" "frr.evpn.vni.detail"
+    save_vtysh "show evpn" "frr.evpn"
+    save_vtysh "show bgp l2vpn evpn vni detail" "bgp.evpn.vni"
+    save_vtysh "show evpn arp-cache vni all detail" "frr.evpn.arp_cache.all"
+    save_vtysh "show evpn mac vni all detail" "frr.evpn.mac.all"
+    save_vtysh "show evpn rmac vni all" "frr.evpn.rmac.all"
+    save_vtysh "show bgp l2vpn evpn import-rt" "bgp.evpn.import_rt"
+    save_vtysh "show bgp l2vpn evpn vrf-import-rt" "bgp.evpn.vrf_import_rt"
+    save_vtysh "show bgp l2vpn evpn update-groups" "bgp.evpn.update_groups"
+    save_vtysh "show ip bgp vrf all update-groups" "bgp.update_groups"
+    save_vtysh "show bgp vrf all update-groups" "bgp.ipv6.update_groups"
+    save_vtysh "show zebra dplane detailed" "frr.zebra.dplane"
+    save_vtysh "show memory" "frr.memory"
+    save_vtysh "show zebra client" "frr.zebra.client"
+    save_vtysh "show zebra fpm nhg" "frr.zebra.fpm.nhg"
+    save_vtysh "show zebra" "frr.zebra"
+    save_vtysh "show bgp mac hash" "bgp.mac.hash"
+    save_vtysh "show bgp l2vpn evpn vni all prefix cache" "bgp.macip.cache"
+    save_vtysh "show evpn es detail" "frr.evpn.es_detail"
+    save_vtysh "show evpn l2-nh" "frr.evpn.l2_nh"
+    save_vtysh "show evpn es-evi detail" "frr.evpn.es_evi_detail"
+    save_vtysh "show evpn next-hops vni all" "frr.evpn.nexthops"
+    save_vtysh "show evpn access-vlan" "frr.evpn.access_vlan"
+    save_vtysh "show bgp l2vpn evpn es detail" "bgp.evpn.es_detail"
+    save_vtysh "show bgp l2vpn evpn es-evi detail" "bgp.evpn.es_evi_detail"
+    save_vtysh "show bgp l2vpn evpn es-vrf" "bgp.evpn.es_vrf"
+
+    save_vtysh "show ip nht vrf all" "frr.zebra.nht"
+
+    save_vtysh "show ip sla detail" "ipsla.detail"
+    save_vtysh "show ip sla nht" "ipsla.nht"
+
+    save_cmd "show interface status" "interface.status"
+
+    # Store all the klish commands in a general TS_KLISH_CMDS file. Commands would be run later.
+    save_klish_cmd "show interface status | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show interface status admin-down | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show interface status phy-link-down | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show interface status oper-up | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show interface status err-disabled | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show interface status no-transceiver | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show interface ${intfEthernet} | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show interface breakout detail | no-more" ${TS_KLISH_CMDS}
+    save_klish_cmd "show interface breakout resources | no-more" ${TS_KLISH_CMDS}
+
+    #Save configured audit rules
+    save_klish_cmd "show auditd-system rules | no-more" ${TS_KLISH_CMDS}
+
+    # Save running configs (klish-cli and json format)
+    save_klish_cmd "show running-configuration | no-more" ${TS_KLISH_CMDS}
+    runConfigSavej="running-config-save.json"
+    save_cmd "config save -y ${LOGDIR}/${runConfigSavej}" "${runConfigSavej}"
+
+    save_cmd "show subinterface status" "subinterface.status"
+    save_cmd "show ip interface" "ip.interface"
+
+    save_ip_info
+    save_bgp_info
+
+    save_cmd "sudo sfputil show presence" "interface.xcvrs.presence"
+    save_cmd "sudo sfpdump" "interface.xcvrs.dump"
+    save_cmd "show interface transceiver eeprom --dom" "interface.xcvrs.eeprom"
+    save_cmd "show interface transceiver summary" "interface.xcvrs.summary"
+
+    save_cmd "lldpctl" "lldpctl"
+    save_cmd "lldpctl -f json" "lldpctl.json"
+    save_cmd "lldpcli show statistics" "lldp.statistics"
+    save_cmd "lldpcli show chassis" "lldp.chassis"
+    save_cmd "lldpcli show configuration" "lldp.configuration"
+    save_cmd "lldpcli show interfaces details" "lldp.intf"
+    save_cmd "debug lldp dump" "lldp.dump"
+    if [ -e /usr/bin/stp.sh ]; then
+        save_cmd "stpctl all" "stp.log"
+        save_cmd "show spanning_tree statistics" "stp.stats"
+        save_cmd "show spanning_tree bpdu_guard" "stp.bg"
+        save_cmd "show spanning_tree root_guard" "stp.rg"
+        # Spanning tree related KLISH commands in the general TS_KLISH_CMDS file
+        save_klish_cmd "show spanning-tree | no-more" ${TS_KLISH_CMDS}
+        save_klish_cmd "show spanning-tree mst detail | no-more" ${TS_KLISH_CMDS}
+        debugsh_dump stpmgrd
+    fi
+    
+    save_cmd "udldctl all" "udld.log"
+
+    # Collect Static Anycast Gateway dump
+    save_cmd "show ip static-anycast-gateway" "ip.static.anycast.gateway.all"
+    save_cmd "show ipv6 static-anycast-gateway" "ipv6.static.anycast.gateway.all"
+
+    # Collect debugging information from components
+    update_db_state "Collecting Debug info"
+    save_cmd "show debug all" "debug_all"
+
+    save_cmd "docker logs bgp" "docker.bgp.log"
+    save_cmd "docker logs swss" "docker.swss.log"
+    save_cmd "docker logs mgmt-framework" "docker.mgmt-framework.log"
+    save_cmd "docker logs telemetry" "docker.telemetry.log"
+    save_cmd "docker logs syncd" "docker.syncd.log"
+    save_cmd "docker logs gbsyncd" "docker.gbsyncd.log"
+    save_cmd "docker logs database" "docker.database.log"
+    save_cmd "docker logs pmon" "docker.pmon.log"
+
+    if [ -e /usr/bin/sflow.sh ]; then
+        save_cmd "docker logs sflow" "docker.sflow.log"
+        save_cmd "docker exec sflow ps -ef" "docker.sflow.ps.ef"
+        hsflowd_files=("hsflowd.crash" "hsflowd.log")
+        for file in "${hsflowd_files[@]}"; do
+            if docker exec sflow test -f "/var/log/$file"; then
+                save_cmd "docker exec sflow cat /var/log/$file" "docker.sflow.$file"
+            fi
+        done
+    fi
+
+    if [ -e /usr/bin/macsec.sh ]; then
+        save_cmd "docker logs macsec" "docker.macsec.log"
+        save_cmd "docker exec macsec /usr/sbin/hostapd_cli all_sta" "macsec.docker.hostapdcli.allsta"
+        save_cmd "docker exec macsec /usr/sbin/hostapd_cli mib" "macsec.docker.hostapdcli.mib"
+        save_cmd "docker exec macsec ps -ef" "macsec.docker.ps.ef"
+        save_cmd "docker exec macsec ls -l /etc/hostapd/" "macsec.docker.hostapd.etc"
+        for file in $(docker exec macsec find /etc/hostapd/ -type f -not -path '*/\.*' | sed 's/\r$//;s/.*\///')
+        do
+           if [ $file != "ifupdown.sh" ]; then
+             save_cmd "docker exec macsec cat /etc/hostapd/$file" "macsec.docker.hostapd.etc.$file"
+           fi
+        done
+        save_cmd "docker exec macsec ls -lt /var/run/hostapd/" "macsec.docker.var.run.hostapd"
+        save_cmd "docker exec macsec cat /etc/hosts" "macsec.docker.etc.hosts"
+        save_cmd "docker exec macsec ls -l /etc/radsecproxy\.conf\.d/" "macsec.docker.radsecproxy.conf.d.etc"
+        for file in $(docker exec macsec find /etc/radsecproxy\.conf\.d/ -type f -not -path '*/\.*' | sed 's/\r$//;s/.*\///')
+        do
+           save_cmd "docker exec macsec cat /etc/radsecproxy\.conf\.d/$file" "macsec.docker.radsecproxy.conf.d.etc.$file"
+        done
+    fi
+
+    if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM5699 -e BCM789) ]]; then
+        save_klish_cmd "show ars bind | no-more" ${TS_KLISH_CMDS}
+        save_klish_cmd "show ars nhg-statistics | no-more" ${TS_KLISH_CMDS}
+        save_klish_cmd "show ars object | no-more" ${TS_KLISH_CMDS}
+        save_klish_cmd "show ars port-profile | no-more" ${TS_KLISH_CMDS}
+        save_klish_cmd "show ars port-quality | no-more" ${TS_KLISH_CMDS}
+        save_klish_cmd "show ars profile | no-more" ${TS_KLISH_CMDS}
+    fi
+    update_db_state "Collecting System process info"
+    save_cmd "ps aux" "ps.aux"
+    save_cmd "top -c -b -n 1 -w512" "top"
+    save_cmd "free" "free"
+    save_cmd "vmstat 1 5" "vmstat"
+    save_cmd "vmstat -m" "vmstat.m"
+    save_cmd "vmstat -s" "vmstat.s"
+    save_cmd "mount" "mount"
+    save_cmd "df" "df"
+    save_cmd "dmesg" "dmesg"
+
+    update_db_state "Collecting Network services info"
+    save_nat_info
+
+    save_ipmc_info
+    save_bfd_info
+
+    if [ -e /usr/bin/macsec.sh ]; then
+        save_pac_info
+        save_das_info
+        debugsh_dump dasmgrd
+        debugsh_dump redirectmgr
+        debugsh_dump pacmgrd
+    fi
+
+    save_cmd "show ip dhcp-relay detailed" "dhcprelay.config"
+    save_cmd "show ipv6 dhcp-relay detailed" "dhcprelay.ipv6.config"
+    save_cmd "show ip dhcp-relay statistics" "dhcprelay.stats"
+    save_cmd "show ipv6 dhcp-relay statistics" "dhcprelay.ipv6.stats"
+
+    save_cmd "show ip dhcp-snooping" "dhcpsnooping.config"
+    save_cmd "show ip dhcp-snooping binding" "dhcpsnooping.binding"
+    save_cmd "show ip dhcp-snooping statistics" "dhcpsnooping.stats"
+    save_cmd "show ip dhcp-snooping statistics detail" "dhcpsnooping.stats.detailed"
+    save_cmd "show ip dhcp-snooping statistics debug" "dhcpsnooping.stats.debug"
+    save_cmd "show ipv6 dhcp-snooping" "dhcpsnooping.ipv6.config"
+    save_cmd "show ipv6 dhcp-snooping binding" "dhcpsnooping.ipv6.binding"
+    save_cmd "show ipv6 dhcp-snooping statistics" "dhcpsnooping.ipv6.stats"
+    save_cmd "show ipv6 dhcp-snooping statistics detail" "dhcpsnooping.ipv6.stats.detailed"
+    save_cmd "show ipv6 dhcp-snooping statistics debug" "dhcpsnooping.ipv6.stats.debug"
+
+    save_cmd "show ip helper-address config" "iphelper.config"
+    save_cmd "show ip helper-address statistics" "iphelper.statistics"
+    save_cmd "show ip forward-protocol config" "iphelper.forwarding"
+
+    # Collect FPMSYNCD Stats to logs
+    kill -SIGUSR1 `pidof fpmsyncd`
+
+    # COUNTERS_DB is dumped early and late
+    update_db_state "Collecting DB info"
+    save_redis_info
+    redis_ports=$(ps -ef |grep redis-server | grep -v grep | awk '{print $(NF)}' | cut -d: -f2)
+    for port in $redis_ports
+    do
+        save_cmd "redis-cli -p $port slowlog get" "slowlog_db.$port"
+        # Reset the slowlog for next TS
+        redis-cli -p $port slowlog reset >/dev/null 2>&1
+    done
+
+    update_db_state "Collecting Docker runtime info"
+    save_cmd "docker ps -a" "docker.ps"
+    save_cmd "docker top pmon" "docker.pmon"
+    
+    #memory histogram commands
+    save_cmd "show histogram memory process" "histogram.mem.ps"
+    save_cmd "show histogram memory docker" "histogram.mem.docker"
+    save_cmd "show histogram memory system" "histogram.mem.system"
+
+    #system status all command
+    save_cmd "show system status detail" "systemstatus.detail"
+
+    #sonic patching 
+    save_cmd "patch-installer list" "sonic-patching.list"
+    save_cmd "patch-installer history" "sonic-patching.history"
+    save_cmd "patch-installer status" "sonic-patching.status"
+
+    # save the oom memory dump info
+    for oom_file in $(find /var/dump -name "sonic_oom_dump*"); do
+        save_file ${oom_file}  oom_files false
+    done
+
+    # Copy the lastreboot.log if it exists
+    if [ -f /var/dump/lastreboot.log ]; then
+        save_file /var/dump/lastreboot.log log true
+    fi
+
+    # command history
+    update_db_state "Collecting Command history info"
+    save_cmd "whoami" "whoami"
+    if [ -f ${HOME}/.bash_history ]; then
+        save_history_file "${HOME}/.bash_history" "bash_history.${USER}"
+    fi
+    if [ -f /home/admin/.bash_history ]; then
+        save_history_file "/home/admin/.bash_history" "bash_history.admin"
+    fi
+    if [ -f /root/.bash_history ]; then
+        save_history_file "/root/.bash_history" "bash_history.root"
+    fi
+    docker cp -a bgp:/root/.history_frr /home/admin/history_frr
+    if [ -f /home/admin/history_frr ]; then
+        save_history_file "/home/admin/history_frr" "frr_command_history"
+        rm -f /home/admin/history_frr
+    fi
+
+    update_db_state "Collecting Application logs"
+
+    # copy REST server logs from mgmt-framework
+    collect_mgmt_service_logs mgmt-framework rest_server
+    
+    # copy Telemetry logs from telemetry 
+    collect_mgmt_service_logs telemetry telemetry
+
+    # copy snmpd.conf file from snmp docker 
+    tmpDir=$(mktemp -d)
+    docker cp -a snmp:/etc/snmp/snmpd.conf $tmpDir
+    save_file $tmpDir/snmpd.conf "etc/snmp" false 
+    $RM $V -rf $tmpDir
+
+    # copy lldpd.conf file from lldp docker 
+    tmpDir=$(mktemp -d)
+    docker cp -a lldp:/etc/lldpd.conf $tmpDir
+    save_file $tmpDir/lldpd.conf "etc/lldp" false 
+    $RM $V -rf $tmpDir
+
+    # copy WB DB dump
+    tmpDir=$(mktemp -d)
+    if ! [ -z $(docker exec -it swss sh -c "test -f ASIC_DB_WB.json && echo 'YES'") ];
+    then
+        docker cp -a swss:/ASIC_DB_WB.json $tmpDir
+    fi
+    if [ -f $tmpDir/ASIC_DB_WB.json ]; then
+        save_file $tmpDir/ASIC_DB_WB.json log false
+    fi
+    $RM $V -rf $tmpDir
+
+    local platform="$(/usr/local/bin/sonic-cfggen -H -v DEVICE_METADATA.localhost.platform)"
+    if [[ $platform == *"mlnx"* ]]; then
+        local sai_dump_filename="/tmp/sai_sdk_dump_$(date +"%m_%d_%Y_%I_%M_%p")"
+        ${CMD_PREFIX}docker exec -i syncd saisdkdump -f $sai_dump_filename
+        ${CMD_PREFIX}docker exec syncd tar Ccf $(dirname $sai_dump_filename) - $(basename $sai_dump_filename) | tar Cxf /tmp/ -
+        save_file $sai_dump_filename sai_sdk_dump true
+
+        local mst_dump_filename="/tmp/mstdump"
+        local max_dump_count="3"
+        for i in $(seq 1 $max_dump_count); do
+            ${CMD_PREFIX}/usr/bin/mstdump /dev/mst/mt*conf0 > "${mst_dump_filename}${i}"
+            save_file "${mst_dump_filename}${i}" mstdump true
+        done
+    fi
+
+    update_db_state "Collecting NPU info"
+    # save SAI configuration files (config.bcm, port_config.ini, sai.profile)
+    local hwsku=$(head -n 1 /usr/share/sonic/device/${platform}/default_sku | cut -d ' ' -f 1)
+    if [ -d /usr/share/sonic/device/${platform}/${hwsku} ]; then
+        # copy all the files in the HWSKU directory
+        pushd /usr/share/sonic/device/${platform}/${hwsku} > /dev/null
+        for file in $(find . -maxdepth 1 -type f); do
+            save_file ${file} sai false
+        done
+        popd > /dev/null
+        # config.bcm - copy the one with chip common properties merged
+        for file in $(find /var/run/docker-syncd -type f -name "*.bcm"); do
+            save_file ${file} sai false
+        done
+        # sai.profile - copy the final sai.profile generated in docker-syncd
+        if [ -f /var/run/docker-syncd/sai.profile ]; then
+            save_file /var/run/docker-syncd/sai.profile sai false
+        fi
+    else
+        echo "'/usr/share/sonic/device/${platform}/${hwsku}' does not exist" > /tmp/error
+        save_file /tmp/error sai false
+    fi
+
+    local asic="$(/usr/local/bin/sonic-cfggen -y /etc/sonic/sonic_version.yml -v asic_type)"
+    if [ "$asic" = "broadcom" ]; then
+        local chip_num=None
+        local chip_type=default
+        #First command checks the bcmshell accessability
+        save_bcmcmd "bcmcmd -t5 version" "broadcom.version" true
+        if [ $SKIP_BCMCMD -eq 0 ]; then
+            local chip_num=$(bcmcmd -t5 "show unit" | grep -e BCM)
+        fi
+
+        # Check if chip is ltsw type. Few BCM dumps are ltsw specific
+        if [[ "$chip_num" == *"BCM5678"* ]] || \
+          [[ "$chip_num" == *"BCM5688"* ]] || \
+          [[ "$chip_num" == *"BCM5699"* ]] || \
+          [[ "$chip_num" == *"BCM7890"* ]]; then
+            local chip_type=ltsw
+        fi
+
+        if [[ "$chip_num" == *"BCM5687"* || "$chip_num" == *"BCM5677"* || "$chip_num" == *"BCM5637"* ]]; then
+            save_bcmcmd "bcmcmd \"d chg mpls_entry_single\"" "mpls_entry_single.summary"
+            save_bcmcmd "bcmcmd \"d chg source_vp\"" "source_vp.summary"
+            save_bcmcmd "bcmcmd \"d chg vlan_xlate_1_double\"" "vlan_xlate_1.summary"
+            save_bcmcmd "bcmcmd \"d chg ing_vlan_tag_action_profile_1\"" "ing_vlan_tag_action_1.summary"
+            save_bcmcmd "bcmcmd \"d chg ing_vlan_tag_action_profile_2\"" "ing_vlan_tag_action_2.summary"
+            save_bcmcmd "bcmcmd \"d chg egr_vlan_xlate_1_single\"" "egr_vlan_xlate_1.summary"
+            save_bcmcmd "bcmcmd \"d chg egr_vlan_xlate_1_double\"" "egr_vlan_xlate_1_double.summary"
+            save_bcmcmd "bcmcmd \"d chg egr_vlan_tag_action_profile\"" "egr_vlan_tag_action.summary"
+            save_bcmcmd "bcmcmd \"d chg egr_vlan_tag_action_profile_2\"" "egr_vlan_tag_action_2.summary"
+            save_bcmcmd "bcmcmd \"d chg egr_dvp_attribute\"" "egr_dvp_attribute.summary"
+            save_bcmcmd "bcmcmd \"d chg egr_ip_tunnel\"" "egr_ip_tunnel.summary"
+            save_bcmcmd "bcmcmd \"d chg ing_vp_vlan_membership\"" "ing.vp.summary"
+            save_bcmcmd "bcmcmd \"d chg egr_vp_vlan_membership\"" "egr.vp.summary"
+            save_bcmcmd "bcmcmd \"d chg vfi\"" "broadcom.vfi"
+        fi
+        save_bcmcmd "bcmcmd -t5 soc" "broadcom.soc"
+        save_bcmcmd "bcmcmd -t5 ps" "broadcom.ps"
+        save_bcmcmd "bcmcmd -t5 phydump" "broadcom.phy"
+        save_bcmcmd "bcmcmd 'show pmap'" "broadcom.pmap"
+
+        if [[ "$chip_type" == "ltsw" ]]; then
+            save_bcmcmd "bcmcmd -t5 'ts l3'" "broadcom.ts.l3"
+            save_bcmcmd "bcmcmd -t5 'ts dlb'" "broadcom.ts.dlb"
+            save_bcmcmd "bcmcmd -t5 'ts failover'" "broadcom.ts.failover"
+        elif [ "$chip_num" != *"BCM5697"* ]; then
+            # SONIC-76069: In Th2, Syncd Core generated while executing "techsupport l3uc", l3uc has multiple sub-commands.
+            # Disabling this command temporarily for TH2, will enable back after discussing with SDK team
+            save_bcmcmd "bcmcmd -t5 'techsupport l3uc'" "broadcom.ts.l3uc"
+        fi
+        save_bcmcmd "bcmcmd \"l3 alpm show brief\"" "broadcom.alpm"
+        save_bcmcmd "bcmcmd 'trunk show'" "trunk.summary"
+        save_bcmcmd "bcmcmd 'vlan show'" "vlandata.summary"
+        save_bcmcmd "bcmcmd \"l3 nat_ingress show\"" "broadcom.nat.ingress"
+        save_bcmcmd "bcmcmd \"l3 nat_egress show\"" "broadcom.nat.egress"
+        save_bcmcmd "bcmcmd \"ipmc table show\"" "broadcom.ipmc"
+        save_bcmcmd "bcmcmd \"multicast show\"" "broadcom.multicast"
+        save_bcmcmd "bcmcmd \"conf show\"" "conf.summary"
+        save_bcmcmd "bcmcmd \"fp show\"" "fp.summary"
+        save_bcmcmd "bcmcmd \"pvlan show\"" "pvlan.summary"
+        save_bcmcmd "bcmcmd \"l2 show\"" "l2.summary"
+        save_bcmcmd "bcmcmd \"l3 intf show\"" "l3.intf.summary"
+        save_bcmcmd "bcmcmd \"l3 egress show\"" "l3.egress.summary"
+        save_bcmcmd "bcmcmd \"alpm projection show\"" "broadcom.alpm.projection"
+        if [[ ! -z $(lspci | grep -e b88 -e b78 -e b99 -e f900) ]]; then
+            save_bcmcmd "bcmcmd \"l3 route show\"" "l3.defip.summary"
+            save_bcmcmd "bcmcmd \"l3 host show\"" "l3.l3table.summary"
+            save_bcmcmd "bcmcmd \"l3 ecmp show\"" "l3.ecmp.egress.summary"
+            save_bcmcmd "bcmcmd \"l3 route show v6=1\"" "l3.ip6route.summary"
+            save_bcmcmd "bcmcmd \"l3 host show v6=1\"" "l3.ip6host.summary"
+            save_bcmcmd "bcmcmd \"l3 ing_intf show\"" "l3.ing_intf.summary"
+            save_bcmcmd "bcmcmd \"l2 station show\"" "mystation.tcam.summary"
+            save_bcmcmd "bcmcmd \"ts cosq\"" "ts_cosq.summary"
+        else
+            if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM5688 -e BCM5699 -e BCM789) ]]; then
+                save_bcmcmd "bcmcmd \"l3 route show\"" "l3.defip.summary"
+                save_bcmcmd "bcmcmd \"l3 host show\"" "l3.l3table.summary"
+                save_bcmcmd "bcmcmd \"l3 ecmp show\"" "l3.ecmp.egress.summary"
+                save_bcmcmd "bcmcmd \"l3 route show v6=1\"" "l3.ip6route.summary"
+                save_bcmcmd "bcmcmd \"l3 host show v6=1\"" "l3.ip6host.summary"
+                save_bcmcmd "bcmcmd \"l3 ing_intf show\"" "l3.ing_intf.summary"
+                save_bcmcmd "bcmcmd \"l2 station show\"" "mystation.tcam.summary"
+            else
+                save_bcmcmd "bcmcmd \"l3 defip show\"" "l3.defip.summary"
+                save_bcmcmd "bcmcmd \"l3 l3table show\"" "l3.l3table.summary"
+                save_bcmcmd "bcmcmd \"l3 ecmp egress show\"" "l3.ecmp.egress.summary"
+                save_bcmcmd "bcmcmd \"l3 multipath show\"" "l3.multipath.summary"
+                save_bcmcmd "bcmcmd \"l3 ip6host show\"" "l3.ip6host.summary"
+                save_bcmcmd "bcmcmd \"l3 ip6route show\"" "l3.ip6route.summary"
+                save_bcmcmd "bcmcmd \"d chg my_station_tcam\"" "mystation.tcam.summary"
+            fi
+        fi
+        save_bcmcmd "bcmcmd \"mc show\"" "multicast.summary"
+        save_bcmcmd "bcmcmd \"cstat *\"" "cstat.summary_2"
+        save_bcmcmd "bcmcmd \"mirror show\"" "mirror.summary"
+        save_bcmcmd "bcmcmd \"mirror dest show\"" "mirror.dest.summary"
+        save_bcmcmd "bcmcmd \"port *\"" "port.summary"
+        if [[ ! -z $(lspci | grep -e b87 -e b77 -e b37) ]]; then
+            save_bcmcmd "bcmcmd \"d chg my_station_tcam_2\"" "mystation.tcam2.summary"
+        fi
+        save_bcmcmd "bcmcmd \"bcmsai dump_eapp_config\"" "eapp.config.summary"
+        save_bcmcmd "bcmcmd \"dump sw flowtracker\"" "broadcom.dropmonitor.summary"
+        save_bcmcmd "bcmcmd \"stg show\"" "stg.summary"
+        save_bcmcmd "bcmcmd \"knetctrl netif show\"" "knetctrl.netif.summary"
+        save_bcmcmd "bcmcmd \"techsupport mmu\"" "broadcom.ts.mmu_1"
+        save_bcmcmd "bcmcmd \"bcmsai L2Ecmp Global\"" "l2ecmp.global.summary"
+        save_bcmcmd "bcmcmd \"bcmsai L2Ecmp Group\"" "l2ecmp.group.summary"
+        save_bcmcmd "bcmcmd \"bcmsai L2Ecmp Member\"" "l2ecmp.member.summary"
+        save_bcmcmd "bcmcmd \"bcmsai L2Ecmp TnlInfo\"" "l2ecmp.tnl.summary"
+        save_bcmcmd "bcmcmd \"bcmsai L2Ecmp MacNbr\"" "l2ecmp.macnbr.summary"
+        if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM569[6-8] -e BCM56[3,7,8]7) ]]; then
+            save_bcmcmd "bcmcmd \"bcmsai lb\"" "hash.summary"
+        fi
+        if [[ ! -z $(bcmcmd -t5 "show unit" | grep BCM5688) ]]; then
+            save_bcmcmd "bcmcmd \"fd show\"" "hash.summary"
+        fi
+        if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM5699 -e BCM789) ]]; then
+            save_bcmcmd "bcmcmd \"bsh -c 'pt dump -d RTAG7'\"" "hash.summary"
+        fi
+        if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM5699 -e BCM789) ]]; then
+            save_bcmcmd "bcmcmd \"bcmsai lb\"" "dlb.summary"
+        fi
+    fi
+
+    if [[ "$asic" = "mellanox" ]]; then
+        collect_mellanox
+    fi
+
+    if [ "$asic" = "broadcom" ]; then
+        collect_broadcom
+    fi
+
+    if $GREP -qi "aboot_platform=.*arista" /host/machine.conf; then
+        collect_arista
+    fi
+
+    if [ -S /var/run/docker-syncd/sswgbsyncd.socket ]; then
+        save_cmd "docker exec -i gbsyncd bash -c 'echo ps | socat -T3 -,ignoreeof UNIX-CONNECT:/var/run/sswsyncd/sswgbsyncd.socket'" "pai-layer.ps"
+    elif [ -S /var/run/docker-syncd/pai-layer-socket ]; then
+        save_cmd "docker exec -i gbsyncd bash -c 'echo ps | socat - UNIX-CONNECT:/var/run/sswsyncd/pai-layer-socket'" "pai-layer.ps"
+    fi
+
+    # Need 2 snapshots to make sense of counters trend. Second snapshot late.
+    update_db_state "Collecting Counters-2"
+    counter_t=$(date +'%d/%m/%Y %H:%M:%S:%6N')
+    save_cmd "echo $counter_t" "date.counter_2"
+    save_cmd "show interface counters" "interface.counters_2"
+    save_cmd "docker exec -it bgp /usr/xdp/sample/xdp-counter BFDRX XF_BFD" "bfd_xdp_counters_2"
+    save_cmd "docker exec -it bgp /usr/xdp/sample/xdp-stats XF_BFD" "bfd_xdp_stats_2"
+    save_cmd "docker exec -it udld /usr/xdp/sample/xdp-counter UDLDRX XF_UDLD" "udld_xdp_counters_2"
+    save_cmd "docker exec -it udld /usr/xdp/sample/xdp-stats XF_UDLD" "udld_xdp_stats_2"
+    save_cmd "show queue counters" "queue.counters_2" 
+    save_cmd "show interface pktdrops nonzero" "interface.pktdrops_2"
+    save_cmd "show vxlan counters" "vxlan.counters_2"
+    debugsh_dump copp_counters2 orchagent
+    debugsh_dump sai_rififpdrop_counters2 sai
+    save_redis "COUNTERS_DB" "COUNTERS_DB_2"
+
+    # Use a file TS_KLISH_CMDS_COUNTERS_2 to store 2nd snapshot of the counters related klish commands
+    TS_KLISH_CMDS_COUNTERS_2=$(prepare_klish_cmd_group "counters_2")
+    save_klish_cmd "show interface counters | no-more " ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show interface dropcounters | no-more " ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show vxlan counters | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue counters | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue watermark CPU | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue watermark multicast | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue watermark unicast | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue watermark percentage CPU | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue watermark percentage multicast | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue watermark percentage unicast | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue persistent-watermark CPU | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue persistent-watermark multicast | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue persistent-watermark unicast | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue persistent-watermark percentage CPU | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue persistent-watermark percentage multicast | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue persistent-watermark percentage unicast | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show queue wred-ecn counters | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show priority-group watermark shared | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show priority-group watermark headroom | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show priority-group watermark percentage headroom | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show priority-group watermark percentage shared | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show priority-group persistent-watermark shared | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show priority-group persistent-watermark headroom | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show priority-group persistent-watermark percentage headroom | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show priority-group persistent-watermark percentage shared | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show buffer-pool watermark | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show buffer-pool watermark percentage | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show buffer-pool persistent-watermark | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show buffer-pool persistent-watermark percentage | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show qos interface ${intfEthernet} all priority-flow-control statistics | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    save_klish_cmd "show qos interface ${intfEthernet} all priority-flow-control statistics queue | no-more" ${TS_KLISH_CMDS_COUNTERS_2}
+    if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM789) ]]; then
+        save_klish_cmd "show interface counters flf | no-more " ${TS_KLISH_CMDS_COUNTERS_2}
+    fi
+
+    # Execute the counters related klish commands
+    exec_klish_cmds ${TS_KLISH_CMDS_COUNTERS_2} "counters_2"
+
+    # Use a file TS_KLISH_CMDS_POE to store the poe related klish commands
+    TS_KLISH_CMDS_POE=$(prepare_klish_cmd_group "poe")
+    save_klish_cmd "show poe | no-more "                        ${TS_KLISH_CMDS_POE}
+    save_klish_cmd "show poe port info all | no-more "          ${TS_KLISH_CMDS_POE}
+    save_klish_cmd "show poe port configuration all | no-more " ${TS_KLISH_CMDS_POE}
+    # Execute the poe related klish commands
+    exec_klish_cmds ${TS_KLISH_CMDS_POE} "poe"
+
+    if [ -d "/proc/linux_ngknet" ]; then
+        save_cmd "cat /proc/linux_ngknet/pkt_stats" "ngknet_pkt.stats_2"
+        save_cmd "cat /proc/linux_ngknet/netif_info" "ngknet_netif.info_2"
+        save_cmd "cat /proc/linux_ngknet/filter_info" "ngknet_filter.info_2"
+        save_cmd "cat /proc/linux_ngknetcb" "ngknetcb.stats_2"
+    else 
+        save_cmd "cat /proc/bcm/knet/dstats" "knet_drop.counters_2"
+        save_cmd "cat /proc/bcm/knet/stats" "knet_filter.counters_2"
+    fi
+    if [ -e /usr/local/bin/softnet_stat.sh ]; then
+        save_cmd "softnet_stat.sh" "softnet_queue.counters_2"
+    fi
+    if [ -e /proc/bcm/knet/rx_drop ]; then
+        save_cmd "cat /proc/bcm/knet/rx_drop" "knet_queue.counters_2" 
+    fi
+    if [ -e /proc/bcm/knet-cb/stats/rx_queue ]; then
+        save_cmd "show knet stats rx-queue -v" "knet_rx_queue.counters_2"
+        save_cmd "show knet stats rx-queue -av" "knet_rx_queue_if.counters_2"
+    fi
+    if [ -e /proc/bcm/knet-cb/stats/pkt_type ]; then
+        save_cmd "show knet stats pkt-type -v" "knet_pkt_type.counters_2"
+        save_cmd "show knet stats pkt-type -av" "knet_pkt_type_if.counters_2"
+    fi
+    save_cmd "netstat -i" "netstat.counters_2"
+    #save_cmd "ifconfig -a" "ifconfig.counters_2"
+    if [ "$asic" = "broadcom" ]; then
+        save_bcmcmd "bcmcmd \"show counters\"" "bcm.counters"
+        save_bcmcmd "bcmcmd \"techsupport mmu\"" "broadcom.ts.mmu_2"
+    fi
+    if [[ ! -z $(lspci | grep -e b88 -e b78 -e b99) ]]; then
+        save_bcmcmd "bcmcmd \"estat show drop\"" "bcm_drop.counters_2"
+    fi
+    if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM5688) ]]; then
+        save_bcmcmd "bcmcmd \"estat show drop\"" "bcm_drop.counters_4"
+    fi
+    save_vtysh "show ip ospf vrf all interface traffic" "ospf.traffic.counters_2"
+    save_vtysh "show ip ospf6 vrf all interface traffic" "ospf6.traffic.counters_2"
+
+    # NTP snapshot 2
+    save_cmd "show ntp --detail --verbose" "ntp.detail_2"
+
+    $RM $V -rf $TARDIR
+    $MKDIR $V -p $TARDIR
+    $MKDIR $V -p $LOGDIR
+    #$LN $V -s /etc $TARDIR/etc
+    $CP -ra /etc $TARDIR/etc
+    rm_list=$(find -L $TARDIR/etc -maxdepth 5 -type l,c)
+    if [ ! -z "$rm_list" ]
+    then
+        rm $rm_list
+    fi
+    for file in $(find_files_in_dir "$TARDIR/etc"); do
+        if [ -f "$file" ]; then
+            sed -i $OBSC_TRANSFORM "$file"
+        fi
+    done
+
+    # Change permission of /etc/pekey
+    if [ -d "$TARDIR/etc/pekey" ]; then
+        chmod +x $TARDIR/etc/pekey
+    fi
+
+    update_db_state "Collecting System host info"
+    start_t=$(date +%s%3N)
+    ($TAR $V --warning=no-file-removed  -rhf $TARFILE -C $DUMPDIR --mode=+rw \
+        --exclude="etc/alternatives" \
+        --exclude="*/etc/passwd*" \
+        --exclude="*/etc/shadow*" \
+        --exclude="*/etc/group*" \
+        --exclude="*/etc/gshadow*" \
+        --exclude="*/etc/ssh*" \
+        --exclude="*get_creds*" \
+        --exclude="*snmpd.conf*" \
+        --exclude="/etc/mlnx" \
+        --exclude="/etc/mft" \
+        --exclude="*/etc/runit*" \
+        $BASE/etc \
+        || abort "${ERROR_TAR_FAILED}" "Tar append operation failed. Aborting for safety.") \
+        && $RM $V -rf $TARDIR
+    end_t=$(date +%s%3N)
+    echo "[ TAR /etc Files ] : $(($end_t-$start_t)) msec" >> $TECHSUPPORT_TIME_INFO
+
+    # Copy the warmboot files
+    mkdir -p $TARDIR         
+    $CP $V -rfa /host/warmboot $TARDIR
+    if [ -d "/host/counters/portstat-saved" ]; then
+        $CP $V -rfa /host/counters/portstat-saved $TARDIR/warmboot/.
+    fi
+    for file in $(find_files_in_dir "$BASE/warmboot"); do
+        if [ -f "$file" ]; then
+            sed -i $OBSC_TRANSFORM "$file"
+        fi
+    done
+
+    start_t=$(date +%s%3N)
+    ($TAR $V --warning=no-file-removed  -rhf $TARFILE -C $DUMPDIR --mode=+rw \
+        $BASE/warmboot \
+        || abort "${ERROR_TAR_FAILED}" "Tar append operation failed. Aborting for safety.") \
+        && $RM $V -rf $TARDIR
+    end_t=$(date +%s%3N)
+    echo "[ Warm-boot Files ] : $(($end_t-$start_t)) msec" >> $TECHSUPPORT_TIME_INFO
+
+    if [ "$asic" = "broadcom" ]; then
+       sudo docker exec -i syncd touch /var/log/diagrun.log
+       sudo docker exec -i syncd touch /var/log/bcm_diag_post
+       sudo docker exec -i syncd touch /bcm.log
+
+       sudo docker cp -a syncd:/var/log/diagrun.log /var/log/diagrun.log
+       sudo docker cp -a syncd:/var/log/bcm_diag_post /var/log/bcm_diag_post
+       sudo docker cp -a syncd:/bcm.log /var/log/bcm.log
+    fi
+
+    # collect dhclient info
+    save_cmd "ps ax | grep dhclient" "dhclient_info"
+
+    if [ -f /var/lib/dhcp/dhclient.eth0.leases ]; then
+        save_file /var/lib/dhcp/dhclient.eth0.leases dump false
+    fi
+
+    if [ -f /var/lib/dhcp/dhclient6.eth0.leases ]; then
+        save_file /var/lib/dhcp/dhclient6.eth0.leases dump false
+    fi
+
+    save_log_files
+    save_crash_files
+    save_system_journal
+
+    # run 'hw-management-generate-dump.sh' script and save the result file
+    HW_DUMP_FILE=/usr/bin/hw-management-generate-dump.sh
+    if [ -f "$HW_DUMP_FILE" ]; then
+      /usr/bin/hw-management-generate-dump.sh $ALLOW_PROCESS_STOP
+      save_file "/tmp/hw-mgmt-dump*" "hw-mgmt" false
+      rm -f /tmp/hw-mgmt-dump*
+    else
+        if [ ! -z $V ]; then echo "HW Mgmt dump script $HW_DUMP_FILE does not exist"; fi
+    fi
+
+    if [ ! -f /tmp/smartctl ]; then
+        device=$(lsblk -no pkname $(df -P /host | awk 'NR==2 {print $1}'))
+        smartctl -a /dev/${device} > /tmp/smartctl
+    fi
+    save_file /tmp/smartctl log true
+
+    # Run all the KLISH commands stored in the general file TS_KLISH_CMDS in one shot
+    exec_klish_cmds ${TS_KLISH_CMDS}
+
+    # Dump all debugshell components
+    update_db_state "Collecting Debugsh info"
+    debugsh_dump aclorchagent orchagent
+    debugsh_dump isogrporchagent orchagent
+    debugsh_dump vxlanorchagent orchagent
+    debugsh_dump l2nhgorchagent orchagent
+    debugsh_dump vxlanmgr orchagent
+    debugsh_dump fdbsyncd
+    debugsh_dump iftrackorchagent orchagent
+    debugsh_dump policerorchagent orchagent
+    debugsh_dump qoswredorchagent orchagent
+    debugsh_dump syncd
+    debugsh_dump nhgorchagent orchagent
+    debugsh_dump lvteporchagent orchagent
+    debugsh_dump delayrestoreorchagent orchagent
+    if [[ ! -z $(bcmcmd -t5 "show unit" | grep -e BCM5699 -e BCM789) ]]; then
+        debugsh_dump arsorchagent orchagent
+    fi
+    debugsh_dump aclsvcd
+    debugsh_dump acllogd
+    debugsh_dump acllib
+    debugsh_dump sai_mptnl sai
+    debugsh_dump sai_vlan sai
+    debugsh_dump sai_vlanstack sai
+    debugsh_dump sai_isogrp sai
+    debugsh_dump sai_lvtep sai
+    debugsh_dump sai_acl sai
+    debugsh_dump sai_sdkapicnt sai
+    debugsh_dump sai_ipmcgrp sai
+    debugsh_dump mclag
+    debugsh_dump vrrpmgrd
+    debugsh_dump neighsyncd 
+    debugsh_dump intfmgrd
+    debugsh_dump pbforchagent orchagent
+    debugsh_dump coppmgrd
+    debugsh_dump nbrmgrd 
+    debugsh_dump ports
+    debugsh_dump teammgrd
+    debugsh_dump vlanmgrd vlanmgr
+    debugsh_dump portsorch portsorch
+    debugsh_dump intforchagent orchagent
+    debugsh_dump dhcprelaymgrd
+
+    # Save RCC intermediate data
+    save_dir "/var/run/rccd" dump
+
+    # Store the total time taken for all the commands
+    update_db_state "Final collections and compress"
+    total_t=$( echo $(($(date +%s)-$total_t)) |awk '{print int($1/3600)"h:"int(int($1%3600)/60)"m:"int(int($1%3600)%60)"s"}' )
+    echo "[ Total time (ignoring the time taken for final compression) ] : $total_t" >> $TECHSUPPORT_TIME_INFO
+
+    # Save techsupport timing profile info
+    save_file $TECHSUPPORT_TIME_INFO log false
+
+    # Create index html
+    update_index_list EndIndexInfo
+    techsupp_index_file.py $TECHSUPPORT_INDEX_INFO $TECHSUPPORT_INDEX_FILE
+    $TAR $V -rhf $TARFILE -C $DUMPDIR $BASE/$(basename $TECHSUPPORT_INDEX_FILE)
+
+    # clean up working tar dir before compressing
+    start_t=$(date +%s%3N)
+    $RM $V -rf $TARDIR
+
+    if $DO_COMPRESS; then
+        $GZIP $V $TARFILE
+        if [ $? -eq 0 ]; then
+            TARFILE="${TARFILE}.gz"
+        else
+            echo "WARNING: gzip operation appears to have failed." >&2
+        fi
+    fi
+    end_t=$(date +%s%3N)
+    if [ ! -z $V ]; then
+        echo "[ Final Cleaning and Compressing ] : $(($end_t-$start_t)) msec"
+    fi
+
+    echo ${TARFILE}
+}
+
+###############################################################################
+# Terminates generate_dump early just in case we have issues.
+# Globals:
+#  None
+# Arguments:
+#  retcode: 0-255 return code to exit with. default is 1
+#  msg: (OPTIONAL) msg to print to standard error
+# Returns:
+#  None
+###############################################################################
+abort() {
+    local exitcode=${1:-1}
+    local msg=${2:-Error. Terminating early for safety.}
+    echo "$msg" >&2
+    if [ -e /var/run/techsupport.inprogress ] ; then
+	   enable_logrotate
+    fi
+    cleanup_tmpfiles
+    rm $V -rf $TARFILE
+    update_db_state Aborted
+    sync
+    exit $exitcode
+}
+
+###############################################################################
+# Prints usage to stdout.
+# Globals:
+#  None
+# Arguments:
+#  None
+# Returns:
+#  None
+###############################################################################
+usage() {
+    cat <<EOF
+$0 [-xnvh]
+
+Create a SONiC system dump for support/debugging. Requires root privileges.
+
+OPTIONS
+    -x
+        Enable bash debug mode.
+    -h
+        The usage information you are reading right now
+    -v
+        Enable verbose mode. All commands (like tar, mkdir, rm..) will have -v
+        passed to them
+    -n
+        Noop mode. Don't actually create anything, just echo what would happen
+    -a
+        Allow any process stop. This allows for collection of platform HW register
+        status, which may require potential system interruption
+    -z
+        Don't compress the tar at the end.
+    -s DATE
+        Collect logs since DATE;
+        The argument is a mostly free format human readable string such as
+        "24 March", "yesterday", etc.
+    -t TIMEOUT_MINS
+        Command level timeout in minutes
+
+EOF
+}
+
+while getopts ":xnvhzas:t:p" opt; do
+    case $opt in
+        x)
+            # enable bash debugging
+            PS4="+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }"
+            set -x
+            ;;
+        h)
+            usage
+            exit 0
+            ;;
+        v)
+            # echo commands about to be run to stderr
+            set -v
+            V="-v"
+            ;;
+        n)
+            TAR="echo tar"
+            MKDIR="echo mkdir"
+            RM="echo rm"
+            LN="echo ln"
+            GZIP="echo gzip"
+            CMD_PREFIX="echo "
+            MV="echo mv"
+            CP="echo cp"
+            TOUCH="echo touch"
+            NOOP=true
+            if [ "$TRACKPROGRESS" = "true" ] ; then
+                # no tracking of noops
+                TRACKPROGRESS=false
+            fi
+            ;;
+        z)
+            DO_COMPRESS=false
+            ;;
+        a)
+            ALLOW_PROCESS_STOP="-a"
+            ;;
+        s)
+            SINCE_DATE="${OPTARG}"
+            # validate date expression
+            date --date="${SINCE_DATE}" &> /dev/null || abort "${ERROR_INVALID_ARGUMENT}" "Invalid date expression passed: '${SINCE_DATE}'"
+            if [ $(date --date="${SINCE_DATE}" +%s) -ge $(date +%s) ];then
+                  abort "${ERROR_INVALID_ARGUMENT}" "Invalid future date expression passed: '${SINCE_DATE}'"
+            fi
+            ;;
+        t)
+            TIMEOUT_MIN="${OPTARG}"
+            ;;
+        p)
+            # track progress in State DB table
+            if [ "$NOOP" = "true" ] ; then
+                # no tracking of noops
+                TRACKPROGRESS=false
+            else
+                TRACKPROGRESS=true
+            fi
+            ;;
+        /?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+    esac
+done
+
+if [ $TRACKPROGRESS ] ; then
+    update_db_state Starting $TARFILE $TECHSUPPORT_TIME_INFO
+    chmod a+r $TECHSUPPORT_TIME_INFO
+fi
+
+#Clean up the stale entries
+cleanup_dump_files
+
+main
+
+cleanup_tmpfiles
+update_db_state Completed $TARFILE

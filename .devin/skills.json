@@ -1,0 +1,23 @@
+{
+  "skills": {
+    "storage_policy": "project_local",
+    "base_directory": "C:\\Users\\SERIAL-REDACTED-SERIAL-REDACTED\\SERIAL-REDACTED-SERIAL-REDACTED\\Documents\\AI\\Devin\\showtech_analyse\\skills",
+    "auto_backup": false,
+    "sync_to_global": false,
+    "project_isolation": true
+  },
+  "file_creation": {
+    "default_location": "workspace_root",
+    "enforce_workspace_bounds": true,
+    "allowed_patterns": [
+      "**/*.py",
+      "**/*.md", 
+      "**/*.json",
+      "**/*.txt",
+      "**/*.yml",
+      "**/*.yaml",
+      "**/*.cfg",
+      "**/*.conf"
+    ]
+  }
+}

@@ -1,0 +1,279 @@
+radv	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32712 25216 pts/0    Ss+  Mar08   2:57 /usr/bin/python3 /usr/local/bin/supervisord
+root          11  0.0  0.0   2480  1632 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name radv
+root          23  0.0  0.0 220872  3856 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n -iNONE
+
+snmp	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  33476 25480 pts/0    Ss+  Mar08   3:38 /usr/bin/python3 /usr/local/bin/supervisord
+root           8  0.0  0.0   2480  1584 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name snmp
+root          31  0.0  0.0 220872  4672 pts/0    Sl   Mar08   1:42 /usr/sbin/rsyslogd -n -iNONE
+root          48  0.0  0.1  32664 24200 pts/0    S    Mar08   0:00 python3 /usr/bin/snmpconfd
+Debian-+      50  0.1  0.0  25684 13304 pts/0    S    Mar08  12:54 /usr/sbin/snmpd -f -LS4d -u Debian-snmp -g Debian-snmp -I -smux mteTrigger mteTriggerConf ifTable ifXTable inetCidrRouteTable ipCidrRouteTable inetNetToMediaTable ipAddressTable lmsensorsMib ip -p /run/snmpd.pid
+root          52  4.6  0.3 512040 56228 pts/0    Sl   Mar08 533:07 python3 -m sonic_ax_impl
+root          54  0.0  0.2 254892 40152 pts/0    Sl   Mar08   5:23 python3 /usr/bin/snmpstatsd
+root          55  0.7  0.2 571520 35564 pts/0    Sl   Mar08  85:17 python3 -m sonic_ax_impl
+
+iccpd	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32700 24944 pts/0    Ss+  Mar08   3:24 /usr/bin/python3 /usr/local/bin/supervisord
+root           6  0.0  0.0   2480  1656 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name iccpd
+root          46  0.0  0.0 220872  5904 pts/0    Sl   Mar08   0:12 /usr/sbin/rsyslogd -n
+root          51  0.0  0.0  21592  4820 pts/0    S    Mar08   3:09 /usr/bin/iccpd
+root          56  0.0  0.0  83780  5208 pts/0    Sl   Mar08   0:33 /usr/bin/mclagsyncd
+root          59  0.0  0.0  82520  5136 pts/0    Sl   Mar08   0:34 /usr/bin/stpiccpsyncd
+
+vrrp	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32700 24800 pts/0    Ss+  Mar08   3:14 /usr/bin/python3 /usr/local/bin/supervisord
+root           7  0.0  0.0   2480  1568 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name vrrp
+root          40  0.0  0.0 220872  5896 pts/0    Sl   Mar08   0:09 /usr/sbin/rsyslogd -n
+root          45  0.8  0.0 172288  6032 pts/0    Sl   Mar08  92:58 /usr/bin/vrrpsyncd
+root          49  0.0  0.0 155572  7828 pts/0    Sl   Mar08   1:39 /usr/bin/vrrpmgrd
+root         107  0.0  0.0  24476  3192 ?        Ss   Mar08   0:44 keepalived
+root         108  0.0  0.0  24556  4724 ?        S    Mar08   0:43 keepalived
+root         109  0.0  0.0  24848  5612 ?        S    Mar08   1:42 keepalived
+
+dhcp_relay	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32712 25140 pts/0    Ss+  Mar08   3:07 /usr/bin/python3 /usr/local/bin/supervisord
+root          10  0.0  0.0   2480  1612 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name dhcp_relay
+root          20  0.0  0.0 220872  5780 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n -iNONE
+root          50  0.0  0.0  82536  5996 pts/0    Sl   Mar08   1:20 /usr/bin/dhcprelaymgrd
+
+lldp	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32964 25280 pts/0    Ss+  Mar08   3:51 /usr/bin/python3 /usr/local/bin/supervisord
+root          10  0.0  0.0   2480  1588 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name lldp
+root          38  0.0  0.0 220872  7940 pts/0    Sl   Mar08   0:12 /usr/sbin/rsyslogd -n -iNONE
+_lldpd        70  0.0  0.0  36504  7336 pts/0    S    Mar08   0:00 lldpd: monitor. 
+_lldpd        73  0.0  0.0  36864  3260 pts/0    S    Mar08   8:34 lldpd: 10 neighbors.
+root         121  0.2  0.1 107104 27276 pts/0    Sl   Mar08  31:06 python3 -m lldp_syncd
+root         146  0.0  0.2  51684 37788 pts/0    S    Mar08   0:09 python3 /usr/bin/lldpmgrd
+root         291  0.0  0.2  57348 43016 pts/0    S    Mar08   0:20 python3 /usr/bin/dcbxmgrd
+
+udld	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32704 24756 pts/0    Ss+  Mar08   3:09 /usr/bin/python3 /usr/local/bin/supervisord
+root           7  0.0  0.0   2480  1600 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name udld
+root          35  0.0  0.0 220872  3808 pts/0    Sl   Mar08   0:09 /usr/sbin/rsyslogd -n
+root          40  0.0  0.0  24760  5444 pts/0    S    Mar08   8:46 /usr/bin/udldd
+root          42  0.0  0.0  81560  4704 pts/0    Sl   Mar08   1:08 /usr/bin/udldmgrd
+
+l2mcd	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32700 24672 pts/0    Ss+  Mar08   3:07 /usr/bin/python3 /usr/local/bin/supervisord
+root           7  0.0  0.0   2480  1664 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name l2mcd
+root          31  0.0  0.0 220872  3768 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n
+root          36  0.0  0.0 105696 11000 pts/0    Sl   Mar08   6:36 /usr/bin/l2mcd -n 1
+root          51  0.0  0.0  81880  5576 pts/0    Sl   Mar08   1:12 /usr/bin/l2mcmgrd
+
+timesync	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32712 24940 pts/0    Ss+  Mar08   2:57 /usr/bin/python3 /usr/local/bin/supervisord
+root           8  0.0  0.0   2480  1648 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name timesync
+root          18  0.0  0.0 220872  5860 pts/0    Sl   Mar08   0:09 /usr/sbin/rsyslogd -n -iNONE
+root          22  0.0  0.0   7632  3512 pts/0    S    Mar08   0:00 /bin/bash /usr/bin/timesyncd-svc.sh
+root          34  0.6  0.0 483524 12728 pts/0    Sl   Mar08  75:03 /usr/bin/timesyncd
+
+stp	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32704 24844 pts/0    Ss+  Mar08   3:07 /usr/bin/python3 /usr/local/bin/supervisord
+root           7  0.0  0.0   2480  1700 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name stp
+root          31  0.0  0.0 220872  5820 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n
+root          36  0.1  0.0 128544 14452 pts/0    Sl   Mar08  18:40 /usr/bin/stpd
+root          39  0.0  0.0  82836  6788 pts/0    Sl   Mar08   1:16 /usr/bin/stpmgrd
+
+sflow	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32712 25204 pts/0    Ss+  Mar08   3:13 /usr/bin/python3 /usr/local/bin/supervisord
+root           8  0.0  0.0   2480  1588 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name sflow
+root           9  0.0  0.2 121748 33788 pts/0    Sl   Mar08   0:32 python3 /usr/bin/port_index_mapper.py
+root          19  0.0  0.0 220872  5868 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n -iNONE
+root          23  0.0  0.0  81732  4976 pts/0    Sl   Mar08   1:08 /usr/bin/sflowmgrd
+
+mfa	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32964 24976 pts/0    Ss+  Mar08   3:10 /usr/bin/python3 /usr/local/bin/supervisord
+root           7  0.0  0.0   2480  1672 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name mfa
+root           8  0.0  0.0   7656  3528 pts/0    S    Mar08   0:00 bash /usr/bin/start.sh
+root           9  0.0  0.1  36704 26336 pts/0    S    Mar08   0:00 /usr/bin/python3 /usr/bin/mfacfgd
+root         162  0.0  0.0 220872  3868 pts/0    Sl   Mar08   0:10 /usr/sbin/rsyslogd -n -iNONE
+root         234  0.0  0.3 1339060 57944 pts/0   SLl  Mar08   1:20 /usr/local/bin/ciam-service-CCME -mode=start -config=/etc/sonic/mfa/config_enc.env
+
+nat	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  33096 25268 pts/0    Ss+  Mar08   3:29 /usr/bin/python3 /usr/local/bin/supervisord
+root           8  0.0  0.0   2480  1588 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name nat
+root          62  0.0  0.0  82072  5100 pts/0    Sl   Mar08   1:08 /usr/bin/natmgrd
+root          64  0.0  0.0  81520  5112 pts/0    Sl   Mar08   0:32 /usr/bin/natsyncd
+root         273  0.0  0.0 220872  5880 pts/0    Sl   Mar08   0:09 /usr/sbin/rsyslogd -n -iNONE
+
+telemetry	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32964 25180 pts/0    Ss+  Mar08   3:06 /usr/bin/python3 /usr/local/bin/supervisord
+root           8  0.0  0.0   2480  1636 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-action --name=telemetry sonic-db-cli APPL_DB hmset TELEMETRY:gnmi oper_status DOWN status_detail Server stopped
+root          29  0.4  0.9 2162636 152392 pts/0  Sl   Mar08  50:10 /usr/sbin/telemetry -followconfig -writestatus -logtosyslog
+root          78  0.0  0.0 220872  3876 pts/0    Sl   Mar08   0:13 /usr/sbin/rsyslogd -n -iNONE
+
+tam	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32696 25052 pts/0    Ss+  Mar08   3:41 /usr/bin/python3 /usr/local/bin/supervisord
+root          15  0.0  0.0  86712  8908 pts/0    Sl   Mar08   0:33 /usr/bin/thresholdmgr
+root          18  0.1  0.0  87848  9828 pts/0    Sl   Mar08  14:33 /usr/bin/snapshotmgr
+root          21  0.0  0.0  81504  4976 pts/0    Sl   Mar08   0:34 /usr/bin/tammgrd
+root          23  0.0  0.0  81500  5132 pts/0    Sl   Mar08   0:34 /usr/bin/dropmgrd
+root          26  0.0  0.0  81480  4596 pts/0    Sl   Mar08   0:34 /usr/bin/tsmgrd
+root          29  0.0  0.0  81496  5108 pts/0    Sl   Mar08   0:33 /usr/bin/ifamgrd
+root          84  0.0  0.0 220872  3856 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n
+
+teamd	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32708 25128 pts/0    Ss+  Mar08   3:36 /usr/bin/python3 /usr/local/bin/supervisord
+root           8  0.0  0.0   2480  1668 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name teamd
+root          84  0.0  0.0 172672  6156 pts/0    Sl   Mar08   1:44 /usr/bin/teamsyncd
+root          89  0.0  0.0 155760  5872 pts/0    Sl   Mar08   1:46 /usr/bin/teammgrd
+root          96  0.0  0.0  32152  3448 ?        S    Mar08   4:37 /usr/bin/teamd -r -t PortChannel100 -c {"device":"PortChannel100","hwaddr":"b4:e9:b8:e7:ce:02","mtu":"9100","admin_status":"up","runner":{"active":true,"name":"lacp","agg_select_policy":"lacp_prio_stable"}} -L /var/warmboot/teamd/ -g -d
+root          99  0.0  0.0 163324  7556 pts/0    Sl   Mar08   7:04 /usr/bin/tlm_teamd
+root         170  0.0  0.0 220872  5920 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n -iNONE
+
+syncd	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32964 25232 pts/0    Ss+  Mar08   3:09 /usr/bin/python3 /usr/local/bin/supervisord
+root           8  0.0  0.0   2480  1628 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name syncd
+root          68  0.0  0.0  87704  1540 pts/0    Sl   Mar08   0:11 /usr/bin/dsserve /usr/bin/syncd --diag -u -l -p /tmp/sai.profile
+root         770 14.8  5.3 3081388 843812 pts/0  Sl   Mar08 1722:40 /usr/bin/syncd --diag -u -l -p /tmp/sai.profile
+root        1143  0.0  0.0 220872  4848 pts/0    Sl   Mar08   5:45 /usr/sbin/rsyslogd -n -iNONE
+
+pmon	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  33120 25512 pts/0    Ss+  Mar08   4:21 /usr/bin/python3 /usr/local/bin/supervisord
+root          21  0.0  0.0   2480  1592 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name pmon
+root          71  0.0  0.2  54372 40164 pts/0    S    Mar08   1:03 locatorledd
+root          72  0.0  0.2  57208 43052 pts/0    S    Mar08   1:04 xcvrd
+root          73  1.2  0.2  56036 41800 pts/0    S    Mar08 145:10 python3 /usr/local/bin/psud
+root          76  0.5  0.2 130008 42284 pts/0    Sl   Mar08  65:31 python3 /usr/local/bin/thermalctld
+root          77  0.0  0.0  13996   876 ?        S    Mar08   0:00 /usr/sbin/ipmievd open
+root          92  0.0  0.2  49484 35336 pts/0    S    Mar08   1:34 python3 /usr/local/bin/pcied
+root         104  0.0  0.0   2480  1564 pts/0    S    Mar08   2:43 sh /usr/bin/monitpmon.sh
+root         105  0.0  0.2  50324 36564 pts/0    S    Mar08   0:07 python3 /usr/local/bin/ssdhealthd
+root         155  0.0  0.2 569040 33700 pts/0    Sl   Mar08   2:50 python3 /usr/local/bin/xcvrd
+root         284  0.0  0.2 571072 33700 pts/0    Sl   Mar08   4:36 python3 /usr/local/bin/xcvrd
+root         318  0.1  0.2 497340 33336 pts/0    Sl   Mar08  20:14 python3 /usr/local/bin/xcvrd
+root         505  0.2  0.2 204552 36616 pts/0    Sl   Mar08  24:30 xcvrd_config
+root         580  0.0  0.0 220872  5844 pts/0    Sl   Mar08   0:09 /usr/sbin/rsyslogd -n -iNONE
+root         632  0.1  0.2 129852 40564 pts/0    Sl   Mar08  12:33 xcvrd_phy
+root         638  0.0  0.2  57244 36412 pts/0    S    Mar08   4:54 xcvrd_cmisc
+root         651  0.2  0.2  60320 39556 pts/0    S    Mar08  28:44 xcvrd_dominfo
+root         665  0.4  0.2  60336 39728 pts/0    S    Mar08  51:48 xcvrd_sfpstate
+root         666  0.0  0.2  57160 35524 pts/0    SN   Mar08   0:38 xcvrd_cmisw
+root         667  0.0  0.2  57208 36324 pts/0    S    Mar08   1:15 xcvrd_appdb
+root         689  0.0  0.2  57172 35524 pts/0    SN   Mar08   0:38 xcvrd_cmisw
+root         707  0.0  0.2  57184 35532 pts/0    SN   Mar08   0:38 xcvrd_cmisw
+root         717  0.0  0.2  57196 35536 pts/0    SN   Mar08   0:38 xcvrd_cmisw
+root         732  0.0  0.2  57208 35536 pts/0    SN   Mar08   0:39 xcvrd_cmisw
+root         743  0.0  0.2  57220 35540 pts/0    SN   Mar08   0:38 xcvrd_cmisw
+root         759  0.0  0.2  57232 35544 pts/0    SN   Mar08   0:38 xcvrd_cmisw
+root         774  0.0  0.2  57244 35556 pts/0    SN   Mar08   0:38 xcvrd_cmisw
+root     1531491  0.0  0.0   5992   568 pts/0    S    05:53   0:00 sleep 5
+root     1531499  0.0  0.0  15504  4184 pts/0    S    05:53   0:00 ipmitool raw 4 35 52 8
+root     1531500  0.0  0.0  15504  4272 pts/0    S    05:53   0:00 ipmitool fru print 4
+
+swss	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  33248 25520 pts/0    Ss+  Mar08   6:47 /usr/bin/python3 /usr/local/bin/supervisord
+root          21  0.0  0.0   2480  1564 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name swss
+root         178  0.8  0.0  98424  5880 pts/0    Sl   Mar08  98:33 /usr/bin/portsyncd
+root         245  0.0  0.0   7524  3468 pts/0    S    Mar08   0:00 bash /usr/bin/orchagent.sh
+root         262  0.2  0.1 328292 22308 pts/0    Sl   Mar08  28:50 /usr/bin/orchagent -d /var/log/swss -b 8192 -m b4:e9:b8:e7:ce:02
+root         300  0.0  0.0  81948  5600 pts/0    Sl   Mar08   1:03 /usr/bin/coppmgrd
+root         301  0.0  0.0 246196  6012 pts/0    Sl   Mar08   1:00 /usr/bin/neighsyncd
+root         303  0.0  0.0 229784  6192 pts/0    Sl   Mar08   2:01 /usr/bin/vlanmgrd
+root         306  0.0  0.0 156184  6388 pts/0    Sl   Mar08   1:37 /usr/bin/intfmgrd
+root         308  0.0  0.0 155724  5584 pts/0    Sl   Mar08   1:34 /usr/bin/portmgrd
+root         309  0.0  0.0  81696  5228 pts/0    Sl   Mar08   1:02 /usr/bin/loopbackmgrd
+root         314  0.0  0.0  81604  4940 pts/0    Sl   Mar08   1:06 /usr/bin/switchmgrd
+root         319  0.0  0.0  81840  5536 pts/0    Sl   Mar08   1:08 /usr/bin/buffermgrd -l /usr/share/sonic/hwsku/pg_profile_lookup.ini
+root         326  0.0  0.0  81840  5664 pts/0    Sl   Mar08   1:12 /usr/bin/vrfmgrd
+root         340  0.0  0.0  81568  4948 pts/0    Sl   Mar08   1:04 /usr/bin/arsmgrd
+root         348  0.0  0.0 155692  5560 pts/0    Sl   Mar08   1:49 /usr/bin/nbrmgrd
+root         355  0.0  0.0  81552  5048 pts/0    Sl   Mar08   1:09 /usr/bin/evpnmhmgrd
+root         356  0.0  0.0  81588  4984 pts/0    Sl   Mar08   1:03 /usr/bin/srv6mgrd
+root         360  0.0  0.0  82100  5844 pts/0    Sl   Mar08   1:06 /usr/bin/vxlanmgrd
+root         365  0.0  0.0 246224  5564 pts/0    Sl   Mar08   2:31 /usr/bin/fdbsyncd
+root         367  0.0  0.0  81544  5004 pts/0    Sl   Mar08   1:03 /usr/bin/tunnelmgrd
+root         378  0.0  0.0  83768  5096 pts/0    Sl   Mar08   0:31 /usr/bin/acllogd
+root         387  0.0  0.0  83792  7652 pts/0    Sl   Mar08   0:32 /usr/bin/aclsvcd
+root         390  0.0  0.0 155672  5776 pts/0    Sl   Mar08   1:35 /usr/bin/iphelpermgrd
+root         688  0.0  0.0 220872  3848 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n -iNONE
+
+mgmt-framework	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32976 25016 pts/0    Ss+  Mar08   3:01 /usr/bin/python3 /usr/local/bin/supervisord
+root           8  0.0  0.0   2480  1536 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-action --name=rest-server sonic-db-cli APPL_DB hmset REST_SERVER:default oper_status DOWN status_detail Server stopped
+root          20  0.1  1.3 2381096 207740 pts/0  Sl   Mar08  16:48 /usr/sbin/rest_server -ui /rest_ui -logtosyslog -followconfig -writestatus
+root          95  0.0  0.0 220872  6780 pts/0    Sl   Mar08   1:13 /usr/sbin/rsyslogd -n -iNONE
+admhour+   24686  0.0  0.0  14908  6348 pts/1    Ss+  05:49   0:00 /bin/bash /usr/sbin/cli/clish_start HOST_PID=2331599 -t 3605
+admhour+   24692  2.2  0.7 308384 113040 pts/1   Sl+  05:49   0:04 /usr/sbin/cli/clish -o -t 3605
+
+bgp	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  33100 25404 pts/0    Ss+  Mar08   5:09 /usr/bin/python3 /usr/local/bin/supervisord
+root          31  0.0  0.0   2480  1580 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name bgp
+frr          243  0.0  0.2 936896 39948 pts/0    Sl   Mar08   0:31 /usr/lib/frr/zebra -A 127.0.0.1 -s 90000000 -K 5 -r -M fpm -M snmp --v6-rr-semantics --fpm-nhg
+frr          260  0.0  0.0  16436 10576 pts/0    S    Mar08   0:00 /usr/lib/frr/staticd -A 127.0.0.1
+frr          261  0.9  0.1 203552 22088 pts/0    Sl   Mar08 106:57 /usr/lib/frr/bfdd -A 127.0.0.1
+frr          262  0.0  0.2 206120 32804 pts/0    Sl   Mar08   7:30 /usr/lib/frr/bgpd -A 127.0.0.1 -M snmp
+frr          263  0.0  0.0  15988  9740 pts/0    S    Mar08   0:00 /usr/lib/frr/iptrackd -A 127.0.0.1
+frr          264  0.0  0.1  29196 17328 pts/0    S    Mar08   0:03 /usr/lib/frr/ospf6d -A 127.0.0.1 -M snmp
+frr          266  0.0  0.1  34304 19344 pts/0    S    Mar08   0:37 /usr/lib/frr/ospfd -A 127.0.0.1 -M snmp
+frr          271  0.0  0.0  18996 13020 pts/0    S    Mar08   0:05 /usr/lib/frr/pimd -A 127.0.0.1
+root         397  0.5  0.1 180436 28456 pts/0    Sl   Mar08  66:39 /usr/bin/python3 /usr/local/bin/frrcfgd
+root         541  0.0  0.0 679868  5376 pts/0    Sl   Mar08   0:31 fpmsyncd
+root         543  0.0  0.0 159712  5600 pts/0    Sl   Mar08   1:12 ipmcfpmsyncd
+root         719  0.0  0.0 229088  3880 pts/0    Sl   Mar08   0:10 /usr/sbin/rsyslogd -n -iNONE
+root         731  0.0  0.0   8108  4792 pts/0    S    Mar08   0:00 /usr/bin/rsyslog_plugin -r /etc/rsyslog.d/bgp_regex.json
+
+eventd	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32708 25184 pts/0    Ss+  Mar08   3:04 /usr/bin/python3 /usr/local/bin/supervisord
+root          11  0.0  0.0   2480  1696 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name eventd
+root          25  0.0  0.0   7872  4964 pts/0    S    Mar08   0:00 /usr/bin/eventd
+root          84  0.0  0.0 220872  3868 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n -iNONE
+
+database	docker
+---------------------------
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  32704 24976 pts/0    Ss+  Mar08   3:49 /usr/bin/python3 /usr/local/bin/supervisord
+root          62  0.0  0.0   2480  1556 pts/0    S    Mar08   0:00 sh /usr/bin/supervisor-proc-exit-listener --container-name database
+root          64  0.6  0.1 153408 28688 pts/0    Sl   Mar08  77:54 /usr/bin/redis-server 127.0.0.1:6379
+root          65  0.3  0.1  84900 18216 pts/0    Sl   Mar08  42:49 /usr/bin/redis-server 127.0.0.1:63792
+root          66  0.1  0.1  65680 15876 pts/0    Sl   Mar08  19:33 /usr/bin/redis-server 127.0.0.1:63793
+root          67  0.1  0.0  62340 13444 pts/0    Sl   Mar08  15:36 /usr/bin/redis-server 127.0.0.1:63794
+root          69  2.2  0.1  73640 18320 pts/0    Sl   Mar08 255:36 /usr/bin/redis-server 127.0.0.1:63796
+root          78  0.1  0.0  59780 13624 pts/0    Sl   Mar08  15:04 /usr/bin/redis-server 127.0.0.1:63970
+root         238  0.0  0.0 220872  5860 pts/0    Sl   Mar08   0:11 /usr/sbin/rsyslogd -n -iNONE
+

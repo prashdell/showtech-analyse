@@ -1,0 +1,7 @@
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 Mar08 pts/0    00:03:13 /usr/bin/python3 /usr/local/bin/supervisord
+root           8       1  0 Mar08 pts/0    00:00:00 sh /usr/bin/supervisor-proc-exit-listener --container-name sflow
+root           9       1  0 Mar08 pts/0    00:00:32 python3 /usr/bin/port_index_mapper.py
+root          19       1  0 Mar08 pts/0    00:00:11 /usr/sbin/rsyslogd -n -iNONE
+root          23       1  0 Mar08 pts/0    00:01:08 /usr/bin/sflowmgrd
+root         147       0  0 05:59 ?        00:00:00 ps -ef

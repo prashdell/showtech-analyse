@@ -1,0 +1,1611 @@
+--ts-sonic--# show interface Eth | no-more[J
+     
+Eth1/1 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::UPL::10G::MYBLE01SDWESX5::vmnic9
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:23.315354Z
+  admin-up at 2026-03-08T05:00:34.629397Z
+  xcvr-status-down at 2026-03-08T05:01:10.012835Z
+  xcvr-status-up at 2026-03-08T05:01:10.716231Z
+  port-enabled at 2026-03-08T05:01:10.716947Z
+  phy-link-up at 2026-03-08T05:01:11.42311Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 152 bits/sec, 19 Bytes/sec
+10 seconds output rate 3 packets/sec, 2072 bits/sec, 259 Bytes/sec
+Input statistics:
+        46339 packets, 4587561 octets
+        46339 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        1950685 packets, 145377495 octets
+        1066986 Multicasts, 875858 Broadcasts, 7841 Unicasts
+        0 error, 47 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/2 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::UPL::10G::MYBLE01SDWESX5::vmnic11
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:23.423431Z
+  admin-up at 2026-03-08T05:00:34.630658Z
+  xcvr-status-down at 2026-03-08T05:01:10.735248Z
+  xcvr-status-up at 2026-03-08T05:01:11.427728Z
+  port-enabled at 2026-03-08T05:01:11.42837Z
+  phy-link-up at 2026-03-08T05:01:12.215084Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 46269 packets/sec, 206651216 bits/sec, 25831402 Bytes/sec
+10 seconds output rate 32914 packets/sec, 156425176 bits/sec, 19553147 Bytes/sec
+Input statistics:
+        15796415852 packets, 8681155961325 octets
+        69516 Multicasts, 37 Broadcasts, 15796346304 Unicasts
+        0 error, 34 discarded, 0 Oversize
+        1076125570 Packets (128 to 255 Octects)
+Output statistics:
+        19578131609 packets, 11389084203465 octets
+        370726 Multicasts, 3 Broadcasts, 19577760880 Unicasts
+        0 error, 13 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/3 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::UPL::10G::MYBLE01SDWESX6::vmnic9
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:23.601193Z
+  admin-up at 2026-03-08T05:00:34.65147Z
+  xcvr-status-down at 2026-03-08T05:01:11.428698Z
+  xcvr-status-up at 2026-03-08T05:01:11.521093Z
+  port-enabled at 2026-03-08T05:01:11.52819Z
+  phy-link-up at 2026-03-08T05:01:12.525511Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 72 bits/sec, 9 Bytes/sec
+10 seconds output rate 3 packets/sec, 1728 bits/sec, 216 Bytes/sec
+Input statistics:
+        46343 packets, 4587957 octets
+        46343 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        1950684 packets, 146213017 octets
+        1066988 Multicasts, 875858 Broadcasts, 7838 Unicasts
+        0 error, 52 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/4 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::UPL::10G::MYBLE01SDWESX6::vmnic11
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:23.8731Z
+  admin-up at 2026-03-08T05:00:34.676204Z
+  xcvr-status-down at 2026-03-08T05:01:11.56266Z
+  xcvr-status-up at 2026-03-08T05:01:12.218767Z
+  port-enabled at 2026-03-08T05:01:12.219524Z
+  phy-link-up at 2026-03-08T05:01:12.946873Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 23872 packets/sec, 120633872 bits/sec, 15079234 Bytes/sec
+10 seconds output rate 37779 packets/sec, 153157320 bits/sec, 19144665 Bytes/sec
+Input statistics:
+        8367312602 packets, 4136935402101 octets
+        69518 Multicasts, 36 Broadcasts, 8367243048 Unicasts
+        0 error, 33 discarded, 0 Oversize
+        425408417 Packets (128 to 255 Octects)
+Output statistics:
+        6983681744 packets, 4023289478755 octets
+        370726 Multicasts, 2 Broadcasts, 6983311016 Unicasts
+        0 error, 11 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/5 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::UPL::10G::MYBLE01SDWESX5::vmnic10
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:24.125155Z
+  admin-up at 2026-03-08T05:00:34.692774Z
+  xcvr-status-down at 2026-03-08T05:01:12.257702Z
+  xcvr-status-up at 2026-03-08T05:01:12.715273Z
+  port-enabled at 2026-03-08T05:01:12.716133Z
+  phy-link-up at 2026-03-08T05:01:13.305942Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 72 bits/sec, 9 Bytes/sec
+10 seconds output rate 1 packets/sec, 984 bits/sec, 123 Bytes/sec
+Input statistics:
+        46341 packets, 4587759 octets
+        46341 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        1176629 packets, 157322248 octets
+        24327 Multicasts, 1008119 Broadcasts, 144183 Unicasts
+        0 error, 6899 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/6 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::UPL::10G::MYBLE01SDWESX6::vmnic10
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:24.483445Z
+  admin-up at 2026-03-08T05:00:34.715032Z
+  xcvr-status-down at 2026-03-08T05:01:12.780966Z
+  xcvr-status-up at 2026-03-08T05:01:12.94811Z
+  port-enabled at 2026-03-08T05:01:12.949194Z
+  phy-link-up at 2026-03-08T05:01:13.592057Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 152 bits/sec, 19 Bytes/sec
+10 seconds output rate 1 packets/sec, 1328 bits/sec, 166 Bytes/sec
+Input statistics:
+        46340 packets, 4587660 octets
+        46340 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        1176618 packets, 156531826 octets
+        24327 Multicasts, 1008118 Broadcasts, 144173 Unicasts
+        0 error, 6910 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/7 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:25.186933Z
+  admin-down at 2026-03-08T05:00:34.720376Z
+  transceiver-not-present at 2026-03-08T05:01:17.780911Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/8 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:25.431037Z
+  admin-down at 2026-03-08T05:00:34.728151Z
+  transceiver-not-present at 2026-03-08T05:01:17.782561Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/9 is up, line protocol is down, reason no-transceiver
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:25.565385Z
+  link-err-disable-status-up at 2026-03-12T04:54:35.797828Z
+  admin-down at 2026-03-12T06:00:39.004954Z
+  port-disabled at 2026-03-12T06:04:43.078343Z
+  admin-up at 2026-03-12T06:04:43.184016Z
+  transceiver-not-present at 2026-03-16T03:24:09.95913Z
+  xcvr-status-down at 2026-03-16T03:24:09.961479Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/10 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:25.723802Z
+  admin-down at 2026-03-08T05:00:34.734384Z
+  transceiver-not-present at 2026-03-08T05:01:17.797062Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/11 is up, line protocol is down, reason no-transceiver
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: sp-TM bw-1G ty-INETBGP id-LD1030249315 loc-MYBLE01
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:25.8858Z
+  admin-down at 2026-03-12T05:42:38.583122Z
+  link-err-disable-status-up at 2026-03-12T06:00:10.318988Z
+  port-disabled at 2026-03-12T06:04:42.948327Z
+  admin-up at 2026-03-12T06:04:43.06757Z
+  transceiver-not-present at 2026-03-16T03:25:13.003821Z
+  xcvr-status-down at 2026-03-16T03:25:13.006881Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/12 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: sp-TWC bw-2G ty-INET id-ME011113 loc-MYBLE01
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:26.084263Z
+  admin-up at 2026-03-08T05:00:34.636347Z
+  xcvr-status-down at 2026-03-08T05:01:12.956565Z
+  xcvr-status-up at 2026-03-08T05:01:13.246403Z
+  port-enabled at 2026-03-08T05:01:13.247483Z
+  phy-link-down at 2026-03-09T02:37:27.350417Z
+  local-fault at 2026-03-09T02:37:27.352083Z
+  remote-fault at 2026-03-09T02:37:27.35234Z
+  phy-link-up at 2026-03-09T02:37:34.539235Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 59033 packets/sec, 315006968 bits/sec, 39375871 Bytes/sec
+10 seconds output rate 78081 packets/sec, 367830040 bits/sec, 45978755 Bytes/sec
+Input statistics:
+        32350364359 packets, 23389741850818 octets
+        8 Multicasts, 132092 Broadcasts, 32350232260 Unicasts
+        0 error, 52 discarded, 0 Oversize
+        8064077580 Packets (128 to 255 Octects)
+Output statistics:
+        26656065336 packets, 14637971517316 octets
+        23173 Multicasts, 199 Broadcasts, 26656041964 Unicasts
+        0 error, 30249 discarded, 0 Oversize
+Time since last interface status change: 1w0d03h
+     
+Eth1/13 is up, line protocol is down, reason no-transceiver
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 1G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:27.146462Z
+  xcvr-status-down at 2026-03-16T03:24:20.097741Z
+  port-disabled at 2026-03-16T05:15:24.05412Z
+  transceiver-not-present at 2026-03-16T06:03:37.687001Z
+  admin-down at 2026-03-16T06:03:37.944644Z
+  admin-up at 2026-03-16T06:03:41.212301Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/14 is up, line protocol is down, reason err-disabled
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 7400 bytes
+LineSpeed 1G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:27.382447Z
+  port-disabled at 2026-03-16T06:02:23.290806Z
+  admin-down at 2026-03-16T06:03:38.07443Z
+  admin-up at 2026-03-16T06:03:41.226902Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/15 is up, line protocol is down, reason no-transceiver
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 1G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:27.518502Z
+  xcvr-status-down at 2026-03-12T05:35:02.328371Z
+  transceiver-not-present at 2026-03-16T06:03:38.055455Z
+  admin-down at 2026-03-16T06:03:38.087546Z
+  admin-up at 2026-03-16T06:03:41.267551Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/16 is up, line protocol is down, reason err-disabled
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 7600 bytes
+LineSpeed 1G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:27.676952Z
+  port-disabled at 2026-03-16T06:02:23.327146Z
+  admin-down at 2026-03-16T06:03:38.183567Z
+  admin-up at 2026-03-16T06:03:41.276574Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/17 is up, line protocol is down, reason err-disabled
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 8700 bytes
+LineSpeed 1G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:27.785219Z
+  port-disabled at 2026-03-16T06:02:31.938162Z
+  admin-down at 2026-03-16T06:03:38.27815Z
+  admin-up at 2026-03-16T06:03:41.284877Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/18 is up, line protocol is down, reason no-transceiver
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 6666 bytes
+LineSpeed 1G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:27.884748Z
+  transceiver-not-present at 2026-03-16T06:03:38.090198Z
+  admin-down at 2026-03-16T06:03:38.371092Z
+  admin-up at 2026-03-16T06:03:41.298706Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/19 is up, line protocol is down, reason err-disabled
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 8900 bytes
+LineSpeed 1G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:27.975875Z
+  port-disabled at 2026-03-16T06:02:32.213054Z
+  admin-down at 2026-03-16T06:03:38.458882Z
+  admin-up at 2026-03-16T06:03:41.305472Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/20 is up, line protocol is down, reason no-transceiver
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 6666 bytes
+LineSpeed 1G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:28.107149Z
+  xcvr-status-down at 2026-03-16T05:13:45.035107Z
+  transceiver-not-present at 2026-03-16T06:03:38.045194Z
+  admin-down at 2026-03-16T06:03:38.512115Z
+  admin-up at 2026-03-16T06:03:41.324503Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/21 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::UPL::10G::MYPENPAFWCORP02::Eth6::
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 1500 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:28.190202Z
+  xcvr-status-down at 2026-03-08T05:01:13.593834Z
+  xcvr-status-up at 2026-03-08T05:01:13.766908Z
+  port-enabled at 2026-03-08T05:01:13.768458Z
+  phy-link-up at 2026-03-08T05:01:14.16354Z
+  admin-up at 2026-03-09T02:15:50.878506Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 4 packets/sec, 3088 bits/sec, 386 Bytes/sec
+Input statistics:
+        7405310549 packets, 1786469878974 octets
+        0 Multicasts, 2736 Broadcasts, 7405307813 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        584023058 Packets (128 to 255 Octects)
+Output statistics:
+        5760097905 packets, 692649160389 octets
+        370726 Multicasts, 9257 Broadcasts, 5759717921 Unicasts
+        0 error, 6 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/22 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::UPL::10G::MYPENPAFWCORP02::Eth1/20-DefaultFW::
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 1500 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:28.358044Z
+  xcvr-status-down at 2026-03-08T05:09:56.699338Z
+  xcvr-status-up at 2026-03-08T05:10:21.347889Z
+  port-disabled at 2026-03-08T05:14:08.055702Z
+  port-enabled at 2026-03-08T05:14:08.17835Z
+  phy-link-up at 2026-03-08T05:14:08.69618Z
+  admin-up at 2026-03-09T02:15:50.891548Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 5 packets/sec, 3632 bits/sec, 454 Bytes/sec
+Input statistics:
+        8387078618 packets, 7023059702684 octets
+        0 Multicasts, 2688 Broadcasts, 8387075930 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        409440946 Packets (128 to 255 Octects)
+Output statistics:
+        8504449294 packets, 6448668413073 octets
+        370312 Multicasts, 8924 Broadcasts, 8504070057 Unicasts
+        0 error, 0 discarded, 0 Oversize
+Time since last interface status change: 1w1d00h
+     
+Eth1/23 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::UPL::10G::mypenpafwedu02::Eth1/14::
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 1500 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:28.652875Z
+  xcvr-status-down at 2026-03-08T05:01:13.997591Z
+  xcvr-status-up at 2026-03-08T05:01:14.172317Z
+  port-enabled at 2026-03-08T05:01:14.175059Z
+  phy-link-up at 2026-03-08T05:01:14.592367Z
+  admin-up at 2026-03-09T02:15:50.909342Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 4 packets/sec, 2832 bits/sec, 354 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        3317411 packets, 242336097 octets
+        370726 Multicasts, 23158 Broadcasts, 2923526 Unicasts
+        0 error, 43 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/24 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:28.842535Z
+  admin-down at 2026-03-08T05:00:34.657826Z
+  transceiver-not-present at 2026-03-08T05:01:17.86841Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/25 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:18.751818Z
+  transceiver-not-present at 2026-03-16T05:58:54.633005Z
+  admin-down at 2026-03-16T05:58:54.702112Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/26 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:19.209946Z
+  admin-down at 2026-03-16T05:58:54.721464Z
+  transceiver-not-present at 2026-03-16T05:58:54.759277Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/27 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:19.862507Z
+  transceiver-incompatible at 2026-03-12T06:06:42.450543Z
+  xcvr-status-down at 2026-03-16T03:24:24.162785Z
+  transceiver-not-present at 2026-03-16T05:58:54.738167Z
+  admin-down at 2026-03-16T05:58:54.741544Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/28 is up, line protocol is down, reason no-transceiver
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 4444 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:20.521858Z
+  transceiver-incompatible at 2026-03-08T05:01:14.203955Z
+  xcvr-status-up at 2026-03-08T05:01:20.149979Z
+  port-enabled at 2026-03-08T05:01:33.358939Z
+  phy-link-up at 2026-03-08T05:01:33.684827Z
+  phy-link-down at 2026-03-08T05:03:29.839167Z
+  xcvr-status-down at 2026-03-11T04:09:26.855808Z
+  port-disabled at 2026-03-11T04:09:26.857708Z
+  admin-up at 2026-03-16T05:58:54.744089Z
+  transceiver-not-present at 2026-03-16T05:58:54.744955Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/29 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:20.948419Z
+  admin-down at 2026-03-08T05:00:34.673067Z
+  transceiver-incompatible at 2026-03-12T06:06:46.606762Z
+  transceiver-not-present at 2026-03-16T03:24:56.55621Z
+  xcvr-status-down at 2026-03-16T03:24:56.55822Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/30 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:21.293108Z
+  admin-down at 2026-03-08T05:00:34.675309Z
+  transceiver-not-present at 2026-03-08T05:01:17.900171Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/31 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:21.670639Z
+  admin-down at 2026-03-08T05:00:34.677343Z
+  transceiver-not-present at 2026-03-08T05:01:17.902814Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/32 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:22.123308Z
+  admin-down at 2026-03-08T05:00:34.678812Z
+  transceiver-not-present at 2026-03-08T05:01:17.90763Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/33 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:22.3032Z
+  admin-down at 2026-03-08T05:00:34.680191Z
+  transceiver-not-present at 2026-03-08T05:01:17.911257Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/34 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:22.538165Z
+  admin-down at 2026-03-08T05:00:34.681533Z
+  transceiver-not-present at 2026-03-08T05:01:17.915497Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/35 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:22.625581Z
+  admin-down at 2026-03-08T05:00:34.682673Z
+  transceiver-not-present at 2026-03-08T05:01:17.921874Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/36 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:22.725535Z
+  admin-down at 2026-03-08T05:00:34.684516Z
+  transceiver-not-present at 2026-03-08T05:01:17.936741Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/37 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:29.035135Z
+  admin-down at 2026-03-08T05:00:34.685562Z
+  transceiver-not-present at 2026-03-08T05:01:17.941511Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/38 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:29.250909Z
+  admin-down at 2026-03-08T05:00:34.686477Z
+  transceiver-not-present at 2026-03-08T05:01:17.9511Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/39 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:29.515313Z
+  admin-down at 2026-03-08T05:00:34.690503Z
+  transceiver-not-present at 2026-03-08T05:01:17.965157Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/40 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 10G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:30.112258Z
+  admin-up at 2026-03-08T05:00:34.691797Z
+  transceiver-not-present at 2026-03-08T05:01:17.968189Z
+  admin-down at 2026-03-08T05:21:03.473118Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/41 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:30.26231Z
+  admin-down at 2026-03-08T05:00:34.694779Z
+  transceiver-not-present at 2026-03-08T05:01:17.973225Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/42 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:30.381358Z
+  admin-down at 2026-03-08T05:00:34.696693Z
+  transceiver-not-present at 2026-03-08T05:01:17.977288Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/43 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:30.492672Z
+  admin-down at 2026-03-08T05:00:34.698469Z
+  transceiver-not-present at 2026-03-08T05:01:17.981104Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/44 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:30.679582Z
+  admin-down at 2026-03-08T05:00:34.69988Z
+  transceiver-not-present at 2026-03-08T05:01:17.994972Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/45 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:30.814982Z
+  admin-down at 2026-03-08T05:00:34.703643Z
+  transceiver-not-present at 2026-03-08T05:01:18.001213Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/46 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:30.914366Z
+  admin-down at 2026-03-08T05:00:34.705137Z
+  transceiver-not-present at 2026-03-08T05:01:18.008396Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/47 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 25G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:31.00366Z
+  admin-down at 2026-03-08T05:00:34.706673Z
+  transceiver-not-present at 2026-03-08T05:01:18.011763Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/48 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed auto, Auto-negotiation on
+Link-training: on
+Unreliable-LOS: off
+FEC: auto
+Events:
+  initialized at 2026-03-08T05:00:31.094736Z
+  admin-down at 2026-03-08T05:00:34.71101Z
+  transceiver-not-present at 2026-03-08T05:01:18.017411Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/49 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::PCM::100G::MYBLE01-DC-0408-SI01::Eth48
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 100G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:31.378012Z
+  admin-up at 2026-03-08T05:00:34.71249Z
+  xcvr-status-down at 2026-03-08T05:01:14.413517Z
+  xcvr-status-up at 2026-03-08T05:01:14.596706Z
+  port-enabled at 2026-03-08T05:01:14.597311Z
+  phy-link-up at 2026-03-08T05:01:14.822411Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 71758 packets/sec, 350641432 bits/sec, 43830179 Bytes/sec
+10 seconds output rate 62880 packets/sec, 291206288 bits/sec, 36400786 Bytes/sec
+Input statistics:
+        27071675090 packets, 14937987083516 octets
+        2827930 Multicasts, 20882 Broadcasts, 27068826275 Unicasts
+        0 error, 13 discarded, 0 Oversize
+        5557510496 Packets (128 to 255 Octects)
+Output statistics:
+        26479690168 packets, 17283894295291 octets
+        46398 Multicasts, 134736 Broadcasts, 26479509034 Unicasts
+        0 error, 3 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/50 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 100G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:31.593069Z
+  admin-down at 2026-03-08T05:00:34.717134Z
+  transceiver-not-present at 2026-03-08T05:01:18.070792Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/51 is up, line protocol is up, reason oper-up
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Description: DEL::PCM::100G::MYBLE01-DC-0408-SI01::Eth56
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 100G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:26.935187Z
+  admin-up at 2026-03-08T05:00:34.718966Z
+  xcvr-status-down at 2026-03-08T05:01:14.617941Z
+  xcvr-status-up at 2026-03-08T05:01:14.83231Z
+  port-enabled at 2026-03-08T05:01:14.83611Z
+  phy-link-up at 2026-03-08T05:01:15.52529Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 50190 packets/sec, 228091264 bits/sec, 28511408 Bytes/sec
+10 seconds output rate 55066 packets/sec, 258112920 bits/sec, 32264115 Bytes/sec
+Input statistics:
+        26014385736 packets, 14684632098501 octets
+        740754 Multicasts, 896594 Broadcasts, 26012748393 Unicasts
+        0 error, 14 discarded, 0 Oversize
+        5894182207 Packets (128 to 255 Octects)
+Output statistics:
+        31410460684 packets, 20182422385195 octets
+        46358 Multicasts, 2740 Broadcasts, 31410411586 Unicasts
+        0 error, 4 discarded, 0 Oversize
+Time since last interface status change: 1w1d01h
+     
+Eth1/52 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 100G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:26.423743Z
+  admin-down at 2026-03-08T05:00:34.721715Z
+  transceiver-not-present at 2026-03-08T05:01:18.103101Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/53 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 100G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:17.878816Z
+  admin-down at 2026-03-08T05:00:34.723752Z
+  transceiver-not-present at 2026-03-08T05:01:18.108576Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/54 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 100G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:22.833639Z
+  admin-down at 2026-03-08T05:00:34.726567Z
+  transceiver-not-present at 2026-03-08T05:01:18.110854Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/55 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 100G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:18.412444Z
+  admin-down at 2026-03-08T05:00:34.729188Z
+  transceiver-not-present at 2026-03-08T05:01:18.115049Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+     
+Eth1/56 is down, line protocol is down, reason admin-down
+Hardware is Eth, address is b4:e9:b8:e7:ce:02
+Mode of IPV4 address assignment: not-set
+Mode of IPV6 address assignment: not-set
+Interface IPv6 oper status: Disabled
+IP MTU 9100 bytes
+LineSpeed 100G, Auto-negotiation off
+Link-training: off
+Unreliable-LOS: off
+FEC: DISABLED
+Events:
+  initialized at 2026-03-08T05:00:23.107018Z
+  admin-down at 2026-03-08T05:00:34.731527Z
+  transceiver-not-present at 2026-03-08T05:01:18.118829Z
+Last clearing of "show interface" counters: never
+10 seconds input rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+10 seconds output rate 0 packets/sec, 0 bits/sec, 0 Bytes/sec
+Input statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize
+        0 Packets (128 to 255 Octects)
+Output statistics:
+        0 packets, 0 octets
+        0 Multicasts, 0 Broadcasts, 0 Unicasts
+        0 error, 0 discarded, 0 Oversize

@@ -1,0 +1,96 @@
+****************************************************************************
+sai_vlanstack techsupport dump begin at Mon 16 Mar 2026 06:07:10 AM GMT
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c SYNCD -e show system internal sai vlanstack idata dump
+--------------------------------------------------------------------
+
+ VLAN Stack Global Information
+=======================================================
+stack_cnt(0) swap_transport_cnt(0) vxlan payload IFP entry(0)
+
+ VLAN Stack Idata Information
+=======================================================
+
+*************** Profiling data ***************
+End to End Execution time: 1012.69 ms
+Backend execution time: 962 ms
+**********************************************
+
+
+real	0m1.390s
+user	0m0.309s
+sys	0m0.033s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c SYNCD -e show system internal sai vlanstack stackinfo dump
+--------------------------------------------------------------------
+
+ VLAN Stack Stackinfo Information
+=======================================================
+
+
+
+*************** Profiling data ***************
+End to End Execution time: 102.58 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.468s
+user	0m0.298s
+sys	0m0.043s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c SYNCD -e show system internal sai vlanstack portinfo dump
+--------------------------------------------------------------------
+
+ VLAN Stack PortInfo Information
+=======================================================
+
+
+
+*************** Profiling data ***************
+End to End Execution time: 103.73 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.466s
+user	0m0.286s
+sys	0m0.055s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c SYNCD -e show system internal sai vlanstack fwdinfo dump
+--------------------------------------------------------------------
+
+ VLAN Stack FwdInfo Information
+=======================================================
+
+
+
+*************** Profiling data ***************
+End to End Execution time: 102.66 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.490s
+user	0m0.292s
+sys	0m0.045s
+
+
+
+
+
+****************************************************************************
+sai_vlanstack techsupport dump ended at Mon 16 Mar 2026 06:07:13 AM GMT
+****************************************************************************

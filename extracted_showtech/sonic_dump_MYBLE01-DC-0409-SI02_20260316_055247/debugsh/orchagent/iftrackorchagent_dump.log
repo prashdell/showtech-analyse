@@ -1,0 +1,58 @@
+****************************************************************************
+iftrackorchagent techsupport dump begin at Mon 16 Mar 2026 06:06:46 AM GMT
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent iftrack global
+--------------------------------------------------------------------
+Total Groups:0
+Total Downstream Intfs:0
+Timer Running:0
+*************** Profiling data ***************
+End to End Execution time: 102.61 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.460s
+user	0m0.309s
+sys	0m0.036s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent iftrack group
+--------------------------------------------------------------------
+*************** Profiling data ***************
+End to End Execution time: 102.46 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.453s
+user	0m0.302s
+sys	0m0.036s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent iftrack downstream
+--------------------------------------------------------------------
+*************** Profiling data ***************
+End to End Execution time: 102.72 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.447s
+user	0m0.275s
+sys	0m0.063s
+
+
+
+
+
+****************************************************************************
+iftrackorchagent techsupport dump ended at Mon 16 Mar 2026 06:06:47 AM GMT
+****************************************************************************

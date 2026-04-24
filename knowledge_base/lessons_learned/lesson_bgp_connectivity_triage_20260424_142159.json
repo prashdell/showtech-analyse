@@ -1,0 +1,34 @@
+{
+  "lesson_id": "lesson_bgp_connectivity_triage_20260424_142159",
+  "skill_name": "sonic_bgp_connectivity_triage",
+  "lesson_type": "bgp_analysis",
+  "content": {
+    "success_patterns": [
+      "bgp_session_state_pattern",
+      "bgp_message_analysis_pattern",
+      "bgp_route_analysis_pattern",
+      "interface_correlation_pattern",
+      "system_resource_impact_pattern",
+      "multi_instance_learning_pattern",
+      "peer_state_prediction_pattern",
+      "route_convergence_pattern"
+    ],
+    "context_factors": {
+      "archive_intelligence": "284_archive_production_intelligence",
+      "confidence_range": "92-98%",
+      "production_deployments": "13+_deployments",
+      "analysis_steps": 5,
+      "source_files_range": "600-1200_files_per_instance",
+      "bgp_health_indicators": [
+        "peer_state_changes",
+        "route_flapping",
+        "session_timeouts"
+      ]
+    }
+  },
+  "confidence": 0.94,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:21:59.549895",
+  "execution_time": 3.5,
+  "captured_by": "comprehensive_analysis"
+}

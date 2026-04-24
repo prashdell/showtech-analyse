@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ "$(sonic-db-cli STATE_DB PING)" = "True" ]; then
+    sonic-db-cli STATE_DB HSET "USB_PARTS|${UM_DEVICE}" mount_point "${UM_MOUNTPOINT}" > /dev/null
+fi

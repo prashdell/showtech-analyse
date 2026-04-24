@@ -1,0 +1,78 @@
+System is ready
+
+Service-Name                   Service-Status       App-Ready-Status     Down-Reason          Status-UpdateTime   
+swss                           OK                   OK                   -                    2026-03-08 05:00:28 
+bgp                            OK                   OK                   -                    2026-03-08 05:00:22 
+teamd                          OK                   OK                   -                    2026-03-08 04:59:55 
+pmon                           OK                   OK                   -                    2026-03-08 05:01:25 
+syncd                          OK                   OK                   -                    2026-03-08 05:00:10 
+database                       OK                   OK                   -                    -                   
+mgmt-framework                 OK                   OK                   -                    2026-03-08 04:59:46 
+gbsyncd                        OK                   OK                   -                    -                   
+auditd                         OK                   OK                   -                    -                   
+autobreakoutmgrd               OK                   OK                   -                    -                   
+caclmgrd                       OK                   OK                   -                    -                   
+ccd                            OK                   OK                   -                    -                   
+config-chassisdb               OK                   OK                   -                    -                   
+config-setup                   OK                   OK                   -                    -                   
+containerd                     OK                   OK                   -                    -                   
+critical-monitoring            OK                   OK                   -                    -                   
+cron                           OK                   OK                   -                    -                   
+database-chassis               OK                   OK                   -                    -                   
+db-post-startup                OK                   OK                   -                    -                   
+determine-reboot-cause         OK                   OK                   -                    -                   
+dhcp_relay                     OK                   OK                   -                    2026-03-08 05:01:13 
+disk-log-rotate-daemon         OK                   OK                   -                    -                   
+docker                         OK                   OK                   -                    -                   
+eventd                         OK                   OK                   -                    2026-03-08 04:59:23 
+export                         OK                   OK                   -                    -                   
+hamd                           OK                   OK                   -                    -                   
+histogram                      OK                   OK                   -                    -                   
+hostcfgd                       OK                   OK                   -                    -                   
+hostname-config                OK                   OK                   -                    -                   
+iccpd                          OK                   OK                   -                    2026-03-08 05:00:45 
+in-memory-log-rotate-daemon    OK                   OK                   -                    -                   
+in-memory                      OK                   OK                   -                    -                   
+interfaces-config              OK                   OK                   -                    -                   
+kdump-tools                    OK                   OK                   -                    -                   
+l2mcd                          OK                   OK                   -                    2026-03-08 05:01:06 
+lacp_helper                    OK                   OK                   -                    -                   
+lldp                           OK                   OK                   -                    2026-03-08 05:00:44 
+mfa                            OK                   OK                   -                    2026-03-08 05:01:15 
+nat                            OK                   OK                   -                    2026-03-08 05:00:35 
+netfilter-persistent           OK                   OK                   -                    -                   
+ntp-config                     OK                   OK                   -                    -                   
+ntp                            OK                   OK                   -                    -                   
+opennsl-modules                OK                   OK                   -                    -                   
+platform-init                  OK                   OK                   -                    -                   
+platform-modules-s5248f        OK                   OK                   -                    -                   
+platform-ready                 OK                   OK                   -                    -                   
+portinitdone                   OK                   OK                   -                    -                   
+procdockerstatsd               OK                   OK                   -                    -                   
+radsecproxy                    OK                   OK                   -                    -                   
+radv                           OK                   OK                   -                    2026-03-08 05:01:14 
+ras-mc-ctl                     OK                   OK                   -                    -                   
+resrcmgrd                      OK                   OK                   -                    -                   
+rsyslog-config                 OK                   OK                   -                    -                   
+rsyslog                        OK                   OK                   -                    -                   
+sflow                          OK                   OK                   -                    2026-03-08 05:01:14 
+smartmontools                  OK                   OK                   -                    -                   
+snmp                           OK                   OK                   -                    2026-03-08 05:01:33 
+sonic-hostservice              OK                   OK                   -                    -                   
+sonic-init-updatedb            OK                   OK                   -                    -                   
+ssh                            OK                   OK                   -                    -                   
+stp                            OK                   OK                   -                    2026-03-08 05:00:46 
+sysmonitor                     OK                   OK                   -                    -                   
+system-health                  OK                   OK                   -                    -                   
+tam                            OK                   OK                   -                    2026-03-08 05:01:32 
+telemetry                      OK                   OK                   -                    2026-03-08 05:00:28 
+timesync                       OK                   OK                   -                    -                   
+tpcm@default                   OK                   OK                   -                    -                   
+tpcm@mgmt                      OK                   OK                   -                    -                   
+udld                           OK                   OK                   -                    2026-03-08 05:00:44 
+updategraph                    OK                   OK                   -                    -                   
+vrrp                           OK                   OK                   -                    2026-03-08 05:01:14 
+warmboot-finalizer             OK                   OK                   -                    2026-03-08 04:59:19 
+watchdog-control               OK                   OK                   -                    -                   
+ztp-config                     OK                   OK                   -                    -                   
+

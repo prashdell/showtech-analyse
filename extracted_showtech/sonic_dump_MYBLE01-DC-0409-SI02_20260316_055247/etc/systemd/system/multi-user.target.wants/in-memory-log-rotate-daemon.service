@@ -1,0 +1,14 @@
+[Unit]
+Description=In-memory auto log rotation infrastructure
+Before=rc-local.service
+
+[Service]
+Type=simple
+StandardOutput=syslog
+ExecStart=/usr/bin/in-memory-log-rotate-daemon.sh start 
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

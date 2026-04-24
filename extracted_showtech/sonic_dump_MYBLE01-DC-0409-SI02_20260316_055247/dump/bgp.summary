@@ -1,0 +1,18 @@
+
+IPv4 Unicast Summary:
+BGP router identifier 10.90.30.159, local AS number 4246732825 vrf-id 0
+BGP table version 330
+RIB entries 136, using 37 KiB of memory
+Peers 6, using 504 KiB of memory
+Peer groups 2, using 128 bytes of memory
+
+Neighbor        V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt
+10.90.30.178    4       3614     26588     23201        0    0    0 4d17h41m            1       12
+10.90.30.179    4       3614     26678     23309        0    0    0 4d18h55m            1       12
+10.90.30.158    4 4246732825     11659     11656        0    0    0 4d18h55m           12       12
+10.92.30.68     4 4248699655    200977    173675        0    0    0 4d18h55m            1        1
+10.92.30.236    4 4246733799    200929    173650        0    0    0 4d18h55m            4        1
+10.99.100.130   4 4248699659    200970    173711        0    0    0 4d18h55m            5        1
+
+Total number of neighbors 6
+Total number of neighbors established 6

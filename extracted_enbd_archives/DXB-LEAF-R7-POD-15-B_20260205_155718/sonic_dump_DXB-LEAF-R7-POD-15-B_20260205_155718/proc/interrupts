@@ -1,0 +1,60 @@
+           CPU0       CPU1       CPU2       CPU3       
+  0:         11          0          0          0  IR-IO-APIC   2-edge      timer
+  7:          0          0          0       8836  IR-IO-APIC   7-edge      ttyS0
+  8:          0          0          1          0  IR-IO-APIC   8-edge      rtc0
+  9:          0          0          0          0  IR-IO-APIC   9-fasteoi   acpi
+ 16:          0          0 4103910764          0  IR-IO-APIC  16-fasteoi   mmc0, linux-kernel-bde
+ 23:          0          0          0          0  IR-IO-APIC  23-fasteoi   i801_smbus
+ 24:          0          0          0          0  DMAR-MSI   0-edge      dmar0
+ 25:          0          0          0          0  IR-PCI-MSI 81920-edge      aerdrv
+ 26:          0          0          0          0  IR-PCI-MSI 98304-edge      PCIe PME, aerdrv
+ 27:          0          0          0          0  IR-PCI-MSI 147456-edge      PCIe PME, aerdrv, pcie-dpc
+ 28:          0          0          0          0  IR-PCI-MSI 180224-edge      PCIe PME, aerdrv, pcie-dpc
+ 29:          0          0          0          0  IR-PCI-MSI 196608-edge      PCIe PME, aerdrv, pcie-dpc
+ 30:          0          0          0          0  IR-PCI-MSI 229376-edge      PCIe PME, aerdrv, pcie-dpc
+ 31:          0          0          0          0  IR-PCI-MSI 360448-edge      PCIe PME, aerdrv
+ 32:          0          0          0          0  IR-PCI-MSI 376832-edge      PCIe PME, aerdrv
+ 36:          0          0          1          0  IR-PCI-MSI 1572864-edge      eth0
+ 37:          0          0          0 2280537681  IR-PCI-MSI 1572865-edge      eth0-TxRx-0
+ 38:  560743414          0          0          0  IR-PCI-MSI 1572866-edge      eth0-TxRx-1
+ 39:          0 4201422007          0          0  IR-PCI-MSI 1572867-edge      eth0-TxRx-2
+ 40:          0          0  664754834          0  IR-PCI-MSI 1572868-edge      eth0-TxRx-3
+ 41:          0     856065          0          0  IR-PCI-MSI 294912-edge      ismt-msi
+ 46:  121967420          0          0          0  IR-PCI-MSI 327684-edge      ahci4
+ 47:          0          0          0          0  IR-PCI-MSI 327685-edge      ahci5
+ 50:          0          0          0          0  IR-PCI-MSI 344064-edge      xhci_hcd
+ 69:          0          0     133740          0  IR-PCI-MSI 2097160-edge      FPGA_PCI
+ 70:          0          0          0   27718955  IR-PCI-MSI 2097161-edge      FPGA_PCI
+ 71:          0          0          0          0  IR-PCI-MSI 2097162-edge      FPGA_PCI
+ 72:          0 1068997646          0          0  IR-PCI-MSI 2097163-edge      FPGA_PCI
+ 73:          0          0 1068994303          0  IR-PCI-MSI 2097164-edge      FPGA_PCI
+ 74:          0          0          0  688767767  IR-PCI-MSI 2097165-edge      FPGA_PCI
+ 75:  267247891          0          0          0  IR-PCI-MSI 2097166-edge      FPGA_PCI
+ 77:          0          0  133612759          0  IR-PCI-MSI 2097168-edge      FPGA_PCI
+ 78:          0          0          0 1068986267  IR-PCI-MSI 2097169-edge      FPGA_PCI
+ 79: 1227253959          0          0          0  IR-PCI-MSI 2097170-edge      FPGA_PCI
+ 80:          0          0          0          0  IR-PCI-MSI 2097171-edge      FPGA_PCI
+ 81:          0          0          0          0  IR-PCI-MSI 2097172-edge      FPGA_PCI
+ 82:          0          0          0          0  IR-PCI-MSI 2097173-edge      FPGA_PCI
+ 83:          0          0          0          0  IR-PCI-MSI 2097174-edge      FPGA_PCI
+ 84:          0          0          0          0  IR-PCI-MSI 2097175-edge      FPGA_PCI
+ 85:          0          0          0          0  IR-PCI-MSI 2097176-edge      FPGA_PCI
+NMI:     600664     608939     637609     589402   Non-maskable interrupts
+LOC: 4025985155 1784287063 1919681316  976945686   Local timer interrupts
+SPU:          0          0          0          0   Spurious interrupts
+PMI:     600664     608939     637609     589402   Performance monitoring interrupts
+IWI:      39607     123098     470105     115028   IRQ work interrupts
+RTR:          0          0          0          0   APIC ICR read retries
+RES:  154730323  131037725  136215163  130507357   Rescheduling interrupts
+CAL: 3759177638  646333931 1467690431  219906573   Function call interrupts
+TLB:   63863079   65593506   58130571   64357278   TLB shootdowns
+TRM:          0          0          0          0   Thermal event interrupts
+THR:          5          4          3          2   Threshold APIC interrupts
+DFR:          0          0          0          0   Deferred Error APIC interrupts
+MCE:          0          0          0          0   Machine check exceptions
+MCP:      44467      44467      44466      44465   Machine check polls
+ERR:          0
+MIS:          0
+PIN:          0          0          0          0   Posted-interrupt notification event
+NPI:          0          0          0          0   Nested posted-interrupt event
+PIW:          0          0          0          0   Posted-interrupt wakeup event

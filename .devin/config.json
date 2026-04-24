@@ -1,0 +1,30 @@
+{
+  "workspace": {
+    "root": "C:\\Users\\SERIAL-REDACTED-SERIAL-REDACTED\\SERIAL-REDACTED-SERIAL-REDACTED\\Documents\\AI\\Devin\\showtech_analyse",
+    "restrict_to_workspace": true,
+    "default_create_location": "workspace"
+  },
+  "permissions": {
+    "allow": [
+      "Exec(devin mcp)",
+      "Exec(icacls)",
+      "Exec(move)",
+      "Exec(cd)"
+    ],
+    "file_creation": {
+      "allowed_paths": [
+        "C:\\Users\\SERIAL-REDACTED-SERIAL-REDACTED\\SERIAL-REDACTED-SERIAL-REDACTED\\Documents\\AI\\Devin\\showtech_analyse/**"
+      ],
+      "deny_outside_workspace": true
+    }
+  },
+  "skills": {
+    "local_storage": "C:\\Users\\SERIAL-REDACTED-SERIAL-REDACTED\\SERIAL-REDACTED-SERIAL-REDACTED\\Documents\\AI\\Devin\\showtech_analyse\\skills",
+    "backup_to_global": false,
+    "project_specific": true
+  },
+  "logging": {
+    "file": "C:\\Users\\SERIAL-REDACTED-SERIAL-REDACTED\\SERIAL-REDACTED-SERIAL-REDACTED\\Documents\\AI\\Devin\\showtech_analyse\\.devin\\logs\\devin.log",
+    "level": "INFO"
+  }
+}

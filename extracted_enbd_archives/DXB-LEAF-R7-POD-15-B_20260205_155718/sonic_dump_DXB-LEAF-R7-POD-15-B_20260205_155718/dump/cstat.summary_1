@@ -1,0 +1,433 @@
+cstat *
+
++------------------Programmable Statistics Counters[Port  xe0]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                357| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                357| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|             562453| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  xe1]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|            1360659| RIMDR                                        |
+|      | 3   |               2884| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |            3932499| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x00000006ba932eea| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  xe2]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                374| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                374| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|          360394497| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  xe3]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|            8147442| RIMDR                                        |
+|      | 3   |               1829| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |             104860| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x00000003a3b589a4| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  xe4]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                429| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                429| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|          224418738| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  xe5]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|            1363512| RIMDR                                        |
+|      | 3   |               6124| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |            1164500| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x000000036ad572b1| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  xe6]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                358| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                359| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|          269621496| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  xe7]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|             905265| RIMDR                                        |
+|      | 3   |               1305| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |            1970647| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x00000001eaabcd5d| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  xe8]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                300| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                300| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|             500368| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  xe9]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|             903001| RIMDR                                        |
+|      | 3   |               4232| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |            1132119| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x000000083cd9b48f| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe10]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                493| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                493| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|          153746592| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe11]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|             958001| RIMDR                                        |
+|      | 3   |          301395094| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |          301410086| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|         3219712930| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe12]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                779| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                779| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|             576097| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe13]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|             909720| RIMDR                                        |
+|      | 3   |              13766| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |             181835| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x0000000b484b079c| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe14]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                806| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                806| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|             540277| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe15]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|             904314| RIMDR                                        |
+|      | 3   |              12411| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |            2097670| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x00000003e474cdeb| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe16]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |               9084| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |             385911| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|             473542| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe18]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |               4794| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |             368834| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|             476680| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe20]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                 27| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                 27| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|           12607833| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe21]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|             549416| RIMDR                                        |
+|      | 8   |              67078| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x000000093511462b| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe22]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                 21| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                 21| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|           19028040| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe23]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|             549412| RIMDR                                        |
+|      | 8   |            2521782| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x0000000ca35bdaa2| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe30]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                 20| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                 20| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|           14482651| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe31]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|             549411| RIMDR                                        |
+|      | 8   |              66854| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x0000000d445fe4f7| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe32]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |                 20| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |                 20| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x000000013ca03c78| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe40]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |               2422| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |               2422| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|          520144773| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe41]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 8   |            1614726| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe42]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |               1624| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |               1624| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|          388700290| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe43]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 8   |            1614726| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe44]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |               1589| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |               1589| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|          587479426| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe45]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 8   |            1614726| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe46]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 3   |               1677| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |               1677| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)|         2954131476| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port xe47]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 8   |            1614726| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  ce0]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|            4421202| RIMDR                                        |
+|      | 3   |                 13| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |               4897| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x00000006793dd7e9| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  ce2]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|            3770826| RIMDR                                        |
+|      | 3   |                115| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |               4698| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x00000009aa21c36f| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  ce4]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|            4550762| RIMDR                                        |
+|      | 3   |                 34| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |           25103900| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x0000000d4875580e| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  ce5]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|            4196509| RIMDR                                        |
+|      | 3   |                  2| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |           23633086| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x0000000fbcd11943| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  ce6]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|            3508850| RIMDR                                        |
+|      | 3   |                  6| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |           22990146| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x0000000edce80892| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+
++------------------Programmable Statistics Counters[Port  ce7]------------------+
+| Type | No. |       Value       |                Enabled For                   |
++-------------------------------------------------------------------------------+
+|      | 2(R)|            4462727| RIMDR                                        |
+|      | 3   |                 29| RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
+|      | 8   |           24352466| RIPD4 RIPD6 RPORTD PDISC                     |
+|      |     |                   | RDROP RxVlanMismatch RxVlanMemberMismatch RxTpidMismatch RxPrivateVlanMismatch                                              |
++-------------------------------------------------------------------------------+
+|      | 4(R)| 0x0000000d54639b50| TGIP4 TGIP6                                  |
++-------------------------------------------------------------------------------+
+
+drivshell>

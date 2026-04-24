@@ -1,0 +1,179 @@
+{
+    "__README__" : "This is default map of events that eventd uses. Developer can modify this file and send SIGINT to eventd to make it read and use the updated file. Alternatively developer can test the new event by adding it to a custom event profile and use 'event profile <filename>' command to apply that profile without having to send SIGINT to eventd. Developer need to commit default.json file with the new event after testing it out. Supported severities are: CRITICAL, MAJOR, MINOR, WARNING and INFORMATIONAL. Supported enable flag values are: true and false.",
+    "events":[
+        {
+            "name" : "LICENSE_STATE",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "License State changed -"
+        },
+        {
+            "name" : "SENSOR_TEMP_CRITICAL_HIGH",
+            "severity" : "CRITICAL",
+            "enable" : "true",
+            "message" : "Current Sensor Temperature Critical High Threshold"
+        },
+        {
+            "name" : "SENSOR_TEMP_HIGH",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "Current Sensor Temperature High Threshold"
+        },
+        {
+            "name" : "SENSOR_TEMP_CRITICAL_LOW",
+            "severity" : "CRITICAL",
+            "enable" : "true",
+            "message" : "Current Sensor Temperature Critical Low Threshold"
+        },
+        {
+            "name" : "SENSOR_TEMP_LOW",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "Current Sensor Temperature Low Threshold"
+        },
+        {
+            "name" : "FAN_SPEED_STATUS",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "Fan Speed Status"
+        },
+        {
+            "name" : "PSU_TEMPERATURE_STATUS",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "Psu Temperature Status"
+        },
+        {
+            "name" : "PSU_VOLTAGE_STATUS",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "Psu Voltage Status"
+        },
+        {
+            "name" : "PSU_POWER_STATUS",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "Psu Power Status"
+        },
+        {
+            "name" : "SYSTEM_STATUS",
+            "severity" : "INFORMATIONAL",
+            "enable" : "true",
+            "message" : "System Status Information"
+        },
+        {
+            "name" : "SYSTEM_REBOOT",
+            "severity" : "INFORMATIONAL",
+            "enable" : "true",
+            "message" : "System Reboot Information"
+        },
+        {
+            "name" : "CRITICAL_HIGH_TEMP_SYSTEM_RESET",
+            "severity" : "CRITICAL",
+            "enable" : "true",
+            "message" : "Critical High Temperature detected - Reset System"
+        }, 
+        {
+            "name" : "ALL_FAN_FAILURE",
+            "severity" : "CRITICAL",
+            "enable" : "true",
+            "message" : "All Fan Failure - Notify administrators"
+        },
+        {
+            "name" : "SYSTEM_TEMP_HIGH",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "Current System Temperature Above High Threshold"
+        },
+        {
+            "name" : "SYSTEM_FAN_STATUS",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "System Level Fan Status"
+        },
+        {
+            "name": "FAN_FAULTY",
+            "severity": "WARNING",
+            "enable": "true",
+            "message" : "Fan fault detected"
+        },
+        {
+            "name": "FAN_REMOVED",
+            "severity": "WARNING",
+            "enable": "true",
+            "message" : "Fan removal detected"
+        },
+        {
+            "name" : "PSU_FAULTY",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : "Psu Faulty"
+        },
+        {
+            "name": "PSU_REMOVED",
+            "severity": "WARNING",
+            "enable": "true",
+            "message" : "PSU removal detected"
+        },
+        {
+            "name": "MAC_DAMPENING_STATUS",
+            "severity": "INFORMATIONAL",
+            "enable": "true",
+            "message" : ""
+        },
+        {
+            "name" : "BGP_NBR_ADJ_CHANGE",
+            "severity" : "INFORMATIONAL",
+            "enable" : "true",
+            "message" : ""
+        }, 
+        {
+            "name": "AUTO_BREAKOUT_FAILURE",
+            "severity": "WARNING",
+            "enable": "true",
+            "message" : ""
+        },
+        {
+            "name" : "INTERFACE_OPER_STATUS",
+            "severity" : "INFORMATIONAL",
+            "enable" : "true",
+            "message" : ""
+        },
+        {
+            "name" : "HIGH_POWER_MEDIA_STATUS",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : ""
+        },
+        {
+            "name" : "ETS_OPER_STATUS",
+            "severity" : "INFORMATIONAL",
+            "enable" : "true",
+            "message" : ""
+        },
+        {
+            "name" : "PFC_OPER_STATUS",
+            "severity" : "INFORMATIONAL",
+            "enable" : "true",
+            "message" : ""
+        },
+        {
+            "name" : "PMS_VIOLATION_STATUS",
+            "severity" : "WARNING",
+            "enable" : "true",
+            "message" : ""
+        },
+        {
+            "name": "FAN_AIRFLOW_MISMATCH",
+            "severity": "WARNING",
+            "enable": "true",
+            "message" : "Fantray/PSU fan airflow mismatch detected"
+        },
+        {
+            "name" : "BGP_NBR_MAX_PFX_DISCARD",
+            "severity" : "INFORMATIONAL",
+            "enable" : "true",
+            "message" : ""
+        }
+    ]
+}

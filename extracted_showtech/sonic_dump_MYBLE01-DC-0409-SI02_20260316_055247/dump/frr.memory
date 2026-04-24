@@ -1,0 +1,682 @@
+Memory statistics for zebra:
+System allocator statistics:
+  Total heap allocated:  20 MiB
+  Holding block headers: 3080 KiB
+  Used small blocks:     0 bytes
+  Used ordinary blocks:  18 MiB
+  Free small blocks:     2416 bytes
+  Free ordinary blocks:  1255 KiB
+  Ordinary blocks:       46
+  Small blocks:          69
+  Holding blocks:        2
+(see system documentation for 'mallinfo' for meaning)
+--- qmem libfrr ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Buffer                        :       12     24         320       12       320
+Buffer data                   :        1   4120        4120        9     37080
+Host config                   :        5 variable       200        5       200
+Command Tokens                :     4889     72      352104     4901    353016
+Command Token Text            :     3414 variable    110320     3426    110672
+Command Token Help            :     3414 variable     82016     3426     82304
+Command Argument              :        2 variable        48       14       336
+Command Argument Name         :     1079 variable     25912     1087     26120
+Lexer token (temporary)       :        0 variable         0        2        64
+RCU thread                    :       11    128        1496       11      1496
+RCU sequence barrier          :        1     32          40        1        40
+FRR POSIX Thread              :       22 variable      1760       22      1760
+POSIX sync primitives         :       22 variable      1056       22      1056
+Graph                         :       31      8         744       32       768
+Graph Node                    :     5701     32      228472     5703    228552
+Hash                          :     1894 variable     91920     1894     91920
+Hash Bucket                   :     1146     32       46000     1153     46360
+Hash Index                    :      947 variable    271656      948    271792
+Hook entry                    :        1     48          56        1        56
+Interface                     :       84    584       49056       84     49056
+Connected                     :        9     48         504        9       504
+Link List                     :      498     40       20096      510     20592
+Link Node                     :     1054     24       25456     1164     28256
+Temporary memory              :       92 variable     69968      100     70400
+Bitfield memory               :        2 variable      2576        3      3096
+Module loading name           :        2 variable        48        2        48
+Nexthop                       :       40    152        6256       50      7808
+NetNS Context                 :        2 variable       128        2       128
+NetNS Name                    :        1     18          24        1        24
+Nexthop Group                 :        0      8           0        1        24
+Northbound Node               :      665   1192      792680      665    792680
+Northbound Configuration      :        2     16          48        2        48
+Northbound Configuration Entry:       31   1032       31992       32     33024
+Prefix List                   :        4     72         288        4       288
+Prefix List Str               :        4 variable        96        4        96
+Prefix List Entry             :       11    144        1672       11      1672
+Prefix List Trie Table        :        9   4096       36936        9     36936
+Prefix                        :        9     64         648        9       648
+Privilege information         :        4 variable       160        4       160
+Route map                     :        7    120         840        7       840
+Route map name                :       15 variable       360       16       384
+Route map index               :        5    152         760        6       928
+Route map rule                :        4     40         160        4       160
+Route map rule str            :        4 variable        96        4        96
+Route map compiled            :        4 variable        96        4        96
+Route map dependency          :        4     24          96        4        96
+Route map dependency data     :        4     16          96        4        96
+Stream                        :       18 variable   4746336      187   4823240
+Stream FIFO                   :       17     72        1224       24      1728
+Route table                   :      115     56        6488      117      6600
+Route node                    :      256 variable     34944      258     35216
+Thread                        :       51    160        8584      103     17384
+Thread master                 :       48 variable   6296256       48   6296256
+Thread Poll Info              :       24 262144     6291648       24   6291648
+Thread stats                  :       55     96        5768       55      5768
+Typed-hash bucket             :       26 variable      4512       28      4560
+Typed-heap array              :        1    576         584        2      1168
+Vector                        :    11467     24      275624    11470    275696
+Vector index                  :    11467 variable    356296    11470    356536
+VRF                           :        2    216         432        2       432
+VRF bit-map                   :        8      8         208        8       208
+VTY                           :        4 variable     61056        4     61056
+VTY server                    :        2     32          80        2        80
+Work queue                    :        2 variable       224        2       224
+Work queue item               :        0     24           0        1        24
+Work queue name string        :        1     22          24        1        24
+YANG module                   :        7     48         392        7       392
+YANG data structure           :        0   1032           0        1      1032
+log thread-local buffer       :       12  24608      295392       12    295392
+--- qmem logging subsystem ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+syslog target                 :        1     56          56        2       112
+--- qmem Table Manager ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Table Manager Context         :        1     16          24        1        24
+--- qmem zebra ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Zebra Interface Information   :       84    600       50400       84     50400
+netlink buf                   :        1 variable     65544        2    107856
+Zebra Netlink buffers         :        1 131072      131080        1    131080
+Router Advertisement Prefix   :        1     48          56        1        56
+Zebra DPlane Ctx              :        0   2744           0       15     41160
+Zebra DPlane Provider         :        1    232         232        1       232
+Nexthop Group Entry           :       24    192        4800       28      5616
+Nexthop Group Connected       :       18     40         720       22       976
+Zebra Name Space              :        1    448         456        1       456
+PTM BFD process registration table.:        4     32         160        4       160
+Route Entry                   :       36    120        4336       45      5416
+RIB destination               :       34     88        3008       34      3024
+RIB table info                :        8     24         208        8       208
+Zebra VRF table               :        8     56         448        8       448
+Nexthop tracking object       :        8    272        2240        8      2240
+ZEBRA VRF                     :        2   5376       10768        2     10768
+VLAN intf                     :        9     16         216        9       216
+Access Broadcast Domain       :        8     40         352        8       352
+MH global info                :        1    144         152        1       152
+IPTRACK process registration table.:        1     32          40        1        40
+FPM_NHG_INFO                  :       16   2144       34432       16     34432
+FPM_ES_PORT_INFO              :        0     48           0        1        56
+
+Memory statistics for ospfd:
+System allocator statistics:
+  Total heap allocated:  4488 KiB
+  Holding block headers: 0 bytes
+  Used small blocks:     0 bytes
+  Used ordinary blocks:  4341 KiB
+  Free small blocks:     1760 bytes
+  Free ordinary blocks:  147 KiB
+  Ordinary blocks:       13
+  Small blocks:          45
+  Holding blocks:        0
+(see system documentation for 'mallinfo' for meaning)
+--- qmem libfrr ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Buffer                        :        6     24         144        6       176
+Buffer data                   :        1   4120        4120        2      8240
+Host config                   :        5 variable       200        5       200
+Command Tokens                :     4295     72      309368     4302    309872
+Command Token Text            :     2983 variable     95576     2989     95752
+Command Token Help            :     2983 variable     71672     2989     71816
+Command Argument              :        2 variable        48        9       216
+Command Argument Name         :      658 variable     15808      662     15904
+Lexer token (temporary)       :        0 variable         0        2        48
+Graph                         :       20      8         480       21       504
+Graph Node                    :     5005     32      200824     5007    200904
+Hash                          :      276 variable     13424      276     13424
+Hash Bucket                   :      855     32       34344      856     34384
+Hash Index                    :      138 variable     44928      139     45000
+Interface                     :       84    584       49056       84     49056
+Connected                     :        9     48         504        9       504
+Link List                     :      286     40       11472      296     11904
+Link Node                     :      361     24        8664      469     11480
+Temporary memory              :       11 variable       392       17       784
+Module loading name           :        1      5          24        1        24
+Northbound Node               :      135   1192      160920      135    160920
+Northbound Configuration      :        2     16          48        2        48
+Northbound Configuration Entry:       31   1032       31992       32     33024
+Prefix List                   :        4     72         288        4       288
+Prefix List Str               :        4 variable        96        4        96
+Prefix List Entry             :       11    144        1672       11      1672
+Prefix List Trie Table        :        9   4096       36936        9     36936
+Prefix                        :        9     64         648        9       648
+Privilege information         :        2 variable        96        2        96
+Route map                     :        7    120         840        7       840
+Route map name                :       15 variable       360       16       384
+Route map index               :        5    152         776        6       928
+Route map rule                :        4     40         176        4       176
+Route map rule str            :        4 variable        96        4        96
+Route map compiled            :        4 variable        96        4        96
+Route map dependency          :        4     24          96        4        96
+Route map dependency data     :        4     16          96        4        96
+Stream                        :        4  99528      398112        4    398112
+Route table                   :      179     56       10040      181     10152
+Route node                    :       20    128        2736       22      3008
+Thread                        :       10    160        1680       10      1680
+Thread master                 :        4 variable    524688        4    524688
+Thread Poll Info              :        2 262144      524304        2    524304
+Thread stats                  :       12     96        1248       12      1248
+Typed-hash bucket             :        9 variable      1448       11      1496
+Typed-heap array              :        1    576         584        1       584
+Vector                        :    10053     24      241704    10056    241776
+Vector index                  :    10053 variable    337272    10056    337376
+VRF                           :        2    216         432        2       432
+VRF bit-map                   :        3      8          72        3        72
+VTY                           :        4 variable     61056        4     61056
+VTY server                    :        2     32          80        2        80
+YANG module                   :        5     48         296        5       296
+YANG data structure           :        0   1032           0        1      1032
+Zclient                       :        2   3400        6800        2      6800
+Redistribution instance IDs   :        3      2          72        3        72
+log thread-local buffer       :        1  24608       24616        1     24616
+--- qmem logging subsystem ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+syslog target                 :        1     56          56        2       112
+--- qmem ospfd ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+OSPF if info                  :       84     40        3360       84      3360
+OSPF if params                :       84    120       10096       84     10096
+OSPF MPLS parameters          :       84    248       20832       84     20832
+OSPF Extended parameters      :       84    136       11424       84     11424
+OSPF opaque function table    :        6    112         736        6       736
+
+Memory statistics for ospf6d:
+System allocator statistics:
+  Total heap allocated:  3884 KiB
+  Holding block headers: 0 bytes
+  Used small blocks:     0 bytes
+  Used ordinary blocks:  3737 KiB
+  Free small blocks:     1712 bytes
+  Free ordinary blocks:  147 KiB
+  Ordinary blocks:       22
+  Small blocks:          46
+  Holding blocks:        0
+(see system documentation for 'mallinfo' for meaning)
+--- qmem libfrr ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Buffer                        :        5     24         120        5       120
+Buffer data                   :        1   4120        4120        2      8240
+Host config                   :        5 variable       200        5       200
+Command Tokens                :     3585     72      258232     3594    258848
+Command Token Text            :     2503 variable     82232     2509     82424
+Command Token Help            :     2503 variable     60136     2509     60280
+Command Argument              :        2 variable        48        9       224
+Command Argument Name         :      569 variable     13656      573     13752
+Lexer token (temporary)       :        0 variable         0        2        64
+Graph                         :       20      8         480       21       504
+Graph Node                    :     4165     32      167192     4172    167472
+Hash                          :      266 variable     13040      266     13040
+Hash Bucket                   :      687     32       27624      688     27664
+Hash Index                    :      133 variable     40952      133     41336
+Interface                     :       84    584       49056       84     49056
+Connected                     :        9     48         504        9       504
+Link List                     :      188     40        7600      198      8032
+Link Node                     :      176     24        4304      292      7312
+Temporary memory              :        8 variable       320       14       680
+Module loading name           :        1      5          24        1        24
+Northbound Node               :      137   1192      163304      137    163304
+Northbound Configuration      :        2     16          48        2        48
+Northbound Configuration Entry:       31   1032       31992       32     33024
+Prefix List                   :        4     72         288        4       288
+Prefix List Str               :        4 variable        96        4        96
+Prefix List Entry             :       11    144        1688       11      1688
+Prefix List Trie Table        :        9   4096       36936        9     36936
+Prefix                        :        9     64         648        9       648
+Privilege information         :        2 variable        96        2        96
+Route map                     :        7    120         840        7       840
+Route map name                :        7 variable       168        8       192
+Route map index               :        5    152         776        6       928
+Stream                        :        2  99528      199056        2    199056
+Route table                   :       10     56         560       12       672
+Route node                    :       10    128        1376       12      1664
+Thread                        :        6    160        1008        6      1008
+Thread master                 :        4 variable    524688        4    524688
+Thread Poll Info              :        2 262144      524304        2    524304
+Thread stats                  :        7     96         744        7       744
+Typed-hash bucket             :       13 variable      1384       15      1432
+Typed-heap array              :        1    576         584        1       584
+Vector                        :     8373     24      201208     8384    201472
+Vector index                  :     8373 variable    280312     8384    281152
+VRF                           :        2    216         432        2       432
+VRF bit-map                   :        3      8          72        3        72
+VTY                           :        4 variable     61056        4     61056
+VTY server                    :        2     32          80        2        80
+YANG module                   :        6     48         352        6       352
+YANG data structure           :        0   1032           0        1      1032
+Zclient                       :        1   3400        3400        1      3400
+Redistribution instance IDs   :        3      2          72        3        72
+log thread-local buffer       :        1  24608       24616        1     24616
+--- qmem logging subsystem ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+syslog target                 :        1     56          56        2       112
+
+Memory statistics for bgpd:
+System allocator statistics:
+  Total heap allocated:  13 MiB
+  Holding block headers: 5796 KiB
+  Used small blocks:     0 bytes
+  Used ordinary blocks:  11205 KiB
+  Free small blocks:     1792 bytes
+  Free ordinary blocks:  1699 KiB
+  Ordinary blocks:       102
+  Small blocks:          51
+  Holding blocks:        9
+(see system documentation for 'mallinfo' for meaning)
+--- qmem libfrr ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+BFD info                      :        6    528        3216        6      3216
+Buffer                        :        5     24         120        5       120
+Buffer data                   :        1   4120        4120        6     24720
+Host config                   :        5 variable       200        5       200
+Command Tokens                :    11544     72      831728    11558    832736
+Command Token Text            :     8247 variable    286344     8261    286888
+Command Token Help            :     8247 variable    198904     8261    199256
+Command Argument              :        2 variable        48       16       400
+Command Argument Name         :     1894 variable     45456     1900     45600
+Lexer token (temporary)       :        0 variable         0        2        64
+RCU thread                    :        2    128         272        2       272
+RCU sequence barrier          :        1     32          40        1        40
+FRR POSIX Thread              :        4 variable       320        4       320
+POSIX sync primitives         :        4 variable       192        4       192
+Graph                         :       35      8         840       36       864
+Graph Node                    :    13577     32      544600    13584    544880
+Hash                          :      399 variable     19768      401     19864
+Hash Bucket                   :     2339     32       94056     2347     94424
+Hash Index                    :      200 variable    413744      201    415800
+Interface                     :       85    584       49640       85     49640
+Connected                     :        9     48         536        9       536
+Link List                     :      235     40       10104      249     10664
+Link Node                     :      295     24        7144      537     13576
+Temporary memory              :       20 variable       688       31      1128
+Bitfield memory               :        2 variable     10256        2     10256
+Module loading name           :        1      5          24        1        24
+Nexthop                       :        7    152        1080        7      1080
+Northbound Node               :      244   1192      290848      244    290848
+Northbound Configuration      :        2     16          48        2        48
+Northbound Configuration Entry:       32   1032       33024       34     35088
+Prefix List                   :        4     72         288        4       288
+Prefix List Str               :        4 variable        96        4        96
+Prefix List Entry             :       11    144        1688       11      1688
+Prefix List Trie Table        :        9   4096       36936        9     36936
+Prefix                        :        9     64         648        9       648
+Privilege information         :        3 variable       200        3       200
+Ring buffer                   :       18 variable   5935352       22   7246136
+Route map                     :        7    120         840        7       840
+Route map name                :       15 variable       360       16       384
+Route map index               :        5    152         776        6       928
+Route map rule                :        5     40         200        6       240
+Route map rule str            :        5 variable       120        6       144
+Route map compiled            :        5 variable       120        6       144
+Route map dependency          :        4     24          96        4        96
+Route map dependency data     :        4     16          96        4        96
+Skip List                     :        2     56         144        2       144
+Skip Node                     :        2    160         336        2       336
+Skiplist Counters             :        2     68         144        2       144
+Socket union                  :       12    112        1440       16      1936
+Stream                        :        9 variable    480984       21    613856
+Stream FIFO                   :       18     72        1296       22      1584
+Route table                   :       97     56        5432       99      5544
+Route node                    :       20    128        2768       22      3056
+Thread                        :       38    160        6384       40      6720
+Thread master                 :       12 variable   1574064       12   1574064
+Thread Poll Info              :        6 262144     1572912        6   1572912
+Thread stats                  :       38     96        4032       38      4032
+Typed-hash bucket             :       12 variable      2800       14      2848
+Typed-heap array              :        1    576         584        1       584
+Vector                        :    27227     24      654744    27240    655056
+Vector index                  :    27227 variable    870440    27240    870848
+VRF                           :        2    216         432        2       432
+VRF bit-map                   :        3      8          72        3        72
+VTY                           :        4 variable     61056        4     61056
+VTY server                    :        2     32          80        2        80
+VTY output buffer             :        0 variable         0        1     20776
+Work queue                    :        8    152        1216        9      1384
+Work queue item               :        0     24           0       25       728
+Work queue name string        :        8 variable       192        9       216
+YANG module                   :        5     48         296        5       296
+YANG data structure           :        0   1032           0        1      1032
+Zclient                       :        1   3400        3400        1      3400
+Redistribution instance IDs   :        3      2          72        3        72
+log thread-local buffer       :        2  24608       49232        2     49232
+--- qmem logging subsystem ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+syslog target                 :        2     56         112        2       112
+--- qmem bgpd ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Mac Hash Entry                :        2     16          48        2        48
+Mac Hash Entry Intf String    :       12    256        3168       12      3168
+BGP instance                  :        2 variable     10912        2     10912
+BGP listen socket details     :        2    144         304        2       304
+BGP peer                      :       12  86080     1033056       14   1205232
+BGP peer hostname             :       14 variable       336       17       408
+Peer group                    :        2     64         144        2       144
+BGP Peer group hostname       :        2 variable        48        2        48
+Peer description              :        8 variable       192        8       192
+BGP peer af                   :        6     80         528        8       720
+BGP update group              :        3    104         312        3       312
+BGP update subgroup           :        3    240         744        4      1008
+BGP packet                    :        3     56         168        9       504
+BGP attribute                 :       36    312       11232       38     11856
+BGP aspath                    :       13     40         568       14       624
+BGP aspath seg                :       12     24         320       13       344
+BGP aspath segment data       :       12 variable       336       14       416
+BGP aspath str                :       13 variable       728       14       848
+BGP table                     :       87     64        6360       87      6360
+BGP node                      :       34    280        9536       34      9552
+BGP route                     :       25    144        3912       25      3960
+BGP connected                 :        5      4         136        5       136
+BGP static                    :        1    152         152        1       152
+BGP adv attr                  :        0     24           0        6       144
+BGP adv                       :        0     64           0       18      1360
+BGP synchronise               :        3     48         168        4       240
+BGP adj in                    :       49     48        2904       49      2904
+BGP adj out                   :       25     96        2680       37      3976
+BGP multipath info            :        2     48         112        2       112
+community                     :        1     40          56        2       112
+community val                 :        1      4          24        2        48
+community str                 :        1   8192        8200        1      8200
+community-list handler        :        1    120         136        1       136
+BGP Process queue             :        0     32           0        1        56
+BGP node clear queue          :        0      8           0       24       656
+BGP nexthop                   :        7    200        1448        7      1448
+BGP own address               :        5     72         360        5       360
+BGP Filter Information        :        8 variable       192        8       192
+BGP EVPN MH Information       :        1     56          56        1        56
+BGP Martian Addr Intf String  :        5 variable       120        5       120
+BGP PBR Context               :        1     32          40        1        40
+BGP EVPN instance information :        1     60          72        1        72
+BFD configuration data        :        8     88         704        8       704
+
+Memory statistics for pimd:
+System allocator statistics:
+  Total heap allocated:  4148 KiB
+  Holding block headers: 0 bytes
+  Used small blocks:     0 bytes
+  Used ordinary blocks:  4032 KiB
+  Free small blocks:     1744 bytes
+  Free ordinary blocks:  116 KiB
+  Ordinary blocks:       13
+  Small blocks:          46
+  Holding blocks:        0
+(see system documentation for 'mallinfo' for meaning)
+--- qmem libfrr ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Buffer                        :        6     24         144        6       144
+Buffer data                   :        1   4120        4120        2      8240
+Host config                   :        5 variable       200        5       200
+Command Tokens                :     3692     72      265920     3698    266368
+Command Token Text            :     2620 variable     79952     2626     80144
+Command Token Help            :     2620 variable     62976     2626     63120
+Command Argument              :        2 variable        48        8       208
+Command Argument Name         :      599 variable     14440      603     14552
+Lexer token (temporary)       :        0 variable         0        2        64
+Graph                         :       18      8         432       19       456
+Graph Node                    :     4416     32      177200     4421    177400
+Hash                          :      284 variable     13872      284     13872
+Hash Bucket                   :      842     32       33808      843     33848
+Hash Index                    :      142 variable     62832      142     62832
+Interface                     :       84    584       49056       84     49056
+Connected                     :        9     48         504        9       504
+Link List                     :      412     40       16592      422     16992
+Link Node                     :      187     24        4568      310      7728
+Temporary memory              :        8 variable       320       14       680
+Northbound Node               :      219   1192      261048      219    261048
+Northbound Configuration      :        2     16          48        2        48
+Northbound Configuration Entry:       31   1032       31992       32     33024
+Prefix List                   :        4     72         288        4       288
+Prefix List Str               :        4 variable        96        4        96
+Prefix List Entry             :       11    144        1672       11      1672
+Prefix List Trie Table        :        9   4096       36936        9     36936
+Prefix                        :        9     64         648        9       648
+Privilege information         :        3 variable       136        3       136
+Route map                     :        7    120         840        7       840
+Route map name                :        7 variable       168        8       192
+Route map index               :        5    152         760        6       912
+Stream                        :        5 variable    400200        5    400200
+Stream FIFO                   :        1     72          72        1        72
+Route table                   :       14     56         784       16       896
+Route node                    :       12    128        1648       14      1936
+Thread                        :       14    160        2352       14      2352
+Thread master                 :        4 variable    524688        4    524688
+Thread Poll Info              :        2 262144      524304        2    524304
+Thread stats                  :       16     96        1680       16      1680
+Typed-hash bucket             :       13 variable      1320       15      1368
+Typed-heap array              :        1    576         584        1       584
+Vector                        :     8871     24      213128     8880    213344
+Vector index                  :     8871 variable    282920     8880    283232
+VRF                           :        2    216         432        2       432
+VRF bit-map                   :        3      8          72        3        72
+VTY                           :        4 variable     61056        4     61056
+VTY server                    :        2     32          96        2        96
+Timer Wheel                   :        4 variable       224        4       224
+Timer Wheel Slot List         :        2    800        1616        2      1616
+YANG module                   :        8     48         464        8       464
+YANG data structure           :        0   1032           0        1      1032
+Zclient                       :        2   3400        6800        2      6800
+Redistribution instance IDs   :        3      2          72        3        72
+log thread-local buffer       :        1  24608       24616        1     24616
+--- qmem logging subsystem ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+syslog target                 :        1     56          56        2       112
+--- qmem pimd ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+PIM interface                 :        3    352        1080        3      1080
+PIM RP info                   :        2    248         496        2       496
+PIM global state              :        2   1760        3536        2      3536
+PIM SSM configuration         :        2      8          48        2        48
+PIM Router information        :        1    416         424        1       424
+
+Memory statistics for staticd:
+System allocator statistics:
+  Total heap allocated:  2652 KiB
+  Holding block headers: 0 bytes
+  Used small blocks:     0 bytes
+  Used ordinary blocks:  2580 KiB
+  Free small blocks:     1488 bytes
+  Free ordinary blocks:  72 KiB
+  Ordinary blocks:       7
+  Small blocks:          41
+  Holding blocks:        0
+(see system documentation for 'mallinfo' for meaning)
+--- qmem libfrr ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Buffer                        :        5     24         136        5       136
+Buffer data                   :        1   4120        4120        2      8240
+Host config                   :        5 variable       200        5       200
+Command Tokens                :     1183     72       85176     1186     85392
+Command Token Text            :      911 variable     28776      913     28840
+Command Token Help            :      911 variable     21880      913     21928
+Command Argument              :        2 variable        48        5       120
+Command Argument Name         :      287 variable      6888      289      6936
+Lexer token (temporary)       :        0 variable         0        2        48
+Graph                         :       10      8         240       11       264
+Graph Node                    :     1371     32       55032     1376     55232
+Hash                          :      232 variable     11216      232     11216
+Hash Bucket                   :      273     32       11016      273     11016
+Hash Index                    :      116 variable     36272      117     36344
+Interface                     :       84    584       49056       84     49056
+Connected                     :        9     48         536        9       536
+Link List                     :      178     40        7360      181      7512
+Link Node                     :      137     24        3336      186      4480
+Temporary memory              :        5 variable       120       14      4832
+Northbound Node               :      132   1192      157344      132    157344
+Northbound Configuration      :        2     16          48        2        48
+Northbound Configuration Entry:       10   1032       10320       10     10320
+Prefix                        :       10     64         736       10       736
+Stream                        :        2  99528      199056        2    199056
+Route table                   :        8     56         480        8       480
+Route node                    :        2    128         288        2       288
+Thread                        :        6    160        1024        6      1024
+Thread master                 :        4 variable    524688        4    524688
+Thread Poll Info              :        2 262144      524304        2    524304
+Thread stats                  :        9     96         936        9       936
+Typed-hash bucket             :        3 variable      1080        3      1080
+Typed-heap array              :        0    576           0        1       584
+Vector                        :     2765     24       66488     2774     66704
+Vector index                  :     2765 variable     92104     2774     92416
+VRF                           :        2    216         448        2       448
+VRF bit-map                   :        6      8         144        6       144
+VTY                           :        4 variable     61056        4     61056
+VTY server                    :        2     32          80        2        80
+YANG module                   :        5     48         280        5       280
+YANG data structure           :        0   1032           0        1      1032
+Zclient                       :        1   3400        3400        1      3400
+Redistribution instance IDs   :        3      2          72        3        72
+log thread-local buffer       :        1  24608       24616        1     24616
+--- qmem logging subsystem ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+syslog target                 :        1     56          56        2       112
+--- qmem staticd ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Static Route Table Info       :       10 variable       720       10       720
+Static Route Info             :        2     40          80        2        80
+Static Path                   :        2     64         144        2       144
+Static Nexthop                :        2    464         944        2       944
+
+Memory statistics for bfdd:
+System allocator statistics:
+  Total heap allocated:  4240 KiB
+  Holding block headers: 8200 KiB
+  Used small blocks:     0 bytes
+  Used ordinary blocks:  3913 KiB
+  Free small blocks:     1904 bytes
+  Free ordinary blocks:  327 KiB
+  Ordinary blocks:       56
+  Small blocks:          46
+  Holding blocks:        1
+(see system documentation for 'mallinfo' for meaning)
+--- qmem libfrr ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Buffer                        :        5     24         120        5       120
+Buffer data                   :        1   4120        4120        2      8240
+Host config                   :        3 variable       152        3       152
+Command Tokens                :     1495     72      107688     1504    108352
+Command Token Text            :     1129 variable     35496     1137     35752
+Command Token Help            :     1129 variable     27112     1137     27304
+Command Argument              :        2 variable        48       11       280
+Command Argument Name         :      303 variable      7272      307      7368
+Lexer token (temporary)       :        0 variable         0        2        48
+RCU thread                    :        1    128         136        1       136
+RCU sequence barrier          :        1     32          40        1        40
+FRR POSIX Thread              :        2 variable       160        2       160
+POSIX sync primitives         :        2 variable        96        2        96
+Graph                         :       14      8         336       15       360
+Graph Node                    :     1780     32       71312     1781     71352
+Hash                          :      244 variable     11888      244     11888
+Hash Bucket                   :      386     32       15472      386     15472
+Hash Index                    :      122 variable     39584      123     39656
+Interface                     :       84    584       49056       84     49056
+Connected                     :        9     48         504        9       504
+Link List                     :      179     40        7288      190      7776
+Link Node                     :      150     24        3648      220      5472
+Temporary memory              :        5 variable       136       15       680
+Northbound Node               :      159   1192      189528      159    189528
+Northbound Configuration      :        2     16          48        2        48
+Northbound Configuration Entry:       17   1032       17544       17     17544
+Prefix List                   :        4     72         288        4       288
+Prefix List Str               :        4 variable        96        4        96
+Prefix List Entry             :       11    144        1688       11      1688
+Prefix List Trie Table        :        9   4096       36936        9     36936
+Prefix                        :        9     64         648        9       648
+Privilege information         :        3 variable       136        3       136
+Route map name                :        0 variable         0        1        24
+Stream                        :        2  99528      199056        2    199056
+Thread                        :       23    160        3864       23      3864
+Thread master                 :        8 variable   1049376        8   1049376
+Thread Poll Info              :        4 262144     1048608        4   1048608
+Thread stats                  :       10     96        1040       10      1040
+Typed-hash bucket             :        1 variable      1032        1      1032
+Typed-heap array              :        1    576         584        1       584
+Vector                        :     3591     24       86328     3592     86352
+Vector index                  :     3591 variable    112968     3592    113208
+VRF                           :        2    216         432        2       432
+VRF bit-map                   :        3      8          72        3        72
+VTY                           :        4 variable     61056        4     61056
+VTY server                    :        2     32          80        2        80
+VTY output buffer             :        0 variable         0        1      4120
+YANG module                   :        4     48         240        4       240
+YANG data structure           :        0   1032           0        1      1032
+Zclient                       :        1   3400        3400        1      3400
+Redistribution instance IDs   :        3      2          72        3        72
+log thread-local buffer       :        1  24608       24616        1     24616
+--- qmem logging subsystem ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+syslog target                 :        2     56         112        2       112
+--- qmem Bidirectional Forwarding Detection Daemon ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+long-lived control socket memory:        6 variable       208        6       208
+short-lived control notification data:        6     32         240        6       240
+long-lived configuration memory:        6    648        3888        6      3888
+long-lived profile memory     :        4 variable       176        4       176
+Session observer              :        6    120         720        6       720
+BFD VRF                       :        2     80         176        2       176
+
+Memory statistics for iptrackd:
+System allocator statistics:
+  Total heap allocated:  2256 KiB
+  Holding block headers: 0 bytes
+  Used small blocks:     0 bytes
+  Used ordinary blocks:  2164 KiB
+  Free small blocks:     1488 bytes
+  Free ordinary blocks:  92 KiB
+  Ordinary blocks:       2
+  Small blocks:          41
+  Holding blocks:        0
+(see system documentation for 'mallinfo' for meaning)
+--- qmem libfrr ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+Buffer                        :        5     24         120        5       120
+Buffer data                   :        1   4120        4120        1      4120
+Host config                   :        3 variable       152        3       152
+Command Tokens                :     1138     72       81936     1141     82168
+Command Token Text            :      903 variable     28744      905     28840
+Command Token Help            :      903 variable     21688      905     21736
+Command Argument              :        2 variable        48        5       120
+Command Argument Name         :      198 variable      4752      198      4752
+Lexer token (temporary)       :        0 variable         0        2        48
+Graph                         :       13      8         312       14       336
+Graph Node                    :     1378     32       55136     1381     55256
+Hash                          :      238 variable     11536      238     11536
+Hash Bucket                   :      308     32       12336      308     12336
+Hash Index                    :      119 variable     36872      119     36872
+Interface                     :       84    584       49056       84     49056
+Connected                     :        9     48         504        9       504
+Link List                     :      187     40        7480      191      7640
+Link Node                     :      141     24        3384      185      4520
+Temporary memory              :        4 variable        96        6       208
+Northbound Configuration      :        2     16          64        2        64
+Prefix                        :        9     64         648        9       648
+Privilege information         :        2 variable        96        2        96
+Stream                        :        2  99528      199056        2    199056
+Thread                        :        5    160         840        5       840
+Thread master                 :        4 variable    524688        4    524688
+Thread Poll Info              :        2 262144      524304        2    524304
+Thread stats                  :        6     96         624        6       624
+Typed-hash bucket             :        1 variable      1032        1      1032
+Vector                        :     2785     24       66952     2790     67072
+Vector index                  :     2785 variable     90952     2790     91088
+VRF                           :        2    216         432        2       432
+VRF bit-map                   :        3      8          72        3        72
+VTY                           :        4 variable     61056        4     61056
+VTY server                    :        2     32          80        2        80
+Zclient                       :        1   3400        3400        1      3400
+Redistribution instance IDs   :        3      2          72        3        72
+log thread-local buffer       :        1  24608       24616        1     24616
+--- qmem iptrackd ---
+Type                          : Current#   Size       Total     Max#  MaxBytes
+IPTrack VRF                   :        2      1          48        2        48
+

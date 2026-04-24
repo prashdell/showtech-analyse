@@ -1,0 +1,60 @@
+Configuration:
+  debug:          0x201000
+  mac_addr:       02:10:18:a9:62:ee
+  rx_buffer_size: 9238 (0x2416)
+  rcpu_mode:      0
+  rcpu_dmac:      00:00:00:00:00:00
+  rcpu_smac:      00:00:00:00:00:00
+  rcpu_ethertype: 0xde08
+  rcpu_signature: 0x0
+  rcpu_vlan:      1
+  use_rx_skb:     1
+  num_rx_prio:    1
+  check_rcpu_sig: 0
+  default_mtu:    1500
+  rx_sync_retry:  1000
+  use_napi:       1
+  napi_weight:    64
+  basedev_susp:   1
+  force_tagged:   1
+  ft_tpid:        33024
+  ft_pri:         0
+  ft_cfi:         0
+  ft_tpid:        0
+  rx_drop_qs_en:  0x4fffff
+  max_rx_dcbs:    64
+  max_tx_dcbs:    1024
+  skb_iif         0
+  masquerade_srcport 0
+  loopback_mh0    0x00000000
+  loopback_mh1    0x00000000
+  loopback_mh2    0x00000000
+  loopback_mh3    0x00000000
+  loopback        131
+Active IOCTLs:
+  Command:        0
+  Event:          1
+Device 0:
+  base_addr:      0x00000000fa926def
+  dev_no:         0
+  cmic_type:      x
+  dcb_type:       36
+  dcb_wsize:      4
+  pkt_hdr_size:   64
+  rx_chans:       7
+  cdma_chans:     0x0
+  unet_chans:     0x0
+  enet_chans:     0x0
+  irq_mask:       0x33333330
+  dma_events:     0x0
+  dcb_dma:        0x00000000ed9a0eda
+  dcb_mem_size:   0x5c80
+  rcpu_sig:       0xb870
+  napi_poll_mode: 0
+  inst_id:        0xffffffff
+  evt_queue:      0
+  basedev_susp:   0
+  hw_reset:       0
+  oamp_port_num:  0 {0, 0, 0, 0}
+  device_id:      0xb870
+  pcie_status:    0

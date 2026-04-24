@@ -1,0 +1,1549 @@
+[    0.000000] Linux version 5.10.0-35-amd64 (debian-kernel@lists.debian.org) (gcc-10 (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1 SMP Debian 5.10.237-1 (2025-05-19)
+[    0.000000] Command line: BOOT_IMAGE=/image-4.5.1-Enterprise_Standard/boot/vmlinuz-5.10.0-35-amd64 root=UUID=410d4baf-0645-4164-9729-631c977f2ba0 rw console=tty0 console=ttyS0,115200n8 quiet intel_idle.max_cstate=0 net.ifnames=0 biosdevname=0 loop=image-4.5.1-Enterprise_Standard/fs.squashfs loopfstype=squashfs crashkernel=0M-2G:256M,2G-4G:256M,4G-8G:384M,8G-:448M apparmor=1 security=apparmor varlog_size=4096 usbcore.autosuspend=-1 modprobe.blacklist=qat_c3xxx intel_iommu=off irqfixup cgroup_enable=memory swapaccount=1 cma=0 systemd.unified_cgroup_hierarchy=false systemd.legacy_systemd_cgroup_controller=false memmap=64M$1G softlockup_all_cpu_backtrace=1
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000000a0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000003e2dffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000003e2e0000-0x000000003e2fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000003e300000-0x0000000078511fff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000078512000-0x0000000078521fff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000078522000-0x000000007c9bbfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007c9bc000-0x000000007ca94fff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000007ca95000-0x000000007cbfafff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007cbfb000-0x000000007cf9ffff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x000000007cfa0000-0x000000007f295fff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000007f296000-0x000000007f346fff] type 20
+[    0.000000] BIOS-e820: [mem 0x000000007f347000-0x000000007f7fffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007f800000-0x000000007fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fd000000-0x00000000fe7fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000047fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] user-defined physical RAM map:
+[    0.000000] user: [mem 0x0000000000000000-0x000000000009ffff] usable
+[    0.000000] user: [mem 0x00000000000a0000-0x00000000000fffff] reserved
+[    0.000000] user: [mem 0x0000000000100000-0x000000003e2dffff] usable
+[    0.000000] user: [mem 0x000000003e2e0000-0x000000003e2fffff] reserved
+[    0.000000] user: [mem 0x000000003e300000-0x000000003fffffff] usable
+[    0.000000] user: [mem 0x0000000040000000-0x0000000043ffffff] reserved
+[    0.000000] user: [mem 0x0000000044000000-0x0000000078511fff] usable
+[    0.000000] user: [mem 0x0000000078512000-0x0000000078521fff] reserved
+[    0.000000] user: [mem 0x0000000078522000-0x000000007c9bbfff] usable
+[    0.000000] user: [mem 0x000000007c9bc000-0x000000007ca94fff] reserved
+[    0.000000] user: [mem 0x000000007ca95000-0x000000007cbfafff] usable
+[    0.000000] user: [mem 0x000000007cbfb000-0x000000007cf9ffff] ACPI NVS
+[    0.000000] user: [mem 0x000000007cfa0000-0x000000007f295fff] reserved
+[    0.000000] user: [mem 0x000000007f296000-0x000000007f346fff] type 20
+[    0.000000] user: [mem 0x000000007f347000-0x000000007f7fffff] usable
+[    0.000000] user: [mem 0x000000007f800000-0x000000007fffffff] reserved
+[    0.000000] user: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+[    0.000000] user: [mem 0x00000000fd000000-0x00000000fe7fffff] reserved
+[    0.000000] user: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] user: [mem 0x0000000100000000-0x000000047fffffff] usable
+[    0.000000] efi: EFI v2.60 by American Megatrends
+[    0.000000] efi: ACPI 2.0=0x7cf3a000 ACPI=0x7cf3a000 SMBIOS=0x7f1fa000 SMBIOS 3.0=0x7f1f9000 MEMATTR=0x7b720018 ESRT=0x7b71eb18 
+[    0.000000] secureboot: Secure boot could not be determined (mode 0)
+[    0.000000] SMBIOS 3.0.0 present.
+[    0.000000] DMI: Dell EMC S5248F-ON/S5248F-ON-CPU, BIOS 3.40.0.9-17 04/07/2023
+[    0.000000] tsc: Detected 2100.000 MHz processor
+[    0.000019] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000025] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000039] last_pfn = 0x480000 max_arch_pfn = 0x400000000
+[    0.000044] MTRR default type: uncachable
+[    0.000045] MTRR fixed ranges enabled:
+[    0.000047]   00000-9FFFF write-back
+[    0.000049]   A0000-BFFFF uncachable
+[    0.000051]   C0000-FFFFF write-protect
+[    0.000052] MTRR variable ranges enabled:
+[    0.000055]   0 base 0000000000 mask 7C00000000 write-back
+[    0.000057]   1 base 0400000000 mask 7F80000000 write-back
+[    0.000059]   2 base 007F800000 mask 7FFF800000 uncachable
+[    0.000060]   3 base 0080000000 mask 7F80000000 uncachable
+[    0.000062]   4 disabled
+[    0.000063]   5 disabled
+[    0.000064]   6 disabled
+[    0.000065]   7 disabled
+[    0.000067]   8 disabled
+[    0.000068]   9 disabled
+[    0.000173] x86/PAT: PAT support disabled because CONFIG_X86_PAT is disabled in the kernel.
+[    0.000305] e820: update [mem 0x7f800000-0xffffffff] usable ==> reserved
+[    0.000312] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[    0.000316] x2apic: enabled by BIOS, switching to x2apic ops
+[    0.000318] last_pfn = 0x7f800 max_arch_pfn = 0x400000000
+[    0.005371] found SMP MP-table at [mem 0x000fcde0-0x000fcdef]
+[    0.005395] esrt: Reserving ESRT space from 0x000000007b71eb18 to 0x000000007b71eb50.
+[    0.005402] e820: update [mem 0x7b71e000-0x7b71efff] usable ==> reserved
+[    0.005425] kexec: Reserving the low 1M of memory for crashkernel
+[    0.005433] Using GB pages for direct mapping
+[    0.006837] RAMDISK: [mem 0x34517000-0x36282fff]
+[    0.006841] ACPI: Early table checksum verification disabled
+[    0.006848] ACPI: RSDP 0x000000007CF3A000 000024 (v02 ALASKA)
+[    0.006854] ACPI: XSDT 0x000000007CF3A098 0000B4 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.006863] ACPI: FACP 0x000000007CF3F140 000114 (v06 ALASKA A M I    01072009 AMI  00010013)
+[    0.006871] ACPI: DSDT 0x000000007CF3A1E8 004F58 (v02 ALASKA A M I    01072009 INTL 20061109)
+[    0.006877] ACPI: FACS 0x000000007CF9E080 000040
+[    0.006882] ACPI: FPDT 0x000000007CF3F258 000044 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.006887] ACPI: FIDT 0x000000007CF3F2A0 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.006893] ACPI: SPMI 0x000000007CF3F340 000041 (v05 ALASKA A M I    00000000 AMI. 00000000)
+[    0.006898] ACPI: MCFG 0x000000007CF3F388 00003C (v01 ALASKA A M I    01072009 MSFT 00000097)
+[    0.006903] ACPI: APIC 0x000000007CF3F3C8 000078 (v04 INTEL  TIANO    00000001 MSFT 00000000)
+[    0.006909] ACPI: BDAT 0x000000007CF3F440 000030 (v01                 00000000      00000000)
+[    0.006914] ACPI: BVER 0x000000007CF3F470 010078 (v01 ALASKA A M I    00000000 MSFT 01000013)
+[    0.006919] ACPI: HPET 0x000000007CF4F4E8 000038 (v01 ALASKA A M I    00000001 MSFT 01000013)
+[    0.006924] ACPI: UEFI 0x000000007CF4F520 000042 (v01 ALASKA A M I    00000002      01000013)
+[    0.006930] ACPI: SSDT 0x000000007CF4F568 001901 (v02 PmRef  CpuPm    00003000 INTL 20061109)
+[    0.006935] ACPI: DMAR 0x000000007CF50E70 000070 (v01 INTEL  BDW      00000001 INTL 00000001)
+[    0.006940] ACPI: SPCR 0x000000007CF50EE0 000050 (v02 A M I  APTIO V  01072009 AMI. 0005000D)
+[    0.006946] ACPI: HEST 0x000000007CF50F30 0000A8 (v01 INTEL  VND      00000001 INTL 00000001)
+[    0.006951] ACPI: BERT 0x000000007CF50FD8 000030 (v01 INTEL  VND      00000001 INTL 00000001)
+[    0.006956] ACPI: ERST 0x000000007CF51008 000230 (v01 INTEL  VND      00000001 INTL 00000001)
+[    0.006962] ACPI: EINJ 0x000000007CF51238 000150 (v01 INTEL  VND      00000001 INTL 00000001)
+[    0.006967] ACPI: WSMT 0x000000007CF51388 000028 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.006972] ACPI: Reserving FACP table memory at [mem 0x7cf3f140-0x7cf3f253]
+[    0.006974] ACPI: Reserving DSDT table memory at [mem 0x7cf3a1e8-0x7cf3f13f]
+[    0.006976] ACPI: Reserving FACS table memory at [mem 0x7cf9e080-0x7cf9e0bf]
+[    0.006978] ACPI: Reserving FPDT table memory at [mem 0x7cf3f258-0x7cf3f29b]
+[    0.006980] ACPI: Reserving FIDT table memory at [mem 0x7cf3f2a0-0x7cf3f33b]
+[    0.006981] ACPI: Reserving SPMI table memory at [mem 0x7cf3f340-0x7cf3f380]
+[    0.006983] ACPI: Reserving MCFG table memory at [mem 0x7cf3f388-0x7cf3f3c3]
+[    0.006985] ACPI: Reserving APIC table memory at [mem 0x7cf3f3c8-0x7cf3f43f]
+[    0.006986] ACPI: Reserving BDAT table memory at [mem 0x7cf3f440-0x7cf3f46f]
+[    0.006988] ACPI: Reserving BVER table memory at [mem 0x7cf3f470-0x7cf4f4e7]
+[    0.006990] ACPI: Reserving HPET table memory at [mem 0x7cf4f4e8-0x7cf4f51f]
+[    0.006991] ACPI: Reserving UEFI table memory at [mem 0x7cf4f520-0x7cf4f561]
+[    0.006993] ACPI: Reserving SSDT table memory at [mem 0x7cf4f568-0x7cf50e68]
+[    0.006995] ACPI: Reserving DMAR table memory at [mem 0x7cf50e70-0x7cf50edf]
+[    0.006996] ACPI: Reserving SPCR table memory at [mem 0x7cf50ee0-0x7cf50f2f]
+[    0.006998] ACPI: Reserving HEST table memory at [mem 0x7cf50f30-0x7cf50fd7]
+[    0.007000] ACPI: Reserving BERT table memory at [mem 0x7cf50fd8-0x7cf51007]
+[    0.007002] ACPI: Reserving ERST table memory at [mem 0x7cf51008-0x7cf51237]
+[    0.007003] ACPI: Reserving EINJ table memory at [mem 0x7cf51238-0x7cf51387]
+[    0.007005] ACPI: Reserving WSMT table memory at [mem 0x7cf51388-0x7cf513af]
+[    0.007017] ACPI: Local APIC address 0xfee00000
+[    0.007020] Setting APIC routing to cluster x2apic.
+[    0.007095] No NUMA configuration found
+[    0.007096] Faking a node at [mem 0x0000000000000000-0x000000047fffffff]
+[    0.007116] NODE_DATA(0) allocated [mem 0x47ffd4000-0x47fffefff]
+[    0.007865] cma: dma_contiguous_reserve(limit 480000000)
+[    0.007876] Reserving 448MB of memory at 1472MB for crashkernel (System RAM: 16271MB)
+[    0.007929] Zone ranges:
+[    0.007931]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.007934]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.007937]   Normal   [mem 0x0000000100000000-0x000000047fffffff]
+[    0.007939]   Device   empty
+[    0.007941] Movable zone start for each node
+[    0.007946] Early memory node ranges
+[    0.007947]   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+[    0.007949]   node   0: [mem 0x0000000000100000-0x000000003e2dffff]
+[    0.007951]   node   0: [mem 0x000000003e300000-0x000000003fffffff]
+[    0.007952]   node   0: [mem 0x0000000044000000-0x0000000078511fff]
+[    0.007954]   node   0: [mem 0x0000000078522000-0x000000007c9bbfff]
+[    0.007956]   node   0: [mem 0x000000007ca95000-0x000000007cbfafff]
+[    0.007957]   node   0: [mem 0x000000007f347000-0x000000007f7fffff]
+[    0.007959]   node   0: [mem 0x0000000100000000-0x000000047fffffff]
+[    0.007964] Initmem setup node 0 [mem 0x0000000000001000-0x000000047fffffff]
+[    0.007967] On node 0 totalpages: 4165450
+[    0.007969]   DMA zone: 64 pages used for memmap
+[    0.007970]   DMA zone: 223 pages reserved
+[    0.007972]   DMA zone: 3999 pages, LIFO batch:0
+[    0.007974]   DMA32 zone: 7679 pages used for memmap
+[    0.007975]   DMA32 zone: 491435 pages, LIFO batch:63
+[    0.007977]   Normal zone: 57344 pages used for memmap
+[    0.007978]   Normal zone: 3670016 pages, LIFO batch:63
+[    0.007984] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.008055] On node 0, zone DMA: 96 pages in unavailable ranges
+[    0.012541] On node 0, zone DMA32: 32 pages in unavailable ranges
+[    0.016665] On node 0, zone DMA32: 16384 pages in unavailable ranges
+[    0.016974] On node 0, zone DMA32: 16 pages in unavailable ranges
+[    0.016987] On node 0, zone DMA32: 217 pages in unavailable ranges
+[    0.017255] On node 0, zone DMA32: 10060 pages in unavailable ranges
+[    0.017943] On node 0, zone Normal: 2048 pages in unavailable ranges
+[    0.018112] ACPI: PM-Timer IO Port: 0x1808
+[    0.018116] ACPI: Local APIC address 0xfee00000
+[    0.018125] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.018128] ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.018148] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
+[    0.018152] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.018155] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.018157] ACPI: IRQ0 used by override.
+[    0.018159] ACPI: IRQ9 used by override.
+[    0.018162] Using ACPI (MADT) for SMP configuration information
+[    0.018164] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.018173] ACPI: SPCR: console: uart,io,0x3f8,115200
+[    0.018177] TSC deadline timer available
+[    0.018180] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.018216] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.018220] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.018223] PM: hibernation: Registered nosave memory: [mem 0x3e2e0000-0x3e2fffff]
+[    0.018226] PM: hibernation: Registered nosave memory: [mem 0x40000000-0x43ffffff]
+[    0.018229] PM: hibernation: Registered nosave memory: [mem 0x78512000-0x78521fff]
+[    0.018232] PM: hibernation: Registered nosave memory: [mem 0x7b71e000-0x7b71efff]
+[    0.018235] PM: hibernation: Registered nosave memory: [mem 0x7c9bc000-0x7ca94fff]
+[    0.018238] PM: hibernation: Registered nosave memory: [mem 0x7cbfb000-0x7f346fff]
+[    0.018241] PM: hibernation: Registered nosave memory: [mem 0x7f800000-0xffffffff]
+[    0.018244] [mem 0x80000000-0xdfffffff] available for PCI devices
+[    0.018248] Booting paravirtualized kernel on bare hardware
+[    0.018253] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.024387] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[    0.024988] percpu: Embedded 63 pages/cpu s221184 r8192 d28672 u524288
+[    0.025001] pcpu-alloc: s221184 r8192 d28672 u524288 alloc=1*2097152
+[    0.025004] pcpu-alloc: [0] 0 1 2 3 
+[    0.025066] Built 1 zonelists, mobility grouping on.  Total pages: 4100140
+[    0.025069] Policy zone: Normal
+[    0.025073] Kernel command line: BOOT_IMAGE=/image-4.5.1-Enterprise_Standard/boot/vmlinuz-5.10.0-35-amd64 root=UUID=410d4baf-0645-4164-9729-631c977f2ba0 rw console=tty0 console=ttyS0,115200n8 quiet intel_idle.max_cstate=0 net.ifnames=0 biosdevname=0 loop=image-4.5.1-Enterprise_Standard/fs.squashfs loopfstype=squashfs crashkernel=0M-2G:256M,2G-4G:256M,4G-8G:384M,8G-:448M apparmor=1 security=apparmor varlog_size=4096 usbcore.autosuspend=-1 modprobe.blacklist=qat_c3xxx intel_iommu=off irqfixup cgroup_enable=memory swapaccount=1 cma=0 systemd.unified_cgroup_hierarchy=false systemd.legacy_systemd_cgroup_controller=false memmap=64M$1G softlockup_all_cpu_backtrace=1
+[    0.025416] DMAR: IOMMU disabled
+[    0.025433] Misrouted IRQ fixup support enabled.
+[    0.025435] This may impact system performance.
+[    0.029385] Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.031293] Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.031358] mem auto-init: stack:off, heap alloc:on, heap free:off
+[    0.072544] Memory: 1449096K/16661800K available (12295K kernel code, 2508K rwdata, 7772K rodata, 2704K init, 17632K bss, 951824K reserved, 0K cma-reserved)
+[    0.073262] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.073345] ftrace: allocating 37413 entries in 147 pages
+[    0.097169] ftrace: allocated 147 pages with 4 groups
+[    0.097466] rcu: Hierarchical RCU implementation.
+[    0.097470] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=4.
+[    0.097471] 	Rude variant of Tasks RCU enabled.
+[    0.097472] 	Tracing variant of Tasks RCU enabled.
+[    0.097474] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.097475] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.105197] NR_IRQS: 524544, nr_irqs: 456, preallocated irqs: 16
+[    0.105508] random: crng init done
+[    0.105546] Console: colour dummy device 80x25
+[    0.105576] printk: console [tty0] enabled
+[    0.105624] printk: console [ttyS0] enabled
+[    0.105651] ACPI: Core revision 20200925
+[    0.105857] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635855245 ns
+[    0.105909] APIC: Switch to symmetric I/O mode setup
+[    0.105914] DMAR: Host address width 39
+[    0.105916] DMAR: DRHD base: 0x000000fed90000 flags: 0x1
+[    0.105926] DMAR: dmar0: reg_base_addr fed90000 ver 1:0 cap d2008c40660462 ecap f050da
+[    0.105929] DMAR: RMRR base: 0x0000003e2e0000 end: 0x0000003e2fffff
+[    0.105933] DMAR-IR: IOAPIC id 2 under DRHD base  0xfed90000 IOMMU 0
+[    0.105935] DMAR-IR: HPET id 0 under DRHD base 0xfed90000
+[    0.105936] DMAR-IR: Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[    0.106438] DMAR-IR: Enabled IRQ remapping in x2apic mode
+[    0.107132] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.125886] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1e4530a99b6, max_idle_ns: 440795257976 ns
+[    0.125894] Calibrating delay loop (skipped), value calculated using timer frequency.. 4200.00 BogoMIPS (lpj=8400000)
+[    0.126050] process: using mwait in idle threads
+[    0.126055] Last level iTLB entries: 4KB 48, 2MB 0, 4MB 0
+[    0.126056] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.126061] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.126066] Spectre V2 : Mitigation: Retpolines
+[    0.126067] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.126069] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    0.126070] Spectre V2 : Enabling Restricted Speculation for firmware calls
+[    0.126074] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.126079] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+[    0.126081] Register File Data Sampling: Vulnerable: No microcode
+[    0.126090] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.126091] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.126093] x86/fpu: Supporting XSAVE feature 0x008: 'MPX bounds registers'
+[    0.126094] x86/fpu: Supporting XSAVE feature 0x010: 'MPX CSR'
+[    0.126097] x86/fpu: xstate_offset[3]:  576, xstate_sizes[3]:   64
+[    0.126098] x86/fpu: xstate_offset[4]:  640, xstate_sizes[4]:   64
+[    0.126100] x86/fpu: Enabled xstate features 0x1b, context size is 704 bytes, using 'compacted' format.
+[    0.142165] Freeing SMP alternatives memory: 32K
+[    0.144014] pid_max: default: 32768 minimum: 301
+[    0.147676] LSM: Security Framework initializing
+[    0.147695] Yama: disabled by default; enable with sysctl kernel.yama.*
+[    0.147745] AppArmor: AppArmor initialized
+[    0.147823] Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.147880] Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.148593] smpboot: CPU0: Intel(R) Atom(TM) CPU C3538 @ 2.10GHz (family: 0x6, model: 0x5f, stepping: 0x1)
+[    0.148877] Performance Events: PEBS fmt3+, Goldmont events, 32-deep LBR, full-width counters, Intel PMU driver.
+[    0.148900] ... version:                4
+[    0.148901] ... bit width:              48
+[    0.148902] ... generic registers:      4
+[    0.148904] ... value mask:             0000ffffffffffff
+[    0.148905] ... max period:             00007fffffffffff
+[    0.148906] ... fixed-purpose events:   3
+[    0.148907] ... event mask:             000000070000000f
+[    0.149058] rcu: Hierarchical SRCU implementation.
+[    0.149889] NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+[    0.149889] smp: Bringing up secondary CPUs ...
+[    0.149889] x86: Booting SMP configuration:
+[    0.149889] .... node  #0, CPUs:      #1 #2 #3
+[    0.149889] smp: Brought up 1 node, 4 CPUs
+[    0.149889] smpboot: Max logical packages: 1
+[    0.149889] smpboot: Total of 4 processors activated (16800.00 BogoMIPS)
+[    0.191563] node 0 deferred pages initialised in 40ms
+[    0.191563] devtmpfs: initialized
+[    0.191563] x86/mm: Memory block size: 128MB
+[    0.195740] PM: Registering ACPI NVS region [mem 0x7cbfb000-0x7cf9ffff] (3821568 bytes)
+[    0.195740] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.195740] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.195740] pinctrl core: initialized pinctrl subsystem
+[    0.195740] NET: Registered protocol family 16
+[    0.195740] DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+[    0.195941] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.198335] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.198369] audit: initializing netlink subsys (disabled)
+[    0.198431] audit: type=2000 audit(1772945933.096:1): state=initialized audit_enabled=0 res=1
+[    0.198431] thermal_sys: Registered thermal governor 'fair_share'
+[    0.198431] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.198431] thermal_sys: Registered thermal governor 'step_wise'
+[    0.198431] thermal_sys: Registered thermal governor 'user_space'
+[    0.198431] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.198431] cpuidle: using governor ladder
+[    0.198431] cpuidle: using governor menu
+[    0.198431] ACPI: bus type PCI registered
+[    0.198431] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.198431] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+[    0.198431] PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in E820
+[    0.198431] pmd_set_huge: Cannot satisfy [mem 0xe0000000-0xe0200000] with a huge-page mapping due to MTRR override.
+[    0.198633] PCI: Using configuration type 1 for base access
+[    0.199318] Kprobes globally optimized
+[    0.199318] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.199318] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.462495] ACPI: Added _OSI(Module Device)
+[    0.462495] ACPI: Added _OSI(Processor Device)
+[    0.462495] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.462495] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.462495] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.462495] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.462495] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.469216] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.475443] ACPI: Interpreter enabled
+[    0.475466] ACPI: (supports S0 S5)
+[    0.475468] ACPI: Using IOAPIC for interrupt routing
+[    0.475575] HEST: Table parsing has been initialized.
+[    0.475861] GHES: APEI firmware first mode is enabled by APEI bit and WHEA _OSC.
+[    0.475866] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.476115] ACPI: Enabled 4 GPEs in block 00 to 7F
+[    0.485835] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.485843] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+[    0.486075] acpi PNP0A08:00: _OSC: platform does not support [SHPCHotplug AER LTR]
+[    0.486296] acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    0.486814] PCI host bridge to bus 0000:00
+[    0.486818] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.486823] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.486825] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000dffff window]
+[    0.486827] pci_bus 0000:00: root bus resource [mem 0x80000000-0xdfffffff window]
+[    0.486829] pci_bus 0000:00: root bus resource [mem 0x480000000-0x7fffffffff window]
+[    0.486831] pci_bus 0000:00: root bus resource [mem 0xfe010000-0xfe010fff window]
+[    0.486832] pci_bus 0000:00: root bus resource [mem 0xfa000000-0xfa0fffff window]
+[    0.486834] pci_bus 0000:00: root bus resource [mem 0xfb000000-0xfb7fffff window]
+[    0.486836] pci_bus 0000:00: root bus resource [mem 0xfa100000-0xfa1007ff window]
+[    0.486838] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.486857] pci 0000:00:00.0: [8086:1980] type 00 class 0x060000
+[    0.487031] pci 0000:00:04.0: [8086:19a1] type 00 class 0x060000
+[    0.487257] pci 0000:00:05.0: [8086:19a2] type 00 class 0x080700
+[    0.487360] pci 0000:00:05.0: PME# supported from D0 D3hot D3cold
+[    0.487529] pci 0000:00:06.0: [8086:19a3] type 01 class 0x060400
+[    0.487592] pci 0000:00:06.0: PME# supported from D0 D3hot D3cold
+[    0.487751] pci 0000:00:09.0: [8086:19a4] type 01 class 0x060400
+[    0.487765] pci 0000:00:09.0: reg 0x10: [mem 0xdff60000-0xdff7ffff 64bit]
+[    0.487781] pci 0000:00:09.0: enabling Extended Tags
+[    0.487830] pci 0000:00:09.0: PME# supported from D0 D3hot D3cold
+[    0.488014] pci 0000:00:0b.0: [8086:19a6] type 01 class 0x060400
+[    0.488028] pci 0000:00:0b.0: reg 0x10: [mem 0xdff40000-0xdff5ffff 64bit]
+[    0.488043] pci 0000:00:0b.0: enabling Extended Tags
+[    0.488092] pci 0000:00:0b.0: PME# supported from D0 D3hot D3cold
+[    0.488281] pci 0000:00:0c.0: [8086:19a7] type 01 class 0x060400
+[    0.488295] pci 0000:00:0c.0: reg 0x10: [mem 0xdff20000-0xdff3ffff 64bit]
+[    0.488310] pci 0000:00:0c.0: enabling Extended Tags
+[    0.488359] pci 0000:00:0c.0: PME# supported from D0 D3hot D3cold
+[    0.488541] pci 0000:00:0e.0: [8086:19a8] type 01 class 0x060400
+[    0.488554] pci 0000:00:0e.0: reg 0x10: [mem 0xdff00000-0xdff1ffff 64bit]
+[    0.488615] pci 0000:00:0e.0: PME# supported from D0 D3hot D3cold
+[    0.488808] pci 0000:00:12.0: [8086:19ac] type 00 class 0x088000
+[    0.488828] pci 0000:00:12.0: reg 0x10: [mem 0xdff9f000-0xdff9f3ff 64bit]
+[    0.489057] pci 0000:00:14.0: [8086:19c2] type 00 class 0x010601
+[    0.489070] pci 0000:00:14.0: reg 0x10: [mem 0xdff94000-0xdff95fff]
+[    0.489078] pci 0000:00:14.0: reg 0x14: [mem 0xdff9e000-0xdff9e0ff]
+[    0.489085] pci 0000:00:14.0: reg 0x18: [io  0xe080-0xe087]
+[    0.489092] pci 0000:00:14.0: reg 0x1c: [io  0xe070-0xe073]
+[    0.489100] pci 0000:00:14.0: reg 0x20: [io  0xe020-0xe03f]
+[    0.489107] pci 0000:00:14.0: reg 0x24: [mem 0xdff9d000-0xdff9d7ff]
+[    0.489151] pci 0000:00:14.0: PME# supported from D3hot
+[    0.489297] pci 0000:00:15.0: [8086:19d0] type 00 class 0x0c0330
+[    0.489313] pci 0000:00:15.0: reg 0x10: [mem 0xdff80000-0xdff8ffff 64bit]
+[    0.489370] pci 0000:00:15.0: PME# supported from D3hot D3cold
+[    0.489528] pci 0000:00:18.0: [8086:19d3] type 00 class 0x078000
+[    0.489552] pci 0000:00:18.0: reg 0x10: [mem 0xdff9c000-0xdff9cfff 64bit]
+[    0.489639] pci 0000:00:18.0: PME# supported from D3hot
+[    0.489793] pci 0000:00:1a.0: [8086:19d8] type 00 class 0x070002
+[    0.489806] pci 0000:00:1a.0: reg 0x10: [io  0xe060-0xe067]
+[    0.489814] pci 0000:00:1a.0: reg 0x14: [mem 0xdff9b000-0xdff9b0ff]
+[    0.490005] pci 0000:00:1a.1: [8086:19d8] type 00 class 0x070002
+[    0.490019] pci 0000:00:1a.1: reg 0x10: [io  0xe050-0xe057]
+[    0.490026] pci 0000:00:1a.1: reg 0x14: [mem 0xdff9a000-0xdff9a0ff]
+[    0.490216] pci 0000:00:1a.2: [8086:19d8] type 00 class 0x070002
+[    0.490229] pci 0000:00:1a.2: reg 0x10: [io  0xe040-0xe047]
+[    0.490237] pci 0000:00:1a.2: reg 0x14: [mem 0xdff99000-0xdff990ff]
+[    0.490436] pci 0000:00:1c.0: [8086:19db] type 00 class 0x080501
+[    0.490455] pci 0000:00:1c.0: reg 0x10: [mem 0xdff98000-0xdff98fff 64bit]
+[    0.490467] pci 0000:00:1c.0: reg 0x18: [mem 0xdff97000-0xdff97fff 64bit]
+[    0.490659] pci 0000:00:1f.0: [8086:19dc] type 00 class 0x060100
+[    0.490871] pci 0000:00:1f.2: [8086:19de] type 00 class 0x058000
+[    0.490883] pci 0000:00:1f.2: reg 0x10: [mem 0xdff90000-0xdff93fff]
+[    0.491046] pci 0000:00:1f.4: [8086:19df] type 00 class 0x0c0500
+[    0.491062] pci 0000:00:1f.4: reg 0x10: [mem 0xdff96000-0xdff960ff 64bit]
+[    0.491076] pci 0000:00:1f.4: reg 0x20: [io  0xe000-0xe01f]
+[    0.491220] pci 0000:00:1f.5: [8086:19e0] type 00 class 0x0c8000
+[    0.491234] pci 0000:00:1f.5: reg 0x10: [mem 0xfe010000-0xfe010fff]
+[    0.491477] pci 0000:01:00.0: [8086:19e2] type 00 class 0x0b4000
+[    0.491500] pci 0000:01:00.0: reg 0x18: [mem 0xdfe40000-0xdfe7ffff 64bit]
+[    0.491509] pci 0000:01:00.0: reg 0x20: [mem 0xdfe00000-0xdfe3ffff 64bit]
+[    0.491519] pci 0000:01:00.0: enabling Extended Tags
+[    0.491594] pci 0000:01:00.0: reg 0x164: [mem 0xdfe90000-0xdfe90fff 64bit]
+[    0.491597] pci 0000:01:00.0: VF(n) BAR0 space: [mem 0xdfe90000-0xdfe9ffff 64bit] (contains BAR0 for 16 VFs)
+[    0.491605] pci 0000:01:00.0: reg 0x16c: [mem 0xdfe80000-0xdfe80fff 64bit]
+[    0.491607] pci 0000:01:00.0: VF(n) BAR2 space: [mem 0xdfe80000-0xdfe8ffff 64bit] (contains BAR2 for 16 VFs)
+[    0.491668] pci 0000:01:00.0: 2.000 Gb/s available PCIe bandwidth, limited by 2.5 GT/s PCIe x1 link at 0000:00:06.0 (capable of 64.000 Gb/s with 5.0 GT/s PCIe x16 link)
+[    0.491734] pci 0000:00:06.0: PCI bridge to [bus 01]
+[    0.491739] pci 0000:00:06.0:   bridge window [mem 0xdfe00000-0xdfefffff]
+[    0.491815] pci 0000:02:00.0: [14e4:b873] type 00 class 0x020000
+[    0.491833] pci 0000:02:00.0: reg 0x10: [mem 0xdf800000-0xdf807fff 64bit pref]
+[    0.491844] pci 0000:02:00.0: reg 0x18: [mem 0xdf000000-0xdf7fffff 64bit pref]
+[    0.491942] pci 0000:02:00.0: PME# supported from D0 D3hot D3cold
+[    0.492069] pci 0000:00:09.0: PCI bridge to [bus 02]
+[    0.492076] pci 0000:00:09.0:   bridge window [mem 0xdf000000-0xdf8fffff 64bit pref]
+[    0.492157] pci 0000:03:00.0: working around ROM BAR overlap defect
+[    0.492159] pci 0000:03:00.0: [8086:1533] type 00 class 0x020000
+[    0.492182] pci 0000:03:00.0: reg 0x10: [mem 0xdfd00000-0xdfd7ffff]
+[    0.492206] pci 0000:03:00.0: reg 0x18: [io  0xd000-0xd01f]
+[    0.492219] pci 0000:03:00.0: reg 0x1c: [mem 0xdfd80000-0xdfd83fff]
+[    0.492351] pci 0000:03:00.0: PME# supported from D0 D3hot D3cold
+[    0.492456] pci 0000:00:0b.0: PCI bridge to [bus 03]
+[    0.492459] pci 0000:00:0b.0:   bridge window [io  0xd000-0xdfff]
+[    0.492462] pci 0000:00:0b.0:   bridge window [mem 0xdfd00000-0xdfdfffff]
+[    0.492537] pci 0000:04:00.0: [10ee:7021] type 00 class 0x000000
+[    0.492557] pci 0000:04:00.0: reg 0x10: [mem 0xdfc00000-0xdfc0ffff]
+[    0.492622] pci 0000:04:00.0: enabling Extended Tags
+[    0.492768] pci 0000:00:0c.0: PCI bridge to [bus 04]
+[    0.492773] pci 0000:00:0c.0:   bridge window [mem 0xdfc00000-0xdfcfffff]
+[    0.492826] pci 0000:00:0e.0: PCI bridge to [bus 05]
+[    0.493023] ACPI: PCI Interrupt Link [LNKA] (IRQs 6 7 10 *11 12 14 15)
+[    0.493110] ACPI: PCI Interrupt Link [LNKB] (IRQs 6 7 *10 11 12 14 15)
+[    0.493195] ACPI: PCI Interrupt Link [LNKC] (IRQs 6 7 10 *11 12 14 15)
+[    0.493280] ACPI: PCI Interrupt Link [LNKD] (IRQs 6 *7 10 11 12 14 15)
+[    0.493365] ACPI: PCI Interrupt Link [LNKE] (IRQs 6 7 *10 11 12 14 15)
+[    0.493449] ACPI: PCI Interrupt Link [LNKF] (IRQs 6 7 10 11 12 *14 15)
+[    0.493537] ACPI: PCI Interrupt Link [LNKG] (IRQs 6 7 10 11 12 14 *15)
+[    0.493621] ACPI: PCI Interrupt Link [LNKH] (IRQs 6 7 10 11 12 14 *15)
+[    0.494549] iommu: Default domain type: Translated 
+[    0.494577] vgaarb: loaded
+[    0.494577] pps_core: LinuxPPS API ver. 1 registered
+[    0.494577] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.494577] EDAC MC: Ver: 3.0.0
+[    0.494577] Registered efivars operations
+[    0.494577] NetLabel: Initializing
+[    0.494577] NetLabel:  domain hash size = 128
+[    0.494577] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.494577] NetLabel:  unlabeled traffic allowed by default
+[    0.494577] PCI: Using ACPI for IRQ routing
+[    0.503377] PCI: pci_cache_line_size set to 64 bytes
+[    0.503441] e820: reserve RAM buffer [mem 0x3e2e0000-0x3fffffff]
+[    0.503444] e820: reserve RAM buffer [mem 0x78512000-0x7bffffff]
+[    0.503445] e820: reserve RAM buffer [mem 0x7b71e000-0x7bffffff]
+[    0.503447] e820: reserve RAM buffer [mem 0x7c9bc000-0x7fffffff]
+[    0.503448] e820: reserve RAM buffer [mem 0x7cbfb000-0x7fffffff]
+[    0.503450] e820: reserve RAM buffer [mem 0x7f800000-0x7fffffff]
+[    0.503458] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[    0.503458] hpet0: 8 comparators, 64-bit 24.000000 MHz counter
+[    0.504145] clocksource: Switched to clocksource tsc-early
+[    0.519343] VFS: Disk quotas dquot_6.6.0
+[    0.519370] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.519551] AppArmor: AppArmor Filesystem Enabled
+[    0.519584] pnp: PnP ACPI init
+[    0.519962] system 00:00: [mem 0x001f0000-0x001fffff] could not be reserved
+[    0.519966] system 00:00: [mem 0xe0000000-0xefffffff] has been reserved
+[    0.519968] system 00:00: [mem 0x7fc00000-0x7fffffff] has been reserved
+[    0.519970] system 00:00: [mem 0xfed60000-0xfed60fff] has been reserved
+[    0.519981] system 00:00: Plug and Play ACPI device, IDs PNP0c01 (active)
+[    0.520058] system 00:01: [io  0x0680-0x069f] has been reserved
+[    0.520061] system 00:01: [mem 0x000e0000-0x000fffff] could not be reserved
+[    0.520064] system 00:01: [mem 0xff800000-0xffffffff] has been reserved
+[    0.520071] system 00:01: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.520114] pnp 00:02: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.520549] system 00:03: [io  0x0a00-0x0a0f] has been reserved
+[    0.520551] system 00:03: [io  0x0a10-0x0a1f] has been reserved
+[    0.520553] system 00:03: [io  0x0a20-0x0a2f] has been reserved
+[    0.520555] system 00:03: [io  0x0a30-0x0a3f] has been reserved
+[    0.520558] system 00:03: [io  0x0a40-0x0a4f] has been reserved
+[    0.520565] system 00:03: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.520877] pnp 00:04: [dma 0 disabled]
+[    0.520942] pnp 00:04: Plug and Play ACPI device, IDs PNP0501 (active)
+[    0.521104] system 00:05: [io  0x1800-0x18fe] has been reserved
+[    0.521107] system 00:05: [mem 0xfed03000-0xfed03fff] has been reserved
+[    0.521114] system 00:05: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.521212] pnp: PnP ACPI: found 6 devices
+[    0.528489] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.528582] NET: Registered protocol family 2
+[    0.529058] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.532884] tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    0.533217] TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.533700] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+[    0.533870] TCP: Hash tables configured (established 131072 bind 65536)
+[    0.534024] UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.534137] UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.534283] NET: Registered protocol family 1
+[    0.534295] NET: Registered protocol family 44
+[    0.534330] pci 0000:00:06.0: PCI bridge to [bus 01]
+[    0.534336] pci 0000:00:06.0:   bridge window [mem 0xdfe00000-0xdfefffff]
+[    0.534343] pci 0000:00:09.0: PCI bridge to [bus 02]
+[    0.534348] pci 0000:00:09.0:   bridge window [mem 0xdf000000-0xdf8fffff 64bit pref]
+[    0.534353] pci 0000:00:0b.0: PCI bridge to [bus 03]
+[    0.534356] pci 0000:00:0b.0:   bridge window [io  0xd000-0xdfff]
+[    0.534359] pci 0000:00:0b.0:   bridge window [mem 0xdfd00000-0xdfdfffff]
+[    0.534365] pci 0000:00:0c.0: PCI bridge to [bus 04]
+[    0.534369] pci 0000:00:0c.0:   bridge window [mem 0xdfc00000-0xdfcfffff]
+[    0.534375] pci 0000:00:0e.0: PCI bridge to [bus 05]
+[    0.534384] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.534386] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.534388] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000dffff window]
+[    0.534390] pci_bus 0000:00: resource 7 [mem 0x80000000-0xdfffffff window]
+[    0.534392] pci_bus 0000:00: resource 8 [mem 0x480000000-0x7fffffffff window]
+[    0.534394] pci_bus 0000:00: resource 9 [mem 0xfe010000-0xfe010fff window]
+[    0.534396] pci_bus 0000:00: resource 10 [mem 0xfa000000-0xfa0fffff window]
+[    0.534398] pci_bus 0000:00: resource 11 [mem 0xfb000000-0xfb7fffff window]
+[    0.534400] pci_bus 0000:00: resource 12 [mem 0xfa100000-0xfa1007ff window]
+[    0.534402] pci_bus 0000:01: resource 1 [mem 0xdfe00000-0xdfefffff]
+[    0.534404] pci_bus 0000:02: resource 2 [mem 0xdf000000-0xdf8fffff 64bit pref]
+[    0.534406] pci_bus 0000:03: resource 0 [io  0xd000-0xdfff]
+[    0.534408] pci_bus 0000:03: resource 1 [mem 0xdfd00000-0xdfdfffff]
+[    0.534410] pci_bus 0000:04: resource 1 [mem 0xdfc00000-0xdfcfffff]
+[    0.534868] PCI: CLS 64 bytes, default 64
+[    0.534960] Trying to unpack rootfs image as initramfs...
+[    1.256725] Freeing initrd memory: 30128K
+[    1.256832] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    1.256835] software IO TLB: mapped [mem 0x0000000058000000-0x000000005c000000] (64MB)
+[    1.257048] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1e4530a99b6, max_idle_ns: 440795257976 ns
+[    1.257076] clocksource: Switched to clocksource tsc
+[    1.257668] Initialise system trusted keyrings
+[    1.257686] Key type blacklist registered
+[    1.257750] workingset: timestamp_bits=36 max_order=22 bucket_order=0
+[    1.259424] zbud: loaded
+[    1.259678] integrity: Platform Keyring initialized
+[    1.259681] Key type asymmetric registered
+[    1.259683] Asymmetric key parser 'x509' registered
+[    1.259694] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    1.259754] io scheduler mq-deadline registered
+[    1.261057] pcieport 0000:00:06.0: PME: Signaling with IRQ 25
+[    1.261280] pcieport 0000:00:09.0: PME: Signaling with IRQ 26
+[    1.261521] pcieport 0000:00:0b.0: PME: Signaling with IRQ 27
+[    1.261756] pcieport 0000:00:0c.0: PME: Signaling with IRQ 28
+[    1.261999] pcieport 0000:00:0e.0: PME: Signaling with IRQ 29
+[    1.262143] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    1.262160] intel_idle: disabled
+[    1.262760] thermal LNXTHERM:00: registered as thermal_zone0
+[    1.262762] ACPI: Thermal Zone [TZ01] (0 C)
+[    1.262834] ERST: Error Record Serialization Table (ERST) support is initialized.
+[    1.262838] pstore: Registered erst as persistent store backend
+[    1.263004] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.263200] 00:04: ttyS0 at I/O 0x3f8 (irq = 10, base_baud = 115200) is a 16550A
+[    1.263914] 8250_mid 0000:00:1a.0: enabling device (0141 -> 0143)
+[    1.264095] 8250_mid 0000:00:1a.0: Found HSU DMA, 2 channels
+[    1.264171] 0000:00:1a.0: ttyS1 at MMIO 0xdff9b000 (irq = 30, base_baud = 115200) is a TI16750
+[    1.264517] 8250_mid 0000:00:1a.1: enabling device (0001 -> 0003)
+[    1.264694] 8250_mid 0000:00:1a.1: Found HSU DMA, 2 channels
+[    1.264750] 0000:00:1a.1: ttyS2 at MMIO 0xdff9a000 (irq = 31, base_baud = 115200) is a TI16750
+[    1.265071] 8250_mid 0000:00:1a.2: enabling device (0001 -> 0003)
+[    1.265248] 8250_mid 0000:00:1a.2: Found HSU DMA, 2 channels
+[    1.265304] 0000:00:1a.2: ttyS3 at MMIO 0xdff99000 (irq = 32, base_baud = 115200) is a TI16750
+[    1.265728] Linux agpgart interface v0.103
+[    1.265785] AMD-Vi: AMD IOMMUv2 functionality not available on this system - This is not a bug.
+[    1.266186] i8042: PNP: No PS/2 controller found.
+[    1.266254] mousedev: PS/2 mouse device common for all mice
+[    1.266285] rtc_cmos 00:02: RTC can wake from S4
+[    1.266692] rtc_cmos 00:02: registered as rtc0
+[    1.266764] rtc_cmos 00:02: setting system clock to 2026-03-08T04:58:54 UTC (1772945934)
+[    1.266795] rtc_cmos 00:02: alarms up to one month, y3k, 242 bytes nvram
+[    1.266814] intel_pstate: CPU model not supported
+[    1.266869] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.267344] NET: Registered protocol family 10
+[    1.278793] Segment Routing with IPv6
+[    1.278817] mip6: Mobile IPv6
+[    1.278820] NET: Registered protocol family 17
+[    1.278870] mpls_gso: MPLS GSO support
+[    1.279529] microcode: sig=0x506f1, pf=0x1, revision=0x38
+[    1.279560] microcode: Microcode Update Driver: v2.2.
+[    1.279641] resctrl: L2 allocation detected
+[    1.279649] IPI shorthand broadcast: enabled
+[    1.279670] sched_clock: Marking stable (1283208050, -3592212)->(1328459290, -48843452)
+[    1.279804] registered taskstats version 1
+[    1.279810] Loading compiled-in X.509 certificates
+[    1.339771] Loaded X.509 cert 'Debian Secure Boot CA: 6ccece7e4c6c0d1f6149f3dd27dfcc5cbb419ea1'
+[    1.339797] Loaded X.509 cert 'Debian Secure Boot Signer 2022 - linux: 14011249c2675ea8e5148542202005810584b25f'
+[    1.339845] zswap: loaded using pool lzo/zbud
+[    1.340022] Key type .fscrypt registered
+[    1.340024] Key type fscrypt-provisioning registered
+[    1.340159] pstore: Using crash dump compression: deflate
+[    1.340176] AppArmor: AppArmor sha1 policy hashing enabled
+[    1.341008] clk: Disabling unused clocks
+[    1.343133] Freeing unused decrypted memory: 2036K
+[    1.344095] Freeing unused kernel image (initmem) memory: 2704K
+[    1.352433] Write protecting the kernel read-only data: 22528k
+[    1.353352] Freeing unused kernel image (text/rodata gap) memory: 2040K
+[    1.353529] Freeing unused kernel image (rodata/data gap) memory: 420K
+[    1.417503] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    1.432436] Run /init as init process
+[    1.432439]   with arguments:
+[    1.432441]     /init
+[    1.432442]   with environment:
+[    1.432443]     HOME=/
+[    1.432445]     TERM=linux
+[    1.432446]     BOOT_IMAGE=/image-4.5.1-Enterprise_Standard/boot/vmlinuz-5.10.0-35-amd64
+[    1.432447]     biosdevname=0
+[    1.432448]     loop=image-4.5.1-Enterprise_Standard/fs.squashfs
+[    1.432449]     loopfstype=squashfs
+[    1.432450]     crashkernel=0M-2G:256M,2G-4G:256M,4G-8G:384M,8G-:448M
+[    1.432451]     varlog_size=4096
+[    1.432452]     intel_iommu=off
+[    1.432453]     cgroup_enable=memory
+[    1.432454]     softlockup_all_cpu_backtrace=1
+[    1.537931] ptp: module verification failed: signature and/or required key missing - tainting kernel
+[    1.538365] PTP clock support registered
+[    1.538673] dca service started, version 1.12.1
+[    1.539334] ismt_smbus 0000:00:12.0: SMBus clock is running at 100 kHz with delay 1000 us
+[    1.543274] SCSI subsystem initialized
+[    1.544864] igb: Intel(R) Gigabit Ethernet Network Driver
+[    1.544868] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.551131] sdhci: Secure Digital Host Controller Interface driver
+[    1.551135] sdhci: Copyright(c) Pierre Ossman
+[    1.551471] i801_smbus 0000:00:1f.4: enabling device (0000 -> 0003)
+[    1.551633] i801_smbus 0000:00:1f.4: SPD Write Disable is set
+[    1.551684] i801_smbus 0000:00:1f.4: SMBus using PCI interrupt
+[    1.554520] sdhci-pci 0000:00:1c.0: SDHCI controller found [8086:19db] (rev 11)
+[    1.555796] mmc0: SDHCI controller on PCI [0000:00:1c.0] using ADMA 64-bit
+[    1.557554] libata version 3.00 loaded.
+[    1.559271] ahci 0000:00:14.0: version 3.0
+[    1.561471] ACPI: bus type USB registered
+[    1.561518] usbcore: registered new interface driver usbfs
+[    1.561639] usbcore: registered new interface driver hub
+[    1.561671] usbcore: registered new device driver usb
+[    1.569713] ahci 0000:00:14.0: AHCI 0001.0301 32 slots 2 ports 6 Gbps 0x30 impl SATA mode
+[    1.569717] ahci 0000:00:14.0: flags: 64bit ncq led clo only pmp pio ems deso sadm sds apst 
+[    1.572170] xhci_hcd 0000:00:15.0: xHCI Host Controller
+[    1.572181] xhci_hcd 0000:00:15.0: new USB bus registered, assigned bus number 1
+[    1.572920] igb 0000:03:00.0: added PHC on eth0
+[    1.572942] igb 0000:03:00.0: Intel(R) Gigabit Ethernet Network Connection
+[    1.572945] igb 0000:03:00.0: eth0: (PCIe:2.5Gb/s:Width x1) b4:e9:b8:e7:ce:00
+[    1.572984] igb 0000:03:00.0: eth0: PBA No: 000300-000
+[    1.572986] igb 0000:03:00.0: Using MSI-X interrupts. 4 rx queue(s), 4 tx queue(s)
+[    1.573278] xhci_hcd 0000:00:15.0: hcc params 0x200077c1 hci version 0x100 quirks 0x0000000001109810
+[    1.573304] xhci_hcd 0000:00:15.0: cache line size of 64 is not supported
+[    1.573539] xhci_hcd 0000:00:15.0: xHCI Host Controller
+[    1.573544] xhci_hcd 0000:00:15.0: new USB bus registered, assigned bus number 2
+[    1.573548] xhci_hcd 0000:00:15.0: Host supports USB 3.0 SuperSpeed
+[    1.573607] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    1.573609] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.573611] usb usb1: Product: xHCI Host Controller
+[    1.573613] usb usb1: Manufacturer: Linux 5.10.0-35-amd64 xhci-hcd
+[    1.573614] usb usb1: SerialNumber: 0000:00:15.0
+[    1.573955] hub 1-0:1.0: USB hub found
+[    1.573972] hub 1-0:1.0: 4 ports detected
+[    1.574884] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.10
+[    1.574887] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.574889] usb usb2: Product: xHCI Host Controller
+[    1.574891] usb usb2: Manufacturer: Linux 5.10.0-35-amd64 xhci-hcd
+[    1.574892] usb usb2: SerialNumber: 0000:00:15.0
+[    1.575048] hub 2-0:1.0: USB hub found
+[    1.575170] hub 2-0:1.0: 4 ports detected
+[    1.581185] scsi host0: ahci
+[    1.581413] scsi host1: ahci
+[    1.581595] scsi host2: ahci
+[    1.581757] scsi host3: ahci
+[    1.581924] scsi host4: ahci
+[    1.582087] scsi host5: ahci
+[    1.582156] ata1: DUMMY
+[    1.582158] ata2: DUMMY
+[    1.582159] ata3: DUMMY
+[    1.582160] ata4: DUMMY
+[    1.582164] ata5: SATA max UDMA/133 abar m2048@0xdff9d000 port 0xdff9d300 irq 43
+[    1.582166] ata6: SATA max UDMA/133 abar m2048@0xdff9d000 port 0xdff9d380 irq 44
+[    1.645337] mmc0: new HS400 MMC card at address 0001
+[    1.647044] mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+[    1.647211] mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+[    1.647388] mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+[    1.647472] mmcblk0rpmb: mmc0:0001 Q2J54A partition 3 512 KiB, chardev (247:0)
+[    1.649858]  mmcblk0: p1 p2
+[    1.894619] ata6: SATA link down (SStatus 0 SControl 300)
+[    2.056437] ata5: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[    2.069455] ata5.00: ATA-10: M.2 (S42) 3IE4, L20B12, max UDMA/133
+[    2.069458] ata5.00: 125045424 sectors, multi 1: LBA48 NCQ (depth 32), AA
+[    2.087681] ata5.00: configured for UDMA/133
+[    2.087847] scsi 4:0:0:0: Direct-Access     ATA      M.2 (S42) 3IE4   12   PQ: 0 ANSI: 5
+[    2.094284] sd 4:0:0:0: [sda] 125045424 512-byte logical blocks: (64.0 GB/59.6 GiB)
+[    2.094303] sd 4:0:0:0: [sda] Write Protect is off
+[    2.094306] sd 4:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    2.094332] sd 4:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    2.094369] sda: detected capacity change from 0 to 64023257088
+[    2.112753] sda: detected capacity change from 0 to 64023257088
+[    2.114143]  sda: sda1 sda2 sda3
+[    2.128665] sda: detected capacity change from 0 to 64023257088
+[    2.128675] sd 4:0:0:0: [sda] Attached SCSI disk
+[    2.196973] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.347246] EXT4-fs (sda3): recovery complete
+[    2.347801] EXT4-fs (sda3): mounted filesystem with ordered data mode. Opts: (null)
+[    2.480445] loop: module loaded
+[    2.485200] loop0: detected capacity change from 0 to 579850240
+[    2.607275] loop1: detected capacity change from 0 to 4294967296
+[    2.627447] EXT4-fs (loop1): mounted filesystem with ordered data mode. Opts: (null)
+[    2.874310] systemd[1]: Inserted module 'autofs4'
+[    2.923628] systemd[1]: systemd 247.3-7+deb11u7 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +ZSTD +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    2.940533] systemd[1]: Detected architecture x86-64.
+[    2.943077] systemd[1]: Set hostname to <MYBLE01-DC-0409-SI02>.
+[    2.946733] IPv6: PREDAD not set IP6: 00000000000000000000000000000001/80 state: 00000001
+[    3.089898] systemd[1]: /lib/systemd/system/config-setup.service:10: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+[    3.089914] systemd[1]: /lib/systemd/system/config-setup.service:11: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+[    3.130577] systemd[1]: /lib/systemd/system/ztp.service:9: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+[    3.130593] systemd[1]: /lib/systemd/system/ztp.service:10: Standard output type syslog+console is obsolete, automatically updating to journal+console. Please update your unit file, and consider removing the setting altogether.
+[    3.132266] systemd[1]: /etc/systemd/system/tpcm@.service:8: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+[    3.132279] systemd[1]: /etc/systemd/system/tpcm@.service:9: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+[    3.133405] systemd[1]: /etc/systemd/system/tpcm@.service:8: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+[    3.133418] systemd[1]: /etc/systemd/system/tpcm@.service:9: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+[    3.145698] systemd[1]: /etc/systemd/system/ssh.service.d/override.conf:5: Unknown key name 'StartLimitIntervalSec' in section 'Service', ignoring.
+[    3.152661] systemd[1]: /lib/systemd/system/in-memory.service:7: Standard output type syslog+console is obsolete, automatically updating to journal+console. Please update your unit file, and consider removing the setting altogether.
+[    3.153046] systemd[1]: /lib/systemd/system/in-memory-log-rotate-daemon.service:7: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+[    3.153853] systemd[1]: /lib/systemd/system/histogram.service:7: Standard output type syslog+console is obsolete, automatically updating to journal+console. Please update your unit file, and consider removing the setting altogether.
+[    3.159228] systemd[1]: /lib/systemd/system/disk-log-rotate-daemon.service:7: Standard output type syslog is obsolete, automatically updating to journal. Please update your unit file, and consider removing the setting altogether.
+[    3.191935] systemd[1]: Queued start job for default target Graphical Interface.
+[    3.208768] systemd[1]: Created slice sonic.slice.
+[    3.209299] systemd[1]: cgroup compatibility translation between legacy and unified hierarchy settings activated. See cgroup-compat debug messages for details.
+[    3.209456] systemd[1]: Created slice sonic-core.slice.
+[    3.210026] systemd[1]: Created slice sonic-bgp.slice.
+[    3.211647] systemd[1]: Created slice system-getty.slice.
+[    3.212512] systemd[1]: Created slice system-modprobe.slice.
+[    3.213343] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[    3.214197] systemd[1]: Created slice system-tpcm.slice.
+[    3.214972] systemd[1]: Created slice User and Session Slice.
+[    3.215098] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    3.215190] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    3.215489] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    3.215552] systemd[1]: Reached target Local Encrypted Volumes.
+[    3.215626] systemd[1]: Reached target Network is Online.
+[    3.215662] systemd[1]: Reached target Paths.
+[    3.215701] systemd[1]: Reached target Remote File Systems.
+[    3.215725] systemd[1]: Reached target Slices.
+[    3.215773] systemd[1]: Reached target Swap.
+[    3.218249] systemd[1]: Listening on Process Core Dump Socket.
+[    3.218358] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    3.218700] systemd[1]: Listening on Journal Audit Socket.
+[    3.218883] systemd[1]: Listening on Journal Socket (/dev/log).
+[    3.219108] systemd[1]: Listening on Journal Socket.
+[    3.220046] systemd[1]: Listening on udev Control Socket.
+[    3.220229] systemd[1]: Listening on udev Kernel Socket.
+[    3.222089] systemd[1]: Mounting Huge Pages File System...
+[    3.224005] systemd[1]: Mounting POSIX Message Queue File System...
+[    3.226097] systemd[1]: Mounting Kernel Debug File System...
+[    3.227865] systemd[1]: Mounting Kernel Trace File System...
+[    3.230327] systemd[1]: Starting Create list of static device nodes for the current kernel...
+[    3.231932] systemd[1]: Starting Load Kernel Module configfs...
+[    3.233395] systemd[1]: Starting Load Kernel Module drm...
+[    3.234986] systemd[1]: Starting Load Kernel Module fuse...
+[    3.238471] systemd[1]: Starting Network initialization...
+[    3.240394] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    3.252799] systemd[1]: Starting Load Kernel Modules...
+[    3.255270] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    3.257676] systemd[1]: Starting Coldplug All udev Devices...
+[    3.262374] systemd[1]: Mounted Huge Pages File System.
+[    3.262540] fuse: init (API version 7.32)
+[    3.262593] systemd[1]: Mounted POSIX Message Queue File System.
+[    3.262772] systemd[1]: Mounted Kernel Debug File System.
+[    3.262928] systemd[1]: Mounted Kernel Trace File System.
+[    3.263922] systemd[1]: Finished Create list of static device nodes for the current kernel.
+[    3.264526] systemd[1]: modprobe@configfs.service: Succeeded.
+[    3.265130] systemd[1]: Finished Load Kernel Module configfs.
+[    3.267483] systemd[1]: Mounting Kernel Configuration File System...
+[    3.268212] systemd[1]: modprobe@fuse.service: Succeeded.
+[    3.268919] systemd[1]: Finished Load Kernel Module fuse.
+[    3.271638] systemd[1]: Mounting FUSE Control File System...
+[    3.272546] i2c /dev entries driver
+[    3.275074] systemd[1]: Mounted Kernel Configuration File System.
+[    3.278598] systemd[1]: Mounted FUSE Control File System.
+[    3.285571] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    3.286835] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[    3.286902] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    3.288763] systemd[1]: Starting Load/Save Random Seed...
+[    3.290131] IPMI message handler: version 39.2
+[    3.291289] systemd[1]: Starting Create System Users...
+[    3.296864] ipmi device interface
+[    3.302273] ipmi_si: IPMI System Interface driver
+[    3.302307] ipmi_si dmi-ipmi-si.0: ipmi_platform: probing via SMBIOS
+[    3.302310] ipmi_platform: ipmi_si: SMBIOS: io 0xca2 regsize 1 spacing 1 irq 0
+[    3.302312] ipmi_si: Adding SMBIOS-specified kcs state machine
+[    3.302422] ipmi_si IPI0001:01: ipmi_platform: probing via ACPI
+[    3.302570] ipmi_si IPI0001:01: ipmi_platform: [io  0x0ca2] regsize 1 spacing 1 irq 0
+[    3.306381] systemd[1]: Finished Load/Save Random Seed.
+[    3.306644] systemd[1]: Condition check resulted in First Boot Complete being skipped.
+[    3.314297] systemd[1]: Finished Create System Users.
+[    3.315156] ipmi_si dmi-ipmi-si.0: Removing SMBIOS-specified kcs state machine in favor of ACPI
+[    3.315161] ipmi_si: Adding ACPI-specified kcs state machine
+[    3.315258] ipmi_si: Trying ACPI-specified kcs state machine at i/o address 0xca2, slave address 0x20, irq 0
+[    3.316363] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    3.325328] ACPI: bus type drm_connector registered
+[    3.326367] systemd[1]: modprobe@drm.service: Succeeded.
+[    3.326913] systemd[1]: Finished Load Kernel Module drm.
+[    3.337424] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    3.337572] systemd[1]: Reached target Local File Systems (Pre).
+[    3.337606] systemd[1]: Reached target Local File Systems.
+[    3.338192] systemd[1]: Listening on Syslog Socket.
+[    3.340071] systemd[1]: Starting Load AppArmor profiles...
+[    3.340217] systemd[1]: Condition check resulted in Store a System Token in an EFI Variable being skipped.
+[    3.342926] systemd[1]: Starting Journal Service...
+[    3.343020] systemd[1]: Condition check resulted in Commit a transient machine-id on disk being skipped.
+[    3.345887] systemd[1]: Starting Rule-based Manager for Device Events and Files...
+[    3.406133] systemd[1]: Started Rule-based Manager for Device Events and Files.
+[    3.462907] audit: type=1400 audit(1772945936.692:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=340 comm="apparmor_parser"
+[    3.462916] audit: type=1400 audit(1772945936.692:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=340 comm="apparmor_parser"
+[    3.462920] audit: type=1400 audit(1772945936.692:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=339 comm="apparmor_parser"
+[    3.463272] audit: type=1400 audit(1772945936.692:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="tcpdump" pid=341 comm="apparmor_parser"
+[    3.463425] systemd[1]: Finished Coldplug All udev Devices.
+[    3.464966] audit: type=1400 audit(1772945936.696:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/haveged" pid=342 comm="apparmor_parser"
+[    3.475916] audit: type=1400 audit(1772945936.704:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/ntpd" pid=343 comm="apparmor_parser"
+[    3.479123] systemd[1]: Finished Load AppArmor profiles.
+[    3.501734] systemd[1]: Started Journal Service.
+[    3.517130] systemd-journald[309]: Received client request to flush runtime journal.
+[    3.555087] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    3.568705] ACPI: Power Button [PWRF]
+[    3.574753] dell_s5248f_fpga_ocores: loading out-of-tree module taints kernel.
+[    3.575176] vendor 0x10ee, num_bus 0x10
+[    3.625133] IPv6: PREDAD not set IP6: 00000000000000000000000000000001/80 state: 00000001
+[    3.658122] sd 4:0:0:0: Attached scsi generic sg0 type 0
+[    3.734466] pstore: ignoring unexpected backend 'efi'
+[    3.738887] input: PC Speaker as /devices/platform/pcspkr/input/input1
+[    3.799861] iTCO_vendor_support: vendor-support=0
+[    3.849580] iTCO_wdt: Intel TCO WatchDog Timer Driver v1.11
+[    3.849668] iTCO_wdt: [ACPI] WDDT is not present in ACPI table
+[    3.849670] iTCO_wdt: [ACPI] WDAT is not present in ACPI table
+[    3.849679] iTCO_wdt: Found a Intel PCH TCO device (Version=4, TCOBASE=0x0400)
+[    3.865192] iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[    3.896787] ipmi_si IPI0001:01: IPMI message handler: Found new BMC (man_id: 0x0002a2, prod_id: 0x1480, dev_id: 0x20)
+[    3.961442] RAPL PMU: API unit is 2^-32 Joules, 3 fixed counters, 655360 ms ovfl timer
+[    3.961446] RAPL PMU: hw unit of domain pp0-core 2^-14 Joules
+[    3.961447] RAPL PMU: hw unit of domain package 2^-14 Joules
+[    3.961448] RAPL PMU: hw unit of domain dram 2^-14 Joules
+[    3.966337] cryptd: max_cpu_qlen set to 1000
+[    3.973425] SSE version of gcm_enc/dec engaged.
+[    4.096968] EDAC MC0: Giving out device to module pnd2_edac controller Pondicherry2: DEV pnd2/dnv (INTERRUPT)
+[    4.103657] intel_rapl_common: Found RAPL domain package
+[    4.103661] intel_rapl_common: Found RAPL domain core
+[    4.103664] intel_rapl_common: Found RAPL domain dram
+[    4.344572] ipmi_si IPI0001:01: IPMI kcs interface initialized
+[    4.346956] ipmi_ssif: IPMI SSIF Interface driver
+[    4.389602] IPv6: PREDAD not set IP6: 00000000000000000000000000000001/80 state: 00000001
+[    4.688497] rds_thread created successfully.
+[    4.688520] rb: waiting for panic event...
+[    5.473123] EXT4-fs (ramdisk): mounted filesystem with ordered data mode. Opts: (null)
+[    5.473137] ext4 filesystem being mounted at /var/log/ramfs supports timestamps until 2038-01-19 (0x7fffffff)
+[    6.125697] EXT4-fs (sda2): recovery complete
+[    6.126097] EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+[    6.126110] ext4 filesystem being mounted at /mnt/onie-boot supports timestamps until 2038-01-19 (0x7fffffff)
+[    6.942302] loop2: detected capacity change from 0 to 6726615040
+[    6.992263] EXT4-fs (loop2): recovery complete
+[    6.992644] EXT4-fs (loop2): mounted filesystem with ordered data mode. Opts: (null)
+[    7.146976] platform microcode: firmware: direct-loading firmware intel-ucode/06-5f-01
+[    7.157378] microcode: updated to revision 0x3e, date = 2023-10-05
+[    7.167278] microcode: Reload succeeded, microcode revision: 0x38 -> 0x3e
+[    7.266643] linux-kernel-bde (866): Allocating DMA memory using method dmaalloc=0
+[    7.283857] linux-kernel-bde (866): DMA buffer pool before mapping kernel_virt:0xffffa0af01200000 physical:0x1200000 size:0x2000000 dmaalloc:0
+[    7.283864] linux-kernel-bde (866): _init(3302):use_msi = 0
+[    7.284027] linux-kernel-bde (866): probing: vendor_id=0x14e4, device_id=0xb873
+[    7.284030] linux-kernel-bde (866): Enabling PCI device : vendor_id=0x14e4, device_id=0xb873
+[    7.284042] linux-kernel-bde 0000:02:00.0: enabling device (0140 -> 0142)
+[    7.284141] linux-kernel-bde (866): found irq 16
+[    7.284143] linux-kernel-bde (866): _pci_probe:irq = 16
+[    7.284156] linux-kernel-bde (866): Set max payload size (128)
+[    7.284158] linux-kernel-bde (866): Set max payload val (0)
+[    7.284174] linux-kernel-bde (866): Found VSEC (4276494)
+[    7.284231] linux-kernel-bde (866): BAR 2: kernel addr:0xffffbfcd81000000 phys addr:0xdf000000 length:800000
+[    7.284239] linux-kernel-bde (866): BAR 0: kernel addr:0xffffbfcd80848000 phys addr:0xdf800000 length:8000
+[    7.284240] linux-kernel-bde (866): config_pci_intr_type: msi = 0
+[    7.284252] linux-kernel-bde (866): Found VSEC (4276494)
+[    7.284254] linux-kernel-bde (866): iproc version = 0xe dma_hi_bits  =  0x0
+[    7.284260] linux-kernel-bde (866): enable PCI resources 0x146 (PCI_COMMAND)
+[    7.284262] linux-kernel-bde (866): PCI resource len 8MB
+[    7.284264] linux-kernel-bde (866): _pci_probe: configured dev:0xb873 rev:0x1 with base_addresses: 0xffffbfcd81000000 0xffffbfcd80848000
+[    7.284269] linux-kernel-bde (866): Mapped DMA buffer pool _use_dma_mapping:1 kernel_virt:0xffffa0af01200000 dma_bus:0x1200000 physical:0x1200000 size:0x2000000 dmaalloc:0, dma64_support:0
+[    7.284370] linux-kernel-bde (866): Not find vendor(0x184e) device(0x1004) bus
+[    7.284372] linux-kernel-bde (866): Not find vendor(0x184e) device(0x1004) bus
+[    7.284373] linux-kernel-bde (866): Not find vendor(0x184e) device(0x1004) bus
+[    7.284375] linux-kernel-bde (866): Not find vendor(0x184e) device(0x1004) bus
+[    7.290831] linux-kernel-bde (869): _get_cmic_ver:Found VSEC = 4276494
+[    7.322021] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    7.322025] Hardware flood-offload cb initialized.
+[    7.322026] SAG attributes pointer initialized.
+
+[    7.329288] Setting alias name bcm0 to bcm0.
+[    7.329533] Created Ethernet device bcm0.
+[    7.366479] KNET PCAP Init ...Done!!!
+[    7.366486] mirror_cb_init done. proc '/proc/bcm/knet-cb/mirror/info'
+[    7.590872] Initializing XFRM netlink socket
+[    8.189998] i2c i2c-0: new_device: Instantiated device 24c16 at 0x50
+[    8.194142] at24 0-0050: supply vcc not found, using dummy regulator
+[    8.198556] at24 0-0050: 2048 byte 24c16 EEPROM, writable, 1 bytes/write
+[    9.411223] i2c i2c-603: Added multiplexed i2c bus 2
+[    9.411416] i2c i2c-603: Added multiplexed i2c bus 3
+[    9.411598] i2c i2c-603: Added multiplexed i2c bus 4
+[    9.411781] i2c i2c-603: Added multiplexed i2c bus 5
+[    9.411965] i2c i2c-603: Added multiplexed i2c bus 6
+[    9.412189] i2c i2c-603: Added multiplexed i2c bus 7
+[    9.412376] i2c i2c-603: Added multiplexed i2c bus 8
+[    9.414298] i2c i2c-603: Added multiplexed i2c bus 9
+[    9.414302] pca954x 603-0074: registered 8 multiplexed busses for I2C switch pca9548
+[    9.414452] i2c i2c-603: new_device: Instantiated device pca9548 at 0x74
+[    9.517413] i2c i2c-604: Added multiplexed i2c bus 10
+[    9.517495] i2c i2c-604: Added multiplexed i2c bus 11
+[    9.518237] i2c i2c-604: Added multiplexed i2c bus 12
+[    9.518654] i2c i2c-604: Added multiplexed i2c bus 13
+[    9.519270] i2c i2c-604: Added multiplexed i2c bus 14
+[    9.519674] i2c i2c-604: Added multiplexed i2c bus 15
+[    9.520281] i2c i2c-604: Added multiplexed i2c bus 16
+[    9.520712] i2c i2c-604: Added multiplexed i2c bus 17
+[    9.520716] pca954x 604-0074: registered 8 multiplexed busses for I2C switch pca9548
+[    9.520745] i2c i2c-604: new_device: Instantiated device pca9548 at 0x74
+[    9.623673] i2c i2c-605: Added multiplexed i2c bus 18
+[    9.624435] i2c i2c-605: Added multiplexed i2c bus 19
+[    9.624845] i2c i2c-605: Added multiplexed i2c bus 20
+[    9.625106] i2c i2c-605: Added multiplexed i2c bus 21
+[    9.625189] i2c i2c-605: Added multiplexed i2c bus 22
+[    9.625259] i2c i2c-605: Added multiplexed i2c bus 23
+[    9.625334] i2c i2c-605: Added multiplexed i2c bus 24
+[    9.625413] i2c i2c-605: Added multiplexed i2c bus 25
+[    9.625416] pca954x 605-0074: registered 8 multiplexed busses for I2C switch pca9548
+[    9.625443] i2c i2c-605: new_device: Instantiated device pca9548 at 0x74
+[    9.728283] i2c i2c-606: Added multiplexed i2c bus 26
+[    9.729118] i2c i2c-606: Added multiplexed i2c bus 27
+[    9.729542] i2c i2c-606: Added multiplexed i2c bus 28
+[    9.730148] i2c i2c-606: Added multiplexed i2c bus 29
+[    9.730540] i2c i2c-606: Added multiplexed i2c bus 30
+[    9.730620] i2c i2c-606: Added multiplexed i2c bus 31
+[    9.730692] i2c i2c-606: Added multiplexed i2c bus 32
+[    9.730762] i2c i2c-606: Added multiplexed i2c bus 33
+[    9.730765] pca954x 606-0074: registered 8 multiplexed busses for I2C switch pca9548
+[    9.730791] i2c i2c-606: new_device: Instantiated device pca9548 at 0x74
+[    9.833810] i2c i2c-607: Added multiplexed i2c bus 34
+[    9.833882] i2c i2c-607: Added multiplexed i2c bus 35
+[    9.833951] i2c i2c-607: Added multiplexed i2c bus 36
+[    9.834701] i2c i2c-607: Added multiplexed i2c bus 37
+[    9.834777] i2c i2c-607: Added multiplexed i2c bus 38
+[    9.834845] i2c i2c-607: Added multiplexed i2c bus 39
+[    9.834912] i2c i2c-607: Added multiplexed i2c bus 40
+[    9.835342] i2c i2c-607: Added multiplexed i2c bus 41
+[    9.835346] pca954x 607-0074: registered 8 multiplexed busses for I2C switch pca9548
+[    9.835377] i2c i2c-607: new_device: Instantiated device pca9548 at 0x74
+[    9.938202] i2c i2c-608: Added multiplexed i2c bus 42
+[    9.938888] i2c i2c-608: Added multiplexed i2c bus 43
+[    9.939300] i2c i2c-608: Added multiplexed i2c bus 44
+[    9.939384] i2c i2c-608: Added multiplexed i2c bus 45
+[    9.939457] i2c i2c-608: Added multiplexed i2c bus 46
+[    9.940072] i2c i2c-608: Added multiplexed i2c bus 47
+[    9.940149] i2c i2c-608: Added multiplexed i2c bus 48
+[    9.940218] i2c i2c-608: Added multiplexed i2c bus 49
+[    9.940221] pca954x 608-0074: registered 8 multiplexed busses for I2C switch pca9548
+[    9.940252] i2c i2c-608: new_device: Instantiated device pca9548 at 0x74
+[   10.043095] i2c i2c-609: Added multiplexed i2c bus 50
+[   10.043165] i2c i2c-609: Added multiplexed i2c bus 51
+[   10.043235] i2c i2c-609: Added multiplexed i2c bus 52
+[   10.043312] i2c i2c-609: Added multiplexed i2c bus 53
+[   10.043380] i2c i2c-609: Added multiplexed i2c bus 54
+[   10.043465] i2c i2c-609: Added multiplexed i2c bus 55
+[   10.043533] i2c i2c-609: Added multiplexed i2c bus 56
+[   10.043602] i2c i2c-609: Added multiplexed i2c bus 57
+[   10.043605] pca954x 609-0074: registered 8 multiplexed busses for I2C switch pca9548
+[   10.043629] i2c i2c-609: new_device: Instantiated device pca9548 at 0x74
+[   13.047147] i2c i2c-2: new_device: Instantiated device optoe2 at 0x50
+[   13.047253] i2c i2c-3: new_device: Instantiated device optoe2 at 0x50
+[   13.047343] i2c i2c-4: new_device: Instantiated device optoe2 at 0x50
+[   13.047435] i2c i2c-5: new_device: Instantiated device optoe2 at 0x50
+[   13.047523] i2c i2c-6: new_device: Instantiated device optoe2 at 0x50
+[   13.047613] i2c i2c-7: new_device: Instantiated device optoe2 at 0x50
+[   13.047706] i2c i2c-8: new_device: Instantiated device optoe2 at 0x50
+[   13.047813] i2c i2c-9: new_device: Instantiated device optoe2 at 0x50
+[   13.047910] i2c i2c-10: new_device: Instantiated device optoe2 at 0x50
+[   13.048014] i2c i2c-11: new_device: Instantiated device optoe2 at 0x50
+[   13.048109] i2c i2c-12: new_device: Instantiated device optoe2 at 0x50
+[   13.048203] i2c i2c-13: new_device: Instantiated device optoe2 at 0x50
+[   13.048302] i2c i2c-14: new_device: Instantiated device optoe2 at 0x50
+[   13.048393] i2c i2c-15: new_device: Instantiated device optoe2 at 0x50
+[   13.048510] i2c i2c-16: new_device: Instantiated device optoe2 at 0x50
+[   13.048603] i2c i2c-17: new_device: Instantiated device optoe2 at 0x50
+[   13.048700] i2c i2c-18: new_device: Instantiated device optoe2 at 0x50
+[   13.048801] i2c i2c-19: new_device: Instantiated device optoe2 at 0x50
+[   13.048897] i2c i2c-20: new_device: Instantiated device optoe2 at 0x50
+[   13.048990] i2c i2c-21: new_device: Instantiated device optoe2 at 0x50
+[   13.049081] i2c i2c-22: new_device: Instantiated device optoe2 at 0x50
+[   13.049175] i2c i2c-23: new_device: Instantiated device optoe2 at 0x50
+[   13.049272] i2c i2c-24: new_device: Instantiated device optoe2 at 0x50
+[   13.049369] i2c i2c-25: new_device: Instantiated device optoe2 at 0x50
+[   13.049464] i2c i2c-26: new_device: Instantiated device optoe2 at 0x50
+[   13.049556] i2c i2c-27: new_device: Instantiated device optoe2 at 0x50
+[   13.049651] i2c i2c-28: new_device: Instantiated device optoe2 at 0x50
+[   13.049743] i2c i2c-29: new_device: Instantiated device optoe2 at 0x50
+[   13.049839] i2c i2c-30: new_device: Instantiated device optoe2 at 0x50
+[   13.049927] i2c i2c-31: new_device: Instantiated device optoe2 at 0x50
+[   13.050022] i2c i2c-32: new_device: Instantiated device optoe2 at 0x50
+[   13.050110] i2c i2c-33: new_device: Instantiated device optoe2 at 0x50
+[   13.050203] i2c i2c-34: new_device: Instantiated device optoe2 at 0x50
+[   13.050301] i2c i2c-35: new_device: Instantiated device optoe2 at 0x50
+[   13.050391] i2c i2c-36: new_device: Instantiated device optoe2 at 0x50
+[   13.050489] i2c i2c-37: new_device: Instantiated device optoe2 at 0x50
+[   13.050580] i2c i2c-38: new_device: Instantiated device optoe2 at 0x50
+[   13.050671] i2c i2c-39: new_device: Instantiated device optoe2 at 0x50
+[   13.050759] i2c i2c-40: new_device: Instantiated device optoe2 at 0x50
+[   13.050849] i2c i2c-41: new_device: Instantiated device optoe2 at 0x50
+[   13.050966] i2c i2c-42: new_device: Instantiated device optoe2 at 0x50
+[   13.051056] i2c i2c-43: new_device: Instantiated device optoe2 at 0x50
+[   13.051161] i2c i2c-44: new_device: Instantiated device optoe2 at 0x50
+[   13.051256] i2c i2c-45: new_device: Instantiated device optoe2 at 0x50
+[   13.051350] i2c i2c-46: new_device: Instantiated device optoe2 at 0x50
+[   13.051441] i2c i2c-47: new_device: Instantiated device optoe2 at 0x50
+[   13.051531] i2c i2c-48: new_device: Instantiated device optoe2 at 0x50
+[   13.052373] i2c i2c-49: new_device: Instantiated device optoe2 at 0x50
+[   13.052506] i2c i2c-50: new_device: Instantiated device optoe1 at 0x50
+[   13.052601] i2c i2c-51: new_device: Instantiated device optoe1 at 0x50
+[   13.052693] i2c i2c-52: new_device: Instantiated device optoe1 at 0x50
+[   13.052784] i2c i2c-53: new_device: Instantiated device optoe1 at 0x50
+[   13.052878] i2c i2c-54: new_device: Instantiated device optoe1 at 0x50
+[   13.052968] i2c i2c-55: new_device: Instantiated device optoe1 at 0x50
+[   13.053062] i2c i2c-56: new_device: Instantiated device optoe1 at 0x50
+[   13.054977] i2c i2c-57: new_device: Instantiated device optoe1 at 0x50
+[   13.080718] optoe 2-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.080839] optoe 3-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.080940] optoe 4-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081007] optoe 5-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081071] optoe 6-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081164] optoe 7-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081232] optoe 8-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081301] optoe 9-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081371] optoe 10-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081438] optoe 11-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081504] optoe 12-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081578] optoe 13-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081651] optoe 14-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081716] optoe 15-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081784] optoe 16-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081851] optoe 17-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081922] optoe 18-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.081988] optoe 19-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082056] optoe 20-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082129] optoe 21-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082198] optoe 22-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082264] optoe 23-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082328] optoe 24-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082394] optoe 25-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082463] optoe 26-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082555] optoe 27-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082623] optoe 28-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082712] optoe 29-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082775] optoe 30-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082840] optoe 31-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082906] optoe 32-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.082972] optoe 33-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083039] optoe 34-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083102] optoe 35-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083168] optoe 36-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083238] optoe 37-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083304] optoe 38-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083369] optoe 39-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083433] optoe 40-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083498] optoe 41-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083567] optoe 42-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083632] optoe 43-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083699] optoe 44-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083763] optoe 45-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083849] optoe 46-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083916] optoe 47-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.083982] optoe 48-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.084049] optoe 49-0050: 33152 byte optoe2 EEPROM, read/write
+[   13.084074] optoe 50-0050: 32896 byte optoe1 EEPROM, read/write
+[   13.084099] optoe 51-0050: 32896 byte optoe1 EEPROM, read/write
+[   13.084124] optoe 52-0050: 32896 byte optoe1 EEPROM, read/write
+[   13.084163] optoe 53-0050: 32896 byte optoe1 EEPROM, read/write
+[   13.084205] optoe 54-0050: 32896 byte optoe1 EEPROM, read/write
+[   13.084234] optoe 55-0050: 32896 byte optoe1 EEPROM, read/write
+[   13.084258] optoe 56-0050: 32896 byte optoe1 EEPROM, read/write
+[   13.084283] optoe 57-0050: 32896 byte optoe1 EEPROM, read/write
+[   34.061689] u32 classifier
+[   34.061694]     Performance counters on
+[   34.061695]     input device check on
+[   34.061695]     Actions configured
+[   44.628277] KNET PCAP cleanup ...Done!!!
+[   45.691802] linux-kernel-bde (4346): _interrupt_disconnect d 0
+[   45.691807] linux-kernel-bde (4346): _interrupt_disconnect: isr_active = 0
+[   45.691809] linux-kernel-bde (4346): disconnect secondary isr
+[   45.784076] linux-kernel-bde (4350): Freeing DMA buffer pool kernel_virt:0xffffa0af01200000 size:0x2000000 dmaalloc:0 ndevices=1
+[   45.784278] linux-kernel-bde (4350): PCI device 14e4:b873 is removed. 
+[   45.784307] linux-kernel-bde (4350): MSI not used
+[   45.932062] linux-kernel-bde (4384): Allocating DMA memory using method dmaalloc=0
+[   45.942365] linux-kernel-bde (4384): DMA buffer pool before mapping kernel_virt:0xffffa0af01200000 physical:0x1200000 size:0x2000000 dmaalloc:0
+[   45.942372] linux-kernel-bde (4384): _init(3302):use_msi = 0
+[   45.943429] linux-kernel-bde (4384): probing: vendor_id=0x14e4, device_id=0xb873
+[   45.943433] linux-kernel-bde (4384): Enabling PCI device : vendor_id=0x14e4, device_id=0xb873
+[   45.943471] linux-kernel-bde (4384): found irq 16
+[   45.943473] linux-kernel-bde (4384): _pci_probe:irq = 16
+[   45.943486] linux-kernel-bde (4384): Set max payload size (128)
+[   45.943488] linux-kernel-bde (4384): Set max payload val (0)
+[   45.943504] linux-kernel-bde (4384): Found VSEC (4276494)
+[   45.946834] linux-kernel-bde (4384): BAR 2: kernel addr:0xffffbfcd83000000 phys addr:0xdf000000 length:800000
+[   45.946846] linux-kernel-bde (4384): BAR 0: kernel addr:0xffffbfcd80b08000 phys addr:0xdf800000 length:8000
+[   45.946847] linux-kernel-bde (4384): config_pci_intr_type: msi = 0
+[   45.946861] linux-kernel-bde (4384): Found VSEC (4276494)
+[   45.946867] linux-kernel-bde (4384): iproc version = 0xe dma_hi_bits  =  0x0
+[   45.946873] linux-kernel-bde (4384): PCI resource len 8MB
+[   45.946875] linux-kernel-bde (4384): _pci_probe: configured dev:0xb873 rev:0x1 with base_addresses: 0xffffbfcd83000000 0xffffbfcd80b08000
+[   45.946880] linux-kernel-bde (4384): Mapped DMA buffer pool _use_dma_mapping:1 kernel_virt:0xffffa0af01200000 dma_bus:0x1200000 physical:0x1200000 size:0x2000000 dmaalloc:0, dma64_support:0
+[   45.947532] linux-kernel-bde (4384): Not find vendor(0x184e) device(0x1004) bus
+[   45.947535] linux-kernel-bde (4384): Not find vendor(0x184e) device(0x1004) bus
+[   45.947537] linux-kernel-bde (4384): Not find vendor(0x184e) device(0x1004) bus
+[   45.947548] linux-kernel-bde (4384): Not find vendor(0x184e) device(0x1004) bus
+[   45.953036] linux-kernel-bde (4385): _get_cmic_ver:Found VSEC = 4276494
+[   45.959743] Setting alias name bcm0 to bcm0.
+[   45.961828] Created Ethernet device bcm0.
+[   45.988579] KNET PCAP Init ...Done!!!
+[   45.988586] mirror_cb_init done. proc '/proc/bcm/knet-cb/mirror/info'
+[   62.078183] PortChannel100: Mode changed to "loadbalance"
+[   62.264255] linux-kernel-bde (6285): lkbde_intr_cb_register d 0
+[   62.264260] linux-kernel-bde (6285): _interrupt_connect d 0
+[   62.264262] linux-kernel-bde (6285): _interrupt_connect:isr_active = 0
+[   62.264263] linux-kernel-bde (6285): connect primary isr
+[   62.264276] linux-kernel-bde (6285): _interrupt_connect(4054):device# = 0, irq_flags = 128, irq = 16
+[   64.668856] linux-kernel-bde (6285): _interrupt_connect d 0
+[   64.668861] linux-kernel-bde (6285): _interrupt_connect:isr_active = 1
+[   64.668863] linux-kernel-bde (6285): connect secondary isr
+[   66.301199] Bridge: port 1(dummy) entered blocking state
+[   66.301205] Bridge: port 1(dummy) entered disabled state
+[   66.301278] device dummy entered promiscuous mode
+[   66.301336] Bridge: port 1(dummy) entered blocking state
+[   66.301339] Bridge: port 1(dummy) entered forwarding state
+[   67.807644] 8021q: 802.1Q VLAN Support v1.8
+[   67.807670] 8021q: adding VLAN 0 to HW filter on device PortChannel100
+[   67.927777] Bridge: port 2(PortChannel100) entered blocking state
+[   67.927782] Bridge: port 2(PortChannel100) entered disabled state
+[   67.927913] device PortChannel100 entered promiscuous mode
+[   77.195043] Setting alias name CPU to CPU.
+[   77.195317] Created Ethernet device CPU.
+[   77.195337] added knet-cb netif 'CPU'
+[   77.195341] Created CPU tx device 'CPU' (type 0, port 131, phys_port 131, qnum 0)
+[   77.195342] Registered HW flood device
+[   77.195343] CPU tx device 'CPU' registered with bridge!
+[   77.195482] bkn_proc_link_write: Set operation status DOWN urgent to host interface CPU
+[   77.205825] bkn_proc_link_write: Set operation status UP to host interface CPU
+[   81.337465] STATS_CB: Added desc 'lacp' to KNET rx queue 23 stats
+[   81.411806] STATS_CB: Added desc 'bfdv6' to KNET rx queue 20 stats
+[   81.465530] STATS_CB: Added desc 'bfd' to KNET rx queue 20 stats
+[   81.489393] STATS_CB: Added desc 'arp_req' to KNET rx queue 10 stats
+[   81.501396] STATS_CB: Added desc 'arp_resp' to KNET rx queue 10 stats
+[   81.578738] STATS_CB: Added desc 'neigh_discovery' to KNET rx queue 10 stats
+[   82.464959] Setting alias name Mirror to Mirror.
+[   82.465312] Created Ethernet device Mirror.
+[   82.465333] added knet-cb netif 'Mirror'
+[   82.465453] bkn_proc_link_write: Set operation status DOWN urgent to host interface Mirror
+[   82.691084] Setting alias name Drop-Mirror to Drop-Mirror.
+[   82.691442] Created Ethernet device Drop-Mirror.
+[   82.691466] added knet-cb netif 'Drop-Mirror'
+[   82.691596] bkn_proc_link_write: Set operation status DOWN urgent to host interface Drop-Mirror
+[   84.556694] Setting alias name Ethernet64 to Ethernet64.
+[   84.557015] Created Ethernet device Ethernet64.
+[   84.557038] added knet-cb netif 'Ethernet64'
+[   84.557193] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet64
+[   85.097735] Setting alias name Ethernet72 to Ethernet72.
+[   85.098049] Created Ethernet device Ethernet72.
+[   85.098071] added knet-cb netif 'Ethernet72'
+[   85.098208] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet72
+[   85.425670] Setting alias name Ethernet24 to Ethernet24.
+[   85.425993] Created Ethernet device Ethernet24.
+[   85.426018] added knet-cb netif 'Ethernet24'
+[   85.426163] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet24
+[   85.878099] Setting alias name Ethernet25 to Ethernet25.
+[   85.878423] Created Ethernet device Ethernet25.
+[   85.878451] added knet-cb netif 'Ethernet25'
+[   85.879841] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet25
+[   86.374098] Setting alias name Ethernet26 to Ethernet26.
+[   86.374430] Created Ethernet device Ethernet26.
+[   86.374459] added knet-cb netif 'Ethernet26'
+[   86.374619] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet26
+[   87.172685] Setting alias name Ethernet27 to Ethernet27.
+[   87.173013] Created Ethernet device Ethernet27.
+[   87.173036] added knet-cb netif 'Ethernet27'
+[   87.173169] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet27
+[   87.637040] Setting alias name Ethernet28 to Ethernet28.
+[   87.637382] Created Ethernet device Ethernet28.
+[   87.637407] added knet-cb netif 'Ethernet28'
+[   87.637547] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet28
+[   87.979459] Setting alias name Ethernet29 to Ethernet29.
+[   87.979790] Created Ethernet device Ethernet29.
+[   87.979817] added knet-cb netif 'Ethernet29'
+[   87.979969] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet29
+[   87.997973] Bridge: port 3(Ethernet27) entered blocking state
+[   87.997979] Bridge: port 3(Ethernet27) entered disabled state
+[   87.998706] device Ethernet27 entered promiscuous mode
+[   88.356686] Setting alias name Ethernet30 to Ethernet30.
+[   88.357042] Created Ethernet device Ethernet30.
+[   88.357070] added knet-cb netif 'Ethernet30'
+[   88.357238] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet30
+[   88.811658] Setting alias name Ethernet31 to Ethernet31.
+[   88.813065] Created Ethernet device Ethernet31.
+[   88.813217] added knet-cb netif 'Ethernet31'
+[   88.813356] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet31
+[   88.984134] Setting alias name Ethernet32 to Ethernet32.
+[   88.986761] Created Ethernet device Ethernet32.
+[   88.986797] added knet-cb netif 'Ethernet32'
+[   88.986973] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet32
+[   89.221344] Setting alias name Ethernet33 to Ethernet33.
+[   89.222213] Created Ethernet device Ethernet33.
+[   89.222256] added knet-cb netif 'Ethernet33'
+[   89.222586] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet33
+[   89.363128] Setting alias name Ethernet34 to Ethernet34.
+[   89.363547] Created Ethernet device Ethernet34.
+[   89.363577] added knet-cb netif 'Ethernet34'
+[   89.363737] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet34
+[   89.445271] Setting alias name Ethernet35 to Ethernet35.
+[   89.445597] Created Ethernet device Ethernet35.
+[   89.445626] added knet-cb netif 'Ethernet35'
+[   89.445762] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet35
+[   89.541392] Setting alias name Ethernet68 to Ethernet68.
+[   89.541732] Created Ethernet device Ethernet68.
+[   89.541764] added knet-cb netif 'Ethernet68'
+[   89.541923] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet68
+[   89.759402] Setting alias name Ethernet76 to Ethernet76.
+[   89.760129] Created Ethernet device Ethernet76.
+[   89.760160] added knet-cb netif 'Ethernet76'
+[   89.760289] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet76
+[   90.053344] Setting alias name Ethernet0 to Ethernet0.
+[   90.053657] Created Ethernet device Ethernet0.
+[   90.053689] added knet-cb netif 'Ethernet0'
+[   90.053832] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet0
+[   90.073266] Bridge: port 4(Ethernet0) entered blocking state
+[   90.073272] Bridge: port 4(Ethernet0) entered disabled state
+[   90.074064] device Ethernet0 entered promiscuous mode
+[   90.141355] Setting alias name Ethernet1 to Ethernet1.
+[   90.141761] Created Ethernet device Ethernet1.
+[   90.141790] added knet-cb netif 'Ethernet1'
+[   90.141934] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet1
+[   90.247594] Setting alias name Ethernet2 to Ethernet2.
+[   90.248001] Created Ethernet device Ethernet2.
+[   90.248033] added knet-cb netif 'Ethernet2'
+[   90.248534] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet2
+[   90.577908] Setting alias name Ethernet3 to Ethernet3.
+[   90.578231] Created Ethernet device Ethernet3.
+[   90.578261] added knet-cb netif 'Ethernet3'
+[   90.578411] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet3
+[   90.778550] Setting alias name Ethernet4 to Ethernet4.
+[   90.778879] Created Ethernet device Ethernet4.
+[   90.778911] added knet-cb netif 'Ethernet4'
+[   90.779069] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet4
+[   91.169673] Bridge: port 5(Ethernet2) entered blocking state
+[   91.169679] Bridge: port 5(Ethernet2) entered disabled state
+[   91.176955] device Ethernet2 entered promiscuous mode
+[   91.178650] Setting alias name Ethernet5 to Ethernet5.
+[   91.178993] Created Ethernet device Ethernet5.
+[   91.179024] added knet-cb netif 'Ethernet5'
+[   91.179171] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet5
+[   91.181723] Bridge: port 6(Ethernet1) entered blocking state
+[   91.181728] Bridge: port 6(Ethernet1) entered disabled state
+[   91.190577] device Ethernet1 entered promiscuous mode
+[   91.192020] Bridge: port 7(Ethernet3) entered blocking state
+[   91.192023] Bridge: port 7(Ethernet3) entered disabled state
+[   91.192119] device Ethernet3 entered promiscuous mode
+[   91.207966] Bridge: port 8(Ethernet4) entered blocking state
+[   91.207971] Bridge: port 8(Ethernet4) entered disabled state
+[   91.208133] device Ethernet4 entered promiscuous mode
+[   91.211810] Bridge: port 9(Ethernet5) entered blocking state
+[   91.211815] Bridge: port 9(Ethernet5) entered disabled state
+[   91.216540] device Ethernet5 entered promiscuous mode
+[   91.753239] Setting alias name Ethernet6 to Ethernet6.
+[   91.753589] Created Ethernet device Ethernet6.
+[   91.753624] added knet-cb netif 'Ethernet6'
+[   91.753791] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet6
+[   92.170568] Setting alias name Ethernet7 to Ethernet7.
+[   92.170913] Created Ethernet device Ethernet7.
+[   92.170945] added knet-cb netif 'Ethernet7'
+[   92.171110] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet7
+[   92.287971] Setting alias name Ethernet8 to Ethernet8.
+[   92.288301] Created Ethernet device Ethernet8.
+[   92.288333] added knet-cb netif 'Ethernet8'
+[   92.289205] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet8
+[   92.424730] Setting alias name Ethernet9 to Ethernet9.
+[   92.425065] Created Ethernet device Ethernet9.
+[   92.425096] added knet-cb netif 'Ethernet9'
+[   92.425256] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet9
+[   92.613740] Setting alias name Ethernet10 to Ethernet10.
+[   92.614090] Created Ethernet device Ethernet10.
+[   92.614126] added knet-cb netif 'Ethernet10'
+[   92.614285] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet10
+[   92.738030] Setting alias name Ethernet11 to Ethernet11.
+[   92.738553] Created Ethernet device Ethernet11.
+[   92.738589] added knet-cb netif 'Ethernet11'
+[   92.738761] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet11
+[   93.124245] Setting alias name Ethernet60 to Ethernet60.
+[   93.124631] Created Ethernet device Ethernet60.
+[   93.124665] added knet-cb netif 'Ethernet60'
+[   93.124813] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet60
+[   93.261662] Bridge: port 10(Ethernet10) entered blocking state
+[   93.261668] Bridge: port 10(Ethernet10) entered disabled state
+[   93.262489] device Ethernet10 entered promiscuous mode
+[   93.304043] Bridge: port 11(Ethernet11) entered blocking state
+[   93.304048] Bridge: port 11(Ethernet11) entered disabled state
+[   93.308625] device Ethernet11 entered promiscuous mode
+[   93.541561] Setting alias name Ethernet56 to Ethernet56.
+[   93.541897] Created Ethernet device Ethernet56.
+[   93.541936] added knet-cb netif 'Ethernet56'
+[   93.542950] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet56
+[   93.606849] device Ethernet56 entered promiscuous mode
+[   93.606890] PortChannel100: Enabling the LAG member port Ethernet56
+[   93.606948] PortChannel100: Port device Ethernet56 added
+[   93.649017] PortChannel100: Disabling the LAG member port Ethernet56
+[   93.797350] Setting alias name Ethernet12 to Ethernet12.
+[   93.797710] Created Ethernet device Ethernet12.
+[   93.797750] added knet-cb netif 'Ethernet12'
+[   93.797927] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet12
+[   94.096078] Setting alias name Ethernet13 to Ethernet13.
+[   94.097677] Created Ethernet device Ethernet13.
+[   94.097718] added knet-cb netif 'Ethernet13'
+[   94.097872] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet13
+[   94.249720] Setting alias name Ethernet14 to Ethernet14.
+[   94.251164] Created Ethernet device Ethernet14.
+[   94.251203] added knet-cb netif 'Ethernet14'
+[   94.251361] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet14
+[   94.388548] Setting alias name Ethernet15 to Ethernet15.
+[   94.390223] Created Ethernet device Ethernet15.
+[   94.390263] added knet-cb netif 'Ethernet15'
+[   94.390418] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet15
+[   94.528136] Setting alias name Ethernet16 to Ethernet16.
+[   94.529774] Created Ethernet device Ethernet16.
+[   94.529817] added knet-cb netif 'Ethernet16'
+[   94.530915] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet16
+[   94.624336] Setting alias name Ethernet17 to Ethernet17.
+[   94.625900] Created Ethernet device Ethernet17.
+[   94.627430] added knet-cb netif 'Ethernet17'
+[   94.627610] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet17
+[   94.711111] Setting alias name Ethernet18 to Ethernet18.
+[   94.712768] Created Ethernet device Ethernet18.
+[   94.712810] added knet-cb netif 'Ethernet18'
+[   94.713708] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet18
+[   94.823466] Setting alias name Ethernet19 to Ethernet19.
+[   94.825880] Created Ethernet device Ethernet19.
+[   94.825934] added knet-cb netif 'Ethernet19'
+[   94.826164] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet19
+[   94.920488] Setting alias name Ethernet20 to Ethernet20.
+[   94.922173] Created Ethernet device Ethernet20.
+[   94.922216] added knet-cb netif 'Ethernet20'
+[   94.922381] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet20
+[   95.017079] Setting alias name Ethernet21 to Ethernet21.
+[   95.019045] Created Ethernet device Ethernet21.
+[   95.019086] added knet-cb netif 'Ethernet21'
+[   95.019249] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet21
+[   95.158715] 8021q: adding VLAN 0 to HW filter on device eth0
+[   95.354874] Setting alias name Ethernet22 to Ethernet22.
+[   95.366693] 8021q: adding VLAN 0 to HW filter on device eth0
+[   95.367665] Bridge: port 12(Ethernet20) entered blocking state
+[   95.367668] Bridge: port 12(Ethernet20) entered disabled state
+[   95.368092] device Ethernet20 entered promiscuous mode
+[   95.370647] Created Ethernet device Ethernet22.
+[   95.371289] added knet-cb netif 'Ethernet22'
+[   95.371473] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet22
+[   95.389556] Bridge: port 13(Ethernet21) entered blocking state
+[   95.389562] Bridge: port 13(Ethernet21) entered disabled state
+[   95.399904] device Ethernet21 entered promiscuous mode
+[   95.536217] Setting alias name Ethernet23 to Ethernet23.
+[   95.538377] Created Ethernet device Ethernet23.
+[   95.539593] added knet-cb netif 'Ethernet23'
+[   95.539766] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet23
+[   95.719166] Setting alias name Ethernet36 to Ethernet36.
+[   95.720909] Created Ethernet device Ethernet36.
+[   95.720954] added knet-cb netif 'Ethernet36'
+[   95.721115] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet36
+[   95.897254] Setting alias name Ethernet37 to Ethernet37.
+[   95.898947] Created Ethernet device Ethernet37.
+[   95.898995] added knet-cb netif 'Ethernet37'
+[   95.899179] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet37
+[   96.229232] Setting alias name Ethernet38 to Ethernet38.
+[   96.229574] Created Ethernet device Ethernet38.
+[   96.229618] added knet-cb netif 'Ethernet38'
+[   96.229806] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet38
+[   96.422479] Bridge: port 14(Ethernet22) entered blocking state
+[   96.422484] Bridge: port 14(Ethernet22) entered disabled state
+[   96.423125] device Ethernet22 entered promiscuous mode
+[   96.842389] Setting alias name Ethernet39 to Ethernet39.
+[   96.849529] Created Ethernet device Ethernet39.
+[   96.849573] added knet-cb netif 'Ethernet39'
+[   96.849812] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet39
+[   96.989652] Setting alias name Ethernet40 to Ethernet40.
+[   96.990106] Created Ethernet device Ethernet40.
+[   96.990152] added knet-cb netif 'Ethernet40'
+[   96.990320] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet40
+[   97.113615] Setting alias name Ethernet41 to Ethernet41.
+[   97.114052] Created Ethernet device Ethernet41.
+[   97.114096] added knet-cb netif 'Ethernet41'
+[   97.114272] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet41
+[   97.232692] Setting alias name Ethernet42 to Ethernet42.
+[   97.234238] Created Ethernet device Ethernet42.
+[   97.234290] added knet-cb netif 'Ethernet42'
+[   97.234449] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet42
+[   97.414861] Setting alias name Ethernet43 to Ethernet43.
+[   97.416201] Created Ethernet device Ethernet43.
+[   97.416249] added knet-cb netif 'Ethernet43'
+[   97.417811] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet43
+[   97.437644] Bridge: port 15(Ethernet39) entered blocking state
+[   97.437649] Bridge: port 15(Ethernet39) entered disabled state
+[   97.438311] device Ethernet39 entered promiscuous mode
+[   97.512278] Setting alias name Ethernet44 to Ethernet44.
+[   97.513767] Created Ethernet device Ethernet44.
+[   97.513810] added knet-cb netif 'Ethernet44'
+[   97.514022] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet44
+[   97.639752] Setting alias name Ethernet45 to Ethernet45.
+[   97.641239] Created Ethernet device Ethernet45.
+[   97.641287] added knet-cb netif 'Ethernet45'
+[   97.641525] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet45
+[   97.735688] Setting alias name Ethernet46 to Ethernet46.
+[   97.737266] Created Ethernet device Ethernet46.
+[   97.737310] added knet-cb netif 'Ethernet46'
+[   97.737516] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet46
+[   97.833426] Setting alias name Ethernet47 to Ethernet47.
+[   97.834869] Created Ethernet device Ethernet47.
+[   97.834918] added knet-cb netif 'Ethernet47'
+[   97.835092] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet47
+[   98.008488] Setting alias name Ethernet48 to Ethernet48.
+[   98.008817] Created Ethernet device Ethernet48.
+[   98.008862] added knet-cb netif 'Ethernet48'
+[   98.009040] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet48
+[   98.170514] device Ethernet48 entered promiscuous mode
+[   98.170557] PortChannel100: Enabling the LAG member port Ethernet48
+[   98.170613] PortChannel100: Port device Ethernet48 added
+[   98.269543] PortChannel100: Disabling the LAG member port Ethernet48
+[   98.293001] Setting alias name Ethernet52 to Ethernet52.
+[   98.293318] Created Ethernet device Ethernet52.
+[   98.293367] added knet-cb netif 'Ethernet52'
+[   98.293529] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet52
+[   98.760947] igb 0000:03:00.0 eth0: igb: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[   98.868710] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[  123.563692] STATS_CB: Added desc 'bgp' to KNET rx queue 14 stats
+[  123.578240] STATS_CB: Added desc 'bgpv6' to KNET rx queue 14 stats
+[  123.586641] STATS_CB: Added desc 'cdp' to KNET rx queue 0 stats
+[  123.590593] STATS_CB: Added desc 'iccp' to KNET rx queue 16 stats
+[  123.595758] STATS_CB: Added desc 'icmp' to KNET rx queue 8 stats
+[  123.598087] STATS_CB: Added desc 'icmpv6' to KNET rx queue 8 stats
+[  123.600076] STATS_CB: Added desc 'igmp_query' to KNET rx queue 12 stats
+[  123.602823] STATS_CB: Added desc 'ip2me' to KNET rx queue 7 stats
+[  123.611441] STATS_CB: Added desc 'lldp' to KNET rx queue 18 stats
+[  123.621871] STATS_CB: Added desc 'l3_mtu_error' to KNET rx queue 4 stats
+[  123.623833] STATS_CB: Added desc 'src_nat_miss' to KNET rx queue 5 stats
+[  123.625292] STATS_CB: Added desc 'dest_nat_miss' to KNET rx queue 5 stats
+[  123.627134] STATS_CB: Added desc 'ospf' to KNET rx queue 15 stats
+[  123.628566] STATS_CB: Added desc 'ospfv6' to KNET rx queue 15 stats
+[  123.630373] STATS_CB: Added desc 'pim' to KNET rx queue 13 stats
+[  123.632228] STATS_CB: Added desc 'stp' to KNET rx queue 21 stats
+[  123.633767] STATS_CB: Added desc 'pvrst' to KNET rx queue 21 stats
+[  123.635649] STATS_CB: Added desc 'subnet' to KNET rx queue 6 stats
+[  123.678216] STATS_CB: Added desc 'arp_suppress' to KNET rx queue 11 stats
+[  123.685515] STATS_CB: Added desc 'nd_suppress' to KNET rx queue 11 stats
+[  123.699933] STATS_CB: Added desc 'ttl_error' to KNET rx queue 0 stats
+[  123.747848] STATS_CB: Added desc 'udld' to KNET rx queue 22 stats
+[  130.546547] i2c i2c-14: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[  130.548691] optoe 14-0050: 33280 byte copper EEPROM, read/write
+[  130.548716] i2c i2c-14: new_device: Instantiated device copper at 0x50
+[  131.602880] i2c i2c-23: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[  131.610696] optoe 23-0050: 33280 byte copper EEPROM, read/write
+[  131.610724] i2c i2c-23: new_device: Instantiated device copper at 0x50
+[  132.316885] i2c i2c-29: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[  132.332643] optoe 29-0050: 33280 byte copper EEPROM, read/write
+[  132.332670] i2c i2c-29: new_device: Instantiated device copper at 0x50
+[  138.211039] bkn_proc_link_write: Set operation status UP to host interface Ethernet0
+[  138.211115] Bridge: port 4(Ethernet0) entered blocking state
+[  138.211124] Bridge: port 4(Ethernet0) entered forwarding state
+[  138.989431] bkn_proc_link_write: Set operation status UP to host interface Ethernet1
+[  138.989498] Bridge: port 6(Ethernet1) entered blocking state
+[  138.989507] Bridge: port 6(Ethernet1) entered forwarding state
+[  139.305234] bkn_proc_link_write: Set operation status UP to host interface Ethernet2
+[  139.305286] Bridge: port 5(Ethernet2) entered blocking state
+[  139.305294] Bridge: port 5(Ethernet2) entered forwarding state
+[  139.716539] bkn_proc_link_write: Set operation status UP to host interface Ethernet3
+[  139.716611] Bridge: port 7(Ethernet3) entered blocking state
+[  139.716619] Bridge: port 7(Ethernet3) entered forwarding state
+[  140.081503] bkn_proc_link_write: Set operation status UP to host interface Ethernet4
+[  140.081577] Bridge: port 8(Ethernet4) entered blocking state
+[  140.081586] Bridge: port 8(Ethernet4) entered forwarding state
+[  140.361005] bkn_proc_link_write: Set operation status UP to host interface Ethernet5
+[  140.361075] Bridge: port 9(Ethernet5) entered blocking state
+[  140.361083] Bridge: port 9(Ethernet5) entered forwarding state
+[  140.531493] bkn_proc_link_write: Set operation status UP to host interface Ethernet11
+[  140.531564] Bridge: port 11(Ethernet11) entered blocking state
+[  140.531571] Bridge: port 11(Ethernet11) entered forwarding state
+[  140.938997] bkn_proc_link_write: Set operation status UP to host interface Ethernet20
+[  140.939074] Bridge: port 12(Ethernet20) entered blocking state
+[  140.939081] Bridge: port 12(Ethernet20) entered forwarding state
+[  141.364388] bkn_proc_link_write: Set operation status UP to host interface Ethernet22
+[  141.364491] Bridge: port 14(Ethernet22) entered blocking state
+[  141.364504] Bridge: port 14(Ethernet22) entered forwarding state
+[  141.753271] bkn_proc_link_write: Set operation status UP to host interface Ethernet48
+[  141.774891] PortChannel100: Enabling the LAG member port Ethernet48
+[  141.777393] Bridge: port 2(PortChannel100) entered blocking state
+[  141.777406] Bridge: port 2(PortChannel100) entered forwarding state
+[  142.293753] bkn_proc_link_write: Set operation status UP to host interface Ethernet56
+[  142.308136] PortChannel100: Enabling the LAG member port Ethernet56
+[  160.453089] bkn_proc_link_write: Set operation status UP to host interface Ethernet27
+[  160.453167] Bridge: port 3(Ethernet27) entered blocking state
+[  160.453181] Bridge: port 3(Ethernet27) entered forwarding state
+[  167.355055] STATS_CB: Added desc 'vrrp' to KNET rx queue 17 stats
+[  167.358064] STATS_CB: Added desc 'vrrpv6' to KNET rx queue 17 stats
+[  167.417331] device Bridge entered promiscuous mode
+[  276.601065] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet27
+[  276.601253] Bridge: port 3(Ethernet27) entered disabled state
+[  276.609640] Bridge: port 3(Ethernet27) entered disabled state
+[  276.611193] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet27
+[  667.515862] i2c i2c-21: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[  667.517206] optoe 21-0050: 33280 byte copper EEPROM, read/write
+[  667.517227] i2c i2c-21: new_device: Instantiated device copper at 0x50
+[  685.899951] i2c i2c-23: delete_device: Deleting device copper with flags 0x800 at 0x50
+[  685.900269] optoe 23-0050: 33152 byte optoe2 EEPROM, read/write
+[  685.900288] i2c i2c-23: new_device: Instantiated device optoe2 at 0x50
+[  915.466071] bkn_proc_link_write: Set operation status UP to host interface Ethernet21
+[  915.466150] Bridge: port 13(Ethernet21) entered blocking state
+[  915.466158] Bridge: port 13(Ethernet21) entered forwarding state
+[ 1330.238492] device Ethernet39 left promiscuous mode
+[ 1330.238622] Bridge: port 15(Ethernet39) entered disabled state
+[ 3266.908249] perf: interrupt took too long (2518 > 2500), lowering kernel.perf_event_max_sample_rate to 79250
+[ 4771.201357] perf: interrupt took too long (3151 > 3147), lowering kernel.perf_event_max_sample_rate to 63250
+[ 7336.426585] perf: interrupt took too long (3940 > 3938), lowering kernel.perf_event_max_sample_rate to 50750
+[13014.457062] perf: interrupt took too long (4930 > 4925), lowering kernel.perf_event_max_sample_rate to 40500
+[15588.337460] IPv6: PREDAD not set IP6: 00000000000000000000000000000001/80 state: 00000001
+[16044.921247] seq_file: buggy .next function bkn_seq_dma_next [linux_bcm_knet] did not update position index
+[77914.124064] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet11
+[77914.124751] Bridge: port 11(Ethernet11) entered disabled state
+[77914.126804] Bridge: port 11(Ethernet11) entered disabled state
+[77914.129531] bkn_proc_link_write: Set operation status DOWN urgent to host interface Ethernet11
+[77921.318150] bkn_proc_link_write: Set operation status UP to host interface Ethernet11
+[77921.321178] Bridge: port 11(Ethernet11) entered blocking state
+[77921.321189] Bridge: port 11(Ethernet11) entered forwarding state
+[162728.575876] IPv6: PREDAD not set IP6: 00000000000000000000000000000001/80 state: 00000001
+[163175.666210] seq_file: buggy .next function bkn_seq_dma_next [linux_bcm_knet] did not update position index
+[256288.413287] i2c i2c-12: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[256288.415762] optoe 12-0050: 33280 byte copper EEPROM, read/write
+[256288.415805] i2c i2c-12: new_device: Instantiated device copper at 0x50
+[256444.815573] Bridge: port 10(Ethernet10) entered disabled state
+[256476.988449] i2c i2c-10: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[256476.988776] optoe 10-0050: 33280 byte copper EEPROM, read/write
+[256476.988795] i2c i2c-10: new_device: Instantiated device copper at 0x50
+[257516.812779] Bridge: port 10(Ethernet10) entered disabled state
+[344205.648474] Bridge: port 10(Ethernet10) entered disabled state
+[344380.948789] Bridge: port 10(Ethernet10) entered disabled state
+[344440.849776] Bridge: port 10(Ethernet10) entered disabled state
+[344903.857051] Bridge: port 10(Ethernet10) entered disabled state
+[345136.667397] device Ethernet10 left promiscuous mode
+[345136.667492] Bridge: port 10(Ethernet10) entered disabled state
+[347775.208352] i2c i2c-10: delete_device: Deleting device copper with flags 0x800 at 0x50
+[347775.209676] optoe 10-0050: 33152 byte optoe2 EEPROM, read/write
+[347775.209699] i2c i2c-10: new_device: Instantiated device optoe2 at 0x50
+[347781.363273] i2c i2c-12: delete_device: Deleting device copper with flags 0x800 at 0x50
+[347781.374323] optoe 12-0050: 33152 byte optoe2 EEPROM, read/write
+[347781.374339] i2c i2c-12: new_device: Instantiated device optoe2 at 0x50
+[348938.051918] IPv6: PREDAD not set IP6: 00000000000000000000000000000001/80 state: 00000001
+[349399.026238] seq_file: buggy .next function bkn_seq_dma_next [linux_bcm_knet] did not update position index
+[349667.116596] i2c i2c-28: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[349667.117722] optoe 28-0050: 33280 byte copper EEPROM, read/write
+[349667.117745] i2c i2c-28: new_device: Instantiated device copper at 0x50
+[349671.274657] i2c i2c-30: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[349671.277106] optoe 30-0050: 33280 byte copper EEPROM, read/write
+[349671.277262] i2c i2c-30: new_device: Instantiated device copper at 0x50
+[685563.360763] i2c i2c-15: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[685563.362039] optoe 15-0050: 33280 byte copper EEPROM, read/write
+[685563.362060] i2c i2c-15: new_device: Instantiated device copper at 0x50
+[685571.584850] i2c i2c-17: delete_device: Deleting device optoe2 with flags 0x800 at 0x50
+[685571.585189] optoe 17-0050: 33280 byte copper EEPROM, read/write
+[685571.585200] i2c i2c-17: new_device: Instantiated device copper at 0x50

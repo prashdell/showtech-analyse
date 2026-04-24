@@ -1,0 +1,64 @@
+/usr/local/lib/python3.9/dist-packages/supervisor/options.py:473: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  self.warnings.warn(
+2026-01-12 10:25:50,499 INFO Included extra file "/etc/supervisor/conf.d/supervisor-rsyslogd.conf" during parsing
+2026-01-12 10:25:50,499 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2026-01-12 10:25:50,499 INFO Set uid to user 0 succeeded
+2026-01-12 10:25:50,753 INFO RPC interface 'supervisor' initialized
+2026-01-12 10:25:50,756 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2026-01-12 10:25:50,757 INFO supervisord started with pid 1
+2026-01-12 10:25:51,765 INFO spawned: 'dependent-startup' with pid 6
+2026-01-12 10:25:51,780 INFO spawned: 'supervisor-proc-exit-listener' with pid 7
+2026-01-12 10:25:51,816 INFO spawned: 'port_index_mapper' with pid 8
+2026-01-12 10:25:51,956 INFO success: dependent-startup entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-01-12 10:25:52,961 INFO success: supervisor-proc-exit-listener entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:25:52,962 INFO success: port_index_mapper entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:25:55,135 INFO spawned: 'rsyslogd' with pid 18
+2026-01-12 10:25:56,811 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:25:57,897 INFO spawned: 'sflowmgrd' with pid 22
+2026-01-12 10:25:59,017 INFO success: sflowmgrd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:26:00,248 INFO exited: dependent-startup (exit status 0; expected)
+2026-03-08 04:37:56,368 WARN received SIGTERM indicating exit request
+2026-03-08 04:37:56,368 INFO waiting for supervisor-proc-exit-listener, rsyslogd, sflowmgrd, port_index_mapper to die
+2026-03-08 04:37:59,370 INFO waiting for supervisor-proc-exit-listener, rsyslogd, sflowmgrd, port_index_mapper to die
+2026-03-08 04:38:02,373 INFO waiting for supervisor-proc-exit-listener, rsyslogd, sflowmgrd, port_index_mapper to die
+2026-03-08 04:38:05,376 INFO waiting for supervisor-proc-exit-listener, rsyslogd, sflowmgrd, port_index_mapper to die
+/usr/local/lib/python3.9/dist-packages/supervisor/options.py:473: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  self.warnings.warn(
+2026-03-08 04:41:35,164 INFO Included extra file "/etc/supervisor/conf.d/supervisor-rsyslogd.conf" during parsing
+2026-03-08 04:41:35,169 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2026-03-08 04:41:35,169 INFO Set uid to user 0 succeeded
+Unlinking stale socket /var/run/supervisor.sock
+2026-03-08 04:41:35,516 INFO RPC interface 'supervisor' initialized
+2026-03-08 04:41:35,517 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2026-03-08 04:41:35,517 INFO supervisord started with pid 1
+2026-03-08 04:41:36,540 INFO spawned: 'dependent-startup' with pid 7
+2026-03-08 04:41:36,606 INFO spawned: 'supervisor-proc-exit-listener' with pid 8
+2026-03-08 04:41:36,797 INFO spawned: 'port_index_mapper' with pid 15
+2026-03-08 04:41:37,192 INFO success: dependent-startup entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 04:41:38,204 INFO success: supervisor-proc-exit-listener entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:41:38,204 INFO success: port_index_mapper entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:41:43,934 INFO spawned: 'rsyslogd' with pid 19
+2026-03-08 04:41:44,940 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:41:45,340 INFO spawned: 'sflowmgrd' with pid 23
+2026-03-08 04:41:46,559 INFO success: sflowmgrd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:41:48,701 INFO exited: dependent-startup (exit status 0; expected)
+/usr/local/lib/python3.9/dist-packages/supervisor/options.py:473: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  self.warnings.warn(
+2026-03-08 05:01:03,749 INFO Included extra file "/etc/supervisor/conf.d/supervisor-rsyslogd.conf" during parsing
+2026-03-08 05:01:03,751 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2026-03-08 05:01:03,751 INFO Set uid to user 0 succeeded
+Unlinking stale socket /var/run/supervisor.sock
+2026-03-08 05:01:04,065 INFO RPC interface 'supervisor' initialized
+2026-03-08 05:01:04,076 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2026-03-08 05:01:04,077 INFO supervisord started with pid 1
+2026-03-08 05:01:05,080 INFO spawned: 'dependent-startup' with pid 7
+2026-03-08 05:01:05,107 INFO spawned: 'supervisor-proc-exit-listener' with pid 8
+2026-03-08 05:01:05,302 INFO spawned: 'port_index_mapper' with pid 9
+2026-03-08 05:01:05,822 INFO success: dependent-startup entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 05:01:06,849 INFO success: supervisor-proc-exit-listener entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 05:01:06,850 INFO success: port_index_mapper entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 05:01:12,913 INFO spawned: 'rsyslogd' with pid 19
+2026-03-08 05:01:13,943 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 05:01:14,287 INFO spawned: 'sflowmgrd' with pid 23
+2026-03-08 05:01:15,499 INFO success: sflowmgrd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 05:01:16,818 INFO exited: dependent-startup (exit status 0; expected)

@@ -1,0 +1,4 @@
+VRF: default
+Source          Group           RpfIface         RibNextHop      RpfAddress     
+VRF: mgmt
+Source          Group           RpfIface         RibNextHop      RpfAddress     

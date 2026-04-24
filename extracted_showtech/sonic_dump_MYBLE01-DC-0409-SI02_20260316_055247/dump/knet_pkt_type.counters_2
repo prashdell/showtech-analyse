@@ -1,0 +1,23 @@
+KNET Pkt Type Stats
+Pkt Type                   Rx Pkts   Rx errors     Tx Pkts   Tx errors
+----------------------  ----------  ----------  ----------  ----------
+PKT_TYPE_LACP                46352           0       46362           0
+PKT_TYPE_STP                     0           0     1737209           0
+PKT_TYPE_PVRSTP            2780144           0     2085165           0
+PKT_TYPE_BFDV4            15608046           0    28882383           0
+PKT_TYPE_LLDP               370706          10      278023           0
+  Link down                                  3                       0
+  Kernel netstack drop                       7                       0
+PKT_TYPE_VRRP               694307           0           0           0
+PKT_TYPE_ICCP                 9850           0           0           0
+PKT_TYPE_BGPV4             1248133           0     2472626           0
+PKT_TYPE_ARPREQ              64738           0       15443           0
+PKT_TYPE_ARPRPLY             15416           0       33726           0
+PKT_TYPE_DHCPV4                  2           0           0           0
+PKT_TYPE_ICMP_ECHOREQ       380486           0           0           0
+PKT_TYPE_ICMP_ECHORPLY         980           0          18           0
+PKT_TYPE_ICMP                   61           0     8819414           0
+PKT_TYPE_SSH                     0           0        2984           0
+PKT_TYPE_INETV4            4411003           0       29964           0
+Total                     25630224          10    44403317           0
+

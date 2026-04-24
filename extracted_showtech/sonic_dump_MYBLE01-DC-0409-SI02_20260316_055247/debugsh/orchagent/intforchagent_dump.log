@@ -1,0 +1,75 @@
+****************************************************************************
+intforchagent techsupport dump begin at Mon 16 Mar 2026 06:07:48 AM GMT
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent intf cache
+--------------------------------------------------------------------
+
+Interface       Vrf        Status       RMac   RefCount   DonorIntf    ProxyValue   Prefix                                     
+Vlan1120        default    0x1          false  5                       not_set      10.90.30.177                               
+Vlan2000        default    0x1          false  3                       not_set      10.90.30.159                               
+Vlan802         default    0x1          false  5                       not_set      10.99.100.132                              
+Vlan803         default    0x1          false  3                       not_set      10.92.30.67                                
+Vlan809         default    0x1          false  3                       not_set      10.92.30.235                               
+
+Ref Count Owner Map 
+---------------------
+Interface      Owner          Count
+Vlan1120       Neighbor:      2    
+Vlan1120       Nexthop-Group: 1    
+Vlan1120       Nexthop:       2    
+Vlan2000       Neighbor:      1    
+Vlan2000       Nexthop-Group: 1    
+Vlan2000       Nexthop:       1    
+Vlan802        Neighbor:      2    
+Vlan802        Nexthop-Group: 1    
+Vlan802        Nexthop:       2    
+Vlan803        Neighbor:      1    
+Vlan803        Nexthop-Group: 1    
+Vlan803        Nexthop:       1    
+Vlan809        Neighbor:      1    
+Vlan809        Nexthop-Group: 1    
+Vlan809        Nexthop:       1    
+
+*************** Profiling data ***************
+End to End Execution time: 102.68 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.453s
+user	0m0.295s
+sys	0m0.045s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent intf vid-rid-map
+--------------------------------------------------------------------
+
+Interface            VID                  RID                 
+Vlan1120             oid:0x6000000000a78  oid:0x460010600000001
+Vlan2000             oid:0x6000000000a79  oid:0x7d0010600000002
+Vlan802              oid:0x6000000000a7a  oid:0x322010600000003
+Vlan803              oid:0x6000000000a7b  oid:0x323010600000004
+Vlan809              oid:0x6000000000a7c  oid:0x329010600000005
+
+*************** Profiling data ***************
+End to End Execution time: 103.64 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.471s
+user	0m0.289s
+sys	0m0.054s
+
+
+
+
+
+****************************************************************************
+intforchagent techsupport dump ended at Mon 16 Mar 2026 06:07:49 AM GMT
+****************************************************************************

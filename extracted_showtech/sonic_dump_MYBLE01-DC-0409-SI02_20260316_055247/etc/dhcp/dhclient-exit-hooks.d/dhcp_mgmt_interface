@@ -1,0 +1,206 @@
+#!/bin/sh
+#
+# DHCLIENT exit hook to update appDB with acquired IP deatils and AppDb entries
+# will be used by show ip commands.
+#
+
+PYTHON_PATH=/usr/bin/python3
+SCRIPT=/usr/bin/dhcp_mgmt_conf.py
+SCRIPT_DHCP_CONFIG=/usr/bin/dhcp_config_update.py
+IF_NAME=$interface
+
+dhcp_domain_search_handle() {
+    if [ -n "$new_domain_search" ]; then
+        if [ -n "$new_domain_name" ]; then
+            for domain in $new_domain_search; do
+                if [ "$domain" = "${new_domain_name}" ] ||
+                   [ "$domain" = "${new_domain_name}." ]; then
+                    domain_in_search_list="Yes"
+                fi
+            done
+            if [ -z "$domain_in_search_list" ]; then
+               new_domain_search="$new_domain_name $new_domain_search"
+            fi
+        fi
+        $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp4 $IF_NAME search $new_domain_search
+    fi
+}
+
+dhcp_mgmt_conf_handle() {
+    if [ "$IF_NAME" = "eth0" ]; then
+
+        case $reason in
+            BOUND|REBOOT|BOUND6)
+            if [ -n "$new_ip_address" ] &&  [ -n "$new_subnet_mask" ]; then
+
+                $PYTHON_PATH $SCRIPT $IF_NAME add $new_ip_address $new_subnet_mask
+		ip -4 addr change "$new_ip_address"/"$new_subnet_mask" valid_lft forever preferred_lft forever dev eth0
+            fi
+	    if [ -n "$new_ip6_address" ] &&  [ -n "$new_ip6_prefixlen" ]; then
+		$PYTHON_PATH $SCRIPT $IF_NAME add $new_ip6_address $new_ip6_prefixlen
+		ip -6 addr change "$new_ip6_address"/"$new_ip6_prefixlen" valid_lft forever preferred_lft forever dev eth0
+            fi
+            if [ -n "$new_domain_name_servers" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp4 $IF_NAME nameserver $new_domain_name_servers
+            fi
+            if [ -n "$new_dhcp6_name_servers" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp6 $IF_NAME nameserver $new_dhcp6_name_servers
+	    fi
+            if [ -n "$new_domain_name" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp4 $IF_NAME domain $new_domain_name
+		if [ -z "$new_domain_search" ]; then
+                    $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp4 $IF_NAME search $new_domain_name
+		fi
+            fi
+            if [ -n "$new_domain_search" ]; then
+                dhcp_domain_search_handle
+            fi
+            if [ -n "$new_dhcp6_domain_search" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp6 $IF_NAME search $new_dhcp6_domain_search
+            fi
+            ;;
+            RENEW|REBIND|RENEW6|REBIND6)
+            if [ -n "$old_ip_address" ] && [ -n "$old_subnet_mask" ]; then
+                $PYTHON_PATH $SCRIPT $IF_NAME del $old_ip_address $old_subnet_mask
+            fi
+
+	    if [ -n "$old_ip6_address" ] && [ -n "$old_ip6_prefixlen" ]; then
+                $PYTHON_PATH $SCRIPT $IF_NAME del %old_ip6_address $old_ip6_prefixlen
+	    fi
+
+            if [ -n "$new_ip_address" ] &&  [ -n "$new_subnet_mask" ]; then
+                $PYTHON_PATH $SCRIPT $IF_NAME add $new_ip_address $new_subnet_mask
+		ip -4 addr change "$new_ip_address"/"$new_subnet_mask" valid_lft forever preferred_lft forever dev eth0
+            fi
+
+	    if [ -n "$new_ip6_address" ] && [ -n "$new_ip6_prefixlen" ]; then
+		$PYTHON PATH $SCRIPT $IF_NAME add $new_ip6_address $new_ip6_prefixlen
+                ip -6 addr change "$new_ip6_address"/"$new_ip6_prefixlen" valid_lft forever preferred_lft forever dev eth0
+            fi
+
+            if [ -n "$old_domain_name_servers" ] || [ -n "$new_domain_name_servers" ]; then
+                if [ "${new_domain_name_servers}" != "${old_domain_name_servers}" ]; then
+                    if [ -n "$old_domain_name_servers" ]; then
+                        $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp4 $IF_NAME nameserver ""
+                    fi
+                    if [ -n "$new_domain_name_servers" ]; then
+                        $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp4 $IF_NAME nameserver $new_domain_name_servers
+                    fi
+                fi
+            fi
+
+            if [ -n "$old_dhcp6_name_servers" ] || [ -n "$new_dhcp6_name_servers" ]; then
+                if [ "${new_dhcp6_name_servers}" != "${old_dhcp6_name_servers}" ]; then
+                    if [ -n "$old_dhcp6_name_servers" ]; then
+                        $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp6 $IF_NAME nameserver ""
+                    fi
+                    if [ -n "$new_dhcp6_name_servers" ]; then
+                        $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp6 $IF_NAME nameserver $new_dhcp6_name_servers
+                    fi
+                fi
+            fi
+            if [ -n "$old_domain_name" ] || [ -n "$new_domain_name" ]; then
+                if [ "${new_domain_name}" != "${old_domain_name}" ]; then
+                    if [ -n "$old_domain_name" ]; then
+                        $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp4 $IF_NAME domain ""
+                    fi
+                    if [ -n "$new_domain_name" ]; then
+                        $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp4 $IF_NAME domain $new_domain_name
+                    fi
+                fi
+            fi
+            if [ -n "$old_domain_search" ] || [ -n "$new_domain_search" ]; then
+                if [ "${new_domain_search}" != "${old_domain_search}" ]; then
+                    if [ -n "$old_domain_search" ]; then
+                        $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp4 $IF_NAME search ""
+                    fi
+                    if [ -n "$new_domain_search" ]; then
+			dhcp_domain_search_handle
+                    fi
+                fi
+            fi
+            if [ -n "$old_dhcp6_domain_search" ] || [ -n "$new_dhcp6_domain_search" ]; then
+                if [ "${new_dhcp6_domain_search}" != "${old_dhcp6_domain_search}" ]; then
+                    if [ -n "$old_dhcp6_domain_search" ]; then
+                        $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp6 $IF_NAME search ""
+                    fi
+                    if [ -n "$new_dhcp6_domain_search" ]; then
+                        $PYTHON_PATH $SCRIPT_DHCP_CONFIG add dhcp6 $IF_NAME search $new_dhcp6_domain_search
+		    fi
+                fi
+            fi
+            ;;
+            EXPIRE|FAIL|RELEASE|STOP|RELEASE6)
+            if [ -n "$new_ip_address" ] &&  [ -n "$new_subnet_mask" ]; then
+                $PYTHON_PATH $SCRIPT $IF_NAME del $new_ip_address $new_subnet_mask
+            fi
+
+	    if [ -n "$new_ip6_address" ] && [ -n "$new_ip6_prefixlen" ]; then
+		$PYTHON_PATH $SCRIPT $IF_NAME del $new_ip6_address $new_ip6_prefixlen
+            fi
+
+            if [ -n "$new_domain_name_servers" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp4 $IF_NAME nameserver ""
+            fi
+
+            if [ -n "$new_dhcp6_name_servers" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp6 $IF_NAME nameserver ""
+            fi
+
+            if [ -n "$new_domain_name" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp4 $IF_NAME domain ""
+            fi
+
+            if [ -n "$new_domain_search" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp4 $IF_NAME search ""
+            fi
+
+            if [ -n "$new_dhcp6_domain_search" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp6 $IF_NAME search ""
+            fi
+
+            if [ -n "$old_ip_address" ] && [ -n "$old_subnet_mask" ]; then
+                $PYTHON_PATH $SCRIPT $IF_NAME del $old_ip_address $old_subnet_mask
+            fi
+
+	    if [ -n "$old_ip6_address" ] && [ -n "$old_ip6_prefixlen" ]; then
+		$PYTHON_PATH $SCRIPT $IF_NAME del $old_ip6_address $old_ip6_prefixlen
+	    fi
+
+            if [ -n "$old_domain_name_servers" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp4 $IF_NAME nameserver ""
+            fi
+
+            if [ -n "$old_dhcp6_name_servers" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp6 $IF_NAME nameserver ""
+            fi
+
+            if [ -n "$old_domain_name" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp4 $IF_NAME domain ""
+            fi
+
+            if [ -n "$old_domain_search" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp4 $IF_NAME search ""
+            fi
+
+            if [ -n "$old_dhcp6_domain_search" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp6 $IF_NAME search ""
+            fi
+
+            ;;
+            TIMEOUT)
+            ;;
+            DEPREF6)
+            if [ -n "$cur_dhcp6_name_servers" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp6 $IF_NAME nameserver ""
+            fi
+            if [ -n "$cur_dhcp6_domain_search" ]; then
+                $PYTHON_PATH $SCRIPT_DHCP_CONFIG del dhcp6 $IF_NAME search ""
+            fi
+
+            ;;
+        esac
+    fi
+}
+
+dhcp_mgmt_conf_handle

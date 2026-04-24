@@ -1,0 +1,30 @@
+{
+  "lesson_id": "lesson_version_compatibility_check_20260424_142242",
+  "skill_name": "sonic_version_compatibility_check",
+  "lesson_type": "version_compatibility",
+  "content": {
+    "success_patterns": [
+      "version_validation_pattern",
+      "platform_compatibility_pattern",
+      "container_version_pattern",
+      "feature_compatibility_pattern",
+      "multi_instance_version_pattern",
+      "platform_specific_pattern",
+      "container_alignment_pattern",
+      "temporal_version_pattern"
+    ],
+    "context_factors": {
+      "archive_intelligence": "284_archive_production_intelligence",
+      "confidence_range": "92-98%",
+      "version_events": "2-4_events_per_instance",
+      "platform_combinations": "multiple_hwsku_and_sonic_versions",
+      "version_mismatches": "3-6_per_instance",
+      "container_mismatches": "6-10_per_instance"
+    }
+  },
+  "confidence": 0.93,
+  "impact": "medium",
+  "timestamp": "2026-04-24T14:22:42.916165",
+  "execution_time": 2.1,
+  "captured_by": "comprehensive_analysis"
+}

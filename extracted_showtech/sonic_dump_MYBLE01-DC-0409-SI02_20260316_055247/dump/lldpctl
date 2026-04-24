@@ -1,0 +1,193 @@
+-------------------------------------------------------------------------------
+LLDP neighbors:
+-------------------------------------------------------------------------------
+Interface:    eth0, via: LLDP, RID: 9, Time: 8 days, 00:57:48, Last Update: 0 day, 00:00:08
+  Chassis:     
+    ChassisID:    mac 1c:72:1d:f2:09:9e
+    SysName:      MYBLE01-DC-0404-OM01
+    SysDescr:     Dell EMC Real Time Operating System Software. Dell EMC Operating System Version: 2.0. Dell EMC Application Software Version: 9.14(2.20) Copyright (c) 1999-2021 Dell Inc. All Rights Reserved.Build Time: Fri Apr  7 10:24:16 2023
+    Capability:   Repeater, on
+    Capability:   Bridge, on
+    Capability:   Router, on
+  Port:        
+    PortID:       ifname GigabitEthernet 1/10
+    SrcMac:       1c:72:1d:f2:09:a0
+    PortDescr:    GigabitEthernet 1/10
+    TTL:          30
+-------------------------------------------------------------------------------
+Interface:    Ethernet0, via: LLDP, RID: 10, Time: 8 days, 00:57:45, Last Update: 0 day, 00:00:07
+  Chassis:     
+    ChassisID:    mac 40:a6:b7:dc:46:11
+  Port:        
+    PortID:       mac 40:a6:b7:dc:46:11
+    SrcMac:       00:50:56:53:2a:34
+    TTL:          120
+  Unknown TLVs:
+    TLV:          OUI: 00,1B,21, SubType: 2, Len: 51 02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08
+-------------------------------------------------------------------------------
+Interface:    Ethernet1, via: LLDP, RID: 7, Time: 8 days, 00:57:49, Last Update: 0 day, 00:00:15
+  Chassis:     
+    ChassisID:    mac 0a:56:bb:8c:65:00
+    SysName:      MYBLE01VOS40
+    SysDescr:     versa-flexvnf-20250501-043503-ab88b41-22.1.4-B version 22.1 running on VMware Virtual Platform
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+  Port:        
+    PortID:       ifname vni-0/3
+    SrcMac:       00:50:56:bb:48:95
+    PortDescr:    LAN
+    TTL:          120
+    MFS:          1500
+    PMD autoneg:  supported: yes, enabled: yes
+      MAU oper type: 10GigBaseR - R PCS/PMA, unknown PMD.
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+-------------------------------------------------------------------------------
+Interface:    Ethernet1, via: LLDP, RID: 8, Time: 8 days, 00:57:49, Last Update: 0 day, 00:00:15
+  Chassis:     
+    ChassisID:    mac 40:a6:b7:dc:46:13
+  Port:        
+    PortID:       mac 40:a6:b7:dc:46:13
+    SrcMac:       00:50:56:50:2c:a4
+    TTL:          120
+  Unknown TLVs:
+    TLV:          OUI: 00,1B,21, SubType: 2, Len: 51 02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08
+-------------------------------------------------------------------------------
+Interface:    Ethernet2, via: LLDP, RID: 3, Time: 8 days, 00:57:50, Last Update: 0 day, 00:00:02
+  Chassis:     
+    ChassisID:    mac 40:a6:b7:dc:3a:15
+  Port:        
+    PortID:       mac 40:a6:b7:dc:3a:15
+    SrcMac:       00:50:56:55:53:f2
+    TTL:          120
+  Unknown TLVs:
+    TLV:          OUI: 00,1B,21, SubType: 2, Len: 51 02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08
+-------------------------------------------------------------------------------
+Interface:    Ethernet3, via: LLDP, RID: 5, Time: 8 days, 00:57:49, Last Update: 0 day, 00:00:15
+  Chassis:     
+    ChassisID:    mac 0a:56:bb:ab:63:00
+    SysName:      MYBLE01VOS41
+    SysDescr:     versa-flexvnf-20250501-043503-ab88b41-22.1.4-B version 22.1 running on VMware Virtual Platform
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+  Port:        
+    PortID:       ifname vni-0/3
+    SrcMac:       00:50:56:bb:5e:5e
+    PortDescr:    LAN
+    TTL:          120
+    MFS:          1500
+    PMD autoneg:  supported: yes, enabled: yes
+      MAU oper type: 10GigBaseR - R PCS/PMA, unknown PMD.
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+-------------------------------------------------------------------------------
+Interface:    Ethernet3, via: LLDP, RID: 6, Time: 8 days, 00:57:49, Last Update: 0 day, 00:00:02
+  Chassis:     
+    ChassisID:    mac 40:a6:b7:dc:3a:17
+  Port:        
+    PortID:       mac 40:a6:b7:dc:3a:17
+    SrcMac:       00:50:56:56:bb:69
+    TTL:          120
+  Unknown TLVs:
+    TLV:          OUI: 00,1B,21, SubType: 2, Len: 51 02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08
+-------------------------------------------------------------------------------
+Interface:    Ethernet4, via: LLDP, RID: 1, Time: 8 days, 00:57:50, Last Update: 0 day, 00:00:02
+  Chassis:     
+    ChassisID:    mac 40:a6:b7:dc:46:12
+  Port:        
+    PortID:       mac 40:a6:b7:dc:46:12
+    SrcMac:       00:50:56:52:82:7b
+    TTL:          120
+  Unknown TLVs:
+    TLV:          OUI: 00,1B,21, SubType: 2, Len: 51 02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08
+-------------------------------------------------------------------------------
+Interface:    Ethernet5, via: LLDP, RID: 2, Time: 8 days, 00:57:50, Last Update: 0 day, 00:00:07
+  Chassis:     
+    ChassisID:    mac 40:a6:b7:dc:3a:16
+  Port:        
+    PortID:       mac 40:a6:b7:dc:3a:16
+    SrcMac:       00:50:56:55:ac:99
+    TTL:          120
+  Unknown TLVs:
+    TLV:          OUI: 00,1B,21, SubType: 2, Len: 51 02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08
+-------------------------------------------------------------------------------
+Interface:    Ethernet56, via: LLDP, RID: 4, Time: 8 days, 00:57:49, Last Update: 0 day, 00:00:02
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:cd:00
+    SysName:      MYBLE01-DC-0408-SI01
+    SysDescr:     SONiC Software Version: SONiC.4.5.1-Enterprise_Standard - HwSku: DellEMC-S5248f-P-25G-DPB - Distribution: Debian 11.11 - Kernel: 5.10.0-35-amd64
+    MgmtIP:       10.92.56.59
+    SrcMac:       b6:e9:b8:e7:cd:02
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/51
+    SrcMac:       b6:e9:b8:e7:cd:02
+    PortDescr:    DEL::PCM::100G::MYBLE01-DC-0409-SI02::Eth56
+    TTL:          120
+    Port is aggregated. PortAggregID: 100
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NWZ
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RDSR3
+-------------------------------------------------------------------------------
+Interface:    Ethernet48, via: LLDP, RID: 4, Time: 8 days, 00:57:31, Last Update: 0 day, 00:00:15
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:cd:00
+    SysName:      MYBLE01-DC-0408-SI01
+    SysDescr:     SONiC Software Version: SONiC.4.5.1-Enterprise_Standard - HwSku: DellEMC-S5248f-P-25G-DPB - Distribution: Debian 11.11 - Kernel: 5.10.0-35-amd64
+    MgmtIP:       10.92.56.59
+    SrcMac:       b6:e9:b8:e7:cd:02
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/49
+    SrcMac:       b6:e9:b8:e7:cd:02
+    PortDescr:    DEL::PCM::100G::MYBLE01-DC-0409-SI02::Eth48
+    TTL:          120
+    Port is aggregated. PortAggregID: 100
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NWZ
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RDSR3
+-------------------------------------------------------------------------------

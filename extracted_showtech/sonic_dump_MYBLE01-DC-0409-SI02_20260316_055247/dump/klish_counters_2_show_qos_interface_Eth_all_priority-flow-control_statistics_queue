@@ -1,0 +1,2 @@
+--ts-sonic--# show qos interface Eth all priority-flow-control statistics queue | no-more
+                                                                          ^Syntax error on line /mnt/tmp/klish_cmds_counters_2.q30hX4YMbV.txt:31 "show qos interface Eth all priority-flow-control statistics queue | no-more": Invalid input detected at "^" marker.

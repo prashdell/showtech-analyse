@@ -1,0 +1,18 @@
+
+
+  Error receiving from DHCP snooping socket                          : 0
+  DHCP message too big                                               : 0
+  Illegal source IP address in snooped packet                        : 0
+  Illegal source MAC in snooped packet                               : 0
+  Error sending from DHCP snooping socket                            : 0
+  Number of DHCP messages intercepted                                : 0
+  Number of DHCP messages processed                                  : 0
+  Number of DHCP messages filtered                                   : 0
+  Number of DHCP messages forwarded                                  : 0
+  Rx RELEASE or DECLINE from client not in bindings db               : 0
+  Number of bindings added to bindings table                         : 0
+  Number of bindings removed from bindings table                     : 0
+  MAC verification failures/server frames recvd on untrusted ports   : 0
+  Number of DHCP messages dropped as static binding exists           : 0
+  Packets dropped due to no outgoing interface or interface down     : 0
+

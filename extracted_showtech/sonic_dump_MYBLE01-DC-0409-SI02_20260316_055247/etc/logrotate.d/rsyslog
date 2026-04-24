@@ -1,0 +1,156 @@
+# These logs should no longer get created. However, in case they do get created,
+# we should keep them to a small size and rotate them also.
+/var/log/mail.info
+/var/log/mail.warn
+/var/log/mail.err
+/var/log/mail.log
+/var/log/daemon.log
+/var/log/kern.log
+/var/log/user.log
+/var/log/lpr.log
+/var/log/debug
+/var/log/messages
+{
+    size 10k
+    rotate 1
+    missingok
+    notifempty
+    compress
+    delaycompress
+    sharedscripts
+    postrotate
+        systemctl kill --kill-who=main --signal=HUP rsyslog
+    endscript
+}
+
+/var/log/snmpd_debug.log
+/var/log/cron.log
+{
+    size 1M
+    rotate 5
+    missingok
+    notifempty
+    compress
+    delaycompress
+    nosharedscripts
+    postrotate
+        systemctl kill --kill-who=main --signal=HUP rsyslog
+    endscript
+}
+
+/var/log/mem_stats.log
+/var/log/rsyslogd_omfwd.log
+/var/log/teamd.log
+{
+    size 5M
+    rotate 48
+    missingok
+    notifempty
+    compress
+    delaycompress
+    postrotate
+        systemctl kill --kill-who=main --signal=HUP rsyslog
+    endscript
+}
+
+/var/log/fdb_orch_syncd.log
+{
+    size 5M
+    rotate 500
+    missingok
+    notifempty
+    compress
+    delaycompress
+    nosharedscripts
+    postrotate
+        systemctl kill --kill-who=main --signal=HUP rsyslog
+    endscript
+}
+/var/log/fdbsync.log
+{
+    size 5M
+    rotate 30
+    missingok
+    notifempty
+    compress
+    delaycompress
+    nosharedscripts
+    postrotate
+        systemctl kill --kill-who=main --signal=HUP rsyslog
+    endscript
+}
+
+/var/log/auth.log
+/var/log/debuginfo.log
+/var/log/stpd.log
+/var/log/lldp.log
+/var/log/udldd.log
+/var/log/neighsyncd.log
+/var/log/iccp/iccpd.log
+/var/log/iccp/iccpd_fdb.log
+/var/log/iccp/iccpd_netlink.log
+/var/log/iccp/iccpd_neigh.log
+/var/log/iccp/iccpd_l2mc.log
+/var/log/frr/frr.log
+/var/log/lua_redis.log
+/var/log/swss/sairedis.rec
+/var/log/swss/swss.rec
+/var/log/nbrmgrd.log
+{
+    size 5M
+    rotate 800
+    missingok
+    notifempty
+    compress
+    delaycompress
+    nosharedscripts
+    postrotate
+        if [ $(echo $1 | grep -c "/var/log/swss/") -gt 0 ]; then
+            pgrep -x orchagent | xargs /bin/kill -HUP 2>/dev/null || true
+        else
+            systemctl kill --kill-who=main --signal=HUP rsyslog
+        fi
+    endscript
+}
+
+/var/log/syslog
+{
+    size 5M
+    rotate 1000
+    missingok
+    notifempty
+    compress
+    delaycompress
+    nosharedscripts
+    postrotate
+		systemctl kill --kill-who=main --signal=HUP rsyslog
+    endscript
+}
+
+/var/log/audit.log
+{
+    size 5M
+    rotate 8
+    missingok
+    notifempty
+    delaycompress
+    compress
+    postrotate
+       systemctl kill --kill-who=main --signal=HUP rsyslog 
+    endscript
+}
+
+/var/log/clish.log
+{
+    size 5M
+    rotate 8
+    missingok
+    notifempty
+    delaycompress
+    compress
+    postrotate
+       systemctl kill --kill-who=main --signal=HUP rsyslog
+    endscript
+}
+
+

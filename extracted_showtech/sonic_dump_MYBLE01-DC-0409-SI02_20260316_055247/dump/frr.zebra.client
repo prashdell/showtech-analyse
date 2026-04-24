@@ -1,0 +1,502 @@
+Client: static
+------------------------ 
+FD: 28 
+Connect Time: 01w1d00h 
+Nexthop Registry Time: 01w1d00h 
+Nexthop Last Update Time: 01w1d00h 
+Client will be notified about it's routes status
+Last Msg Rx Time: 01w1d00h 
+Last Msg Tx Time: 00:02:55 
+Last Rcvd Cmd: ZEBRA_ROUTE_ADD 
+Last Sent Cmd: ZEBRA_INTERFACE_DOWN 
+
+Type        Add         Update      Del 
+================================================== 
+IPv4        2           0           3           
+IPv6        0           0           0           
+Redist:v4   0           0           0           
+Redist:v6   0           0           0           
+VRF         2           0           0           
+Connected   322         0           4           
+Interface   74          0           363         
+Intf Addr   30          0           0           
+BFD peer    0           0           1           
+NHT v4      1           0           0           
+NHT v4 Upd  1           0           1           
+NHT v6 Upd  0           0           0           
+NHT v6      0           0           0           
+VxLAN SG    0           0           0           
+VNI         0           0           0           
+L3-VNI      0           0           0           
+MAC-IP      0           0           0           
+ES          0           0           0           
+ES-EVI      0           0           0           
+Errors: 0
+IPtrack session 0           0           0           
+Interface Up Notifications: 74
+Interface Down Notifications: 363
+VNI add notifications: 0
+VNI delete notifications: 0
+L3-VNI add notifications: 0
+L3-VNI delete notifications: 0
+MAC-IP add notifications: 0
+MAC-IP delete notifications: 0
+ES add notifications: 0
+ES delete notifications: 0
+ES-EVI add notifications: 0
+ES-EVI delete notifications: 0
+Input Fifo: 0:5 Output Fifo: 0:57
+#    MsgName              TxCount  RxCount  TotalTime(ms)  MaxTime(ms) 
+0    INTERFACE_ADD        181      2        0              0           
+1    INTERFACE_DELETE     2        0        0              0           
+2    INTERFACE_ADDRESS_ADD 22       0        0              0           
+4    INTERFACE_UP         74       0        0              0           
+5    INTERFACE_DOWN       363      0        0              0           
+8    ROUTE_ADD            0        2        0              0           
+9    ROUTE_DELETE         0        3        0              0           
+10   ROUTE_NOTIFY_OWNER   2        0        0              0           
+15   ROUTER_ID_ADD        0        2        0              0           
+17   ROUTER_ID_UPDATE     1        0        0              0           
+18   HELLO                0        1        0              0           
+19   CAPABILITIES         1        0        0              0           
+20   NEXTHOP_REGISTER     0        1        0              0           
+33   VRF_ADD              2        0        0              0           
+36   INTERFACE_VRF_UPDATE 2        0        0              0           
+144  IPTRACK_CLIENT_REGISTER 0        1        0              0           
+147  TEAM_INTF_UPDATE     24       0        0              0           
+
+
+Client: bfd
+------------------------ 
+FD: 39 
+Connect Time: 01w1d00h 
+Not registered for Nexthop Updates
+Client will Not be notified about it's routes status
+Last Msg Rx Time: 4d17h41m 
+Last Msg Tx Time: 00:02:55 
+Last Rcvd Cmd: ZEBRA_BFD_DEST_REPLAY 
+Last Sent Cmd: ZEBRA_INTERFACE_DOWN 
+
+Type        Add         Update      Del 
+================================================== 
+IPv4        0           0           0           
+IPv6        0           0           0           
+Redist:v4   0           0           0           
+Redist:v6   0           0           0           
+VRF         2           0           0           
+Connected   325         0           4           
+Interface   74          0           363         
+Intf Addr   30          0           0           
+BFD peer    0           0           0           
+NHT v4      0           0           0           
+NHT v4 Upd  0           0           0           
+NHT v6 Upd  0           0           0           
+NHT v6      0           0           0           
+VxLAN SG    0           0           0           
+VNI         0           0           0           
+L3-VNI      0           0           0           
+MAC-IP      0           0           0           
+ES          0           0           0           
+ES-EVI      0           0           0           
+Errors: 0
+IPtrack session 0           0           0           
+Interface Up Notifications: 74
+Interface Down Notifications: 363
+VNI add notifications: 0
+VNI delete notifications: 0
+L3-VNI add notifications: 0
+L3-VNI delete notifications: 0
+MAC-IP add notifications: 0
+MAC-IP delete notifications: 0
+ES add notifications: 0
+ES delete notifications: 0
+ES-EVI add notifications: 0
+ES-EVI delete notifications: 0
+Input Fifo: 0:3 Output Fifo: 0:56
+#    MsgName              TxCount  RxCount  TotalTime(ms)  MaxTime(ms) 
+0    INTERFACE_ADD        184      3        0              0           
+1    INTERFACE_DELETE     2        0        0              0           
+2    INTERFACE_ADDRESS_ADD 22       0        0              0           
+4    INTERFACE_UP         74       0        0              0           
+5    INTERFACE_DOWN       363      0        0              0           
+15   ROUTER_ID_ADD        0        1        0              0           
+18   HELLO                0        1        0              0           
+19   CAPABILITIES         1        0        0              0           
+29   BFD_DEST_REPLAY      0        75       16             8           
+33   VRF_ADD              2        0        0              0           
+36   INTERFACE_VRF_UPDATE 2        0        0              0           
+147  TEAM_INTF_UPDATE     24       0        0              0           
+
+
+Client: iptrack
+------------------------ 
+FD: 44 
+Connect Time: 01w1d00h 
+Not registered for Nexthop Updates
+Client will Not be notified about it's routes status
+Last Msg Rx Time: 01w1d00h 
+Last Msg Tx Time: 00:02:55 
+Last Sent Cmd: ZEBRA_INTERFACE_DOWN 
+
+Type        Add         Update      Del 
+================================================== 
+IPv4        0           0           0           
+IPv6        0           0           0           
+Redist:v4   0           0           0           
+Redist:v6   0           0           0           
+VRF         2           0           0           
+Connected   322         0           4           
+Interface   70          0           361         
+Intf Addr   30          0           0           
+BFD peer    0           0           0           
+NHT v4      0           0           0           
+NHT v4 Upd  0           0           0           
+NHT v6 Upd  0           0           0           
+NHT v6      0           0           0           
+VxLAN SG    0           0           0           
+VNI         0           0           0           
+L3-VNI      0           0           0           
+MAC-IP      0           0           0           
+ES          0           0           0           
+ES-EVI      0           0           0           
+Errors: 0
+IPtrack session 0           0           0           
+Interface Up Notifications: 70
+Interface Down Notifications: 361
+VNI add notifications: 0
+VNI delete notifications: 0
+L3-VNI add notifications: 0
+L3-VNI delete notifications: 0
+MAC-IP add notifications: 0
+MAC-IP delete notifications: 0
+ES add notifications: 0
+ES delete notifications: 0
+ES-EVI add notifications: 0
+ES-EVI delete notifications: 0
+Input Fifo: 0:3 Output Fifo: 0:61
+#    MsgName              TxCount  RxCount  TotalTime(ms)  MaxTime(ms) 
+0    INTERFACE_ADD        183      2        0              0           
+1    INTERFACE_DELETE     2        0        0              0           
+2    INTERFACE_ADDRESS_ADD 22       0        0              0           
+4    INTERFACE_UP         70       0        0              0           
+5    INTERFACE_DOWN       361      0        0              0           
+15   ROUTER_ID_ADD        0        1        0              0           
+17   ROUTER_ID_UPDATE     1        0        0              0           
+18   HELLO                0        1        0              0           
+19   CAPABILITIES         1        0        0              0           
+33   VRF_ADD              2        0        0              0           
+36   INTERFACE_VRF_UPDATE 2        0        0              0           
+147  TEAM_INTF_UPDATE     24       0        0              0           
+
+
+Client: ospf
+------------------------ 
+FD: 49 
+Connect Time: 01w1d00h 
+Not registered for Nexthop Updates
+Client will Not be notified about it's routes status
+Last Msg Rx Time: 01w1d00h 
+Last Msg Tx Time: 00:02:55 
+Last Sent Cmd: ZEBRA_INTERFACE_DOWN 
+
+Type        Add         Update      Del 
+================================================== 
+IPv4        0           0           0           
+IPv6        0           0           0           
+Redist:v4   0           0           0           
+Redist:v6   0           0           0           
+VRF         2           0           0           
+Connected   322         0           4           
+Interface   70          0           361         
+Intf Addr   30          0           0           
+BFD peer    0           0           0           
+NHT v4      0           0           0           
+NHT v4 Upd  0           0           0           
+NHT v6 Upd  0           0           0           
+NHT v6      0           0           0           
+VxLAN SG    0           0           0           
+VNI         0           0           0           
+L3-VNI      0           0           0           
+MAC-IP      0           0           0           
+ES          0           0           0           
+ES-EVI      0           0           0           
+Errors: 0
+IPtrack session 0           0           0           
+Interface Up Notifications: 70
+Interface Down Notifications: 361
+VNI add notifications: 0
+VNI delete notifications: 0
+L3-VNI add notifications: 0
+L3-VNI delete notifications: 0
+MAC-IP add notifications: 0
+MAC-IP delete notifications: 0
+ES add notifications: 0
+ES delete notifications: 0
+ES-EVI add notifications: 0
+ES-EVI delete notifications: 0
+Input Fifo: 0:4 Output Fifo: 0:61
+#    MsgName              TxCount  RxCount  TotalTime(ms)  MaxTime(ms) 
+0    INTERFACE_ADD        183      2        0              0           
+1    INTERFACE_DELETE     2        0        0              0           
+2    INTERFACE_ADDRESS_ADD 22       0        0              0           
+4    INTERFACE_UP         70       0        0              0           
+5    INTERFACE_DOWN       361      0        0              0           
+15   ROUTER_ID_ADD        0        1        0              0           
+17   ROUTER_ID_UPDATE     1        0        0              0           
+18   HELLO                0        1        0              0           
+19   CAPABILITIES         1        0        0              0           
+33   VRF_ADD              2        0        0              0           
+36   INTERFACE_VRF_UPDATE 2        0        0              0           
+37   BFD_CLIENT_REGISTER  0        1        0              0           
+147  TEAM_INTF_UPDATE     24       0        0              0           
+
+
+Client: pim
+------------------------ 
+FD: 54 
+Connect Time: 01w1d00h 
+Not registered for Nexthop Updates
+Client will Not be notified about it's routes status
+Last Msg Rx Time: 01w1d00h 
+Last Msg Tx Time: 00:02:55 
+Last Rcvd Cmd: ZEBRA_INTERFACE_SET_MASTER 
+Last Sent Cmd: ZEBRA_INTERFACE_DOWN 
+
+Type        Add         Update      Del 
+================================================== 
+IPv4        0           0           0           
+IPv6        0           0           0           
+Redist:v4   0           0           0           
+Redist:v6   0           0           0           
+VRF         2           0           0           
+Connected   322         0           4           
+Interface   69          0           361         
+Intf Addr   30          0           0           
+BFD peer    0           0           0           
+NHT v4      0           0           0           
+NHT v4 Upd  0           0           0           
+NHT v6 Upd  0           0           0           
+NHT v6      0           0           0           
+VxLAN SG    0           0           0           
+VNI         0           0           0           
+L3-VNI      0           0           0           
+MAC-IP      0           0           0           
+ES          0           0           0           
+ES-EVI      0           0           0           
+Errors: 0
+IPtrack session 0           0           0           
+Interface Up Notifications: 69
+Interface Down Notifications: 361
+VNI add notifications: 0
+VNI delete notifications: 0
+L3-VNI add notifications: 0
+L3-VNI delete notifications: 0
+MAC-IP add notifications: 0
+MAC-IP delete notifications: 0
+ES add notifications: 0
+ES delete notifications: 0
+ES-EVI add notifications: 0
+ES-EVI delete notifications: 0
+Input Fifo: 0:5 Output Fifo: 0:63
+#    MsgName              TxCount  RxCount  TotalTime(ms)  MaxTime(ms) 
+0    INTERFACE_ADD        184      2        0              0           
+1    INTERFACE_DELETE     2        0        0              0           
+2    INTERFACE_ADDRESS_ADD 22       0        0              0           
+4    INTERFACE_UP         69       0        0              0           
+5    INTERFACE_DOWN       361      0        0              0           
+6    INTERFACE_SET_MASTER 0        1        0              0           
+15   ROUTER_ID_ADD        0        1        0              0           
+17   ROUTER_ID_UPDATE     1        0        0              0           
+18   HELLO                0        1        0              0           
+19   CAPABILITIES         1        0        0              0           
+33   VRF_ADD              2        0        0              0           
+36   INTERFACE_VRF_UPDATE 2        0        0              0           
+37   BFD_CLIENT_REGISTER  0        1        0              0           
+105  VXLAN_SG_REPLAY      0        1        0              0           
+147  TEAM_INTF_UPDATE     24       0        0              0           
+
+
+Client: system
+------------------------ 
+FD: 57 
+Connect Time: 01w1d00h 
+Not registered for Nexthop Updates
+Client will Not be notified about it's routes status
+Last Msg Rx Time: 00:00:54 
+Last Msg Tx Time: 00:00:54 
+Last Rcvd Cmd: ZEBRA_IPV4_NEXTHOP_LOOKUP_MRIB 
+Last Sent Cmd: ZEBRA_IPV4_NEXTHOP_LOOKUP_MRIB 
+
+Type        Add         Update      Del 
+================================================== 
+IPv4        0           0           0           
+IPv6        0           0           0           
+Redist:v4   0           0           0           
+Redist:v6   0           0           0           
+VRF         0           0           0           
+Connected   0           0           0           
+Interface   0           0           0           
+Intf Addr   0           0           0           
+BFD peer    0           0           0           
+NHT v4      0           0           0           
+NHT v4 Upd  0           0           0           
+NHT v6 Upd  0           0           0           
+NHT v6      0           0           0           
+VxLAN SG    0           0           0           
+VNI         0           0           0           
+L3-VNI      0           0           0           
+MAC-IP      0           0           0           
+ES          0           0           0           
+ES-EVI      0           0           0           
+Errors: 0
+IPtrack session 0           0           0           
+Interface Up Notifications: 0
+Interface Down Notifications: 0
+VNI add notifications: 0
+VNI delete notifications: 0
+L3-VNI add notifications: 0
+L3-VNI delete notifications: 0
+MAC-IP add notifications: 0
+MAC-IP delete notifications: 0
+ES add notifications: 0
+ES delete notifications: 0
+ES-EVI add notifications: 0
+ES-EVI delete notifications: 0
+Input Fifo: 0:0 Output Fifo: 0:0
+#    MsgName              TxCount  RxCount  TotalTime(ms)  MaxTime(ms) 
+18   HELLO                0        1        0              0           
+41   IPV4_NEXTHOP_LOOKUP_MRIB 11575    11575    333            4           
+
+
+Client: ospf6
+------------------------ 
+FD: 64 
+Connect Time: 01w1d00h 
+Not registered for Nexthop Updates
+Client will Not be notified about it's routes status
+Last Msg Rx Time: 01w1d00h 
+Last Msg Tx Time: 00:02:55 
+Last Sent Cmd: ZEBRA_INTERFACE_DOWN 
+
+Type        Add         Update      Del 
+================================================== 
+IPv4        0           0           0           
+IPv6        0           0           0           
+Redist:v4   0           0           0           
+Redist:v6   0           0           0           
+VRF         2           0           0           
+Connected   322         0           4           
+Interface   69          0           361         
+Intf Addr   30          0           0           
+BFD peer    0           0           0           
+NHT v4      0           0           0           
+NHT v4 Upd  0           0           0           
+NHT v6 Upd  0           0           0           
+NHT v6      0           0           0           
+VxLAN SG    0           0           0           
+VNI         0           0           0           
+L3-VNI      0           0           0           
+MAC-IP      0           0           0           
+ES          0           0           0           
+ES-EVI      0           0           0           
+Errors: 0
+IPtrack session 0           0           0           
+Interface Up Notifications: 69
+Interface Down Notifications: 361
+VNI add notifications: 0
+VNI delete notifications: 0
+L3-VNI add notifications: 0
+L3-VNI delete notifications: 0
+MAC-IP add notifications: 0
+MAC-IP delete notifications: 0
+ES add notifications: 0
+ES delete notifications: 0
+ES-EVI add notifications: 0
+ES-EVI delete notifications: 0
+Input Fifo: 0:4 Output Fifo: 0:32
+#    MsgName              TxCount  RxCount  TotalTime(ms)  MaxTime(ms) 
+0    INTERFACE_ADD        184      2        0              0           
+1    INTERFACE_DELETE     2        0        0              0           
+2    INTERFACE_ADDRESS_ADD 22       0        0              0           
+4    INTERFACE_UP         69       0        0              0           
+5    INTERFACE_DOWN       361      0        0              0           
+15   ROUTER_ID_ADD        0        1        0              0           
+17   ROUTER_ID_UPDATE     1        0        0              0           
+18   HELLO                0        1        0              0           
+19   CAPABILITIES         1        0        0              0           
+33   VRF_ADD              2        0        0              0           
+36   INTERFACE_VRF_UPDATE 2        0        0              0           
+37   BFD_CLIENT_REGISTER  0        1        0              0           
+147  TEAM_INTF_UPDATE     24       0        0              0           
+
+
+Client: bgp
+------------------------ 
+FD: 69 
+Connect Time: 01w1d00h 
+Nexthop Registry Time: 01w1d00h 
+Nexthop Last Update Time: 01w1d00h 
+Client will Not be notified about it's routes status
+Last Msg Rx Time: 4d16h40m 
+Last Msg Tx Time: 00:02:55 
+Last Rcvd Cmd: ZEBRA_ROUTE_ADD 
+Last Sent Cmd: ZEBRA_INTERFACE_DOWN 
+
+Type        Add         Update      Del 
+================================================== 
+IPv4        112         116         101         
+IPv6        0           0           0           
+Redist:v4   0           0           0           
+Redist:v6   0           0           0           
+VRF         2           0           0           
+Connected   321         0           2           
+Interface   67          0           359         
+Intf Addr   30          0           0           
+BFD peer    0           0           0           
+NHT v4      7           0           0           
+NHT v4 Upd  7           0           6           
+NHT v6 Upd  0           0           0           
+NHT v6      0           0           0           
+VxLAN SG    0           0           0           
+VNI         0           0           0           
+L3-VNI      0           0           0           
+MAC-IP      0           0           0           
+ES          0           0           0           
+ES-EVI      0           0           0           
+Errors: 0
+IPtrack session 0           0           0           
+Interface Up Notifications: 67
+Interface Down Notifications: 359
+VNI add notifications: 0
+VNI delete notifications: 0
+L3-VNI add notifications: 0
+L3-VNI delete notifications: 0
+MAC-IP add notifications: 0
+MAC-IP delete notifications: 0
+ES add notifications: 0
+ES delete notifications: 0
+ES-EVI add notifications: 0
+ES-EVI delete notifications: 0
+Input Fifo: 0:20 Output Fifo: 0:34
+#    MsgName              TxCount  RxCount  TotalTime(ms)  MaxTime(ms) 
+0    INTERFACE_ADD        186      2        0              0           
+1    INTERFACE_DELETE     1        0        0              0           
+2    INTERFACE_ADDRESS_ADD 22       0        0              0           
+4    INTERFACE_UP         67       0        0              0           
+5    INTERFACE_DOWN       359      0        0              0           
+8    ROUTE_ADD            0        228      6              0           
+9    ROUTE_DELETE         0        101      1              0           
+15   ROUTER_ID_ADD        0        1        0              0           
+17   ROUTER_ID_UPDATE     1        0        0              0           
+18   HELLO                0        1        0              0           
+19   CAPABILITIES         1        0        0              0           
+20   NEXTHOP_REGISTER     0        7        0              0           
+26   BFD_DEST_REGISTER    0        6        0              0           
+33   VRF_ADD              2        0        0              0           
+36   INTERFACE_VRF_UPDATE 1        0        0              0           
+37   BFD_CLIENT_REGISTER  0        1        0              0           
+81   DUPLICATE_ADDR_DETECTION 0        1        0              0           
+121  CLIENT_CAPABILITIES  0        206      0              0           
+147  TEAM_INTF_UPDATE     24       0        0              0           
+
+

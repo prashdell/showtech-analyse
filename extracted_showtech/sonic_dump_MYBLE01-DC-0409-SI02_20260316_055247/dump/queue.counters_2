@@ -1,0 +1,1342 @@
+  Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+   CPU    MC0         4786804        378155933            0             0         5        481      3848
+   CPU    MC1               0                0            0             0         0          0         0
+   CPU    MC2               0                0            0             0         0          0         0
+   CPU    MC3               0                0            0             0         0          0         0
+   CPU    MC4               0                0            0             0         0          0         0
+   CPU    MC5               0                0            0             0         0          0         0
+   CPU    MC6               0                0            0             0         0          0         0
+   CPU    MC7           17307          2036739            0             0         0          0         0
+   CPU    MC8              25             1764            0             0         0          0         0
+   CPU    MC9               0                0            0             0         0          0         0
+   CPU   MC10           80143          5449724            0             0         0          6        48
+   CPU   MC11               0                0            0             0         0          0         0
+   CPU   MC12               0                0            0             0         0          0         0
+   CPU   MC13               0                0            0             0         0          0         0
+   CPU   MC14         1245672        104915621            0             0         1        137      1096
+   CPU   MC15               0                0            0             0         0          0         0
+   CPU   MC16               6              444            0             0         0          0         0
+   CPU   MC17          694198         47205464            0             0         0         67       536
+   CPU   MC18          370656         58705621            0             0         0         74       592
+   CPU   MC19               0                0            0             0         0          0         0
+   CPU   MC20        15605469       1154804484            0             0        22       1741     13928
+   CPU   MC21         2779708        200138904            0             0         3        308      2464
+   CPU   MC22               0                0            0             0         0          0         0
+   CPU   MC23           46346          6117672            0             0         0         26       208
+   CPU   MC24               0                0            0             0         0          0         0
+   CPU   MC25               0                0            0             0         0          0         0
+   CPU   MC26               0                0            0             0         0          0         0
+   CPU   MC27               0                0            0             0         0          0         0
+   CPU   MC28               0                0            0             0         0          0         0
+   CPU   MC29               0                0            0             0         0          0         0
+   CPU   MC30               0                0            0             0         0          0         0
+   CPU   MC31               0                0            0             0         0          0         0
+   CPU   MC32               0                0            0             0         0          0         0
+   CPU   MC33               0                0            0             0         0          0         0
+   CPU   MC34               0                0            0             0         0          0         0
+   CPU   MC35               0                0            0             0         0          0         0
+   CPU   MC36               0                0            0             0         0          0         0
+   CPU   MC37               0                0            0             0         0          0         0
+   CPU   MC38               0                0            0             0         0          0         0
+   CPU   MC39               0                0            0             0         0          0         0
+   CPU   MC40               0                0            0             0         0          0         0
+   CPU   MC41               0                0            0             0         0          0         0
+   CPU   MC42               0                0            0             0         0          0         0
+   CPU   MC43               0                0            0             0         0          0         0
+   CPU   MC44               0                0            0             0         0          0         0
+   CPU   MC45               0                0            0             0         0          0         0
+   CPU   MC46               0                0            0             0         0          0         0
+   CPU   MC47               0                0            0             0         0          0         0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet0    UC0               0                0           47             0         0          0         0
+Ethernet0    UC1               0                0            0             0         0          0         0
+Ethernet0    UC2               0                0            0             0         0          0         0
+Ethernet0    UC3               0                0            0             0         0          0         0
+Ethernet0    UC4               0                0            0             0         0          0         0
+Ethernet0    UC5               0                0            0             0         0          0         0
+Ethernet0    UC6               0                0            0             0         0          0         0
+Ethernet0    UC7               0                0            0             0         0          0         0
+Ethernet0    UC8               0                0            0             0         0          0         0
+Ethernet0    UC9         1065564         85036125            0             0         1        114       912
+Ethernet0   MC10          884641         60305512            0             0         0         74       592
+Ethernet0   MC11               0                0            0             0         0          0         0
+Ethernet0   MC12               0                0            0             0         0          0         0
+Ethernet0   MC13               0                0            0             0         0          0         0
+Ethernet0   MC14               0                0            0             0         0          0         0
+Ethernet0   MC15               0                0            0             0         0          0         0
+Ethernet0   MC16               0                0            0             0         0          0         0
+Ethernet0   MC17               0                0            0             0         0          0         0
+Ethernet0   MC18               0                0            0             0         0          0         0
+Ethernet0   MC19               0                0            0             0         0          0         0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s     Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  ---------
+Ethernet1    UC0     19562240969   11384938974188           16             0     38168   25632567  205060536
+Ethernet1    UC1               0                0            0             0         0          0          0
+Ethernet1    UC2               0                0            0             0         0          0          0
+Ethernet1    UC3               0                0            0             0         0          0          0
+Ethernet1    UC4               0                0            0             0         0          0          0
+Ethernet1    UC5               0                0            0             0         0          0          0
+Ethernet1    UC6               0                0            0             0         0          0          0
+Ethernet1    UC7               0                0            0             0         0          0          0
+Ethernet1    UC8               0                0            0             0         0          0          0
+Ethernet1    UC9         9944549        818974347            0             0        13       1118       8944
+Ethernet1   MC10               3              192            0             0         0          0          0
+Ethernet1   MC11               0                0            0             0         0          0          0
+Ethernet1   MC12               0                0            0             0         0          0          0
+Ethernet1   MC13               0                0            0             0         0          0          0
+Ethernet1   MC14               0                0            0             0         0          0          0
+Ethernet1   MC15               0                0            0             0         0          0          0
+Ethernet1   MC16               0                0            0             0         0          0          0
+Ethernet1   MC17               0                0            0             0         0          0          0
+Ethernet1   MC18               0                0            0             0         0          0          0
+Ethernet1   MC19               0                0            0             0         0          0          0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet2    UC0               0                0           52             0         0          0         0
+Ethernet2    UC1               0                0            0             0         0          0         0
+Ethernet2    UC2               0                0            0             0         0          0         0
+Ethernet2    UC3               0                0            0             0         0          0         0
+Ethernet2    UC4               0                0            0             0         0          0         0
+Ethernet2    UC5               0                0            0             0         0          0         0
+Ethernet2    UC6               0                0            0             0         0          0         0
+Ethernet2    UC7               0                0            0             0         0          0         0
+Ethernet2    UC8               0                0            0             0         0          0         0
+Ethernet2    UC9         1065565         85871563            0             0         1        161      1288
+Ethernet2   MC10          884636         60305172            0             0         0         74       592
+Ethernet2   MC11               0                0            0             0         0          0         0
+Ethernet2   MC12               0                0            0             0         0          0         0
+Ethernet2   MC13               0                0            0             0         0          0         0
+Ethernet2   MC14               0                0            0             0         0          0         0
+Ethernet2   MC15               0                0            0             0         0          0         0
+Ethernet2   MC16               0                0            0             0         0          0         0
+Ethernet2   MC17               0                0            0             0         0          0         0
+Ethernet2   MC18               0                0            0             0         0          0         0
+Ethernet2   MC19               0                0            0             0         0          0         0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s     Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  ---------
+Ethernet3    UC0      6967155156    4018935190269           14             0     36374   19149511  153196088
+Ethernet3    UC1               0                0            0             0         0          0          0
+Ethernet3    UC2               0                0            0             0         0          0          0
+Ethernet3    UC3               0                0            0             0         0          0          0
+Ethernet3    UC4               0                0            0             0         0          0          0
+Ethernet3    UC5               0                0            0             0         0          0          0
+Ethernet3    UC6               0                0            0             0         0          0          0
+Ethernet3    UC7               0                0            0             0         0          0          0
+Ethernet3    UC8               0                0            0             0         0          0          0
+Ethernet3    UC9         9944544        818556795            0             0        13       1169       9352
+Ethernet3   MC10               2              128            0             0         0          0          0
+Ethernet3   MC11               0                0            0             0         0          0          0
+Ethernet3   MC12               0                0            0             0         0          0          0
+Ethernet3   MC13               0                0            0             0         0          0          0
+Ethernet3   MC14               0                0            0             0         0          0          0
+Ethernet3   MC15               0                0            0             0         0          0          0
+Ethernet3   MC16               0                0            0             0         0          0          0
+Ethernet3   MC17               0                0            0             0         0          0          0
+Ethernet3   MC18               0                0            0             0         0          0          0
+Ethernet3   MC19               0                0            0             0         0          0          0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet4    UC0               0                0          186             0         0          0         0
+Ethernet4    UC1               0                0            0             0         0          0         0
+Ethernet4    UC2               0                0            0             0         0          0         0
+Ethernet4    UC3               0                0            0             0         0          0         0
+Ethernet4    UC4               0                0         6672             0         0          0         0
+Ethernet4    UC5               0                0            0             0         0          0         0
+Ethernet4    UC6               0                0           41             0         0          0         0
+Ethernet4    UC7               0                0            0             0         0          0         0
+Ethernet4    UC8               0                0            0             0         0          0         0
+Ethernet4    UC9           23165         10794873            0             0         0         46       368
+Ethernet4   MC10         1140662        143875135            0             0         0         81       648
+Ethernet4   MC11               0                0            0             0         0          0         0
+Ethernet4   MC12               0                0            0             0         0          0         0
+Ethernet4   MC13               0                0            0             0         0          0         0
+Ethernet4   MC14           12459          2614174            0             0         0          0         0
+Ethernet4   MC15               0                0            0             0         0          0         0
+Ethernet4   MC16              86            17992            0             0         0          0         0
+Ethernet4   MC17               0                0            0             0         0          0         0
+Ethernet4   MC18               0                0            0             0         0          0         0
+Ethernet4   MC19               0                0            0             0         0          0         0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet5    UC0               0                0          197             0         0          0         0
+Ethernet5    UC1               0                0            0             0         0          0         0
+Ethernet5    UC2               0                0            0             0         0          0         0
+Ethernet5    UC3               0                0            0             0         0          0         0
+Ethernet5    UC4               0                0         6672             0         0          0         0
+Ethernet5    UC5               0                0            0             0         0          0         0
+Ethernet5    UC6               0                0           41             0         0          0         0
+Ethernet5    UC7               0                0            0             0         0          0         0
+Ethernet5    UC8               0                0            0             0         0          0         0
+Ethernet5    UC9           23165         10007251            0             0         0          0         0
+Ethernet5   MC10         1140651        143872539            0             0         0         81       648
+Ethernet5   MC11               0                0            0             0         0          0         0
+Ethernet5   MC12               0                0            0             0         0          0         0
+Ethernet5   MC13               0                0            0             0         0          0         0
+Ethernet5   MC14           12459          2614174            0             0         0          0         0
+Ethernet5   MC15               0                0            0             0         0          0         0
+Ethernet5   MC16              86            17992            0             0         0          0         0
+Ethernet5   MC17               0                0            0             0         0          0         0
+Ethernet5   MC18               0                0            0             0         0          0         0
+Ethernet5   MC19               0                0            0             0         0          0         0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet6    UC0               0                0            0             0         0          0         0
+Ethernet6    UC1               0                0            0             0         0          0         0
+Ethernet6    UC2               0                0            0             0         0          0         0
+Ethernet6    UC3               0                0            0             0         0          0         0
+Ethernet6    UC4               0                0            0             0         0          0         0
+Ethernet6    UC5               0                0            0             0         0          0         0
+Ethernet6    UC6               0                0            0             0         0          0         0
+Ethernet6    UC7               0                0            0             0         0          0         0
+Ethernet6    UC8               0                0            0             0         0          0         0
+Ethernet6    UC9               0                0            0             0         0          0         0
+Ethernet6   MC10               0                0            0             0         0          0         0
+Ethernet6   MC11               0                0            0             0         0          0         0
+Ethernet6   MC12               0                0            0             0         0          0         0
+Ethernet6   MC13               0                0            0             0         0          0         0
+Ethernet6   MC14               0                0            0             0         0          0         0
+Ethernet6   MC15               0                0            0             0         0          0         0
+Ethernet6   MC16               0                0            0             0         0          0         0
+Ethernet6   MC17               0                0            0             0         0          0         0
+Ethernet6   MC18               0                0            0             0         0          0         0
+Ethernet6   MC19               0                0            0             0         0          0         0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet7    UC0               0                0            0             0         0          0         0
+Ethernet7    UC1               0                0            0             0         0          0         0
+Ethernet7    UC2               0                0            0             0         0          0         0
+Ethernet7    UC3               0                0            0             0         0          0         0
+Ethernet7    UC4               0                0            0             0         0          0         0
+Ethernet7    UC5               0                0            0             0         0          0         0
+Ethernet7    UC6               0                0            0             0         0          0         0
+Ethernet7    UC7               0                0            0             0         0          0         0
+Ethernet7    UC8               0                0            0             0         0          0         0
+Ethernet7    UC9               0                0            0             0         0          0         0
+Ethernet7   MC10               0                0            0             0         0          0         0
+Ethernet7   MC11               0                0            0             0         0          0         0
+Ethernet7   MC12               0                0            0             0         0          0         0
+Ethernet7   MC13               0                0            0             0         0          0         0
+Ethernet7   MC14               0                0            0             0         0          0         0
+Ethernet7   MC15               0                0            0             0         0          0         0
+Ethernet7   MC16               0                0            0             0         0          0         0
+Ethernet7   MC17               0                0            0             0         0          0         0
+Ethernet7   MC18               0                0            0             0         0          0         0
+Ethernet7   MC19               0                0            0             0         0          0         0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet8    UC0               0                0            0             0         0          0         0
+Ethernet8    UC1               0                0            0             0         0          0         0
+Ethernet8    UC2               0                0            0             0         0          0         0
+Ethernet8    UC3               0                0            0             0         0          0         0
+Ethernet8    UC4               0                0            0             0         0          0         0
+Ethernet8    UC5               0                0            0             0         0          0         0
+Ethernet8    UC6               0                0            0             0         0          0         0
+Ethernet8    UC7               0                0            0             0         0          0         0
+Ethernet8    UC8               0                0            0             0         0          0         0
+Ethernet8    UC9               0                0            0             0         0          0         0
+Ethernet8   MC10               0                0            0             0         0          0         0
+Ethernet8   MC11               0                0            0             0         0          0         0
+Ethernet8   MC12               0                0            0             0         0          0         0
+Ethernet8   MC13               0                0            0             0         0          0         0
+Ethernet8   MC14               0                0            0             0         0          0         0
+Ethernet8   MC15               0                0            0             0         0          0         0
+Ethernet8   MC16               0                0            0             0         0          0         0
+Ethernet8   MC17               0                0            0             0         0          0         0
+Ethernet8   MC18               0                0            0             0         0          0         0
+Ethernet8   MC19               0                0            0             0         0          0         0
+
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+---------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet9    UC0               0                0            0             0         0          0         0
+Ethernet9    UC1               0                0            0             0         0          0         0
+Ethernet9    UC2               0                0            0             0         0          0         0
+Ethernet9    UC3               0                0            0             0         0          0         0
+Ethernet9    UC4               0                0            0             0         0          0         0
+Ethernet9    UC5               0                0            0             0         0          0         0
+Ethernet9    UC6               0                0            0             0         0          0         0
+Ethernet9    UC7               0                0            0             0         0          0         0
+Ethernet9    UC8               0                0            0             0         0          0         0
+Ethernet9    UC9               0                0            0             0         0          0         0
+Ethernet9   MC10               0                0            0             0         0          0         0
+Ethernet9   MC11               0                0            0             0         0          0         0
+Ethernet9   MC12               0                0            0             0         0          0         0
+Ethernet9   MC13               0                0            0             0         0          0         0
+Ethernet9   MC14               0                0            0             0         0          0         0
+Ethernet9   MC15               0                0            0             0         0          0         0
+Ethernet9   MC16               0                0            0             0         0          0         0
+Ethernet9   MC17               0                0            0             0         0          0         0
+Ethernet9   MC18               0                0            0             0         0          0         0
+Ethernet9   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet10    UC0               0                0            0             0         0          0         0
+Ethernet10    UC1               0                0            0             0         0          0         0
+Ethernet10    UC2               0                0            0             0         0          0         0
+Ethernet10    UC3               0                0            0             0         0          0         0
+Ethernet10    UC4               0                0            0             0         0          0         0
+Ethernet10    UC5               0                0            0             0         0          0         0
+Ethernet10    UC6               0                0            0             0         0          0         0
+Ethernet10    UC7               0                0            0             0         0          0         0
+Ethernet10    UC8               0                0            0             0         0          0         0
+Ethernet10    UC9               0                0            0             0         0          0         0
+Ethernet10   MC10               0                0            0             0         0          0         0
+Ethernet10   MC11               0                0            0             0         0          0         0
+Ethernet10   MC12               0                0            0             0         0          0         0
+Ethernet10   MC13               0                0            0             0         0          0         0
+Ethernet10   MC14               0                0            0             0         0          0         0
+Ethernet10   MC15               0                0            0             0         0          0         0
+Ethernet10   MC16               0                0            0             0         0          0         0
+Ethernet10   MC17               0                0            0             0         0          0         0
+Ethernet10   MC18               0                0            0             0         0          0         0
+Ethernet10   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s     Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  ---------
+Ethernet11    UC0     25909540065   14477299679856       132650             0     58524   41672427  333379416
+Ethernet11    UC1               0                0            0             0         0          0          0
+Ethernet11    UC2               0                0            0             0         0          0          0
+Ethernet11    UC3               0                0            0             0         0          0          0
+Ethernet11    UC4       731914728     152473934712        29390             0      1053     227513    1820104
+Ethernet11    UC5               0                0            0             0         0          0          0
+Ethernet11    UC6         3360614        695246062          225             0         4        997       7976
+Ethernet11    UC7               0                0            0             0         0          0          0
+Ethernet11    UC8               0                0            0             0         0          0          0
+Ethernet11    UC9           23167         10749386            0             0         0          0          0
+Ethernet11   MC10             199            12736            0             0         0          0          0
+Ethernet11   MC11               0                0            0             0         0          0          0
+Ethernet11   MC12               0                0            0             0         0          0          0
+Ethernet11   MC13               0                0            0             0         0          0          0
+Ethernet11   MC14             256            52736            0             0         0          0          0
+Ethernet11   MC15               0                0            0             0         0          0          0
+Ethernet11   MC16               6             1232            0             0         0          0          0
+Ethernet11   MC17               0                0            0             0         0          0          0
+Ethernet11   MC18               0                0            0             0         0          0          0
+Ethernet11   MC19               0                0            0             0         0          0          0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet12    UC0               0                0            0             0         0          0         0
+Ethernet12    UC1               0                0            0             0         0          0         0
+Ethernet12    UC2               0                0            0             0         0          0         0
+Ethernet12    UC3               0                0            0             0         0          0         0
+Ethernet12    UC4               0                0            0             0         0          0         0
+Ethernet12    UC5               0                0            0             0         0          0         0
+Ethernet12    UC6               0                0            0             0         0          0         0
+Ethernet12    UC7               0                0            0             0         0          0         0
+Ethernet12    UC8               0                0            0             0         0          0         0
+Ethernet12    UC9               0                0            0             0         0          0         0
+Ethernet12   MC10               0                0            0             0         0          0         0
+Ethernet12   MC11               0                0            0             0         0          0         0
+Ethernet12   MC12               0                0            0             0         0          0         0
+Ethernet12   MC13               0                0            0             0         0          0         0
+Ethernet12   MC14               0                0            0             0         0          0         0
+Ethernet12   MC15               0                0            0             0         0          0         0
+Ethernet12   MC16               0                0            0             0         0          0         0
+Ethernet12   MC17               0                0            0             0         0          0         0
+Ethernet12   MC18               0                0            0             0         0          0         0
+Ethernet12   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet13    UC0               0                0            0             0         0          0         0
+Ethernet13    UC1               0                0            0             0         0          0         0
+Ethernet13    UC2               0                0            0             0         0          0         0
+Ethernet13    UC3               0                0            0             0         0          0         0
+Ethernet13    UC4               0                0            0             0         0          0         0
+Ethernet13    UC5               0                0            0             0         0          0         0
+Ethernet13    UC6               0                0            0             0         0          0         0
+Ethernet13    UC7               0                0            0             0         0          0         0
+Ethernet13    UC8               0                0            0             0         0          0         0
+Ethernet13    UC9               0                0            0             0         0          0         0
+Ethernet13   MC10               0                0            0             0         0          0         0
+Ethernet13   MC11               0                0            0             0         0          0         0
+Ethernet13   MC12               0                0            0             0         0          0         0
+Ethernet13   MC13               0                0            0             0         0          0         0
+Ethernet13   MC14               0                0            0             0         0          0         0
+Ethernet13   MC15               0                0            0             0         0          0         0
+Ethernet13   MC16               0                0            0             0         0          0         0
+Ethernet13   MC17               0                0            0             0         0          0         0
+Ethernet13   MC18               0                0            0             0         0          0         0
+Ethernet13   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet14    UC0               0                0            0             0         0          0         0
+Ethernet14    UC1               0                0            0             0         0          0         0
+Ethernet14    UC2               0                0            0             0         0          0         0
+Ethernet14    UC3               0                0            0             0         0          0         0
+Ethernet14    UC4               0                0            0             0         0          0         0
+Ethernet14    UC5               0                0            0             0         0          0         0
+Ethernet14    UC6               0                0            0             0         0          0         0
+Ethernet14    UC7               0                0            0             0         0          0         0
+Ethernet14    UC8               0                0            0             0         0          0         0
+Ethernet14    UC9               0                0            0             0         0          0         0
+Ethernet14   MC10               0                0            0             0         0          0         0
+Ethernet14   MC11               0                0            0             0         0          0         0
+Ethernet14   MC12               0                0            0             0         0          0         0
+Ethernet14   MC13               0                0            0             0         0          0         0
+Ethernet14   MC14               0                0            0             0         0          0         0
+Ethernet14   MC15               0                0            0             0         0          0         0
+Ethernet14   MC16               0                0            0             0         0          0         0
+Ethernet14   MC17               0                0            0             0         0          0         0
+Ethernet14   MC18               0                0            0             0         0          0         0
+Ethernet14   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet15    UC0               0                0            0             0         0          0         0
+Ethernet15    UC1               0                0            0             0         0          0         0
+Ethernet15    UC2               0                0            0             0         0          0         0
+Ethernet15    UC3               0                0            0             0         0          0         0
+Ethernet15    UC4               0                0            0             0         0          0         0
+Ethernet15    UC5               0                0            0             0         0          0         0
+Ethernet15    UC6               0                0            0             0         0          0         0
+Ethernet15    UC7               0                0            0             0         0          0         0
+Ethernet15    UC8               0                0            0             0         0          0         0
+Ethernet15    UC9               0                0            0             0         0          0         0
+Ethernet15   MC10               0                0            0             0         0          0         0
+Ethernet15   MC11               0                0            0             0         0          0         0
+Ethernet15   MC12               0                0            0             0         0          0         0
+Ethernet15   MC13               0                0            0             0         0          0         0
+Ethernet15   MC14               0                0            0             0         0          0         0
+Ethernet15   MC15               0                0            0             0         0          0         0
+Ethernet15   MC16               0                0            0             0         0          0         0
+Ethernet15   MC17               0                0            0             0         0          0         0
+Ethernet15   MC18               0                0            0             0         0          0         0
+Ethernet15   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet16    UC0               0                0            0             0         0          0         0
+Ethernet16    UC1               0                0            0             0         0          0         0
+Ethernet16    UC2               0                0            0             0         0          0         0
+Ethernet16    UC3               0                0            0             0         0          0         0
+Ethernet16    UC4               0                0            0             0         0          0         0
+Ethernet16    UC5               0                0            0             0         0          0         0
+Ethernet16    UC6               0                0            0             0         0          0         0
+Ethernet16    UC7               0                0            0             0         0          0         0
+Ethernet16    UC8               0                0            0             0         0          0         0
+Ethernet16    UC9               0                0            0             0         0          0         0
+Ethernet16   MC10               0                0            0             0         0          0         0
+Ethernet16   MC11               0                0            0             0         0          0         0
+Ethernet16   MC12               0                0            0             0         0          0         0
+Ethernet16   MC13               0                0            0             0         0          0         0
+Ethernet16   MC14               0                0            0             0         0          0         0
+Ethernet16   MC15               0                0            0             0         0          0         0
+Ethernet16   MC16               0                0            0             0         0          0         0
+Ethernet16   MC17               0                0            0             0         0          0         0
+Ethernet16   MC18               0                0            0             0         0          0         0
+Ethernet16   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet17    UC0               0                0            0             0         0          0         0
+Ethernet17    UC1               0                0            0             0         0          0         0
+Ethernet17    UC2               0                0            0             0         0          0         0
+Ethernet17    UC3               0                0            0             0         0          0         0
+Ethernet17    UC4               0                0            0             0         0          0         0
+Ethernet17    UC5               0                0            0             0         0          0         0
+Ethernet17    UC6               0                0            0             0         0          0         0
+Ethernet17    UC7               0                0            0             0         0          0         0
+Ethernet17    UC8               0                0            0             0         0          0         0
+Ethernet17    UC9               0                0            0             0         0          0         0
+Ethernet17   MC10               0                0            0             0         0          0         0
+Ethernet17   MC11               0                0            0             0         0          0         0
+Ethernet17   MC12               0                0            0             0         0          0         0
+Ethernet17   MC13               0                0            0             0         0          0         0
+Ethernet17   MC14               0                0            0             0         0          0         0
+Ethernet17   MC15               0                0            0             0         0          0         0
+Ethernet17   MC16               0                0            0             0         0          0         0
+Ethernet17   MC17               0                0            0             0         0          0         0
+Ethernet17   MC18               0                0            0             0         0          0         0
+Ethernet17   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet18    UC0               0                0            0             0         0          0         0
+Ethernet18    UC1               0                0            0             0         0          0         0
+Ethernet18    UC2               0                0            0             0         0          0         0
+Ethernet18    UC3               0                0            0             0         0          0         0
+Ethernet18    UC4               0                0            0             0         0          0         0
+Ethernet18    UC5               0                0            0             0         0          0         0
+Ethernet18    UC6               0                0            0             0         0          0         0
+Ethernet18    UC7               0                0            0             0         0          0         0
+Ethernet18    UC8               0                0            0             0         0          0         0
+Ethernet18    UC9               0                0            0             0         0          0         0
+Ethernet18   MC10               0                0            0             0         0          0         0
+Ethernet18   MC11               0                0            0             0         0          0         0
+Ethernet18   MC12               0                0            0             0         0          0         0
+Ethernet18   MC13               0                0            0             0         0          0         0
+Ethernet18   MC14               0                0            0             0         0          0         0
+Ethernet18   MC15               0                0            0             0         0          0         0
+Ethernet18   MC16               0                0            0             0         0          0         0
+Ethernet18   MC17               0                0            0             0         0          0         0
+Ethernet18   MC18               0                0            0             0         0          0         0
+Ethernet18   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet19    UC0               0                0            0             0         0          0         0
+Ethernet19    UC1               0                0            0             0         0          0         0
+Ethernet19    UC2               0                0            0             0         0          0         0
+Ethernet19    UC3               0                0            0             0         0          0         0
+Ethernet19    UC4               0                0            0             0         0          0         0
+Ethernet19    UC5               0                0            0             0         0          0         0
+Ethernet19    UC6               0                0            0             0         0          0         0
+Ethernet19    UC7               0                0            0             0         0          0         0
+Ethernet19    UC8               0                0            0             0         0          0         0
+Ethernet19    UC9               0                0            0             0         0          0         0
+Ethernet19   MC10               0                0            0             0         0          0         0
+Ethernet19   MC11               0                0            0             0         0          0         0
+Ethernet19   MC12               0                0            0             0         0          0         0
+Ethernet19   MC13               0                0            0             0         0          0         0
+Ethernet19   MC14               0                0            0             0         0          0         0
+Ethernet19   MC15               0                0            0             0         0          0         0
+Ethernet19   MC16               0                0            0             0         0          0         0
+Ethernet19   MC17               0                0            0             0         0          0         0
+Ethernet19   MC18               0                0            0             0         0          0         0
+Ethernet19   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet20    UC0      5756689112     692400196620         2742             0         0          0         0
+Ethernet20    UC1               0                0            0             0         0          0         0
+Ethernet20    UC2               0                0            0             0         0          0         0
+Ethernet20    UC3               0                0            0             0         0          0         0
+Ethernet20    UC4               0                0            0             0         0          0         0
+Ethernet20    UC5               0                0            0             0         0          0         0
+Ethernet20    UC6               0                0            0             0         0          0         0
+Ethernet20    UC7               0                0            0             0         0          0         0
+Ethernet20    UC8               0                0            0             0         0          0         0
+Ethernet20    UC9         3398669        248307963            0             0         4        355      2840
+Ethernet20   MC10            9257           592466            0             0         0          0         0
+Ethernet20   MC11               0                0            0             0         0          0         0
+Ethernet20   MC12               0                0            0             0         0          0         0
+Ethernet20   MC13               0                0            0             0         0          0         0
+Ethernet20   MC14               0                0            0             0         0          0         0
+Ethernet20   MC15               0                0            0             0         0          0         0
+Ethernet20   MC16               0                0            0             0         0          0         0
+Ethernet20   MC17               0                0            0             0         0          0         0
+Ethernet20   MC18               0                0            0             0         0          0         0
+Ethernet20   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet21    UC0      8500827919    6448396307305         2688             0         0          0         0
+Ethernet21    UC1               0                0            0             0         0          0         0
+Ethernet21    UC2               0                0            0             0         0          0         0
+Ethernet21    UC3               0                0            0             0         0          0         0
+Ethernet21    UC4               0                0            0             0         0          0         0
+Ethernet21    UC5               0                0            0             0         0          0         0
+Ethernet21    UC6               0                0            0             0         0          0         0
+Ethernet21    UC7               0                0            0             0         0          0         0
+Ethernet21    UC8               0                0            0             0         0          0         0
+Ethernet21    UC9         3611494        271462372            0             0         5        438      3504
+Ethernet21   MC10            8921           570944            0             0         0          0         0
+Ethernet21   MC11               0                0            0             0         0          0         0
+Ethernet21   MC12               0                0            0             0         0          0         0
+Ethernet21   MC13               0                0            0             0         0          0         0
+Ethernet21   MC14               0                0            0             0         0          0         0
+Ethernet21   MC15               0                0            0             0         0          0         0
+Ethernet21   MC16               0                0            0             0         0          0         0
+Ethernet21   MC17               0                0            0             0         0          0         0
+Ethernet21   MC18               0                0            0             0         0          0         0
+Ethernet21   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet22    UC0               0                0           43             0         0          0         0
+Ethernet22    UC1               0                0            0             0         0          0         0
+Ethernet22    UC2               0                0            0             0         0          0         0
+Ethernet22    UC3               0                0            0             0         0          0         0
+Ethernet22    UC4               0                0            0             0         0          0         0
+Ethernet22    UC5               0                0            0             0         0          0         0
+Ethernet22    UC6               0                0            0             0         0          0         0
+Ethernet22    UC7               0                0            0             0         0          0         0
+Ethernet22    UC8               0                0            0             0         0          0         0
+Ethernet22    UC9         3293444        240794563            0             0         4        327      2616
+Ethernet22   MC10           23167          1482782            0             0         0          0         0
+Ethernet22   MC11               0                0            0             0         0          0         0
+Ethernet22   MC12               0                0            0             0         0          0         0
+Ethernet22   MC13               0                0            0             0         0          0         0
+Ethernet22   MC14               0                0            0             0         0          0         0
+Ethernet22   MC15               0                0            0             0         0          0         0
+Ethernet22   MC16               0                0            0             0         0          0         0
+Ethernet22   MC17               0                0            0             0         0          0         0
+Ethernet22   MC18               0                0            0             0         0          0         0
+Ethernet22   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet23    UC0               0                0            0             0         0          0         0
+Ethernet23    UC1               0                0            0             0         0          0         0
+Ethernet23    UC2               0                0            0             0         0          0         0
+Ethernet23    UC3               0                0            0             0         0          0         0
+Ethernet23    UC4               0                0            0             0         0          0         0
+Ethernet23    UC5               0                0            0             0         0          0         0
+Ethernet23    UC6               0                0            0             0         0          0         0
+Ethernet23    UC7               0                0            0             0         0          0         0
+Ethernet23    UC8               0                0            0             0         0          0         0
+Ethernet23    UC9               0                0            0             0         0          0         0
+Ethernet23   MC10               0                0            0             0         0          0         0
+Ethernet23   MC11               0                0            0             0         0          0         0
+Ethernet23   MC12               0                0            0             0         0          0         0
+Ethernet23   MC13               0                0            0             0         0          0         0
+Ethernet23   MC14               0                0            0             0         0          0         0
+Ethernet23   MC15               0                0            0             0         0          0         0
+Ethernet23   MC16               0                0            0             0         0          0         0
+Ethernet23   MC17               0                0            0             0         0          0         0
+Ethernet23   MC18               0                0            0             0         0          0         0
+Ethernet23   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet24    UC0               0                0            0             0         0          0         0
+Ethernet24    UC1               0                0            0             0         0          0         0
+Ethernet24    UC2               0                0            0             0         0          0         0
+Ethernet24    UC3               0                0            0             0         0          0         0
+Ethernet24    UC4               0                0            0             0         0          0         0
+Ethernet24    UC5               0                0            0             0         0          0         0
+Ethernet24    UC6               0                0            0             0         0          0         0
+Ethernet24    UC7               0                0            0             0         0          0         0
+Ethernet24    UC8               0                0            0             0         0          0         0
+Ethernet24    UC9               0                0            0             0         0          0         0
+Ethernet24   MC10               0                0            0             0         0          0         0
+Ethernet24   MC11               0                0            0             0         0          0         0
+Ethernet24   MC12               0                0            0             0         0          0         0
+Ethernet24   MC13               0                0            0             0         0          0         0
+Ethernet24   MC14               0                0            0             0         0          0         0
+Ethernet24   MC15               0                0            0             0         0          0         0
+Ethernet24   MC16               0                0            0             0         0          0         0
+Ethernet24   MC17               0                0            0             0         0          0         0
+Ethernet24   MC18               0                0            0             0         0          0         0
+Ethernet24   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet25    UC0               0                0            0             0         0          0         0
+Ethernet25    UC1               0                0            0             0         0          0         0
+Ethernet25    UC2               0                0            0             0         0          0         0
+Ethernet25    UC3               0                0            0             0         0          0         0
+Ethernet25    UC4               0                0            0             0         0          0         0
+Ethernet25    UC5               0                0            0             0         0          0         0
+Ethernet25    UC6               0                0            0             0         0          0         0
+Ethernet25    UC7               0                0            0             0         0          0         0
+Ethernet25    UC8               0                0            0             0         0          0         0
+Ethernet25    UC9               0                0            0             0         0          0         0
+Ethernet25   MC10               0                0            0             0         0          0         0
+Ethernet25   MC11               0                0            0             0         0          0         0
+Ethernet25   MC12               0                0            0             0         0          0         0
+Ethernet25   MC13               0                0            0             0         0          0         0
+Ethernet25   MC14               0                0            0             0         0          0         0
+Ethernet25   MC15               0                0            0             0         0          0         0
+Ethernet25   MC16               0                0            0             0         0          0         0
+Ethernet25   MC17               0                0            0             0         0          0         0
+Ethernet25   MC18               0                0            0             0         0          0         0
+Ethernet25   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet26    UC0               0                0            0             0         0          0         0
+Ethernet26    UC1               0                0            0             0         0          0         0
+Ethernet26    UC2               0                0            0             0         0          0         0
+Ethernet26    UC3               0                0            0             0         0          0         0
+Ethernet26    UC4               0                0            0             0         0          0         0
+Ethernet26    UC5               0                0            0             0         0          0         0
+Ethernet26    UC6               0                0            0             0         0          0         0
+Ethernet26    UC7               0                0            0             0         0          0         0
+Ethernet26    UC8               0                0            0             0         0          0         0
+Ethernet26    UC9               0                0            0             0         0          0         0
+Ethernet26   MC10               0                0            0             0         0          0         0
+Ethernet26   MC11               0                0            0             0         0          0         0
+Ethernet26   MC12               0                0            0             0         0          0         0
+Ethernet26   MC13               0                0            0             0         0          0         0
+Ethernet26   MC14               0                0            0             0         0          0         0
+Ethernet26   MC15               0                0            0             0         0          0         0
+Ethernet26   MC16               0                0            0             0         0          0         0
+Ethernet26   MC17               0                0            0             0         0          0         0
+Ethernet26   MC18               0                0            0             0         0          0         0
+Ethernet26   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet27    UC0               0                0          404             0         0          0         0
+Ethernet27    UC1               0                0            0             0         0          0         0
+Ethernet27    UC2               0                0            0             0         0          0         0
+Ethernet27    UC3               0                0            0             0         0          0         0
+Ethernet27    UC4               0                0            0             0         0          0         0
+Ethernet27    UC5               0                0            0             0         0          0         0
+Ethernet27    UC6               0                0            0             0         0          0         0
+Ethernet27    UC7               0                0            0             0         0          0         0
+Ethernet27    UC8               0                0            0             0         0          0         0
+Ethernet27    UC9               0                0            0             0         0          0         0
+Ethernet27   MC10               0                0            0             0         0          0         0
+Ethernet27   MC11               0                0            0             0         0          0         0
+Ethernet27   MC12               0                0            0             0         0          0         0
+Ethernet27   MC13               0                0            0             0         0          0         0
+Ethernet27   MC14               0                0            0             0         0          0         0
+Ethernet27   MC15               0                0            0             0         0          0         0
+Ethernet27   MC16               0                0            0             0         0          0         0
+Ethernet27   MC17               0                0            0             0         0          0         0
+Ethernet27   MC18               0                0            0             0         0          0         0
+Ethernet27   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet28    UC0               0                0            0             0         0          0         0
+Ethernet28    UC1               0                0            0             0         0          0         0
+Ethernet28    UC2               0                0            0             0         0          0         0
+Ethernet28    UC3               0                0            0             0         0          0         0
+Ethernet28    UC4               0                0            0             0         0          0         0
+Ethernet28    UC5               0                0            0             0         0          0         0
+Ethernet28    UC6               0                0            0             0         0          0         0
+Ethernet28    UC7               0                0            0             0         0          0         0
+Ethernet28    UC8               0                0            0             0         0          0         0
+Ethernet28    UC9               0                0            0             0         0          0         0
+Ethernet28   MC10               0                0            0             0         0          0         0
+Ethernet28   MC11               0                0            0             0         0          0         0
+Ethernet28   MC12               0                0            0             0         0          0         0
+Ethernet28   MC13               0                0            0             0         0          0         0
+Ethernet28   MC14               0                0            0             0         0          0         0
+Ethernet28   MC15               0                0            0             0         0          0         0
+Ethernet28   MC16               0                0            0             0         0          0         0
+Ethernet28   MC17               0                0            0             0         0          0         0
+Ethernet28   MC18               0                0            0             0         0          0         0
+Ethernet28   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet29    UC0               0                0            0             0         0          0         0
+Ethernet29    UC1               0                0            0             0         0          0         0
+Ethernet29    UC2               0                0            0             0         0          0         0
+Ethernet29    UC3               0                0            0             0         0          0         0
+Ethernet29    UC4               0                0            0             0         0          0         0
+Ethernet29    UC5               0                0            0             0         0          0         0
+Ethernet29    UC6               0                0            0             0         0          0         0
+Ethernet29    UC7               0                0            0             0         0          0         0
+Ethernet29    UC8               0                0            0             0         0          0         0
+Ethernet29    UC9               0                0            0             0         0          0         0
+Ethernet29   MC10               0                0            0             0         0          0         0
+Ethernet29   MC11               0                0            0             0         0          0         0
+Ethernet29   MC12               0                0            0             0         0          0         0
+Ethernet29   MC13               0                0            0             0         0          0         0
+Ethernet29   MC14               0                0            0             0         0          0         0
+Ethernet29   MC15               0                0            0             0         0          0         0
+Ethernet29   MC16               0                0            0             0         0          0         0
+Ethernet29   MC17               0                0            0             0         0          0         0
+Ethernet29   MC18               0                0            0             0         0          0         0
+Ethernet29   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet30    UC0               0                0            0             0         0          0         0
+Ethernet30    UC1               0                0            0             0         0          0         0
+Ethernet30    UC2               0                0            0             0         0          0         0
+Ethernet30    UC3               0                0            0             0         0          0         0
+Ethernet30    UC4               0                0            0             0         0          0         0
+Ethernet30    UC5               0                0            0             0         0          0         0
+Ethernet30    UC6               0                0            0             0         0          0         0
+Ethernet30    UC7               0                0            0             0         0          0         0
+Ethernet30    UC8               0                0            0             0         0          0         0
+Ethernet30    UC9               0                0            0             0         0          0         0
+Ethernet30   MC10               0                0            0             0         0          0         0
+Ethernet30   MC11               0                0            0             0         0          0         0
+Ethernet30   MC12               0                0            0             0         0          0         0
+Ethernet30   MC13               0                0            0             0         0          0         0
+Ethernet30   MC14               0                0            0             0         0          0         0
+Ethernet30   MC15               0                0            0             0         0          0         0
+Ethernet30   MC16               0                0            0             0         0          0         0
+Ethernet30   MC17               0                0            0             0         0          0         0
+Ethernet30   MC18               0                0            0             0         0          0         0
+Ethernet30   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet31    UC0               0                0            0             0         0          0         0
+Ethernet31    UC1               0                0            0             0         0          0         0
+Ethernet31    UC2               0                0            0             0         0          0         0
+Ethernet31    UC3               0                0            0             0         0          0         0
+Ethernet31    UC4               0                0            0             0         0          0         0
+Ethernet31    UC5               0                0            0             0         0          0         0
+Ethernet31    UC6               0                0            0             0         0          0         0
+Ethernet31    UC7               0                0            0             0         0          0         0
+Ethernet31    UC8               0                0            0             0         0          0         0
+Ethernet31    UC9               0                0            0             0         0          0         0
+Ethernet31   MC10               0                0            0             0         0          0         0
+Ethernet31   MC11               0                0            0             0         0          0         0
+Ethernet31   MC12               0                0            0             0         0          0         0
+Ethernet31   MC13               0                0            0             0         0          0         0
+Ethernet31   MC14               0                0            0             0         0          0         0
+Ethernet31   MC15               0                0            0             0         0          0         0
+Ethernet31   MC16               0                0            0             0         0          0         0
+Ethernet31   MC17               0                0            0             0         0          0         0
+Ethernet31   MC18               0                0            0             0         0          0         0
+Ethernet31   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet32    UC0               0                0            0             0         0          0         0
+Ethernet32    UC1               0                0            0             0         0          0         0
+Ethernet32    UC2               0                0            0             0         0          0         0
+Ethernet32    UC3               0                0            0             0         0          0         0
+Ethernet32    UC4               0                0            0             0         0          0         0
+Ethernet32    UC5               0                0            0             0         0          0         0
+Ethernet32    UC6               0                0            0             0         0          0         0
+Ethernet32    UC7               0                0            0             0         0          0         0
+Ethernet32    UC8               0                0            0             0         0          0         0
+Ethernet32    UC9               0                0            0             0         0          0         0
+Ethernet32   MC10               0                0            0             0         0          0         0
+Ethernet32   MC11               0                0            0             0         0          0         0
+Ethernet32   MC12               0                0            0             0         0          0         0
+Ethernet32   MC13               0                0            0             0         0          0         0
+Ethernet32   MC14               0                0            0             0         0          0         0
+Ethernet32   MC15               0                0            0             0         0          0         0
+Ethernet32   MC16               0                0            0             0         0          0         0
+Ethernet32   MC17               0                0            0             0         0          0         0
+Ethernet32   MC18               0                0            0             0         0          0         0
+Ethernet32   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet33    UC0               0                0            0             0         0          0         0
+Ethernet33    UC1               0                0            0             0         0          0         0
+Ethernet33    UC2               0                0            0             0         0          0         0
+Ethernet33    UC3               0                0            0             0         0          0         0
+Ethernet33    UC4               0                0            0             0         0          0         0
+Ethernet33    UC5               0                0            0             0         0          0         0
+Ethernet33    UC6               0                0            0             0         0          0         0
+Ethernet33    UC7               0                0            0             0         0          0         0
+Ethernet33    UC8               0                0            0             0         0          0         0
+Ethernet33    UC9               0                0            0             0         0          0         0
+Ethernet33   MC10               0                0            0             0         0          0         0
+Ethernet33   MC11               0                0            0             0         0          0         0
+Ethernet33   MC12               0                0            0             0         0          0         0
+Ethernet33   MC13               0                0            0             0         0          0         0
+Ethernet33   MC14               0                0            0             0         0          0         0
+Ethernet33   MC15               0                0            0             0         0          0         0
+Ethernet33   MC16               0                0            0             0         0          0         0
+Ethernet33   MC17               0                0            0             0         0          0         0
+Ethernet33   MC18               0                0            0             0         0          0         0
+Ethernet33   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet34    UC0               0                0            0             0         0          0         0
+Ethernet34    UC1               0                0            0             0         0          0         0
+Ethernet34    UC2               0                0            0             0         0          0         0
+Ethernet34    UC3               0                0            0             0         0          0         0
+Ethernet34    UC4               0                0            0             0         0          0         0
+Ethernet34    UC5               0                0            0             0         0          0         0
+Ethernet34    UC6               0                0            0             0         0          0         0
+Ethernet34    UC7               0                0            0             0         0          0         0
+Ethernet34    UC8               0                0            0             0         0          0         0
+Ethernet34    UC9               0                0            0             0         0          0         0
+Ethernet34   MC10               0                0            0             0         0          0         0
+Ethernet34   MC11               0                0            0             0         0          0         0
+Ethernet34   MC12               0                0            0             0         0          0         0
+Ethernet34   MC13               0                0            0             0         0          0         0
+Ethernet34   MC14               0                0            0             0         0          0         0
+Ethernet34   MC15               0                0            0             0         0          0         0
+Ethernet34   MC16               0                0            0             0         0          0         0
+Ethernet34   MC17               0                0            0             0         0          0         0
+Ethernet34   MC18               0                0            0             0         0          0         0
+Ethernet34   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet35    UC0               0                0            0             0         0          0         0
+Ethernet35    UC1               0                0            0             0         0          0         0
+Ethernet35    UC2               0                0            0             0         0          0         0
+Ethernet35    UC3               0                0            0             0         0          0         0
+Ethernet35    UC4               0                0            0             0         0          0         0
+Ethernet35    UC5               0                0            0             0         0          0         0
+Ethernet35    UC6               0                0            0             0         0          0         0
+Ethernet35    UC7               0                0            0             0         0          0         0
+Ethernet35    UC8               0                0            0             0         0          0         0
+Ethernet35    UC9               0                0            0             0         0          0         0
+Ethernet35   MC10               0                0            0             0         0          0         0
+Ethernet35   MC11               0                0            0             0         0          0         0
+Ethernet35   MC12               0                0            0             0         0          0         0
+Ethernet35   MC13               0                0            0             0         0          0         0
+Ethernet35   MC14               0                0            0             0         0          0         0
+Ethernet35   MC15               0                0            0             0         0          0         0
+Ethernet35   MC16               0                0            0             0         0          0         0
+Ethernet35   MC17               0                0            0             0         0          0         0
+Ethernet35   MC18               0                0            0             0         0          0         0
+Ethernet35   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet36    UC0               0                0            0             0         0          0         0
+Ethernet36    UC1               0                0            0             0         0          0         0
+Ethernet36    UC2               0                0            0             0         0          0         0
+Ethernet36    UC3               0                0            0             0         0          0         0
+Ethernet36    UC4               0                0            0             0         0          0         0
+Ethernet36    UC5               0                0            0             0         0          0         0
+Ethernet36    UC6               0                0            0             0         0          0         0
+Ethernet36    UC7               0                0            0             0         0          0         0
+Ethernet36    UC8               0                0            0             0         0          0         0
+Ethernet36    UC9               0                0            0             0         0          0         0
+Ethernet36   MC10               0                0            0             0         0          0         0
+Ethernet36   MC11               0                0            0             0         0          0         0
+Ethernet36   MC12               0                0            0             0         0          0         0
+Ethernet36   MC13               0                0            0             0         0          0         0
+Ethernet36   MC14               0                0            0             0         0          0         0
+Ethernet36   MC15               0                0            0             0         0          0         0
+Ethernet36   MC16               0                0            0             0         0          0         0
+Ethernet36   MC17               0                0            0             0         0          0         0
+Ethernet36   MC18               0                0            0             0         0          0         0
+Ethernet36   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet37    UC0               0                0            0             0         0          0         0
+Ethernet37    UC1               0                0            0             0         0          0         0
+Ethernet37    UC2               0                0            0             0         0          0         0
+Ethernet37    UC3               0                0            0             0         0          0         0
+Ethernet37    UC4               0                0            0             0         0          0         0
+Ethernet37    UC5               0                0            0             0         0          0         0
+Ethernet37    UC6               0                0            0             0         0          0         0
+Ethernet37    UC7               0                0            0             0         0          0         0
+Ethernet37    UC8               0                0            0             0         0          0         0
+Ethernet37    UC9               0                0            0             0         0          0         0
+Ethernet37   MC10               0                0            0             0         0          0         0
+Ethernet37   MC11               0                0            0             0         0          0         0
+Ethernet37   MC12               0                0            0             0         0          0         0
+Ethernet37   MC13               0                0            0             0         0          0         0
+Ethernet37   MC14               0                0            0             0         0          0         0
+Ethernet37   MC15               0                0            0             0         0          0         0
+Ethernet37   MC16               0                0            0             0         0          0         0
+Ethernet37   MC17               0                0            0             0         0          0         0
+Ethernet37   MC18               0                0            0             0         0          0         0
+Ethernet37   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet38    UC0               0                0            0             0         0          0         0
+Ethernet38    UC1               0                0            0             0         0          0         0
+Ethernet38    UC2               0                0            0             0         0          0         0
+Ethernet38    UC3               0                0            0             0         0          0         0
+Ethernet38    UC4               0                0            0             0         0          0         0
+Ethernet38    UC5               0                0            0             0         0          0         0
+Ethernet38    UC6               0                0            0             0         0          0         0
+Ethernet38    UC7               0                0            0             0         0          0         0
+Ethernet38    UC8               0                0            0             0         0          0         0
+Ethernet38    UC9               0                0            0             0         0          0         0
+Ethernet38   MC10               0                0            0             0         0          0         0
+Ethernet38   MC11               0                0            0             0         0          0         0
+Ethernet38   MC12               0                0            0             0         0          0         0
+Ethernet38   MC13               0                0            0             0         0          0         0
+Ethernet38   MC14               0                0            0             0         0          0         0
+Ethernet38   MC15               0                0            0             0         0          0         0
+Ethernet38   MC16               0                0            0             0         0          0         0
+Ethernet38   MC17               0                0            0             0         0          0         0
+Ethernet38   MC18               0                0            0             0         0          0         0
+Ethernet38   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet39    UC0               0                0            0             0         0          0         0
+Ethernet39    UC1               0                0            0             0         0          0         0
+Ethernet39    UC2               0                0            0             0         0          0         0
+Ethernet39    UC3               0                0            0             0         0          0         0
+Ethernet39    UC4               0                0            0             0         0          0         0
+Ethernet39    UC5               0                0            0             0         0          0         0
+Ethernet39    UC6               0                0            0             0         0          0         0
+Ethernet39    UC7               0                0            0             0         0          0         0
+Ethernet39    UC8               0                0            0             0         0          0         0
+Ethernet39    UC9               0                0            0             0         0          0         0
+Ethernet39   MC10               0                0            0             0         0          0         0
+Ethernet39   MC11               0                0            0             0         0          0         0
+Ethernet39   MC12               0                0            0             0         0          0         0
+Ethernet39   MC13               0                0            0             0         0          0         0
+Ethernet39   MC14               0                0            0             0         0          0         0
+Ethernet39   MC15               0                0            0             0         0          0         0
+Ethernet39   MC16               0                0            0             0         0          0         0
+Ethernet39   MC17               0                0            0             0         0          0         0
+Ethernet39   MC18               0                0            0             0         0          0         0
+Ethernet39   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet40    UC0               0                0            0             0         0          0         0
+Ethernet40    UC1               0                0            0             0         0          0         0
+Ethernet40    UC2               0                0            0             0         0          0         0
+Ethernet40    UC3               0                0            0             0         0          0         0
+Ethernet40    UC4               0                0            0             0         0          0         0
+Ethernet40    UC5               0                0            0             0         0          0         0
+Ethernet40    UC6               0                0            0             0         0          0         0
+Ethernet40    UC7               0                0            0             0         0          0         0
+Ethernet40    UC8               0                0            0             0         0          0         0
+Ethernet40    UC9               0                0            0             0         0          0         0
+Ethernet40   MC10               0                0            0             0         0          0         0
+Ethernet40   MC11               0                0            0             0         0          0         0
+Ethernet40   MC12               0                0            0             0         0          0         0
+Ethernet40   MC13               0                0            0             0         0          0         0
+Ethernet40   MC14               0                0            0             0         0          0         0
+Ethernet40   MC15               0                0            0             0         0          0         0
+Ethernet40   MC16               0                0            0             0         0          0         0
+Ethernet40   MC17               0                0            0             0         0          0         0
+Ethernet40   MC18               0                0            0             0         0          0         0
+Ethernet40   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet41    UC0               0                0            0             0         0          0         0
+Ethernet41    UC1               0                0            0             0         0          0         0
+Ethernet41    UC2               0                0            0             0         0          0         0
+Ethernet41    UC3               0                0            0             0         0          0         0
+Ethernet41    UC4               0                0            0             0         0          0         0
+Ethernet41    UC5               0                0            0             0         0          0         0
+Ethernet41    UC6               0                0            0             0         0          0         0
+Ethernet41    UC7               0                0            0             0         0          0         0
+Ethernet41    UC8               0                0            0             0         0          0         0
+Ethernet41    UC9               0                0            0             0         0          0         0
+Ethernet41   MC10               0                0            0             0         0          0         0
+Ethernet41   MC11               0                0            0             0         0          0         0
+Ethernet41   MC12               0                0            0             0         0          0         0
+Ethernet41   MC13               0                0            0             0         0          0         0
+Ethernet41   MC14               0                0            0             0         0          0         0
+Ethernet41   MC15               0                0            0             0         0          0         0
+Ethernet41   MC16               0                0            0             0         0          0         0
+Ethernet41   MC17               0                0            0             0         0          0         0
+Ethernet41   MC18               0                0            0             0         0          0         0
+Ethernet41   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet42    UC0               0                0            0             0         0          0         0
+Ethernet42    UC1               0                0            0             0         0          0         0
+Ethernet42    UC2               0                0            0             0         0          0         0
+Ethernet42    UC3               0                0            0             0         0          0         0
+Ethernet42    UC4               0                0            0             0         0          0         0
+Ethernet42    UC5               0                0            0             0         0          0         0
+Ethernet42    UC6               0                0            0             0         0          0         0
+Ethernet42    UC7               0                0            0             0         0          0         0
+Ethernet42    UC8               0                0            0             0         0          0         0
+Ethernet42    UC9               0                0            0             0         0          0         0
+Ethernet42   MC10               0                0            0             0         0          0         0
+Ethernet42   MC11               0                0            0             0         0          0         0
+Ethernet42   MC12               0                0            0             0         0          0         0
+Ethernet42   MC13               0                0            0             0         0          0         0
+Ethernet42   MC14               0                0            0             0         0          0         0
+Ethernet42   MC15               0                0            0             0         0          0         0
+Ethernet42   MC16               0                0            0             0         0          0         0
+Ethernet42   MC17               0                0            0             0         0          0         0
+Ethernet42   MC18               0                0            0             0         0          0         0
+Ethernet42   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet43    UC0               0                0            0             0         0          0         0
+Ethernet43    UC1               0                0            0             0         0          0         0
+Ethernet43    UC2               0                0            0             0         0          0         0
+Ethernet43    UC3               0                0            0             0         0          0         0
+Ethernet43    UC4               0                0            0             0         0          0         0
+Ethernet43    UC5               0                0            0             0         0          0         0
+Ethernet43    UC6               0                0            0             0         0          0         0
+Ethernet43    UC7               0                0            0             0         0          0         0
+Ethernet43    UC8               0                0            0             0         0          0         0
+Ethernet43    UC9               0                0            0             0         0          0         0
+Ethernet43   MC10               0                0            0             0         0          0         0
+Ethernet43   MC11               0                0            0             0         0          0         0
+Ethernet43   MC12               0                0            0             0         0          0         0
+Ethernet43   MC13               0                0            0             0         0          0         0
+Ethernet43   MC14               0                0            0             0         0          0         0
+Ethernet43   MC15               0                0            0             0         0          0         0
+Ethernet43   MC16               0                0            0             0         0          0         0
+Ethernet43   MC17               0                0            0             0         0          0         0
+Ethernet43   MC18               0                0            0             0         0          0         0
+Ethernet43   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet44    UC0               0                0            0             0         0          0         0
+Ethernet44    UC1               0                0            0             0         0          0         0
+Ethernet44    UC2               0                0            0             0         0          0         0
+Ethernet44    UC3               0                0            0             0         0          0         0
+Ethernet44    UC4               0                0            0             0         0          0         0
+Ethernet44    UC5               0                0            0             0         0          0         0
+Ethernet44    UC6               0                0            0             0         0          0         0
+Ethernet44    UC7               0                0            0             0         0          0         0
+Ethernet44    UC8               0                0            0             0         0          0         0
+Ethernet44    UC9               0                0            0             0         0          0         0
+Ethernet44   MC10               0                0            0             0         0          0         0
+Ethernet44   MC11               0                0            0             0         0          0         0
+Ethernet44   MC12               0                0            0             0         0          0         0
+Ethernet44   MC13               0                0            0             0         0          0         0
+Ethernet44   MC14               0                0            0             0         0          0         0
+Ethernet44   MC15               0                0            0             0         0          0         0
+Ethernet44   MC16               0                0            0             0         0          0         0
+Ethernet44   MC17               0                0            0             0         0          0         0
+Ethernet44   MC18               0                0            0             0         0          0         0
+Ethernet44   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet45    UC0               0                0            0             0         0          0         0
+Ethernet45    UC1               0                0            0             0         0          0         0
+Ethernet45    UC2               0                0            0             0         0          0         0
+Ethernet45    UC3               0                0            0             0         0          0         0
+Ethernet45    UC4               0                0            0             0         0          0         0
+Ethernet45    UC5               0                0            0             0         0          0         0
+Ethernet45    UC6               0                0            0             0         0          0         0
+Ethernet45    UC7               0                0            0             0         0          0         0
+Ethernet45    UC8               0                0            0             0         0          0         0
+Ethernet45    UC9               0                0            0             0         0          0         0
+Ethernet45   MC10               0                0            0             0         0          0         0
+Ethernet45   MC11               0                0            0             0         0          0         0
+Ethernet45   MC12               0                0            0             0         0          0         0
+Ethernet45   MC13               0                0            0             0         0          0         0
+Ethernet45   MC14               0                0            0             0         0          0         0
+Ethernet45   MC15               0                0            0             0         0          0         0
+Ethernet45   MC16               0                0            0             0         0          0         0
+Ethernet45   MC17               0                0            0             0         0          0         0
+Ethernet45   MC18               0                0            0             0         0          0         0
+Ethernet45   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet46    UC0               0                0            0             0         0          0         0
+Ethernet46    UC1               0                0            0             0         0          0         0
+Ethernet46    UC2               0                0            0             0         0          0         0
+Ethernet46    UC3               0                0            0             0         0          0         0
+Ethernet46    UC4               0                0            0             0         0          0         0
+Ethernet46    UC5               0                0            0             0         0          0         0
+Ethernet46    UC6               0                0            0             0         0          0         0
+Ethernet46    UC7               0                0            0             0         0          0         0
+Ethernet46    UC8               0                0            0             0         0          0         0
+Ethernet46    UC9               0                0            0             0         0          0         0
+Ethernet46   MC10               0                0            0             0         0          0         0
+Ethernet46   MC11               0                0            0             0         0          0         0
+Ethernet46   MC12               0                0            0             0         0          0         0
+Ethernet46   MC13               0                0            0             0         0          0         0
+Ethernet46   MC14               0                0            0             0         0          0         0
+Ethernet46   MC15               0                0            0             0         0          0         0
+Ethernet46   MC16               0                0            0             0         0          0         0
+Ethernet46   MC17               0                0            0             0         0          0         0
+Ethernet46   MC18               0                0            0             0         0          0         0
+Ethernet46   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet47    UC0               0                0            0             0         0          0         0
+Ethernet47    UC1               0                0            0             0         0          0         0
+Ethernet47    UC2               0                0            0             0         0          0         0
+Ethernet47    UC3               0                0            0             0         0          0         0
+Ethernet47    UC4               0                0            0             0         0          0         0
+Ethernet47    UC5               0                0            0             0         0          0         0
+Ethernet47    UC6               0                0            0             0         0          0         0
+Ethernet47    UC7               0                0            0             0         0          0         0
+Ethernet47    UC8               0                0            0             0         0          0         0
+Ethernet47    UC9               0                0            0             0         0          0         0
+Ethernet47   MC10               0                0            0             0         0          0         0
+Ethernet47   MC11               0                0            0             0         0          0         0
+Ethernet47   MC12               0                0            0             0         0          0         0
+Ethernet47   MC13               0                0            0             0         0          0         0
+Ethernet47   MC14               0                0            0             0         0          0         0
+Ethernet47   MC15               0                0            0             0         0          0         0
+Ethernet47   MC16               0                0            0             0         0          0         0
+Ethernet47   MC17               0                0            0             0         0          0         0
+Ethernet47   MC18               0                0            0             0         0          0         0
+Ethernet47   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s     Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  ---------
+Ethernet48    UC0     26462039635   17276114868961        73835             0     79446   56369615  450956920
+Ethernet48    UC1               0                0            0             0         0          0          0
+Ethernet48    UC2               0                0            0             0         0          0          0
+Ethernet48    UC3               0                0            0             0         0          0          0
+Ethernet48    UC4               0                0         9589             0         0          0          0
+Ethernet48    UC5               0                0            0             0         0          0          0
+Ethernet48    UC6               0                0           62             0         0          0          0
+Ethernet48    UC7               0                0            0             0         0          0          0
+Ethernet48    UC8               0                0            0             0         0          0          0
+Ethernet48    UC9         5846231        450294594            0             0         8        679       5432
+Ethernet48   MC10          134872          9972252            0             0         0         14        112
+Ethernet48   MC11               0                0            0             0         0          0          0
+Ethernet48   MC12               0                0            0             0         0          0          0
+Ethernet48   MC13               0                0            0             0         0          0          0
+Ethernet48   MC14               0                0            0             0         0          0          0
+Ethernet48   MC15               0                0            0             0         0          0          0
+Ethernet48   MC16               0                0            0             0         0          0          0
+Ethernet48   MC17               0                0            0             0         0          0          0
+Ethernet48   MC18               0                0            0             0         0          0          0
+Ethernet48   MC19               0                0            0             0         0          0          0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet52    UC0               0                0            0             0         0          0         0
+Ethernet52    UC1               0                0            0             0         0          0         0
+Ethernet52    UC2               0                0            0             0         0          0         0
+Ethernet52    UC3               0                0            0             0         0          0         0
+Ethernet52    UC4               0                0            0             0         0          0         0
+Ethernet52    UC5               0                0            0             0         0          0         0
+Ethernet52    UC6               0                0            0             0         0          0         0
+Ethernet52    UC7               0                0            0             0         0          0         0
+Ethernet52    UC8               0                0            0             0         0          0         0
+Ethernet52    UC9               0                0            0             0         0          0         0
+Ethernet52   MC10               0                0            0             0         0          0         0
+Ethernet52   MC11               0                0            0             0         0          0         0
+Ethernet52   MC12               0                0            0             0         0          0         0
+Ethernet52   MC13               0                0            0             0         0          0         0
+Ethernet52   MC14               0                0            0             0         0          0         0
+Ethernet52   MC15               0                0            0             0         0          0         0
+Ethernet52   MC16               0                0            0             0         0          0         0
+Ethernet52   MC17               0                0            0             0         0          0         0
+Ethernet52   MC18               0                0            0             0         0          0         0
+Ethernet52   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s     Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  ---------
+Ethernet56    UC0     31394505357   20176101870727       975243             0     57185   33513655  268109240
+Ethernet56    UC1               0                0            0             0         0          0          0
+Ethernet56    UC2               0                0            0             0         0          0          0
+Ethernet56    UC3               0                0            0             0         0          0          0
+Ethernet56    UC4               0                0         9542             0         0          0          0
+Ethernet56    UC5               0                0            0             0         0          0          0
+Ethernet56    UC6               0                0           65             0         0          0          0
+Ethernet56    UC7               0                0            0             0         0          0          0
+Ethernet56    UC8               0                0            0             0         0          0          0
+Ethernet56    UC9         6141746        475215923            0             0         8        661       5288
+Ethernet56   MC10            2978           208512            0             0         0          0          0
+Ethernet56   MC11               0                0            0             0         0          0          0
+Ethernet56   MC12               0                0            0             0         0          0          0
+Ethernet56   MC13               0                0            0             0         0          0          0
+Ethernet56   MC14               0                0            0             0         0          0          0
+Ethernet56   MC15               0                0            0             0         0          0          0
+Ethernet56   MC16               0                0            0             0         0          0          0
+Ethernet56   MC17               0                0            0             0         0          0          0
+Ethernet56   MC18               0                0            0             0         0          0          0
+Ethernet56   MC19               0                0            0             0         0          0          0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet60    UC0               0                0            0             0         0          0         0
+Ethernet60    UC1               0                0            0             0         0          0         0
+Ethernet60    UC2               0                0            0             0         0          0         0
+Ethernet60    UC3               0                0            0             0         0          0         0
+Ethernet60    UC4               0                0            0             0         0          0         0
+Ethernet60    UC5               0                0            0             0         0          0         0
+Ethernet60    UC6               0                0            0             0         0          0         0
+Ethernet60    UC7               0                0            0             0         0          0         0
+Ethernet60    UC8               0                0            0             0         0          0         0
+Ethernet60    UC9               0                0            0             0         0          0         0
+Ethernet60   MC10               0                0            0             0         0          0         0
+Ethernet60   MC11               0                0            0             0         0          0         0
+Ethernet60   MC12               0                0            0             0         0          0         0
+Ethernet60   MC13               0                0            0             0         0          0         0
+Ethernet60   MC14               0                0            0             0         0          0         0
+Ethernet60   MC15               0                0            0             0         0          0         0
+Ethernet60   MC16               0                0            0             0         0          0         0
+Ethernet60   MC17               0                0            0             0         0          0         0
+Ethernet60   MC18               0                0            0             0         0          0         0
+Ethernet60   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet64    UC0               0                0            0             0         0          0         0
+Ethernet64    UC1               0                0            0             0         0          0         0
+Ethernet64    UC2               0                0            0             0         0          0         0
+Ethernet64    UC3               0                0            0             0         0          0         0
+Ethernet64    UC4               0                0            0             0         0          0         0
+Ethernet64    UC5               0                0            0             0         0          0         0
+Ethernet64    UC6               0                0            0             0         0          0         0
+Ethernet64    UC7               0                0            0             0         0          0         0
+Ethernet64    UC8               0                0            0             0         0          0         0
+Ethernet64    UC9               0                0            0             0         0          0         0
+Ethernet64   MC10               0                0            0             0         0          0         0
+Ethernet64   MC11               0                0            0             0         0          0         0
+Ethernet64   MC12               0                0            0             0         0          0         0
+Ethernet64   MC13               0                0            0             0         0          0         0
+Ethernet64   MC14               0                0            0             0         0          0         0
+Ethernet64   MC15               0                0            0             0         0          0         0
+Ethernet64   MC16               0                0            0             0         0          0         0
+Ethernet64   MC17               0                0            0             0         0          0         0
+Ethernet64   MC18               0                0            0             0         0          0         0
+Ethernet64   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet68    UC0               0                0            0             0         0          0         0
+Ethernet68    UC1               0                0            0             0         0          0         0
+Ethernet68    UC2               0                0            0             0         0          0         0
+Ethernet68    UC3               0                0            0             0         0          0         0
+Ethernet68    UC4               0                0            0             0         0          0         0
+Ethernet68    UC5               0                0            0             0         0          0         0
+Ethernet68    UC6               0                0            0             0         0          0         0
+Ethernet68    UC7               0                0            0             0         0          0         0
+Ethernet68    UC8               0                0            0             0         0          0         0
+Ethernet68    UC9               0                0            0             0         0          0         0
+Ethernet68   MC10               0                0            0             0         0          0         0
+Ethernet68   MC11               0                0            0             0         0          0         0
+Ethernet68   MC12               0                0            0             0         0          0         0
+Ethernet68   MC13               0                0            0             0         0          0         0
+Ethernet68   MC14               0                0            0             0         0          0         0
+Ethernet68   MC15               0                0            0             0         0          0         0
+Ethernet68   MC16               0                0            0             0         0          0         0
+Ethernet68   MC17               0                0            0             0         0          0         0
+Ethernet68   MC18               0                0            0             0         0          0         0
+Ethernet68   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet72    UC0               0                0            0             0         0          0         0
+Ethernet72    UC1               0                0            0             0         0          0         0
+Ethernet72    UC2               0                0            0             0         0          0         0
+Ethernet72    UC3               0                0            0             0         0          0         0
+Ethernet72    UC4               0                0            0             0         0          0         0
+Ethernet72    UC5               0                0            0             0         0          0         0
+Ethernet72    UC6               0                0            0             0         0          0         0
+Ethernet72    UC7               0                0            0             0         0          0         0
+Ethernet72    UC8               0                0            0             0         0          0         0
+Ethernet72    UC9               0                0            0             0         0          0         0
+Ethernet72   MC10               0                0            0             0         0          0         0
+Ethernet72   MC11               0                0            0             0         0          0         0
+Ethernet72   MC12               0                0            0             0         0          0         0
+Ethernet72   MC13               0                0            0             0         0          0         0
+Ethernet72   MC14               0                0            0             0         0          0         0
+Ethernet72   MC15               0                0            0             0         0          0         0
+Ethernet72   MC16               0                0            0             0         0          0         0
+Ethernet72   MC17               0                0            0             0         0          0         0
+Ethernet72   MC18               0                0            0             0         0          0         0
+Ethernet72   MC19               0                0            0             0         0          0         0
+
+      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+----------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+Ethernet76    UC0               0                0            0             0         0          0         0
+Ethernet76    UC1               0                0            0             0         0          0         0
+Ethernet76    UC2               0                0            0             0         0          0         0
+Ethernet76    UC3               0                0            0             0         0          0         0
+Ethernet76    UC4               0                0            0             0         0          0         0
+Ethernet76    UC5               0                0            0             0         0          0         0
+Ethernet76    UC6               0                0            0             0         0          0         0
+Ethernet76    UC7               0                0            0             0         0          0         0
+Ethernet76    UC8               0                0            0             0         0          0         0
+Ethernet76    UC9               0                0            0             0         0          0         0
+Ethernet76   MC10               0                0            0             0         0          0         0
+Ethernet76   MC11               0                0            0             0         0          0         0
+Ethernet76   MC12               0                0            0             0         0          0         0
+Ethernet76   MC13               0                0            0             0         0          0         0
+Ethernet76   MC14               0                0            0             0         0          0         0
+Ethernet76   MC15               0                0            0             0         0          0         0
+Ethernet76   MC16               0                0            0             0         0          0         0
+Ethernet76   MC17               0                0            0             0         0          0         0
+Ethernet76   MC18               0                0            0             0         0          0         0
+Ethernet76   MC19               0                0            0             0         0          0         0
+
+  Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes    Pkts/s    Bytes/s    Bits/s
+------  -----  --------------  ---------------  -----------  ------------  --------  ---------  --------
+

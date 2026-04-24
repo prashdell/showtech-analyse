@@ -1,0 +1,429 @@
+top - 05:59:43 up 8 days,  1:00,  1 user,  load average: 3.91, 2.95, 2.64
+Tasks: 422 total,   1 running, 421 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  4.9 us,  8.6 sy,  2.5 ni, 84.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  15436.1 total,   9078.6 free,   3361.9 used,   2995.5 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.  11665.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+2365962 root      25   5   14592   5608   4460 R  17.6   0.0   0:00.05 top -c -b -n 1 -w512
+   6285 root      20   0 3081388 843812 252304 S   5.9   5.3   1723:54 /usr/bin/syncd --diag -u -l -p /tmp/sai.profile
+   6481 root      20   0   33096  25268   9372 S   5.9   0.2   3:29.40 /usr/bin/python3 /usr/local/bin/supervisord
+  14866 root      20   0   33476  25480   9560 S   5.9   0.2   3:38.57 /usr/bin/python3 /usr/local/bin/supervisord
+  14929 root      20   0  204552  36616   7404 S   5.9   0.2  24:31.77 xcvrd_config
+      1 root      20   0  168712  14228   8288 S   0.0   0.1   1:18.29 /sbin/init
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.33 [kthreadd]
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [rcu_gp]
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [rcu_par_gp]
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworker/0:0H-events_highpri]
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [mm_percpu_wq]
+      9 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [rcu_tasks_rude_]
+     10 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [rcu_tasks_trace]
+     11 root      20   0       0      0      0 S   0.0   0.0   6:32.99 [ksoftirqd/0]
+     12 root      20   0       0      0      0 I   0.0   0.0  15:04.28 [rcu_sched]
+     13 root      rt   0       0      0      0 S   0.0   0.0   0:07.27 [migration/0]
+     15 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [cpuhp/0]
+     16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [cpuhp/1]
+     17 root      rt   0       0      0      0 S   0.0   0.0   0:07.87 [migration/1]
+     18 root      20   0       0      0      0 S   0.0   0.0   3:14.68 [ksoftirqd/1]
+     20 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworker/1:0H-kblockd]
+     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [cpuhp/2]
+     22 root      rt   0       0      0      0 S   0.0   0.0   0:11.53 [migration/2]
+     23 root      20   0       0      0      0 S   0.0   0.0   7:30.34 [ksoftirqd/2]
+     26 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [cpuhp/3]
+     27 root      rt   0       0      0      0 S   0.0   0.0   0:05.64 [migration/3]
+     28 root      20   0       0      0      0 S   0.0   0.0   7:57.66 [ksoftirqd/3]
+     35 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [kdevtmpfs]
+     36 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [netns]
+     37 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [kauditd]
+     38 root      20   0       0      0      0 S   0.0   0.0   0:00.58 [khungtaskd]
+     39 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [oom_reaper]
+     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [writeback]
+     41 root      20   0       0      0      0 S   0.0   0.0   0:31.19 [kcompactd0]
+     42 root      25   5       0      0      0 S   0.0   0.0   0:00.00 [ksmd]
+     43 root      39  19       0      0      0 S   0.0   0.0   0:45.55 [khugepaged]
+     63 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kintegrityd]
+     64 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kblockd]
+     65 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [blkcg_punt_bio]
+     66 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [edac-poller]
+     67 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [devfreq_wq]
+     68 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 [watchdogd]
+     70 root       0 -20       0      0      0 I   0.0   0.0   0:06.72 [kworker/0:1H-kblockd]
+     73 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [kswapd0]
+     74 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kthrotld]
+     75 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [acpi_thermal_pm]
+     76 root       0 -20       0      0      0 I   0.0   0.0   0:10.23 [kworker/2:1H-kblockd]
+     77 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [ipv6_addrconf]
+     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kstrp]
+     89 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [zswap-shrink]
+     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworker/u9:0]
+    136 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [ata_sff]
+    140 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [sdhci]
+    141 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 [irq/16-mmc0]
+    144 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [scsi_eh_0]
+    145 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [scsi_tmf_0]
+    146 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [scsi_eh_1]
+    147 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [scsi_tmf_1]
+    148 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [scsi_eh_2]
+    149 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [scsi_tmf_2]
+    150 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [scsi_eh_3]
+    151 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [scsi_tmf_3]
+    152 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [scsi_eh_4]
+    153 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [scsi_tmf_4]
+    154 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [scsi_eh_5]
+    155 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [scsi_tmf_5]
+    156 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [mmc_complete]
+    157 root       0 -20       0      0      0 I   0.0   0.0   0:06.74 [kworker/3:1H-kblockd]
+    162 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworker/3:2H-mmc_complete]
+    163 root       0 -20       0      0      0 I   0.0   0.0   0:08.55 [kworker/1:1H-kblockd]
+    164 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworker/2:2H-kblockd]
+    183 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [nvme-wq]
+    184 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [nvme-reset-wq]
+    185 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [nvme-delete-wq]
+    218 root      20   0       0      0      0 S   0.0   0.0   0:18.61 [jbd2/sda3-8]
+    219 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [ext4-rsv-conver]
+    225 root       0 -20       0      0      0 S   0.0   0.0   0:07.23 [loop0]
+    249 root       0 -20       0      0      0 S   0.0   0.0   0:27.90 [loop1]
+    250 root      20   0       0      0      0 S   0.0   0.0   0:10.23 [jbd2/loop1-8]
+    251 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [ext4-rsv-conver]
+    298 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [ipmi-msghandler]
+    309 root      20   0   32960   9520   7824 S   0.0   0.1   1:03.47 /lib/systemd/systemd-journald
+    310 root      20   0   22272   5988   4672 S   0.0   0.0   0:01.22 /lib/systemd/systemd-udevd
+    349 root      20   0    8180   6280   1668 S   0.0   0.0   0:26.87 /usr/sbin/haveged --Foreground --verbose=1
+    352 root      16  -4   16892   4344   3668 S   0.0   0.0   0:00.75 /sbin/auditd
+    375 root      39  19       0      0      0 D   0.0   0.0  53:45.65 [kipmi0]
+    437 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [cryptd]
+    500 root      20   0   11036   4528   3992 S   0.0   0.0   0:03.16 /usr/sbin/cron -f
+    501 message+  20   0   12112   6388   5048 S   0.0   0.0   0:08.35 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    504 root      20   0   11224   5124   4592 S   0.0   0.0   0:00.01 /bin/bash /usr/bin/disk-log-rotate-daemon.sh start
+    508 root      20   0    2480    576    512 S   0.0   0.0   0:00.00 /bin/sh /usr/bin/in-memory-log-rotate-daemon.sh start
+    513 root      20   0  247092  18556   8084 S   0.0   0.1   2:40.95 /usr/bin/python3 /usr/local/bin/watchmedo shell-command --wait --patterns=* --command=/usr/bin/in-memory-rotate-log.sh ${watch_src_path} ${watch_object} /var/log/rotate/in-memory/
+    518 root      20   0    5472   3392   3172 S   0.0   0.0   0:00.02 /usr/sbin/rasdaemon -f -r
+    521 root      20   0   11548   5904   4736 S   0.0   0.0   0:00.39 /usr/sbin/smartd -n
+    533 root      20   0   14032   7144   6336 S   0.0   0.0   0:01.97 /lib/systemd/systemd-logind
+    537 root      20   0 2098576  62636  34656 S   0.0   0.4  28:14.55 /usr/bin/containerd
+    545 root      20   0  247092  17008   8004 S   0.0   0.1   2:40.97 /usr/bin/python3 /usr/local/bin/watchmedo shell-command -D -w -W --patterns=* --command=/usr/bin/disk-rotate-log.sh ${watch_src_path} ${watch_object} /var/log/rotate/disk/
+    594 root      20   0       0      0      0 D   0.0   0.0   0:00.19 [rds_thread]
+    626 root      20   0   83836   3544   2432 S   0.0   0.0   5:03.73 /usr/bin/monit -c /etc/monit/monitrc
+    635 root      20   0   11348   7620   6592 S   0.0   0.0   0:06.90 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+    636 root      20   0  108524  25960   5532 S   0.0   0.2  31:41.57 python3 /usr/local/bin/histogramd.py --daemon
+    656 root      20   0       0      0      0 S   0.0   0.0   0:12.89 [jbd2/ramdisk-8]
+    657 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [ext4-rsv-conver]
+    754 root      20   0 2422020 116976  55208 S   0.0   0.7  30:04.63 /usr/bin/dockerd --experimental -H unix:// --storage-driver=overlay2 --bip=240.127.1.1/24 --iptables=false --ipv6=true --fixed-cidr-v6=fd00::/80
+    758 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [jbd2/sda2-8]
+    759 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [ext4-rsv-conver]
+    772 root      rt   0   11356   5132   4516 S   0.0   0.0  12:08.99 /bin/bash /usr/local/bin/critical-monitoring.sh
+    773 root      20   0    6440   1824   1712 S   0.0   0.0   0:00.00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+    774 root      20   0    6072   2084   1964 S   0.0   0.0   0:00.00 /sbin/agetty -o -p -- \u 115200 ttyS0 vt220
+    780 root      20   0   11224   5032   4460 S   0.0   0.0   0:23.82 /bin/bash /usr/local/bin/amemavg.sh
+    813 root       0 -20       0      0      0 S   0.0   0.0   0:00.01 [loop2]
+    815 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [jbd2/loop2-8]
+    816 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [ext4-rsv-conver]
+    819 root      20   0 2023596  53400  30660 S   0.0   0.3  10:34.64 /usr/bin/containerd --address=/run/containerd-default/containerd.sock --config=/etc/containerd/config-default.toml
+    872 root      20   0 1461712  86364  50048 S   0.0   0.5   2:26.07 /usr/bin/dockerd --data-root=/host/tpcmdisk/docker-default --exec-root=/var/run/docker-default --containerd=/run/containerd-default/containerd.sock --pidfile=/run/docker-default.pid --host=unix:///run/docker-default.socket --iptables=false
+   1217 root      20   0  128876  36512  10100 S   0.0   0.2  28:49.20 /usr/bin/python3 /usr/local/bin/watchdogd
+   1480 root      20   0 1238360  16072   9440 S   0.0   0.1   3:51.51 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 15dfe01394676430ebf144d4c07ea3cce648c9db2b815d26e68d9f3e0558af02 -address /run/containerd/containerd.sock
+   1507 root      20   0   32704  24976   9376 S   0.0   0.2   3:49.51 /usr/bin/python3 /usr/local/bin/supervisord
+   1825 root      20   0    2480   1556   1440 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name database
+   1827 root      20   0  153408  28840   7128 S   0.0   0.2  78:00.88 /usr/bin/redis-server 127.0.0.1:6379
+   1828 root      20   0   84900  18216   7076 S   0.0   0.1  42:51.87 /usr/bin/redis-server 127.0.0.1:63792
+   1829 root      20   0   65680  15892   7188 S   0.0   0.1  19:33.97 /usr/bin/redis-server 127.0.0.1:63793
+   1830 root      20   0   62340  13620   7188 S   0.0   0.1  15:37.50 /usr/bin/redis-server 127.0.0.1:63794
+   1832 root      20   0   73640  18240   7196 S   0.0   0.1 255:52.94 /usr/bin/redis-server 127.0.0.1:63796
+   1843 root      20   0   59780  13624   7064 S   0.0   0.1  15:05.41 /usr/bin/redis-server 127.0.0.1:63970
+   2110 root      20   0    7708   3572   3080 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/database.sh wait
+   2116 root      20   0   94160  12568   8440 S   0.0   0.1   0:08.45 /usr/sbin/hamd
+   2126 root      20   0  356460  48388  15028 S   0.0   0.3  10:45.26 sysmonitor
+   2129 root      20   0    2480    516    444 S   0.0   0.0   0:00.00 /bin/sh /usr/local/bin/db-post-startup.sh wait
+   2136 root      20   0    6024    500    440 S   0.0   0.0   0:46.24 tail --pid=1507 -f /dev/null
+   2145 root      20   0    6024    500    436 S   0.0   0.0   0:43.42 tail --pid=1507 -f /dev/null
+   2158 root      20   0  422144  32688   8144 S   0.0   0.2   1:42.18 /usr/bin/python3 /usr/local/bin/sysmonitor.py
+   2184 root      20   0   54320  30872   5416 S   0.0   0.2   0:00.38 /usr/bin/python3 /usr/local/bin/export.py --daemon
+   2186 root      20   0  362924  44020  10716 S   0.0   0.3   0:00.14 sysmonitor_sysbus
+   2187 root      20   0  351216  39028   8368 S   0.0   0.2   1:37.81 sysmonitor_statedb
+   2188 root      20   0  351236  36968   6312 S   0.0   0.2   0:00.82 sysmonitor_pollsrv
+   2358 root      20   0 1238360  15132   8164 S   0.0   0.1   2:40.23 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 4083400dcb86ad2d2d36e98145cf58b8a33fb59705f9e2fe2422a8ce55da89ec -address /run/containerd/containerd.sock
+   2382 root      20   0   32708  25184   9448 S   0.0   0.2   3:04.54 /usr/bin/python3 /usr/local/bin/supervisord
+   2410 admin     20   0    7576   3260   2852 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/eventd.sh wait
+   2465 admin     20   0    6024    564    500 S   0.0   0.0   0:40.15 tail --pid=2382 -f /dev/null
+   2472 root      20   0    2480   1696   1572 S   0.0   0.0   0:00.00 sh /usr/bin/supervisor-proc-exit-listener --container-name eventd
+   2556 root      20   0    7872   4964   4580 S   0.0   0.0   0:00.05 /usr/bin/eventd
+   2568 root      20   0  178384  78672  23172 S   0.0   0.5   0:03.76 /usr/bin/python3 -u /usr/local/bin/sonic-host-server
+   2574 root      20   0  106892  24984   9184 S   0.0   0.2   0:00.32 python3 /usr/bin/ccd
+   2581 root      20   0  113724  33972   9668 S   0.0   0.2  85:02.12 /usr/bin/python3 /usr/local/bin/procdockerstatsd
+   2586 root      20   0   55088  40660  14312 S   0.0   0.3   2:24.02 /usr/bin/python3 /usr/local/bin/healthd
+   2980 root      20   0 1238360  15168   9680 S   0.0   0.1   3:08.89 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 4cb8e2ca1872aa2230747e87a37662226dc618e819d93ff43cf299a4f71a231d -address /run/containerd/containerd.sock
+   3017 root      20   0   33100  25404   9360 S   0.0   0.2   5:09.50 /usr/bin/python3 /usr/local/bin/supervisord
+   3091 admin     20   0    2480    576    508 S   0.0   0.0   0:00.00 /bin/sh /usr/local/bin/bgp.sh wait
+   3093 admin     20   0    7576   3268   2852 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/bgp.sh wait
+   3270 root      20   0 1238616  16356   9684 S   0.0   0.1   2:58.92 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 9185ea38b772377206254b4aa1020ebd00b4d41f3c43d31083131284ed997c9e -address /run/containerd/containerd.sock
+   3312 root      20   0   32976  25016   9192 S   0.0   0.2   3:01.63 /usr/bin/python3 /usr/local/bin/supervisord
+   3409 admin     20   0    6024    568    504 S   0.0   0.0   0:40.07 tail --pid=3017 -f /dev/null
+   3416 admin     20   0    7576   3408   2984 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/mgmt-framework.sh wait
+   3426 root      20   0 1238616  16748   9620 S   0.0   0.1   2:44.93 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 74a36a38951cc24755c5c60d1c7bec76dd406e915b44dcdbc35307daf16be49e -address /run/containerd/containerd.sock
+   3464 root      20   0   33248  25520   9356 S   0.0   0.2   6:47.86 /usr/bin/python3 /usr/local/bin/supervisord
+   3732 root      20   0    7708   3564   3092 S   0.0   0.0   0:00.00 /bin/bash /usr/local/bin/swss.sh wait
+   3773 root      20   0    2480   1536   1440 S   0.0   0.0   0:00.00 sh /usr/bin/supervisor-proc-exit-action --name=rest-server sonic-db-cli APPL_DB hmset REST_SERVER:default oper_status DOWN status_detail Server stopped
+   3808 admin     20   0    6024    500    436 S   0.0   0.0   0:39.98 tail --pid=3312 -f /dev/null
+   3814 root      20   0 2381352 188188  49008 S   0.0   1.2  17:24.27 /usr/sbin/rest_server -ui /rest_ui -logtosyslog -followconfig -writestatus
+   3846 root      20   0   45032  30888  13312 S   0.0   0.2   0:00.44 /usr/bin/python3 /usr/local/bin/resrcmgrd -daemon
+   3851 root      20   0    2480   1564   1440 S   0.0   0.0   0:00.05 sh /usr/bin/supervisor-proc-exit-listener --container-name swss
+   4013 root      20   0    2480   1580   1452 S   0.0   0.0   0:00.06 sh /usr/bin/supervisor-proc-exit-listener --container-name bgp
+   4086 root      20   0  377240  68364  14660 S   0.0   0.4   0:02.92 /usr/bin/python3 /usr/local/bin/hostcfgd
+   4601 root      20   0 1238360  16228   9432 S   0.0   0.1   2:58.21 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 835a57ec71fe720c5fc129fa5881a74646458145f9b69961127df90b8a95245f -address /run/containerd/containerd.sock
+   4629 root      20   0   32964  25232   9372 S   0.0   0.2   3:09.76 /usr/bin/python3 /usr/local/bin/supervisord
+   4666 root      20   0    7576   3084   2848 S   0.0   0.0   0:00.00 /bin/bash /usr/local/bin/syncd.sh wait
+   4668 root      20   0    7576   3308   2896 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/syncd.sh wait
+   4712 root      20   0   98424   5880   5408 S   0.0   0.0  98:37.49 /usr/bin/portsyncd
+   4792 root      20   0    6024    564    500 S   0.0   0.0   0:42.31 tail --pid=4629 -f /dev/null
+   4795 root      20   0    2480   1628   1500 S   0.0   0.0   0:00.02 sh /usr/bin/supervisor-proc-exit-listener --container-name syncd
+   4866 root      20   0 1238616  15936   8660 S   0.0   0.1   2:40.36 /usr/bin/containerd-shim-runc-v2 -namespace moby -id b70395af0e4d7c8160724dbb2f9d72a6473fe039bcf1781905cd42fdc20e0a53 -address /run/containerd/containerd.sock
+   4892 root      20   0   32708  25128   9428 S   0.0   0.2   3:36.79 /usr/bin/python3 /usr/local/bin/supervisord
+   4990 admin     20   0    2480    580    512 S   0.0   0.0   0:00.00 /bin/sh /usr/local/bin/teamd.sh wait
+   4991 admin     20   0    7576   3340   2936 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/teamd.sh wait
+   5005 root      20   0    7524   3468   3188 S   0.0   0.0   0:00.00 bash /usr/bin/orchagent.sh
+   5066 root      20   0   87704   1540   1372 S   0.0   0.0   0:11.59 /usr/bin/dsserve /usr/bin/syncd --diag -u -l -p /tmp/sai.profile
+   5080 root      20   0    2480   1668   1540 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name teamd
+   5668 root      20   0  328292  22308  16284 S   0.0   0.1  28:51.94 /usr/bin/orchagent -d /var/log/swss -b 8192 -m b4:e9:b8:e7:ce:02
+   5722 admin     20   0    6024    508    440 S   0.0   0.0   0:39.27 tail --pid=4892 -f /dev/null
+   6087 root      20   0  172672   6156   5492 S   0.0   0.0   1:44.37 /usr/bin/teamsyncd
+   6153 root      20   0 1238360  16712   9612 S   0.0   0.1   2:41.38 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 9cba2c3a03d78390a8a2a87736546bd0693ee385403e70b5caeee387257c50c2 -address /run/containerd/containerd.sock
+   6248 root      20   0   32964  25180   9364 S   0.0   0.2   3:06.30 /usr/bin/python3 /usr/local/bin/supervisord
+   6291 root      20   0 1238360  16064   8596 S   0.0   0.1   2:40.07 /usr/bin/containerd-shim-runc-v2 -namespace moby -id a94cbdeb106bcebb10c556a71c663e5d9b810c8c23587625a60eec56bdda82cf -address /run/containerd/containerd.sock
+   6335 root      20   0   32696  25052   9428 S   0.0   0.2   3:41.54 /usr/bin/python3 /usr/local/bin/supervisord
+   6384 admin     20   0    7576   3396   2980 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/telemetry.sh wait
+   6397 admin     20   0    7576   3340   2932 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/tam.sh wait
+   6452 root      20   0 1238616  15268   9040 S   0.0   0.1   2:40.04 /usr/bin/containerd-shim-runc-v2 -namespace moby -id ae3a4b62b68ed87eac4e337907ccc1c03e0ddb075e8e39c6444af9e08d9e1de1 -address /run/containerd/containerd.sock
+   6476 root      20   0  155760   5872   5280 S   0.0   0.0   1:46.99 /usr/bin/teammgrd
+   6500 root      20   0   32152   3448   2672 S   0.0   0.0   4:38.09 /usr/bin/teamd -r -t PortChannel100 -c {"device":"PortChannel100","hwaddr":"b4:e9:b8:e7:ce:02","mtu":"9100","admin_status":"up","runner":{"active":true,"name":"lacp","agg_select_policy":"lacp_prio_stable"}} -L /var/warmboot/teamd/ -g -d
+   6556 admin     20   0    7576   3224   2816 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/nat.sh wait
+   6668 root      20   0  163324   7556   6784 S   0.0   0.0   7:04.62 /usr/bin/tlm_teamd
+   6675 root      20   0    2480   1636   1536 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-action --name=telemetry sonic-db-cli APPL_DB hmset TELEMETRY:gnmi oper_status DOWN status_detail Server stopped
+   6705 admin     20   0    6024    496    436 S   0.0   0.0   0:40.18 tail --pid=6248 -f /dev/null
+   6707 admin     20   0    6024    564    500 S   0.0   0.0   0:39.75 tail --pid=6335 -f /dev/null
+   6734 root      20   0    2480   1588   1460 S   0.0   0.0   0:00.03 sh /usr/bin/supervisor-proc-exit-listener --container-name nat
+   6767 root      20   0   81948   5600   4952 S   0.0   0.0   1:04.02 /usr/bin/coppmgrd
+   6769 root      20   0  246196   6012   5380 S   0.0   0.0   1:00.66 /usr/bin/neighsyncd
+   6771 root      20   0  229908   6232   5436 S   0.0   0.0   2:01.44 /usr/bin/vlanmgrd
+   6789 root      20   0  156184   6388   5700 S   0.0   0.0   1:37.15 /usr/bin/intfmgrd
+   6802 root      20   0  155724   5584   5068 S   0.0   0.0   1:34.27 /usr/bin/portmgrd
+   6814 root      20   0   81696   5228   4852 S   0.0   0.0   1:02.51 /usr/bin/loopbackmgrd
+   6818 root      20   0   86712   8908   7220 S   0.0   0.1   0:33.40 /usr/bin/thresholdmgr
+   6844 root      20   0   81604   4940   4572 S   0.0   0.0   1:06.75 /usr/bin/switchmgrd
+   6866 root      20   0   81840   5536   5028 S   0.0   0.0   1:08.21 /usr/bin/buffermgrd -l /usr/share/sonic/hwsku/pg_profile_lookup.ini
+   6870 admin     20   0    6024    560    500 S   0.0   0.0   0:40.49 tail --pid=6481 -f /dev/null
+   6875 root      20   0   81840   5664   5180 S   0.0   0.0   1:12.31 /usr/bin/vrfmgrd
+   6918 root      20   0   81568   4948   4572 S   0.0   0.0   1:04.56 /usr/bin/arsmgrd
+   6932 root      20   0  155692   5560   5048 S   0.0   0.0   1:49.63 /usr/bin/nbrmgrd
+   6960 root      20   0   81552   5048   4680 S   0.0   0.0   1:09.57 /usr/bin/evpnmhmgrd
+   6966 root      20   0   81588   4984   4612 S   0.0   0.0   1:03.47 /usr/bin/srv6mgrd
+   6977 root      20   0   82100   5844   5308 S   0.0   0.0   1:06.04 /usr/bin/vxlanmgrd
+   6988 root      20   0  246224   5564   5156 S   0.0   0.0   2:31.12 /usr/bin/fdbsyncd
+   6992 root      20   0   81544   5004   4636 S   0.0   0.0   1:03.72 /usr/bin/tunnelmgrd
+   7003 root      20   0   83768   5096   4708 S   0.0   0.0   0:31.30 /usr/bin/acllogd
+   7025 root      20   0   83792   7652   5824 S   0.0   0.0   0:32.19 /usr/bin/aclsvcd
+   7030 root      20   0  155672   5776   5276 S   0.0   0.0   1:35.28 /usr/bin/iphelpermgrd
+   7127 root      20   0   87848   9828   7308 S   0.0   0.1  14:34.01 /usr/bin/snapshotmgr
+   7205 root      20   0 2162636 152392  41024 S   0.0   1.0  50:12.54 /usr/sbin/telemetry -followconfig -writestatus -logtosyslog
+   7376 root      20   0   82072   5100   4728 S   0.0   0.0   1:09.02 /usr/bin/natmgrd
+   7525 root      20   0   81504   4976   4612 S   0.0   0.0   0:34.78 /usr/bin/tammgrd
+   7731 root      20   0   81520   5112   4724 S   0.0   0.0   0:32.14 /usr/bin/natsyncd
+   7875 root      20   0   81500   5132   4740 S   0.0   0.0   0:34.19 /usr/bin/dropmgrd
+   8583 root      20   0   81480   4596   4288 S   0.0   0.0   0:34.17 /usr/bin/tsmgrd
+   9155 root      20   0   81496   5108   4720 S   0.0   0.0   0:33.80 /usr/bin/ifamgrd
+   9389 frr       20   0  936860  39948  13504 S   0.0   0.3   0:31.67 /usr/lib/frr/zebra -A 127.0.0.1 -s 90000000 -K 5 -r -M fpm -M snmp --v6-rr-semantics --fpm-nhg
+   9442 root      20   0 1238360  14444   9112 S   0.0   0.1   2:42.66 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 3ad3ea5f451c526eb614f49201ae829c3c2977ffe62e7047087cced9f148d39c -address /run/containerd/containerd.sock
+   9471 root      20   0   33120  25512   9440 S   0.0   0.2   4:21.85 /usr/bin/python3 /usr/local/bin/supervisord
+   9495 root      20   0  108056  27672   9476 S   0.0   0.2   0:02.06 python3 /usr/bin/rsyslog-config.py
+   9601 admin     20   0    7576   3448   3016 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/pmon.sh wait
+   9602 root      20   0   53976  39840  14284 S   0.0   0.3   0:00.78 /usr/bin/python3 /usr/local/bin/autobreakoutmgrd
+   9621 frr       20   0   16436  10576   7252 S   0.0   0.1   0:00.66 /usr/lib/frr/staticd -A 127.0.0.1
+   9623 frr      -41   0  203552  22088   9004 S   0.0   0.1 107:02.64 /usr/lib/frr/bfdd -A 127.0.0.1
+   9624 frr       20   0  206120  32780  14228 S   0.0   0.2   7:30.72 /usr/lib/frr/bgpd -A 127.0.0.1 -M snmp
+   9626 frr       20   0   15988   9740   6972 S   0.0   0.1   0:00.52 /usr/lib/frr/iptrackd -A 127.0.0.1
+   9627 frr       20   0   29196  17328  11804 S   0.0   0.1   0:03.62 /usr/lib/frr/ospf6d -A 127.0.0.1 -M snmp
+   9631 frr       20   0   34304  19344  13020 S   0.0   0.1   0:37.60 /usr/lib/frr/ospfd -A 127.0.0.1 -M snmp
+   9647 frr       20   0   18996  13020   8016 S   0.0   0.1   0:05.41 /usr/lib/frr/pimd -A 127.0.0.1
+   9804 root      20   0  274760  32232   6752 S   0.0   0.2   1:22.48 /usr/bin/python3 /usr/local/bin/autobreakoutmgrd
+   9929 root      20   0  180436  28456   8900 S   0.0   0.2  66:42.12 /usr/bin/python3 /usr/local/bin/frrcfgd
+   9956 root      20   0   53976  31360   5804 S   0.0   0.2   0:00.00 /usr/bin/python3 /usr/local/bin/autobreakoutmgrd
+   9958 root      20   0   54376  32956   7140 S   0.0   0.2   0:00.32 /usr/bin/python3 /usr/local/bin/autobreakoutmgrd
+   9982 root      20   0 2023852  56740  32148 S   0.0   0.4   5:50.40 /usr/bin/containerd --address=/run/containerd-mgmt/containerd.sock --config=/etc/containerd/config-mgmt.toml
+  10011 admin     20   0    6024    496    436 S   0.0   0.0   0:41.06 tail --pid=9471 -f /dev/null
+  10029 root      20   0 1461712  89884  52100 S   0.0   0.6   2:25.47 /usr/bin/dockerd --data-root=/host/tpcmdisk/docker-mgmt --exec-root=/var/run/docker-mgmt --containerd=/run/containerd-mgmt/containerd.sock --bridge=docker-mgmt --pidfile=/run/docker-mgmt.pid --host=unix:///run/docker-mgmt.socket --iptables=false
+  10060 root      20   0    2480   1592   1464 S   0.0   0.0   0:00.06 sh /usr/bin/supervisor-proc-exit-listener --container-name pmon
+  10485 root      20   0   54372  40164  13772 S   0.0   0.3   1:03.09 locatorledd
+  10491 root      20   0   57208  43052  14132 S   0.0   0.3   1:04.23 xcvrd
+  10505 root      20   0   56036  41800  13680 S   0.0   0.3 145:14.39 python3 /usr/local/bin/psud
+  10511 root      20   0  130008  42284  13856 S   0.0   0.3  65:33.94 python3 /usr/local/bin/thermalctld
+  10518 root      20   0   13996    876      4 S   0.0   0.0   0:00.01 /usr/sbin/ipmievd open
+  10548 root      20   0   49484  35336  13088 S   0.0   0.2   1:34.97 python3 /usr/local/bin/pcied
+  10581 root      20   0  679868   5376   4976 S   0.0   0.0   0:31.65 fpmsyncd
+  10584 root      20   0  159712   5600   5000 S   0.0   0.0   1:12.41 ipmcfpmsyncd
+  10603 root      20   0    2480   1564   1472 S   0.0   0.0   2:43.40 sh /usr/bin/monitpmon.sh
+  10630 root      20   0   50324  36576  13396 S   0.0   0.2   0:07.45 python3 /usr/local/bin/ssdhealthd
+  10859 root      20   0 1238616  16192   9420 S   0.0   0.1   2:40.76 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 53461623caf092085200e02d6b7444b9f1c52d7bf3d4e7a61e7f2961a0b0c98e -address /run/containerd/containerd.sock
+  10930 root      20   0   32964  24976   9208 S   0.0   0.2   3:10.94 /usr/bin/python3 /usr/local/bin/supervisord
+  10979 admin     20   0    7576   3488   3084 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/mfa.sh wait
+  11081 root      20   0    2480   1672   1544 S   0.0   0.0   0:00.02 sh /usr/bin/supervisor-proc-exit-listener --container-name mfa
+  11082 root      20   0    7656   3528   3160 S   0.0   0.0   0:00.01 bash /usr/bin/start.sh
+  11086 root      20   0   36704  26336   9852 S   0.0   0.2   0:00.44 /usr/bin/python3 /usr/bin/mfacfgd
+  11095 admin     20   0    6024    568    504 S   0.0   0.0   0:40.67 tail --pid=10930 -f /dev/null
+  11315 root      20   0  100576   6332   4700 S   0.0   0.0   0:01.94 /sbin/dhclient -6 -pf /run/dhclient6.eth0.pid -lf /var/lib/dhcp/dhclient6.eth0.leases eth0 -nw -D LL
+  11390 root      20   0  569040  33700   6552 S   0.0   0.2   2:50.44 python3 /usr/local/bin/xcvrd
+  11513 root      20   0  376744  13564   4844 S   0.0   0.1  12:29.06 /usr/sbin/rsyslogd -n
+  11526 root      20   0  189244  34620   9988 S   0.0   0.2   0:01.15 /usr/bin/python3 /usr/local/bin/caclmgrd
+  12359 root      20   0  220872   5920   3400 S   0.0   0.0   0:11.31 /usr/sbin/rsyslogd -n -iNONE
+  12397 root      20   0  220872   5860   3364 S   0.0   0.0   0:11.47 /usr/sbin/rsyslogd -n -iNONE
+  12405 root      20   0  229088   3880   3388 S   0.0   0.0   0:10.51 /usr/sbin/rsyslogd -n -iNONE
+  12428 root      20   0    8108   4792   4452 S   0.0   0.0   0:00.21 /usr/bin/rsyslog_plugin -r /etc/rsyslog.d/bgp_regex.json
+  12458 root      20   0  220872   3848   3376 S   0.0   0.0   0:11.02 /usr/sbin/rsyslogd -n -iNONE
+  12531 root      20   0  220872   5880   3360 S   0.0   0.0   0:09.37 /usr/sbin/rsyslogd -n -iNONE
+  12925 root      20   0  571072  33700   6556 S   0.0   0.2   4:36.96 python3 /usr/local/bin/xcvrd
+  12972 root      20   0  220872   4972   3356 S   0.0   0.0   6:12.52 /usr/sbin/rsyslogd -n -iNONE
+  12993 root      20   0  497340  33336   6412 S   0.0   0.2  20:15.32 python3 /usr/local/bin/xcvrd
+  13071 root      20   0 1238360  15128   8660 S   0.0   0.1   2:41.04 /usr/bin/containerd-shim-runc-v2 -namespace moby -id feb2466dc28e1552f0b92c4ef55f810c45ac7db2b0557c1cfa69ea0ff827a844 -address /run/containerd/containerd.sock
+  13094 root      20   0  220872   6780   3376 S   0.0   0.0   1:18.79 /usr/sbin/rsyslogd -n -iNONE
+  13126 root      20   0   32964  25280   9396 S   0.0   0.2   3:51.34 /usr/bin/python3 /usr/local/bin/supervisord
+  13181 admin     20   0    7576   3344   2940 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/lldp.sh wait
+  13206 root      20   0 1238616  15008   9176 S   0.0   0.1   2:41.47 /usr/bin/containerd-shim-runc-v2 -namespace moby -id e55a13ddf1d9042662f1f05c821d8ba51a7c41c35abe8f31a192118eeb080b47 -address /run/containerd/containerd.sock
+  13255 root      20   0   32700  24672   9208 S   0.0   0.2   3:07.74 /usr/bin/python3 /usr/local/bin/supervisord
+  13280 root      20   0 1238360  14936   8856 S   0.0   0.1   2:41.26 /usr/bin/containerd-shim-runc-v2 -namespace moby -id d77ed6d5497457798df84b9417822626593670a3294728ff45bbe3e6aedf9b94 -address /run/containerd/containerd.sock
+  13325 root      20   0  220872   3868   3400 S   0.0   0.0   0:11.00 /usr/sbin/rsyslogd -n -iNONE
+  13335 root      20   0  220872   3856   3384 S   0.0   0.0   0:11.45 /usr/sbin/rsyslogd -n
+  13370 root      20   0   32712  24940   9200 S   0.0   0.2   2:57.79 /usr/bin/python3 /usr/local/bin/supervisord
+  13390 root      20   0  220872   3868   3396 S   0.0   0.0   0:10.07 /usr/sbin/rsyslogd -n -iNONE
+  13407 admin     20   0    7576   3460   3052 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/l2mcd.sh wait
+  13419 root      20   0  220872   3876   3404 S   0.0   0.0   0:13.58 /usr/sbin/rsyslogd -n -iNONE
+  13480 root      20   0 1238360  15472   8984 S   0.0   0.1   2:40.50 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 3ee703fc443bad9d75719f5a86af86466bcf75ff6c07b19f1456ee63cafe6edf -address /run/containerd/containerd.sock
+  13515 admin     20   0    7576   3340   2932 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/timesync.sh wait
+  13551 root      20   0 1238616  15220   8984 S   0.0   0.1   2:38.79 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 547ef07b8f44546def524c5a77f1ad4475fd4ce485bfcf0c016c682faafe2498 -address /run/containerd/containerd.sock
+  13552 root      20   0 1238360  15664   9424 S   0.0   0.1   2:36.28 /usr/bin/containerd-shim-runc-v2 -namespace moby -id c4413706d3f83e529ece6f89c6946fd73f9649ec15b77224620fd78ba9bea984 -address /run/containerd/containerd.sock
+  13627 root      20   0   32712  25140   9392 S   0.0   0.2   3:07.27 /usr/bin/python3 /usr/local/bin/supervisord
+  13677 root      20   0 1238360  16604   9684 S   0.0   0.1   2:38.32 /usr/bin/containerd-shim-runc-v2 -namespace moby -id eda909d1d8b3edfb00e30dbce5ab228a145cadb08eb45d030eb07b57f9effe84 -address /run/containerd/containerd.sock
+  13688 root      20   0 1238360  16200   9680 S   0.0   0.1   2:39.83 /usr/bin/containerd-shim-runc-v2 -namespace moby -id bce57c6954efcd07159bd05ac1b022f8c1120f8b1aadaa50b2035c3a6fac94b1 -address /run/containerd/containerd.sock
+  13696 root      20   0 1238616  16080   9304 S   0.0   0.1   2:37.84 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 4aa771632fd947f3578369d6b1be4020ef1f622169cc2de9466e8f7c03f2353b -address /run/containerd/containerd.sock
+  13815 root      20   0   32712  25204   9456 S   0.0   0.2   3:13.16 /usr/bin/python3 /usr/local/bin/supervisord
+  13827 root      20   0    2480   1664   1544 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name l2mcd
+  13832 root      20   0   32700  24800   9320 S   0.0   0.2   3:14.46 /usr/bin/python3 /usr/local/bin/supervisord
+  13833 root      20   0   32700  24944   9436 S   0.0   0.2   3:24.48 /usr/bin/python3 /usr/local/bin/supervisord
+  13848 admin     20   0    7576   3532   3132 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/dhcp_relay.sh wait
+  13914 root      20   0   32704  24756   9280 S   0.0   0.2   3:09.30 /usr/bin/python3 /usr/local/bin/supervisord
+  13916 root      20   0   32704  24844   9368 S   0.0   0.2   3:08.04 /usr/bin/python3 /usr/local/bin/supervisord
+  13971 admin     20   0    7576   3308   2892 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/iccpd.sh wait
+  13973 root      20   0    2480   1648   1540 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name timesync
+  14026 admin     20   0    7576   3500   3100 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/vrrp.sh wait
+  14065 admin     20   0    6024    568    500 S   0.0   0.0   0:40.28 tail --pid=13255 -f /dev/null
+  14107 admin     20   0    7576   3304   2888 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/udld.sh wait
+  14122 admin     20   0    7576   3388   2972 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/stp.sh wait
+  14125 root      20   0 1238360  15072   8916 S   0.0   0.1   2:41.00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 6971483238cbf29521c95e3c2c4df55c5ac2d7c37c842247b47166c9aa283cba -address /run/containerd/containerd.sock
+  14133 admin     20   0    7576   3352   2948 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/sflow.sh wait
+  14139 root      20   0  220872   3768   3300 S   0.0   0.0   0:11.27 /usr/sbin/rsyslogd -n
+  14193 root      20   0   32712  25216   9460 S   0.0   0.2   2:57.15 /usr/bin/python3 /usr/local/bin/supervisord
+  14203 admin     20   0    6024    496    436 S   0.0   0.0   0:40.94 tail --pid=13126 -f /dev/null
+  14287 admin     20   0    2480    520    448 S   0.0   0.0   0:00.00 /bin/sh /usr/local/bin/radv.sh wait
+  14297 admin     20   0    7576   3228   2820 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/radv.sh wait
+  14329 root      20   0    2480   1656   1540 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name iccpd
+  14376 root      20   0  281560  47320  13048 S   0.0   0.3   0:00.74 python3 /usr/bin/docker-wait-any -s swss -d syncd teamd -t 60
+  14377 admin     20   0    6024    496    436 S   0.0   0.0   0:39.95 tail --pid=13370 -f /dev/null
+  14379 root      20   0    2480   1600   1484 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name udld
+  14410 root      20   0    2480   1568   1448 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name vrrp
+  14412 root      20   0    2480   1700   1580 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name stp
+  14501 root      20   0  220872   3808   3336 S   0.0   0.0   0:09.69 /usr/sbin/rsyslogd -n
+  14541 root      20   0  220872   5860   3364 S   0.0   0.0   0:09.66 /usr/sbin/rsyslogd -n -iNONE
+  14552 root      20   0  105696  11000   5644 S   0.0   0.1   6:36.61 /usr/bin/l2mcd -n 1
+  14584 root      20   0  220872   5896   3400 S   0.0   0.0   0:09.86 /usr/sbin/rsyslogd -n
+  14586 root      20   0 1339060  57944   3480 S   0.0   0.4   1:21.02 /usr/local/bin/ciam-service-CCME -mode=start -config=/etc/sonic/mfa/config_enc.env
+  14595 root      20   0    2480   1588   1460 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name lldp
+  14596 admin     20   0    6024    568    504 S   0.0   0.0   0:39.02 tail --pid=13627 -f /dev/null
+  14629 root      20   0  220872   5820   3328 S   0.0   0.0   0:11.93 /usr/sbin/rsyslogd -n
+  14646 root      20   0    7632   3512   3172 S   0.0   0.0   0:00.02 /bin/bash /usr/bin/timesyncd-svc.sh
+  14675 admin     20   0    6024    564    500 S   0.0   0.0   0:40.26 tail --pid=13832 -f /dev/null
+  14697 root      20   0    2480   1612   1484 S   0.0   0.0   0:00.02 sh /usr/bin/supervisor-proc-exit-listener --container-name dhcp_relay
+  14698 admin     20   0    6024    508    440 S   0.0   0.0   0:39.99 tail --pid=13833 -f /dev/null
+  14699 root      20   0    2480   1588   1472 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name sflow
+  14700 root     -41   0   24760   5444   5052 S   0.0   0.0   8:47.10 /usr/bin/udldd
+  14710 root      20   0  121748  33788  12832 S   0.0   0.2   0:32.16 python3 /usr/bin/port_index_mapper.py
+  14719 root      20   0  220872   5904   3412 S   0.0   0.0   0:12.15 /usr/sbin/rsyslogd -n
+  14749 admin     20   0    6024    500    440 S   0.0   0.0   0:40.31 tail --pid=13815 -f /dev/null
+  14767 admin     20   0    6024    496    436 S   0.0   0.0   0:39.23 tail --pid=13914 -f /dev/null
+  14770 root      20   0  483524  12728   9092 S   0.0   0.1  75:06.91 /usr/bin/timesyncd
+  14777 root      20   0  128544  14452   6640 S   0.0   0.1  18:41.06 /usr/bin/stpd
+  14787 admin     20   0    6024    568    504 S   0.0   0.0   0:40.35 tail --pid=14193 -f /dev/null
+  14801 admin     20   0    6024    496    436 S   0.0   0.0   0:39.99 tail --pid=13916 -f /dev/null
+  14821 root      20   0   81880   5576   4924 S   0.0   0.0   1:12.39 /usr/bin/l2mcmgrd
+  14824 root      20   0  220872   5780   3284 S   0.0   0.0   0:11.82 /usr/sbin/rsyslogd -n -iNONE
+  14829 root      20   0  172288   6032   5408 S   0.0   0.0  93:02.10 /usr/bin/vrrpsyncd
+  14830 root      20   0  220872   7940   3400 S   0.0   0.1   0:12.89 /usr/sbin/rsyslogd -n -iNONE
+  14834 root      20   0 1238616  15668   9372 S   0.0   0.1   2:41.19 /usr/bin/containerd-shim-runc-v2 -namespace moby -id b49eae5584c813e3b93d33febe6d2e8e4606fc91a141b63cc5b8df224b62cb91 -address /run/containerd/containerd.sock
+  14910 root      20   0   11356   5240   4544 S   0.0   0.0   0:00.00 /bin/bash /usr/bin/snmp.sh wait
+  14922 root      20   0  121260  33356  13388 S   0.0   0.2   0:40.86 python3 /usr/bin/ntpconfd
+  14924 root      20   0   81560   4704   4396 S   0.0   0.0   1:08.98 /usr/bin/udldmgrd
+  14945 root      20   0   82836   6788   5036 S   0.0   0.0   1:16.70 /usr/bin/stpmgrd
+  14952 root      20   0    2480   1632   1504 S   0.0   0.0   0:00.02 sh /usr/bin/supervisor-proc-exit-listener --container-name radv
+  14977 root      20   0   21592   4820   2568 S   0.0   0.0   3:09.18 /usr/bin/iccpd
+  15082 root      20   0  155572   7828   5144 S   0.0   0.0   1:39.28 /usr/bin/vrrpmgrd
+  15201 root      20   0    6024    564    500 S   0.0   0.0   0:44.24 tail --pid=14866 -f /dev/null
+  15371 ntp       20   0   75292   4992   4116 S   0.0   0.0   1:08.33 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -c /var/run/ntpconfd/etc/ntp.conf -u 109:115
+  15373 root      20   0   83780   5208   4824 S   0.0   0.0   0:33.85 /usr/bin/mclagsyncd
+  15390 root      20   0   82536   5996   5224 S   0.0   0.0   1:20.40 /usr/bin/dhcprelaymgrd
+  15395 root      20   0  220872   5868   3348 S   0.0   0.0   0:11.57 /usr/sbin/rsyslogd -n -iNONE
+  15427 root      20   0  220872   3856   3380 S   0.0   0.0   0:11.60 /usr/sbin/rsyslogd -n -iNONE
+  15434 root      20   0    2480   1584   1460 S   0.0   0.0   0:00.01 sh /usr/bin/supervisor-proc-exit-listener --container-name snmp
+  15544 root      20   0   81732   4976   4608 S   0.0   0.0   1:08.39 /usr/bin/sflowmgrd
+  15545 root      20   0  220872   5844   3324 S   0.0   0.0   0:09.65 /usr/sbin/rsyslogd -n -iNONE
+  15564 root      20   0   82520   5136   4748 S   0.0   0.0   0:34.04 /usr/bin/stpiccpsyncd
+  15764 root      20   0  129852  40564   7636 S   0.0   0.3  12:33.29 xcvrd_phy
+  15769 root      20   0  220872   4672   3356 S   0.0   0.0   1:42.27 /usr/sbin/rsyslogd -n -iNONE
+  15787 root      20   0   57244  36412   7440 S   0.0   0.2   4:54.43 xcvrd_cmisc
+  15830 root      20   0   60320  39556   7564 S   0.0   0.3  28:46.03 xcvrd_dominfo
+  15844 root      20   0   60336  39728   7784 S   0.0   0.3  51:50.30 xcvrd_sfpstate
+  15845 root      30  10   57160  35524   6596 S   0.0   0.2   0:38.72 xcvrd_cmisw
+  15846 root      20   0   57208  36328   7376 S   0.0   0.2   1:15.25 xcvrd_appdb
+  15895 root      30  10   57172  35524   6596 S   0.0   0.2   0:38.25 xcvrd_cmisw
+  15937 root      30  10   57184  35532   6596 S   0.0   0.2   0:38.09 xcvrd_cmisw
+  15989 root      30  10   57196  35536   6596 S   0.0   0.2   0:38.83 xcvrd_cmisw
+  16004 root      30  10   57208  35536   6596 S   0.0   0.2   0:39.49 xcvrd_cmisw
+  16022 root      30  10   57220  35540   6596 S   0.0   0.2   0:38.35 xcvrd_cmisw
+  16050 root      30  10   57232  35544   6596 S   0.0   0.2   0:38.79 xcvrd_cmisw
+  16094 systemd+  20   0   36504   7336   6316 S   0.0   0.0   0:00.29 lldpd: monitor.
+  16097 root      30  10   57244  35556   6596 S   0.0   0.2   0:38.93 xcvrd_cmisw
+  16124 systemd+  20   0   36864   3260   1936 S   0.0   0.0   8:35.28 lldpd: 10 neighbors.
+  16361 root      20   0  107104  27276   8360 S   0.0   0.2  31:07.48 python3 -m lldp_syncd
+  16513 root      20   0   51684  37788  13244 S   0.0   0.2   0:09.84 python3 /usr/bin/lldpmgrd
+  16798 root      20   0   57348  43016  13172 S   0.0   0.3   0:21.17 python3 /usr/bin/dcbxmgrd
+  16908 root      20   0   32664  24200   8896 S   0.0   0.2   0:00.34 python3 /usr/bin/snmpconfd
+  16993 systemd+  20   0   25684  13304   9228 S   0.0   0.1  12:55.33 /usr/sbin/snmpd -f -LS4d -u Debian-snmp -g Debian-snmp -I -smux mteTrigger mteTriggerConf ifTable ifXTable inetCidrRouteTable ipCidrRouteTable inetNetToMediaTable ipAddressTable lmsensorsMib ip -p /run/snmpd.pid
+  17016 root      20   0  512040  56228  14144 S   0.0   0.4 533:28.82 python3 -m sonic_ax_impl
+  17087 root      20   0  254892  40152   9168 S   0.0   0.3   5:23.93 python3 /usr/bin/snmpstatsd
+  17090 root      20   0  571520  35564   7444 S   0.0   0.2  85:20.91 python3 -m sonic_ax_impl
+  18338 root      20   0   24476   3192   2108 S   0.0   0.0   0:44.36 keepalived
+  18339 root      20   0   24556   4724   3604 S   0.0   0.0   0:43.32 keepalived
+  18340 root      20   0   24848   5612   4228 S   0.0   0.0   1:42.96 keepalived
+  97508 root      20   0   73012    568      0 S   0.0   0.0   0:00.00 /usr/sbin/radsecproxy
+2096603 root      20   0       0      0      0 I   0.0   0.0   0:00.22 [kworker/1:0-events]
+2117759 root      20   0   17648  12068  10584 S   0.0   0.1   0:00.09 sshd: admhour_sou_cheng [priv]
+2117816 admhour+  20   0   17648   6212   4616 S   0.0   0.0   0:01.95 sshd: admhour_sou_cheng@pts/0
+2117817 admhour+  20   0   12292   6540   4880 S   0.0   0.0   0:00.30 /bin/bash
+2170270 root      20   0       0      0      0 I   0.0   0.0   0:01.32 [kworker/u8:2-flush-7:1]
+2216601 root      20   0       0      0      0 I   0.0   0.0   0:00.26 [kworker/0:2-cgroup_destroy]
+2267551 root      20   0       0      0      0 I   0.0   0.0   0:00.90 [kworker/0:1-rcu_gp]
+2267554 root      20   0       0      0      0 I   0.0   0.0   0:02.46 [kworker/3:3-events]
+2293179 root      20   0       0      0      0 I   0.0   0.0   0:00.58 [kworker/2:2-events]
+2328925 root      20   0       0      0      0 I   0.0   0.0   0:00.00 [kworker/3:0-events]
+2332110 root      20   0       0      0      0 I   0.0   0.0   0:00.41 [kworker/2:4-events]
+2337236 root      20   0       0      0      0 I   0.0   0.0   0:00.14 [kworker/u8:1-ipmi-msghandler-remove-]
+2339148 root      25   5   13536   7420   4468 S   0.0   0.0   0:00.93 /bin/bash /usr/local/bin/generate_dump -p -s 2026-03-15T00:00:00+00:00
+2343144 root      20   0       0      0      0 I   0.0   0.0   0:00.03 [kworker/1:2-events]
+2351265 root      20   0       0      0      0 I   0.0   0.0   0:00.00 [kworker/0:0-cgroup_destroy]
+2351266 root      20   0       0      0      0 I   0.0   0.0   0:00.00 [kworker/3:1-events_long]
+2351267 root      20   0       0      0      0 I   0.0   0.0   0:00.32 [kworker/3:2-events]
+2355602 root      20   0       0      0      0 I   0.0   0.0   0:00.06 [kworker/u8:0-events_unbound]
+2361418 root      20   0       0      0      0 I   0.0   0.0   0:00.00 [kworker/u8:3-flush-254:0]
+2362843 root      20   0   20944  10512   9268 S   0.0   0.1   0:00.01 sudo -i
+2362852 root      20   0    5992    508    440 S   0.0   0.0   0:00.00 sleep 60
+2362866 root      20   0   12372   6548   4848 S   0.0   0.0   0:00.03 -bash
+2363968 root      20   0       0      0      0 I   0.0   0.0   0:00.03 [kworker/2:0-rcu_gp]
+2365944 root      rt   0    5992    568    504 S   0.0   0.0   0:00.00 sleep 2
+2365961 root      25   5    6180    620    532 S   0.0   0.0   0:00.00 timeout --foreground 5m top -c -b -n 1 -w512
+2365963 root      20   0    5992    500    440 S   0.0   0.0   0:00.00 sleep 5
+2365965 root      20   0   15504   4216   3252 S   0.0   0.0   0:00.00 ipmitool raw 4 45 60

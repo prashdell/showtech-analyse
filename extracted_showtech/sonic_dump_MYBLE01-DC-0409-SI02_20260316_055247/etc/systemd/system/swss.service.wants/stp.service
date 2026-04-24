@@ -1,0 +1,20 @@
+[Unit]
+Description=STP container
+Requires=updategraph.service swss.service
+After=updategraph.service swss.service syncd.service portinitdone.service
+Before=ntp-config.service
+BindsTo=sonic.target
+After=sonic.target
+StartLimitIntervalSec=1200
+StartLimitBurst=20
+
+[Service]
+User=admin
+ExecStartPre=/usr/bin/stp.sh start
+ExecStart=/usr/bin/stp.sh wait
+ExecStop=/usr/bin/stp.sh stop
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=sonic.target swss.service

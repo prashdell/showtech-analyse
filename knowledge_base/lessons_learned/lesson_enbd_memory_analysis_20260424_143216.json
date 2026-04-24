@@ -1,0 +1,26 @@
+{
+  "lesson_id": "lesson_enbd_memory_analysis_20260424_143216",
+  "skill_name": "sonic_memory_exhaustion_triage",
+  "lesson_type": "enbd_memory_analysis",
+  "content": {
+    "success_patterns": [
+      "enterprise_memory_pattern",
+      "financial_services_pattern",
+      "business_hours_pattern",
+      "route_table_memory_pattern",
+      "container_memory_pattern"
+    ],
+    "context_factors": {
+      "customer": "ENBD",
+      "device": "DXB-LEAF-R7-POD-15-B",
+      "memory_utilization": 72.5,
+      "total_routes": 125000,
+      "memory_pressure": "Moderate"
+    }
+  },
+  "confidence": 0.94,
+  "impact": "medium",
+  "timestamp": "2026-04-24T14:32:16.767884",
+  "execution_time": 4.2,
+  "captured_by": "enbd_comprehensive_analysis"
+}

@@ -1,0 +1,35 @@
+{
+  "lesson_id": "lesson_performance_degradation_prediction_20260424_142226",
+  "skill_name": "sonic_performance_degradation_prediction",
+  "lesson_type": "performance_prediction",
+  "content": {
+    "success_patterns": [
+      "performance_metrics_pattern",
+      "degradation_trend_pattern",
+      "performance_correlation_pattern",
+      "degradation_prediction_pattern",
+      "optimization_recommendation_pattern",
+      "multi_instance_performance_pattern",
+      "resource_exhaustion_pattern",
+      "service_performance_pattern"
+    ],
+    "context_factors": {
+      "archive_intelligence": "284_archive_production_intelligence",
+      "confidence_range": "92-98%",
+      "performance_events": "53-56_events_per_instance",
+      "critical_events": "112-160_per_instance",
+      "prediction_accuracy": "88-95%",
+      "service_error_rates": {
+        "System": "0.015-0.025%",
+        "Orchagent": "0.35-0.55%",
+        "Docker": "0.10-0.70%",
+        "Syncd": "0.01-0.15%"
+      }
+    }
+  },
+  "confidence": 0.93,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:22:26.402629",
+  "execution_time": 6.3,
+  "captured_by": "comprehensive_analysis"
+}

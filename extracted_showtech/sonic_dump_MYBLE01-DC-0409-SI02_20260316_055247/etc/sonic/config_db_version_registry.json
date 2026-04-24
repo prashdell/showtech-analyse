@@ -1,0 +1,47 @@
+{
+    "CONSTANTS" : {
+        "VERSION_MIN" : "version_1_0_2",
+        "VERSION_LATEST" : "version_4_5_3",
+        "VERSION_UNKNOWN" : "version_4096_4096_4096"
+    },
+    "CONFIG_DB_VERSIONS" : {
+        "version_1_0_2" : {
+        },
+        "version_3_1_1" : {
+        },
+        "version_3_1_2" : {
+        },
+        "version_3_1_3" : {
+        },
+        "version_3_2_1" : {
+        },
+        "version_3_2_2" : {
+        },
+        "version_3_3_1" : {
+        },
+        "version_3_4_1" : {
+        },
+        "version_4_0_1" : {
+        },
+        "version_4_0_2" : {
+        },
+        "version_4_1_1" : {
+        },
+        "version_4_2_1" : {
+        },
+        "version_4_2_2" : {
+        },
+        "version_4_3_1" : {
+        },
+        "version_4_3_2" : {
+        },
+        "version_4_4_1" : {
+        },
+        "version_4_5_1" : {
+        },
+        "version_4_5_2" : {
+        },
+        "version_4_5_3" : {
+        } 
+    }
+}

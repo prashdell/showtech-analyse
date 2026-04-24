@@ -1,0 +1,114 @@
+/usr/local/lib/python3.9/dist-packages/supervisor/options.py:473: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  self.warnings.warn(
+2026-01-12 10:23:31,250 INFO Included extra file "/etc/supervisor/conf.d/supervisor-rsyslogd.conf" during parsing
+2026-01-12 10:23:31,250 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2026-01-12 10:23:31,250 INFO Set uid to user 0 succeeded
+2026-01-12 10:23:31,300 INFO RPC interface 'supervisor' initialized
+2026-01-12 10:23:31,301 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2026-01-12 10:23:31,301 INFO supervisord started with pid 1
+2026-01-12 10:23:32,304 INFO spawned: 'supervisor-proc-exit-listener' with pid 77
+2026-01-12 10:23:32,307 INFO spawned: 'rsyslogd' with pid 78
+2026-01-12 10:23:32,310 INFO spawned: 'redis' with pid 79
+2026-01-12 10:23:32,313 INFO spawned: 'redis2' with pid 80
+2026-01-12 10:23:32,317 INFO spawned: 'redis3' with pid 82
+2026-01-12 10:23:32,320 INFO spawned: 'redis4' with pid 83
+2026-01-12 10:23:32,324 INFO spawned: 'redis6' with pid 84
+2026-01-12 10:23:32,328 INFO spawned: 'rediswb' with pid 88
+2026-01-12 10:23:32,332 INFO spawned: 'flushdb' with pid 91
+2026-01-12 10:23:33,416 INFO success: supervisor-proc-exit-listener entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:23:33,416 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:23:33,416 INFO success: redis entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:23:33,416 INFO success: redis2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:23:33,416 INFO success: redis3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:23:33,417 INFO success: redis4 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:23:33,417 INFO success: redis6 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:23:33,417 INFO success: rediswb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:23:33,417 INFO success: flushdb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:23:34,196 INFO exited: flushdb (exit status 0; expected)
+2026-01-12 10:25:17,006 INFO spawned: 'restart-rsyslogd' with pid 242
+2026-01-12 10:25:17,007 INFO success: restart-rsyslogd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-01-12 10:25:23,071 INFO waiting for rsyslogd to stop
+2026-01-12 10:25:23,076 INFO stopped: rsyslogd (exit status 0)
+2026-01-12 10:25:23,093 INFO spawned: 'rsyslogd' with pid 249
+2026-01-12 10:25:24,099 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:25:24,334 INFO exited: restart-rsyslogd (exit status 0; expected)
+2026-03-08 04:38:31,116 WARN received SIGTERM indicating exit request
+2026-03-08 04:38:31,116 INFO waiting for supervisor-proc-exit-listener, rsyslogd, redis, redis2, redis3, redis4, redis6, rediswb to die
+2026-03-08 04:38:33,144 INFO stopped: rediswb (exit status 0)
+2026-03-08 04:38:34,186 INFO stopped: redis6 (exit status 0)
+2026-03-08 04:38:34,186 INFO waiting for supervisor-proc-exit-listener, rsyslogd, redis, redis2, redis3, redis4 to die
+2026-03-08 04:38:34,288 INFO stopped: redis4 (exit status 0)
+2026-03-08 04:38:34,353 INFO stopped: redis3 (exit status 0)
+2026-03-08 04:38:34,369 INFO stopped: redis2 (exit status 0)
+2026-03-08 04:38:34,439 INFO stopped: redis (exit status 0)
+2026-03-08 04:38:34,441 INFO stopped: rsyslogd (exit status 0)
+2026-03-08 04:38:34,442 INFO stopped: supervisor-proc-exit-listener (terminated by SIGTERM)
+/usr/local/lib/python3.9/dist-packages/supervisor/options.py:473: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  self.warnings.warn(
+2026-03-08 04:39:48,284 INFO Included extra file "/etc/supervisor/conf.d/supervisor-rsyslogd.conf" during parsing
+2026-03-08 04:39:48,284 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2026-03-08 04:39:48,284 INFO Set uid to user 0 succeeded
+2026-03-08 04:39:48,297 INFO RPC interface 'supervisor' initialized
+2026-03-08 04:39:48,298 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2026-03-08 04:39:48,298 INFO supervisord started with pid 1
+2026-03-08 04:39:49,301 INFO spawned: 'supervisor-proc-exit-listener' with pid 62
+2026-03-08 04:39:49,304 INFO spawned: 'rsyslogd' with pid 63
+2026-03-08 04:39:49,307 INFO spawned: 'redis' with pid 64
+2026-03-08 04:39:49,310 INFO spawned: 'redis2' with pid 65
+2026-03-08 04:39:49,314 INFO spawned: 'redis3' with pid 67
+2026-03-08 04:39:49,318 INFO spawned: 'redis4' with pid 68
+2026-03-08 04:39:49,321 INFO spawned: 'redis6' with pid 69
+2026-03-08 04:39:49,324 INFO spawned: 'rediswb' with pid 73
+2026-03-08 04:39:49,327 INFO spawned: 'flushdb' with pid 75
+2026-03-08 04:39:50,412 INFO success: supervisor-proc-exit-listener entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:39:50,412 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:39:50,412 INFO success: redis entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:39:50,412 INFO success: redis2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:39:50,412 INFO success: redis3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:39:50,412 INFO success: redis4 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:39:50,412 INFO success: redis6 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:39:50,412 INFO success: rediswb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:39:50,412 INFO success: flushdb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:39:51,173 INFO exited: flushdb (exit status 0; expected)
+2026-03-08 04:41:10,444 INFO spawned: 'restart-rsyslogd' with pid 225
+2026-03-08 04:41:10,463 INFO success: restart-rsyslogd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 04:41:15,078 INFO waiting for rsyslogd to stop
+2026-03-08 04:41:15,102 INFO stopped: rsyslogd (exit status 0)
+2026-03-08 04:41:15,136 INFO spawned: 'rsyslogd' with pid 232
+2026-03-08 04:41:16,157 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:41:16,273 INFO exited: restart-rsyslogd (exit status 0; expected)
+/usr/local/lib/python3.9/dist-packages/supervisor/options.py:473: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  self.warnings.warn(
+2026-03-08 04:59:09,815 INFO Included extra file "/etc/supervisor/conf.d/supervisor-rsyslogd.conf" during parsing
+2026-03-08 04:59:09,816 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2026-03-08 04:59:09,816 INFO Set uid to user 0 succeeded
+Unlinking stale socket /var/run/supervisor.sock
+2026-03-08 04:59:10,124 INFO RPC interface 'supervisor' initialized
+2026-03-08 04:59:10,124 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2026-03-08 04:59:10,124 INFO supervisord started with pid 1
+2026-03-08 04:59:11,127 INFO spawned: 'supervisor-proc-exit-listener' with pid 62
+2026-03-08 04:59:11,130 INFO spawned: 'rsyslogd' with pid 63
+2026-03-08 04:59:11,133 INFO spawned: 'redis' with pid 64
+2026-03-08 04:59:11,136 INFO spawned: 'redis2' with pid 65
+2026-03-08 04:59:11,139 INFO spawned: 'redis3' with pid 66
+2026-03-08 04:59:11,142 INFO spawned: 'redis4' with pid 67
+2026-03-08 04:59:11,145 INFO spawned: 'redis6' with pid 69
+2026-03-08 04:59:11,156 INFO spawned: 'rediswb' with pid 78
+2026-03-08 04:59:11,164 INFO spawned: 'flushdb' with pid 85
+2026-03-08 04:59:12,237 INFO success: supervisor-proc-exit-listener entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:12,237 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:12,237 INFO success: redis entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:12,237 INFO success: redis2 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:12,237 INFO success: redis3 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:12,237 INFO success: redis4 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:12,237 INFO success: redis6 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:12,237 INFO success: rediswb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:12,237 INFO success: flushdb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:13,002 INFO exited: flushdb (exit status 0; expected)
+2026-03-08 05:00:38,064 INFO spawned: 'restart-rsyslogd' with pid 231
+2026-03-08 05:00:38,072 INFO success: restart-rsyslogd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 05:00:44,337 INFO waiting for rsyslogd to stop
+2026-03-08 05:00:44,359 INFO stopped: rsyslogd (exit status 0)
+2026-03-08 05:00:44,376 INFO spawned: 'rsyslogd' with pid 238
+2026-03-08 05:00:45,385 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 05:00:45,530 INFO exited: restart-rsyslogd (exit status 0; expected)

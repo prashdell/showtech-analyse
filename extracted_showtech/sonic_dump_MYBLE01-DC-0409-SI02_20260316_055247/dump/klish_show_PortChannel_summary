@@ -1,0 +1,7 @@
+--ts-sonic--# show PortChannel summary | no-more
+Flags(oper-status):  D - Down U - Up (portchannel) P - Up in portchannel (members) I - LACP individual
+----------------------------------------------------------------------------------------------------------------------------
+Group               PortChannel                   Type                Protocol          Member Ports
+----------------------------------------------------------------------------------------------------------------------------
+100                 PortChannel100 (U)            Eth                 LACP                Eth1/49(P)
+                                                                                          Eth1/51(P)

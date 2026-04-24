@@ -1,0 +1,156 @@
+/usr/local/lib/python3.9/dist-packages/supervisor/options.py:473: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  self.warnings.warn(
+2026-01-12 10:24:12,103 INFO Included extra file "/etc/supervisor/conf.d/supervisor-rsyslogd.conf" during parsing
+2026-01-12 10:24:12,103 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2026-01-12 10:24:12,103 INFO Set uid to user 0 succeeded
+2026-01-12 10:24:12,145 INFO RPC interface 'supervisor' initialized
+2026-01-12 10:24:12,145 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2026-01-12 10:24:12,146 INFO supervisord started with pid 1
+2026-01-12 10:24:13,154 INFO spawned: 'dependent-startup' with pid 7
+2026-01-12 10:24:13,165 INFO spawned: 'rest-server-exit' with pid 8
+2026-01-12 10:24:13,276 INFO spawned: 'start' with pid 9
+2026-01-12 10:24:13,409 INFO success: dependent-startup entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-01-12 10:24:13,409 INFO success: start entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-01-12 10:24:13,409 INFO exited: start (exit status 0; expected)
+2026-01-12 10:24:14,412 INFO success: rest-server-exit entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:24:15,130 INFO spawned: 'rsyslogd' with pid 29
+2026-01-12 10:24:15,668 INFO spawned: 'rest-server' with pid 33
+2026-01-12 10:24:16,836 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:24:16,836 INFO success: rest-server entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:24:19,336 INFO exited: dependent-startup (exit status 0; expected)
+2026-01-12 10:25:19,329 INFO spawned: 'restart-rsyslogd' with pid 77
+2026-01-12 10:25:19,330 INFO success: restart-rsyslogd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-01-12 10:25:30,345 INFO waiting for rsyslogd to stop
+2026-01-12 10:25:30,363 INFO stopped: rsyslogd (exit status 0)
+2026-01-12 10:25:30,425 INFO spawned: 'rsyslogd' with pid 92
+2026-01-12 10:25:31,544 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-01-12 10:25:31,804 INFO exited: restart-rsyslogd (exit status 0; expected)
+2026-01-12 10:35:22,537 INFO reaped unknown pid 120 (exit status 0)
+2026-01-13 06:51:19,728 INFO reaped unknown pid 688 (exit status 0)
+2026-01-13 06:56:39,069 INFO reaped unknown pid 868 (terminated by SIGHUP)
+2026-01-13 06:56:39,069 INFO reaped unknown pid 323 (exit status 0)
+2026-01-13 06:58:43,196 INFO reaped unknown pid 228 (exit status 0)
+2026-01-13 06:58:43,197 INFO reaped unknown pid 316 (terminated by SIGHUP)
+2026-01-13 06:58:43,197 INFO reaped unknown pid 315 (terminated by SIGHUP)
+2026-01-13 07:48:16,656 INFO reaped unknown pid 2250 (terminated by SIGHUP)
+2026-01-13 07:48:16,656 INFO reaped unknown pid 875 (exit status 0)
+2026-01-13 07:48:16,656 INFO reaped unknown pid 2251 (terminated by SIGHUP)
+2026-01-13 08:12:12,291 INFO reaped unknown pid 2258 (exit status 0)
+2026-01-14 00:38:56,238 INFO reaped unknown pid 2487 (exit status 0)
+2026-01-14 02:11:05,830 INFO reaped unknown pid 2607 (exit status 0)
+2026-01-19 06:15:52,473 INFO reaped unknown pid 2934 (exit status 0)
+2026-01-20 01:56:13,006 INFO reaped unknown pid 3225 (exit status 0)
+2026-01-20 03:02:46,547 INFO reaped unknown pid 3418 (exit status 0)
+2026-01-21 04:24:00,528 INFO reaped unknown pid 3545 (exit status 0)
+2026-01-22 02:33:50,944 INFO reaped unknown pid 3562 (exit status 0)
+2026-01-22 04:22:27,932 INFO reaped unknown pid 3787 (exit status 0)
+2026-01-26 00:45:45,553 INFO reaped unknown pid 4690 (exit status 0)
+2026-01-26 00:53:10,709 INFO reaped unknown pid 4699 (exit status 0)
+2026-01-26 05:20:03,870 INFO reaped unknown pid 4882 (terminated by SIGHUP)
+2026-01-26 05:20:04,871 INFO reaped unknown pid 4794 (exit status 0)
+2026-01-27 13:26:22,568 INFO reaped unknown pid 4976 (terminated by SIGHUP)
+2026-01-27 13:26:22,568 INFO reaped unknown pid 4889 (exit status 0)
+2026-01-27 13:26:22,569 INFO reaped unknown pid 4977 (terminated by SIGHUP)
+2026-02-05 02:56:01,006 INFO reaped unknown pid 5359 (exit status 0)
+2026-02-10 05:39:15,102 INFO reaped unknown pid 5475 (exit status 0)
+2026-03-03 06:57:55,316 INFO reaped unknown pid 5855 (terminated by SIGHUP)
+2026-03-03 06:57:56,317 INFO reaped unknown pid 5767 (exit status 0)
+2026-03-03 08:19:16,396 INFO reaped unknown pid 5861 (exit status 0)
+2026-03-03 08:19:16,397 INFO reaped unknown pid 5948 (terminated by SIGHUP)
+2026-03-03 08:19:16,397 INFO reaped unknown pid 5949 (terminated by SIGHUP)
+2026-03-03 10:23:10,171 INFO reaped unknown pid 5956 (exit status 0)
+2026-03-08 03:32:16,957 INFO reaped unknown pid 5975 (exit status 0)
+2026-03-08 04:37:57,530 WARN received SIGTERM indicating exit request
+2026-03-08 04:37:57,530 INFO waiting for rest-server-exit, rsyslogd, rest-server to die
+2026-03-08 04:37:58,559 INFO stopped: rest-server (exit status 0)
+2026-03-08 04:37:59,568 INFO stopped: rsyslogd (exit status 0)
+2026-03-08 04:37:59,575 INFO stopped: rest-server-exit (terminated by SIGTERM)
+2026-03-08 04:37:59,575 INFO reaped unknown pid 20489 (exit status 0)
+/usr/local/lib/python3.9/dist-packages/supervisor/options.py:473: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  self.warnings.warn(
+2026-03-08 04:40:12,601 INFO Included extra file "/etc/supervisor/conf.d/supervisor-rsyslogd.conf" during parsing
+2026-03-08 04:40:12,606 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2026-03-08 04:40:12,606 INFO Set uid to user 0 succeeded
+2026-03-08 04:40:12,631 INFO RPC interface 'supervisor' initialized
+2026-03-08 04:40:12,631 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2026-03-08 04:40:12,631 INFO supervisord started with pid 1
+2026-03-08 04:40:13,635 INFO spawned: 'dependent-startup' with pid 6
+2026-03-08 04:40:13,639 INFO spawned: 'rest-server-exit' with pid 7
+2026-03-08 04:40:13,650 INFO spawned: 'start' with pid 8
+2026-03-08 04:40:13,657 INFO success: dependent-startup entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 04:40:13,658 INFO success: start entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 04:40:14,070 INFO exited: start (exit status 0; expected)
+2026-03-08 04:40:14,116 INFO spawned: 'rsyslogd' with pid 15
+2026-03-08 04:40:14,255 INFO spawned: 'rest-server' with pid 19
+2026-03-08 04:40:15,321 INFO success: rest-server-exit entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:40:15,321 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:40:15,321 INFO success: rest-server entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:40:15,973 INFO exited: dependent-startup (exit status 0; expected)
+2026-03-08 04:41:13,291 INFO spawned: 'restart-rsyslogd' with pid 75
+2026-03-08 04:41:13,292 INFO success: restart-rsyslogd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 04:41:24,353 INFO waiting for rsyslogd to stop
+2026-03-08 04:41:24,385 INFO stopped: rsyslogd (exit status 0)
+2026-03-08 04:41:24,430 INFO spawned: 'rsyslogd' with pid 86
+2026-03-08 04:41:25,556 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:41:25,872 INFO exited: restart-rsyslogd (exit status 0; expected)
+/usr/local/lib/python3.9/dist-packages/supervisor/options.py:473: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  self.warnings.warn(
+2026-03-08 04:59:33,164 INFO Included extra file "/etc/supervisor/conf.d/supervisor-rsyslogd.conf" during parsing
+2026-03-08 04:59:33,173 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2026-03-08 04:59:33,173 INFO Set uid to user 0 succeeded
+Unlinking stale socket /var/run/supervisor.sock
+2026-03-08 04:59:33,487 INFO RPC interface 'supervisor' initialized
+2026-03-08 04:59:33,488 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2026-03-08 04:59:33,488 INFO supervisord started with pid 1
+2026-03-08 04:59:34,497 INFO spawned: 'dependent-startup' with pid 7
+2026-03-08 04:59:34,500 INFO spawned: 'rest-server-exit' with pid 8
+2026-03-08 04:59:34,504 INFO spawned: 'start' with pid 9
+2026-03-08 04:59:34,606 INFO success: dependent-startup entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 04:59:34,606 INFO success: start entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 04:59:34,628 INFO exited: start (exit status 0; expected)
+2026-03-08 04:59:35,030 INFO spawned: 'rsyslogd' with pid 16
+2026-03-08 04:59:35,131 INFO spawned: 'rest-server' with pid 20
+2026-03-08 04:59:36,180 INFO success: rest-server-exit entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:36,180 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:36,180 INFO success: rest-server entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 04:59:36,974 INFO exited: dependent-startup (exit status 0; expected)
+2026-03-08 05:00:41,032 INFO spawned: 'restart-rsyslogd' with pid 80
+2026-03-08 05:00:41,087 INFO success: restart-rsyslogd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2026-03-08 05:00:50,435 INFO waiting for rsyslogd to stop
+2026-03-08 05:00:50,470 INFO stopped: rsyslogd (exit status 0)
+2026-03-08 05:00:50,552 INFO spawned: 'rsyslogd' with pid 95
+2026-03-08 05:00:51,725 INFO success: rsyslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2026-03-08 05:00:51,955 INFO exited: restart-rsyslogd (exit status 0; expected)
+2026-03-08 06:55:49,589 INFO reaped unknown pid 1119 (exit status 0)
+2026-03-08 06:55:49,590 INFO reaped unknown pid 2796 (terminated by SIGHUP)
+2026-03-08 09:22:56,445 INFO reaped unknown pid 3712 (exit status 0)
+2026-03-08 11:05:09,994 INFO reaped unknown pid 5134 (exit status 0)
+2026-03-08 16:25:11,529 INFO reaped unknown pid 5167 (exit status 0)
+2026-03-08 17:57:49,520 INFO reaped unknown pid 5180 (exit status 0)
+2026-03-09 02:37:01,101 INFO reaped unknown pid 5193 (exit status 0)
+2026-03-09 05:03:30,521 INFO reaped unknown pid 5310 (exit status 0)
+2026-03-09 05:59:48,180 INFO reaped unknown pid 5323 (exit status 0)
+2026-03-09 06:32:59,322 INFO reaped unknown pid 5332 (exit status 0)
+2026-03-10 01:15:24,971 INFO reaped unknown pid 5341 (exit status 0)
+2026-03-10 03:17:20,518 INFO reaped unknown pid 5350 (exit status 0)
+2026-03-10 03:48:41,597 INFO reaped unknown pid 7717 (exit status 0)
+2026-03-10 05:52:39,574 INFO reaped unknown pid 8875 (exit status 0)
+2026-03-10 12:14:26,179 INFO reaped unknown pid 8884 (exit status 0)
+2026-03-11 04:17:38,728 INFO reaped unknown pid 9399 (exit status 0)
+2026-03-11 04:17:38,728 INFO reaped unknown pid 9766 (terminated by SIGHUP)
+2026-03-11 04:17:38,728 INFO reaped unknown pid 9767 (terminated by SIGHUP)
+2026-03-11 04:39:19,094 INFO reaped unknown pid 9774 (exit status 0)
+2026-03-11 05:10:53,165 INFO reaped unknown pid 9390 (exit status 0)
+2026-03-11 11:59:01,511 INFO reaped unknown pid 10177 (exit status 0)
+2026-03-11 12:38:32,017 INFO reaped unknown pid 10144 (exit status 0)
+2026-03-12 02:19:06,093 INFO reaped unknown pid 10855 (exit status 0)
+2026-03-12 05:30:05,604 INFO reaped unknown pid 10869 (exit status 0)
+2026-03-12 06:30:47,551 INFO reaped unknown pid 18286 (exit status 0)
+2026-03-12 06:30:47,551 INFO reaped unknown pid 16241 (exit status 0)
+2026-03-14 13:06:19,107 INFO reaped unknown pid 19307 (exit status 0)
+2026-03-14 13:48:06,761 INFO reaped unknown pid 19316 (exit status 0)
+2026-03-15 02:03:56,878 INFO reaped unknown pid 19818 (exit status 0)
+2026-03-15 18:01:44,036 INFO reaped unknown pid 20320 (exit status 0)
+2026-03-16 04:08:00,819 INFO reaped unknown pid 20822 (exit status 0)
+2026-03-16 04:08:00,819 INFO reaped unknown pid 21007 (terminated by SIGHUP)
+2026-03-16 04:08:00,819 INFO reaped unknown pid 21008 (terminated by SIGHUP)

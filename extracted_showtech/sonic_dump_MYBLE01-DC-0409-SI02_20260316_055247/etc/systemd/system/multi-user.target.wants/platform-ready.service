@@ -1,0 +1,19 @@
+[Unit]
+Description=Per Platform ready service
+Before=pmon.service
+Before=watchdog-control.service
+After=sysinit.target
+After=kdump-tools.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/platform_ready.sh
+KillSignal=SIGKILL
+SuccessExitStatus=SIGKILL
+RemainAfterExit=yes
+
+# Resource Limitations
+LimitCORE=infinity
+
+[Install]
+WantedBy=multi-user.target

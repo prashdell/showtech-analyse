@@ -1,0 +1,26 @@
+{
+  "lesson_id": "lesson_enbd_bgp_analysis_20260424_143201",
+  "skill_name": "sonic_bgp_connectivity_triage",
+  "lesson_type": "enbd_bgp_analysis",
+  "content": {
+    "success_patterns": [
+      "enterprise_bgp_pattern",
+      "financial_services_pattern",
+      "evpn_vxlan_pattern",
+      "dual_spine_pattern",
+      "sub_second_convergence_pattern"
+    ],
+    "context_factors": {
+      "customer": "ENBD",
+      "device": "DXB-LEAF-R7-POD-15-B",
+      "total_neighbors": 6,
+      "total_routes": 125000,
+      "convergence_time": 2.8
+    }
+  },
+  "confidence": 0.96,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:32:01.360449",
+  "execution_time": 3.5,
+  "captured_by": "enbd_comprehensive_analysis"
+}

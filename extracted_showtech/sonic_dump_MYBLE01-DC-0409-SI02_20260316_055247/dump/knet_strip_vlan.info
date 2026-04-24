@@ -1,0 +1,59 @@
+  Interface      Strip VLAN?
+-------------    -----------
+  CPU            enabled
+  Mirror         enabled
+  Drop-Mirror    enabled
+  Ethernet64     enabled
+  Ethernet72     enabled
+  Ethernet25     enabled
+  Ethernet26     enabled
+  Ethernet27     enabled
+  Ethernet28     enabled
+  Ethernet29     enabled
+  Ethernet30     enabled
+  Ethernet31     enabled
+  Ethernet32     enabled
+  Ethernet33     enabled
+  Ethernet34     enabled
+  Ethernet3      enabled
+  Ethernet4      enabled
+  Ethernet5      enabled
+  Ethernet6      enabled
+  Ethernet9      enabled
+  Ethernet11     enabled
+  Ethernet60     enabled
+  Ethernet56     enabled
+  Ethernet12     enabled
+  Ethernet13     enabled
+  Ethernet14     enabled
+  Ethernet15     enabled
+  Ethernet16     enabled
+  Ethernet20     enabled
+  Ethernet21     enabled
+  Ethernet22     enabled
+  Ethernet23     enabled
+  Ethernet37     enabled
+  Ethernet38     enabled
+  Ethernet39     enabled
+  Ethernet40     enabled
+  Ethernet41     enabled
+  Ethernet42     enabled
+  Ethernet43     enabled
+  Ethernet44     enabled
+  Ethernet46     enabled
+  Ethernet35            
+  Ethernet76            
+  Ethernet24            
+  Ethernet68            
+  Ethernet0             
+  Ethernet1             
+  Ethernet2             
+  Ethernet8             
+  Ethernet17            
+  Ethernet19            
+  Ethernet18            
+  Ethernet45            
+  Ethernet10            
+  Ethernet36     enabled
+  Ethernet7      enabled
+

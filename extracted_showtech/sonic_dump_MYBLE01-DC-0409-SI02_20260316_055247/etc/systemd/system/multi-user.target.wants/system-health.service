@@ -1,0 +1,12 @@
+[Unit]
+Description=SONiC system health monitor
+Requires=database.service updategraph.service
+After=database.service updategraph.service
+ConditionPathExists=/usr/share/sonic/platform/system_health_monitoring_config.json
+
+[Service]
+ExecStart=/usr/local/bin/healthd
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

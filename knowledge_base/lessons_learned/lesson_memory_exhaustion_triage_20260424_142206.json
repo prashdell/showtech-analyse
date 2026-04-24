@@ -1,0 +1,33 @@
+{
+  "lesson_id": "lesson_memory_exhaustion_triage_20260424_142206",
+  "skill_name": "sonic_memory_exhaustion_triage",
+  "lesson_type": "memory_analysis",
+  "content": {
+    "success_patterns": [
+      "system_memory_baseline_pattern",
+      "process_memory_pattern",
+      "container_memory_pattern",
+      "memory_event_timeline_pattern",
+      "route_table_memory_pattern",
+      "temperature_memory_pattern",
+      "memory_leak_detection_pattern",
+      "customer_specific_memory_pattern"
+    ],
+    "context_factors": {
+      "archive_intelligence": "284_archive_production_intelligence",
+      "confidence_range": "92-98%",
+      "source_files_range": "350-900_files_per_instance",
+      "analysis_steps": 7,
+      "memory_thresholds": {
+        "NEE_series": "<800MB_available",
+        "Athena_Health": "<600MB_available",
+        "Enterprise": "<1.6GB_available"
+      }
+    }
+  },
+  "confidence": 0.93,
+  "impact": "critical",
+  "timestamp": "2026-04-24T14:22:06.972420",
+  "execution_time": 4.2,
+  "captured_by": "comprehensive_analysis"
+}

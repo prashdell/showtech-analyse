@@ -1,0 +1,4 @@
+VRF: default
+Iif             Source          Group           State       Uptime   JoinTimer RSTimer   KATimer   RefCnt     flags
+VRF: mgmt
+Iif             Source          Group           State       Uptime   JoinTimer RSTimer   KATimer   RefCnt     flags

@@ -1,0 +1,4 @@
+#THIS IS AN AUTO-GENERATED FILE
+# Generated from: /usr/share/sonic/templates/faillock_authsuccess.j2
+#
+auth    required                        pam_permit.so

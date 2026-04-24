@@ -1,0 +1,38 @@
+port              vlan-id  
+docker0           1 PVID Egress Untagged
+PortChannel100    677
+                  678
+                  802
+                  803
+                  809
+                  1101
+                  1102
+                  2000
+Bridge            677
+                  678
+                  802
+                  803
+                  809
+                  1101
+                  1102
+                  1120
+                  2000
+dummy             1 PVID Egress Untagged
+docker-mgmt       1 PVID Egress Untagged
+Ethernet27        1102 PVID Egress Untagged
+Ethernet0         677
+                  1101
+                  1102
+Ethernet1         1120 PVID Egress Untagged
+Ethernet2         677
+                  1101
+                  1102
+Ethernet3         1120 PVID Egress Untagged
+Ethernet4         677
+                  678
+Ethernet5         677
+                  678
+Ethernet11        678 PVID Egress Untagged
+Ethernet20        802 PVID Egress Untagged
+Ethernet21        809 PVID Egress Untagged
+Ethernet22        803 PVID Egress Untagged

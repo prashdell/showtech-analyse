@@ -1,0 +1,10 @@
+Vlan1014  VID: 1014	 REORDER_HDR: 1  dev->priv_flags: 1001
+         total frames received         3345
+          total bytes received       153870
+      Broadcast/Multicast Rcvd            0
+
+      total frames transmitted            1
+       total bytes transmitted           42
+Device: Bridge
+INGRESS priority mappings: 0:0  1:0  2:0  3:0  4:0  5:0  6:0 7:0
+ EGRESS priority mappings: 

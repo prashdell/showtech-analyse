@@ -1,0 +1,151 @@
+{
+    "ports": {
+        "Ethernet48": {
+            "ifinfo": {
+                "dev_addr": "b4:e9:b8:e7:ce:02",
+                "dev_addr_len": 6,
+                "ifindex": 83,
+                "ifname": "Ethernet48"
+            },
+            "link": {
+                "duplex": "full",
+                "speed": 100000,
+                "up": true
+            },
+            "link_watches": {
+                "list": {
+                    "link_watch_0": {
+                        "delay_down": 0,
+                        "delay_up": 0,
+                        "down_count": 0,
+                        "name": "ethtool",
+                        "up": true
+                    }
+                },
+                "up": true
+            },
+            "runner": {
+                "actor_lacpdu_info": {
+                    "key": 100,
+                    "port": 49,
+                    "port_priority": 255,
+                    "state": 61,
+                    "system": "b4:e9:b8:e7:ce:02",
+                    "system_priority": 65535
+                },
+                "aggregator": {
+                    "id": 83,
+                    "selected": true
+                },
+                "counters": {
+                    "lacpdu_rx_count": 23157,
+                    "lacpdu_tx_count": 23162
+                },
+                "key": 100,
+                "lacp_individual_new": {
+                    "lacp_individual_active": false
+                },
+                "partner_lacpdu_info": {
+                    "key": 100,
+                    "port": 49,
+                    "port_priority": 255,
+                    "state": 61,
+                    "system": "b4:e9:b8:e7:cd:02",
+                    "system_priority": 65535
+                },
+                "prio": 255,
+                "selected": true,
+                "state": "current"
+            }
+        },
+        "Ethernet56": {
+            "ifinfo": {
+                "dev_addr": "b4:e9:b8:e7:ce:02",
+                "dev_addr_len": 6,
+                "ifindex": 58,
+                "ifname": "Ethernet56"
+            },
+            "link": {
+                "duplex": "full",
+                "speed": 100000,
+                "up": true
+            },
+            "link_watches": {
+                "list": {
+                    "link_watch_0": {
+                        "delay_down": 0,
+                        "delay_up": 0,
+                        "down_count": 0,
+                        "name": "ethtool",
+                        "up": true
+                    }
+                },
+                "up": true
+            },
+            "runner": {
+                "actor_lacpdu_info": {
+                    "key": 100,
+                    "port": 57,
+                    "port_priority": 255,
+                    "state": 61,
+                    "system": "b4:e9:b8:e7:ce:02",
+                    "system_priority": 65535
+                },
+                "aggregator": {
+                    "id": 83,
+                    "selected": true
+                },
+                "counters": {
+                    "lacpdu_rx_count": 23157,
+                    "lacpdu_tx_count": 23162
+                },
+                "key": 100,
+                "lacp_individual_new": {
+                    "lacp_individual_active": false
+                },
+                "partner_lacpdu_info": {
+                    "key": 100,
+                    "port": 57,
+                    "port_priority": 255,
+                    "state": 61,
+                    "system": "b4:e9:b8:e7:cd:02",
+                    "system_priority": 65535
+                },
+                "prio": 255,
+                "selected": true,
+                "state": "current"
+            }
+        }
+    },
+    "runner": {
+        "active": true,
+        "fallback": false,
+        "fallback_operational": true,
+        "fast_rate": false,
+        "graceful_shutdown_mode": false,
+        "lacp_individual": false,
+        "lacp_individual_timeout": 3,
+        "min_ports": 1,
+        "select_policy": "lacp_prio_stable",
+        "sys_prio": 65535,
+        "system_mac": "00:00:00:00:00:00"
+    },
+    "setup": {
+        "daemonized": true,
+        "dbus_enabled": false,
+        "debug_level": 1,
+        "kernel_team_mode_name": "loadbalance",
+        "pid": 96,
+        "pid_file": "/var/run/teamd/PortChannel100.pid",
+        "runner_name": "lacp",
+        "zmq_enabled": false
+    },
+    "team_device": {
+        "ifinfo": {
+            "dev_addr": "b4:e9:b8:e7:ce:02",
+            "dev_addr_len": 6,
+            "ifindex": 6,
+            "ifname": "PortChannel100"
+        }
+    }
+}

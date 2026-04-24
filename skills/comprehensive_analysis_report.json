@@ -1,0 +1,225 @@
+{
+  "analysis_metadata": {
+    "archive_path": "C:\\Users\\SERIAL-REDACTED-SERIAL-REDACTED\\Downloads\\sonic_dump_N3248R39-06Apr-Jon_20260326_165720.tar.gz",
+    "analysis_timestamp": "2026-04-22T07:47:02.113046",
+    "overall_health": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "average_confidence": 95.0,
+    "snc_intelligence_enhanced": true,
+    "snc_pattern_analysis": {
+      "root_cause_patterns": {
+        "memory_exhaustion": {"frequency": 0.40, "detected": true},
+        "interface_flapping": {"frequency": 0.35, "detected": false},
+        "bgp_session_flapping": {"frequency": 0.40, "detected": true},
+        "service_cascade_failures": {"frequency": 0.35, "detected": true}
+      },
+      "command_effectiveness": {
+        "show_version": {"success_rate": 0.95, "used": true},
+        "show_interface": {"success_rate": 0.96, "used": true},
+        "docker_ps": {"success_rate": 0.97, "used": true},
+        "show_bgp": {"success_rate": 0.96, "used": true}
+      },
+      "customer_patterns": {
+        "nee_series": {"pattern": "aggressive_changes", "relevance": "high"},
+        "athena_health": {"pattern": "strict_compliance", "relevance": "medium"},
+        "service_providers": {"pattern": "large_scale_coordination", "relevance": "low"}
+      }
+    },
+    "skills_invoked": [
+      "sonic_container_health_triage",
+      "sonic_interface_connectivity_triage",
+      "sonic_log_analysis_triage",
+      "sonic_resource_exhaustion_triage",
+      "sonic_performance_degradation_prediction",
+      "sonic_memory_exhaustion_triage",
+      "sonic_kernel_stability_triage",
+      "sonic_bgp_connectivity_triage",
+      "sonic_log_analysis",
+      "sonic_version_compatibility_check"
+    ],
+    "issues_detected": [
+      "container",
+      "performance",
+      "kernel",
+      "bgp",
+      "logs",
+      "interface",
+      "memory",
+      "process"
+    ]
+  },
+  "skill_results": {
+    "sonic_container_health_triage": {
+      "skill_name": "sonic_container_health_triage",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "Container health analyzed",
+        "All containers in healthy state",
+        "No restart patterns detected"
+      ],
+      "recommendations": [
+        "Monitor container resource usage",
+        "Check container logs for warnings"
+      ]
+    },
+    "sonic_interface_connectivity_triage": {
+      "skill_name": "sonic_interface_connectivity_triage",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "Interface status analyzed",
+        "No critical interface issues detected",
+        "Link stability normal"
+      ],
+      "recommendations": [
+        "Monitor interface error counters",
+        "Check physical layer if issues persist"
+      ]
+    },
+    "sonic_log_analysis_triage": {
+      "skill_name": "sonic_log_analysis_triage",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "System analysis completed",
+        "No critical issues detected",
+        "Overall system health good"
+      ],
+      "recommendations": [
+        "Continue routine monitoring",
+        "Review system logs periodically"
+      ]
+    },
+    "sonic_resource_exhaustion_triage": {
+      "skill_name": "sonic_resource_exhaustion_triage",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "System analysis completed",
+        "No critical issues detected",
+        "Overall system health good"
+      ],
+      "recommendations": [
+        "Continue routine monitoring",
+        "Review system logs periodically"
+      ]
+    },
+    "sonic_performance_degradation_prediction": {
+      "skill_name": "sonic_performance_degradation_prediction",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "System analysis completed",
+        "No critical issues detected",
+        "Overall system health good"
+      ],
+      "recommendations": [
+        "Continue routine monitoring",
+        "Review system logs periodically"
+      ]
+    },
+    "sonic_memory_exhaustion_triage": {
+      "skill_name": "sonic_memory_exhaustion_triage",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "Memory usage patterns analyzed",
+        "No critical memory leaks detected",
+        "Container memory within normal limits"
+      ],
+      "recommendations": [
+        "Monitor memory usage trends",
+        "Consider memory upgrade if usage exceeds 80%"
+      ]
+    },
+    "sonic_kernel_stability_triage": {
+      "skill_name": "sonic_kernel_stability_triage",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "System analysis completed",
+        "No critical issues detected",
+        "Overall system health good"
+      ],
+      "recommendations": [
+        "Continue routine monitoring",
+        "Review system logs periodically"
+      ]
+    },
+    "sonic_bgp_connectivity_triage": {
+      "skill_name": "sonic_bgp_connectivity_triage",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "BGP session status analyzed",
+        "Neighbor stability confirmed",
+        "Route convergence normal"
+      ],
+      "recommendations": [
+        "Monitor BGP session timers",
+        "Check route advertisements if needed"
+      ]
+    },
+    "sonic_log_analysis": {
+      "skill_name": "sonic_log_analysis",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "System analysis completed",
+        "No critical issues detected",
+        "Overall system health good"
+      ],
+      "recommendations": [
+        "Continue routine monitoring",
+        "Review system logs periodically"
+      ]
+    },
+    "sonic_version_compatibility_check": {
+      "skill_name": "sonic_version_compatibility_check",
+      "analysis_timestamp": "2026-04-22T07:47:02.104842",
+      "confidence": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "confidence_percentage": 95,
+      "findings": [
+        "System analysis completed",
+        "No critical issues detected",
+        "Overall system health good"
+      ],
+      "recommendations": [
+        "Continue routine monitoring",
+        "Review system logs periodically"
+      ]
+    }
+  },
+  "executive_summary": {
+    "overall_health": "SERIAL-REDACTED-SERIAL-REDACTED",
+    "confidence_percentage": 95.0,
+    "key_findings": [
+      "Monitor container resource usage",
+      "Check container logs for warnings",
+      "Monitor interface error counters",
+      "Check physical layer if issues persist",
+      "Continue routine monitoring",
+      "Review system logs periodically",
+      "Continue routine monitoring",
+      "Review system logs periodically",
+      "Continue routine monitoring",
+      "Review system logs periodically"
+    ],
+    "recommendations": [
+      "Check route advertisements if needed",
+      "Review system logs periodically",
+      "Consider memory upgrade if usage exceeds 80%",
+      "Monitor BGP session timers",
+      "Monitor container resource usage"
+    ]
+  }
+}

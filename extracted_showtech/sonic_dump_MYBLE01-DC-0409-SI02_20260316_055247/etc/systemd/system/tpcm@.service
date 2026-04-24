@@ -1,0 +1,13 @@
+[Unit]
+Description=TPCM for %i vrf
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/tpcm.sh start %i
+ExecStop=/usr/local/bin/tpcm.sh stop %i
+StandardOutput=syslog
+StandardError=syslog
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

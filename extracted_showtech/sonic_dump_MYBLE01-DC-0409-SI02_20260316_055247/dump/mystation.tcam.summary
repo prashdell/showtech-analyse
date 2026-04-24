@@ -1,0 +1,3 @@
+d chg my_station_tcam
+MY_STATION_TCAM.ipipe0[0]: <VALID=3,MASK=0x000000000000ffffffffffff,MAC_ADDR_MASK=0xffffffffffff,MAC_ADDR=0xb4e9b8e7ce02,KEY=0x000000000000b4e9b8e7ce02,ECC_DATA=0x6004,DESTINATION=0x1801,DATA=0x6004,>
+drivshell>

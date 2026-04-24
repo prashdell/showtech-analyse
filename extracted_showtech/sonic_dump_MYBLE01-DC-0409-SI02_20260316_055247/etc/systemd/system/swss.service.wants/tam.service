@@ -1,0 +1,23 @@
+[Unit]
+Description=TAM container
+Wants=updategraph.service swss.service syncd.service
+Requires=swss.service
+After=updategraph.service swss.service syncd.service
+BindsTo=sonic.target
+After=sonic.target
+StartLimitIntervalSec=1200
+StartLimitBurst=20
+
+Before=ntp-config.service
+
+[Service]
+User=admin
+ExecStartPre=/usr/bin/tam.sh start
+ExecStart=/usr/bin/tam.sh wait
+ExecStop=/usr/bin/tam.sh stop
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=sonic.target swss.service
+

@@ -1,0 +1,206 @@
+Node 0, zone      DMA
+  per-node stats
+      nr_inactive_anon 1481236
+      nr_active_anon 200291
+      nr_inactive_file 1517018
+      nr_active_file 254297
+      nr_unevictable 123
+      nr_slab_reclaimable 116196
+      nr_slab_unreclaimable 70232
+      nr_isolated_anon 0
+      nr_isolated_file 0
+      workingset_nodes 16952
+      workingset_refault_anon 0
+      workingset_refault_file 779374
+      workingset_activate_anon 0
+      workingset_activate_file 247868
+      workingset_restore_anon 0
+      workingset_restore_file 20037
+      workingset_nodereclaim 4809
+      nr_anon_pages 1667129
+      nr_mapped    98803
+      nr_file_pages 1763398
+      nr_dirty     1863
+      nr_writeback 1
+      nr_writeback_temp 0
+      nr_shmem     18951
+      nr_shmem_hugepages 0
+      nr_shmem_pmdmapped 0
+      nr_file_hugepages 0
+      nr_file_pmdmapped 0
+      nr_anon_transparent_hugepages 1148
+      nr_vmscan_write 0
+      nr_vmscan_immediate_reclaim 2640
+      nr_dirtied   2410651328
+      nr_written   2236741347
+      nr_kernel_misc_reclaimable 0
+      nr_foll_pin_acquired 2048
+      nr_foll_pin_released 0
+      nr_kernel_stack 20064
+  pages free     3328
+        min      16
+        low      20
+        high     24
+        spanned  4095
+        present  3999
+        managed  3840
+        protection: (0, 1427, 15453, 15453, 15453)
+      nr_free_pages 3328
+      nr_zone_inactive_anon 0
+      nr_zone_active_anon 0
+      nr_zone_inactive_file 0
+      nr_zone_active_file 0
+      nr_zone_unevictable 0
+      nr_zone_write_pending 0
+      nr_mlock     0
+      nr_page_table_pages 0
+      nr_bounce    0
+      nr_zspages   0
+      nr_free_cma  0
+      numa_hit     1
+      numa_miss    0
+      numa_foreign 0
+      numa_interleave 1
+      numa_local   1
+      numa_other   0
+  pagesets
+    cpu: 0
+              count: 0
+              high:  0
+              batch: 1
+  vm stats threshold: 6
+    cpu: 1
+              count: 0
+              high:  0
+              batch: 1
+  vm stats threshold: 6
+    cpu: 2
+              count: 0
+              high:  0
+              batch: 1
+  vm stats threshold: 6
+    cpu: 3
+              count: 0
+              high:  0
+              batch: 1
+  vm stats threshold: 6
+  node_unreclaimable:  0
+  start_pfn:           1
+Node 0, zone    DMA32
+  pages free     202987
+        min      1531
+        low      1913
+        high     2295
+        spanned  1044480
+        present  496641
+        managed  365567
+        protection: (0, 0, 14025, 14025, 14025)
+      nr_free_pages 202987
+      nr_zone_inactive_anon 79825
+      nr_zone_active_anon 10920
+      nr_zone_inactive_file 39358
+      nr_zone_active_file 8907
+      nr_zone_unevictable 0
+      nr_zone_write_pending 0
+      nr_mlock     0
+      nr_page_table_pages 146
+      nr_bounce    0
+      nr_zspages   0
+      nr_free_cma  0
+      numa_hit     10079476257
+      numa_miss    0
+      numa_foreign 0
+      numa_interleave 1
+      numa_local   10079476257
+      numa_other   0
+  pagesets
+    cpu: 0
+              count: 287
+              high:  378
+              batch: 63
+  vm stats threshold: 30
+    cpu: 1
+              count: 377
+              high:  378
+              batch: 63
+  vm stats threshold: 30
+    cpu: 2
+              count: 17
+              high:  378
+              batch: 63
+  vm stats threshold: 30
+    cpu: 3
+              count: 353
+              high:  378
+              batch: 63
+  vm stats threshold: 30
+  node_unreclaimable:  0
+  start_pfn:           4096
+Node 0, zone   Normal
+  pages free     65877
+        min      15348
+        low      19185
+        high     23022
+        spanned  3670016
+        present  3670016
+        managed  3590520
+        protection: (0, 0, 0, 0, 0)
+      nr_free_pages 65877
+      nr_zone_inactive_anon 1401411
+      nr_zone_active_anon 189371
+      nr_zone_inactive_file 1477660
+      nr_zone_active_file 245390
+      nr_zone_unevictable 123
+      nr_zone_write_pending 1901
+      nr_mlock     123
+      nr_page_table_pages 10520
+      nr_bounce    0
+      nr_zspages   0
+      nr_free_cma  0
+      numa_hit     154219301430
+      numa_miss    0
+      numa_foreign 0
+      numa_interleave 29298
+      numa_local   154219301430
+      numa_other   0
+  pagesets
+    cpu: 0
+              count: 108
+              high:  378
+              batch: 63
+  vm stats threshold: 48
+    cpu: 1
+              count: 181
+              high:  378
+              batch: 63
+  vm stats threshold: 48
+    cpu: 2
+              count: 84
+              high:  378
+              batch: 63
+  vm stats threshold: 48
+    cpu: 3
+              count: 128
+              high:  378
+              batch: 63
+  vm stats threshold: 48
+  node_unreclaimable:  0
+  start_pfn:           1048576
+Node 0, zone  Movable
+  pages free     0
+        min      0
+        low      0
+        high     0
+        spanned  0
+        present  0
+        managed  0
+        protection: (0, 0, 0, 0, 0)
+Node 0, zone   Device
+  pages free     0
+        min      0
+        low      0
+        high     0
+        spanned  0
+        present  0
+        managed  0
+        protection: (0, 0, 0, 0, 0)

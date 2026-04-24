@@ -1,0 +1,26 @@
+{
+  "lesson_id": "lesson_enbd_interface_analysis_20260424_143145",
+  "skill_name": "sonic_interface_connectivity_triage",
+  "lesson_type": "enbd_interface_analysis",
+  "content": {
+    "success_patterns": [
+      "enterprise_interface_pattern",
+      "financial_services_pattern",
+      "business_hours_pattern",
+      "vxlan_evpn_pattern",
+      "dell_broadcom_pattern"
+    ],
+    "context_factors": {
+      "customer": "ENBD",
+      "device": "DXB-LEAF-R7-POD-15-B",
+      "total_interfaces": 48,
+      "error_rate": 0.003,
+      "peak_utilization": 85.2
+    }
+  },
+  "confidence": 0.94,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:31:45.604059",
+  "execution_time": 3.8,
+  "captured_by": "enbd_comprehensive_analysis"
+}

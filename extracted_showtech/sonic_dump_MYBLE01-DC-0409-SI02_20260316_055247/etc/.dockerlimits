@@ -1,0 +1,152 @@
+{
+    "database": {
+        "cpus": "3",
+        "cpu-shares": "2048",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "syncd": {
+        "cpus": "3",
+        "cpu-shares": "1536",
+        "cpuset": "notused",
+        "memsize": "10.55g"
+    },
+    "gbsyncd": {
+        "cpus": "auto",
+        "cpu-shares": "1536",
+        "cpuset": "notused",
+        "memsize": "auto"
+    },
+    "swss": {
+        "cpus": "3",
+        "cpu-shares": "1792",
+        "cpuset": "notused",
+        "memsize": "10.57g"
+    },
+    "bgp": {
+        "cpus": "3",
+        "cpu-shares": "1536",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "lldp": {
+        "cpus": "3",
+        "cpu-shares": "512",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "l2mcd": {
+        "cpus": "3",
+        "cpu-shares": "1024",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "teamd": {
+        "cpus": "3",
+        "cpu-shares": "1280",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "stp": {
+        "cpus": "3",
+        "cpu-shares": "1280",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "vrrp": {
+        "cpus": "3",
+        "cpu-shares": "1024",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "mgmt-framework": {
+        "cpus": "3",
+        "cpu-shares": "512",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "iccpd": {
+        "cpus": "3",
+        "cpu-shares": "1280",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "tam": {
+        "cpus": "3",
+        "cpu-shares": "1024",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "sflow": {
+        "cpus": "3",
+        "cpu-shares": "512",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "udld": {
+        "cpus": "3",
+        "cpu-shares": "1536",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "telemetry": {
+        "cpus": "3",
+        "cpu-shares": "512",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    },
+    "nat": {
+        "cpus": "3",
+        "cpu-shares": "1024",
+        "cpuset": "notused",
+        "memsize": "10.55g"
+    },
+    "dhcp_relay": {
+        "cpus": "3",
+        "cpu-shares": "1024",
+        "cpuset": "notused",
+        "memsize": "10.54g"
+    },
+    "eventd": {
+        "cpus": "3",
+        "cpu-shares": "512",
+        "cpuset": "notused",
+        "memsize": "10.53g"
+    },
+    "snmp": {
+        "cpus": "3",
+        "cpu-shares": "512",
+        "cpuset": "notused",
+        "memsize": "10.54g"
+    },
+    "pmon": {
+        "cpus": "3",
+        "cpu-shares": "1024",
+        "cpuset": "notused",
+        "memsize": "10.55g"
+    },
+    "radv": {
+        "cpus": "3",
+        "cpu-shares": "1024",
+        "cpuset": "notused",
+        "memsize": "10.55g"
+    },
+    "macsec": {
+        "cpus": "auto",
+        "cpu-shares": "1024",
+        "cpuset": "notused",
+        "memsize": "auto"
+    },
+    "timesync": {
+        "cpus": "3",
+        "cpu-shares": "512",
+        "cpuset": "notused",
+        "memsize": "10.54g"
+    },
+    "mfa": {
+        "cpus": "3",
+        "cpu-shares": "1024",
+        "cpuset": "notused",
+        "memsize": "10.56g"
+    }
+}

@@ -1,0 +1,19 @@
+[Unit]
+Description=Watchdog for System Core Ready Status
+After=updategraph.service
+Requires=updategraph.service
+StartLimitIntervalSec=1200
+StartLimitBurst=20
+
+[Service]
+User=admin
+ExecStartPre=/usr/local/bin/systemcoreready.sh start
+ExecStart=/usr/local/bin/systemcoreready.sh wait
+ExecStop=/usr/local/bin/systemcoreready.sh stop
+Restart=on-failure
+RestartSec=30
+RemainAfterExit=yes
+TimeoutStartSec=360
+
+[Install]
+WantedBy=multi-user.target

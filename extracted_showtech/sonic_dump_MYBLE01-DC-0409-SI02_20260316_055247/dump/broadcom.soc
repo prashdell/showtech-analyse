@@ -1,0 +1,55 @@
+soc
+  Unit 0 Driver Control Structure:
+  Chip=BCM56873_A0 Rev=0x01 Driver=BCM56870_A0
+  Flags=0x48103: attached initialized mem-clear-use-dma; board type 0x0
+  CM: Base=0x7f44317fc000
+  Disabled: reg_flags=0x100 mem_flags=0x0
+  SchanOps=1401919744 MMUdbg=0 LinkPause=0
+  Counter: int=1000000us per=1132898us dmaBuf=0x7f442a030100
+           EvictInvalidPoolIdCount=0
+           BulkDmaErrorCount=0
+           CounterDmaDurationUsec=116671
+           CounterErrorRestartCount=0
+  Timeout: Schan=0(300000us) MIIM=0(1000000us)
+           SchanMemRead=0 SchanMemWrite=0
+           SchanRegRead=0 SchanRegWrite=0
+           SchanTblInsert=0 SchanTblDelete=0 SchanTblLookup=0
+  Intr: Total=33881312 Sc=0 ScErr=0 MMU/ARLErr=0
+        LinkStat=0 PCIfatal=0 PCIparity=0
+        ARLdrop=0 ARLmbuf=0 ARLxfer=0 ARLcnt0=0
+        TableDMA=33877795 TSLAM-DMA=535 CCM-DMA=0 SW=0
+        MemCmd[BSE]=0 MemCmd[CSE]=0 MemCmd[HSE]=0
+        ChipFunc[0]=0 ChipFunc[1]=0 ChipFunc[2]=0
+        ChipFunc[3]=0 ChipFunc[4]=0
+        FifoDma[0]=541 FifoDma[1]=5772 FifoDma[2]=0 FifoDma[3]=0
+        I2C=0 MII=0 StatsDMA=0 Desc=0 Chain=0 PciTimeOut=0
+        DmaAddrDecodeErr=0 SbusDmaSwTimeout=0
+  Error: SDRAM=0 CFAP=0 Fcell=0 MmuSR=0 l2FifoDMA=0
+  M0: msg=1 resp=1 intr=0
+  Uc sw programmable total intr=0
+  M0 sw programmable intr: u0=0 u1=0 u2=0 u3=0
+  SBUS DMA err_intr_res=0
+  SER events(mem=0 reg=0 nak=0 stat=0 ecc=0 direct=0 fifo=0 tcam=0)
+  SER corrections(fix=0 clear=0 restore=0 special=0 err:0)
+  PKT DMA: dcb=t36 tpkt=0 tbyt=0 rpkt=0 rbyt=0
+  DV: List: max-q=32 cur-tq=0 cur-rq=0dv-size=160 dv-done-mismatch=0 dv-done-proc-retry-cnt=0
+  DV: Statistics: allocs=8 frees=0 alloc-q=0
+  Mem cache (count=775 size=44125168 vmap size=396987 errmap size=14912)
+  Reg cache (count=30 size=3223200)
+  dma-ch-0 TX Idle   Queue=0 ((nil)) default intr mbm
+  dma-ch-1 RX Active Queue=8 (0x55ed250fb748) default intr mbm
+  dma-ch-2 RX Idle   Queue=0 ((nil)) intr mbm
+  dma-ch-3 RX Idle   Queue=0 ((nil)) intr mbm
+  dma-ch-4 RX Idle   Queue=0 ((nil)) intr mbm
+  dma-ch-5 RX Idle   Queue=0 ((nil)) intr mbm
+  dma-ch-6 RX Idle   Queue=0 ((nil)) intr mbm
+  dma-ch-7 RX Idle   Queue=0 ((nil)) intr mbm
+  dma-ch-8 -- Idle   Queue=0 ((nil)) intr no-mbm
+  dma-ch-9 -- Idle   Queue=0 ((nil)) intr no-mbm
+  dma-ch-10 -- Idle   Queue=0 ((nil)) intr no-mbm
+  dma-ch-11 -- Idle   Queue=0 ((nil)) intr no-mbm
+  dma-ch-12 -- Idle   Queue=0 ((nil)) intr no-mbm
+  dma-ch-13 -- Idle   Queue=0 ((nil)) intr no-mbm
+  dma-ch-14 -- Idle   Queue=0 ((nil)) intr no-mbm
+  dma-ch-15 -- Idle   Queue=0 ((nil)) intr no-mbm
+drivshell>

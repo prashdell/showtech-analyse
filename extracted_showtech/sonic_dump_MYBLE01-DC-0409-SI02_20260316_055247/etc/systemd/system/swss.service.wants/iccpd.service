@@ -1,0 +1,19 @@
+[Unit]
+Description=ICCPD container
+Requires=updategraph.service swss.service
+After=updategraph.service swss.service portinitdone.service
+BindsTo=sonic.target
+After=sonic.target
+StartLimitIntervalSec=1200
+StartLimitBurst=20
+
+[Service]
+User=admin
+ExecStartPre=/usr/bin/iccpd.sh start
+ExecStart=/usr/bin/iccpd.sh wait
+ExecStop=/usr/bin/iccpd.sh stop
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=sonic.target swss.service

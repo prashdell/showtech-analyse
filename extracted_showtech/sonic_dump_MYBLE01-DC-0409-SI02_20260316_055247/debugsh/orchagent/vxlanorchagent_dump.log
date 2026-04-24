@@ -1,0 +1,75 @@
+****************************************************************************
+vxlanorchagent techsupport dump begin at Mon 16 Mar 2026 06:06:29 AM GMT
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent vxlan global
+--------------------------------------------------------------------
+ Tunnel Map Capability: l2_vni(true) l3_vni(true)
+*************** Profiling data ***************
+End to End Execution time: 102.42 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.449s
+user	0m0.285s
+sys	0m0.053s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent vxlan dvni
+--------------------------------------------------------------------
+*************** Profiling data ***************
+End to End Execution time: 102.35 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.439s
+user	0m0.295s
+sys	0m0.041s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent vxlan diptunnel
+--------------------------------------------------------------------
+*************** Profiling data ***************
+End to End Execution time: 103.26 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.524s
+user	0m0.292s
+sys	0m0.051s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent vxlan mapentry
+--------------------------------------------------------------------
+
+ ======= vxlan_tunnel_map_table dump size(0)=======
+
+ ======= per_vlan_vxlan_tunnel_map_table dump size(0)=======
+*************** Profiling data ***************
+End to End Execution time: 105.30 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.471s
+user	0m0.289s
+sys	0m0.053s
+
+
+
+
+
+****************************************************************************
+vxlanorchagent techsupport dump ended at Mon 16 Mar 2026 06:06:31 AM GMT
+****************************************************************************

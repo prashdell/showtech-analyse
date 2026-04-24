@@ -1,0 +1,143 @@
+Building configuration...
+
+Current configuration:
+!
+frr version 8.2.2
+frr defaults traditional
+hostname MYBLE01-DC-0409-SI02
+log syslog informational
+log facility local4
+agentx
+no service integrated-vtysh-config
+!
+password zebra
+enable password zebra
+!
+ip route 132.237.181.0/24 blackhole
+!
+vrf mgmt
+ ip route 0.0.0.0/0 10.92.56.1
+exit-vrf
+!
+router bgp 4246732825
+ bgp router-id 10.90.30.159
+ bgp log-neighbor-changes
+ no bgp ebgp-requires-policy
+ no bgp default ipv4-unicast
+ bgp graceful-restart stalepath-time 3
+ bgp graceful-restart restart-time 300
+ bgp bestpath as-path multipath-relax
+ neighbor eBGP-vCPE peer-group
+ neighbor eBGP-vCPE remote-as 3614
+ neighbor eBGP-vCPE description eBGP-vCPE
+ neighbor eBGP-vCPE bfd
+ neighbor eBGP-vCPE advertisement-interval 0
+ neighbor eBGP-vCPE timers connect 30
+ neighbor iBGP-Peering peer-group
+ neighbor iBGP-Peering remote-as 4246732825
+ neighbor iBGP-Peering description iBGP-Peerings
+ neighbor iBGP-Peering bfd
+ neighbor iBGP-Peering advertisement-interval 0
+ neighbor iBGP-Peering timers connect 30
+ neighbor 10.90.30.178 peer-group eBGP-vCPE
+ neighbor 10.90.30.178 description MYBLE01VOS40
+ neighbor 10.90.30.179 peer-group eBGP-vCPE
+ neighbor 10.90.30.179 description MYBLE01VOS41
+ neighbor 10.90.30.158 peer-group iBGP-Peering
+ neighbor 10.90.30.158 description MYBLE01-DC-0409-SI02
+ neighbor 10.92.30.68 remote-as 4248699655
+ neighbor 10.92.30.68 description EDU-Firewall
+ neighbor 10.92.30.68 bfd
+ neighbor 10.92.30.68 bfd profile FW
+ neighbor 10.92.30.68 advertisement-interval 0
+ neighbor 10.92.30.68 timers connect 30
+ neighbor 10.92.30.236 remote-as 4246733799
+ neighbor 10.92.30.236 description Default-Firewall
+ neighbor 10.92.30.236 bfd
+ neighbor 10.92.30.236 bfd profile FW
+ neighbor 10.92.30.236 advertisement-interval 0
+ neighbor 10.92.30.236 timers connect 30
+ neighbor 10.99.100.130 remote-as 4248699659
+ neighbor 10.99.100.130 description Corp-Firewall
+ neighbor 10.99.100.130 bfd
+ neighbor 10.99.100.130 bfd profile FW
+ neighbor 10.99.100.130 advertisement-interval 0
+ neighbor 10.99.100.130 timers connect 30
+ !
+ address-family ipv4 unicast
+  network 132.237.181.0/24
+  neighbor eBGP-vCPE activate
+  no neighbor eBGP-vCPE send-community large
+  neighbor eBGP-vCPE soft-reconfiguration inbound
+  neighbor iBGP-Peering activate
+  neighbor iBGP-Peering next-hop-self
+  no neighbor iBGP-Peering send-community large
+  neighbor iBGP-Peering soft-reconfiguration inbound
+  neighbor 10.90.30.179 route-map MYBLE01VOS41-IN in
+  neighbor 10.92.30.68 activate
+  no neighbor 10.92.30.68 send-community large
+  neighbor 10.92.30.68 soft-reconfiguration inbound
+  neighbor 10.92.30.68 route-map Routes_From_EDU_FW in
+  neighbor 10.92.30.68 route-map DefaultRoute_LEAK_OUT out
+  neighbor 10.92.30.236 activate
+  no neighbor 10.92.30.236 send-community large
+  neighbor 10.92.30.236 soft-reconfiguration inbound
+  neighbor 10.92.30.236 route-map Routes_From_Default_FW in
+  neighbor 10.92.30.236 route-map DefaultRoute_LEAK_OUT out
+  neighbor 10.99.100.130 activate
+  no neighbor 10.99.100.130 send-community large
+  neighbor 10.99.100.130 soft-reconfiguration inbound
+  neighbor 10.99.100.130 route-map Routes_From_Corp_FW in
+  neighbor 10.99.100.130 route-map DefaultRoute_LEAK_OUT out
+  maximum-paths 4
+  maximum-paths ibgp 4
+ exit-address-family
+ !
+ address-family ipv6 unicast
+  maximum-paths 1
+  maximum-paths ibgp 1
+ exit-address-family
+exit
+!
+ip prefix-list Routes_From_Default_FW seq 5 permit 132.237.171.36/32
+ip prefix-list Routes_From_Default_FW seq 10 permit 132.237.171.37/32
+ip prefix-list Routes_From_Default_FW seq 15 permit 132.237.171.47/32
+ip prefix-list Routes_From_Default_FW seq 20 permit 132.237.171.70/32
+ip prefix-list DefaultRoute_LEAK_OUT seq 5 permit 0.0.0.0/0
+ip prefix-list Routes_From_Corp_FW seq 5 permit 10.0.0.0/8
+ip prefix-list Routes_From_Corp_FW seq 20 permit 172.16.0.0/12
+ip prefix-list Routes_From_Corp_FW seq 25 permit 132.237.171.0/24
+ip prefix-list Routes_From_Corp_FW seq 30 permit 132.237.181.0/26
+ip prefix-list Routes_From_Corp_FW seq 35 permit 152.62.45.0/24
+ip prefix-list Routes_From_EDU_FW seq 5 permit 132.237.166.0/24
+!
+route-map DefaultRoute_LEAK_OUT permit 10
+ match ip address prefix-list DefaultRoute_LEAK_OUT
+exit
+!
+route-map Routes_From_Default_FW permit 10
+ match ip address prefix-list Routes_From_Default_FW
+exit
+!
+route-map Routes_From_Corp_FW permit 10
+ match ip address prefix-list Routes_From_Corp_FW
+exit
+!
+route-map Routes_From_EDU_FW permit 10
+ match ip address prefix-list Routes_From_EDU_FW
+exit
+!
+route-map MYBLE01VOS41-IN permit 10
+ set origin igp
+exit
+!
+bfd
+ profile FW
+  detect-multiplier 5
+  echo transmit-interval 300
+  echo receive-interval 300
+ exit
+ !
+exit
+!
+end

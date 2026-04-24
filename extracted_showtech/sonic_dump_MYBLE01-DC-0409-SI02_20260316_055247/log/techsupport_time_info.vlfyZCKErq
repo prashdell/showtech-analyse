@@ -1,0 +1,770 @@
+sonic_dump_MYBLE01-DC-0409-SI02_20260316_055247
+[ Capture Proc State ] : 1183 msec
+[ save_file:/tmp/techsupport_save_proc_info] : 36 msec
+[ save_cmd:show services ] : 14008 msec
+[ save_cmd:show reboot-cause ] : 1716 msec
+[ save_cmd:echo 16/03/2026 05:53:08:393792 ] : 24 msec
+[ save_cmd:show interface counters ] : 4556 msec
+[ save_cmd:docker exec -it bgp /usr/xdp/sample/xdp-counter BFDRX XF_BFD ] : 74 msec
+[ save_cmd:docker exec -it bgp /usr/xdp/sample/xdp-stats XF_BFD ] : 73 msec
+[ save_cmd:docker exec -it udld /usr/xdp/sample/xdp-counter UDLDRX XF_UDLD ] : 77 msec
+[ save_cmd:docker exec -it udld /usr/xdp/sample/xdp-stats XF_UDLD ] : 78 msec
+[ save_cmd:show queue counters ] : 5093 msec
+[ save_cmd:show interface pktdrops nonzero ] : 5489 msec
+[ save_cmd:show vxlan counters ] : 2067 msec
+[ save_cmd:ras-mc-ctl --errors ] : 164 msec
+[ debugsh_component_dump copp_counters1 ] : 488 msec
+[ save_file:/tmp/copp_counters1_dump.log] : 34 msec
+[ debugsh_component_dump sai_rififpdrop_counters1 ] : 480 msec
+[ save_file:/tmp/sai_rififpdrop_counters1_dump.log] : 34 msec
+[ save_cmd:sonic-db-dump -n 'COUNTERS_DB' -y ] : 2579 msec
+[ save_bcmcmd:bcmcmd "cstat *" ] : 851 msec
+[ save_cmd:sudo -u admin sonic-cli prompt='--ts-sonic--' /mnt/tmp/klish_cmds_counters_1.ZQRltmKpBd.txt ] : 90913 msec
+[ save_cmd:cat /proc/bcm/knet/dstats ] : 25 msec
+[ save_cmd:cat /proc/bcm/knet/stats ] : 24 msec
+[ save_cmd:softnet_stat.sh ] : 29 msec
+[ save_cmd:cat /proc/bcm/knet/rx_drop ] : 23 msec
+[ save_cmd:cat /proc/bcm/knet/strip_vlan ] : 23 msec
+[ save_cmd:show knet stats rx-queue -v ] : 1686 msec
+[ save_cmd:show knet stats rx-queue -av ] : 1761 msec
+[ save_cmd:show knet stats pkt-type -v ] : 1832 msec
+[ save_cmd:show knet stats pkt-type -av ] : 1777 msec
+[ save_cmd:find /sys/devices/virtual/net/Ethernet*  -name state -print -exec cat {} \; ] : 125 msec
+[ save_cmd:netstat -i ] : 35 msec
+[ save_cmd:netstat -a ] : 244 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all interface traffic' ] : 221 msec
+[ save_cmd:vtysh -c 'show ip ospf6 vrf all interface traffic' ] : 219 msec
+[ save_cmd:show ntp --detail --verbose ] : 8998 msec
+[ save_cmd:show interfaces portchannel ] : 1713 msec
+[ save_cmd:show interfaces portchannel json ] : 1949 msec
+[ save_cmd:show vlan brief ] : 1792 msec
+[ save_cmd:systemd-analyze blame ] : 672 msec
+[ save_cmd:systemd-analyze dump ] : 223 msec
+[ save_cmd:systemd-analyze plot ] : 1165 msec
+[ save_cmd:show version ] : 6653 msec
+[ save_cmd:show platform summary ] : 1698 msec
+[ save_cmd:cat /host/machine.conf ] : 24 msec
+[ save_cmd:docker stats --no-stream ] : 2867 msec
+[ save_cmd:sensors ] : 14487 msec
+[ save_cmd:lspci -vvv -xx ] : 58 msec
+[ save_cmd:dmidecode ] : 28 msec
+[ save_cmd:lsusb -v ] : 30 msec
+[ save_cmd:sysctl -a ] : 354 msec
+[ save_cmd:nft list ruleset ] : 35 msec
+[ save_cmd:netstat -ng ] : 26 msec
+[ save_cmd:ss -peima ] : 488 msec
+[ save_cmd:watchdogutil dump ] : 179 msec
+[ save_cmd:echo Broadcom PTP is not supported ] : 42 msec
+[ save_cmd:bridge -d -s fdb show ] : 33 msec
+[ save_cmd:bridge vlan show ] : 32 msec
+[ save_cmd:bridge -d link show ] : 32 msec
+[ save_cmd:bridge vlan suppressionshow dev Bridge ] : 29 msec
+[ save_cmd:bridge -d -s mdb show ] : 29 msec
+[ save_cmd:vtysh -c 'show running-config' ] : 221 msec
+[ save_cmd:vtysh -c 'show nexthop-group rib' ] : 218 msec
+[ save_cmd:vtysh -c 'show ip route vrf all nexthop-group' ] : 258 msec
+[ save_cmd:vtysh -c 'show ipv6 route vrf all nexthop-group' ] : 235 msec
+[ save_cmd:vtysh -c 'show zebra fpm stats' ] : 208 msec
+[ save_cmd:vtysh -c 'show zebra dplane detailed' ] : 207 msec
+[ save_cmd:vtysh -c 'show interface vrf all' ] : 214 msec
+[ save_cmd:vtysh -c 'show interface vlan all' ] : 221 msec
+[ save_cmd:vtysh -c 'show zebra client summary' ] : 277 msec
+[ save_cmd:vtysh -c 'show ip bgp vrf all nexthop detail' ] : 214 msec
+[ save_cmd:vtysh -c 'show ip bgp vrf all summary' ] : 216 msec
+[ save_cmd:vtysh -c 'show bgp vrf all ipv4 neighbors' ] : 226 msec
+[ save_cmd:vtysh -c 'show bgp vrf all ipv4 verbose' ] : 344 msec
+[ save_cmd:vtysh -c 'show bgp vrf all ipv6 summary' ] : 290 msec
+[ save_cmd:vtysh -c 'show bgp vrf all ipv6 neighbors' ] : 210 msec
+[ save_cmd:vtysh -c 'show bgp vrf all ipv6 verbose' ] : 261 msec
+[ save_cmd:vtysh -c 'show ip bgp vrf all statistics aggregate-addresses' ] : 230 msec
+[ save_cmd:vtysh -c 'show bgp vrf all ipv6 statistics aggregate-addresses' ] : 219 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all' ] : 218 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all border-routers' ] : 291 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all interface' ] : 203 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all neighbor' ] : 213 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all neighbor detail' ] : 227 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all route' ] : 199 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all graceful-restart helper detail' ] : 265 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all summary-address detail' ] : 230 msec
+[ save_cmd:vtysh -c 'show ip route vrf all ospf' ] : 245 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all database' ] : 218 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all database summary' ] : 222 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all database asbr-summary' ] : 251 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all database external' ] : 238 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all database network' ] : 205 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all database router' ] : 212 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all database self-originate' ] : 209 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all database max-age' ] : 212 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all' ] : 309 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all border-routers detail' ] : 263 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all interface' ] : 216 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all neighbor' ] : 205 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all neighbor detail' ] : 202 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all route' ] : 292 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all route detail' ] : 263 msec
+[ save_cmd:vtysh -c 'show ipv6 route vrf all ospf6' ] : 234 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all graceful-restart helper detail' ] : 205 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all linkstate detail' ] : 216 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all redistribute' ] : 233 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all summary-address detail' ] : 226 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database' ] : 208 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database detail' ] : 213 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database as-external' ] : 218 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database inter-prefix' ] : 245 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database inter-router' ] : 227 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database internal' ] : 209 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database intra-prefix' ] : 217 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database link' ] : 264 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database network' ] : 360 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database router' ] : 219 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database self-originated' ] : 215 msec
+[ save_cmd:vtysh -c 'show ipv6 ospf6 vrf all database type-7' ] : 254 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn summary' ] : 214 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn route detail debug' ] : 236 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn route vni all detail debug' ] : 218 msec
+[ save_cmd:vtysh -c 'show bgp route-node stats' ] : 213 msec
+[ save_cmd:vtysh -c 'show evpn vni detail' ] : 254 msec
+[ save_cmd:vtysh -c 'show evpn' ] : 231 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn vni detail' ] : 231 msec
+[ save_cmd:vtysh -c 'show evpn arp-cache vni all detail' ] : 206 msec
+[ save_cmd:vtysh -c 'show evpn mac vni all detail' ] : 216 msec
+[ save_cmd:vtysh -c 'show evpn rmac vni all' ] : 208 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn import-rt' ] : 223 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn vrf-import-rt' ] : 244 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn update-groups' ] : 235 msec
+[ save_cmd:vtysh -c 'show ip bgp vrf all update-groups' ] : 218 msec
+[ save_cmd:vtysh -c 'show bgp vrf all update-groups' ] : 220 msec
+[ save_cmd:vtysh -c 'show zebra dplane detailed' ] : 215 msec
+[ save_cmd:vtysh -c 'show memory' ] : 252 msec
+[ save_cmd:vtysh -c 'show zebra client' ] : 207 msec
+[ save_cmd:vtysh -c 'show zebra fpm nhg' ] : 214 msec
+[ save_cmd:vtysh -c 'show zebra' ] : 209 msec
+[ save_cmd:vtysh -c 'show bgp mac hash' ] : 214 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn vni all prefix cache' ] : 224 msec
+[ save_cmd:vtysh -c 'show evpn es detail' ] : 228 msec
+[ save_cmd:vtysh -c 'show evpn l2-nh' ] : 206 msec
+[ save_cmd:vtysh -c 'show evpn es-evi detail' ] : 271 msec
+[ save_cmd:vtysh -c 'show evpn next-hops vni all' ] : 267 msec
+[ save_cmd:vtysh -c 'show evpn access-vlan' ] : 222 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn es detail' ] : 212 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn es-evi detail' ] : 206 msec
+[ save_cmd:vtysh -c 'show bgp l2vpn evpn es-vrf' ] : 212 msec
+[ save_cmd:vtysh -c 'show ip nht vrf all' ] : 248 msec
+[ save_cmd:vtysh -c 'show ip sla detail' ] : 223 msec
+[ save_cmd:vtysh -c 'show ip sla nht' ] : 198 msec
+[ save_cmd:show interface status ] : 2523 msec
+[ save_cmd:config save -y /var/dump/sonic_dump_MYBLE01-DC-0409-SI02_20260316_055247/dump/running-config-save.json ] : 2140 msec
+[ save_cmd:show subinterface status ] : 2338 msec
+[ save_cmd:show ip interface ] : 1900 msec
+[ save_cmd:ip -d link ] : 33 msec
+[ save_cmd:ip -s addr ] : 32 msec
+[ save_cmd:ip rule ] : 29 msec
+[ save_cmd:ip route show table all ] : 30 msec
+[ save_cmd:ip -s neigh ] : 30 msec
+[ save_cmd:ip -s neigh show nud noarp ] : 30 msec
+[ save_cmd:ip -d nexthop show ] : 29 msec
+[ save_cmd:ip -6 xfrm state ] : 28 msec
+[ save_cmd:ip -6 xfrm policy ] : 29 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.90.30.178 advertised-routes" ] : 212 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.90.30.178 routes" ] : 206 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.90.30.179 advertised-routes" ] : 220 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.90.30.179 routes" ] : 211 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.90.30.158 advertised-routes" ] : 224 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.90.30.158 routes" ] : 215 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.92.30.68 advertised-routes" ] : 212 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.92.30.68 routes" ] : 225 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.92.30.236 advertised-routes" ] : 243 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.92.30.236 routes" ] : 344 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.99.100.130 advertised-routes" ] : 232 msec
+[ save_cmd:vtysh  -c "show ip bgp neighbors 10.99.100.130 routes" ] : 214 msec
+[ save_cmd:sudo sfputil show presence ] : 2858 msec
+[ save_cmd:sudo sfpdump ] : 5998 msec
+[ save_cmd:show interface transceiver eeprom --dom ] : 2460 msec
+[ save_cmd:show interface transceiver summary ] : 2417 msec
+[ save_cmd:lldpctl ] : 172 msec
+[ save_cmd:lldpctl -f json ] : 194 msec
+[ save_cmd:lldpcli show statistics ] : 192 msec
+[ save_cmd:lldpcli show chassis ] : 177 msec
+[ save_cmd:lldpcli show configuration ] : 180 msec
+[ save_cmd:lldpcli show interfaces details ] : 193 msec
+[ save_cmd:debug lldp dump ] : 993 msec
+[ save_cmd:stpctl all ] : 175 msec
+[ save_cmd:show spanning_tree statistics ] : 1828 msec
+[ save_cmd:show spanning_tree bpdu_guard ] : 1866 msec
+[ save_cmd:show spanning_tree root_guard ] : 1832 msec
+[ debugsh_component_dump stpmgrd ] : 482 msec
+[ save_file:/tmp/stpmgrd_dump.log] : 40 msec
+[ save_cmd:udldctl all ] : 148 msec
+[ save_cmd:show ip static-anycast-gateway ] : 1944 msec
+[ save_cmd:show ipv6 static-anycast-gateway ] : 1757 msec
+[ save_cmd:show debug all ] : 12060 msec
+[ save_cmd:docker logs bgp ] : 101 msec
+[ save_cmd:docker logs swss ] : 128 msec
+[ save_cmd:docker logs mgmt-framework ] : 123 msec
+[ save_cmd:docker logs telemetry ] : 180 msec
+[ save_cmd:docker logs syncd ] : 93 msec
+[ save_cmd:docker logs gbsyncd ] : 92 msec
+[ save_cmd:docker logs database ] : 93 msec
+[ save_cmd:docker logs pmon ] : 99 msec
+[ save_cmd:docker logs sflow ] : 89 msec
+[ save_cmd:docker exec sflow ps -ef ] : 167 msec
+[ save_cmd:ps aux ] : 83 msec
+[ save_cmd:top -c -b -n 1 -w512 ] : 245 msec
+[ save_cmd:free ] : 30 msec
+[ save_cmd:vmstat 1 5 ] : 4039 msec
+[ save_cmd:vmstat -m ] : 50 msec
+[ save_cmd:vmstat -s ] : 41 msec
+[ save_cmd:mount ] : 32 msec
+[ save_cmd:df ] : 30 msec
+[ save_cmd:dmesg ] : 47 msec
+[ save_cmd:iptables -t nat -nv -L ] : 30 msec
+[ save_cmd:conntrack -j -L ] : 31 msec
+[ save_cmd:conntrack -j -L | wc ] : 31 msec
+[ save_cmd:conntrack -L ] : 30 msec
+[ save_cmd:conntrack -L | wc ] : 30 msec
+[ save_cmd:show nat config ] : 5331 msec
+[ save_cmd:ip mroute show table all ] : 31 msec
+[ save_cmd:show debug ipmcorch all ] : 12161 msec
+[ save_cmd:show debug l2mcorch all ] : 12465 msec
+[ save_cmd:vtysh -c 'show ip mroute vrf all' ] : 247 msec
+[ save_cmd:vtysh -c 'show ip mroute vrf count' ] : 239 msec
+[ save_cmd:vtysh -c 'show ip multicast vrf all' ] : 247 msec
+[ save_cmd:vtysh -c 'show ip igmp vrf all groups' ] : 219 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all interface detail' ] : 252 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all interface traffic' ] : 225 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all join' ] : 296 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all local-membership' ] : 228 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all neighbor detail' ] : 215 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all nexthop' ] : 239 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all rpf' ] : 342 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all state' ] : 275 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all upstream' ] : 222 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all upstream-join-desired' ] : 212 msec
+[ save_cmd:vtysh -c 'show ip pim vrf all upstream-rpf' ] : 217 msec
+[ save_cmd:vtysh -c 'show bfd peers' ] : 216 msec
+[ save_cmd:vtysh -c 'show bfd peers counters' ] : 221 msec
+[ save_cmd:vtysh -c 'show bfd peers json' ] : 218 msec
+[ save_cmd:vtysh -c 'show bfd peers counters json' ] : 242 msec
+[ save_cmd:vtysh -c 'show bfd statistics' ] : 214 msec
+[ save_cmd:vtysh -c 'debug bfd show interface' ] : 223 msec
+[ save_cmd:vtysh -c 'debug bfd show hash' ] : 257 msec
+[ save_cmd:vtysh -c 'show bfd state-down-info' ] : 214 msec
+[ save_cmd:show ip dhcp-relay detailed ] : 1683 msec
+[ save_cmd:show ipv6 dhcp-relay detailed ] : 1717 msec
+[ save_cmd:show ip dhcp-relay statistics ] : 1761 msec
+[ save_cmd:show ipv6 dhcp-relay statistics ] : 1640 msec
+[ save_cmd:show ip dhcp-snooping ] : 1710 msec
+[ save_cmd:show ip dhcp-snooping binding ] : 1613 msec
+[ save_cmd:show ip dhcp-snooping statistics ] : 1689 msec
+[ save_cmd:show ip dhcp-snooping statistics detail ] : 3227 msec
+[ save_cmd:show ip dhcp-snooping statistics debug ] : 3276 msec
+[ save_cmd:show ipv6 dhcp-snooping ] : 1652 msec
+[ save_cmd:show ipv6 dhcp-snooping binding ] : 1642 msec
+[ save_cmd:show ipv6 dhcp-snooping statistics ] : 1774 msec
+[ save_cmd:show ipv6 dhcp-snooping statistics detail ] : 3216 msec
+[ save_cmd:show ipv6 dhcp-snooping statistics debug ] : 3206 msec
+[ save_cmd:show ip helper-address config ] : 1683 msec
+[ save_cmd:show ip helper-address statistics ] : 1643 msec
+[ save_cmd:show ip forward-protocol config ] : 1678 msec
+[ save_cmd:sonic-db-dump -n 'APPL_DB' -y ] : 755 msec
+[ save_cmd:sonic-db-dump -n 'ASIC_DB' -y ] : 1487 msec
+[ save_cmd:sonic-db-dump -n 'CONFIG_DB' -y ] : 607 msec
+[ save_cmd:sonic-db-dump -n 'FLEX_COUNTER_DB' -y ] : 915 msec
+[ save_cmd:sonic-db-dump -n 'STATE_DB' -y ] : 997 msec
+[ save_cmd:sonic-db-dump -n 'GB_ASIC_DB' -y ] : 490 msec
+[ save_cmd:sonic-db-dump -n 'ERROR_DB' -y ] : 500 msec
+[ save_cmd:sonic-db-dump -n 'EVENT_DB' -y ] : 550 msec
+[ save_cmd:redis-cli -p 6379 slowlog get ] : 180 msec
+[ save_cmd:redis-cli -p 63792 slowlog get ] : 195 msec
+[ save_cmd:redis-cli -p 63793 slowlog get ] : 183 msec
+[ save_cmd:redis-cli -p 63794 slowlog get ] : 179 msec
+[ save_cmd:redis-cli -p 63796 slowlog get ] : 181 msec
+[ save_cmd:redis-cli -p 63970 slowlog get ] : 191 msec
+[ save_cmd:docker ps -a ] : 136 msec
+[ save_cmd:docker top pmon ] : 110 msec
+[ save_cmd:show histogram memory process ] : 5514 msec
+[ save_cmd:show histogram memory docker ] : 5697 msec
+[ save_cmd:show histogram memory system ] : 5515 msec
+[ save_cmd:show system status detail ] : 1664 msec
+[ save_cmd:patch-installer list ] : 1654 msec
+[ save_cmd:patch-installer history ] : 1612 msec
+[ save_cmd:patch-installer status ] : 1649 msec
+[ save_file:/var/dump/lastreboot.log] : 368 msec
+[ save_cmd:whoami ] : 33 msec
+[ save_cmd:cat /home/admin/bash_history.root ] : 30 msec
+[ save_cmd:cat /home/admin/bash_history.admin ] : 32 msec
+[ save_cmd:cat /home/admin/bash_history.root ] : 30 msec
+[ save_cmd:cat /home/admin/frr_command_history ] : 36 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_goroutine_260308_091609.200.pprof.txt] : 47 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_goroutine_260310_020831.943.pprof.txt] : 47 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_goroutine_260312_055200.381.pprof.txt] : 44 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_goroutine_260316_055251.424.pprof.txt] : 45 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_heap_260308_091609.200.pprof] : 66 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_heap_260310_020831.943.pprof] : 57 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_heap_260312_055200.381.pprof] : 59 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_heap_260316_055251.424.pprof] : 81 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log] : 131 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log.1] : 100 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log.2] : 97 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log.3] : 78 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log.4] : 84 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log.5] : 79 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log.6] : 86 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log.7] : 91 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log.8] : 87 msec
+[ save_file:/tmp/tmp.I55ZZHxpO9/rest_server/rest_server_stderr.log.9] : 88 msec
+[ save_file:/tmp/tmp.2jlv0cnoes/telemetry/telemetry_goroutine_260308_091609.642.pprof.txt] : 44 msec
+[ save_file:/tmp/tmp.2jlv0cnoes/telemetry/telemetry_goroutine_260310_020832.399.pprof.txt] : 47 msec
+[ save_file:/tmp/tmp.2jlv0cnoes/telemetry/telemetry_goroutine_260312_055200.838.pprof.txt] : 43 msec
+[ save_file:/tmp/tmp.2jlv0cnoes/telemetry/telemetry_goroutine_260316_055251.881.pprof.txt] : 44 msec
+[ save_file:/tmp/tmp.2jlv0cnoes/telemetry/telemetry_heap_260308_091609.642.pprof] : 42 msec
+[ save_file:/tmp/tmp.2jlv0cnoes/telemetry/telemetry_heap_260310_020832.399.pprof] : 43 msec
+[ save_file:/tmp/tmp.2jlv0cnoes/telemetry/telemetry_heap_260312_055200.838.pprof] : 42 msec
+[ save_file:/tmp/tmp.2jlv0cnoes/telemetry/telemetry_heap_260316_055251.881.pprof] : 43 msec
+[ save_file:/tmp/tmp.2jlv0cnoes/telemetry/telemetry_server_stderr.log] : 42 msec
+[ save_file:/tmp/tmp.9P8EpU2nkC/snmpd.conf] : 56 msec
+[ save_file:/tmp/tmp.CFPOI04X4M/lldpd.conf] : 47 msec
+[ save_file:./buffers.json.j2] : 46 msec
+[ save_file:./buffers_defaults_t0.j2] : 42 msec
+[ save_file:./buffers_defaults_t1.j2] : 44 msec
+[ save_file:./custom_led.bin] : 49 msec
+[ save_file:./linkscan_led_fw.bin] : 45 msec
+[ save_file:./pg_profile_lookup.ini] : 46 msec
+[ save_file:./platform-def.json] : 42 msec
+[ save_file:./platform.json] : 42 msec
+[ save_file:./platform_qos.json] : 48 msec
+[ save_file:./port_config.ini] : 43 msec
+[ save_file:./qos.json.j2] : 68 msec
+[ save_file:./sai.profile] : 81 msec
+[ save_file:./sai_preinit_cmd.soc] : 62 msec
+[ save_file:./td3-s5248f-25g.config.bcm] : 42 msec
+[ save_file:/var/run/docker-syncd/td3-s5248f-25g.config.bcm] : 48 msec
+[ save_file:/var/run/docker-syncd/sai.profile] : 44 msec
+[ save_bcmcmd:bcmcmd -t5 version ] : 1580 msec
+[ save_bcmcmd:bcmcmd "d chg mpls_entry_single" ] : 1008 msec
+[ save_bcmcmd:bcmcmd "d chg source_vp" ] : 2202 msec
+[ save_bcmcmd:bcmcmd "d chg vlan_xlate_1_double" ] : 1319 msec
+[ save_bcmcmd:bcmcmd "d chg ing_vlan_tag_action_profile_1" ] : 802 msec
+[ save_bcmcmd:bcmcmd "d chg ing_vlan_tag_action_profile_2" ] : 745 msec
+[ save_bcmcmd:bcmcmd "d chg egr_vlan_xlate_1_single" ] : 1095 msec
+[ save_bcmcmd:bcmcmd "d chg egr_vlan_xlate_1_double" ] : 858 msec
+[ save_bcmcmd:bcmcmd "d chg egr_vlan_tag_action_profile" ] : 749 msec
+[ save_bcmcmd:bcmcmd "d chg egr_vlan_tag_action_profile_2" ] : 761 msec
+[ save_bcmcmd:bcmcmd "d chg egr_dvp_attribute" ] : 1881 msec
+[ save_bcmcmd:bcmcmd "d chg egr_ip_tunnel" ] : 1064 msec
+[ save_bcmcmd:bcmcmd "d chg ing_vp_vlan_membership" ] : 891 msec
+[ save_bcmcmd:bcmcmd "d chg egr_vp_vlan_membership" ] : 959 msec
+[ save_bcmcmd:bcmcmd "d chg vfi" ] : 1893 msec
+[ save_bcmcmd:bcmcmd -t5 soc ] : 795 msec
+[ save_bcmcmd:bcmcmd -t5 ps ] : 845 msec
+[ save_bcmcmd:bcmcmd -t5 phydump ] : 1174 msec
+[ save_bcmcmd:bcmcmd 'show pmap' ] : 755 msec
+[ save_bcmcmd:bcmcmd -t5 'techsupport l3uc' ] : 42739 msec
+[ save_bcmcmd:bcmcmd "l3 alpm show brief" ] : 767 msec
+[ save_bcmcmd:bcmcmd 'trunk show' ] : 759 msec
+[ save_bcmcmd:bcmcmd 'vlan show' ] : 759 msec
+[ save_bcmcmd:bcmcmd "l3 nat_ingress show" ] : 804 msec
+[ save_bcmcmd:bcmcmd "l3 nat_egress show" ] : 736 msec
+[ save_bcmcmd:bcmcmd "ipmc table show" ] : 784 msec
+[ save_bcmcmd:bcmcmd "multicast show" ] : 744 msec
+[ save_bcmcmd:bcmcmd "conf show" ] : 721 msec
+[ save_bcmcmd:bcmcmd "fp show" ] : 827 msec
+[ save_bcmcmd:bcmcmd "pvlan show" ] : 765 msec
+[ save_bcmcmd:bcmcmd "l2 show" ] : 933 msec
+[ save_bcmcmd:bcmcmd "l3 intf show" ] : 751 msec
+[ save_bcmcmd:bcmcmd "l3 egress show" ] : 935 msec
+[ save_bcmcmd:bcmcmd "alpm projection show" ] : 774 msec
+[ save_bcmcmd:bcmcmd "l3 defip show" ] : 989 msec
+[ save_bcmcmd:bcmcmd "l3 l3table show" ] : 915 msec
+[ save_bcmcmd:bcmcmd "l3 ecmp egress show" ] : 872 msec
+[ save_bcmcmd:bcmcmd "l3 multipath show" ] : 745 msec
+[ save_bcmcmd:bcmcmd "l3 ip6host show" ] : 838 msec
+[ save_bcmcmd:bcmcmd "l3 ip6route show" ] : 987 msec
+[ save_bcmcmd:bcmcmd "d chg my_station_tcam" ] : 851 msec
+[ save_bcmcmd:bcmcmd "mc show" ] : 728 msec
+[ save_bcmcmd:bcmcmd "cstat *" ] : 794 msec
+[ save_bcmcmd:bcmcmd "mirror show" ] : 738 msec
+[ save_bcmcmd:bcmcmd "mirror dest show" ] : 728 msec
+[ save_bcmcmd:bcmcmd "port *" ] : 916 msec
+[ save_bcmcmd:bcmcmd "d chg my_station_tcam_2" ] : 733 msec
+[ save_bcmcmd:bcmcmd "bcmsai dump_eapp_config" ] : 736 msec
+[ save_bcmcmd:bcmcmd "dump sw flowtracker" ] : 779 msec
+[ save_bcmcmd:bcmcmd "stg show" ] : 786 msec
+[ save_bcmcmd:bcmcmd "knetctrl netif show" ] : 737 msec
+[ save_bcmcmd:bcmcmd "techsupport mmu" ] : 5123 msec
+[ save_bcmcmd:bcmcmd "bcmsai L2Ecmp Global" ] : 786 msec
+[ save_bcmcmd:bcmcmd "bcmsai L2Ecmp Group" ] : 808 msec
+[ save_bcmcmd:bcmcmd "bcmsai L2Ecmp Member" ] : 901 msec
+[ save_bcmcmd:bcmcmd "bcmsai L2Ecmp TnlInfo" ] : 736 msec
+[ save_bcmcmd:bcmcmd "bcmsai L2Ecmp MacNbr" ] : 751 msec
+[ save_bcmcmd:bcmcmd "bcmsai lb" ] : 893 msec
+[ save_cmd:cat /proc/bcm/knet/debug ] : 41 msec
+[ save_cmd:cat /proc/bcm/knet/dma ] : 50 msec
+[ save_cmd:cat /proc/bcm/knet/dstats ] : 33 msec
+[ save_cmd:cat /proc/bcm/knet/link ] : 33 msec
+[ save_cmd:cat /proc/bcm/knet/rate ] : 35 msec
+[ save_cmd:cat /proc/bcm/knet/stats ] : 36 msec
+[ save_cmd:cat /proc/linux-knet-cb ] : 35 msec
+[ save_cmd:cat /proc/linux-kernel-bde ] : 33 msec
+[ save_cmd:cat /proc/linux-user-bde ] : 35 msec
+[ save_file:/tmp/swss-syncd-debug.log] : 45 msec
+[ save_cmd:echo 16/03/2026 06:03:22:848059 ] : 36 msec
+[ save_cmd:show interface counters ] : 4556 msec
+[ save_cmd:docker exec -it bgp /usr/xdp/sample/xdp-counter BFDRX XF_BFD ] : 89 msec
+[ save_cmd:docker exec -it bgp /usr/xdp/sample/xdp-stats XF_BFD ] : 104 msec
+[ save_cmd:docker exec -it udld /usr/xdp/sample/xdp-counter UDLDRX XF_UDLD ] : 136 msec
+[ save_cmd:docker exec -it udld /usr/xdp/sample/xdp-stats XF_UDLD ] : 95 msec
+[ save_cmd:show queue counters ] : 5123 msec
+[ save_cmd:show interface pktdrops nonzero ] : 4985 msec
+[ save_cmd:show vxlan counters ] : 2136 msec
+[ debugsh_component_dump copp_counters2 ] : 458 msec
+[ save_file:/tmp/copp_counters2_dump.log] : 44 msec
+[ debugsh_component_dump sai_rififpdrop_counters2 ] : 492 msec
+[ save_file:/tmp/sai_rififpdrop_counters2_dump.log] : 98 msec
+[ save_cmd:sonic-db-dump -n 'COUNTERS_DB' -y ] : 2577 msec
+[ save_cmd:sudo -u admin sonic-cli prompt='--ts-sonic--' /mnt/tmp/klish_cmds_counters_2.q30hX4YMbV.txt ] : 73586 msec
+[ save_cmd:sudo -u admin sonic-cli prompt='--ts-sonic--' /mnt/tmp/klish_cmds_poe.FyUFx0naZJ.txt ] : 6013 msec
+[ save_cmd:cat /proc/bcm/knet/dstats ] : 36 msec
+[ save_cmd:cat /proc/bcm/knet/stats ] : 36 msec
+[ save_cmd:softnet_stat.sh ] : 48 msec
+[ save_cmd:cat /proc/bcm/knet/rx_drop ] : 34 msec
+[ save_cmd:show knet stats rx-queue -v ] : 1677 msec
+[ save_cmd:show knet stats rx-queue -av ] : 1779 msec
+[ save_cmd:show knet stats pkt-type -v ] : 1749 msec
+[ save_cmd:show knet stats pkt-type -av ] : 1786 msec
+[ save_cmd:netstat -i ] : 37 msec
+[ save_bcmcmd:bcmcmd "show counters" ] : 1240 msec
+[ save_bcmcmd:bcmcmd "techsupport mmu" ] : 5995 msec
+[ save_cmd:vtysh -c 'show ip ospf vrf all interface traffic' ] : 218 msec
+[ save_cmd:vtysh -c 'show ip ospf6 vrf all interface traffic' ] : 215 msec
+[ save_cmd:show ntp --detail --verbose ] : 8943 msec
+[ TAR /etc Files ] : 224 msec
+[ Warm-boot Files ] : 41 msec
+[ save_cmd:ps ax | grep dhclient ] : 86 msec
+[ save_file:/var/lib/dhcp/dhclient6.eth0.leases] : 54 msec
+[ save_cmd:ls -ltrR /var/log ] : 58 msec
+[ save_file:/var/log/onie-update.log] : 22 msec
+[ save_file:/var/log/audit] : 71 msec
+[ save_file:/var/log/syslog-debug.log.172.gz] : 59 msec
+[ save_file:/var/log/syslog-debug.log.170.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.37.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.115.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.28.gz] : 46 msec
+[ save_file:/var/log/syslog-debug.log.83.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.132.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.2.gz] : 49 msec
+[ save_file:/var/log/mem_stats.log.1] : 434 msec
+[ save_file:/var/log/syslog-debug.log.130.gz] : 60 msec
+[ save_file:/var/log/syslog-debug.log.104.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.125.gz] : 156 msec
+[ save_file:/var/log/syslog-debug.log.140.gz] : 75 msec
+[ save_file:/var/log/watchdog.log] : 45 msec
+[ save_file:/var/log/mem_stats.log.2.gz] : 80 msec
+[ save_file:/var/log/syslog-debug.log.162.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.91.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.42.gz] : 62 msec
+[ save_file:/var/log/syslog-debug.log.26.gz] : 58 msec
+[ save_file:/var/log/syslog-debug.log.144.gz] : 66 msec
+[ save_file:/var/log/syslog-info.log] : 19 msec
+[ save_file:/var/log/fdborch_debug.log] : 20 msec
+[ save_file:/var/log/syslog-debug.log.103.gz] : 61 msec
+[ save_file:/var/log/audit.log.6.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.77.gz] : 49 msec
+[ save_file:/var/log/neighorch_debug.log] : 20 msec
+[ save_file:/var/log/syslog-debug.log.52.gz] : 51 msec
+[ save_file:/var/log/syslog-debug.log.182.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.137.gz] : 53 msec
+[ save_file:/var/log/bcm_diag_post] : 19 msec
+[ save_file:/var/log/syslog-debug.log.164.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.23.gz] : 61 msec
+[ save_file:/var/log/syslog-debug.log.95.gz] : 49 msec
+[ save_file:/var/log/intfsorch_debug.log] : 20 msec
+[ save_file:/var/log/syslog-debug.log.185.gz] : 53 msec
+[ save_file:/var/log/syslog-info.log.1] : 245 msec
+[ save_file:/var/log/syslog-debug.log.116.gz] : 60 msec
+[ save_file:/var/log/syslog-debug.log.84.gz] : 60 msec
+[ save_file:/var/log/syslog-debug.log.135.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.129.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.113.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.107.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.59.gz] : 47 msec
+[ save_file:/var/log/autobreakoutmgrd.log] : 21 msec
+[ save_file:/var/log/syslog-debug.log.161.gz] : 52 msec
+[ save_file:/var/log/wtmp] : 21 msec
+[ save_file:/var/log/syslog-debug.log.108.gz] : 49 msec
+[ save_file:/var/log/syslog-debug.log.106.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.86.gz] : 47 msec
+[ save_file:/var/log/syslog-debug.log.62.gz] : 61 msec
+[ save_file:/var/log/syslog-debug.log.46.gz] : 65 msec
+[ save_file:/var/log/syslog-debug.log.160.gz] : 90 msec
+[ save_file:/var/log/syslog-debug.log.56.gz] : 99 msec
+[ save_file:/var/log/syslog-debug.log.45.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.171.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.32.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.65.gz] : 49 msec
+[ save_file:/var/log/syslog-debug.log.38.gz] : 53 msec
+[ save_file:/var/log/clish.log] : 94 msec
+[ save_file:/var/log/syslog-debug.log.142.gz] : 102 msec
+[ save_file:/var/log/syslog-debug.log.31.gz] : 105 msec
+[ save_file:/var/log/routeorch_debug.log] : 21 msec
+[ save_file:/var/log/natorch_debug.log] : 23 msec
+[ save_file:/var/log/syslog-debug.log.153.gz] : 58 msec
+[ save_file:/var/log/audit.log.4.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.3.gz] : 63 msec
+[ save_file:/var/log/syslog-debug.log.19.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.58.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.73.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.13.gz] : 55 msec
+[ save_file:/var/log/syslog] : 76 msec
+[ save_file:/var/log/syslog-debug.log.193.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.127.gz] : 58 msec
+[ save_file:/var/log/audit.log.7.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.174.gz] : 58 msec
+[ save_file:/var/log/syslog-debug.log.198.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.199.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.148.gz] : 58 msec
+[ save_file:/var/log/syslog-debug.log.124.gz] : 56 msec
+[ save_file:/var/log/audit.log] : 102 msec
+[ save_file:/var/log/syslog-debug.log.126.gz] : 64 msec
+[ save_file:/var/log/syslog-debug.log.98.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.21.gz] : 64 msec
+[ save_file:/var/log/syslog-debug.log.27.gz] : 85 msec
+[ save_file:/var/log/syslog-debug.log.61.gz] : 94 msec
+[ save_file:/var/log/syslog-debug.log.43.gz] : 69 msec
+[ save_file:/var/log/syslog-debug.log.165.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.191.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.121.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.159.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.133.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.141.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.25.gz] : 49 msec
+[ save_file:/var/log/dropmonitororch_debug.log] : 19 msec
+[ save_file:/var/log/syslog-debug.log.82.gz] : 58 msec
+[ save_file:/var/log/syslog-debug.log.190.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.67.gz] : 49 msec
+[ save_file:/var/log/fdb_orch_syncd.log] : 93 msec
+[ save_file:/var/log/syslog-debug.log.173.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.194.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.40.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.80.gz] : 61 msec
+[ save_file:/var/log/syslog-debug.log.131.gz] : 64 msec
+[ save_file:/var/log/syslog-debug.log.63.gz] : 49 msec
+[ save_file:/var/log/syslog-debug.log.181.gz] : 49 msec
+[ save_file:/var/log/histogram/mem-histogram-total.log.gz] : 25 msec
+[ save_file:/var/log/histogram/mem-histogram-total.log.gz.1] : 29 msec
+[ save_file:/var/log/histogram/mem-histogram.log.gz.1] : 305 msec
+[ save_file:/var/log/histogram/mem-histogram.log.gz] : 58 msec
+[ save_file:/var/log/syslog-debug.log.11.gz] : 48 msec
+[ save_file:/var/log/syslog-debug.log.88.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.156.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.183.gz] : 54 msec
+[ save_file:/var/log/bcm.log] : 20 msec
+[ save_file:/var/log/syslog-debug.log.49.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.197.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.180.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.151.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.9.gz] : 63 msec
+[ save_file:/var/log/syslog-debug.log.17.gz] : 60 msec
+[ save_file:/var/log/syslog-debug.log.57.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.48.gz] : 64 msec
+[ save_file:/var/log/nbrmgrd.log] : 61 msec
+[ save_file:/var/log/syslog-debug.log.20.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.139.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.8.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.50.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.53.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.122.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.187.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.186.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.145.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.200.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.136.gz] : 83 msec
+[ save_file:/var/log/syslog-debug.log.118.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.44.gz] : 61 msec
+[ save_file:/var/log/syslog-debug.log.189.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.90.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.24.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.149.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.79.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.163.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.169.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.12.gz] : 47 msec
+[ save_file:/var/log/syslog-debug.log.167.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.68.gz] : 51 msec
+[ save_file:/var/log/syslog-debug.log.154.gz] : 61 msec
+[ save_file:/var/log/neighsyncd.log] : 126 msec
+[ save_file:/var/log/syslog-debug.log] : 19 msec
+[ save_file:/var/log/syslog-debug.log.76.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.35.gz] : 51 msec
+[ save_file:/var/log/diagrun.log] : 19 msec
+[ save_file:/var/log/syslog-debug.log.119.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.102.gz] : 87 msec
+[ save_file:/var/log/syslog-debug.log.69.gz] : 75 msec
+[ save_file:/var/log/syslog-debug.log.168.gz] : 60 msec
+[ save_file:/var/log/syslog-debug.log.195.gz] : 77 msec
+[ save_file:/var/log/syslog-debug.log.100.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.150.gz] : 49 msec
+[ save_file:/var/log/syslog-debug.log.55.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.188.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.146.gz] : 60 msec
+[ save_file:/var/log/syslog-debug.log.64.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.70.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.179.gz] : 60 msec
+[ save_file:/var/log/syslog-debug.log.158.gz] : 53 msec
+[ save_file:/var/log/mem_stats.log] : 87 msec
+[ save_file:/var/log/syslog-debug.log.192.gz] : 48 msec
+[ save_file:/var/log/syslog-debug.log.33.gz] : 61 msec
+[ save_file:/var/log/syslog-debug.log.177.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.81.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.97.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.74.gz] : 51 msec
+[ save_file:/var/log/syslog-debug.log.60.gz] : 51 msec
+[ save_file:/var/log/file-mgmt.log] : 20 msec
+[ save_file:/var/log/syslog-debug.log.6.gz] : 51 msec
+[ save_file:/var/log/syslog-debug.log.111.gz] : 61 msec
+[ save_file:/var/log/syslog-debug.log.123.gz] : 65 msec
+[ save_file:/var/log/audit.log.1] : 207 msec
+[ save_file:/var/log/audit.log.3.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.101.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.34.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.117.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.7.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.157.gz] : 48 msec
+[ save_file:/var/log/syslog-debug.log.14.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.22.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.175.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.85.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.75.gz] : 56 msec
+[ save_file:/var/log/l2mcd_debug_debug.log] : 22 msec
+[ save_file:/var/log/syslog-debug.log.51.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.36.gz] : 64 msec
+[ save_file:/var/log/syslog-debug.log.94.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.96.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.143.gz] : 59 msec
+[ save_file:/var/log/syslog-debug.log.178.gz] : 105 msec
+[ save_file:/var/log/syslog-debug.log.87.gz] : 64 msec
+[ save_file:/var/log/syslog-debug.log.166.gz] : 59 msec
+[ save_file:/var/log/btmp] : 28 msec
+[ save_file:/var/log/syslog-debug.log.15.gz] : 68 msec
+[ save_file:/var/log/syslog-debug.log.4.gz] : 68 msec
+[ save_file:/var/log/syslog-debug.log.92.gz] : 104 msec
+[ save_file:/var/log/syslog-debug.log.89.gz] : 82 msec
+[ save_file:/var/log/syslog-debug.log.176.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.128.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.184.gz] : 53 msec
+[ save_file:/var/log/syslog-debug.log.5.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.29.gz] : 63 msec
+[ save_file:/var/log/syslog-debug.log.18.gz] : 47 msec
+[ save_file:/var/log/fdbsync.log] : 67 msec
+[ save_file:/var/log/syslog-debug.log.105.gz] : 62 msec
+[ save_file:/var/log/syslog-debug.log.16.gz] : 94 msec
+[ save_file:/var/log/syslog-debug.log.120.gz] : 51 msec
+[ save_file:/var/log/audit.log.5.gz] : 53 msec
+[ save_file:/var/log/auth.log] : 200 msec
+[ save_file:/var/log/syslog-debug.log.147.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.47.gz] : 57 msec
+[ save_file:/var/log/syslog-debug.log.138.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.109.gz] : 74 msec
+[ save_file:/var/log/syslog-debug.log.66.gz] : 48 msec
+[ save_file:/var/log/syslog-debug.log.155.gz] : 76 msec
+[ save_file:/var/log/syslog-debug.log.78.gz] : 51 msec
+[ save_file:/var/log/syslog-debug.log.99.gz] : 60 msec
+[ save_file:/var/log/syslog-debug.log.41.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.152.gz] : 52 msec
+[ save_file:/var/log/syslog-debug.log.196.gz] : 64 msec
+[ save_file:/var/log/syslog-debug.log.54.gz] : 133 msec
+[ save_file:/var/log/audit.log.2.gz] : 69 msec
+[ save_file:/var/log/syslog-debug.log.71.gz] : 50 msec
+[ save_file:/var/log/syslog-debug.log.93.gz] : 51 msec
+[ save_file:/var/log/syslog-debug.log.110.gz] : 49 msec
+[ save_file:/var/log/swss/sairedis.rec] : 81 msec
+[ save_file:/var/log/swss/swss.rec] : 39 msec
+[ save_file:/var/log/swss/sairedis.rec.1] : 228 msec
+[ save_file:/var/log/syslog-debug.log.72.gz] : 55 msec
+[ save_file:/var/log/syslog-debug.log.30.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.114.gz] : 54 msec
+[ save_file:/var/log/syslog-debug.log.10.gz] : 56 msec
+[ save_file:/var/log/syslog-debug.log.1] : 45 msec
+[ save_file:/var/log/syslog-debug.log.112.gz] : 47 msec
+[ save_file:/var/log/syslog-debug.log.39.gz] : 63 msec
+[ save_file:/var/log/syslog-debug.log.134.gz] : 125 msec
+[ TAR /var/log Files ] : 18475 msec
+[ TAR /var/core and /var/crash Files ] : 17 msec
+[ TAR /var/log/journal Files ] : 12 msec
+[ save_file:/tmp/smartctl] : 105 msec
+[ save_cmd:sudo -u admin sonic-cli prompt='--ts-sonic--' /mnt/tmp/klish_cmds.VKbbZrwCsA.txt ] : 32236 msec
+[ debugsh_component_dump aclorchagent ] : 1868 msec
+[ save_file:/tmp/aclorchagent_dump.log] : 74 msec
+[ debugsh_component_dump isogrporchagent ] : 461 msec
+[ save_file:/tmp/isogrporchagent_dump.log] : 71 msec
+[ debugsh_component_dump vxlanorchagent ] : 1891 msec
+[ save_file:/tmp/vxlanorchagent_dump.log] : 75 msec
+[ debugsh_component_dump l2nhgorchagent ] : 457 msec
+[ save_file:/tmp/l2nhgorchagent_dump.log] : 75 msec
+[ debugsh_component_dump vxlanmgr ] : 11321 msec
+[ save_file:/tmp/vxlanmgr_dump.log] : 74 msec
+[ debugsh_component_dump fdbsyncd ] : 2271 msec
+[ save_file:/tmp/fdbsyncd_dump.log] : 76 msec
+[ debugsh_component_dump iftrackorchagent ] : 1368 msec
+[ save_file:/tmp/iftrackorchagent_dump.log] : 159 msec
+[ debugsh_component_dump policerorchagent ] : 473 msec
+[ save_file:/tmp/policerorchagent_dump.log] : 74 msec
+[ debugsh_component_dump qoswredorchagent ] : 459 msec
+[ save_file:/tmp/qoswredorchagent_dump.log] : 83 msec
+[ debugsh_component_dump syncd ] : 922 msec
+[ save_file:/tmp/syncd_dump.log] : 74 msec
+[ debugsh_component_dump nhgorchagent ] : 939 msec
+[ save_file:/tmp/nhgorchagent_dump.log] : 78 msec
+[ debugsh_component_dump lvteporchagent ] : 486 msec
+[ save_file:/tmp/lvteporchagent_dump.log] : 76 msec
+[ debugsh_component_dump delayrestoreorchagent ] : 456 msec
+[ save_file:/tmp/delayrestoreorchagent_dump.log] : 72 msec
+[ debugsh_component_dump aclsvcd ] : 7375 msec
+[ save_file:/tmp/aclsvcd_dump.log] : 81 msec
+[ debugsh_component_dump acllogd ] : 1911 msec
+[ save_file:/tmp/acllogd_dump.log] : 71 msec
+[ debugsh_component_dump acllib ] : 2523 msec
+[ save_file:/tmp/acllib_dump.log] : 76 msec
+[ debugsh_component_dump sai_mptnl ] : 4203 msec
+[ save_file:/tmp/sai_mptnl_dump.log] : 78 msec
+[ debugsh_component_dump sai_vlan ] : 1143 msec
+[ save_file:/tmp/sai_vlan_dump.log] : 83 msec
+[ debugsh_component_dump sai_vlanstack ] : 2822 msec
+[ save_file:/tmp/sai_vlanstack_dump.log] : 79 msec
+[ debugsh_component_dump sai_isogrp ] : 6396 msec
+[ save_file:/tmp/sai_isogrp_dump.log] : 168 msec
+[ debugsh_component_dump sai_lvtep ] : 5632 msec
+[ save_file:/tmp/sai_lvtep_dump.log] : 155 msec
+[ debugsh_component_dump sai_acl ] : 3233 msec
+[ save_file:/tmp/sai_acl_dump.log] : 76 msec
+[ debugsh_component_dump sai_sdkapicnt ] : 512 msec
+[ save_file:/tmp/sai_sdkapicnt_dump.log] : 77 msec
+[ debugsh_component_dump sai_ipmcgrp ] : 3051 msec
+[ save_file:/tmp/sai_ipmcgrp_dump.log] : 73 msec
+[ debugsh_component_dump mclag ] : 595 msec
+[ save_file:/tmp/mclag_dump.log] : 96 msec
+[ debugsh_component_dump vrrpmgrd ] : 465 msec
+[ save_file:/tmp/vrrpmgrd_dump.log] : 74 msec
+[ debugsh_component_dump neighsyncd ] : 2733 msec
+[ save_file:/tmp/neighsyncd_dump.log] : 78 msec
+[ debugsh_component_dump intfmgrd ] : 998 msec
+[ save_file:/tmp/intfmgrd_dump.log] : 103 msec
+[ debugsh_component_dump pbforchagent ] : 3251 msec
+[ save_file:/tmp/pbforchagent_dump.log] : 150 msec
+[ debugsh_component_dump coppmgrd ] : 1413 msec
+[ save_file:/tmp/coppmgrd_dump.log] : 74 msec
+[ debugsh_component_dump nbrmgrd ] : 1795 msec
+[ save_file:/tmp/nbrmgrd_dump.log] : 75 msec
+[ debugsh_component_dump ports ] : 923 msec
+[ save_file:/tmp/ports_dump.log] : 74 msec
+[ debugsh_component_dump teammgrd ] : 462 msec
+[ save_file:/tmp/teammgrd_dump.log] : 72 msec
+[ debugsh_component_dump vlanmgrd ] : 939 msec
+[ save_file:/tmp/vlanmgrd_dump.log] : 75 msec
+[ debugsh_component_dump portsorch ] : 940 msec
+[ save_file:/tmp/portsorch_dump.log] : 75 msec
+[ debugsh_component_dump intforchagent ] : 932 msec
+[ save_file:/tmp/intforchagent_dump.log] : 77 msec
+[ debugsh_component_dump dhcprelaymgrd ] : 452 msec
+[ save_file:/tmp/dhcprelaymgrd_dump.log] : 76 msec
+[ Total time (ignoring the time taken for final compression) ] : 0h:15m:2s

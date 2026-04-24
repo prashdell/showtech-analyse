@@ -1,0 +1,53 @@
+BFD statistics:
+-----------------
+
+Tx statistics:
+-----------------
+Max Tx thread schedule delay(ms)      : 91
+Tx thread schedule crossed 20ms       : 55436
+Max Tx thread func schedule delay(ms) : 115
+Tx thread func schedule crossed 20ms  : 55510
+Max Tx Mutex get delay(ms)            : 28
+Tx Mutex get crossed 20ms             : 2
+Max Tx Mutex release delay(ms)        : 81
+Tx Mutex release crossed 20ms         : 29295
+Max Tx thread sleep delay(ms)         : 56
+ Tx thread sleep crossed 20ms         : 4101
+Max Txq setup delay(ms)               : 26
+Txq setup crossed 20ms                : 54
+Tx thread sleep interrupted           : 0
+Tx thread sleep ret with error        : 0
+Max Tx pkts per sched                 : 6
+Tx pkts per sched crossed 10          : 0
+Control Packet Tx Failed              : 0
+Control Packet Tx Partial             : 0
+
+Rx statistics:
+-----------------
+Max Rx schedule delay(ms)             : 292
+ Rx schedule crossed 20ms             : 10467717
+
+Socket statistics:
+-----------------
+Max socket read delay(ms)             : 32
+Socket read crossed 5ms               : 6255
+Max socket write(burst) delay(ms)     : 76
+Socket write(burst) crossed 5ms       : 55906
+
+Session statistics:
+-----------------
+Max session exceeded                  : 0
+
+BFD TW stats:
+-----------------
+Txq list count: 6
+Bank index: 0, Node count 0
+Bank index: 1, Node count 0
+Bank index: 2, Node count 0
+Bank index: 3, Node count 0
+Bank index: 4, Node count 0
+Bank index: 5, Node count 0
+Bank index: 6, Node count 0
+Bank index: 7, Node count 1
+Bank index: 8, Node count 0
+Bank index: 9, Node count 1

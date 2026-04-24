@@ -1,0 +1,34 @@
+{
+  "lesson_id": "lesson_resource_exhaustion_triage_20260424_142251",
+  "skill_name": "sonic_resource_exhaustion_triage",
+  "lesson_type": "resource_exhaustion",
+  "content": {
+    "success_patterns": [
+      "system_load_pattern",
+      "process_resource_pattern",
+      "container_resource_pattern",
+      "memory_failure_pattern",
+      "memory_leak_pattern",
+      "multi_instance_resource_pattern",
+      "resource_prediction_pattern",
+      "performance_impact_pattern"
+    ],
+    "context_factors": {
+      "archive_intelligence": "284_archive_production_intelligence",
+      "confidence_range": "92-98%",
+      "resource_events": "2-4_events_per_instance",
+      "cpu_exhaustion": "3-6_per_instance",
+      "memory_exhaustion": "6-10_per_instance",
+      "service_specific_issues": {
+        "syncd": "memory_leaks_cpu_exhaustion",
+        "orchagent": "memory_growth_cpu_spikes",
+        "bgp": "cpu_exhaustion_memory_leaks"
+      }
+    }
+  },
+  "confidence": 0.94,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:22:51.598089",
+  "execution_time": 4.7,
+  "captured_by": "comprehensive_analysis"
+}

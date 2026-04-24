@@ -1,0 +1,150 @@
+****************************************************************************
+intfmgrd techsupport dump begin at Mon 16 Mar 2026 06:07:36 AM GMT
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c INTFMGRD -e show system internal intfmgr global
+--------------------------------------------------------------------
+System MAC: b4:e9:b8:e7:ce:02
+System MAC based EUI64 IPv6 LL: fe80::b6e9:b8ff:fee7:ce02/64
+
+Unnumbered Interface Map:
+-------------------------------------
+Unnumbered Donor Interface Map: 
+-------------------------------------
+Subinterface List: 
+-------------------------------------
+Ready Intf Count 10 Total Intf: 10
+Intf Info: 
+  If:Vlan1120 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:fe80::b6e9:b8ff:fee7:ce02/64
+ IPList: 10.90.30.177/28,
+  If:Vlan1120|10.90.30.177/28 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:
+ IPList: 
+  If:Vlan2000 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:fe80::b6e9:b8ff:fee7:ce02/64
+ IPList: 10.90.30.159/31,
+  If:Vlan2000|10.90.30.159/31 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:
+ IPList: 
+  If:Vlan802 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:fe80::b6e9:b8ff:fee7:ce02/64
+ IPList: 10.99.100.132/28,
+  If:Vlan802|10.99.100.132/28 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:
+ IPList: 
+  If:Vlan803 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:fe80::b6e9:b8ff:fee7:ce02/64
+ IPList: 10.92.30.67/29,
+  If:Vlan803|10.92.30.67/29 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:
+ IPList: 
+  If:Vlan809 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:fe80::b6e9:b8ff:fee7:ce02/64
+ IPList: 10.92.30.235/29,
+  If:Vlan809|10.92.30.235/29 is_ready:true ovrf: vrf: unnum:false donor: IPv6_use_LL:false IPv6:Disabled LL:
+ IPList: 
+-------------------------------------
+App Intf FV Cache: 
+  If: Ethernet0 admin: up oper: 000 MTU: 9100
+  If: Ethernet1 admin: up oper: 000 MTU: 9100
+  If: Ethernet10 admin: up oper: 000 MTU: 9100
+  If: Ethernet11 admin: up oper: 000 MTU: 9100
+  If: Ethernet12 admin: up oper: 000 MTU: 9100
+  If: Ethernet13 admin: up oper: 000 MTU: 9100
+  If: Ethernet14 admin: up oper: 000 MTU: 9100
+  If: Ethernet15 admin: up oper: 000 MTU: 9100
+  If: Ethernet16 admin: up oper: 000 MTU: 9100
+  If: Ethernet17 admin: up oper: 000 MTU: 9100
+  If: Ethernet18 admin: up oper: 000 MTU: 9100
+  If: Ethernet19 admin: up oper: 000 MTU: 9100
+  If: Ethernet2 admin: up oper: 000 MTU: 9100
+  If: Ethernet20 admin: up oper: 000 MTU: 1500
+  If: Ethernet21 admin: up oper: 000 MTU: 1500
+  If: Ethernet22 admin: up oper: 000 MTU: 1500
+  If: Ethernet23 admin: down oper: 000 MTU: 9100
+  If: Ethernet24 admin: down oper: 000 MTU: 9100
+  If: Ethernet25 admin: down oper: 000 MTU: 9100
+  If: Ethernet26 admin: down oper: 000 MTU: 9100
+  If: Ethernet27 admin: up oper: 000 MTU: 4444
+  If: Ethernet28 admin: down oper: 000 MTU: 9100
+  If: Ethernet29 admin: down oper: 000 MTU: 9100
+  If: Ethernet3 admin: up oper: 000 MTU: 9100
+  If: Ethernet30 admin: down oper: 000 MTU: 9100
+  If: Ethernet31 admin: down oper: 000 MTU: 9100
+  If: Ethernet32 admin: down oper: 000 MTU: 9100
+  If: Ethernet33 admin: down oper: 000 MTU: 9100
+  If: Ethernet34 admin: down oper: 000 MTU: 9100
+  If: Ethernet35 admin: down oper: 000 MTU: 9100
+  If: Ethernet36 admin: down oper: 000 MTU: 9100
+  If: Ethernet37 admin: down oper: 000 MTU: 9100
+  If: Ethernet38 admin: down oper: 000 MTU: 9100
+  If: Ethernet39 admin: down oper: 000 MTU: 9100
+  If: Ethernet4 admin: up oper: 000 MTU: 9100
+  If: Ethernet40 admin: down oper: 000 MTU: 9100
+  If: Ethernet41 admin: down oper: 000 MTU: 9100
+  If: Ethernet42 admin: down oper: 000 MTU: 9100
+  If: Ethernet43 admin: down oper: 000 MTU: 9100
+  If: Ethernet44 admin: down oper: 000 MTU: 9100
+  If: Ethernet45 admin: down oper: 000 MTU: 9100
+  If: Ethernet46 admin: down oper: 000 MTU: 9100
+  If: Ethernet47 admin: down oper: 000 MTU: 9100
+  If: Ethernet48 admin: up oper: 000 MTU: 9100
+  If: Ethernet5 admin: up oper: 000 MTU: 9100
+  If: Ethernet52 admin: down oper: 000 MTU: 9100
+  If: Ethernet56 admin: up oper: 000 MTU: 9100
+  If: Ethernet6 admin: down oper: 000 MTU: 9100
+  If: Ethernet60 admin: down oper: 000 MTU: 9100
+  If: Ethernet64 admin: down oper: 000 MTU: 9100
+  If: Ethernet68 admin: down oper: 000 MTU: 9100
+  If: Ethernet7 admin: down oper: 000 MTU: 9100
+  If: Ethernet72 admin: down oper: 000 MTU: 9100
+  If: Ethernet76 admin: down oper: 000 MTU: 9100
+  If: Ethernet8 admin: up oper: 000 MTU: 9100
+  If: Ethernet9 admin: down oper: 000 MTU: 9100
+  If: PortChannel100 admin: up oper: 010 MTU: 9100
+  If: Vlan1101 admin:  oper: 110 MTU: 
+  If: Vlan1102 admin:  oper: 110 MTU: 
+  If: Vlan1120 admin:  oper: 110 MTU: 
+  If: Vlan2000 admin:  oper: 110 MTU: 
+  If: Vlan677 admin:  oper: 110 MTU: 
+  If: Vlan678 admin:  oper: 110 MTU: 
+  If: Vlan802 admin:  oper: 110 MTU: 
+  If: Vlan803 admin:  oper: 110 MTU: 
+  If: Vlan809 admin:  oper: 110 MTU: 
+-------------------------------------
+-------------------------------------
+-----------PROFILE DUMP--------------
+-------------------------------------
+Function                       Count      Time(sec) 
+--------                       -----      --------- 
+*************** Profiling data ***************
+End to End Execution time: 102.89 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.453s
+user	0m0.298s
+sys	0m0.040s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c INTFMGRD -e show system internal sagmgr
+--------------------------------------------------------------------
+Show SAG Cache table
+Configured GWMAC: 00:00:00:00:00:00
+System MAC: b4:e9:b8:e7:ce:02 System IPv6 LL: fe80::b6e9:b8ff:fee7:ce02/64 SAG IPv6 LL:NOT CONFIGURED
+IPv4 GWMAC Enabled: False
+IPv6 GWMAC Enabled: False
+*************** Profiling data ***************
+End to End Execution time: 103.40 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.538s
+user	0m0.302s
+sys	0m0.045s
+
+
+
+
+
+****************************************************************************
+intfmgrd techsupport dump ended at Mon 16 Mar 2026 06:07:37 AM GMT
+****************************************************************************

@@ -1,0 +1,17 @@
+[Unit]
+Description=Control Plane ACL configuration daemon
+Requires=updategraph.service database.service
+After=updategraph.service database.service
+BindsTo=sonic.target
+After=sonic.target
+StartLimitIntervalSec=1200
+StartLimitBurst=20
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/caclmgrd
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=sonic.target

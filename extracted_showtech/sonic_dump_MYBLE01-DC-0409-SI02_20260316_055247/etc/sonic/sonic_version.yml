@@ -1,0 +1,10 @@
+build_version: '4.5.1-Enterprise_Standard'
+debian_version: '11.11'
+kernel_version: '5.10.0-35-amd64'
+asic_type: broadcom
+commit_id: '7ef4c1a1eb'
+build_date: Tue Oct 21 06:17:22 UTC 2025
+build_number: 0
+built_by: sonicbld@bld-lvn-csg-01
+config_db_version: version_4_5_3
+original_version: '4.5.1-Enterprise_Base'

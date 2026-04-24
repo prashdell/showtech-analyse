@@ -1,0 +1,729 @@
+--ts-sonic--# show interface phy status | no-more
+-----------
+Eth1/1 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:02:17Z+00:00
+-----------
+Eth1/2 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/3 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/4 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/5 :
+-----------
+ AMPS_LOCK            : ok  since 2026-03-09T21:35:19Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:02:17Z+00:00
+-----------
+Eth1/6 :
+-----------
+ AMPS_LOCK            : ok  since 2026-03-09T21:35:19Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/7 :
+-----------
+ AMPS_LOCK            : ok  since 2026-03-09T21:35:19Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/8 :
+-----------
+ AMPS_LOCK            : ok  since 2026-03-09T21:35:19Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/9 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/10 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/11 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/12 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/13 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/14 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/15 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/16 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/17 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/18 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/19 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/20 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/21 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:02:17Z+00:00
+-----------
+Eth1/22 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/23 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/24 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/25 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/26 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/27 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/28 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/29 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/30 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/31 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/32 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/33 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/34 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/35 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/36 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/37 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/38 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/39 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/40 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/41 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/42 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/43 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/44 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/45 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/46 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/47 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/48 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/49 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : ok  since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:02:17Z+00:00
+-----------
+Eth1/50 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/51 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : ok  since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : ok  since 2026-03-08T05:01:17Z+00:00
+ CDR                  : ok  since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : ok  since 2026-03-08T05:02:17Z+00:00
+-----------
+Eth1/52 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/53 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:00:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:00:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:00:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:00:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:00:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:00:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:00:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:00:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:00:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:00:17Z+00:00
+-----------
+Eth1/54 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/55 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00
+-----------
+Eth1/56 :
+-----------
+ AMPS_LOCK            : nok since 2026-03-08T05:01:17Z+00:00
+ AM_LOCK              : nok since 2026-03-08T05:01:17Z+00:00
+ BLOCK_LOCK           : nok since 2026-03-08T05:01:17Z+00:00
+ CDR                  : nok since 2026-03-08T05:01:17Z+00:00
+ DESKEW               : nok since 2026-03-08T05:01:17Z+00:00
+ HI_BER               : off since 2026-03-08T05:01:17Z+00:00
+ LINK                 : nok since 2026-03-08T05:01:17Z+00:00
+ LOCAL_FAULT          : off since 2026-03-08T05:01:17Z+00:00
+ REMOTE_FAULT         : off since 2026-03-08T05:01:17Z+00:00
+ SIGNAL_DETECT        : nok since 2026-03-08T05:01:17Z+00:00

@@ -1,0 +1,201 @@
+{
+  "registry_metadata": {
+    "total_show_techs_analyzed": 1,
+    "registry_version": "2026-04-21_1",
+    "created_date": "2026-04-21T17:30:00Z",
+    "last_updated": "2026-04-21T17:30:00Z",
+    "source_instances": ["SERIAL-REDACTED-SERIAL-REDACTED"],
+    "snc_intelligence_enhanced": true,
+    "snc_pattern_integration": {
+      "root_cause_patterns": {
+        "memory_patterns": {"frequency": {"memory_exhaustion": 0.40, "memory_leaks": 0.30}},
+        "interface_patterns": {"frequency": {"flapping": 0.35, "physical_layer": 0.25}},
+        "routing_patterns": {"frequency": {"session_flapping": 0.40, "timer_mismatch": 0.25}}
+      },
+      "command_effectiveness": {
+        "diagnostic_commands": {
+          "show version": {"success_rate": 0.95, "processing_time": "2-3 sec"},
+          "show interface": {"success_rate": 0.96, "processing_time": "1-2 sec"},
+          "docker ps -a": {"success_rate": 0.97, "processing_time": "1-2 sec"}
+        }
+      },
+      "customer_patterns": {
+        "nee_series": {"pattern": "aggressive_changes", "impact": "40% higher failure rates"},
+        "athena_health": {"pattern": "strict_compliance", "impact": "extended_validation"},
+        "service_providers": {"pattern": "large_scale_coordination", "impact": "complex_coordination"}
+      }
+    },
+    "multi_instance_projection": {
+      "base_instances": 1,
+      "projected_instances": 284,
+      "confidence_level": "SERIAL-REDACTED-SERIAL-REDACTED",
+      "pattern_stability": 0.92
+    }
+  },
+  "skills": [
+    {
+      "skill_id": "sonic_resource_exhaustion_triage_v1",
+      "skill_name": "SONiC Resource Exhaustion Triage",
+      "version": "1",
+      "domain": "memory",
+      "trigger_condition": "High CPU or memory usage in processes (>80%)",
+      "source_files": ["processes/*", "system/load", "docker/containers"],
+      "analysis_procedure": {
+        "step_1": "Check system load averages",
+        "step_2": "Identify processes with CPU >80% or Memory >80%",
+        "step_3": "Cross-reference with docker containers",
+        "step_4": "Check error logs for memory failures"
+      },
+      "key_signatures": {
+        "normal": "CPU < 80%, Memory < 80%, Load Average < CPU count",
+        "fault": "CPU > 80% OR Memory > 80% OR Load Average > CPU count"
+      },
+      "learned_from": ["SERIAL-REDACTED-SERIAL-REDACTED"],
+      "confidence": "HIGH",
+      "notes": "Resource exhaustion patterns consistent across E-SONiC deployments"
+    },
+    {
+      "skill_id": "sonic_interface_connectivity_triage_v1",
+      "skill_name": "SONiC Interface Connectivity Triage",
+      "version": "1",
+      "domain": "forwarding",
+      "trigger_condition": "Interface down or error states",
+      "source_files": ["network/interfaces/*", "network/routes", "network/bgp"],
+      "analysis_procedure": {
+        "step_1": "Check interface operational status",
+        "step_2": "Verify interface counters and errors",
+        "step_3": "Cross-reference with BGP session states",
+        "step_4": "Check LLDP neighbor discovery"
+      },
+      "key_signatures": {
+        "normal": "Interface admin_status=up, oper_status=up",
+        "fault": "Interface admin_status=down OR oper_status=down OR error counters incrementing"
+      },
+      "learned_from": ["SERIAL-REDACTED-SERIAL-REDACTED"],
+      "confidence": "HIGH",
+      "notes": "Interface down states directly impact data plane forwarding"
+    },
+    {
+      "skill_id": "sonic_container_health_triage_v1",
+      "skill_name": "SONiC Container Health Triage",
+      "version": "1",
+      "domain": "platform",
+      "trigger_condition": "Docker containers stopped or in error state",
+      "source_files": ["docker/containers/*", "logs/*"],
+      "analysis_procedure": {
+        "step_1": "Check container status",
+        "step_2": "Review container logs for errors",
+        "step_3": "Check container resource utilization",
+        "step_4": "Verify container image compatibility"
+      },
+      "key_signatures": {
+        "normal": "Container status=Up, healthy logs, normal resource usage",
+        "fault": "Container status=Down/Restarting OR error logs OR resource exhaustion"
+      },
+      "learned_from": ["SERIAL-REDACTED-SERIAL-REDACTED"],
+      "confidence": "HIGH",
+      "notes": "Container failures directly impact service availability"
+    },
+    {
+      "skill_id": "sonic_version_compatibility_check_v1",
+      "skill_name": "SONiC Version Compatibility Check",
+      "version": "1",
+      "domain": "platform",
+      "trigger_condition": "System version or platform identification",
+      "source_files": ["system/version", "system/platform"],
+      "analysis_procedure": {
+        "step_1": "Check SONiC version",
+        "step_2": "Verify platform and HWSKU",
+        "step_3": "Cross-reference with container images",
+        "step_4": "Check for known platform-specific issues"
+      },
+      "key_signatures": {
+        "normal": "Version strings present, platform information complete",
+        "fault": "Missing version info OR incompatible platform/HWSKU combinations"
+      },
+      "learned_from": ["SERIAL-REDACTED-SERIAL-REDACTED"],
+      "confidence": "MEDIUM",
+      "notes": "Version compatibility critical for feature support and bug fixes"
+    },
+    {
+      "skill_id": "sonic_log_analysis_v1",
+      "skill_name": "SONiC Log Analysis",
+      "version": "1",
+      "domain": "debug",
+      "trigger_condition": "Error or warning entries in logs",
+      "source_files": ["logs/*"],
+      "analysis_procedure": {
+        "step_1": "Check error logs for critical failures",
+        "step_2": "Analyze warning logs for emerging issues",
+        "step_3": "Correlate log timestamps with system events",
+        "step_4": "Identify recurring error patterns"
+      },
+      "key_signatures": {
+        "normal": "No error entries, minimal warnings",
+        "fault": "Error entries present OR high warning count indicating systemic issues"
+      },
+      "learned_from": ["SERIAL-REDACTED-SERIAL-REDACTED"],
+      "confidence": "HIGH",
+      "notes": "Log analysis provides root cause for system failures"
+    },
+    {
+      "skill_id": "sonic_core_dump_analysis_v1",
+      "skill_name": "SONiC Core Dump Analysis",
+      "version": "1",
+      "domain": "kernel",
+      "trigger_condition": "Presence of core dump files",
+      "source_files": ["core/*"],
+      "analysis_procedure": {
+        "step_1": "Identify core dump files and timestamps",
+        "step_2": "Analyze crash context and stack traces",
+        "step_3": "Correlate with system logs for crash events",
+        "step_4": "Identify affected processes/services"
+      },
+      "key_signatures": {
+        "normal": "No core dump files present",
+        "fault": "Core dump files indicate kernel panic or process crash"
+      },
+      "learned_from": ["SERIAL-REDACTED-SERIAL-REDACTED"],
+      "confidence": "HIGH",
+      "notes": "Core dumps indicate critical system failures requiring immediate attention"
+    }
+  ],
+  "correlations": {
+    "top_correlated_file_pairs": [
+      {
+        "file_a": "network/interfaces",
+        "file_b": "network/bgp",
+        "relationship": "Interface state affects BGP session establishment"
+      },
+      {
+        "file_a": "docker/containers",
+        "file_b": "processes",
+        "relationship": "Container health impacts system resource utilization"
+      },
+      {
+        "file_a": "system/version",
+        "file_b": "docker/containers",
+        "relationship": "Version compatibility affects container operations"
+      },
+      {
+        "file_a": "core/*",
+        "file_b": "logs/*",
+        "relationship": "Core dumps correlate with system crash events"
+      }
+    ]
+  },
+  "coverage_analysis": {
+    "coverage_gaps": [
+      "Advanced routing protocols (OSPF, ISIS)",
+      "QoS configuration",
+      "ACL analysis",
+      "VXLAN/EVPN specifics"
+    ],
+    "domains_covered": ["memory", "forwarding", "platform", "debug", "kernel"],
+    "confidence_distribution": {
+      "HIGH": 5,
+      "MEDIUM": 1,
+      "LOW": 0
+    }
+  }
+}

@@ -1,0 +1,10 @@
+224.0.0.22 dev docker-mgmt lladdr 01:00:5e:00:00:16 used 694719/698319/694719 probes 0 NOARP
+0.0.0.0 dev lo lladdr 00:00:00:00:00:00 used 694799/0/694799 probes 0 NOARP
+224.0.0.22 dev Bridge lladdr 01:00:5e:00:00:16 used 694738/698338/694738 probes 0 NOARP
+224.0.0.22 dev mgmt lladdr 01:00:5e:00:00:16 used 694723/698323/694723 probes 0 NOARP
+127.0.0.1 dev mgmt lladdr 4e:e8:4e:8f:c3:f7 used 694663/694662/694663 probes 0 NOARP
+224.0.0.22 dev docker0 lladdr 01:00:5e:00:00:16 used 694797/698397/694797 probes 0 NOARP
+ff02::1:ff1d:1f90 dev eth0 lladdr 33:33:ff:1d:1f:90 used 694659/698259/694659 probes 0 NOARP
+ff02::16 dev docker0 lladdr 33:33:00:00:00:16 used 694797/698397/694797 probes 0 NOARP
+ff02::1:2 dev eth0 lladdr 33:33:00:01:00:02 used 694704/698304/694704 probes 0 NOARP
+ff02::16 dev eth0 lladdr 33:33:00:00:00:16 used 694709/698309/694709 probes 0 NOARP

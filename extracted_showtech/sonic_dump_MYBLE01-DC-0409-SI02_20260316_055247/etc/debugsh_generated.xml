@@ -1,0 +1,2355 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CLISH_MODULE xmlns="http://www.dellemc.com/sonic/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:schemaLocation="http://www.dellemc.com/sonic/XMLSchema http://www.dellemc.com/sonic/XMLSchema/clish.xsd">
+ <!--=======================================================-->
+  <PTYPE name="DEBUGSH_INTFNAME" method="regexp" help="Ethernet0..256|PortChannel0..9999|Vlan1..4094" pattern="((Ethernet([0-9]|([1-9][0-9])|([1][0-9][0-9])|([2][0-5][0-6])))|(PortChannel([0]|(([1-9]){1,4})))|(Vlan([1-9]|([1-9][0-9])|([1-9][0-9][0-9])|([1..3][0-9][0-9][0-9])|([4][0][0-9][0-4]))))"/>
+  <PTYPE name="DEBUGSH_IPV4ADDRESS" method="regexp" help="IPV4ADDRESS" pattern="(^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$)"/>
+  <PTYPE name="DEBUGSH_VLANID" method="integer" help="1..4094" pattern="1..4094"/>
+  <PTYPE name="DEBUGSH__1000_60000" method="integer" help="1000..60000" pattern="1000..60000"/>
+  <PTYPE name="DEBUGSH__1_255" method="integer" help="1..255" pattern="1..255"/>
+  <PTYPE name="DEBUGSH__4_65535" method="integer" help="4..65535" pattern="4..65535"/>
+
+ <!--=======================================================-->
+ <VIEW name="debugsh-view">
+  <COMMAND name="clear" help="Clear command">
+  </COMMAND>
+  <COMMAND name="clear system" help="System debug command">
+  </COMMAND>
+  <COMMAND name="clear system internal" help="Command for internal use only">
+  </COMMAND>
+  <COMMAND name="clear system internal fdbsync" help="Fdbsync Services daemon">
+    <PARAM name="netlink" help="Netlink" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="counter" help="counter" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh fdbsyncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="clear system internal orchagent" help="Orchagent related commands">
+   <PARAM name="orchagentchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="copp" help="Copp Orchagent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="policers" help="Clear Policers data" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Policer Name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+    </PARAM>
+    <PARAM name="policer" help="clear policer statisticsPolicer Orchagent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="statistics" help="Policer Name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh orchagent ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="clear system internal sai" help="SAI Debug commands">
+    <PARAM name="sdk-api" help="sdk-api commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="cnt" help="Counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh syncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="clear system internal vlan" help="Vlan">
+    <PARAM name="ifp" help="IFP Drop Counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="drop" help="Counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="counters" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh syncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="debug" help="Debug command">
+  </COMMAND>
+  <COMMAND name="debug system" help="System debug command">
+  </COMMAND>
+  <COMMAND name="debug system internal" help="Command for internal use only">
+  </COMMAND>
+  <COMMAND name="debug system internal acllogd" help="ACL Logging daemon">
+   <PARAM name="acllogdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="start" help="Start logging" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="stop" help="Stop logging" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh acllogd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="debug system internal aclsvcd" help="ACL Services daemon">
+    <PARAM name="interface" help="Interface information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="capabilities" help="Capabilities information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Interface name" mode="common" ptype="STRING" optional="false">
+         <PARAM name="NAMEchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+          <PARAM name="auth-disable" help="Disable authentication" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          </PARAM>
+          <PARAM name="auth-enable" help="Enable authentication" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            <PARAM name="auth-open" help="Open authentication" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+            </PARAM>
+          </PARAM>
+         </PARAM>
+        </PARAM>
+      </PARAM>
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh aclsvcd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="debug system internal dhcprelaymgr" help="DhcpRelayMgr related commands">
+   <PARAM name="dhcprelaymgrchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="disable" help="Disable debug information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="enable" help="Enable debug information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh dhcprelaymgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="debug system internal fdbsync" help="Fdbsync Services daemon">
+    <PARAM name="netlink" help="Netlink" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="imet_mac" help="track imet and mac add/del" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="imet_macchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="disable" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="enable" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh fdbsyncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="debug system internal logger" help="Logger">
+   <PARAM name="loggerchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="acllogd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="acllogdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="componentchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="AclLog" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="aclsvcd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="aclsvcdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="componentchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="AclFeatMgr" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+        <PARAM name="AclMgr" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+        <PARAM name="FbsMgr" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+        <PARAM name="IntfMgr" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="arsmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="arsmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="coppmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="coppmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="dhcprelaymgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="dhcprelaymgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="evpnmhmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="evpnmhmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="fdbsyncd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="fdbsyncdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="intfmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="intfmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="nbrmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="nbrmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="neighsyncd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="neighsyncdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="orchagent" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="orchagentchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="componentchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="AclLogOrch" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+        <PARAM name="AclOrch" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+        <PARAM name="IntfTrackOrch" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+        <PARAM name="PbfOrch" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="srv6mgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="srv6mgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="stpmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="stpmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="syncd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="syncdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="teammgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="teammgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="teamsyncd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="teamsyncdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="vlanmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="vlanmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="vrrpmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="vrrpmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="vxlanmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="vxlanmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="component" help="Subcomponent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="Debugsh" help="Subcomponent name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+           <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+            <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="level" help="Set logging level" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="levelchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="crit" help="Set level to critical" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="debug" help="Set level to debug" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="emerg" help="Set level to emergency" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="error" help="Set level to error" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="info" help="Set level to info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="notice" help="Set level to notice" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="warn" help="Set level to warning" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh ${loggerchoice} ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="debug system internal orchagent" help="Orchagent related commands">
+    <PARAM name="isogroup" help="Isolation group orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="group" help="Isolation group related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="groupchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="create" help="Create Isolation group" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+         <PARAM name="createchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+          <PARAM name="bridge" help="Bridge Port Isolation group" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            <PARAM name="NAME" help="Isolation group name" mode="common" ptype="STRING" optional="false">
+            </PARAM>
+          </PARAM>
+          <PARAM name="port" help="Port Isolation group" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            <PARAM name="NAME" help="Isolation group name" mode="common" ptype="STRING" optional="false">
+            </PARAM>
+          </PARAM>
+         </PARAM>
+        </PARAM>
+        <PARAM name="delete" help="Delete Isolation group" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="NAME" help="Isolation group name" mode="common" ptype="STRING" optional="false">
+          </PARAM>
+        </PARAM>
+        <PARAM name="update" help="Update Isolation group" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="NAME" help="Isolation group Name" mode="common" ptype="STRING" optional="false">
+           <PARAM name="NAMEchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+            <PARAM name="set-bind" help="Set Isolation group Binding" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              <PARAM name="PORTS" help="Port Names which are comma(,) separated" mode="common" ptype="STRING" optional="false">
+              </PARAM>
+            </PARAM>
+            <PARAM name="set-members" help="Set Isolation group member ports" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              <PARAM name="PORTS" help="Port Names which are comma(,) separated" mode="common" ptype="STRING" optional="false">
+              </PARAM>
+            </PARAM>
+           </PARAM>
+          </PARAM>
+        </PARAM>
+       </PARAM>
+      </PARAM>
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh orchagent ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="debug system internal syncd" help="Syncd Services daemon">
+   <PARAM name="syncdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="acl-counter" help="ACL Counter thread related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="polling-interval" help="Set counter polling parameters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="polling-intervalchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="bulk" help="Counter read bulking size" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="Integer(4-65535)" help="Counter read bulking value" mode="common" ptype="DEBUGSH__4_65535" optional="false">
+          </PARAM>
+        </PARAM>
+        <PARAM name="max" help="Set maximum polling interval" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="Integer(1000-60000)" help="Polling interval value in ms" mode="common" ptype="DEBUGSH__1000_60000" optional="false">
+          </PARAM>
+        </PARAM>
+        <PARAM name="min" help="Set minimum polling interval" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="Integer(1000-60000)" help="Polling interval value in ms" mode="common" ptype="DEBUGSH__1000_60000" optional="false">
+          </PARAM>
+        </PARAM>
+        <PARAM name="multiplier" help="Set polling processing time multiplier" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="Integer(1-255)" help="Multiplier value" mode="common" ptype="DEBUGSH__1_255" optional="false">
+          </PARAM>
+        </PARAM>
+       </PARAM>
+      </PARAM>
+    </PARAM>
+    <PARAM name="statistics" help="Statistics" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="statisticschoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="disable" help="disable" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="enable" help="enable" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+     </PARAM>
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh syncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show" help="Show command">
+  </COMMAND>
+  <COMMAND name="show system" help="System debug command">
+  </COMMAND>
+  <COMMAND name="show system internal" help="Command for internal use only">
+  </COMMAND>
+  <COMMAND name="show system internal acllogd" help="ACL Logging daemon">
+   <PARAM name="acllogdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="cache" help="ACL Logging flow cache information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="memory" help="ACL Logging memory information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="metadata" help="ACL Logging metadata information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="state" help="ACL Logging state information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh acllogd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal aclsvcd" help="ACL Services daemon">
+   <PARAM name="aclsvcdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="acl" help="ACL submodule" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="aclchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="details" help="Show all tables" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="metadata" help="ACL Metadata" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="allocation" help="Allocated metdata" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="summary" help="Show all tables" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="table" help="Show table information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ACL Table Name" mode="common" ptype="STRING" optional="false">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="fbs" help="Flow based services" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="fbschoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="bindings" help="Interface bindings" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="classifier" help="Classifier information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Classifier Name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="next-hop-groups" help="Next hop groups" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Group name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="policy" help="Policy information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Policy Name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="replication-groups" help="Next hop groups" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Group name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="features" help="ACL features table allocation" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="interface" help="Interface information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="NAME" help="Interface name" mode="common" ptype="STRING" optional="true">
+      </PARAM>
+    </PARAM>
+    <PARAM name="logging" help="Logging submodule" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="state" help="ACL Logging state" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="memory" help="Show memory information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="redis-events" help="Redis DB events" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="redis-eventschoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="true">
+      <PARAM name="acllog" help="" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+      <PARAM name="aclmgr" help="ACL manager" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+      <PARAM name="fbsmgr" help="FBS Manager" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+      <PARAM name="features" help="ACL Features manager" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+      <PARAM name="interface" help="Interface Manager" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="sip-grp" help="Sip Object Group submodule" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="sip-grpchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="details" help="Show all tables" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="summary" help="Show all tables" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="table" help="Show table information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ACL Table Name" mode="common" ptype="STRING" optional="false">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="trap-grp" help="Trap Group submodule" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="trap-grpchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="details" help="Show all tables" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="table" help="Show table information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ACL Table Name" mode="common" ptype="STRING" optional="false">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="vlan-cls" help="VLAN Classifiers" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="vlan-clschoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="details" help="Show details" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="summary" help="Show summary" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="table" help="Show details by table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Table Name" mode="common" ptype="STRING" optional="false">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh aclsvcd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal coppmgr" help="CoppMgr daemon">
+   <PARAM name="coppmgrchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="feature" help="Feature information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="NAME" help="Feature name" mode="common" ptype="STRING" optional="true">
+      </PARAM>
+    </PARAM>
+    <PARAM name="group" help="Group information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="NAME" help="Group name" mode="common" ptype="STRING" optional="true">
+      </PARAM>
+    </PARAM>
+    <PARAM name="portvlanslist" help="Interface to Vlans information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="trap" help="Trap information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="NAME" help="Trap name" mode="common" ptype="STRING" optional="true">
+      </PARAM>
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh coppmgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal debugsh" help="Debug Shell command">
+   <PARAM name="debugshchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="backend" help="Backend command handler" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="backendchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="acllogd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="aclsvcd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="arsmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="coppmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="dhcprelaymgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="evpnmhmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="fdbsyncd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="intfmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="nbrmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="neighsyncd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="orchagent" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="srv6mgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="stpmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="syncd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="teammgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="teamsyncd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="vlanmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="vrrpmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="vxlanmgrd" help="Component name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="cmdtree" help="Show CLI Tree" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="detail" help="Show details of command tokens" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh ${backendchoice} ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal dhcprelaymgr" help="DhcpRelayMgr related commands">
+    <PARAM name="global" help="Global information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh dhcprelaymgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal fdbsync" help="Fdbsync Services daemon">
+   <PARAM name="fdbsyncchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="counter" help="counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="imet" help="IMET" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="detail" help="Detail" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+    </PARAM>
+    <PARAM name="install_local" help="install local route and get performace" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="local_fdb" help="local i.e state fdb, iccp fdb table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="local_fdbchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="true">
+      <PARAM name="detail" help="Detail" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+      <PARAM name="key" help="local fdb key" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+        <PARAM name="NAME" help="" mode="common" ptype="STRING" optional="false">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="netlink" help="Netlink" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="netlinkchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="counter" help="counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="imet" help="IMET" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="imet key" mode="common" ptype="STRING" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="intf_db" help="Interface DB" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="detail" help="Detail" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="kernel_info" help="kernel info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="kernel_nhg" help="kernel Nhg info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="mac" help="MAC" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="mac key" mode="common" ptype="STRING" optional="false">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="nhg" help="Nexthop group table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="detail" help="Detail" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="nl_temp_info" help="netlink temp info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="vlan_vni_db" help="vlan vni Table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="vxlan_fdb" help="Vxlan fdb table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="vxlan_fdbchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="true">
+      <PARAM name="detail" help="Detail" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+      <PARAM name="key" help="fdb_key" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+        <PARAM name="NAME" help="Vxlan fdb key" mode="common" ptype="STRING" optional="false">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh fdbsyncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal intfmgr" help="intfmgr related commands">
+    <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh intfmgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal logger" help="Logger">
+   <PARAM name="loggerchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="acllogd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="aclsvcd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="arsmgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="coppmgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="dhcprelaymgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="evpnmhmgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="fdbsyncd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="intfmgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="nbrmgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="neighsyncd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="orchagent" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="srv6mgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="stpmgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="syncd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="teammgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="teamsyncd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="vlanmgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="vrrpmgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="vxlanmgrd" help="Show logging levels and output for component" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh ${loggerchoice} ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal nbrmgrd" help="nbrmgrd related commands">
+   <PARAM name="nbrmgrdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="fdbCache" help="Fdb Cache in nbrmgrd" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="fdbNeighRefresh" help="Neigh Refresh due to fdb miss" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="interface" help="Interface Table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="neighCache" help="Neighbor Refresh Cache" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="staticNeighCache" help="Static Neighbor Local Cache" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh nbrmgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal neighsyncd" help="Neighsyncd related commands">
+   <PARAM name="neighsyncdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="intfCache" help="Local Interface Cache" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="neighCache" help="Local Neighbor Cache" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh neighsyncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal orchagent" help="Orchagent related commands">
+   <PARAM name="orchagentchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="acl" help="ACL orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="aclchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="action-meta-data" help="ACL action profiles" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ACL profile name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="action-profile" help="ACL action profiles" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ACL profile name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="counters" help="ACL Counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ACL Counters Name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="key-profile" help="ACL Key profiles" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="table" help="ACL key profile name" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+         <PARAM name="tablechoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+          <PARAM name="custom" help="L3V6 table specific profiles" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            <PARAM name="profile" help="Default profile details" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+             <PARAM name="profilechoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+              <PARAM name="default" help="PAC profile details" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              </PARAM>
+              <PARAM name="pac" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              </PARAM>
+             </PARAM>
+            </PARAM>
+          </PARAM>
+          <PARAM name="l2" help="Table specific profiles" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            <PARAM name="profile" help="Default profile details" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+             <PARAM name="profilechoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+              <PARAM name="default" help="PAC profile details" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              </PARAM>
+              <PARAM name="pac" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              </PARAM>
+             </PARAM>
+            </PARAM>
+          </PARAM>
+          <PARAM name="l3v4" help="L2 table specific profiles" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            <PARAM name="profile" help="Default profile details" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+             <PARAM name="profilechoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+              <PARAM name="default" help="PAC profile details" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              </PARAM>
+              <PARAM name="pac" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              </PARAM>
+             </PARAM>
+            </PARAM>
+          </PARAM>
+          <PARAM name="l3v6" help="L3 table specific profiles" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            <PARAM name="profile" help="Default profile details" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+             <PARAM name="profilechoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+              <PARAM name="default" help="PAC profile details" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              </PARAM>
+              <PARAM name="pac" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+              </PARAM>
+             </PARAM>
+            </PARAM>
+          </PARAM>
+         </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="table" help="ACL Table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ACL Table Name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="user-trap" help="ACL User defined traps" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="GROUP" help="Trap name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="arsorch" help="ArsOrch" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="arsorchchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="object" help="Dump ars object table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ars object" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="port-binding" help="Dump ars port-bind table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="port" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="port-profile" help="Dump ars port-profile table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ars port-profile" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="port-quality" help="Dump ars port quality" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="port" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="profile" help="Dump ars-profile table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="ars-profile" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="copp" help="Copp Orchagent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="coppchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="l2pt" help="Show L2pt data" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="trap group name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="policers" help="Show Policers data" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Policer Name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="crmorch" help="CrmOrch" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="counters" help="Dump CrmOrch Counter Cache" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="delayrestore" help="Delay restore debug command" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="global" help="Global information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="iftrack" help="Interface tracking orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="iftrackchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="downstream" help="Tracking group downstream ports commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="INTFNAME" help="Interface Name" mode="common" ptype="DEBUGSH_INTFNAME" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="global" help="Global information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="group" help="Tracking group related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Name of Tracking Group" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="intf" help="Interface cmds" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="intfchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="cache" help="cache mem dump" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="vid-rid-map" help="VID RID Mapping" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="isogroup" help="Isolation group orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="group" help="Isolation group related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Name of Isolation Group" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+    </PARAM>
+    <PARAM name="l2nhg" help="l2nhg orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="lvtep" help="Lvtep orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="global" help="Lvtep global info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="mlag" help="Mlag orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="global" help="Mlag global info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="nhgorch" help="NhgOrch" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="nhgorchchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="ars-stats" help="Dump Nexthop-Group ARS Stats" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Nexthop-Group" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="nexthop-group" help="Dump Nexthop-Group Table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Nexthop-Group" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="nhid-map" help="Dump fpm and zebra nhid map" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="protection-nhg" help="Dump Protection Nexthop-Group Table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Protection-Nexthop-Group" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="rh-nexthop-group" help="Dump RH-Nexthop-Group Table" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Nexthop-Group" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="pbf" help="Policy based forwarding orchagent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="pbfchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="egress" help="Egress entries" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="entries" help="Egress entries" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="fdb" help="FDB entries" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="entries" help="FDB entries" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="group" help="PBF group commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Group name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="memory" help="Show memory usage" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="neighbor" help="Neighbor entries" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="entries" help="Neighbor entries" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="nh-group" help="PBF next-hop group commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Group name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="replication-group" help="PBF replication group commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Group name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="policer" help="Policer Orchagent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="policerchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="policers" help="Show Policers data" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="policerschoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="true">
+        <PARAM name="named" help="Show Named policers" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          <PARAM name="NAME" help="Policer Name" mode="common" ptype="STRING" optional="false">
+          </PARAM>
+        </PARAM>
+        <PARAM name="storm-control" help="Show strom control policers" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="statistics" help="Show Policer statistics" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Show strom control policers" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="ports" help="Ports Orchagent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="pending_tasks" help="Show pending tasks" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="profile" help="Orch profile related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="data" help="Orchagent Profile Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="qosorch" help="QoS Orchagent" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="qosorchchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="active_bind_list" help="Show QoS active_bind_list" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="maps" help="Show QoS maps" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="pending_bind_list" help="Show QoS pending_bind_list" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="wred-profiles" help="Show QoS WRED maps" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Profile name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="srv6" help="SRv6 orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="global" help="SRv6 global info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="stp" help="STP orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="global" help="STP global info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="vrf" help="VrfOrch" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="vrfchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="id" help="Get VRF details by sai object id" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="VRFID" help="sai object id" mode="common" ptype="STRING" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="name" help="Get VRF details by name" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="Vrf Name" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="vxlan" help="vxlan orch related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="vxlanchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="diptunnel" help="P2P Tunnel Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="dvni" help="DVNI Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="fdbset" help="FDB set" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="NAME" help="DIP" mode="common" ptype="STRING" optional="false">
+          <PARAM name="PORT" help="number of MACs" mode="common" ptype="STRING" optional="false">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="mapentry" help="Map Entry Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+     </PARAM>
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh orchagent ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal port" help="Port related commands">
+    <PARAM name="if-reasons" help="Dump all reasons saved based on priorities" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh orchagent ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal portsorch" help="Portsorch related commands">
+   <PARAM name="portsorchchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="dump" help="Dump all the port related information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="stack" help="Stack Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="translation" help="Translation Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh orchagent ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal sagmgr" help="sagmgr related commands">
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh intfmgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal sai" help="SAI Debug commands">
+   <PARAM name="saichoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="acl" help="ACL Commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="aclchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="egress" help="Egress ACL" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="port" help="Egress port info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+         <PARAM name="portchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+          <PARAM name="groups" help="All egress port groups" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+            <PARAM name="detail" help="Show details of trunk members" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+            </PARAM>
+          </PARAM>
+          <PARAM name="info" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          </PARAM>
+         </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="tables" help="Display ACL Tables" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="hostif" help="Hostif Commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="l2pt" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="valid" help="No help string defined" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+        </PARAM>
+      </PARAM>
+    </PARAM>
+    <PARAM name="ipmc" help="IPMC Commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="group" help="Ipmc group info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="groupchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="true">
+        <PARAM name="members" help="Ipmc group members info" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+         <PARAM name="memberschoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="true">
+          <PARAM name="nh-based-only" help="Dump NH-based groups information" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+          <PARAM name="nh-intf-db" help="Dump Tunnel-Nh information" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+          <PARAM name="nh-member-db" help="Dump NH Member database" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+          </PARAM>
+         </PARAM>
+        </PARAM>
+        <PARAM name="nh-based-only" help="Dump Nh-based groups information" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+    </PARAM>
+    <PARAM name="iso-grp" help="Isolation group related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="iso-grpchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="groups" help="Isolation group" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="GROUPID" help="Isolation group Object ID" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="members" help="Isolation group members" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="MEMBERID" help="Isolation group member object ID" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="l2-ecmp-grp" help="L2 Ecmp group related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="l2-ecmp-grpchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="groups" help="L2 Ecmp group" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="GROUPID" help="L2 Ecmp group Object ID" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="mac-nbr" help="MAC Nbr" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="dump" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="members" help="L2 Ecmp group members" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="MEMBERID" help="L2 Ecmp group member object ID" mode="common" ptype="STRING" optional="true">
+        </PARAM>
+      </PARAM>
+      <PARAM name="tnlinfo" help="Per Tunnel Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="dump" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="l3resource" help="route" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="lag" help="LAG commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="lagchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="true">
+      <PARAM name="members" help="LAG member info" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+      <PARAM name="valid" help="" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="lvtep" help="Lvtep" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="global" help="Show debug info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="mpls" help="mpls" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="mplschoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="global" help="global" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="globalchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="ilm" help="ilm" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="ilmchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="nhop" help="nhop" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="nhopchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="mptnl" help="Tunnel" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="mptnlchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="cmnsipdip" help="Common SIPDIP Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="cmnsipdipchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="cmntnl" help="Index of both sip and sip/dip" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="cmntnlchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="dip" help="DIP" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="dipchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="IPV4ADDRESS" help="No help string defined" mode="common" ptype="DEBUGSH_IPV4ADDRESS" optional="true">
+          </PARAM>
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="IPV4ADDRESS" help="No help string defined" mode="common" ptype="DEBUGSH_IPV4ADDRESS" optional="true">
+          </PARAM>
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="dvnimapentry" help="Dvni Map Entry" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="dvnimapentrychoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="global" help="Global Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="globalchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="mapentry" help="Map Entry" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="mapentrychoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="nexthopgroup" help="Next-hop-group" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="nexthopgroupchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="nh" help="Next-hop" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="nhchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="route" help="Route Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="routechoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="sip" help="SIP" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="sipchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="srctnliddip" help="SrcTnlId DIP Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="srctnliddipchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="terminator" help="Terminator" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="terminatorchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+      <PARAM name="tnlmap" help="Map" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+       <PARAM name="tnlmapchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+        <PARAM name="brief" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+        <PARAM name="detail" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+       </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="nexthop" help="Next-hop Commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="nexthopchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="true">
+      <PARAM name="ID" help="Display next-hop details for ID" mode="common" ptype="STRING" optional="true">
+      </PARAM>
+      <PARAM name="include-mc-info" help="Display next-hop including multicast info" mode="subcommand" ptype="SUBCOMMAND" optional="true">
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="policer" help="Policer Commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="references" help="Policer references" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="route" help="route" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="sdk-api" help="sdk-api commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      <PARAM name="cnt" help="Counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+    </PARAM>
+    <PARAM name="vlan" help="Vlan" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="vlanchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="hw" help="ASIC Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="dump" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="VLANID" help="" mode="common" ptype="DEBUGSH_VLANID" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="ifp" help="IFP Drop Counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="drop" help="Counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="counters" help="" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+      <PARAM name="sw" help="Software Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="dump" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+          <PARAM name="VLANID" help="" mode="common" ptype="DEBUGSH_VLANID" optional="true">
+          </PARAM>
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="vlanstack" help="Vlan" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="vlanstackchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="fwdinfo" help="Software Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="dump" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="idata" help="Software Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="dump" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="portinfo" help="Software Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="dump" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+      <PARAM name="stackinfo" help="Software Info" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        <PARAM name="dump" help="Dump information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+        </PARAM>
+      </PARAM>
+     </PARAM>
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh syncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal srv6mgr" help="Srv6Mgr related commands">
+    <PARAM name="global" help="Global information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh srv6mgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal stpmgr" help="stpmgr related commands">
+    <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh stpmgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal syncd" help="Syncd Services daemon">
+   <PARAM name="syncdchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="acl-counter" help="ACL Counter thread related commands" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+     <PARAM name="acl-counterchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+      <PARAM name="counters" help="Detailed information about each counters" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+      <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+      </PARAM>
+     </PARAM>
+    </PARAM>
+    <PARAM name="statistics" help="Statistics" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh syncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal teammgr" help="TeamMgr related commands">
+    <PARAM name="global" help="Global information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh teammgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal teamsyncd" help="Teamsyncd related commands">
+    <PARAM name="global" help="Global information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh teamsyncd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal vlanmgr" help="vlanmgr related commands">
+   <PARAM name="vlanmgrchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="stacking" help="Stacking Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="translation" help="Translation Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh vlanmgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+  <COMMAND name="show system internal vxlanmgr" help="vxlanmgr related commands">
+   <PARAM name="vxlanmgrchoice" help="Switch subcommand" mode="switch" ptype="STRING" optional="false">
+    <PARAM name="dvnicache" help="dvni cache" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="global" help="Global Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+    <PARAM name="tunnelmap" help="TunnelMap Information" mode="subcommand" ptype="SUBCOMMAND" optional="false">
+    </PARAM>
+   </PARAM>
+   <ACTION builtin="clish_pyobj"> sonic_cli_debugsh vxlanmgrd ${__line}
+   </ACTION>
+   <xi:include href="include/pipe.xml"/>
+  </COMMAND>
+
+ </VIEW>
+</CLISH_MODULE>
+

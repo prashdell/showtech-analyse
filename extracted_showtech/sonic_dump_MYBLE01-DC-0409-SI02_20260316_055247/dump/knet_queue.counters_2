@@ -1,0 +1,23 @@
+Netif Rx Backlog Queues Stats (resume/drop/max: 5000/7000/10000)
+  CPU    Counter/pkts       Drop/pkts      Last QSize  High watermark
+-----  --------------  --------------  --------------  --------------
+   0                0               0               0               0
+   1                0               0               0               0
+   2                0               0               0               0
+   3         25630030               0               0             112 (695072.874203)
+
+CPU Rx Queues Stats (*drop enabled: 0x4fffff)
+Queue    Counter/pkts       Drop/pkts     NET_RX_DROP
+-----  --------------  --------------  --------------
+   0*         4787406               0               0
+   7*           17307               0               0
+   8*              25               0               0
+  10*           80154               0               0
+  14*         1245859               0               0
+  16*               6               0               0
+  17*          694302               0               0
+  18*          370701               0               7
+  20         15607797               0               0
+  21          2780121               0               0
+  23            46352               0               0
+

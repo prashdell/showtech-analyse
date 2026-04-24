@@ -1,0 +1,2 @@
+--ts-sonic--# show qos interface Eth all priority-flow-control statistics | no-more
+ 

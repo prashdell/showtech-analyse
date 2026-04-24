@@ -1,0 +1,16 @@
+# Create feature.json used to render config_db.json
+CONFIG_PROFILES_BASE=/usr/share/broadcom_sonic/config_profiles
+if [ -d ${CONFIG_PROFILES_BASE} ]; then
+    echo "{" > /tmp/features.json
+    echo " \"feature-key\" : \"boolean value\" " >> /tmp/features.json
+    [ -e /usr/bin/stp.sh ] && echo "    ,\"stp\" : \"True\"" >> /tmp/features.json
+    [ -e /usr/bin/ztp ] && echo "    ,\"ztp-pkg\" : \"True\"" >> /tmp/features.json
+    echo "}" >> /tmp/features.json
+    for d in $(ls -1 ${CONFIG_PROFILES_BASE}); do
+        [ ! -d ${CONFIG_PROFILES_BASE}/$d ] && continue
+        DATA_DIR=${CONFIG_PROFILES_BASE}/${d}/data
+        mkdir -p $DATA_DIR
+        cp -f /tmp/features.json ${DATA_DIR}
+    done
+    rm -f /tmp/features.json
+fi

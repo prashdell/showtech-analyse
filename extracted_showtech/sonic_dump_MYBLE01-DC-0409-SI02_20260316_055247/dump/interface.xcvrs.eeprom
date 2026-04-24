@@ -1,0 +1,739 @@
+Ethernet0: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        Length50um(UnitsOf10m): 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-SR
+                FibreChannelLinkLength: Intermediate distance (I)
+                FibreChannelSpeed: 1200 MBytes/sec
+                FibreChannelTechnology: Shortwave laser w/o OFC (SN)
+                FibreChannelTransmissionMedia: Multimode, 50um (M5, M5E)
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2025-07-25
+        Vendor Name: Dell
+        Vendor OUI: AC-4A-FE
+        Vendor PN: WTRD1
+        Vendor Rev: A1
+        Vendor SN: CN04HG0057M11HG
+        Wavelength: 850nm
+        MonitorData:
+                RXPower: -2.8845dBm
+                TXBias: 6.0340mA
+                TXPower: -2.7433dBm
+                Temperature: 16.8711C
+                Vcc: 3.2676Volts
+        ThresholdData:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -15.0000C
+                TempLowWarning : -10.0000C
+                VccHighAlarm   : 3.6000Volts
+                VccHighWarning : 3.5000Volts
+                VccLowAlarm    : 3.0000Volts
+                VccLowWarning  : 3.1000Volts
+                RxPowerHighAlarm  : 0.0000dBm
+                RxPowerHighWarning: -1.0002dBm
+                RxPowerLowAlarm   : -10.8991dBm
+                RxPowerLowWarning : -9.9012dBm
+                TxBiasHighAlarm   : 15.0000mA
+                TxBiasHighWarning : 12.0000mA
+                TxBiasLowAlarm    : 0.0000mA
+                TxBiasLowWarning  : 0.0000mA
+                TxPowerHighAlarm  : 0.0000dBm
+                TxPowerHighWarning: -1.0002dBm
+                TxPowerLowAlarm   : -8.3003dBm
+                TxPowerLowWarning : -7.7989dBm
+
+Ethernet1: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        Length50um(UnitsOf10m): 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-SR
+                FibreChannelLinkLength: Intermediate distance (I)
+                FibreChannelSpeed: 1200 MBytes/sec
+                FibreChannelTechnology: Shortwave laser w/o OFC (SN)
+                FibreChannelTransmissionMedia: Multimode, 50um (M5, M5E)
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2025-07-25
+        Vendor Name: Dell
+        Vendor OUI: AC-4A-FE
+        Vendor PN: WTRD1
+        Vendor Rev: A1
+        Vendor SN: CN04HG0057M111G
+        Wavelength: 850nm
+        MonitorData:
+                RXPower: -3.0356dBm
+                TXBias: 5.8180mA
+                TXPower: -2.6368dBm
+                Temperature: 16.4609C
+                Vcc: 3.2632Volts
+        ThresholdData:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -15.0000C
+                TempLowWarning : -10.0000C
+                VccHighAlarm   : 3.6000Volts
+                VccHighWarning : 3.5000Volts
+                VccLowAlarm    : 3.0000Volts
+                VccLowWarning  : 3.1000Volts
+                RxPowerHighAlarm  : 0.0000dBm
+                RxPowerHighWarning: -1.0002dBm
+                RxPowerLowAlarm   : -10.8991dBm
+                RxPowerLowWarning : -9.9012dBm
+                TxBiasHighAlarm   : 15.0000mA
+                TxBiasHighWarning : 12.0000mA
+                TxBiasLowAlarm    : 0.0000mA
+                TxBiasLowWarning  : 0.0000mA
+                TxPowerHighAlarm  : 0.0000dBm
+                TxPowerHighWarning: -1.0002dBm
+                TxPowerLowAlarm   : -8.3003dBm
+                TxPowerLowWarning : -7.7989dBm
+
+Ethernet2: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        Length50um(UnitsOf10m): 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-SR
+                FibreChannelLinkLength: Intermediate distance (I)
+                FibreChannelSpeed: 1200 MBytes/sec
+                FibreChannelTechnology: Shortwave laser w/o OFC (SN)
+                FibreChannelTransmissionMedia: Multimode, 50um (M5, M5E)
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2025-07-25
+        Vendor Name: Dell
+        Vendor OUI: AC-4A-FE
+        Vendor PN: WTRD1
+        Vendor Rev: A1
+        Vendor SN: CN04HG0057M1183
+        Wavelength: 850nm
+        MonitorData:
+                RXPower: -3.6452dBm
+                TXBias: 5.7020mA
+                TXPower: -2.7918dBm
+                Temperature: 16.4453C
+                Vcc: 3.2534Volts
+        ThresholdData:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -15.0000C
+                TempLowWarning : -10.0000C
+                VccHighAlarm   : 3.6000Volts
+                VccHighWarning : 3.5000Volts
+                VccLowAlarm    : 3.0000Volts
+                VccLowWarning  : 3.1000Volts
+                RxPowerHighAlarm  : 0.0000dBm
+                RxPowerHighWarning: -1.0002dBm
+                RxPowerLowAlarm   : -10.8991dBm
+                RxPowerLowWarning : -9.9012dBm
+                TxBiasHighAlarm   : 15.0000mA
+                TxBiasHighWarning : 12.0000mA
+                TxBiasLowAlarm    : 0.0000mA
+                TxBiasLowWarning  : 0.0000mA
+                TxPowerHighAlarm  : 0.0000dBm
+                TxPowerHighWarning: -1.0002dBm
+                TxPowerLowAlarm   : -8.3003dBm
+                TxPowerLowWarning : -7.7989dBm
+
+Ethernet3: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        Length50um(UnitsOf10m): 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-SR
+                FibreChannelLinkLength: Intermediate distance (I)
+                FibreChannelSpeed: 1200 MBytes/sec
+                FibreChannelTechnology: Shortwave laser w/o OFC (SN)
+                FibreChannelTransmissionMedia: Multimode, 50um (M5, M5E)
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2025-07-25
+        Vendor Name: Dell
+        Vendor OUI: AC-4A-FE
+        Vendor PN: WTRD1
+        Vendor Rev: A1
+        Vendor SN: CN04HG0057M11K6
+        Wavelength: 850nm
+        MonitorData:
+                RXPower: -3.0592dBm
+                TXBias: 5.6460mA
+                TXPower: -2.2827dBm
+                Temperature: 16.9492C
+                Vcc: 3.2638Volts
+        ThresholdData:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -15.0000C
+                TempLowWarning : -10.0000C
+                VccHighAlarm   : 3.6000Volts
+                VccHighWarning : 3.5000Volts
+                VccLowAlarm    : 3.0000Volts
+                VccLowWarning  : 3.1000Volts
+                RxPowerHighAlarm  : 0.0000dBm
+                RxPowerHighWarning: -1.0002dBm
+                RxPowerLowAlarm   : -10.8991dBm
+                RxPowerLowWarning : -9.9012dBm
+                TxBiasHighAlarm   : 15.0000mA
+                TxBiasHighWarning : 12.0000mA
+                TxBiasLowAlarm    : 0.0000mA
+                TxBiasLowWarning  : 0.0000mA
+                TxPowerHighAlarm  : 0.0000dBm
+                TxPowerHighWarning: -1.0002dBm
+                TxPowerLowAlarm   : -8.3003dBm
+                TxPowerLowWarning : -7.7989dBm
+
+Ethernet4: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        Length50um(UnitsOf10m): 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-SR
+                FibreChannelLinkLength: Intermediate distance (I)
+                FibreChannelSpeed: 1200 MBytes/sec
+                FibreChannelTechnology: Shortwave laser w/o OFC (SN)
+                FibreChannelTransmissionMedia: Multimode, 50um (M5, M5E)
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2023-02-26
+        Vendor Name: Dell
+        Vendor OUI: AC-4A-FE
+        Vendor PN: WTRD1
+        Vendor Rev: A1
+        Vendor SN: CN04HG0032O10K0
+        Wavelength: 850nm
+        MonitorData:
+                RXPower: -2.9465dBm
+                TXBias: 5.0760mA
+                TXPower: -2.4276dBm
+                Temperature: 16.6172C
+                Vcc: 3.2668Volts
+        ThresholdData:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -15.0000C
+                TempLowWarning : -10.0000C
+                VccHighAlarm   : 3.6000Volts
+                VccHighWarning : 3.5000Volts
+                VccLowAlarm    : 3.0000Volts
+                VccLowWarning  : 3.1000Volts
+                RxPowerHighAlarm  : 0.0000dBm
+                RxPowerHighWarning: -1.0002dBm
+                RxPowerLowAlarm   : -10.8991dBm
+                RxPowerLowWarning : -9.9012dBm
+                TxBiasHighAlarm   : 15.0000mA
+                TxBiasHighWarning : 12.0000mA
+                TxBiasLowAlarm    : 0.0000mA
+                TxBiasLowWarning  : 0.0000mA
+                TxPowerHighAlarm  : 0.0000dBm
+                TxPowerHighWarning: -1.0002dBm
+                TxPowerLowAlarm   : -8.3003dBm
+                TxPowerLowWarning : -7.7989dBm
+
+Ethernet5: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        Length50um(UnitsOf10m): 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-SR
+                FibreChannelLinkLength: Intermediate distance (I)
+                FibreChannelSpeed: 1200 MBytes/sec
+                FibreChannelTechnology: Shortwave laser w/o OFC (SN)
+                FibreChannelTransmissionMedia: Multimode, 50um (M5, M5E)
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2023-02-26
+        Vendor Name: Dell
+        Vendor OUI: AC-4A-FE
+        Vendor PN: WTRD1
+        Vendor Rev: A1
+        Vendor SN: CN04HG0032O12U3
+        Wavelength: 850nm
+        MonitorData:
+                RXPower: -3.0417dBm
+                TXBias: 5.2900mA
+                TXPower: -2.3822dBm
+                Temperature: 17.2031C
+                Vcc: 3.2590Volts
+        ThresholdData:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -15.0000C
+                TempLowWarning : -10.0000C
+                VccHighAlarm   : 3.6000Volts
+                VccHighWarning : 3.5000Volts
+                VccLowAlarm    : 3.0000Volts
+                VccLowWarning  : 3.1000Volts
+                RxPowerHighAlarm  : 0.0000dBm
+                RxPowerHighWarning: -1.0002dBm
+                RxPowerLowAlarm   : -10.8991dBm
+                RxPowerLowWarning : -9.9012dBm
+                TxBiasHighAlarm   : 15.0000mA
+                TxBiasHighWarning : 12.0000mA
+                TxBiasLowAlarm    : 0.0000mA
+                TxBiasLowWarning  : 0.0000mA
+                TxPowerHighAlarm  : 0.0000dBm
+                TxPowerHighWarning: -1.0002dBm
+                TxPowerLowAlarm   : -8.3003dBm
+                TxPowerLowWarning : -7.7989dBm
+
+Ethernet6: SFP EEPROM Not detected
+
+Ethernet7: SFP EEPROM Not detected
+
+Ethernet8: SFP EEPROM Not detected
+
+Ethernet9: SFP EEPROM Not detected
+
+Ethernet10: SFP EEPROM Not detected
+
+Ethernet11: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        LengthSMFkm-UnitsOfKm: 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-LR
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2018-10-31
+        Vendor Name: DELL
+        Vendor OUI: 00-17-6A
+        Vendor PN: RN84N
+        Vendor Rev: A0
+        Vendor SN: AD8AT500LJ
+        Wavelength: 1310nm
+        MonitorData:
+                RXPower: -11.3077dBm
+                TXBias: 20.7440mA
+                TXPower: -1.5870dBm
+                Temperature: 18.4961C
+                Vcc: 3.2872Volts
+        ThresholdData:
+                TempHighAlarm  : 75.0000C
+                TempHighWarning: 70.0000C
+                TempLowAlarm   : -5.0000C
+                TempLowWarning : 0.0000C
+                VccHighAlarm   : 3.6300Volts
+                VccHighWarning : 3.4650Volts
+                VccLowAlarm    : 2.9700Volts
+                VccLowWarning  : 3.1349Volts
+                RxPowerHighAlarm  : 3.5000dBm
+                RxPowerHighWarning: 0.4999dBm
+                RxPowerLowAlarm   : -18.4164dBm
+                RxPowerLowWarning : -14.4009dBm
+                TxBiasHighAlarm   : 80.0000mA
+                TxBiasHighWarning : 70.0000mA
+                TxBiasLowAlarm    : 6.0000mA
+                TxBiasLowWarning  : 8.0000mA
+                TxPowerHighAlarm  : 3.5000dBm
+                TxPowerHighWarning: 0.4999dBm
+                TxPowerLowAlarm   : -12.2040dBm
+                TxPowerLowWarning : -8.2016dBm
+
+Ethernet12: SFP EEPROM Not detected
+
+Ethernet13: SFP EEPROM detected
+        Connector: RJ45
+        Encoding: 8B/10B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP
+        LengthCable(UnitsOfm): 100.0
+        Nominal Bit Rate(100Mbs): 12
+        Specification compliance: 
+                EthernetComplianceCodes: 1000BASE-T
+                OptionValues: Power Level 1, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2025-04-27
+        Vendor Name: Dell
+        Vendor OUI: 00-90-65
+        Vendor PN: FCLF8521P2BTL-DL
+        Vendor Rev: A1
+        Vendor SN: MY0F1M0054R002I
+        MonitorData:
+        ThresholdData:
+
+Ethernet14: SFP EEPROM Not detected
+
+Ethernet15: SFP EEPROM detected
+        Connector: RJ45
+        Encoding: 8B/10B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP
+        LengthCable(UnitsOfm): 100.0
+        Nominal Bit Rate(100Mbs): 12
+        Specification compliance: 
+                EthernetComplianceCodes: 1000BASE-T
+                OptionValues: Power Level 1, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2025-04-27
+        Vendor Name: Dell
+        Vendor OUI: 00-90-65
+        Vendor PN: FCLF8521P2BTL-DL
+        Vendor Rev: A1
+        Vendor SN: MY0F1M0054R002P
+        MonitorData:
+        ThresholdData:
+
+Ethernet16: SFP EEPROM detected
+        Connector: RJ45
+        Encoding: Unspecified
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        LengthCable(UnitsOfm): 30.0
+        Nominal Bit Rate(100Mbs): 100
+        Specification compliance: 
+                OptionValues: Power Level 1
+        Vendor Date Code(YYYY-MM-DD Lot): 2019-03-12 01
+        Vendor Name: DELL
+        Vendor OUI: 00-17-05
+        Vendor PN: PGYJT
+        Vendor Rev: A153
+        Vendor SN: 19101007
+        MonitorData:
+        ThresholdData:
+
+Ethernet17: SFP EEPROM Not detected
+
+Ethernet18: SFP EEPROM detected
+        Connector: RJ45
+        Encoding: Unspecified
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        LengthCable(UnitsOfm): 30.0
+        Nominal Bit Rate(100Mbs): 100
+        Specification compliance: 
+                OptionValues: Power Level 1
+        Vendor Date Code(YYYY-MM-DD Lot): 2019-03-14 01
+        Vendor Name: DELL
+        Vendor OUI: 00-17-05
+        Vendor PN: PGYJT
+        Vendor Rev: A153
+        Vendor SN: 19100881
+        MonitorData:
+        ThresholdData:
+
+Ethernet19: SFP EEPROM Not detected
+
+Ethernet20: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        Length50um(UnitsOf10m): 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-SR
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2016-12-30
+        Vendor Name: JDSU
+        Vendor OUI: 00-01-9C
+        Vendor PN: PLRXPLSCS43811
+        Vendor Rev: A00
+        Vendor SN: C6CSFM1KC
+        Wavelength: 850nm
+        MonitorData:
+                RXPower: -2.5649dBm
+                TXBias: 5.3500mA
+                TXPower: -2.1839dBm
+                Temperature: 24.5391C
+                Vcc: 3.2715Volts
+        ThresholdData:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -10.0000C
+                TempLowWarning : -5.0000C
+                VccHighAlarm   : 3.7000Volts
+                VccHighWarning : 3.6300Volts
+                VccLowAlarm    : 2.8500Volts
+                VccLowWarning  : 2.9700Volts
+                RxPowerHighAlarm  : 1.4999dBm
+                RxPowerHighWarning: 0.9999dBm
+                RxPowerLowAlarm   : -14.0012dBm
+                RxPowerLowWarning : -11.9997dBm
+                TxBiasHighAlarm   : 10.0000mA
+                TxBiasHighWarning : 8.5000mA
+                TxBiasLowAlarm    : 2.6000mA
+                TxBiasLowWarning  : 3.0000mA
+                TxPowerHighAlarm  : -1.0002dBm
+                TxPowerHighWarning: -1.3001dBm
+                TxPowerLowAlarm   : -8.0024dBm
+                TxPowerLowWarning : -7.5007dBm
+
+Ethernet21: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        Length50um(UnitsOf10m): 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-SR
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2016-12-29
+        Vendor Name: JDSU
+        Vendor OUI: 00-01-9C
+        Vendor PN: PLRXPLSCS43811
+        Vendor Rev: A00
+        Vendor SN: C6CSFM0CA
+        Wavelength: 850nm
+        MonitorData:
+                RXPower: -2.2308dBm
+                TXBias: 4.5200mA
+                TXPower: -2.1660dBm
+                Temperature: 21.2305C
+                Vcc: 3.2910Volts
+        ThresholdData:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -10.0000C
+                TempLowWarning : -5.0000C
+                VccHighAlarm   : 3.7000Volts
+                VccHighWarning : 3.6300Volts
+                VccLowAlarm    : 2.8500Volts
+                VccLowWarning  : 2.9700Volts
+                RxPowerHighAlarm  : 1.4999dBm
+                RxPowerHighWarning: 0.9999dBm
+                RxPowerLowAlarm   : -14.0012dBm
+                RxPowerLowWarning : -11.9997dBm
+                TxBiasHighAlarm   : 10.0000mA
+                TxBiasHighWarning : 8.5000mA
+                TxBiasLowAlarm    : 2.6000mA
+                TxBiasLowWarning  : 3.0000mA
+                TxPowerHighAlarm  : -1.0002dBm
+                TxPowerHighWarning: -1.3001dBm
+                TxPowerLowAlarm   : -8.0024dBm
+                TxPowerLowWarning : -7.5007dBm
+
+Ethernet22: SFP EEPROM detected
+        Connector: LC
+        Encoding: 64B/66B
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Identifier: SFP+
+        Length50um(UnitsOf10m): 0.0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance: 
+                10GEthernetComplianceCode: 10G Base-SR
+                FibreChannelLinkLength: Intermediate distance (I)
+                FibreChannelSpeed: 1200 MBytes/sec
+                FibreChannelTechnology: Shortwave laser w/o OFC (SN)
+                FibreChannelTransmissionMedia: Multimode, 50um (M5, M5E)
+                OptionValues: Power Level 1, RX_LOS, TX_FAULT, TX_DISABLE
+        Vendor Date Code(YYYY-MM-DD Lot): 2022-08-02
+        Vendor Name: DELL EMC
+        Vendor OUI: AC-4A-FE
+        Vendor PN: WTRD1
+        Vendor Rev: A1
+        Vendor SN: TH04HT0027L31W2
+        Wavelength: 850nm
+        MonitorData:
+                RXPower: -3.1804dBm
+                TXBias: 5.6420mA
+                TXPower: -2.6592dBm
+                Temperature: 16.1602C
+                Vcc: 3.3370Volts
+        ThresholdData:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -15.0000C
+                TempLowWarning : -10.0000C
+                VccHighAlarm   : 3.6000Volts
+                VccHighWarning : 3.5000Volts
+                VccLowAlarm    : 3.0000Volts
+                VccLowWarning  : 3.1000Volts
+                RxPowerHighAlarm  : 0.0000dBm
+                RxPowerHighWarning: -1.0002dBm
+                RxPowerLowAlarm   : -10.8991dBm
+                RxPowerLowWarning : -9.9012dBm
+                TxBiasHighAlarm   : 15.0000mA
+                TxBiasHighWarning : 12.0000mA
+                TxBiasLowAlarm    : 0.0000mA
+                TxBiasLowWarning  : 0.0000mA
+                TxPowerHighAlarm  : 0.0000dBm
+                TxPowerHighWarning: -1.0002dBm
+                TxPowerLowAlarm   : -8.3003dBm
+                TxPowerLowWarning : -7.7989dBm
+
+Ethernet23: SFP EEPROM Not detected
+
+Ethernet24: SFP EEPROM Not detected
+
+Ethernet25: SFP EEPROM Not detected
+
+Ethernet26: SFP EEPROM Not detected
+
+Ethernet27: SFP EEPROM Not detected
+
+Ethernet28: SFP EEPROM Not detected
+
+Ethernet29: SFP EEPROM Not detected
+
+Ethernet30: SFP EEPROM Not detected
+
+Ethernet31: SFP EEPROM Not detected
+
+Ethernet32: SFP EEPROM Not detected
+
+Ethernet33: SFP EEPROM Not detected
+
+Ethernet34: SFP EEPROM Not detected
+
+Ethernet35: SFP EEPROM Not detected
+
+Ethernet36: SFP EEPROM Not detected
+
+Ethernet37: SFP EEPROM Not detected
+
+Ethernet38: SFP EEPROM Not detected
+
+Ethernet39: SFP EEPROM Not detected
+
+Ethernet40: SFP EEPROM Not detected
+
+Ethernet41: SFP EEPROM Not detected
+
+Ethernet42: SFP EEPROM Not detected
+
+Ethernet43: SFP EEPROM Not detected
+
+Ethernet44: SFP EEPROM Not detected
+
+Ethernet45: SFP EEPROM Not detected
+
+Ethernet46: SFP EEPROM Not detected
+
+Ethernet47: SFP EEPROM Not detected
+
+Ethernet48: SFP EEPROM detected
+        Connector: MPOx12
+        Encoding: 64B66B
+        Extended Identifier: Power Class 2(2.0W max), CDR present in Rx Tx
+        Identifier: QSFP28
+        Length OM3(2m): 0.0
+        Nominal Bit Rate(100Mbs): 255
+        Specification compliance: 
+                10/40G Ethernet Compliance Code: 100GBASE-SR4
+                SAS/SATA compliance codes: SAS 3.0G
+        Vendor Date Code(YYYY-MM-DD Lot): 2025-09-07
+        Vendor Name: Dell
+        Vendor OUI: AC-4A-FE
+        Vendor PN: 14NV5
+        Vendor Rev: A2
+        Vendor SN: CN04HG0058T50GP
+        Wavelength: 850.00000000nm
+        ChannelMonitorValues:
+                RX1Power: -0.6359dBm
+                RX2Power: -0.6540dBm
+                RX3Power: -0.5222dBm
+                RX4Power: -0.5675dBm
+                TX1Bias: 5.8320mA
+                TX1Power: 0.6521dBm
+                TX2Bias: 5.8400mA
+                TX2Power: 1.0857dBm
+                TX3Bias: 5.8340mA
+                TX3Power: 1.1813dBm
+                TX4Bias: 5.8400mA
+                TX4Power: 0.4364dBm
+        ChannelThresholdValues:
+                RxPowerHighAlarm  : 5.4000dBm
+                RxPowerHighWarning: 2.4000dBm
+                RxPowerLowAlarm   : -13.2975dBm
+                RxPowerLowWarning : -10.3012dBm
+                TxBiasHighAlarm   : 12.0000mA
+                TxBiasHighWarning : 10.0000mA
+                TxBiasLowAlarm    : 0.0000mA
+                TxBiasLowWarning  : 0.0000mA
+        ModuleMonitorValues:
+                Temperature: 20.0000C
+                Vcc: 3.2549Volts
+        ModuleThresholdValues:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -10.0000C
+                TempLowWarning : -5.0000C
+                VccHighAlarm   : 3.6300Volts
+                VccHighWarning : 3.4650Volts
+                VccLowAlarm    : 2.9700Volts
+                VccLowWarning  : 3.1350Volts
+
+Ethernet52: SFP EEPROM Not detected
+
+Ethernet56: SFP EEPROM detected
+        Connector: MPOx12
+        Encoding: 64B66B
+        Extended Identifier: Power Class 2(2.0W max), CDR present in Rx Tx
+        Identifier: QSFP28
+        Length OM3(2m): 0.0
+        Nominal Bit Rate(100Mbs): 255
+        Specification compliance: 
+                10/40G Ethernet Compliance Code: 100GBASE-SR4
+                SAS/SATA compliance codes: SAS 3.0G
+        Vendor Date Code(YYYY-MM-DD Lot): 2025-09-07
+        Vendor Name: Dell
+        Vendor OUI: AC-4A-FE
+        Vendor PN: 14NV5
+        Vendor Rev: A2
+        Vendor SN: CN04HG0058T50UL
+        Wavelength: 850.00000000nm
+        ChannelMonitorValues:
+                RX1Power: 0.3246dBm
+                RX2Power: -0.1453dBm
+                RX3Power: 0.1174dBm
+                RX4Power: 0.2379dBm
+                TX1Bias: 5.7320mA
+                TX1Power: 0.5065dBm
+                TX2Bias: 5.7400mA
+                TX2Power: 0.8106dBm
+                TX3Bias: 5.7340mA
+                TX3Power: 0.6900dBm
+                TX4Bias: 5.7400mA
+                TX4Power: 0.4324dBm
+        ChannelThresholdValues:
+                RxPowerHighAlarm  : 5.4000dBm
+                RxPowerHighWarning: 2.4000dBm
+                RxPowerLowAlarm   : -13.2975dBm
+                RxPowerLowWarning : -10.3012dBm
+                TxBiasHighAlarm   : 12.0000mA
+                TxBiasHighWarning : 10.0000mA
+                TxBiasLowAlarm    : 0.0000mA
+                TxBiasLowWarning  : 0.0000mA
+        ModuleMonitorValues:
+                Temperature: 16.0000C
+                Vcc: 3.2573Volts
+        ModuleThresholdValues:
+                TempHighAlarm  : 80.0000C
+                TempHighWarning: 75.0000C
+                TempLowAlarm   : -10.0000C
+                TempLowWarning : -5.0000C
+                VccHighAlarm   : 3.6300Volts
+                VccHighWarning : 3.4650Volts
+                VccLowAlarm    : 2.9700Volts
+                VccLowWarning  : 3.1350Volts
+
+Ethernet60: SFP EEPROM Not detected
+
+Ethernet64: SFP EEPROM Not detected
+
+Ethernet68: SFP EEPROM Not detected
+
+Ethernet72: SFP EEPROM Not detected
+
+Ethernet76: SFP EEPROM Not detected
+
+
+
+

@@ -1,0 +1,179 @@
+Mar 12 26 04:56:07 bcmcmd ps
+Mar 12 26 04:56:26 exit
+Mar 12 26 04:59:49 bcmcmd ps | grep 777
+Mar 12 26 04:59:57 bcmcmd ps
+Mar 12 26 05:00:39 bcmcmd "show ge0"
+Mar 12 26 05:00:50 bcmcmd "port ge0"
+Mar 12 26 05:01:17 bcmcmd "port ge1"
+Mar 12 26 05:01:26 bcmcmd "port ge0 ENA=1"
+Mar 12 26 05:01:36 bcmcmd "port ge1 ENA=1"
+Mar 12 26 05:01:43 bcmcmd "port ge1"
+Mar 12 26 05:02:53 exit
+Mar 12 26 05:28:23 bcmcmd "port ge0"
+Mar 12 26 05:28:30 bcmcmd "port ge1"
+Mar 12 26 05:28:43 tail -n 20 /var/log/syslog
+Mar 12 26 05:28:59 date
+Mar 12 26 05:29:49 exit
+Mar 16 26 04:29:18 exit
+Mar 16 26 04:30:27 bcmcmd phydump 
+Mar 16 26 04:30:56 swssloglevel --help
+Mar 16 26 04:31:10 swssloglevel -l SAI_LOG_LEVEL_DEBUG -s -a
+Mar 16 26 04:31:20 sfputil show eeprom 
+Mar 16 26 04:31:32 exit
+Mar 16 26 04:32:07 bcmcmd ps 
+Mar 16 26 04:33:21 show interface status
+Mar 16 26 04:33:59 sfputil show eeprom -p Ethernet13
+Mar 16 26 04:34:07 sfputil show eeprom -p Ethernet15
+Mar 16 26 04:34:24 sfputil get -p Ethernet13
+Mar 16 26 04:34:29 sfputil get -p Ethernet15
+Mar 16 26 04:34:39 sfputil diag -p Ethernet13
+Mar 16 26 04:34:46 sfputil diag -p Ethernet15
+Mar 16 26 04:35:03 sfputil dump -p Ethernet13
+Mar 16 26 04:35:10 sfputil dump -p Ethernet15
+Mar 16 26 04:35:17 exit
+Mar 16 26 04:36:41 # NOTE set speed auto 1000 and no shut on 1/14, 1/16
+Mar 16 26 04:36:48 bcmcmd phydump
+Mar 16 26 04:37:17 tail -n 2000 /var/log/syslog | grep swss
+Mar 16 26 04:37:58 date
+Mar 16 26 04:38:53 sfputil show eeprom -p Ethernet13
+Mar 16 26 04:39:01 sfputil show eeprom -p Ethernet15
+Mar 16 26 04:39:20 sfputil get -p Ethernet13 
+Mar 16 26 04:39:25 sfputil get -p Ethernet15
+Mar 16 26 04:39:39 sfputil diag -p Ethernet13
+Mar 16 26 04:39:46 sfputil diag -p Ethernet15
+Mar 16 26 04:39:53 sfputil dump -p Ethernet13
+Mar 16 26 04:40:01 sfputil dump -p Ethernet15
+Mar 16 26 04:40:14 sfputil reset Ethernet13
+Mar 16 26 04:40:25 bcmcm "port xe12
+
+Mar 16 26 04:40:31 bcmcm "port xe12"
+Mar 16 26 04:40:37 bcmcmd ps
+Mar 16 26 04:41:23 show interface status
+Mar 16 26 04:42:04 exit
+Mar 16 26 04:44:02 bcmcmd ps
+Mar 16 26 04:47:11 exit
+Mar 16 26 04:49:48 # NOTE revert port-group 4 to default 25G mode
+Mar 16 26 04:49:54 bcmcmd ps
+Mar 16 26 04:50:27 bcmcmd "port xe12"
+Mar 16 26 04:50:49 bcmcmd "port xe13"
+Mar 16 26 04:51:12 show interface status
+Mar 16 26 04:51:46 exit
+Mar 16 26 04:53:04 # NOTE change port-group4 to 10000
+Mar 16 26 04:53:07 bcmcmd ps 
+Mar 16 26 04:53:43 bcmcmd "port xe13"
+Mar 16 26 04:53:48 bcmcmd "port xe15"
+Mar 16 26 04:54:11 sfputil show eeprom -p Ethernet13\
+Mar 16 26 04:54:15 sfputil show eeprom -p Ethernet13
+Mar 16 26 04:54:21 sfputil show eeprom -p Ethernet15
+Mar 16 26 04:54:34 sfputil get -p Ethernet13
+Mar 16 26 04:54:39 sfputil get -p Ethernet15
+Mar 16 26 04:54:53 sfputil diag -p Ethernet13
+Mar 16 26 04:54:57 sfputil diag -p Ethernet15
+Mar 16 26 04:55:07 sfputil dump -p Ethernet13
+Mar 16 26 04:55:14 sfputil dump -p Ethernet15
+Mar 16 26 04:55:19 exit
+Mar 16 26 04:59:47 # NOTE speed auto 1000 ports 13-16 and no shu
+Mar 16 26 04:59:53 bcmcmd ps 
+Mar 16 26 05:00:16 bcmcmd "port xe12"
+Mar 16 26 05:00:20 bcmcmd "port xe13"
+Mar 16 26 05:00:26 bcmcmd "port xe15"
+Mar 16 26 05:00:48 bcmcmd "port xe13 FD=1000MB"
+Mar 16 26 05:00:59 bcmcmd "port xe13 speed=1000MB"
+Mar 16 26 05:01:07 bcmcmd "port xe13 ENA=1"
+Mar 16 26 05:01:15 bcmcmd "port xe15 ENA=1"
+Mar 16 26 05:01:18 bcmcmd ps
+Mar 16 26 05:01:37 bcmcmd "port xe13"
+Mar 16 26 05:01:43 bcmcmd "port xe15"
+Mar 16 26 05:02:01 sfputil show eeprom -p Ethernet13
+Mar 16 26 05:02:12 sfputil show eeprom -p Ethernet15
+Mar 16 26 05:02:25 sfputil get -p Ethernet13
+Mar 16 26 05:02:30 sfputil get -p Ethernet15
+Mar 16 26 05:02:40 sfputil dump -p Ethernet13
+Mar 16 26 05:02:48 sfputil dump -p Ethernet15
+Mar 16 26 05:02:59 sfputil reset Ethernet13
+Mar 16 26 05:03:05 sfputil reset Ethernet15
+Mar 16 26 05:03:11 bcmcmd ps
+Mar 16 26 05:03:27 exit
+Mar 16 26 05:06:10 # NOTE change to speed 1000 on ports 13-16
+Mar 16 26 05:06:14 bcmcmd ps 
+Mar 16 26 05:06:52 sfputil show eeprom -p Ethernet13
+Mar 16 26 05:06:58 sfputil show eeprom -p Ethernet15
+Mar 16 26 05:07:53 bcmcmd "port ge1"
+Mar 16 26 05:07:58 bcmcmd "port ge2"
+Mar 16 26 05:08:12 bcmcmd "port ge0"
+Mar 16 26 05:08:17 bcmcmd "port ge3"
+Mar 16 26 05:08:23 show interfa stat
+Mar 16 26 05:08:46 show interfa stat | grep 1G
+Mar 16 26 05:09:10 exit
+Mar 16 26 05:10:28 bcmcmd ps
+Mar 16 26 05:10:38 bcmcmd ps | grep 1G
+Mar 16 26 05:14:01 bcmcmd ps | grep 1G
+Mar 16 26 05:14:11 exit
+Mar 16 26 05:16:02 # NOTE removed optic from port 20
+Mar 16 26 05:16:09 # NOTE set port-group 4 back to 25G 
+Mar 16 26 05:16:14 bcmcmd ps 
+Mar 16 26 05:16:43 show inter stat 
+Mar 16 26 05:17:43 bcmcmd "port ge0"
+Mar 16 26 05:18:00 exit
+Mar 16 26 05:26:32 show inter ?
+Mar 16 26 05:26:40 show inter tra ?
+Mar 16 26 05:26:47 show inte tra pre ?
+Mar 16 26 05:27:00 show inte tra pre Ethernet1/13
+Mar 16 26 05:27:05 show inte tra pre Ethernet13
+Mar 16 26 05:27:12 show inte tra pre Ethernet15
+Mar 16 26 05:27:15 show inte tra pre Ethernet14
+Mar 16 26 05:27:39 sfputil show eeprom ip Ethernet13
+Mar 16 26 05:27:48 sfputil show eeprom -p Ethernet13
+Mar 16 26 05:27:54 sfputil show eeprom -p Ethernet15
+Mar 16 26 05:29:28 # NOTE cross connect 14 (1G) to 17 (10G)
+Mar 16 26 05:29:47 # NOTE cross connect 16 (1G) to 19 (10G)
+Mar 16 26 05:30:03 bcmccmd
+Mar 16 26 05:30:45 bcmcmd ps
+Mar 16 26 05:31:00 exit
+Mar 16 26 05:33:11 # NOTE cross connected
+Mar 16 26 05:33:14 bcmcmd ps
+Mar 16 26 05:34:06 sfputil show eeprom Ethernet16
+Mar 16 26 05:34:15 sfputil show eeprom -p Ethernet16
+Mar 16 26 05:34:23 sfputil show eeprom -p Ethernet18
+Mar 16 26 05:34:45 sfputil get -p Ethernet16
+Mar 16 26 05:34:50 sfputil get -p Ethernet18
+Mar 16 26 05:34:59 sfputil dump -p Ethernet16
+Mar 16 26 05:35:05 sfputil dump -p Ethernet18
+Mar 16 26 05:35:12 exit
+Mar 16 26 05:37:17 bcmcmd ps
+Mar 16 26 05:37:39 exit
+Mar 16 26 05:38:21 bcmcmd ps
+Mar 16 26 05:38:49 exit
+Mar 16 26 05:39:54 bcmcmd ps 
+Mar 16 26 05:40:45 exit
+Mar 16 26 05:41:58 bcmcmd ps 
+Mar 16 26 05:44:52 bcmcmd "port ge0 sp=1000 an=1 en=1"
+Mar 16 26 05:44:59 bcmcmd "port ge01sp=1000 an=1 en=1"
+Mar 16 26 05:45:08 bcmcmd "port ge1 sp=1000 an=1 en=1"
+Mar 16 26 05:45:15 bcmcmd "port ge0"
+Mar 16 26 05:45:21 bcmcmd "port ge1"
+Mar 16 26 05:45:41 bcmcmd ps
+Mar 16 26 05:46:57 bcmcmd "port ge0 probe"
+Mar 16 26 05:47:08 bcmcmd "port ge1 probe"
+Mar 16 26 05:47:16 bcmcmd "port ge0"
+Mar 16 26 05:47:43 bcmcmd "port xe0"
+Mar 16 26 05:48:06 bcmcmd "port ge0 ENA=1"
+Mar 16 26 05:48:13 bcmcmd "port ge1 ENA=1"
+Mar 16 26 05:48:20 bcmcmd "port ge0"
+Mar 16 26 05:48:28 bcmcmd "port ge1"
+Mar 16 26 05:48:42 bcmcmd "port ge1 ENA=1 AN=0"
+Mar 16 26 05:48:54 bcmcmd "port ge0 ENA=1 AN=0"
+Mar 16 26 05:49:02 bcmcmd "port ge0"
+Mar 16 26 05:49:07 bcmcmd "port ge1"
+Mar 16 26 05:49:21 exit
+Mar 16 26 05:53:19 bcmcmd ps | grep 1G
+Mar 16 26 05:54:00 bcmcmd ps
+Mar 16 26 05:54:10 show inter stat 
+Mar 16 26 05:54:57 exit
+Mar 16 26 05:56:03 bcmcmd ps | grep 44
+Mar 16 26 05:56:33 exit
+Mar 16 26 05:57:49 bcmcmd ps | grep 1G
+Mar 16 26 05:58:01 exit
+Mar 16 26 05:59:21 bcmcmd ps | grep 1G
+Mar 16 26 05:59:38 bcmcmd ps | grep ge
+Mar 16 26 05:59:48 ex

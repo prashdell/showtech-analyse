@@ -1,0 +1,185 @@
+****************************************************************************
+copp_counters1 techsupport dump begin at Thu 26 Mar 2026 04:44:39 PM +04
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent copp policers
+--------------------------------------------------------------------
+Policer Name: copp-system-arp
+Policer OID: 0x120000000009fa
+Status:0x0
+Packets:3243409548 Bytes:0x227068426006
+GreenPackets:3243340454 GreenBytes:0x227063729284
+YellowPackets:35 YellowBytes:2380
+RedPackets:69059 RedBytes:4694342
+
+Policer Name: copp-system-bfd
+Policer OID: 0x120000000009fb
+Status:0x0
+Packets:306007144 Bytes:0x27540642960
+GreenPackets:306007144 GreenBytes:0x27540642960
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-bgp
+Policer OID: 0x120000000009fd
+Status:0x0
+Packets:65076529 Bytes:0x14049152511
+GreenPackets:65076529 GreenBytes:0x14049152511
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-cdp
+Policer OID: 0x12000000000a01
+Status:0x0
+Packets:0 Bytes:0x0
+GreenPackets:0 GreenBytes:0x0
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-iccp
+Policer OID: 0x12000000000a04
+Status:0x0
+Packets:218629528 Bytes:0x153749530987
+GreenPackets:218629528 GreenBytes:0x153749530987
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-icmp
+Policer OID: 0x12000000000a07
+Status:0x0
+Packets:20 Bytes:0x2024
+GreenPackets:20 GreenBytes:0x2024
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-igmp
+Policer OID: 0x12000000000a0b
+Status:0x0
+Packets:21069847 Bytes:0x1967167946
+GreenPackets:21069847 GreenBytes:0x1967167946
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-ip2me
+Policer OID: 0x12000000000a0e
+Status:0x0
+Packets:6316 Bytes:0x632802
+GreenPackets:6316 GreenBytes:0x632802
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-lacp
+Policer OID: 0x12000000000a10
+Status:0x0
+Packets:17594201 Bytes:0x2252057728
+GreenPackets:17594201 GreenBytes:0x2252057728
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-lldp
+Policer OID: 0x12000000000a12
+Status:0x0
+Packets:31344149 Bytes:0x6616642256
+GreenPackets:31344149 GreenBytes:0x6616642256
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-mtu
+Policer OID: 0x12000000000a15
+Status:0x0
+Packets:0 Bytes:0x0
+GreenPackets:0 GreenBytes:0x0
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-nat
+Policer OID: 0x12000000000a18
+Status:0x0
+Packets:0 Bytes:0x0
+GreenPackets:0 GreenBytes:0x0
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-ospf
+Policer OID: 0x12000000000a1c
+Status:0x0
+Packets:0 Bytes:0x0
+GreenPackets:0 GreenBytes:0x0
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-pim
+Policer OID: 0x12000000000a20
+Status:0x0
+Packets:0 Bytes:0x0
+GreenPackets:0 GreenBytes:0x0
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-stp
+Policer OID: 0x12000000000a23
+Status:0x0
+Packets:7671053 Bytes:0x490947392
+GreenPackets:7671053 GreenBytes:0x490947392
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-subnet
+Policer OID: 0x12000000000a27
+Status:0x0
+Packets:129520 Bytes:0x17173566
+GreenPackets:129520 GreenBytes:0x17173566
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: copp-system-suppress
+Policer OID: 0x12000000000a2a
+Status:0x0
+Packets:2726133560 Bytes:0x306509496512
+GreenPackets:2725999934 GreenBytes:0x306494264344
+YellowPackets:39 YellowBytes:4446
+RedPackets:133587 RedBytes:15227722
+
+Policer Name: copp-system-ttl
+Policer OID: 0x12000000000a2e
+Status:0x0
+Packets:5998 Bytes:0x1840966
+GreenPackets:5965 GreenBytes:0x1828356
+YellowPackets:2 YellowBytes:298
+RedPackets:31 RedBytes:12312
+
+Policer Name: copp-system-udld
+Policer OID: 0x12000000000a31
+Status:0x0
+Packets:0 Bytes:0x0
+GreenPackets:0 GreenBytes:0x0
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+Policer Name: default
+Policer OID: 0x12000000000a33
+Status:0x0
+Packets:0 Bytes:0x0
+GreenPackets:6018 GreenBytes:0x1856114
+YellowPackets:0 YellowBytes:0
+RedPackets:0 RedBytes:0
+
+*************** Profiling data ***************
+End to End Execution time: 102.39 ms
+Backend execution time: 15 ms
+**********************************************
+
+
+real	0m0.477s
+user	0m0.306s
+sys	0m0.043s
+
+
+
+
+
+****************************************************************************
+copp_counters1 techsupport dump ended at Thu 26 Mar 2026 04:44:40 PM +04
+****************************************************************************

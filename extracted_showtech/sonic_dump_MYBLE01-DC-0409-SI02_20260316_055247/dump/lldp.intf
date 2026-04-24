@@ -1,0 +1,1809 @@
+-------------------------------------------------------------------------------
+LLDP interfaces:
+-------------------------------------------------------------------------------
+Local Interface: eth0, via: LLDP, Time: 8 days, 00:57:26, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local eth0
+    PortDescr:    eth0
+    MFS:          1500
+    PMD autoneg:  supported: yes, enabled: yes
+      Adv:          1000Base-T, HD: no, FD: yes
+      MAU oper type: 1000BaseTFD - Four-pair Category 5 UTP, full duplex mode
+  TTL:          120, IfIndex: 2, Flags: 11043
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet64, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/53
+    PortDescr:    Ethernet64
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  TTL:          120, IfIndex: 1c, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet72, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/55
+    PortDescr:    Ethernet72
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  TTL:          120, IfIndex: 1d, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet24, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/25
+    PortDescr:    Ethernet24
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 1e, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet25, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/26
+    PortDescr:    Ethernet25
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 1f, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet26, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/27
+    PortDescr:    Ethernet26
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 21, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet27, via: LLDP, Time: 8 days, 00:57:43, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/28
+    PortDescr:    Ethernet27
+    MFS:          4444
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 1000BaseTFD - Four-pair Category 5 UTP, full duplex mode
+  TTL:          120, IfIndex: 22, Flags: 1003
+  VLAN:         1102, pvid: yes
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet28, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/29
+    PortDescr:    Ethernet28
+    MFS:          9100
+  TTL:          120, IfIndex: 23, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet29, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/30
+    PortDescr:    Ethernet29
+    MFS:          9100
+  TTL:          120, IfIndex: 24, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet30, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/31
+    PortDescr:    Ethernet30
+    MFS:          9100
+  TTL:          120, IfIndex: 25, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet31, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/32
+    PortDescr:    Ethernet31
+    MFS:          9100
+  TTL:          120, IfIndex: 26, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet32, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/33
+    PortDescr:    Ethernet32
+    MFS:          9100
+  TTL:          120, IfIndex: 27, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet33, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/34
+    PortDescr:    Ethernet33
+    MFS:          9100
+  TTL:          120, IfIndex: 28, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet34, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/35
+    PortDescr:    Ethernet34
+    MFS:          9100
+  TTL:          120, IfIndex: 29, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet35, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/36
+    PortDescr:    Ethernet35
+    MFS:          9100
+  TTL:          120, IfIndex: 2a, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet68, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/54
+    PortDescr:    Ethernet68
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  TTL:          120, IfIndex: 2b, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet76, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/56
+    PortDescr:    Ethernet76
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  TTL:          120, IfIndex: 2c, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet0, via: LLDP, Time: 8 days, 00:57:21, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/1
+    PortDescr:    DEL::UPL::10G::MYBLE01SDWESX5::vmnic9
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 2d, Flags: 11043
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet1, via: LLDP, Time: 8 days, 00:57:50, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/2
+    PortDescr:    DEL::UPL::10G::MYBLE01SDWESX5::vmnic11
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 2e, Flags: 11043
+  VLAN:         1120, pvid: yes Vlan_1120
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet2, via: LLDP, Time: 8 days, 00:57:50, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/3
+    PortDescr:    DEL::UPL::10G::MYBLE01SDWESX6::vmnic9
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 2f, Flags: 11043
+  VLAN:         1101 Vlan_1101
+  VLAN:         1102 Vlan_1102
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet3, via: LLDP, Time: 8 days, 00:57:50, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/4
+    PortDescr:    DEL::UPL::10G::MYBLE01SDWESX6::vmnic11
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 30, Flags: 11043
+  VLAN:         1120, pvid: yes
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet4, via: LLDP, Time: 8 days, 00:57:50, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/5
+    PortDescr:    DEL::UPL::10G::MYBLE01SDWESX5::vmnic10
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 31, Flags: 11043
+  VLAN:         677 Vlan_677
+  VLAN:         678 Vlan_678
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet5, via: LLDP, Time: 8 days, 00:57:51, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/6
+    PortDescr:    DEL::UPL::10G::MYBLE01SDWESX6::vmnic10
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 32, Flags: 11043
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet6, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/7
+    PortDescr:    Ethernet6
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 33, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet7, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/8
+    PortDescr:    Ethernet7
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 34, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet8, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/9
+    PortDescr:    Ethernet8
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 35, Flags: 1003
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet9, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/10
+    PortDescr:    Ethernet9
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 36, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet10, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/11
+    PortDescr:    sp-TM bw-1G ty-INETBGP id-LD1030249315 loc-MYBLE01
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 37, Flags: 1003
+  VLAN:         4095, pvid: yes
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet11, via: unknown, Time: 7 days, 03:21:42, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/12
+    PortDescr:    sp-TWC bw-2G ty-INET id-ME011113 loc-MYBLE01
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 38, Flags: 11043
+  VLAN:         678, pvid: yes Vlan_678
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet60, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/52
+    PortDescr:    Ethernet60
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  TTL:          120, IfIndex: 39, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet56, via: LLDP, Time: 8 days, 00:57:50, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/51
+    PortDescr:    DEL::PCM::100G::MYBLE01-DC-0408-SI01::Eth56
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  TTL:          120, IfIndex: 3a, Flags: 11043
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet12, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/13
+    PortDescr:    Ethernet12
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 3b, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet13, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/14
+    PortDescr:    Ethernet13
+    MFS:          7400
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 1000BaseTFD - Four-pair Category 5 UTP, full duplex mode
+  TTL:          120, IfIndex: 3c, Flags: 1003
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet14, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/15
+    PortDescr:    Ethernet14
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 3d, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet15, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/16
+    PortDescr:    Ethernet15
+    MFS:          7600
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 3e, Flags: 1003
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet16, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/17
+    PortDescr:    Ethernet16
+    MFS:          8700
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 1000BaseTFD - Four-pair Category 5 UTP, full duplex mode
+  TTL:          120, IfIndex: 3f, Flags: 1003
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet17, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/18
+    PortDescr:    Ethernet17
+    MFS:          6666
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 1000BaseTFD - Four-pair Category 5 UTP, full duplex mode
+  TTL:          120, IfIndex: 40, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet18, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/19
+    PortDescr:    Ethernet18
+    MFS:          8900
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 1000BaseTFD - Four-pair Category 5 UTP, full duplex mode
+  TTL:          120, IfIndex: 41, Flags: 1003
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet19, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/20
+    PortDescr:    Ethernet19
+    MFS:          6666
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 1000BaseTFD - Four-pair Category 5 UTP, full duplex mode
+  TTL:          120, IfIndex: 42, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet20, via: unknown, Time: 7 days, 03:43:26, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/21
+    PortDescr:    DEL::UPL::10G::MYPENPAFWCORP02::Eth6::
+    MFS:          1500
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 43, Flags: 11043
+  VLAN:         802, pvid: yes
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet21, via: unknown, Time: 7 days, 03:43:26, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/22
+    PortDescr:    DEL::UPL::10G::MYPENPAFWCORP02::Eth1/20-DefaultFW::
+    MFS:          1500
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 44, Flags: 11043
+  VLAN:         809, pvid: yes Vlan_809
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet22, via: unknown, Time: 7 days, 03:43:26, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/23
+    PortDescr:    DEL::UPL::10G::mypenpafwedu02::Eth1/14::
+    MFS:          1500
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 45, Flags: 11043
+  VLAN:         803, pvid: yes Vlan_803
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet23, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/24
+    PortDescr:    Ethernet23
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 46, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet36, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/37
+    PortDescr:    Ethernet36
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 47, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet37, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/38
+    PortDescr:    Ethernet37
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 48, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet38, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/39
+    PortDescr:    Ethernet38
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 49, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet39, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/40
+    PortDescr:    Temp UL to SD01-Eth1/43
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 10GigBaseCX4 - X copper over 8 pair 100-Ohm balanced cable
+  TTL:          120, IfIndex: 4a, Flags: 1002
+  VLAN:         4095, pvid: yes
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet40, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/41
+    PortDescr:    Ethernet40
+    MFS:          9100
+  TTL:          120, IfIndex: 4b, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet41, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/42
+    PortDescr:    Ethernet41
+    MFS:          9100
+  TTL:          120, IfIndex: 4c, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet42, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/43
+    PortDescr:    Ethernet42
+    MFS:          9100
+  TTL:          120, IfIndex: 4d, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet43, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/44
+    PortDescr:    Ethernet43
+    MFS:          9100
+  TTL:          120, IfIndex: 4e, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet44, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/45
+    PortDescr:    Ethernet44
+    MFS:          9100
+  TTL:          120, IfIndex: 4f, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet45, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/46
+    PortDescr:    Ethernet45
+    MFS:          9100
+  TTL:          120, IfIndex: 50, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet46, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/47
+    PortDescr:    Ethernet46
+    MFS:          9100
+  TTL:          120, IfIndex: 51, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet47, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/48
+    PortDescr:    Ethernet47
+    MFS:          9100
+  TTL:          120, IfIndex: 52, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet48, via: LLDP, Time: 8 days, 00:57:32, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/49
+    PortDescr:    DEL::PCM::100G::MYBLE01-DC-0408-SI01::Eth48
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  TTL:          120, IfIndex: 53, Flags: 11043
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------
+Local Interface: Ethernet52, via: unknown, Time: 8 days, 01:00:23, Last Update: 8 days, 01:00:23
+  Chassis:     
+    ChassisID:    mac b4:e9:b8:e7:ce:00
+    MgmtIP:       10.92.56.60
+    Capability:   Bridge, off
+    Capability:   Router, on
+    Capability:   Wlan, off
+    Capability:   Station, off
+  Port:        
+    PortID:       local Eth1/50
+    PortDescr:    Ethernet52
+    MFS:          9100
+    PMD autoneg:  supported: no, enabled: no
+      MAU oper type: 100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable
+  TTL:          120, IfIndex: 54, Flags: 1002
+  LLDP-MED:    
+    Device Type:  Network Connectivity Device
+    Capability:   Capabilities, yes
+    Capability:   Policy, yes
+    Capability:   Location, yes
+    Capability:   MDI/PSE, yes
+    Capability:   MDI/PD, yes
+    Capability:   Inventory, yes
+    Inventory:   
+      Hardware Revision: 3.40.0.9-17
+      Software Revision: 5.10.0-35-amd64
+      Firmware Revision: 3.40.0.9-17
+      Serial Number: TH05K640CET0059K0NX0
+      Manufacturer: Dell EMC
+      Model:        S5248F-ON
+      Asset ID:     B4RFSR3
+-------------------------------------------------------------------------------

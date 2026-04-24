@@ -1,0 +1,2 @@
+#Run fetch-crl-utility once in every 30 minutes.
+*/30 * * * * root /usr/bin/python3 /usr/bin/fetch-crl-utility.py > /dev/null 2>&1

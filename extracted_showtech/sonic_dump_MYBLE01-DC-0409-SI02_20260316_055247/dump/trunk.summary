@@ -1,0 +1,7 @@
+trunk show
+Device supports 2112 trunk groups:
+  2048 front panel trunks (0..2047), 256 ports/trunk
+  64 fabric trunks (2048..2111), 64 ports/trunk
+trunk 0: (front panel, 0 ports)
+trunk 1: (front panel, 2 ports)=ce0,ce2 dlf=any mc=any ipmc=any psc=portflow (0x9)
+drivshell>

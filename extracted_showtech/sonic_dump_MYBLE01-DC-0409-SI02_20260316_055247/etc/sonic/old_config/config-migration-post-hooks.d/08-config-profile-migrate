@@ -1,0 +1,11 @@
+ACTIVE_PROFILE_FLAG=/usr/share/broadcom_sonic/config_profiles/active
+MIGRATED_PROFILE=/host/backup/config-profiles/active
+if [ -e $MIGRATED_PROFILE ] && [ -s $MIGRATED_PROFILE ]; then
+    NEW_PROFILE=$(cat ${MIGRATED_PROFILE})
+    if [ "$NEW_PROFILE" != ""  ] && \
+       [ -d "/usr/share/broadcom_sonic/config_profiles/${NEW_PROFILE}" ]; then
+        # Restore current setting from backup copy
+        cp -f -a $MIGRATED_PROFILE ${ACTIVE_PROFILE_FLAG}
+    fi
+    rm -rf /host/backup/config-profiles
+fi

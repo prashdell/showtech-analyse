@@ -1,0 +1,5 @@
+l3 ecmp egress show
+ECMP Egress Object 200000
+Interfaces: 400002 400003
+Use count: 1
+drivshell>

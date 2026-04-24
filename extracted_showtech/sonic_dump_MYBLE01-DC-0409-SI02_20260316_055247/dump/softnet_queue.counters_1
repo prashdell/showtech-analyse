@@ -1,0 +1,9 @@
+cpu      total    dropped   squeezed  collision        rps flow_limit
+/usr/local/bin/softnet_stat.sh: line 32: printf: 0x00000000 00000000 00000000: invalid hex number
+  0   16677386          0       3566          0          0          0
+/usr/local/bin/softnet_stat.sh: line 32: printf: 0x00000000 00000000 00000001: invalid hex number
+  1   23388751          0       4547          0          0          0
+/usr/local/bin/softnet_stat.sh: line 32: printf: 0x00000000 00000000 00000002: invalid hex number
+  2   24348274          0      23057          0          0          0
+/usr/local/bin/softnet_stat.sh: line 32: printf: 0x00000000 00000000 00000003: invalid hex number
+  3   92908873          0     406699          0          0          0

@@ -1,0 +1,10 @@
+port              vlan-id    Suppression
+Bridge            677
+                  678
+                  802
+                  803
+                  809
+                  1101
+                  1102
+                  1120
+                  2000

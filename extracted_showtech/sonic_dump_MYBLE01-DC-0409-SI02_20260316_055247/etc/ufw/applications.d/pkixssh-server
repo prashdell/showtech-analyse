@@ -1,0 +1,4 @@
+[PkixSSH]
+title=Secure shell server, an rshd replacement
+description=PKIXSSH is a free implementation of the Secure Shell protocol.
+ports=22/tcp

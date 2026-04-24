@@ -1,0 +1,87 @@
+****************************************************************************
+aclorchagent techsupport dump begin at Mon 16 Mar 2026 06:06:27 AM GMT
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent acl table
+--------------------------------------------------------------------
+Created ACL tables:
+
+Ignore ACL Table names:
+*************** Profiling data ***************
+End to End Execution time: 103.26 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.491s
+user	0m0.308s
+sys	0m0.042s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent acl global
+--------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+Created ACL tables:
+
+Created counters:
+
+Ignore ACL Table names:
+
+Ingress Table allocation:
+
+Egress Table allocation:
+
+ACL priorities: 0-2147483647
+*************** Profiling data ***************
+End to End Execution time: 103.12 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.468s
+user	0m0.293s
+sys	0m0.052s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent acl counters
+--------------------------------------------------------------------
+Created counters:
+*************** Profiling data ***************
+End to End Execution time: 102.91 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.452s
+user	0m0.304s
+sys	0m0.036s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent acl user-trap
+--------------------------------------------------------------------
+User defined trap groups:
+*************** Profiling data ***************
+End to End Execution time: 102.98 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.448s
+user	0m0.292s
+sys	0m0.044s
+
+
+
+
+
+****************************************************************************
+aclorchagent techsupport dump ended at Mon 16 Mar 2026 06:06:29 AM GMT
+****************************************************************************

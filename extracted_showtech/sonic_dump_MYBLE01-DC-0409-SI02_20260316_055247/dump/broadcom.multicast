@@ -1,0 +1,59 @@
+multicast show
+Group 0xf000004 (FLOW)
+	port xe0, encap id 432779
+	port xe2, encap id 432780
+	port ce2, encap id 432781
+	port ce0, encap id 432781
+Group 0xf000005 (FLOW)
+	port xe27, encap id 432785
+	port xe0, encap id 432782
+	port xe2, encap id 432784
+	port ce2, encap id 432786
+	port ce0, encap id 432786
+Group 0xf000006 (FLOW)
+	port xe1, encap id 432787
+	port xe3, encap id 432788
+Group 0xf000007 (FLOW)
+	port ce2, encap id 432789
+	port ce0, encap id 432789
+Group 0xf000008 (FLOW)
+	port xe0, encap id 432790
+	port xe2, encap id 432791
+	port xe4, encap id 432793
+	port xe5, encap id 432794
+	port ce2, encap id 432795
+	port ce0, encap id 432795
+Group 0xf000009 (FLOW)
+	port xe4, encap id 432797
+	port xe5, encap id 432798
+	port xe11, encap id 432796
+	port ce2, encap id 432799
+	port ce0, encap id 432799
+Group 0xf00000a (FLOW)
+	port ce2, encap id 432801
+	port xe20, encap id 432800
+	port ce0, encap id 432801
+Group 0xf00000b (FLOW)
+	port ce2, encap id 432803
+	port xe22, encap id 432802
+	port ce0, encap id 432803
+Group 0xf00000c (FLOW)
+	port ce2, encap id 432805
+	port xe21, encap id 432804
+	port ce0, encap id 432805
+Group 0x200000d (L3)
+	port xe1, encap id 432807
+	port xe3, encap id 432808
+Group 0x200000e (L3)
+	port ce2, encap id 432811
+	port xe20, encap id 432810
+	port ce0, encap id 432811
+Group 0x200000f (L3)
+	port ce2, encap id 432814
+	port xe22, encap id 432813
+	port ce0, encap id 432814
+Group 0x2000010 (L3)
+	port ce2, encap id 432817
+	port xe21, encap id 432816
+	port ce0, encap id 432817
+drivshell>

@@ -1,0 +1,4 @@
+VRF: default
+Interface        Address         Source          Group           State      Uptime   Expire Prune
+VRF: mgmt
+Interface        Address         Source          Group           State      Uptime   Expire Prune

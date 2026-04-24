@@ -1,0 +1,27 @@
+bcmsai lb
+
+ Load balance debug support
+
+Rtag7 hash control
+    bcmSwitchHashControl                                   : 0x3b3 (947)
+Rtag7 hash Lag Algorithm ..
+    bcmSwitchHashField0Config                              : 0x8 (8)
+    bcmSwitchHashSeed0                                     : 0xa (10)
+    bcmSwitchHashIP4TcpUdpField0                           : 0xf70 (3952)
+    bcmSwitchHashIP4TcpUdpPortsEqualField0                 : 0xf70 (3952)
+    bcmSwitchHashIP4Field0                                 : 0xf70 (3952)
+    bcmSwitchHashField0PreProcessEnable                    : 0x1 (1)
+    bcmSwitchTrunkHashSet0UnicastOffset                    : 0xa (10)
+Rtag7 hash ECMP Algorithm ..
+    bcmSwitchHashSeed1                                     : 0xe7ce02 (15191554)
+    bcmSwitchHashField1Config                              : 0x9 (9)
+    bcmSwitchHashIP4TcpUdpField1                           : 0xf70 (3952)
+    bcmSwitchHashIP4TcpUdpPortsEqualField1                 : 0xf70 (3952)
+    bcmSwitchHashIP4Field1                                 : 0xf70 (3952)
+    bcmSwitchHashField1PreProcessEnable                    : 0x1 (1)
+    bcmSwitchECMPHashSet0Offset                            : 0x14 (20)
+Rtag7 UDF hash control
+    bcmSwitchUdfHashEnable                                 : Feature unavailable
+    bcmSwitchHashUdfSelect0                                : Feature unavailable
+    bcmSwitchHashUdfSelect1                                : Feature unavailable
+Platform does not support ARSdrivshell>

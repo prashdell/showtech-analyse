@@ -1,0 +1,560 @@
+#!/bin/sh -x
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+LOOP_IMAGE_DIR=$(dirname $(cat /proc/cmdline | xargs -n1 | grep loop= | cut -d'=' -f 2-))
+loop_version=$(echo $LOOP_IMAGE_DIR | cut -d'-' -f 2-)
+SONIC_VERSION=$(cat /etc/sonic/sonic_version.yml | grep "build_version" | sed -e "s/build_version: //g;s/'//g")
+if [ "$loop_version" != "" ] && [ "$loop_version" != "${SONIC_VERSION}" ]; then
+    # Fix sonic version string to match with grub configuration
+    sed -i "/^build_version/c build_version: '$loop_version'" /etc/sonic/sonic_version.yml
+    echo "original_version: '${SONIC_VERSION}'" >> /etc/sonic/sonic_version.yml
+    SONIC_VERSION=$loop_version
+fi
+FIRST_BOOT_FILE="/host/image-${SONIC_VERSION}/platform/firsttime"
+SONIC_FIRST_BOOT_SCRIPT="/host/image-${SONIC_VERSION}/first_boot.sh"
+SONIC_BRANDING_OVERRIDE="/host/image-${SONIC_VERSION}/sonic_branding.yml"
+SONIC_BRANDING_FILE="/etc/sonic/sonic_branding.yml"
+RUNTIME_JOURNALD_CONF="/etc/systemd/journald.conf.d/01-journald-storage.conf"
+
+
+RSYSLOG_FILE="/etc/logrotate.d/rsyslog"
+IMEM_INFO_FILE="/etc/logrotate.d/in-memory/00-in-memory-info"
+IMEM_DEBUG_FILE="/etc/logrotate.d/in-memory/00-in-memory-debug"
+IMEM_DISK_INFO_FILE="/etc/logrotate.d/in-memory/01-disk-info"
+IMEM_DISK_DEBUG_FILE="/etc/logrotate.d/in-memory/01-disk-debug"
+IMEM_CONF_FILE="/etc/rsyslog.d/in-memory/00-in-memory.conf"
+APPLOG_CONF_FILE="/etc/rsyslog.d/20-sonic.conf"
+HISTOGRAM_FILE="/etc/logrotate.d/histogram/mem-histogram-rule"
+LOGCLEANUP_FILE="/usr/bin/log-cleanup.sh"
+
+# Move sonic-environment to /etc/sonic
+SONIC_CONFIG_DIR="/host/image-${SONIC_VERSION}/sonic-config"
+SONIC_ENV_FILE=${SONIC_CONFIG_DIR}/sonic-environment
+if [ -d ${SONIC_CONFIG_DIR} -a -f ${SONIC_ENV_FILE} ]; then
+    echo "moving file ${SONIC_ENV_FILE} to /etc/sonic" 1>&2
+    mv ${SONIC_ENV_FILE} /etc/sonic
+fi
+
+# In case the unit is migrating from another NOS, save the logs
+log_migration() {
+    echo $1 >> /host/migration/migration.log
+}
+
+# Import files from another NOS's partition onto SONiC
+nos_migration_import() {
+    [ -f $1 ] && cp $1 $2 || log_migration "ERROR: $1 not found!"
+}
+
+# While migrating form another NOS, we need to preserve the MAC addresses
+# of eth0 (and eventually switchports).
+# Update the eth0 mac and also the EEPROM using ethtool so that subsequent
+# reboots use the NOS's mac.
+# Input : mgmt_interface.cfg file imported from the previous NOS.
+update_mgmt_interface_macaddr() {
+    mgmt_config=$1
+    if [ ! -f "$mgmt_config" ]; then
+        log_migration "ERROR : unable update eth0 MAC : $mgmt_config not found!"
+        return
+    fi
+
+    # Save the previous NOS's mac
+    old_mac=`ip link show eth0 | grep ether | awk '{print $2}'`
+    [ -z "$old_mac" ] && log_migration "Unable to retrieve old mac address !" && return
+
+    # Extract, validate and set the eth0's mac address for the current session
+    new_mac=$(grep "macaddr" $mgmt_config | awk -F'=' '{print $2}')
+    log_migration "Setting eth0 mac as $new_mac."
+    if [ `echo $new_mac | egrep "^([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}$"` ]; then
+        ip link set eth0 down
+        ip link set eth0 address $new_mac
+        ip link set eth0 up
+    else
+        log_migration "ERROR: mac imported from NOS is invalid : $new_mac !"
+        return
+    fi
+
+    # Get the ethtool magic and offset for changing the mac address in the EEPROM
+    ethtool_magic=$(grep "ethtool_magic" $mgmt_config | awk -F'=' '{print $2}')
+    ethtool_offset=$(grep "ethtool_offset" $mgmt_config | awk -F'=' '{print $2}')
+    if [ -z "$ethtool_magic" ] || [ -z "$ethtool_offset" ]; then
+        log_migration "Unable to retrieve ethtool params ($ethtool_magic,$ethtool_offset)"
+        return
+    fi
+
+    log_migration "eth0 mac in EEPROM before update:"
+    ethtool -e eth0 offset $ethtool_offset length 6 >> /host/migration/migration.log
+
+    # Update the mac address in the EEPROM for subsequent reboots
+    # Write only changed octets
+    for i in 1 2 3 4 5 6; do
+        offset=$(($ethtool_offset+$i-1))
+        old_mac_octet="$(echo $old_mac | cut -d":" -f$i)"
+        new_mac_octet="$(echo $new_mac | cut -d":" -f$i)"
+
+        if [ "$old_mac_octet" != "$new_mac_octet" ]; then
+            ethtool -E eth0 magic $ethtool_magic offset $offset value 0x$new_mac_octet
+            if [ $? != 0 ]; then
+                log_migration "ERROR: unable to update eth0 EEPROM!"
+                log_migration "index $i, magic $ethtool_magic offset $offset, value $new_mac_octet"
+                return
+            fi
+        fi
+    done
+
+    log_migration "eth0 mac in EEPROM after update:"
+    ethtool -e eth0 offset $ethtool_offset length 6 >> /host/migration/migration.log
+}
+
+migrate_nos_configuration()
+{
+    rm -rf /host/migration
+    mkdir -p /host/migration
+
+    # Extract the previous NOS's partition that contains the migration artifacts
+    set -- $(cat /proc/cmdline)
+    for x in "$@"; do
+        case "$x" in
+            nos-config-part=*)
+                nos_dev="${x#nos-config-part=}"
+                ;;
+            SONIC_BOOT_TYPE=fast*)
+                sonic_fast_reboot=true
+                ;;
+        esac
+    done
+
+    if [ -n "$nos_dev" ]; then
+        # remove nos-config-part from cmdline
+        sed -r -i.bak "s/nos-config-part=[^[:space:]]+//" /host/grub/grub.cfg
+
+        # Mount the previous NOS's partition
+        NOS_DIR=/mnt/nos_migration
+        MG_GZFILE=$NOS_DIR/minigraph.xml.gz.base64.txt
+        MG_FILE=$NOS_DIR/minigraph.xml
+        ACL_GZFILE=$NOS_DIR/acl.json.gz.base64.txt
+        ACL_FILE=$NOS_DIR/acl.json
+        SNMP_FILE=$NOS_DIR/snmp.yml
+        mkdir -p $NOS_DIR
+
+        mount $nos_dev $NOS_DIR
+        if [ $? != 0 ]; then
+            log_migration "ERROR: cannot mount $nos_dev"
+        else
+
+            # decode & unzip minigraph.xml.gz.base64.txt
+            [ -f $MG_GZFILE ] && /usr/bin/base64 -d $MG_GZFILE | /bin/gunzip > $MG_FILE
+            [ -f $ACL_GZFILE ] && /usr/bin/base64 -d $ACL_GZFILE | /bin/gunzip > $ACL_FILE
+
+            # Copy relevant files
+            nos_migration_import $NOS_DIR/mgmt_interface.cfg /host/migration
+            nos_migration_import $MG_FILE /host/migration
+            nos_migration_import $ACL_FILE /host/migration
+            nos_migration_import $SNMP_FILE /host/migration
+
+            if [ "$sonic_fast_reboot" == true ]; then
+                mkdir -p /host/fast-reboot
+                nos_migration_import $NOS_DIR/arp.json /host/fast-reboot
+                nos_migration_import $NOS_DIR/fdb.json /host/fast-reboot
+                nos_migration_import $NOS_DIR/default_routes.json /host/fast-reboot
+            fi
+
+            umount $NOS_DIR
+            rmdir $NOS_DIR
+        fi
+
+        [ -f /host/migration/mgmt_interface.cfg ] && update_mgmt_interface_macaddr /host/migration/mgmt_interface.cfg
+
+        migration="TRUE"
+    fi
+}
+
+firsttime_exit() {
+    rm -f /sys/fs/pstore/*.enc.z
+    rm -rf $FIRST_BOOT_FILE
+    exit 0
+}
+
+# Given a string of tuples of the form field=value, extract the value for a field
+# In : $string, $field
+# Out: $value
+value_extract() {
+    set -- $string
+    for x in "$@"; do
+        case "$x" in
+            $field=*)
+                value="${x#$field=}"
+        esac
+    done
+}
+
+program_console_speed()
+{
+    speed=$(cat /proc/cmdline | grep -Eo 'console=ttyS[0-9]+,[0-9]+' | cut -d "," -f2)
+    if [ -z "$speed" ]; then
+        CONSOLE_SPEED=9600
+    else
+        CONSOLE_SPEED=$speed
+    fi
+
+    sed -i "s|\-\-keep\-baud .* %I| $CONSOLE_SPEED %I|g" /lib/systemd/system/serial-getty@.service
+    systemctl daemon-reload
+}
+
+
+check_enable_redisauth()
+{
+    if [ -f /etc/enable_redisauth ]; then
+        REDIS_PATH=/run/redis/auth
+        mkdir -p ${REDIS_PATH}
+        touch ${REDIS_PATH}/passwd
+        chmod -R 0550 ${REDIS_PATH}
+        chown -R admin:admin ${REDIS_PATH}
+        echo -n $(openssl rand -base64 16) > ${REDIS_PATH}/passwd
+    fi
+}
+
+install_logconf()
+{
+    TAIL=$1
+  
+    cp -f ${RSYSLOG_FILE}${TAIL} ${RSYSLOG_FILE}
+    cp -f ${IMEM_INFO_FILE}${TAIL} ${IMEM_INFO_FILE}
+    cp -f ${IMEM_DEBUG_FILE}${TAIL} ${IMEM_DEBUG_FILE}
+    cp -f ${IMEM_DISK_INFO_FILE}${TAIL} ${IMEM_DISK_INFO_FILE}
+    cp -f ${IMEM_DISK_DEBUG_FILE}${TAIL} ${IMEM_DISK_DEBUG_FILE}
+    cp -f ${IMEM_CONF_FILE}${TAIL} ${IMEM_CONF_FILE}
+    cp -f ${APPLOG_CONF_FILE}${TAIL} ${APPLOG_CONF_FILE}
+    cp -f ${HISTOGRAM_FILE}${TAIL} ${HISTOGRAM_FILE}
+    cp -f ${LOGCLEANUP_FILE}${TAIL} ${LOGCLEANUP_FILE}
+    chmod 755 ${LOGCLEANUP_FILE}
+
+    rm -f ${RSYSLOG_FILE}.* ${IMEM_INFO_FILE}.* ${IMEM_DEBUG_FILE}.* ${IMEM_DISK_INFO_FILE}.* ${IMEM_DISK_DEBUG_FILE}.* ${IMEM_CONF_FILE}.* ${APPLOG_CONF_FILE}.* ${HISTOGRAM_FILE}.* ${LOGCLEANUP_FILE}.*
+}
+
+#### Begin Main Body ####
+
+logger "SONiC version ${SONIC_VERSION} starting up..."
+
+# mount the bpf sysfs
+mount -t bpf none /sys/fs/bpf/
+
+#By default, db auth is enabled
+set +x
+touch /etc/enable_redisauth
+check_enable_redisauth
+set -x
+
+TPCM_PATH=/var/run/tpcm
+mkdir -p ${TPCM_PATH}
+
+# If the machine.conf is absent, it indicates that the unit booted
+# into SONiC from another NOS. Extract the machine.conf from ONIE.
+grub_installation_needed=""
+if [ ! -e /host/machine.conf ]; then
+    onie_dev=$(blkid | grep ONIE-BOOT | head -n 1 | awk '{print $1}' |  sed -e 's/:.*$//')
+    mkdir -p /mnt/onie-boot
+    mount $onie_dev /mnt/onie-boot
+    onie_grub_cfg=/mnt/onie-boot/onie/grub/grub-machine.cfg
+
+    if [ ! -e $onie_grub_cfg ]; then
+        log_migration "$onie_grub_cfg not found"
+    else
+        . ./$onie_grub_cfg
+        grep = $onie_grub_cfg | sed -e 's/onie_//' -e 's/=.*$//' | while read var ; do
+            eval val='$'onie_$var
+            echo "onie_${var}=${val}" >> /host/machine.conf
+        done
+        grub_installation_needed="TRUE"
+    fi
+
+    umount /mnt/onie-boot
+fi
+
+migrate_nos_configuration
+
+. /host/machine.conf
+
+program_console_speed
+
+if [ -f $FIRST_BOOT_FILE ]; then
+
+    echo "First boot detected. Performing first boot tasks..."
+
+    if [ -n "$aboot_platform" ]; then
+        platform=$aboot_platform
+    elif [ -n "$onie_platform" ]; then
+        platform=$onie_platform
+    else
+        echo "Unknown SONiC platform"
+        firsttime_exit
+    fi
+
+    # Try to take old configuration saved during installation
+    # and create a flag in /tmp/ to let updategraph service know
+    if [ -d /host/old_config ]; then
+        mv -f /host/old_config /etc/sonic/
+        rm -rf /etc/sonic/old_config/old_config
+        touch /tmp/pending_config_migration
+    elif [ -f /host/minigraph.xml ]; then
+        mkdir -p /etc/sonic/old_config
+        mv /host/minigraph.xml /etc/sonic/old_config/
+        [ -f /host/acl.json ] && mv /host/acl.json /etc/sonic/old_config/
+        [ -f /host/snmp.yml ] && mv /host/snmp.yml /etc/sonic/old_config/
+        touch /tmp/pending_config_migration
+    elif [ -n "$migration" ] && [ -f /host/migration/minigraph.xml ];  then
+        mkdir -p /etc/sonic/old_config
+        mv /host/migration/minigraph.xml /etc/sonic/old_config/
+        [ -f /host/migration/acl.json ] && mv /host/migration/acl.json /etc/sonic/old_config/
+        [ -f /host/migration/snmp.yml ] && mv /host/migration/snmp.yml /etc/sonic/old_config/
+        touch /tmp/pending_config_migration
+        [ -f /etc/sonic/updategraph.conf ] && sed -i -e "s/enabled=false/enabled=true/g" /etc/sonic/updategraph.conf
+    else
+        touch /tmp/pending_config_initialization
+    fi
+
+    # Notify firstboot to Platform, to use it for reboot-cause
+    touch /tmp/notify_firstboot_to_platform
+
+    # Create /host/reboot-cause/platform/ directory
+    # can be used to track last reboot reason by some platforms
+    if [ ! -d /host/reboot-cause/platform ]; then
+        mkdir -p /host/reboot-cause/platform
+    fi
+
+    if [ ! -e /usr/share/sonic/platform ]; then
+        ln -s /usr/share/sonic/device/$platform /usr/share/sonic/platform
+    fi
+
+    if [ -d /host/image-$SONIC_VERSION/platform/$platform ]; then
+        # Running the dpkg installation in the background so that rc.local finishes early
+        # and other dependent services starts soon. Platform service might not finish before
+        # the launch of opennsl-modules/syncd services, so take care of that dependency
+        nohup dpkg -i /host/image-$SONIC_VERSION/platform/$platform/*.deb &
+    fi
+
+	# Install the first boot specific packages
+    if [ -d /host/image-$SONIC_VERSION/firstboot ]; then
+        dpkg -i /host/image-$SONIC_VERSION/firstboot/*.deb
+    fi
+
+
+    if [ -f $SONIC_BRANDING_OVERRIDE ]; then
+        yq -y -s '.[0] * .[1]' $SONIC_BRANDING_FILE $SONIC_BRANDING_OVERRIDE > /tmp/branding.yml
+        if [ $? -eq 0 ]; then
+            cp -f /tmp/branding.yml $SONIC_BRANDING_FILE
+        fi
+        rm -f /tmp/branding.yml
+    fi
+
+    sync
+
+    # If the unit booted into SONiC from another NOS's grub,
+    # we now install a grub for SONiC.
+    if [ -n "$onie_platform" ] && [ -n  "$grub_installation_needed" ]; then
+
+        grub_bin=$(ls /host/image-$SONIC_VERSION/platform/x86_64-grub/grub-pc-bin*.deb 2> /dev/null)
+        if [ -z "$grub_bin" ]; then
+            log_migration "Unable to locate grub package !"
+            firsttime_exit
+        fi
+
+        dpkg -i $grub_bin > /dev/null 2>&1
+        if [ $? != 0 ]; then
+            log_migration "Unable to install grub package !"
+            firsttime_exit
+        fi
+
+        # Determine the block device to install grub
+        sonic_dev=$(blkid | grep SONiC-OS | head -n 1 | awk '{print $1}' |  sed -e 's/[0-9]:.*$//')
+        if [ -z "$sonic_dev" ]; then
+            log_migration "Unable to determine sonic partition !"
+            firsttime_exit
+        fi
+
+        grub-install --boot-directory=/host --recheck $sonic_dev 2>/dev/null
+        if [ $? != 0 ]; then
+            log_migration "grub install failed !"
+            firsttime_exit
+        fi
+
+        # The SONiC "raw" build mode has already generated a proto grub.cfg
+        # as part of the migration. Platform specific constants need to be
+        # retrieved from installer.conf (if present) and assigned.
+        . /usr/share/sonic/device/$platform/installer.conf
+
+        if [ ! -z "$CONSOLE_PORT" ]; then
+            field="\-\-port"
+            string=$(grep $field /host/grub.cfg)
+            value_extract $string $field
+            console_port=$value
+            if [ ! -z "$console_port" ] && [ "$console_port" != "$CONSOLE_PORT" ]; then
+                sed -i -e "s/\-\-port=$console_port/\-\-port=$CONSOLE_PORT/g" /host/grub.cfg
+            fi
+            log_migration "grub.cfg console port=$console_port & installer.conf CONSOLE_PORT=$CONSOLE_PORT"
+        fi
+
+        if [ ! -z "$CONSOLE_DEV" ]; then
+            field="console"
+            string=$(grep $field /host/grub.cfg)
+            value_extract $string $field
+            console_dev_name=$(echo $value | sed -e "s/^.*=//" -e "s/,.*//")
+            console_dev="${console_dev_name#ttyS}"
+            if [ "$console_dev" != "$CONSOLE_DEV" ]; then
+                sed -i -e "s/console=ttyS$console_dev/console=ttyS$CONSOLE_DEV/g" /host/grub.cfg
+            fi
+            log_migration "grub.cfg console dev=$console_dev & installer.conf CONSOLE_DEV=$CONSOLE_DEV"
+        fi
+
+        if [ ! -z "$VAR_LOG_SIZE" ]; then
+            field="var_log_size"
+            string=$(grep $field /host/grub.cfg)
+            value_extract $string $field
+            var_log_size=$value
+            if [ ! -z "$var_log_size" ] && [ "$var_log_size" != "$VAR_LOG_SIZE" ]; then
+                sed -i -e "s/var_log_size=$var_log_size/var_log_size=$VAR_LOG_SIZE/g" /host/grub.cfg
+            fi
+            log_migration "grub.cfg var_log_size=$var_log_size & installer.conf VAR_LOG_SIZE=$VAR_LOG_SIZE"
+        fi
+
+        # Set the root based on the label
+        sonic_root=$(blkid | grep SONiC-OS | head -n 1 | awk '{print $1}' |  sed -e 's/:.*$//')
+        sonic_root=$(echo "$sonic_root" | sed 's/\//\\\//g')
+        sed -i -e "s/%%SONIC_ROOT%%/$sonic_root/g" /host/grub.cfg
+
+        # Add the Diag and ONIE entries
+        mount $onie_dev /mnt/onie-boot
+        . /mnt/onie-boot/onie/grub.d/50_onie_grub >> /host/grub.cfg
+        umount /mnt/onie-boot
+
+        # Initialize the SONiC's grub config
+        mv /host/grub.cfg /host/grub/grub.cfg
+    fi
+    
+    sed -i 's/^UMASK.*/UMASK 027/g' /etc/login.defs
+
+    # Re-init platform specific config json
+    INIT_CFG=/etc/sonic/init_cfg.json
+    PLAT_INIT_CFG=/usr/share/sonic/device/$platform/init_cfg.json
+    TMP_INIT_CFG=$(mktemp)
+    chmod 644 $TMP_INIT_CFG
+    if [ -e $INIT_CFG ] && [ -e $PLAT_INIT_CFG ]; then
+        echo "Applying platform specific initial configuration"
+        jq -rs 'reduce .[] as $item ({}; . * $item)' $INIT_CFG $PLAT_INIT_CFG > $TMP_INIT_CFG
+        if [ $? -eq 0 ]; then
+            mv $TMP_INIT_CFG $INIT_CFG
+        fi
+    fi
+
+    # Kdump tools configuration
+    sed -i -e "s/__PLATFORM__/$platform/g" /etc/default/kdump-tools
+
+    if [ -e $SONIC_FIRST_BOOT_SCRIPT ]; then
+        chmod +x $SONIC_FIRST_BOOT_SCRIPT
+        $SONIC_FIRST_BOOT_SCRIPT
+    fi
+
+    # Create dir where following scripts put their output files
+    mkdir -p /var/platform
+
+    # Kdump tools configuration
+    sed -i -e "s/__PLATFORM__/$platform/g" /etc/default/kdump-tools
+
+	VARLOG_SIZE=$(df --block-size=1M |grep -E "/var/log$" | awk '{print $2}')
+    # journald configuration based on the system's /var/log/ size
+    if [ ! -e $RUNTIME_JOURNALD_CONF ]; then
+        if [ ! -z $VARLOG_SIZE ]; then
+            # By default these values are 10% of the /var/log size
+            sys_max_use=$(($VARLOG_SIZE/10))
+            run_max_use=$(($VARLOG_SIZE/10))
+        else
+            # some error in finding the VARLOG_SIZE
+            sys_max_use=256
+            run_max_use=356
+        fi
+        touch $RUNTIME_JOURNALD_CONF && chmod 644 $RUNTIME_JOURNALD_CONF
+        cat <<-EOF > $RUNTIME_JOURNALD_CONF
+[Journal]
+SystemMaxUse=${sys_max_use}M
+RuntimeMaxUse=${run_max_use}M
+EOF
+        systemctl restart systemd-journald
+    fi
+
+	#Configure the rsyslog, in-memory log & histogram log files count based on log partition size
+	if [ ! -z ${VARLOG_SIZE} ]; then
+        if [ ${VARLOG_SIZE} -lt 1024 ]; then
+            install_logconf ".low"
+        else
+            install_logconf ".high"
+	    fi
+    else
+        logger "ERR: Unable to fetch log partition size, set log conf to default low"
+        install_logconf ".low"
+    fi
+    
+    rm -rf $FIRST_BOOT_FILE
+fi
+
+# Copy the fsck log into syslog
+if [ -f /var/log/fsck.log.gz ]; then
+    gunzip -d -c /var/log/fsck.log.gz | logger -t "FSCK"
+    rm -f /var/log/fsck.log.gz
+fi
+
+# Mount ONIE-BOOT to make available the ONIE tools
+if [ -n "$onie_platform" ]; then
+    mkdir -p /mnt/onie-boot
+    mount LABEL=ONIE-BOOT /mnt/onie-boot
+    # Create fwpkg tables on state db
+    /usr/bin/python3 /usr/local/bin/fwpkg_tables_init.py &
+    # Copy update log in ONIE-BOOT to /var/log
+    if [ -f /mnt/onie-boot/onie/update/update.log ]; then
+        cp /mnt/onie-boot/onie/update/update.log /var/log/onie-update.log
+    fi
+fi
+
+# create image tables on state db
+/usr/bin/python3 /usr/local/bin/image_tables_init.py &
+
+# Clean-up stale journal files
+set +x
+cat /host/image-*/rw/etc/machine-id > /tmp/machine_list
+for m_id in $(ls -1 /var/log/journal/); do
+    if [ ! -z $m_id ]; then
+        if ! grep -q $m_id /tmp/machine_list; then
+            rm -rf /var/log/journal/$m_id
+        fi
+    fi
+done
+rm -f /tmp/machine_list
+
+#fixed the missing tables known issue for rasdaemon 0.6.6 
+table_name="devlink_event"
+db_name="/var/lib/rasdaemon/ras-mc_event.db"
+
+if ! sqlite3 "$db_name" "SELECT name FROM sqlite_master WHERE type='table' AND name='$table_name';" | grep -q "$table_name"; then
+  echo "Table '$table_name' does not exists in '$db_name'."
+  sqlite3 "$db_name" <<EOF
+  CREATE TABLE devlink_event (id INTEGER PRIMARY KEY, timestamp TEXT, bus_name TEXT, dev_name TEXT, driver_name TEXT, reporter_name TEXT, msg TEXT);
+  CREATE TABLE disk_errors (id INTEGER PRIMARY KEY, timestamp TEXT, dev TEXT, sector INTEGER, nr_sector INTEGER, error TEXT, rwbs TEXT, cmd TEXT);
+EOF
+fi
+
+# Remove any pstore files which couldn't be decompressed
+# This can happen when switching between different versions
+# kernel which use different compression alogorithms to
+# store data in pstore.
+rm -f /sys/fs/pstore/*.enc.z
+set -x
+
+exit 0

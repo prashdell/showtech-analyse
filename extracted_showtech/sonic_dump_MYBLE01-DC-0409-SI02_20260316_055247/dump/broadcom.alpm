@@ -1,0 +1,58 @@
+l3 alpm show brief
+
+Mode:                   2-Level ALPM-Combined
+IPv6 Bits:              128
+uRPF:                   Disable
+IPv4                    Double Wide | 48 EPBkt |  6 EPBnk
+IPv6-64                 Double Wide | 24 EPBkt |  3 EPBnk
+IPv6-128                Double Wide | 16 EPBkt |  2 EPBnk
+IPv4-1                  Double Wide | 32 EPBkt |  4 EPBnk
+IPv6-64-1               Double Wide | 24 EPBkt |  3 EPBnk
+
+HW Status:
+
+Mode:                   ALPM-Combined
+IPv6 Bits:              128
+uRPF:                   Disable
+IPv4:                   Double Wide
+IPv6-64:                Double Wide
+IPv6-128:               Double Wide
+Num Banks:              4
+Bucket sharing:         Enable
+Global/Private Zoned:   No
+SW Prefix Lookup:       Yes
+Direct Route Glb High:  0
+Direct Route Glb Low:   0
+---------------------------------------
+
+== ACB.0
+Num Banks:              4
+Bank bits:              2
+Num Buckets:            4096
+Bucket bits:            12
+Bucket Mask:            0xfff
+
+-- Private & Global:
+Pivots:                 
+  32B                   1/16384
+  64B                   0/4096
+  128                   1/4096
+Buckets:                2/4096
+Banks:                  16/32768
+Bucket Entries:         19/196608
+  32B                   17
+  64B                   0
+  128                   2
+Bucket Sharing Count:
+  1->1:                 2
+  2->1:                 0
+  3->1:                 0
+  4->1:                 0
+  5->1:                 0
+  6->1:                 0
+  7->1:                 0
+  8->1:                 0
+Total Routes:           19
+Total Hit Routes:       16
+
+drivshell>

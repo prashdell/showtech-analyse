@@ -1,0 +1,15 @@
+#
+# =============== Managed by SONiC Config Engine DO NOT EDIT! ===============
+# generated from /usr/share/sonic/templates/interfaces.j2 using sonic-cfggen
+# file: /etc/network/interfaces
+#
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The management network interface
+auto eth0
+#
+source /etc/network/interfaces.d/*
+#
+

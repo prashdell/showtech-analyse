@@ -1,0 +1,26 @@
+{
+  "lesson_id": "lesson_enbd_customer_analysis_20260424_143125",
+  "skill_name": "sonic_customer_specific_triage",
+  "lesson_type": "enbd_customer_analysis",
+  "content": {
+    "success_patterns": [
+      "customer_profile_pattern",
+      "deployment_pattern",
+      "compliance_pattern",
+      "temporal_pattern",
+      "security_pattern"
+    ],
+    "context_factors": {
+      "customer": "ENBD",
+      "device": "DXB-LEAF-R7-POD-15-B",
+      "customer_type": "Financial_Services_Enterprise",
+      "deployment_size": "Large",
+      "compliance_level": "Banking_regulations"
+    }
+  },
+  "confidence": 0.96,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:31:25.096140",
+  "execution_time": 4.5,
+  "captured_by": "enbd_comprehensive_analysis"
+}

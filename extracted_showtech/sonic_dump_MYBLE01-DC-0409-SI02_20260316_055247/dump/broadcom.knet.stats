@@ -1,0 +1,131 @@
+Device stats (unit 0):
+  Interrupts    68475086
+  Tx packets    44396652
+  Rx0 packets   25626386
+  Rx1 packets          0
+  Rx2 packets          0
+  Rx3 packets          0
+  Rx4 packets          0
+  Rx5 packets          0
+  Rx6 packets          0
+  Rx0 pkts/intr        0
+  Rx1 pkts/intr        0
+  Rx2 pkts/intr        0
+  Rx3 pkts/intr        0
+  Rx4 pkts/intr        0
+  Rx5 pkts/intr        0
+  Rx6 pkts/intr        0
+  Timer runs           0
+  NAPI reruns     404009
+  Filter 1 stats:
+    Hits               0
+  Filter 2 stats:
+    Hits               0
+  Filter 3 stats:
+    Hits               0
+  Filter 4 stats:
+    Hits               0
+  Filter 5 stats:
+    Hits               0
+  Filter 7 stats:
+    Hits               0
+  Filter 8 stats:
+    Hits               0
+  Filter 9 stats:
+    Hits               0
+  Filter 10 stats:
+    Hits               0
+  Filter 11 stats:
+    Hits               0
+  Filter 12 stats:
+    Hits               0
+  Filter 13 stats:
+    Hits               0
+  Filter 14 stats:
+    Hits               0
+  Filter 15 stats:
+    Hits               0
+  Filter 16 stats:
+    Hits               0
+  Filter 23 stats:
+    Hits               0
+  Filter 24 stats:
+    Hits               0
+  Filter 25 stats:
+    Hits               0
+  Filter 26 stats:
+    Hits               0
+  Filter 29 stats:
+    Hits               0
+  Filter 31 stats:
+    Hits               0
+  Filter 32 stats:
+    Hits               0
+  Filter 33 stats:
+    Hits               0
+  Filter 34 stats:
+    Hits               0
+  Filter 35 stats:
+    Hits               0
+  Filter 36 stats:
+    Hits               0
+  Filter 37 stats:
+    Hits               0
+  Filter 38 stats:
+    Hits               0
+  Filter 42 stats:
+    Hits               0
+  Filter 43 stats:
+    Hits               0
+  Filter 44 stats:
+    Hits               0
+  Filter 45 stats:
+    Hits               0
+  Filter 47 stats:
+    Hits               0
+  Filter 48 stats:
+    Hits               0
+  Filter 49 stats:
+    Hits               0
+  Filter 50 stats:
+    Hits               0
+  Filter 51 stats:
+    Hits               0
+  Filter 52 stats:
+    Hits               0
+  Filter 53 stats:
+    Hits               0
+  Filter 54 stats:
+    Hits               0
+  Filter 56 stats:
+    Hits               0
+  Filter 17 stats:
+    Hits           46327
+  Filter 19 stats:
+    Hits           46331
+  Filter 6 stats:
+    Hits               3
+  Filter 18 stats:
+    Hits         2786173
+  Filter 20 stats:
+    Hits         2769687
+  Filter 21 stats:
+    Hits           46329
+  Filter 22 stats:
+    Hits           46328
+  Filter 28 stats:
+    Hits               0
+  Filter 39 stats:
+    Hits          711328
+  Filter 41 stats:
+    Hits               0
+  Filter 40 stats:
+    Hits          829269
+  Filter 55 stats:
+    Hits        13041705
+  Filter 30 stats:
+    Hits         5302876
+  Filter 46 stats:
+    Hits               0
+  Filter 27 stats:
+    Hits               0

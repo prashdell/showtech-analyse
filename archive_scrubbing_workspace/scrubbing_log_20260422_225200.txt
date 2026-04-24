@@ -1,0 +1,8 @@
+[2026-04-22 22:52:00] === Comprehensive Showtech Archive Scrubbing Started ===
+[2026-04-22 22:52:00] Script: comprehensive_scrub.sh
+[2026-04-22 22:52:00] Workspace: /c/Users/SERIAL-REDACTED-SERIAL-REDACTED/SERIAL-REDACTED-SERIAL-REDACTED/Documents/AI/Devin/showtech_analyse/archive_scrubbing_workspace
+[2026-04-22 22:52:01] Log file: /c/Users/SERIAL-REDACTED-SERIAL-REDACTED/SERIAL-REDACTED-SERIAL-REDACTED/Documents/AI/Devin/showtech_analyse/archive_scrubbing_workspace/scrubbing_log_20260422_225200.txt
+[2026-04-22 22:52:01] Initializing workspace...
+[2026-04-22 22:52:01] ERROR: Workspace structure not found. Expected downloads/ and extracted/ directories.
+[2026-04-22 22:52:02] Cleaning up temporary files...
+[2026-04-22 22:52:02] Cleanup completed

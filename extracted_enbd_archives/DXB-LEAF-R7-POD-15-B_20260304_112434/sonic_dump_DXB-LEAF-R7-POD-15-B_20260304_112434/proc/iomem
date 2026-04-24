@@ -1,0 +1,124 @@
+00000000-00000fff : Reserved
+00001000-0009ffff : System RAM
+000a0000-000fffff : Reserved
+  000a0000-000bffff : PCI Bus 0000:00
+  000c0000-000dffff : PCI Bus 0000:00
+  000f0000-000fffff : System ROM
+00100000-3fffffff : System RAM
+40000000-43ffffff : Reserved
+44000000-79911fff : System RAM
+  5d000000-78ffffff : Crash kernel
+79912000-79921fff : Reserved
+79922000-7cd6dfff : System RAM
+7cd6e000-7cd6efff : Reserved
+7cd6f000-7de7dfff : System RAM
+7de7e000-7df34fff : Reserved
+  7df16018-7df16018 : APEI ERST
+  7df1601c-7df16021 : APEI ERST
+  7df16028-7df16039 : APEI ERST
+  7df16040-7df1604c : APEI ERST
+  7df16050-7df1804f : APEI ERST
+7df35000-7e009fff : System RAM
+7e00a000-7e35ffff : ACPI Non-volatile Storage
+7e360000-7f297fff : Reserved
+7f298000-7f341fff : Unknown E820 type
+7f342000-7f7fffff : System RAM
+7f800000-7fffffff : Reserved
+  7fc00000-7fffffff : pnp 00:00
+80000000-dfffffff : PCI Bus 0000:00
+  dd800000-de0fffff : PCI Bus 0000:02
+    dd800000-ddffffff : 0000:02:00.0
+    de000000-de007fff : 0000:02:00.0
+  de200000-de6fffff : PCI Bus 0000:08
+    de200000-de3fffff : 0000:08:00.1
+    de400000-de5fffff : 0000:08:00.0
+    de600000-de603fff : 0000:08:00.1
+    de604000-de607fff : 0000:08:00.0
+  de800000-decfffff : PCI Bus 0000:06
+    de800000-de9fffff : 0000:06:00.1
+      de800000-de9fffff : ixgbe
+    dea00000-debfffff : 0000:06:00.0
+      dea00000-debfffff : ixgbe
+    dec00000-dec03fff : 0000:06:00.1
+      dec00000-dec03fff : ixgbe
+    dec04000-dec07fff : 0000:06:00.0
+      dec04000-dec07fff : ixgbe
+  df200000-df6fffff : PCI Bus 0000:08
+    df200000-df27ffff : 0000:08:00.1
+    df280000-df2fffff : 0000:08:00.0
+    df300000-df3fffff : 0000:08:00.1
+    df400000-df4fffff : 0000:08:00.1
+    df500000-df5fffff : 0000:08:00.0
+    df600000-df6fffff : 0000:08:00.0
+  df700000-dfbfffff : PCI Bus 0000:06
+    df700000-df77ffff : 0000:06:00.1
+    df780000-df7fffff : 0000:06:00.0
+    df800000-df8fffff : 0000:06:00.1
+    df900000-df9fffff : 0000:06:00.1
+    dfa00000-dfafffff : 0000:06:00.0
+    dfb00000-dfbfffff : 0000:06:00.0
+  dfc00000-dfcfffff : PCI Bus 0000:04
+    dfc00000-dfc0ffff : 0000:04:00.0
+      dfc00000-dfc0ffff : fpgapci
+  dfd00000-dfdfffff : PCI Bus 0000:03
+    dfd00000-dfd7ffff : 0000:03:00.0
+      dfd00000-dfd7ffff : igb
+    dfd80000-dfd83fff : 0000:03:00.0
+      dfd80000-dfd83fff : igb
+  dfe00000-dfefffff : PCI Bus 0000:01
+    dfe00000-dfe3ffff : 0000:01:00.0
+    dfe40000-dfe7ffff : 0000:01:00.0
+    dfe80000-dfe8ffff : 0000:01:00.0
+    dfe90000-dfe9ffff : 0000:01:00.0
+  dff00000-dff1ffff : 0000:00:0e.0
+  dff20000-dff3ffff : 0000:00:0c.0
+  dff40000-dff5ffff : 0000:00:0b.0
+  dff60000-dff7ffff : 0000:00:09.0
+  dff80000-dff8ffff : 0000:00:15.0
+    dff80000-dff8ffff : xhci-hcd
+  dff90000-dff93fff : 0000:00:1f.2
+  dff94000-dff95fff : 0000:00:14.0
+    dff94000-dff95fff : ahci
+  dff96000-dff960ff : 0000:00:1f.4
+  dff97000-dff97fff : 0000:00:1c.0
+  dff98000-dff98fff : 0000:00:1c.0
+    dff98000-dff98fff : mmc0
+  dff99000-dff990ff : 0000:00:1a.2
+    dff99000-dff99007 : serial
+  dff9a000-dff9a0ff : 0000:00:1a.1
+    dff9a000-dff9a007 : serial
+  dff9b000-dff9b0ff : 0000:00:1a.0
+    dff9b000-dff9b007 : serial
+  dff9c000-dff9cfff : 0000:00:18.0
+  dff9d000-dff9d7ff : 0000:00:14.0
+    dff9d000-dff9d7ff : ahci
+  dff9e000-dff9e0ff : 0000:00:14.0
+    dff9e000-dff9e0ff : ahci
+  dff9f000-dff9f3ff : 0000:00:12.0
+    dff9f000-dff9f3ff : ismt_smbus
+e0000000-efffffff : PCI MMCONFIG 0000 [bus 00-ff]
+  e0000000-efffffff : Reserved
+    e0000000-efffffff : pnp 00:00
+fa000000-fa0fffff : PCI Bus 0000:00
+fa100000-fa1007ff : PCI Bus 0000:00
+fb000000-fb7fffff : PCI Bus 0000:00
+fd000000-fe7fffff : Reserved
+  fdc6000c-fdc6000f : wdat_wdt
+    fdc6000c-fdc6000f : wdat_wdt wdat_wdt
+  fe010000-fe010fff : PCI Bus 0000:00
+    fe010000-fe010fff : 0000:00:1f.5
+fec00000-fec00fff : PNP0003:00
+  fec00000-fec003ff : IOAPIC 0
+fed00000-fed003ff : HPET 0
+  fed00000-fed003ff : PNP0103:00
+fed03000-fed03fff : pnp 00:05
+fed60000-fed60fff : pnp 00:00
+fed90000-fed90fff : dmar0
+ff000000-ffffffff : Reserved
+  ff800000-ffffffff : pnp 00:01
+100000000-47fffffff : System RAM
+  3db800000-3dc401e87 : Kernel code
+  3dc600000-3dcd81fff : Kernel rodata
+  3dce00000-3dd0718ff : Kernel data
+  3dd6b6000-3ddbfffff : Kernel bss
+480000000-7fffffffff : PCI Bus 0000:00

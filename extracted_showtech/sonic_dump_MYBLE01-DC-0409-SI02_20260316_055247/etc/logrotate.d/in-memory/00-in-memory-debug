@@ -1,0 +1,17 @@
+
+# Keep the rotate count as 5 as files always get flushed into disk
+# and the file size is restricted to 2M.
+/var/log/ramfs/in-memory-syslog-debug.log
+{
+    rotate 5
+    size 2M
+    missingok
+    notifempty
+    #copytruncate
+    sharedscripts
+    create
+    postrotate
+        systemctl kill --kill-who=main --signal=HUP rsyslog||true
+    endscript
+}
+

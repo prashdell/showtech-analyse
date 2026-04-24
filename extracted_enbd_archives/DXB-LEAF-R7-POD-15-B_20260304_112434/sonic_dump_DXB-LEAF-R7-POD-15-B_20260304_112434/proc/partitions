@@ -1,0 +1,13 @@
+major minor  #blocks  name
+
+ 179        0    3760128 mmcblk0
+ 179        1     131072 mmcblk0p1
+ 179        2    3628015 mmcblk0p2
+   8        0   62522712 sda
+   8        1     262144 sda1
+   8        2     131072 sda2
+   8        3   33554432 sda3
+   7        0     565236 loop0
+   7        1    4194304 loop1
+   7        2    6568960 loop2
+ 254        0      65536 ramdisk

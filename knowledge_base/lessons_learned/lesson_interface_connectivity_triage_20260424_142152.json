@@ -1,0 +1,33 @@
+{
+  "lesson_id": "lesson_interface_connectivity_triage_20260424_142152",
+  "skill_name": "sonic_interface_connectivity_triage",
+  "lesson_type": "interface_analysis",
+  "content": {
+    "success_patterns": [
+      "interface_state_validation_pattern",
+      "physical_layer_analysis_pattern",
+      "sai_layer_interface_pattern",
+      "orchestrator_layer_pattern",
+      "forwarding_plane_impact_pattern",
+      "protocol_correlation_pattern",
+      "customer_specific_pattern",
+      "temperature_interface_correlation_pattern"
+    ],
+    "context_factors": {
+      "archive_intelligence": "284_archive_production_intelligence",
+      "confidence_range": "92-98%",
+      "platform_coverage": [
+        "Dell",
+        "Mellanox",
+        "Arista"
+      ],
+      "analysis_steps": 8,
+      "source_files_range": "950-2000_files_per_instance"
+    }
+  },
+  "confidence": 0.95,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:21:52.177618",
+  "execution_time": 2.8,
+  "captured_by": "comprehensive_analysis"
+}

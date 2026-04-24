@@ -1,0 +1,999 @@
+ show memory zebra incremental
+Mar 12 26 14:55:36 show memory bgp incremental
+Mar 12 26 15:07:40 show memory zebra incremental
+Mar 12 26 15:07:41 show memory bgp incremental
+Mar 12 26 15:19:45 show memory zebra incremental
+Mar 12 26 15:19:46 show memory bgp incremental
+Mar 12 26 15:31:50 show memory zebra incremental
+Mar 12 26 15:31:51 show memory bgp incremental
+Mar 12 26 15:43:56 show memory zebra incremental
+Mar 12 26 15:43:56 show memory bgp incremental
+Mar 12 26 15:56:01 show memory zebra incremental
+Mar 12 26 15:56:01 show memory bgp incremental
+Mar 12 26 16:08:06 show memory zebra incremental
+Mar 12 26 16:08:06 show memory bgp incremental
+Mar 12 26 16:20:11 show memory zebra incremental
+Mar 12 26 16:20:11 show memory bgp incremental
+Mar 12 26 16:32:16 show memory zebra incremental
+Mar 12 26 16:32:16 show memory bgp incremental
+Mar 12 26 16:44:21 show memory zebra incremental
+Mar 12 26 16:44:21 show memory bgp incremental
+Mar 12 26 16:56:26 show memory zebra incremental
+Mar 12 26 16:56:26 show memory bgp incremental
+Mar 12 26 17:08:31 show memory zebra incremental
+Mar 12 26 17:08:31 show memory bgp incremental
+Mar 12 26 17:20:36 show memory zebra incremental
+Mar 12 26 17:20:36 show memory bgp incremental
+Mar 12 26 17:32:41 show memory zebra incremental
+Mar 12 26 17:32:41 show memory bgp incremental
+Mar 12 26 17:44:46 show memory zebra incremental
+Mar 12 26 17:44:46 show memory bgp incremental
+Mar 12 26 17:56:51 show memory zebra incremental
+Mar 12 26 17:56:51 show memory bgp incremental
+Mar 12 26 18:08:56 show memory zebra incremental
+Mar 12 26 18:08:56 show memory bgp incremental
+Mar 12 26 18:21:01 show memory zebra incremental
+Mar 12 26 18:21:01 show memory bgp incremental
+Mar 12 26 18:33:06 show memory zebra incremental
+Mar 12 26 18:33:06 show memory bgp incremental
+Mar 12 26 18:45:11 show memory zebra incremental
+Mar 12 26 18:45:11 show memory bgp incremental
+Mar 12 26 18:57:16 show memory zebra incremental
+Mar 12 26 18:57:16 show memory bgp incremental
+Mar 12 26 19:09:21 show memory zebra incremental
+Mar 12 26 19:09:22 show memory bgp incremental
+Mar 12 26 19:21:26 show memory zebra incremental
+Mar 12 26 19:21:27 show memory bgp incremental
+Mar 12 26 19:33:32 show memory zebra incremental
+Mar 12 26 19:33:32 show memory bgp incremental
+Mar 12 26 19:45:37 show memory zebra incremental
+Mar 12 26 19:45:37 show memory bgp incremental
+Mar 12 26 19:57:42 show memory zebra incremental
+Mar 12 26 19:57:42 show memory bgp incremental
+Mar 12 26 20:09:47 show memory zebra incremental
+Mar 12 26 20:09:47 show memory bgp incremental
+Mar 12 26 20:21:52 show memory zebra incremental
+Mar 12 26 20:21:52 show memory bgp incremental
+Mar 12 26 20:33:57 show memory zebra incremental
+Mar 12 26 20:33:57 show memory bgp incremental
+Mar 12 26 20:46:02 show memory zebra incremental
+Mar 12 26 20:46:02 show memory bgp incremental
+Mar 12 26 20:58:07 show memory zebra incremental
+Mar 12 26 20:58:07 show memory bgp incremental
+Mar 12 26 21:10:12 show memory zebra incremental
+Mar 12 26 21:10:12 show memory bgp incremental
+Mar 12 26 21:22:17 show memory zebra incremental
+Mar 12 26 21:22:17 show memory bgp incremental
+Mar 12 26 21:34:22 show memory zebra incremental
+Mar 12 26 21:34:23 show memory bgp incremental
+Mar 12 26 21:46:27 show memory zebra incremental
+Mar 12 26 21:46:27 show memory bgp incremental
+Mar 12 26 21:58:32 show memory zebra incremental
+Mar 12 26 21:58:32 show memory bgp incremental
+Mar 12 26 22:10:38 show memory zebra incremental
+Mar 12 26 22:10:38 show memory bgp incremental
+Mar 12 26 22:22:43 show memory zebra incremental
+Mar 12 26 22:22:43 show memory bgp incremental
+Mar 12 26 22:34:48 show memory zebra incremental
+Mar 12 26 22:34:48 show memory bgp incremental
+Mar 12 26 22:46:53 show memory zebra incremental
+Mar 12 26 22:46:53 show memory bgp incremental
+Mar 12 26 22:58:58 show memory zebra incremental
+Mar 12 26 22:58:58 show memory bgp incremental
+Mar 12 26 23:11:03 show memory zebra incremental
+Mar 12 26 23:11:03 show memory bgp incremental
+Mar 12 26 23:23:08 show memory zebra incremental
+Mar 12 26 23:23:08 show memory bgp incremental
+Mar 12 26 23:35:13 show memory zebra incremental
+Mar 12 26 23:35:13 show memory bgp incremental
+Mar 12 26 23:47:18 show memory zebra incremental
+Mar 12 26 23:47:18 show memory bgp incremental
+Mar 12 26 23:59:23 show memory zebra incremental
+Mar 12 26 23:59:23 show memory bgp incremental
+Mar 13 26 00:11:28 show memory zebra incremental
+Mar 13 26 00:11:28 show memory bgp incremental
+Mar 13 26 00:23:33 show memory zebra incremental
+Mar 13 26 00:23:33 show memory bgp incremental
+Mar 13 26 00:35:38 show memory zebra incremental
+Mar 13 26 00:35:38 show memory bgp incremental
+Mar 13 26 00:47:43 show memory zebra incremental
+Mar 13 26 00:47:43 show memory bgp incremental
+Mar 13 26 00:59:48 show memory zebra incremental
+Mar 13 26 00:59:48 show memory bgp incremental
+Mar 13 26 01:11:53 show memory zebra incremental
+Mar 13 26 01:11:53 show memory bgp incremental
+Mar 13 26 01:23:58 show memory zebra incremental
+Mar 13 26 01:23:58 show memory bgp incremental
+Mar 13 26 01:36:03 show memory zebra incremental
+Mar 13 26 01:36:03 show memory bgp incremental
+Mar 13 26 01:48:08 show memory zebra incremental
+Mar 13 26 01:48:09 show memory bgp incremental
+Mar 13 26 02:00:13 show memory zebra incremental
+Mar 13 26 02:00:14 show memory bgp incremental
+Mar 13 26 02:12:18 show memory zebra incremental
+Mar 13 26 02:12:19 show memory bgp incremental
+Mar 13 26 02:24:24 show memory zebra incremental
+Mar 13 26 02:24:24 show memory bgp incremental
+Mar 13 26 02:36:29 show memory zebra incremental
+Mar 13 26 02:36:29 show memory bgp incremental
+Mar 13 26 02:48:34 show memory zebra incremental
+Mar 13 26 02:48:34 show memory bgp incremental
+Mar 13 26 03:00:39 show memory zebra incremental
+Mar 13 26 03:00:39 show memory bgp incremental
+Mar 13 26 03:12:44 show memory zebra incremental
+Mar 13 26 03:12:44 show memory bgp incremental
+Mar 13 26 03:24:49 show memory zebra incremental
+Mar 13 26 03:24:49 show memory bgp incremental
+Mar 13 26 03:36:54 show memory zebra incremental
+Mar 13 26 03:36:54 show memory bgp incremental
+Mar 13 26 03:48:59 show memory zebra incremental
+Mar 13 26 03:48:59 show memory bgp incremental
+Mar 13 26 04:01:04 show memory zebra incremental
+Mar 13 26 04:01:04 show memory bgp incremental
+Mar 13 26 04:13:09 show memory zebra incremental
+Mar 13 26 04:13:09 show memory bgp incremental
+Mar 13 26 04:25:14 show memory zebra incremental
+Mar 13 26 04:25:14 show memory bgp incremental
+Mar 13 26 04:37:19 show memory zebra incremental
+Mar 13 26 04:37:19 show memory bgp incremental
+Mar 13 26 04:49:24 show memory zebra incremental
+Mar 13 26 04:49:24 show memory bgp incremental
+Mar 13 26 05:01:29 show memory zebra incremental
+Mar 13 26 05:01:29 show memory bgp incremental
+Mar 13 26 05:13:34 show memory zebra incremental
+Mar 13 26 05:13:34 show memory bgp incremental
+Mar 13 26 05:25:39 show memory zebra incremental
+Mar 13 26 05:25:40 show memory bgp incremental
+Mar 13 26 05:37:44 show memory zebra incremental
+Mar 13 26 05:37:45 show memory bgp incremental
+Mar 13 26 05:49:49 show memory zebra incremental
+Mar 13 26 05:49:50 show memory bgp incremental
+Mar 13 26 06:01:54 show memory zebra incremental
+Mar 13 26 06:01:55 show memory bgp incremental
+Mar 13 26 06:13:59 show memory zebra incremental
+Mar 13 26 06:13:59 show memory bgp incremental
+Mar 13 26 06:26:04 show memory zebra incremental
+Mar 13 26 06:26:04 show memory bgp incremental
+Mar 13 26 06:38:09 show memory zebra incremental
+Mar 13 26 06:38:10 show memory bgp incremental
+Mar 13 26 06:50:14 show memory zebra incremental
+Mar 13 26 06:50:15 show memory bgp incremental
+Mar 13 26 07:02:19 show memory zebra incremental
+Mar 13 26 07:02:20 show memory bgp incremental
+Mar 13 26 07:14:24 show memory zebra incremental
+Mar 13 26 07:14:25 show memory bgp incremental
+Mar 13 26 07:26:30 show memory zebra incremental
+Mar 13 26 07:26:30 show memory bgp incremental
+Mar 13 26 07:38:35 show memory zebra incremental
+Mar 13 26 07:38:35 show memory bgp incremental
+Mar 13 26 07:50:40 show memory zebra incremental
+Mar 13 26 07:50:40 show memory bgp incremental
+Mar 13 26 08:02:45 show memory zebra incremental
+Mar 13 26 08:02:45 show memory bgp incremental
+Mar 13 26 08:14:50 show memory zebra incremental
+Mar 13 26 08:14:50 show memory bgp incremental
+Mar 13 26 08:26:55 show memory zebra incremental
+Mar 13 26 08:26:55 show memory bgp incremental
+Mar 13 26 08:39:00 show memory zebra incremental
+Mar 13 26 08:39:00 show memory bgp incremental
+Mar 13 26 08:51:05 show memory zebra incremental
+Mar 13 26 08:51:05 show memory bgp incremental
+Mar 13 26 09:03:10 show memory zebra incremental
+Mar 13 26 09:03:10 show memory bgp incremental
+Mar 13 26 09:15:15 show memory zebra incremental
+Mar 13 26 09:15:15 show memory bgp incremental
+Mar 13 26 09:27:20 show memory zebra incremental
+Mar 13 26 09:27:20 show memory bgp incremental
+Mar 13 26 09:39:25 show memory zebra incremental
+Mar 13 26 09:39:26 show memory bgp incremental
+Mar 13 26 09:51:31 show memory zebra incremental
+Mar 13 26 09:51:31 show memory bgp incremental
+Mar 13 26 10:03:36 show memory zebra incremental
+Mar 13 26 10:03:36 show memory bgp incremental
+Mar 13 26 10:15:41 show memory zebra incremental
+Mar 13 26 10:15:41 show memory bgp incremental
+Mar 13 26 10:27:46 show memory zebra incremental
+Mar 13 26 10:27:46 show memory bgp incremental
+Mar 13 26 10:39:51 show memory zebra incremental
+Mar 13 26 10:39:51 show memory bgp incremental
+Mar 13 26 10:51:56 show memory zebra incremental
+Mar 13 26 10:51:56 show memory bgp incremental
+Mar 13 26 11:04:01 show memory zebra incremental
+Mar 13 26 11:04:01 show memory bgp incremental
+Mar 13 26 11:16:06 show memory zebra incremental
+Mar 13 26 11:16:06 show memory bgp incremental
+Mar 13 26 11:28:11 show memory zebra incremental
+Mar 13 26 11:28:11 show memory bgp incremental
+Mar 13 26 11:40:16 show memory zebra incremental
+Mar 13 26 11:40:16 show memory bgp incremental
+Mar 13 26 11:52:21 show memory zebra incremental
+Mar 13 26 11:52:22 show memory bgp incremental
+Mar 13 26 12:04:27 show memory zebra incremental
+Mar 13 26 12:04:27 show memory bgp incremental
+Mar 13 26 12:16:32 show memory zebra incremental
+Mar 13 26 12:16:32 show memory bgp incremental
+Mar 13 26 12:28:37 show memory zebra incremental
+Mar 13 26 12:28:37 show memory bgp incremental
+Mar 13 26 12:40:42 show memory zebra incremental
+Mar 13 26 12:40:42 show memory bgp incremental
+Mar 13 26 12:52:47 show memory zebra incremental
+Mar 13 26 12:52:47 show memory bgp incremental
+Mar 13 26 13:04:52 show memory zebra incremental
+Mar 13 26 13:04:52 show memory bgp incremental
+Mar 13 26 13:16:57 show memory zebra incremental
+Mar 13 26 13:16:57 show memory bgp incremental
+Mar 13 26 13:29:02 show memory zebra incremental
+Mar 13 26 13:29:02 show memory bgp incremental
+Mar 13 26 13:41:07 show memory zebra incremental
+Mar 13 26 13:41:07 show memory bgp incremental
+Mar 13 26 13:53:12 show memory zebra incremental
+Mar 13 26 13:53:12 show memory bgp incremental
+Mar 13 26 14:05:17 show memory zebra incremental
+Mar 13 26 14:05:17 show memory bgp incremental
+Mar 13 26 14:17:22 show memory zebra incremental
+Mar 13 26 14:17:22 show memory bgp incremental
+Mar 13 26 14:29:27 show memory zebra incremental
+Mar 13 26 14:29:28 show memory bgp incremental
+Mar 13 26 14:41:32 show memory zebra incremental
+Mar 13 26 14:41:33 show memory bgp incremental
+Mar 13 26 14:53:37 show memory zebra incremental
+Mar 13 26 14:53:38 show memory bgp incremental
+Mar 13 26 15:05:43 show memory zebra incremental
+Mar 13 26 15:05:43 show memory bgp incremental
+Mar 13 26 15:17:48 show memory zebra incremental
+Mar 13 26 15:17:48 show memory bgp incremental
+Mar 13 26 15:29:53 show memory zebra incremental
+Mar 13 26 15:29:53 show memory bgp incremental
+Mar 13 26 15:41:58 show memory zebra incremental
+Mar 13 26 15:41:58 show memory bgp incremental
+Mar 13 26 15:54:03 show memory zebra incremental
+Mar 13 26 15:54:03 show memory bgp incremental
+Mar 13 26 16:06:08 show memory zebra incremental
+Mar 13 26 16:06:08 show memory bgp incremental
+Mar 13 26 16:18:13 show memory zebra incremental
+Mar 13 26 16:18:13 show memory bgp incremental
+Mar 13 26 16:30:18 show memory zebra incremental
+Mar 13 26 16:30:18 show memory bgp incremental
+Mar 13 26 16:42:23 show memory zebra incremental
+Mar 13 26 16:42:23 show memory bgp incremental
+Mar 13 26 16:54:28 show memory zebra incremental
+Mar 13 26 16:54:28 show memory bgp incremental
+Mar 13 26 17:06:33 show memory zebra incremental
+Mar 13 26 17:06:33 show memory bgp incremental
+Mar 13 26 17:18:38 show memory zebra incremental
+Mar 13 26 17:18:39 show memory bgp incremental
+Mar 13 26 17:30:43 show memory zebra incremental
+Mar 13 26 17:30:44 show memory bgp incremental
+Mar 13 26 17:42:48 show memory zebra incremental
+Mar 13 26 17:42:49 show memory bgp incremental
+Mar 13 26 17:54:53 show memory zebra incremental
+Mar 13 26 17:54:54 show memory bgp incremental
+Mar 13 26 18:06:58 show memory zebra incremental
+Mar 13 26 18:06:59 show memory bgp incremental
+Mar 13 26 18:19:04 show memory zebra incremental
+Mar 13 26 18:19:04 show memory bgp incremental
+Mar 13 26 18:31:09 show memory zebra incremental
+Mar 13 26 18:31:09 show memory bgp incremental
+Mar 13 26 18:43:14 show memory zebra incremental
+Mar 13 26 18:43:14 show memory bgp incremental
+Mar 13 26 18:55:19 show memory zebra incremental
+Mar 13 26 18:55:19 show memory bgp incremental
+Mar 13 26 19:07:24 show memory zebra incremental
+Mar 13 26 19:07:24 show memory bgp incremental
+Mar 13 26 19:19:29 show memory zebra incremental
+Mar 13 26 19:19:29 show memory bgp incremental
+Mar 13 26 19:31:34 show memory zebra incremental
+Mar 13 26 19:31:34 show memory bgp incremental
+Mar 13 26 19:43:39 show memory zebra incremental
+Mar 13 26 19:43:39 show memory bgp incremental
+Mar 13 26 19:55:44 show memory zebra incremental
+Mar 13 26 19:55:44 show memory bgp incremental
+Mar 13 26 20:07:49 show memory zebra incremental
+Mar 13 26 20:07:49 show memory bgp incremental
+Mar 13 26 20:19:54 show memory zebra incremental
+Mar 13 26 20:19:54 show memory bgp incremental
+Mar 13 26 20:31:59 show memory zebra incremental
+Mar 13 26 20:32:00 show memory bgp incremental
+Mar 13 26 20:44:04 show memory zebra incremental
+Mar 13 26 20:44:05 show memory bgp incremental
+Mar 13 26 20:56:09 show memory zebra incremental
+Mar 13 26 20:56:10 show memory bgp incremental
+Mar 13 26 21:08:15 show memory zebra incremental
+Mar 13 26 21:08:15 show memory bgp incremental
+Mar 13 26 21:20:20 show memory zebra incremental
+Mar 13 26 21:20:20 show memory bgp incremental
+Mar 13 26 21:32:25 show memory zebra incremental
+Mar 13 26 21:32:25 show memory bgp incremental
+Mar 13 26 21:44:30 show memory zebra incremental
+Mar 13 26 21:44:30 show memory bgp incremental
+Mar 13 26 21:56:35 show memory zebra incremental
+Mar 13 26 21:56:35 show memory bgp incremental
+Mar 13 26 22:08:40 show memory zebra incremental
+Mar 13 26 22:08:40 show memory bgp incremental
+Mar 13 26 22:20:45 show memory zebra incremental
+Mar 13 26 22:20:45 show memory bgp incremental
+Mar 13 26 22:32:50 show memory zebra incremental
+Mar 13 26 22:32:50 show memory bgp incremental
+Mar 13 26 22:44:55 show memory zebra incremental
+Mar 13 26 22:44:55 show memory bgp incremental
+Mar 13 26 22:57:00 show memory zebra incremental
+Mar 13 26 22:57:00 show memory bgp incremental
+Mar 13 26 23:09:05 show memory zebra incremental
+Mar 13 26 23:09:05 show memory bgp incremental
+Mar 13 26 23:21:10 show memory zebra incremental
+Mar 13 26 23:21:10 show memory bgp incremental
+Mar 13 26 23:33:15 show memory zebra incremental
+Mar 13 26 23:33:15 show memory bgp incremental
+Mar 13 26 23:45:20 show memory zebra incremental
+Mar 13 26 23:45:20 show memory bgp incremental
+Mar 13 26 23:57:25 show memory zebra incremental
+Mar 13 26 23:57:25 show memory bgp incremental
+Mar 14 26 00:09:30 show memory zebra incremental
+Mar 14 26 00:09:30 show memory bgp incremental
+Mar 14 26 00:21:35 show memory zebra incremental
+Mar 14 26 00:21:35 show memory bgp incremental
+Mar 14 26 00:33:40 show memory zebra incremental
+Mar 14 26 00:33:40 show memory bgp incremental
+Mar 14 26 00:45:45 show memory zebra incremental
+Mar 14 26 00:45:45 show memory bgp incremental
+Mar 14 26 00:57:50 show memory zebra incremental
+Mar 14 26 00:57:50 show memory bgp incremental
+Mar 14 26 01:09:55 show memory zebra incremental
+Mar 14 26 01:09:55 show memory bgp incremental
+Mar 14 26 01:22:00 show memory zebra incremental
+Mar 14 26 01:22:00 show memory bgp incremental
+Mar 14 26 01:34:05 show memory zebra incremental
+Mar 14 26 01:34:05 show memory bgp incremental
+Mar 14 26 01:46:10 show memory zebra incremental
+Mar 14 26 01:46:10 show memory bgp incremental
+Mar 14 26 01:58:15 show memory zebra incremental
+Mar 14 26 01:58:16 show memory bgp incremental
+Mar 14 26 02:10:21 show memory zebra incremental
+Mar 14 26 02:10:21 show memory bgp incremental
+Mar 14 26 02:22:26 show memory zebra incremental
+Mar 14 26 02:22:26 show memory bgp incremental
+Mar 14 26 02:34:31 show memory zebra incremental
+Mar 14 26 02:34:31 show memory bgp incremental
+Mar 14 26 02:46:36 show memory zebra incremental
+Mar 14 26 02:46:36 show memory bgp incremental
+Mar 14 26 02:58:41 show memory zebra incremental
+Mar 14 26 02:58:41 show memory bgp incremental
+Mar 14 26 03:10:46 show memory zebra incremental
+Mar 14 26 03:10:46 show memory bgp incremental
+Mar 14 26 03:22:51 show memory zebra incremental
+Mar 14 26 03:22:51 show memory bgp incremental
+Mar 14 26 03:34:56 show memory zebra incremental
+Mar 14 26 03:34:56 show memory bgp incremental
+Mar 14 26 03:47:01 show memory zebra incremental
+Mar 14 26 03:47:01 show memory bgp incremental
+Mar 14 26 03:59:06 show memory zebra incremental
+Mar 14 26 03:59:06 show memory bgp incremental
+Mar 14 26 04:11:11 show memory zebra incremental
+Mar 14 26 04:11:11 show memory bgp incremental
+Mar 14 26 04:23:16 show memory zebra incremental
+Mar 14 26 04:23:16 show memory bgp incremental
+Mar 14 26 04:35:21 show memory zebra incremental
+Mar 14 26 04:35:22 show memory bgp incremental
+Mar 14 26 04:47:26 show memory zebra incremental
+Mar 14 26 04:47:27 show memory bgp incremental
+Mar 14 26 04:59:31 show memory zebra incremental
+Mar 14 26 04:59:32 show memory bgp incremental
+Mar 14 26 05:11:36 show memory zebra incremental
+Mar 14 26 05:11:37 show memory bgp incremental
+Mar 14 26 05:23:42 show memory zebra incremental
+Mar 14 26 05:23:42 show memory bgp incremental
+Mar 14 26 05:35:47 show memory zebra incremental
+Mar 14 26 05:35:47 show memory bgp incremental
+Mar 14 26 05:47:52 show memory zebra incremental
+Mar 14 26 05:47:52 show memory bgp incremental
+Mar 14 26 05:59:57 show memory zebra incremental
+Mar 14 26 05:59:57 show memory bgp incremental
+Mar 14 26 06:12:02 show memory zebra incremental
+Mar 14 26 06:12:02 show memory bgp incremental
+Mar 14 26 06:24:07 show memory zebra incremental
+Mar 14 26 06:24:07 show memory bgp incremental
+Mar 14 26 06:36:12 show memory zebra incremental
+Mar 14 26 06:36:12 show memory bgp incremental
+Mar 14 26 06:48:17 show memory zebra incremental
+Mar 14 26 06:48:17 show memory bgp incremental
+Mar 14 26 07:00:22 show memory zebra incremental
+Mar 14 26 07:00:22 show memory bgp incremental
+Mar 14 26 07:12:27 show memory zebra incremental
+Mar 14 26 07:12:27 show memory bgp incremental
+Mar 14 26 07:24:32 show memory zebra incremental
+Mar 14 26 07:24:32 show memory bgp incremental
+Mar 14 26 07:36:37 show memory zebra incremental
+Mar 14 26 07:36:37 show memory bgp incremental
+Mar 14 26 07:48:42 show memory zebra incremental
+Mar 14 26 07:48:42 show memory bgp incremental
+Mar 14 26 08:00:47 show memory zebra incremental
+Mar 14 26 08:00:47 show memory bgp incremental
+Mar 14 26 08:12:52 show memory zebra incremental
+Mar 14 26 08:12:52 show memory bgp incremental
+Mar 14 26 08:24:57 show memory zebra incremental
+Mar 14 26 08:24:58 show memory bgp incremental
+Mar 14 26 08:37:02 show memory zebra incremental
+Mar 14 26 08:37:03 show memory bgp incremental
+Mar 14 26 08:49:07 show memory zebra incremental
+Mar 14 26 08:49:08 show memory bgp incremental
+Mar 14 26 09:01:12 show memory zebra incremental
+Mar 14 26 09:01:13 show memory bgp incremental
+Mar 14 26 09:13:18 show memory zebra incremental
+Mar 14 26 09:13:18 show memory bgp incremental
+Mar 14 26 09:25:23 show memory zebra incremental
+Mar 14 26 09:25:23 show memory bgp incremental
+Mar 14 26 09:37:28 show memory zebra incremental
+Mar 14 26 09:37:28 show memory bgp incremental
+Mar 14 26 09:49:33 show memory zebra incremental
+Mar 14 26 09:49:33 show memory bgp incremental
+Mar 14 26 10:01:38 show memory zebra incremental
+Mar 14 26 10:01:38 show memory bgp incremental
+Mar 14 26 10:13:43 show memory zebra incremental
+Mar 14 26 10:13:43 show memory bgp incremental
+Mar 14 26 10:25:48 show memory zebra incremental
+Mar 14 26 10:25:48 show memory bgp incremental
+Mar 14 26 10:37:53 show memory zebra incremental
+Mar 14 26 10:37:53 show memory bgp incremental
+Mar 14 26 10:49:58 show memory zebra incremental
+Mar 14 26 10:49:58 show memory bgp incremental
+Mar 14 26 11:02:03 show memory zebra incremental
+Mar 14 26 11:02:03 show memory bgp incremental
+Mar 14 26 11:14:08 show memory zebra incremental
+Mar 14 26 11:14:08 show memory bgp incremental
+Mar 14 26 11:26:13 show memory zebra incremental
+Mar 14 26 11:26:13 show memory bgp incremental
+Mar 14 26 11:38:18 show memory zebra incremental
+Mar 14 26 11:38:18 show memory bgp incremental
+Mar 14 26 11:50:23 show memory zebra incremental
+Mar 14 26 11:50:23 show memory bgp incremental
+Mar 14 26 12:02:28 show memory zebra incremental
+Mar 14 26 12:02:28 show memory bgp incremental
+Mar 14 26 12:14:33 show memory zebra incremental
+Mar 14 26 12:14:33 show memory bgp incremental
+Mar 14 26 12:26:38 show memory zebra incremental
+Mar 14 26 12:26:38 show memory bgp incremental
+Mar 14 26 12:38:43 show memory zebra incremental
+Mar 14 26 12:38:43 show memory bgp incremental
+Mar 14 26 12:50:48 show memory zebra incremental
+Mar 14 26 12:50:48 show memory bgp incremental
+Mar 14 26 13:02:53 show memory zebra incremental
+Mar 14 26 13:02:53 show memory bgp incremental
+Mar 14 26 13:14:58 show memory zebra incremental
+Mar 14 26 13:14:58 show memory bgp incremental
+Mar 14 26 13:27:03 show memory zebra incremental
+Mar 14 26 13:27:03 show memory bgp incremental
+Mar 14 26 13:39:08 show memory zebra incremental
+Mar 14 26 13:39:08 show memory bgp incremental
+Mar 14 26 13:51:13 show memory zebra incremental
+Mar 14 26 13:51:13 show memory bgp incremental
+Mar 14 26 14:03:18 show memory zebra incremental
+Mar 14 26 14:03:18 show memory bgp incremental
+Mar 14 26 14:15:23 show memory zebra incremental
+Mar 14 26 14:15:24 show memory bgp incremental
+Mar 14 26 14:27:28 show memory zebra incremental
+Mar 14 26 14:27:29 show memory bgp incremental
+Mar 14 26 14:39:34 show memory zebra incremental
+Mar 14 26 14:39:34 show memory bgp incremental
+Mar 14 26 14:51:39 show memory zebra incremental
+Mar 14 26 14:51:39 show memory bgp incremental
+Mar 14 26 15:03:44 show memory zebra incremental
+Mar 14 26 15:03:44 show memory bgp incremental
+Mar 14 26 15:15:49 show memory zebra incremental
+Mar 14 26 15:15:49 show memory bgp incremental
+Mar 14 26 15:27:54 show memory zebra incremental
+Mar 14 26 15:27:54 show memory bgp incremental
+Mar 14 26 15:39:59 show memory zebra incremental
+Mar 14 26 15:39:59 show memory bgp incremental
+Mar 14 26 15:52:04 show memory zebra incremental
+Mar 14 26 15:52:04 show memory bgp incremental
+Mar 14 26 16:04:09 show memory zebra incremental
+Mar 14 26 16:04:09 show memory bgp incremental
+Mar 14 26 16:16:14 show memory zebra incremental
+Mar 14 26 16:16:14 show memory bgp incremental
+Mar 14 26 16:28:19 show memory zebra incremental
+Mar 14 26 16:28:19 show memory bgp incremental
+Mar 14 26 16:40:24 show memory zebra incremental
+Mar 14 26 16:40:24 show memory bgp incremental
+Mar 14 26 16:52:29 show memory zebra incremental
+Mar 14 26 16:52:29 show memory bgp incremental
+Mar 14 26 17:04:34 show memory zebra incremental
+Mar 14 26 17:04:35 show memory bgp incremental
+Mar 14 26 17:16:39 show memory zebra incremental
+Mar 14 26 17:16:40 show memory bgp incremental
+Mar 14 26 17:28:44 show memory zebra incremental
+Mar 14 26 17:28:45 show memory bgp incremental
+Mar 14 26 17:40:50 show memory zebra incremental
+Mar 14 26 17:40:50 show memory bgp incremental
+Mar 14 26 17:52:55 show memory zebra incremental
+Mar 14 26 17:52:55 show memory bgp incremental
+Mar 14 26 18:05:00 show memory zebra incremental
+Mar 14 26 18:05:00 show memory bgp incremental
+Mar 14 26 18:17:05 show memory zebra incremental
+Mar 14 26 18:17:05 show memory bgp incremental
+Mar 14 26 18:29:10 show memory zebra incremental
+Mar 14 26 18:29:10 show memory bgp incremental
+Mar 14 26 18:41:15 show memory zebra incremental
+Mar 14 26 18:41:15 show memory bgp incremental
+Mar 14 26 18:53:20 show memory zebra incremental
+Mar 14 26 18:53:20 show memory bgp incremental
+Mar 14 26 19:05:25 show memory zebra incremental
+Mar 14 26 19:05:25 show memory bgp incremental
+Mar 14 26 19:17:30 show memory zebra incremental
+Mar 14 26 19:17:30 show memory bgp incremental
+Mar 14 26 19:29:35 show memory zebra incremental
+Mar 14 26 19:29:35 show memory bgp incremental
+Mar 14 26 19:41:40 show memory zebra incremental
+Mar 14 26 19:41:41 show memory bgp incremental
+Mar 14 26 19:53:45 show memory zebra incremental
+Mar 14 26 19:53:46 show memory bgp incremental
+Mar 14 26 20:05:50 show memory zebra incremental
+Mar 14 26 20:05:50 show memory bgp incremental
+Mar 14 26 20:17:55 show memory zebra incremental
+Mar 14 26 20:17:56 show memory bgp incremental
+Mar 14 26 20:30:00 show memory zebra incremental
+Mar 14 26 20:30:01 show memory bgp incremental
+Mar 14 26 20:42:05 show memory zebra incremental
+Mar 14 26 20:42:06 show memory bgp incremental
+Mar 14 26 20:54:10 show memory zebra incremental
+Mar 14 26 20:54:11 show memory bgp incremental
+Mar 14 26 21:06:15 show memory zebra incremental
+Mar 14 26 21:06:16 show memory bgp incremental
+Mar 14 26 21:18:20 show memory zebra incremental
+Mar 14 26 21:18:21 show memory bgp incremental
+Mar 14 26 21:30:25 show memory zebra incremental
+Mar 14 26 21:30:26 show memory bgp incremental
+Mar 14 26 21:42:31 show memory zebra incremental
+Mar 14 26 21:42:31 show memory bgp incremental
+Mar 14 26 21:54:36 show memory zebra incremental
+Mar 14 26 21:54:36 show memory bgp incremental
+Mar 14 26 22:06:41 show memory zebra incremental
+Mar 14 26 22:06:41 show memory bgp incremental
+Mar 14 26 22:18:46 show memory zebra incremental
+Mar 14 26 22:18:46 show memory bgp incremental
+Mar 14 26 22:30:51 show memory zebra incremental
+Mar 14 26 22:30:51 show memory bgp incremental
+Mar 14 26 22:42:56 show memory zebra incremental
+Mar 14 26 22:42:56 show memory bgp incremental
+Mar 14 26 22:55:01 show memory zebra incremental
+Mar 14 26 22:55:01 show memory bgp incremental
+Mar 14 26 23:07:06 show memory zebra incremental
+Mar 14 26 23:07:06 show memory bgp incremental
+Mar 14 26 23:19:11 show memory zebra incremental
+Mar 14 26 23:19:11 show memory bgp incremental
+Mar 14 26 23:31:16 show memory zebra incremental
+Mar 14 26 23:31:16 show memory bgp incremental
+Mar 14 26 23:43:21 show memory zebra incremental
+Mar 14 26 23:43:21 show memory bgp incremental
+Mar 14 26 23:55:26 show memory zebra incremental
+Mar 14 26 23:55:26 show memory bgp incremental
+Mar 15 26 00:07:31 show memory zebra incremental
+Mar 15 26 00:07:31 show memory bgp incremental
+Mar 15 26 00:19:36 show memory zebra incremental
+Mar 15 26 00:19:37 show memory bgp incremental
+Mar 15 26 00:31:41 show memory zebra incremental
+Mar 15 26 00:31:42 show memory bgp incremental
+Mar 15 26 00:43:46 show memory zebra incremental
+Mar 15 26 00:43:47 show memory bgp incremental
+Mar 15 26 00:55:51 show memory zebra incremental
+Mar 15 26 00:55:52 show memory bgp incremental
+Mar 15 26 01:07:56 show memory zebra incremental
+Mar 15 26 01:07:57 show memory bgp incremental
+Mar 15 26 01:20:02 show memory zebra incremental
+Mar 15 26 01:20:02 show memory bgp incremental
+Mar 15 26 01:32:07 show memory zebra incremental
+Mar 15 26 01:32:07 show memory bgp incremental
+Mar 15 26 01:44:12 show memory zebra incremental
+Mar 15 26 01:44:12 show memory bgp incremental
+Mar 15 26 01:56:17 show memory zebra incremental
+Mar 15 26 01:56:17 show memory bgp incremental
+Mar 15 26 02:08:22 show memory zebra incremental
+Mar 15 26 02:08:22 show memory bgp incremental
+Mar 15 26 02:20:27 show memory zebra incremental
+Mar 15 26 02:20:27 show memory bgp incremental
+Mar 15 26 02:32:32 show memory zebra incremental
+Mar 15 26 02:32:32 show memory bgp incremental
+Mar 15 26 02:44:37 show memory zebra incremental
+Mar 15 26 02:44:37 show memory bgp incremental
+Mar 15 26 02:56:42 show memory zebra incremental
+Mar 15 26 02:56:42 show memory bgp incremental
+Mar 15 26 03:08:47 show memory zebra incremental
+Mar 15 26 03:08:47 show memory bgp incremental
+Mar 15 26 03:20:52 show memory zebra incremental
+Mar 15 26 03:20:52 show memory bgp incremental
+Mar 15 26 03:32:57 show memory zebra incremental
+Mar 15 26 03:32:57 show memory bgp incremental
+Mar 15 26 03:45:02 show memory zebra incremental
+Mar 15 26 03:45:02 show memory bgp incremental
+Mar 15 26 03:57:07 show memory zebra incremental
+Mar 15 26 03:57:08 show memory bgp incremental
+Mar 15 26 04:09:12 show memory zebra incremental
+Mar 15 26 04:09:13 show memory bgp incremental
+Mar 15 26 04:21:17 show memory zebra incremental
+Mar 15 26 04:21:18 show memory bgp incremental
+Mar 15 26 04:33:23 show memory zebra incremental
+Mar 15 26 04:33:23 show memory bgp incremental
+Mar 15 26 04:45:28 show memory zebra incremental
+Mar 15 26 04:45:28 show memory bgp incremental
+Mar 15 26 04:57:33 show memory zebra incremental
+Mar 15 26 04:57:33 show memory bgp incremental
+Mar 15 26 05:09:38 show memory zebra incremental
+Mar 15 26 05:09:38 show memory bgp incremental
+Mar 15 26 05:21:43 show memory zebra incremental
+Mar 15 26 05:21:43 show memory bgp incremental
+Mar 15 26 05:33:48 show memory zebra incremental
+Mar 15 26 05:33:48 show memory bgp incremental
+Mar 15 26 05:45:53 show memory zebra incremental
+Mar 15 26 05:45:53 show memory bgp incremental
+Mar 15 26 05:57:58 show memory zebra incremental
+Mar 15 26 05:57:58 show memory bgp incremental
+Mar 15 26 06:10:03 show memory zebra incremental
+Mar 15 26 06:10:03 show memory bgp incremental
+Mar 15 26 06:22:08 show memory zebra incremental
+Mar 15 26 06:22:08 show memory bgp incremental
+Mar 15 26 06:34:13 show memory zebra incremental
+Mar 15 26 06:34:13 show memory bgp incremental
+Mar 15 26 06:46:18 show memory zebra incremental
+Mar 15 26 06:46:18 show memory bgp incremental
+Mar 15 26 06:58:23 show memory zebra incremental
+Mar 15 26 06:58:23 show memory bgp incremental
+Mar 15 26 07:10:28 show memory zebra incremental
+Mar 15 26 07:10:28 show memory bgp incremental
+Mar 15 26 07:22:33 show memory zebra incremental
+Mar 15 26 07:22:33 show memory bgp incremental
+Mar 15 26 07:34:38 show memory zebra incremental
+Mar 15 26 07:34:38 show memory bgp incremental
+Mar 15 26 07:46:43 show memory zebra incremental
+Mar 15 26 07:46:44 show memory bgp incremental
+Mar 15 26 07:58:48 show memory zebra incremental
+Mar 15 26 07:58:49 show memory bgp incremental
+Mar 15 26 08:10:53 show memory zebra incremental
+Mar 15 26 08:10:54 show memory bgp incremental
+Mar 15 26 08:22:58 show memory zebra incremental
+Mar 15 26 08:22:59 show memory bgp incremental
+Mar 15 26 08:35:04 show memory zebra incremental
+Mar 15 26 08:35:04 show memory bgp incremental
+Mar 15 26 08:47:09 show memory zebra incremental
+Mar 15 26 08:47:09 show memory bgp incremental
+Mar 15 26 08:59:14 show memory zebra incremental
+Mar 15 26 08:59:14 show memory bgp incremental
+Mar 15 26 09:11:19 show memory zebra incremental
+Mar 15 26 09:11:19 show memory bgp incremental
+Mar 15 26 09:23:24 show memory zebra incremental
+Mar 15 26 09:23:24 show memory bgp incremental
+Mar 15 26 09:35:29 show memory zebra incremental
+Mar 15 26 09:35:29 show memory bgp incremental
+Mar 15 26 09:47:34 show memory zebra incremental
+Mar 15 26 09:47:34 show memory bgp incremental
+Mar 15 26 09:59:39 show memory zebra incremental
+Mar 15 26 09:59:39 show memory bgp incremental
+Mar 15 26 10:11:44 show memory zebra incremental
+Mar 15 26 10:11:44 show memory bgp incremental
+Mar 15 26 10:23:49 show memory zebra incremental
+Mar 15 26 10:23:49 show memory bgp incremental
+Mar 15 26 10:35:54 show memory zebra incremental
+Mar 15 26 10:35:54 show memory bgp incremental
+Mar 15 26 10:47:59 show memory zebra incremental
+Mar 15 26 10:47:59 show memory bgp incremental
+Mar 15 26 11:00:04 show memory zebra incremental
+Mar 15 26 11:00:04 show memory bgp incremental
+Mar 15 26 11:12:09 show memory zebra incremental
+Mar 15 26 11:12:10 show memory bgp incremental
+Mar 15 26 11:24:14 show memory zebra incremental
+Mar 15 26 11:24:15 show memory bgp incremental
+Mar 15 26 11:36:20 show memory zebra incremental
+Mar 15 26 11:36:20 show memory bgp incremental
+Mar 15 26 11:48:25 show memory zebra incremental
+Mar 15 26 11:48:25 show memory bgp incremental
+Mar 15 26 12:00:30 show memory zebra incremental
+Mar 15 26 12:00:30 show memory bgp incremental
+Mar 15 26 12:12:35 show memory zebra incremental
+Mar 15 26 12:12:35 show memory bgp incremental
+Mar 15 26 12:24:40 show memory zebra incremental
+Mar 15 26 12:24:40 show memory bgp incremental
+Mar 15 26 12:36:45 show memory zebra incremental
+Mar 15 26 12:36:45 show memory bgp incremental
+Mar 15 26 12:48:50 show memory zebra incremental
+Mar 15 26 12:48:50 show memory bgp incremental
+Mar 15 26 13:00:55 show memory zebra incremental
+Mar 15 26 13:00:55 show memory bgp incremental
+Mar 15 26 13:13:00 show memory zebra incremental
+Mar 15 26 13:13:00 show memory bgp incremental
+Mar 15 26 13:25:05 show memory zebra incremental
+Mar 15 26 13:25:05 show memory bgp incremental
+Mar 15 26 13:37:10 show memory zebra incremental
+Mar 15 26 13:37:10 show memory bgp incremental
+Mar 15 26 13:49:15 show memory zebra incremental
+Mar 15 26 13:49:15 show memory bgp incremental
+Mar 15 26 14:01:20 show memory zebra incremental
+Mar 15 26 14:01:20 show memory bgp incremental
+Mar 15 26 14:13:25 show memory zebra incremental
+Mar 15 26 14:13:25 show memory bgp incremental
+Mar 15 26 14:25:30 show memory zebra incremental
+Mar 15 26 14:25:30 show memory bgp incremental
+Mar 15 26 14:37:35 show memory zebra incremental
+Mar 15 26 14:37:36 show memory bgp incremental
+Mar 15 26 14:49:40 show memory zebra incremental
+Mar 15 26 14:49:41 show memory bgp incremental
+Mar 15 26 15:01:45 show memory zebra incremental
+Mar 15 26 15:01:46 show memory bgp incremental
+Mar 15 26 15:13:51 show memory zebra incremental
+Mar 15 26 15:13:51 show memory bgp incremental
+Mar 15 26 15:25:56 show memory zebra incremental
+Mar 15 26 15:25:56 show memory bgp incremental
+Mar 15 26 15:38:01 show memory zebra incremental
+Mar 15 26 15:38:01 show memory bgp incremental
+Mar 15 26 15:50:06 show memory zebra incremental
+Mar 15 26 15:50:06 show memory bgp incremental
+Mar 15 26 16:02:11 show memory zebra incremental
+Mar 15 26 16:02:11 show memory bgp incremental
+Mar 15 26 16:14:16 show memory zebra incremental
+Mar 15 26 16:14:16 show memory bgp incremental
+Mar 15 26 16:26:21 show memory zebra incremental
+Mar 15 26 16:26:21 show memory bgp incremental
+Mar 15 26 16:38:26 show memory zebra incremental
+Mar 15 26 16:38:26 show memory bgp incremental
+Mar 15 26 16:50:31 show memory zebra incremental
+Mar 15 26 16:50:31 show memory bgp incremental
+Mar 15 26 17:02:36 show memory zebra incremental
+Mar 15 26 17:02:36 show memory bgp incremental
+Mar 15 26 17:14:41 show memory zebra incremental
+Mar 15 26 17:14:41 show memory bgp incremental
+Mar 15 26 17:26:46 show memory zebra incremental
+Mar 15 26 17:26:46 show memory bgp incremental
+Mar 15 26 17:38:51 show memory zebra incremental
+Mar 15 26 17:38:51 show memory bgp incremental
+Mar 15 26 17:50:56 show memory zebra incremental
+Mar 15 26 17:50:56 show memory bgp incremental
+Mar 15 26 18:03:01 show memory zebra incremental
+Mar 15 26 18:03:01 show memory bgp incremental
+Mar 15 26 18:15:06 show memory zebra incremental
+Mar 15 26 18:15:06 show memory bgp incremental
+Mar 15 26 18:27:11 show memory zebra incremental
+Mar 15 26 18:27:11 show memory bgp incremental
+Mar 15 26 18:39:16 show memory zebra incremental
+Mar 15 26 18:39:16 show memory bgp incremental
+Mar 15 26 18:51:21 show memory zebra incremental
+Mar 15 26 18:51:21 show memory bgp incremental
+Mar 15 26 19:03:26 show memory zebra incremental
+Mar 15 26 19:03:26 show memory bgp incremental
+Mar 15 26 19:15:31 show memory zebra incremental
+Mar 15 26 19:15:31 show memory bgp incremental
+Mar 15 26 19:27:36 show memory zebra incremental
+Mar 15 26 19:27:36 show memory bgp incremental
+Mar 15 26 19:39:41 show memory zebra incremental
+Mar 15 26 19:39:41 show memory bgp incremental
+Mar 15 26 19:51:46 show memory zebra incremental
+Mar 15 26 19:51:46 show memory bgp incremental
+Mar 15 26 20:03:51 show memory zebra incremental
+Mar 15 26 20:03:51 show memory bgp incremental
+Mar 15 26 20:15:56 show memory zebra incremental
+Mar 15 26 20:15:56 show memory bgp incremental
+Mar 15 26 20:28:01 show memory zebra incremental
+Mar 15 26 20:28:01 show memory bgp incremental
+Mar 15 26 20:40:06 show memory zebra incremental
+Mar 15 26 20:40:07 show memory bgp incremental
+Mar 15 26 20:52:11 show memory zebra incremental
+Mar 15 26 20:52:12 show memory bgp incremental
+Mar 15 26 21:04:17 show memory zebra incremental
+Mar 15 26 21:04:17 show memory bgp incremental
+Mar 15 26 21:16:22 show memory zebra incremental
+Mar 15 26 21:16:22 show memory bgp incremental
+Mar 15 26 21:28:27 show memory zebra incremental
+Mar 15 26 21:28:27 show memory bgp incremental
+Mar 15 26 21:40:32 show memory zebra incremental
+Mar 15 26 21:40:32 show memory bgp incremental
+Mar 15 26 21:52:37 show memory zebra incremental
+Mar 15 26 21:52:37 show memory bgp incremental
+Mar 15 26 22:04:42 show memory zebra incremental
+Mar 15 26 22:04:42 show memory bgp incremental
+Mar 15 26 22:16:47 show memory zebra incremental
+Mar 15 26 22:16:47 show memory bgp incremental
+Mar 15 26 22:28:52 show memory zebra incremental
+Mar 15 26 22:28:52 show memory bgp incremental
+Mar 15 26 22:40:57 show memory zebra incremental
+Mar 15 26 22:40:57 show memory bgp incremental
+Mar 15 26 22:53:02 show memory zebra incremental
+Mar 15 26 22:53:02 show memory bgp incremental
+Mar 15 26 23:05:07 show memory zebra incremental
+Mar 15 26 23:05:07 show memory bgp incremental
+Mar 15 26 23:17:12 show memory zebra incremental
+Mar 15 26 23:17:12 show memory bgp incremental
+Mar 15 26 23:29:17 show memory zebra incremental
+Mar 15 26 23:29:17 show memory bgp incremental
+Mar 15 26 23:41:22 show memory zebra incremental
+Mar 15 26 23:41:22 show memory bgp incremental
+Mar 15 26 23:53:27 show memory zebra incremental
+Mar 15 26 23:53:27 show memory bgp incremental
+Mar 16 26 00:05:32 show memory zebra incremental
+Mar 16 26 00:05:32 show memory bgp incremental
+Mar 16 26 00:17:37 show memory zebra incremental
+Mar 16 26 00:17:38 show memory bgp incremental
+Mar 16 26 00:29:42 show memory zebra incremental
+Mar 16 26 00:29:43 show memory bgp incremental
+Mar 16 26 00:41:47 show memory zebra incremental
+Mar 16 26 00:41:48 show memory bgp incremental
+Mar 16 26 00:53:52 show memory zebra incremental
+Mar 16 26 00:53:53 show memory bgp incremental
+Mar 16 26 01:05:58 show memory zebra incremental
+Mar 16 26 01:05:58 show memory bgp incremental
+Mar 16 26 01:18:03 show memory zebra incremental
+Mar 16 26 01:18:03 show memory bgp incremental
+Mar 16 26 01:30:08 show memory zebra incremental
+Mar 16 26 01:30:08 show memory bgp incremental
+Mar 16 26 01:42:13 show memory zebra incremental
+Mar 16 26 01:42:13 show memory bgp incremental
+Mar 16 26 01:54:18 show memory zebra incremental
+Mar 16 26 01:54:18 show memory bgp incremental
+Mar 16 26 02:06:23 show memory zebra incremental
+Mar 16 26 02:06:23 show memory bgp incremental
+Mar 16 26 02:18:28 show memory zebra incremental
+Mar 16 26 02:18:28 show memory bgp incremental
+Mar 16 26 02:30:33 show memory zebra incremental
+Mar 16 26 02:30:33 show memory bgp incremental
+Mar 16 26 02:42:38 show memory zebra incremental
+Mar 16 26 02:42:38 show memory bgp incremental
+Mar 16 26 02:54:43 show memory zebra incremental
+Mar 16 26 02:54:43 show memory bgp incremental
+Mar 16 26 03:06:48 show memory zebra incremental
+Mar 16 26 03:06:48 show memory bgp incremental
+Mar 16 26 03:18:53 show memory zebra incremental
+Mar 16 26 03:18:53 show memory bgp incremental
+Mar 16 26 03:30:58 show memory zebra incremental
+Mar 16 26 03:30:58 show memory bgp incremental
+Mar 16 26 03:43:03 show memory zebra incremental
+Mar 16 26 03:43:03 show memory bgp incremental
+Mar 16 26 03:55:08 show memory zebra incremental
+Mar 16 26 03:55:09 show memory bgp incremental
+Mar 16 26 04:07:13 show memory zebra incremental
+Mar 16 26 04:07:14 show memory bgp incremental
+Mar 16 26 04:19:18 show memory zebra incremental
+Mar 16 26 04:19:18 show memory bgp incremental
+Mar 16 26 04:31:23 show memory zebra incremental
+Mar 16 26 04:31:24 show memory bgp incremental
+Mar 16 26 04:43:29 show memory zebra incremental
+Mar 16 26 04:43:29 show memory bgp incremental
+Mar 16 26 04:55:34 show memory zebra incremental
+Mar 16 26 04:55:34 show memory bgp incremental
+Mar 16 26 05:07:39 show memory zebra incremental
+Mar 16 26 05:07:39 show memory bgp incremental
+Mar 16 26 05:19:44 show memory zebra incremental
+Mar 16 26 05:19:44 show memory bgp incremental
+Mar 16 26 05:31:49 show memory zebra incremental
+Mar 16 26 05:31:49 show memory bgp incremental
+Mar 16 26 05:43:54 show memory zebra incremental
+Mar 16 26 05:43:54 show memory bgp incremental
+Mar 16 26 05:55:12 show ip ospf vrf all interface traffic
+Mar 16 26 05:55:12 show ip ospf6 vrf all interface traffic
+Mar 16 26 05:55:59 show memory zebra incremental
+Mar 16 26 05:56:00 show memory bgp incremental
+Mar 16 26 05:58:28 show running-config
+Mar 16 26 05:58:28 show nexthop-group rib
+Mar 16 26 05:58:28 show ip route vrf all nexthop-group
+Mar 16 26 05:58:28 show ipv6 route vrf all nexthop-group
+Mar 16 26 05:58:29 show zebra fpm stats
+Mar 16 26 05:58:29 show zebra dplane detailed
+Mar 16 26 05:58:29 show interface vrf all
+Mar 16 26 05:58:29 show interface vlan all
+Mar 16 26 05:58:30 show zebra client summary
+Mar 16 26 05:58:30 show ip bgp vrf all nexthop detail
+Mar 16 26 05:58:30 show ip bgp vrf all summary
+Mar 16 26 05:58:30 show bgp vrf all ipv4 neighbors
+Mar 16 26 05:58:31 show bgp vrf all ipv4 verbose
+Mar 16 26 05:58:31 show bgp vrf all ipv6 summary
+Mar 16 26 05:58:31 show bgp vrf all ipv6 neighbors
+Mar 16 26 05:58:31 show bgp vrf all ipv6 verbose
+Mar 16 26 05:58:32 show ip bgp vrf all statistics aggregate-addresses
+Mar 16 26 05:58:32 show bgp vrf all ipv6 statistics aggregate-addresses
+Mar 16 26 05:58:32 show ip ospf vrf all
+Mar 16 26 05:58:32 show ip ospf vrf all border-routers
+Mar 16 26 05:58:33 show ip ospf vrf all interface
+Mar 16 26 05:58:33 show ip ospf vrf all neighbor
+Mar 16 26 05:58:33 show ip ospf vrf all neighbor detail
+Mar 16 26 05:58:33 show ip ospf vrf all route
+Mar 16 26 05:58:33 show ip ospf vrf all graceful-restart helper detail
+Mar 16 26 05:58:34 show ip ospf vrf all summary-address detail
+Mar 16 26 05:58:34 show ip route vrf all ospf
+Mar 16 26 05:58:34 show ip ospf vrf all database
+Mar 16 26 05:58:34 show ip ospf vrf all database summary
+Mar 16 26 05:58:35 show ip ospf vrf all database asbr-summary
+Mar 16 26 05:58:35 show ip ospf vrf all database external
+Mar 16 26 05:58:35 show ip ospf vrf all database network
+Mar 16 26 05:58:35 show ip ospf vrf all database router
+Mar 16 26 05:58:35 show ip ospf vrf all database self-originate
+Mar 16 26 05:58:36 show ip ospf vrf all database max-age
+Mar 16 26 05:58:36 show ipv6 ospf6 vrf all
+Mar 16 26 05:58:36 show ipv6 ospf6 vrf all border-routers detail
+Mar 16 26 05:58:37 show ipv6 ospf6 vrf all interface
+Mar 16 26 05:58:37 show ipv6 ospf6 vrf all neighbor
+Mar 16 26 05:58:37 show ipv6 ospf6 vrf all neighbor detail
+Mar 16 26 05:58:37 show ipv6 ospf6 vrf all route
+Mar 16 26 05:58:37 show ipv6 ospf6 vrf all route detail
+Mar 16 26 05:58:38 show ipv6 route vrf all ospf6
+Mar 16 26 05:58:38 show ipv6 ospf6 vrf all graceful-restart helper detail
+Mar 16 26 05:58:38 show ipv6 ospf6 vrf all linkstate detail
+Mar 16 26 05:58:38 show ipv6 ospf6 vrf all redistribute
+Mar 16 26 05:58:39 show ipv6 ospf6 vrf all summary-address detail
+Mar 16 26 05:58:39 show ipv6 ospf6 vrf all database
+Mar 16 26 05:58:39 show ipv6 ospf6 vrf all database detail
+Mar 16 26 05:58:39 show ipv6 ospf6 vrf all database as-external
+Mar 16 26 05:58:39 show ipv6 ospf6 vrf all database inter-prefix
+Mar 16 26 05:58:40 show ipv6 ospf6 vrf all database inter-router
+Mar 16 26 05:58:40 show ipv6 ospf6 vrf all database internal
+Mar 16 26 05:58:40 show ipv6 ospf6 vrf all database intra-prefix
+Mar 16 26 05:58:40 show ipv6 ospf6 vrf all database link
+Mar 16 26 05:58:41 show ipv6 ospf6 vrf all database network
+Mar 16 26 05:58:41 show ipv6 ospf6 vrf all database router
+Mar 16 26 05:58:41 show ipv6 ospf6 vrf all database self-originated
+Mar 16 26 05:58:41 show ipv6 ospf6 vrf all database type-7
+Mar 16 26 05:58:42 show bgp l2vpn evpn summary
+Mar 16 26 05:58:42 show bgp l2vpn evpn route detail debug
+Mar 16 26 05:58:42 show bgp l2vpn evpn route vni all detail debug
+Mar 16 26 05:58:42 show bgp route-node stats
+Mar 16 26 05:58:43 show evpn vni detail
+Mar 16 26 05:58:43 show evpn
+Mar 16 26 05:58:43 show bgp l2vpn evpn vni detail
+Mar 16 26 05:58:43 show evpn arp-cache vni all detail
+Mar 16 26 05:58:44 show evpn mac vni all detail
+Mar 16 26 05:58:44 show evpn rmac vni all
+Mar 16 26 05:58:44 show bgp l2vpn evpn import-rt
+Mar 16 26 05:58:44 show bgp l2vpn evpn vrf-import-rt
+Mar 16 26 05:58:44 show bgp l2vpn evpn update-groups
+Mar 16 26 05:58:45 show ip bgp vrf all update-groups
+Mar 16 26 05:58:45 show bgp vrf all update-groups
+Mar 16 26 05:58:45 show zebra dplane detailed
+Mar 16 26 05:58:45 show memory
+Mar 16 26 05:58:46 show zebra client
+Mar 16 26 05:58:46 show zebra fpm nhg
+Mar 16 26 05:58:46 show zebra
+Mar 16 26 05:58:46 show bgp mac hash
+Mar 16 26 05:58:46 show bgp l2vpn evpn vni all prefix cache
+Mar 16 26 05:58:47 show evpn es detail
+Mar 16 26 05:58:47 show evpn l2-nh
+Mar 16 26 05:58:47 show evpn es-evi detail
+Mar 16 26 05:58:47 show evpn next-hops vni all
+Mar 16 26 05:58:48 show evpn access-vlan
+Mar 16 26 05:58:48 show bgp l2vpn evpn es detail
+Mar 16 26 05:58:48 show bgp l2vpn evpn es-evi detail
+Mar 16 26 05:58:48 show bgp l2vpn evpn es-vrf
+Mar 16 26 05:58:49 show ip nht vrf all
+Mar 16 26 05:58:49 show ip sla detail
+Mar 16 26 05:58:49 show ip sla nht
+Mar 16 26 05:58:58 show ip bgp neighbors
+Mar 16 26 05:58:59 show ip bgp neighbors 10.90.30.178 advertised-routes
+Mar 16 26 05:58:59 show ip bgp neighbors 10.90.30.178 routes
+Mar 16 26 05:58:59 show ip bgp neighbors 10.90.30.179 advertised-routes
+Mar 16 26 05:58:59 show ip bgp neighbors 10.90.30.179 routes
+Mar 16 26 05:58:59 show ip bgp neighbors 10.90.30.158 advertised-routes
+Mar 16 26 05:59:00 show ip bgp neighbors 10.90.30.158 routes
+Mar 16 26 05:59:00 show ip bgp neighbors 10.92.30.68 advertised-routes
+Mar 16 26 05:59:00 show ip bgp neighbors 10.92.30.68 routes
+Mar 16 26 05:59:00 show ip bgp neighbors 10.92.30.236 advertised-routes
+Mar 16 26 05:59:01 show ip bgp neighbors 10.92.30.236 routes
+Mar 16 26 05:59:01 show ip bgp neighbors 10.99.100.130 advertised-routes
+Mar 16 26 05:59:01 show ip bgp neighbors 10.99.100.130 routes
+Mar 16 26 05:59:01 show bgp ipv6 neighbors
+Mar 16 26 05:59:02 show vrf
+Mar 16 26 05:59:02 show ip bgp vrf mgmt neighbors
+Mar 16 26 05:59:18 show version
+Mar 16 26 06:00:18 show ip mroute vrf all
+Mar 16 26 06:00:18 show ip mroute vrf count
+Mar 16 26 06:00:19 show ip multicast vrf all
+Mar 16 26 06:00:19 show ip igmp vrf all groups
+Mar 16 26 06:00:19 show ip pim vrf all interface detail
+Mar 16 26 06:00:19 show ip pim vrf all interface traffic
+Mar 16 26 06:00:20 show ip pim vrf all join
+Mar 16 26 06:00:20 show ip pim vrf all local-membership
+Mar 16 26 06:00:20 show ip pim vrf all neighbor detail
+Mar 16 26 06:00:20 show ip pim vrf all nexthop
+Mar 16 26 06:00:21 show ip pim vrf all rpf
+Mar 16 26 06:00:21 show ip pim vrf all state
+Mar 16 26 06:00:21 show ip pim vrf all upstream
+Mar 16 26 06:00:21 show ip pim vrf all upstream-join-desired
+Mar 16 26 06:00:22 show ip pim vrf all upstream-rpf
+Mar 16 26 06:00:22 show bfd peers
+Mar 16 26 06:00:22 show bfd peers counters
+Mar 16 26 06:00:22 show bfd peers json
+Mar 16 26 06:00:22 show bfd peers counters json
+Mar 16 26 06:00:23 show bfd statistics
+Mar 16 26 06:00:23 debug bfd show interface
+Mar 16 26 06:00:23 debug bfd show hash

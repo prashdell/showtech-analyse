@@ -1,0 +1,4536 @@
+{
+  "AAA|authentication": {
+    "expireat": 1773640861.963657,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "console-authentication-local": "false",
+      "login": "tacacs+,local"
+    }
+  },
+  "BANNER_MESSAGE|MESSAGE": {
+    "expireat": 1773640861.9655008,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "login_banner_disable": "false",
+      "motd": "^\r\n  *********************************************************** \r\n                 Dell Computer Corporation \r\n  *********************************************************** \r\n   This node is the property of Dell Computer Corporation \r\n    \r\n            Contact: Dell Global Network Services \r\n                  E-mail: dellnoc@dell.com \r\n  *********************************************************** \r\n               UNAUTHORIZED ACCESS PROHIBITED \r\n  *********************************************************** \r\n^",
+      "motd_banner_disable": "false"
+    }
+  },
+  "BFD_PROFILE|FW": {
+    "expireat": 1773640861.963302,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "desired-minimum-echo-receive": "300",
+      "desired-minimum-tx-interval": "300",
+      "detection-multiplier": "5",
+      "echo-active": "false",
+      "enabled": "true",
+      "minimum-ttl": "254",
+      "passive-mode": "false",
+      "required-minimum-receive": "300"
+    }
+  },
+  "BGP_GLOBALS_AF_NETWORK|default|ipv4_unicast|132.237.181.0/24": {
+    "expireat": 1773640861.9632466,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "BGP_GLOBALS_AF|default|ipv4_unicast": {
+    "expireat": 1773640861.964503,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "ibgp_equal_cluster_length": "false",
+      "max_ebgp_paths": "4",
+      "max_ibgp_paths": "4",
+      "route_flap_dampen": "false"
+    }
+  },
+  "BGP_GLOBALS|default": {
+    "expireat": 1773640861.9631813,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "always_compare_med": "false",
+      "as_notation": "asdot",
+      "as_path_mp_as_set": "false",
+      "ebgp_requires_policy": "false",
+      "external_compare_router_id": "false",
+      "fast_external_failover": "true",
+      "gr_restart_time": "300",
+      "gr_stale_routes_time": "3",
+      "holdtime": "180",
+      "ignore_as_path_length": "false",
+      "keepalive": "60",
+      "load_balance_mp_relax": "true",
+      "local_asn": "4246732825",
+      "log_nbr_state_changes": "true",
+      "network_import_check": "true",
+      "router_id": "10.90.30.159"
+    }
+  },
+  "BGP_NEIGHBOR_AF|default|10.90.30.179|ipv4_unicast": {
+    "expireat": 1773640861.9649982,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL",
+      "route_map_in@": "MYBLE01VOS41-IN"
+    }
+  },
+  "BGP_NEIGHBOR_AF|default|10.92.30.236|ipv4_unicast": {
+    "expireat": 1773640861.965539,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "true",
+      "route_map_in@": "Routes_From_Default_FW",
+      "route_map_out@": "DefaultRoute_LEAK_OUT",
+      "soft_reconfiguration_in": "true"
+    }
+  },
+  "BGP_NEIGHBOR_AF|default|10.92.30.68|ipv4_unicast": {
+    "expireat": 1773640861.9648757,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "true",
+      "route_map_in@": "Routes_From_EDU_FW",
+      "route_map_out@": "DefaultRoute_LEAK_OUT",
+      "soft_reconfiguration_in": "true"
+    }
+  },
+  "BGP_NEIGHBOR_AF|default|10.99.100.130|ipv4_unicast": {
+    "expireat": 1773640861.9629266,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "true",
+      "route_map_in@": "Routes_From_Corp_FW",
+      "route_map_out@": "DefaultRoute_LEAK_OUT",
+      "soft_reconfiguration_in": "true"
+    }
+  },
+  "BGP_NEIGHBOR|default|10.90.30.158": {
+    "expireat": 1773640861.9658773,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "name": "MYBLE01-DC-0409-SI02",
+      "peer_group_name": "iBGP-Peering"
+    }
+  },
+  "BGP_NEIGHBOR|default|10.90.30.178": {
+    "expireat": 1773640861.9640758,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "true",
+      "name": "MYBLE01VOS40",
+      "peer_group_name": "eBGP-vCPE"
+    }
+  },
+  "BGP_NEIGHBOR|default|10.90.30.179": {
+    "expireat": 1773640861.9639323,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "name": "MYBLE01VOS41",
+      "peer_group_name": "eBGP-vCPE"
+    }
+  },
+  "BGP_NEIGHBOR|default|10.92.30.236": {
+    "expireat": 1773640861.966227,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "asn": "4246733799",
+      "bfd": "true",
+      "bfd_profile": "FW",
+      "name": "Default-Firewall"
+    }
+  },
+  "BGP_NEIGHBOR|default|10.92.30.68": {
+    "expireat": 1773640861.9653409,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "asn": "4248699655",
+      "bfd": "true",
+      "bfd_profile": "FW",
+      "name": "EDU-Firewall"
+    }
+  },
+  "BGP_NEIGHBOR|default|10.99.100.130": {
+    "expireat": 1773640861.9634833,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "asn": "4248699659",
+      "bfd": "true",
+      "bfd_profile": "FW",
+      "name": "Corp-Firewall"
+    }
+  },
+  "BGP_PEER_GROUP_AF|default|eBGP-vCPE|ipv4_unicast": {
+    "expireat": 1773640861.9630299,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "true",
+      "max_prefix_discard_extra": "false",
+      "max_prefix_warning_only": "false",
+      "rrclient": "false",
+      "send_community": "both",
+      "send_default_route": "false",
+      "soft_reconfiguration_in": "true"
+    }
+  },
+  "BGP_PEER_GROUP_AF|default|iBGP-Peering|ipv4_unicast": {
+    "expireat": 1773640861.9641533,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "true",
+      "max_prefix_discard_extra": "false",
+      "max_prefix_warning_only": "false",
+      "nhself": "true",
+      "rrclient": "false",
+      "send_community": "both",
+      "send_default_route": "false",
+      "soft_reconfiguration_in": "true"
+    }
+  },
+  "BGP_PEER_GROUP|default|eBGP-vCPE": {
+    "expireat": 1773640861.9647143,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "true",
+      "asn": "3614",
+      "bfd": "true",
+      "conn_retry": "30",
+      "ebgp_multihop": "false",
+      "min_adv_interval": "0",
+      "name": "eBGP-vCPE",
+      "passive_mode": "false"
+    }
+  },
+  "BGP_PEER_GROUP|default|iBGP-Peering": {
+    "expireat": 1773640861.9637609,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "true",
+      "asn": "4246732825",
+      "bfd": "true",
+      "conn_retry": "30",
+      "ebgp_multihop": "false",
+      "min_adv_interval": "0",
+      "name": "iBGP-Peerings",
+      "passive_mode": "false"
+    }
+  },
+  "CLASSIFIER_TABLE|class-oob-arp": {
+    "expireat": 1773640861.9652436,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "ETHER_TYPE": "0x806",
+      "MATCH_TYPE": "FIELDS"
+    }
+  },
+  "CLASSIFIER_TABLE|class-oob-dhcp-client": {
+    "expireat": 1773640861.9625041,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "ETHER_TYPE": "0x800",
+      "IP_PROTOCOL": "17",
+      "L4_DST_PORT": "68",
+      "MATCH_TYPE": "FIELDS"
+    }
+  },
+  "CLASSIFIER_TABLE|class-oob-dhcp-server": {
+    "expireat": 1773640861.9634688,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "ETHER_TYPE": "0x800",
+      "IP_PROTOCOL": "17",
+      "L4_DST_PORT": "67",
+      "MATCH_TYPE": "FIELDS"
+    }
+  },
+  "CLASSIFIER_TABLE|class-oob-ip-multicast": {
+    "expireat": 1773640861.9648197,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "DST_IP": "224.0.0.0/4",
+      "ETHER_TYPE": "0x800",
+      "MATCH_TYPE": "FIELDS"
+    }
+  },
+  "CLASSIFIER_TABLE|class-oob-ipv6-multicast": {
+    "expireat": 1773640861.9644318,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "DST_IPV6": "ff00::/8",
+      "ETHER_TYPE": "0x86DD",
+      "MATCH_TYPE": "FIELDS"
+    }
+  },
+  "CLOCK|system": {
+    "expireat": 1773640861.9647715,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "timezone_name": "GMT0"
+    }
+  },
+  "CONFIG_DB_INITIALIZED": {
+    "expireat": 1773640861.9644814,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED": {
+    "expireat": 1773640861.9648607,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1773640841723259411"
+  },
+  "CONFIG_DB_UPDATED_BGP_NEIGHBOR": {
+    "expireat": 1773640861.9637349,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_BGP_NEIGHBOR_AF": {
+    "expireat": 1773640861.965948,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_ERRDISABLE": {
+    "expireat": 1773640861.9654593,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_INTERFACE": {
+    "expireat": 1773640861.964243,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_PORT": {
+    "expireat": 1773640861.9630597,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_PORT_GROUP": {
+    "expireat": 1773640861.9628146,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_ROUTE_MAP": {
+    "expireat": 1773640861.9628193,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_ROUTE_MAP_SET": {
+    "expireat": 1773640861.9636164,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_STP_PORT": {
+    "expireat": 1773640861.9638822,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_VLAN": {
+    "expireat": 1773640861.966214,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "CONFIG_DB_UPDATED_VLAN_MEMBER": {
+    "expireat": 1773640861.9653804,
+    "ttl": -0.001,
+    "type": "string",
+    "value": "1"
+  },
+  "COPP_GROUP|copp-system-arp": {
+    "expireat": 1773640861.9657836,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "3000",
+      "cir": "3000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "10",
+      "red_action": "drop",
+      "trap_action": "copy",
+      "trap_priority": "10"
+    }
+  },
+  "COPP_GROUP|copp-system-bfd": {
+    "expireat": 1773640861.9661179,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "2000",
+      "cir": "2000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "20",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "20"
+    }
+  },
+  "COPP_GROUP|copp-system-bgp": {
+    "expireat": 1773640861.9657676,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "10000",
+      "cir": "10000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "14",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "14"
+    }
+  },
+  "COPP_GROUP|copp-system-cdp": {
+    "expireat": 1773640861.9634597,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "100",
+      "cir": "100",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "0",
+      "red_action": "drop",
+      "trap_action": "drop",
+      "trap_priority": "0"
+    }
+  },
+  "COPP_GROUP|copp-system-dhcp": {
+    "expireat": 1773640861.9631593,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "300",
+      "cir": "300",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "9",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "9"
+    }
+  },
+  "COPP_GROUP|copp-system-iccp": {
+    "expireat": 1773640861.964298,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "5000",
+      "cir": "5000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "16",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "16"
+    }
+  },
+  "COPP_GROUP|copp-system-icmp": {
+    "expireat": 1773640861.9651785,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "1000",
+      "cir": "1000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "8",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "8"
+    }
+  },
+  "COPP_GROUP|copp-system-igmp": {
+    "expireat": 1773640861.964261,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "2000",
+      "cir": "2000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "12",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "12"
+    }
+  },
+  "COPP_GROUP|copp-system-ip2me": {
+    "expireat": 1773640861.964681,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "6000",
+      "cir": "6000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "7",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "7"
+    }
+  },
+  "COPP_GROUP|copp-system-lacp": {
+    "expireat": 1773640861.96516,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "500",
+      "cir": "500",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "23",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "23"
+    }
+  },
+  "COPP_GROUP|copp-system-lldp": {
+    "expireat": 1773640861.9627626,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "500",
+      "cir": "500",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "18",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "18"
+    }
+  },
+  "COPP_GROUP|copp-system-mtu": {
+    "expireat": 1773640861.9649506,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "500",
+      "cir": "500",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "4",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "4"
+    }
+  },
+  "COPP_GROUP|copp-system-nat": {
+    "expireat": 1773640861.9649339,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "300",
+      "cir": "300",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "5",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "5"
+    }
+  },
+  "COPP_GROUP|copp-system-ospf": {
+    "expireat": 1773640861.9643424,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "5000",
+      "cir": "5000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "15",
+      "red_action": "drop",
+      "trap_action": "copy",
+      "trap_priority": "15"
+    }
+  },
+  "COPP_GROUP|copp-system-pim": {
+    "expireat": 1773640861.9644756,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "5000",
+      "cir": "5000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "13",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "13"
+    }
+  },
+  "COPP_GROUP|copp-system-ptp": {
+    "expireat": 1773640861.964373,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "5000",
+      "cir": "5000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "30",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "30"
+    }
+  },
+  "COPP_GROUP|copp-system-sflow": {
+    "expireat": 1773640861.964068,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "8000",
+      "cir": "8000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "3",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "3"
+    }
+  },
+  "COPP_GROUP|copp-system-stp": {
+    "expireat": 1773640861.9646416,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "16000",
+      "cir": "16000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "21",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "21"
+    }
+  },
+  "COPP_GROUP|copp-system-subnet": {
+    "expireat": 1773640861.9625738,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "2000",
+      "cir": "2000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "6",
+      "red_action": "forward",
+      "trap_action": "trap",
+      "trap_priority": "6"
+    }
+  },
+  "COPP_GROUP|copp-system-suppress": {
+    "expireat": 1773640861.9653192,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "3000",
+      "cir": "3000",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "11",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "11"
+    }
+  },
+  "COPP_GROUP|copp-system-ttl": {
+    "expireat": 1773640861.9634135,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "100",
+      "cir": "100",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "0",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "0"
+    }
+  },
+  "COPP_GROUP|copp-system-udld": {
+    "expireat": 1773640861.96304,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "500",
+      "cir": "500",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "22",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "22"
+    }
+  },
+  "COPP_GROUP|copp-system-vrrp": {
+    "expireat": 1773640861.9635274,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "500",
+      "cir": "500",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "17",
+      "red_action": "drop",
+      "trap_action": "trap",
+      "trap_priority": "17"
+    }
+  },
+  "COPP_GROUP|default": {
+    "expireat": 1773640861.964465,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "cbs": "100",
+      "cir": "100",
+      "meter_type": "packets",
+      "mode": "sr_tcm",
+      "queue": "0",
+      "red_action": "drop"
+    }
+  },
+  "COPP_TRAP|copp-system-arp": {
+    "expireat": 1773640861.9661257,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-arp",
+      "trap_ids": "arp_req,arp_resp,neigh_discovery"
+    }
+  },
+  "COPP_TRAP|copp-system-bfd": {
+    "expireat": 1773640861.9635894,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-bfd",
+      "trap_ids": "bfd,bfdv6"
+    }
+  },
+  "COPP_TRAP|copp-system-bgp": {
+    "expireat": 1773640861.9659758,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-bgp",
+      "trap_ids": "bgp,bgpv6"
+    }
+  },
+  "COPP_TRAP|copp-system-cdp": {
+    "expireat": 1773640861.9644103,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-cdp",
+      "trap_ids": "cdp"
+    }
+  },
+  "COPP_TRAP|copp-system-dhcp": {
+    "expireat": 1773640861.96566,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-dhcp",
+      "trap_ids": "dhcp"
+    }
+  },
+  "COPP_TRAP|copp-system-dhcpl2": {
+    "expireat": 1773640861.9663444,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-dhcp",
+      "trap_ids": "dhcp_l2"
+    }
+  },
+  "COPP_TRAP|copp-system-dhcpv6": {
+    "expireat": 1773640861.9661431,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-dhcp",
+      "trap_ids": "dhcpv6"
+    }
+  },
+  "COPP_TRAP|copp-system-dhcpv6l2": {
+    "expireat": 1773640861.9658093,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-dhcp",
+      "trap_ids": "dhcpv6_l2"
+    }
+  },
+  "COPP_TRAP|copp-system-iccp": {
+    "expireat": 1773640861.9658425,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-iccp",
+      "trap_ids": "iccp"
+    }
+  },
+  "COPP_TRAP|copp-system-icmp": {
+    "expireat": 1773640861.9631205,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-icmp",
+      "trap_ids": "icmp,icmpv6"
+    }
+  },
+  "COPP_TRAP|copp-system-igmp": {
+    "expireat": 1773640861.965101,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-igmp",
+      "trap_ids": "igmp_query"
+    }
+  },
+  "COPP_TRAP|copp-system-ip2me": {
+    "expireat": 1773640861.963611,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-ip2me",
+      "trap_ids": "ip2me"
+    }
+  },
+  "COPP_TRAP|copp-system-lacp": {
+    "expireat": 1773640861.9659183,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-lacp",
+      "trap_ids": "lacp"
+    }
+  },
+  "COPP_TRAP|copp-system-lldp": {
+    "expireat": 1773640861.9653082,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-lldp",
+      "trap_ids": "lldp"
+    }
+  },
+  "COPP_TRAP|copp-system-mtu": {
+    "expireat": 1773640861.9636295,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-mtu",
+      "trap_ids": "l3_mtu_error"
+    }
+  },
+  "COPP_TRAP|copp-system-nat": {
+    "expireat": 1773640861.9644475,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-nat",
+      "trap_ids": "src_nat_miss,dest_nat_miss"
+    }
+  },
+  "COPP_TRAP|copp-system-ospf": {
+    "expireat": 1773640861.9645975,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-ospf",
+      "trap_ids": "ospf,ospfv6"
+    }
+  },
+  "COPP_TRAP|copp-system-pim": {
+    "expireat": 1773640861.964841,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-pim",
+      "trap_ids": "pim"
+    }
+  },
+  "COPP_TRAP|copp-system-ptp": {
+    "expireat": 1773640861.9632535,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-ptp",
+      "trap_ids": "ptp"
+    }
+  },
+  "COPP_TRAP|copp-system-sflow": {
+    "expireat": 1773640861.965566,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-sflow",
+      "trap_ids": "sample_packet"
+    }
+  },
+  "COPP_TRAP|copp-system-stp": {
+    "expireat": 1773640861.962594,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-stp",
+      "trap_ids": "stp,pvrst"
+    }
+  },
+  "COPP_TRAP|copp-system-subnet": {
+    "expireat": 1773640861.9640284,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-subnet",
+      "trap_ids": "subnet"
+    }
+  },
+  "COPP_TRAP|copp-system-suppress": {
+    "expireat": 1773640861.9639,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-suppress",
+      "trap_ids": "arp_suppress,nd_suppress"
+    }
+  },
+  "COPP_TRAP|copp-system-ttl": {
+    "expireat": 1773640861.9641757,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-ttl",
+      "trap_ids": "ttl_error"
+    }
+  },
+  "COPP_TRAP|copp-system-udld": {
+    "expireat": 1773640861.9650211,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-udld",
+      "trap_ids": "udld"
+    }
+  },
+  "COPP_TRAP|copp-system-vrrp": {
+    "expireat": 1773640861.9662611,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "copp-system-vrrp",
+      "trap_ids": "vrrp,vrrpv6"
+    }
+  },
+  "COPP_TRAP|default": {
+    "expireat": 1773640861.9635172,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "trap_group": "default"
+    }
+  },
+  "COREDUMP|config": {
+    "expireat": 1773640861.9637735,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true"
+    }
+  },
+  "DEBUGFM_CONFIG_TABLE|ACTION": {
+    "expireat": 1773640861.9627688,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "ACTION": "COMPRESS"
+    }
+  },
+  "DEBUGFM_CONFIG_TABLE|TARGET": {
+    "expireat": 1773640861.962539,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "TARGET": "SWSS_FILE"
+    }
+  },
+  "DEVICE_METADATA|localhost": {
+    "expireat": 1773640861.9649851,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "default_config_profile": "l3",
+      "frr_mgmt_framework_config": "true",
+      "hostname": "MYBLE01-DC-0409-SI02",
+      "hwsku": "DellEMC-S5248f-P-25G-DPB",
+      "intf_naming_mode": "standard",
+      "mac": "b4:e9:b8:e7:ce:02",
+      "platform": "x86_64-dellemc_s5248f_c3538-r0",
+      "type": "LeafRouter"
+    }
+  },
+  "DNS_SERVER|10.7.7.7": {
+    "expireat": 1773640861.96378,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "vrf_name": "mgmt"
+    }
+  },
+  "DNS_SERVER|10.8.8.8": {
+    "expireat": 1773640861.9662342,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "vrf_name": "mgmt"
+    }
+  },
+  "ECMP_LOADSHARE_TABLE_IPV4|ipv4": {
+    "expireat": 1773640861.9644408,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "ipv4_dst_ip": "true",
+      "ipv4_l4_dst_port": "true",
+      "ipv4_l4_src_port": "true",
+      "ipv4_protocol": "true",
+      "ipv4_src_ip": "true"
+    }
+  },
+  "ECMP_LOADSHARE_TABLE_IPV6|ipv6": {
+    "expireat": 1773640861.9645581,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "ipv6_dst_ip": "true",
+      "ipv6_l4_dst_port": "true",
+      "ipv6_l4_src_port": "true",
+      "ipv6_next_hdr": "true",
+      "ipv6_src_ip": "true"
+    }
+  },
+  "ERRDISABLE|RECOVERY": {
+    "expireat": 1773640861.9657505,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "interval": "30"
+    }
+  },
+  "FEATURE|bgp": {
+    "expireat": 1773640861.9638143,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "False",
+      "has_per_asic_scope": "True",
+      "has_timer": "False",
+      "state": "always_enabled"
+    }
+  },
+  "FEATURE|database": {
+    "expireat": 1773640861.9639416,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "False",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "True",
+      "has_timer": "False",
+      "state": "always_enabled"
+    }
+  },
+  "FEATURE|dhcp_relay": {
+    "expireat": 1773640861.963673,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|eventd": {
+    "expireat": 1773640861.9642031,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "always_enabled"
+    }
+  },
+  "FEATURE|iccpd": {
+    "expireat": 1773640861.9643824,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|l2mcd": {
+    "expireat": 1773640861.963381,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|lldp": {
+    "expireat": 1773640861.9650452,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "True",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|mfa": {
+    "expireat": 1773640861.9627788,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|mgmt-framework": {
+    "expireat": 1773640861.9643078,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "always_enabled"
+    }
+  },
+  "FEATURE|nat": {
+    "expireat": 1773640861.9652007,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|pmon": {
+    "expireat": 1773640861.9661357,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "always_enabled"
+    }
+  },
+  "FEATURE|radv": {
+    "expireat": 1773640861.9643319,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|sflow": {
+    "expireat": 1773640861.964622,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|snmp": {
+    "expireat": 1773640861.9633114,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|stp": {
+    "expireat": 1773640861.9653902,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|swss": {
+    "expireat": 1773640861.9650812,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "True",
+      "has_timer": "False",
+      "state": "always_enabled"
+    }
+  },
+  "FEATURE|syncd": {
+    "expireat": 1773640861.965301,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "False",
+      "has_per_asic_scope": "True",
+      "has_timer": "False",
+      "state": "always_enabled"
+    }
+  },
+  "FEATURE|tam": {
+    "expireat": 1773640861.963235,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|teamd": {
+    "expireat": 1773640861.9647653,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "False",
+      "has_per_asic_scope": "True",
+      "has_timer": "False",
+      "state": "always_enabled"
+    }
+  },
+  "FEATURE|telemetry": {
+    "expireat": 1773640861.9656043,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|timesync": {
+    "expireat": 1773640861.963365,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "False",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|udld": {
+    "expireat": 1773640861.9649744,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FEATURE|vrrp": {
+    "expireat": 1773640861.9653742,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auto_restart": "enabled",
+      "check_up_status": "True",
+      "has_global_scope": "True",
+      "has_per_asic_scope": "False",
+      "has_timer": "False",
+      "state": "enabled"
+    }
+  },
+  "FLEX_COUNTER_TABLE|PFCWD": {
+    "expireat": 1773640861.965628,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "FLEX_COUNTER_STATUS": "enable"
+    }
+  },
+  "FLEX_COUNTER_TABLE|PHY": {
+    "expireat": 1773640861.9651897,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "FLEX_COUNTER_STATUS": "enable"
+    }
+  },
+  "FLEX_COUNTER_TABLE|PORT": {
+    "expireat": 1773640861.963201,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "FLEX_COUNTER_STATUS": "enable"
+    }
+  },
+  "FLEX_COUNTER_TABLE|QUEUE": {
+    "expireat": 1773640861.964903,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "FLEX_COUNTER_STATUS": "enable"
+    }
+  },
+  "FLEX_COUNTER_TABLE|RIF": {
+    "expireat": 1773640861.965579,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "FLEX_COUNTER_STATUS": "enable"
+    }
+  },
+  "FLEX_COUNTER_TABLE|TUNNEL": {
+    "expireat": 1773640861.9639156,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "FLEX_COUNTER_STATUS": "enable"
+    }
+  },
+  "HARDWARE|ACCESS_LIST": {
+    "expireat": 1773640861.9655163,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "COUNTER_MODE": "per-rule",
+      "LOOKUP_MODE": "optimized"
+    }
+  },
+  "HOST_FEATURE|caclmgrd": {
+    "expireat": 1773640861.9629765,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "check_up_status": "False"
+    }
+  },
+  "HOST_FEATURE|cron": {
+    "expireat": 1773640861.96357,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "check_up_status": "False"
+    }
+  },
+  "HOST_FEATURE|docker": {
+    "expireat": 1773640861.9648674,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "check_up_status": "False"
+    }
+  },
+  "HOST_FEATURE|hostcfgd": {
+    "expireat": 1773640861.9628763,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "check_up_status": "False"
+    }
+  },
+  "HOST_FEATURE|warmboot-finalizer": {
+    "expireat": 1773640861.9632406,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "check_up_status": "True"
+    }
+  },
+  "HOST_FEATURE|xphyd": {
+    "expireat": 1773640861.96365,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "check_up_status": "True"
+    }
+  },
+  "KDUMP|config": {
+    "expireat": 1773640861.9629974,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "memory": "0M-2G:256M,2G-4G:256M,4G-8G:384M,8G-:448M",
+      "num_dumps": "3"
+    }
+  },
+  "LOGIN_ATTRIBUTES|global": {
+    "expireat": 1773640861.966193,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "login_session_timeout": "3600"
+    }
+  },
+  "MGMT_INTERFACE|eth0": {
+    "expireat": 1773640861.9642675,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "MGMT_INTERFACE|eth0|10.92.56.60/23": {
+    "expireat": 1773640861.9635763,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "MGMT_PORT|eth0": {
+    "expireat": 1773640861.9637885,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autoneg": "true",
+      "description": "DELL::UPL::MYBLE01-DC-0404-OM01-Gi1/10",
+      "mtu": "1500",
+      "speed": "1000"
+    }
+  },
+  "MGMT_VRF_CONFIG|vrf_global": {
+    "expireat": 1773640861.966036,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "mgmtVrfEnabled": "true"
+    }
+  },
+  "NAT_GLOBAL|Values": {
+    "expireat": 1773640861.965643,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_mode": "disabled",
+      "nat_tcp_timeout": "86400",
+      "nat_timeout": "600",
+      "nat_udp_timeout": "300"
+    }
+  },
+  "NEIGH_GLOBAL|Values": {
+    "expireat": 1773640861.962495,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "ipv4_arp_timeout": "1800",
+      "ipv6_nd_cache_expiry": "1800"
+    }
+  },
+  "NTP_SERVER|ntp1.networks.dell.com": {
+    "expireat": 1773640861.9647493,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "maxpoll": "10",
+      "minpoll": "6",
+      "prefer": "false"
+    }
+  },
+  "NTP_SERVER|ntp2.networks.dell.com": {
+    "expireat": 1773640861.9643157,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "maxpoll": "10",
+      "minpoll": "6",
+      "prefer": "false"
+    }
+  },
+  "NTP|global": {
+    "expireat": 1773640861.9663255,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auth_enabled": "false",
+      "src_intf@": "eth0"
+    }
+  },
+  "POLICY_BINDING_TABLE|CtrlPlane": {
+    "expireat": 1773640861.9638772,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "INGRESS_QOS_POLICY": "oob-qos-policy"
+    }
+  },
+  "POLICY_SECTIONS_TABLE|oob-qos-policy|class-oob-arp": {
+    "expireat": 1773640861.964224,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "PRIORITY": "1010",
+      "SET_POLICER_CIR": "256000"
+    }
+  },
+  "POLICY_SECTIONS_TABLE|oob-qos-policy|class-oob-dhcp-client": {
+    "expireat": 1773640861.963828,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "PRIORITY": "1020",
+      "SET_POLICER_CIR": "512000"
+    }
+  },
+  "POLICY_SECTIONS_TABLE|oob-qos-policy|class-oob-dhcp-server": {
+    "expireat": 1773640861.965587,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "PRIORITY": "1015",
+      "SET_POLICER_CIR": "512000"
+    }
+  },
+  "POLICY_SECTIONS_TABLE|oob-qos-policy|class-oob-ip-multicast": {
+    "expireat": 1773640861.964855,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "PRIORITY": "1000",
+      "SET_POLICER_CIR": "256000"
+    }
+  },
+  "POLICY_SECTIONS_TABLE|oob-qos-policy|class-oob-ipv6-multicast": {
+    "expireat": 1773640861.9635973,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "",
+      "PRIORITY": "1005",
+      "SET_POLICER_CIR": "256000"
+    }
+  },
+  "POLICY_TABLE|oob-qos-policy": {
+    "expireat": 1773640861.965635,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "DESCRIPTION": "QoS Ratelimiting policy for OOB port",
+      "TYPE": "QOS"
+    }
+  },
+  "PORTCHANNEL_MEMBER|PortChannel100|Ethernet48": {
+    "expireat": 1773640861.9642873,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "PORTCHANNEL_MEMBER|PortChannel100|Ethernet56": {
+    "expireat": 1773640861.9659908,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "PORTCHANNEL|PortChannel100": {
+    "expireat": 1773640861.9636374,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "description": "DEL::POC::MYBLE01-DC-0408-SI01::Po100",
+      "tagged_vlans@": "677-678,802-803,809,1101-1102,2000"
+    }
+  },
+  "PORT_GROUP|1": {
+    "expireat": 1773640861.9633338,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "10000"
+    }
+  },
+  "PORT_GROUP|10": {
+    "expireat": 1773640861.9651434,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "10000"
+    }
+  },
+  "PORT_GROUP|11": {
+    "expireat": 1773640861.9631352,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "25000"
+    }
+  },
+  "PORT_GROUP|12": {
+    "expireat": 1773640861.9652658,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "25000"
+    }
+  },
+  "PORT_GROUP|2": {
+    "expireat": 1773640861.9625108,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "10000"
+    }
+  },
+  "PORT_GROUP|3": {
+    "expireat": 1773640861.9660015,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "10000"
+    }
+  },
+  "PORT_GROUP|4": {
+    "expireat": 1773640861.963435,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "10000"
+    }
+  },
+  "PORT_GROUP|5": {
+    "expireat": 1773640861.9639983,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "10000"
+    }
+  },
+  "PORT_GROUP|6": {
+    "expireat": 1773640861.9638343,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "10000"
+    }
+  },
+  "PORT_GROUP|7": {
+    "expireat": 1773640861.9641824,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "25000"
+    }
+  },
+  "PORT_GROUP|8": {
+    "expireat": 1773640861.9649403,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "25000"
+    }
+  },
+  "PORT_GROUP|9": {
+    "expireat": 1773640861.964957,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "speed": "25000"
+    }
+  },
+  "PORT_QOS_MAP|CPU": {
+    "expireat": 1773640861.9652076,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@255]"
+    }
+  },
+  "PORT|Ethernet0": {
+    "expireat": 1773640861.9633255,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/1",
+      "autoneg": "off",
+      "description": "DEL::UPL::10G::MYBLE01SDWESX5::vmnic9",
+      "fec": "none",
+      "index": "1",
+      "lanes": "49",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "tagged_vlans@": "677,1101-1102",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet1": {
+    "expireat": 1773640861.9652905,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "access_vlan": "1120",
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/2",
+      "autoneg": "off",
+      "description": "DEL::UPL::10G::MYBLE01SDWESX5::vmnic11",
+      "fec": "none",
+      "index": "2",
+      "lanes": "50",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet10": {
+    "expireat": 1773640861.9626133,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/11",
+      "autoneg": "off",
+      "description": "sp-TM bw-1G ty-INETBGP id-LD1030249315 loc-MYBLE01",
+      "error-disable": "off",
+      "fec": "none",
+      "flap-threshold": "50",
+      "index": "11",
+      "lanes": "63",
+      "link_training": "off",
+      "mtu": "9100",
+      "recovery-interval": "2",
+      "sampling-interval": "1",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet11": {
+    "expireat": 1773640861.9657342,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "access_vlan": "678",
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/12",
+      "autoneg": "off",
+      "description": "sp-TWC bw-2G ty-INET id-ME011113 loc-MYBLE01",
+      "fec": "none",
+      "index": "12",
+      "lanes": "64",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet12": {
+    "expireat": 1773640861.9625254,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/13",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "13",
+      "lanes": "77",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet13": {
+    "expireat": 1773640861.9632845,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/14",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "14",
+      "lanes": "78",
+      "link_training": "off",
+      "mtu": "7400",
+      "speed": "1000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet14": {
+    "expireat": 1773640861.966163,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/15",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "15",
+      "lanes": "79",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet15": {
+    "expireat": 1773640861.9656787,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "1000",
+      "alias": "Eth1/16",
+      "autoneg": "on",
+      "fec": "none",
+      "index": "16",
+      "lanes": "80",
+      "link_training": "off",
+      "mtu": "7600",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet16": {
+    "expireat": 1773640861.9642806,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/17",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "17",
+      "lanes": "85",
+      "link_training": "off",
+      "mtu": "8700",
+      "speed": "1000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet17": {
+    "expireat": 1773640861.966054,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/18",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "18",
+      "lanes": "86",
+      "link_training": "off",
+      "mtu": "6666",
+      "speed": "1000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet18": {
+    "expireat": 1773640861.9642162,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "1000",
+      "alias": "Eth1/19",
+      "autoneg": "on",
+      "fec": "none",
+      "index": "19",
+      "lanes": "87",
+      "link_training": "off",
+      "mtu": "8900",
+      "speed": "1000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet19": {
+    "expireat": 1773640861.9637294,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/20",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "20",
+      "lanes": "88",
+      "link_training": "off",
+      "mtu": "6666",
+      "speed": "1000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet2": {
+    "expireat": 1773640861.9641685,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/3",
+      "autoneg": "off",
+      "description": "DEL::UPL::10G::MYBLE01SDWESX6::vmnic9",
+      "fec": "none",
+      "index": "3",
+      "lanes": "51",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "tagged_vlans@": "677,1101-1102",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet20": {
+    "expireat": 1773640861.965259,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "access_vlan": "802",
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/21",
+      "autoneg": "off",
+      "description": "DEL::UPL::10G::MYPENPAFWCORP02::Eth6::",
+      "fec": "none",
+      "index": "21",
+      "lanes": "93",
+      "link_training": "off",
+      "mtu": "1500",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet21": {
+    "expireat": 1773640861.9634283,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "access_vlan": "809",
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/22",
+      "autoneg": "off",
+      "description": "DEL::UPL::10G::MYPENPAFWCORP02::Eth1/20-DefaultFW::",
+      "fec": "none",
+      "index": "22",
+      "lanes": "94",
+      "link_training": "off",
+      "mtu": "1500",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet22": {
+    "expireat": 1773640861.9646127,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "access_vlan": "803",
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/23",
+      "autoneg": "off",
+      "description": "DEL::UPL::10G::mypenpafwedu02::Eth1/14::",
+      "fec": "none",
+      "index": "23",
+      "lanes": "95",
+      "link_training": "off",
+      "mtu": "1500",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet23": {
+    "expireat": 1773640861.9646964,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/24",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "24",
+      "lanes": "96",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet24": {
+    "expireat": 1773640861.9641287,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/25",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "25",
+      "lanes": "13",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto",
+      "valid_speeds": "25000"
+    }
+  },
+  "PORT|Ethernet25": {
+    "expireat": 1773640861.9662542,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/26",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "26",
+      "lanes": "14",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto",
+      "valid_speeds": "25000"
+    }
+  },
+  "PORT|Ethernet26": {
+    "expireat": 1773640861.965064,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/27",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "27",
+      "lanes": "15",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto",
+      "valid_speeds": "25000"
+    }
+  },
+  "PORT|Ethernet27": {
+    "expireat": 1773640861.9635108,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "access_vlan": "1102",
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/28",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "28",
+      "lanes": "16",
+      "link_training": "off",
+      "mtu": "4444",
+      "speed": "25000",
+      "unreliable_los": "auto",
+      "valid_speeds": "25000"
+    }
+  },
+  "PORT|Ethernet28": {
+    "expireat": 1773640861.963213,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/29",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "29",
+      "lanes": "21",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet29": {
+    "expireat": 1773640861.9650352,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/30",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "30",
+      "lanes": "22",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet3": {
+    "expireat": 1773640861.9651303,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "access_vlan": "1120",
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/4",
+      "autoneg": "off",
+      "description": "DEL::UPL::10G::MYBLE01SDWESX6::vmnic11",
+      "fec": "none",
+      "index": "4",
+      "lanes": "52",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet30": {
+    "expireat": 1773640861.965962,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/31",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "31",
+      "lanes": "23",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet31": {
+    "expireat": 1773640861.9641144,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/32",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "32",
+      "lanes": "24",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet32": {
+    "expireat": 1773640861.9643962,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/33",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "33",
+      "lanes": "29",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet33": {
+    "expireat": 1773640861.9647415,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/34",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "34",
+      "lanes": "30",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet34": {
+    "expireat": 1773640861.9645293,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/35",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "35",
+      "lanes": "31",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet35": {
+    "expireat": 1773640861.9634023,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/36",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "36",
+      "lanes": "32",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet36": {
+    "expireat": 1773640861.9649231,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/37",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "37",
+      "lanes": "97",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet37": {
+    "expireat": 1773640861.9640422,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/38",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "38",
+      "lanes": "98",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet38": {
+    "expireat": 1773640861.9661813,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/39",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "39",
+      "lanes": "99",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet39": {
+    "expireat": 1773640861.9652348,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/40",
+      "autoneg": "off",
+      "description": "",
+      "fec": "none",
+      "index": "40",
+      "lanes": "100",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet4": {
+    "expireat": 1773640861.9637156,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/5",
+      "autoneg": "off",
+      "description": "DEL::UPL::10G::MYBLE01SDWESX5::vmnic10",
+      "fec": "none",
+      "index": "5",
+      "lanes": "57",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "tagged_vlans@": "677-678",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet40": {
+    "expireat": 1773640861.9641418,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/41",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "41",
+      "lanes": "105",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet41": {
+    "expireat": 1773640861.9644942,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/42",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "42",
+      "lanes": "106",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet42": {
+    "expireat": 1773640861.96299,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/43",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "43",
+      "lanes": "107",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet43": {
+    "expireat": 1773640861.962552,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/44",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "44",
+      "lanes": "108",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet44": {
+    "expireat": 1773640861.9645424,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/45",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "45",
+      "lanes": "113",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet45": {
+    "expireat": 1773640861.9645162,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/46",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "46",
+      "lanes": "114",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet46": {
+    "expireat": 1773640861.965558,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/47",
+      "autoneg": "off",
+      "description": "",
+      "fec": "none",
+      "index": "47",
+      "lanes": "115",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet47": {
+    "expireat": 1773640861.963965,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "25000",
+      "alias": "Eth1/48",
+      "autoneg": "on",
+      "fec": "none",
+      "index": "48",
+      "lanes": "116",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "25000",
+      "unreliable_los": "auto"
+    }
+  },
+  "PORT|Ethernet48": {
+    "expireat": 1773640861.9629478,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/49",
+      "autoneg": "off",
+      "description": "DEL::PCM::100G::MYBLE01-DC-0408-SI01::Eth48",
+      "fec": "none",
+      "index": "49",
+      "lanes": "121,122,123,124",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "100000",
+      "unreliable_los": "auto",
+      "valid_speeds": "100000, 40000"
+    }
+  },
+  "PORT|Ethernet5": {
+    "expireat": 1773640861.9640968,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/6",
+      "autoneg": "off",
+      "description": "DEL::UPL::10G::MYBLE01SDWESX6::vmnic10",
+      "fec": "none",
+      "index": "6",
+      "lanes": "58",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "tagged_vlans@": "677-678",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet52": {
+    "expireat": 1773640861.9630952,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/50",
+      "autoneg": "off",
+      "description": "",
+      "fec": "none",
+      "index": "50",
+      "lanes": "125,126,127,128",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "100000",
+      "unreliable_los": "auto",
+      "valid_speeds": "100000, 40000"
+    }
+  },
+  "PORT|Ethernet56": {
+    "expireat": 1773640861.9647918,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/51",
+      "autoneg": "off",
+      "description": "DEL::PCM::100G::MYBLE01-DC-0408-SI01::Eth56",
+      "fec": "none",
+      "index": "51",
+      "lanes": "69,70,71,72",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "100000",
+      "unreliable_los": "auto",
+      "valid_speeds": "100000, 40000"
+    }
+  },
+  "PORT|Ethernet6": {
+    "expireat": 1773640861.9648335,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/7",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "7",
+      "lanes": "59",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet60": {
+    "expireat": 1773640861.9647279,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/52",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "52",
+      "lanes": "65,66,67,68",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "100000",
+      "unreliable_los": "auto",
+      "valid_speeds": "100000, 40000"
+    }
+  },
+  "PORT|Ethernet64": {
+    "expireat": 1773640861.9642377,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/53",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "53",
+      "lanes": "1,2,3,4",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "100000",
+      "unreliable_los": "auto",
+      "valid_speeds": "100000, 40000"
+    }
+  },
+  "PORT|Ethernet68": {
+    "expireat": 1773640861.962587,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/54",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "54",
+      "lanes": "33,34,35,36",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "100000",
+      "unreliable_los": "auto",
+      "valid_speeds": "100000, 40000"
+    }
+  },
+  "PORT|Ethernet7": {
+    "expireat": 1773640861.966208,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/8",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "8",
+      "lanes": "60",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet72": {
+    "expireat": 1773640861.9643562,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/55",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "55",
+      "lanes": "5,6,7,8",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "100000",
+      "unreliable_los": "auto",
+      "valid_speeds": "100000, 40000"
+    }
+  },
+  "PORT|Ethernet76": {
+    "expireat": 1773640861.964424,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/56",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "56",
+      "lanes": "41,42,43,44",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "100000",
+      "unreliable_los": "auto",
+      "valid_speeds": "100000, 40000"
+    }
+  },
+  "PORT|Ethernet8": {
+    "expireat": 1773640861.963541,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "adv_speeds": "all",
+      "alias": "Eth1/9",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "9",
+      "lanes": "61",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PORT|Ethernet9": {
+    "expireat": 1773640861.9631946,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "down",
+      "adv_speeds": "all",
+      "alias": "Eth1/10",
+      "autoneg": "off",
+      "fec": "none",
+      "index": "10",
+      "lanes": "62",
+      "link_training": "off",
+      "mtu": "9100",
+      "speed": "10000",
+      "unreliable_los": "auto",
+      "valid_speeds": "10000,1000"
+    }
+  },
+  "PREFIX_SET|DefaultRoute_LEAK_OUT": {
+    "expireat": 1773640861.9638407,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "mode": "IPv4"
+    }
+  },
+  "PREFIX_SET|Routes_From_Corp_FW": {
+    "expireat": 1773640861.9632256,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "mode": "IPv4"
+    }
+  },
+  "PREFIX_SET|Routes_From_Default_FW": {
+    "expireat": 1773640861.9630198,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "mode": "IPv4"
+    }
+  },
+  "PREFIX_SET|Routes_From_EDU_FW": {
+    "expireat": 1773640861.9632711,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "mode": "IPv4"
+    }
+  },
+  "PREFIX|DefaultRoute_LEAK_OUT|5|0.0.0.0/0|exact": {
+    "expireat": 1773640861.9660652,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_Corp_FW|20|172.16.0.0/12|exact": {
+    "expireat": 1773640861.9647558,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_Corp_FW|25|132.237.171.0/24|exact": {
+    "expireat": 1773640861.9635825,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_Corp_FW|30|132.237.181.0/26|exact": {
+    "expireat": 1773640861.9634416,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_Corp_FW|35|152.62.45.0/24|exact": {
+    "expireat": 1773640861.9660087,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_Corp_FW|5|10.0.0.0/8|exact": {
+    "expireat": 1773640861.9659686,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_Default_FW|10|132.237.171.37/32|exact": {
+    "expireat": 1773640861.9655092,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_Default_FW|15|132.237.171.47/32|exact": {
+    "expireat": 1773640861.965088,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_Default_FW|20|132.237.171.70/32|exact": {
+    "expireat": 1773640861.9637501,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_Default_FW|5|132.237.171.36/32|exact": {
+    "expireat": 1773640861.9632194,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PREFIX|Routes_From_EDU_FW|5|132.237.166.0/24|exact": {
+    "expireat": 1773640861.9650714,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "action": "permit"
+    }
+  },
+  "PTP_INSTANCE|GLOBAL": {
+    "expireat": 1773640861.9640105,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "QUEUE|CPU|0": {
+    "expireat": 1773640861.9653482,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@0]"
+    }
+  },
+  "QUEUE|CPU|1": {
+    "expireat": 1773640861.9661028,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@1]"
+    }
+  },
+  "QUEUE|CPU|10": {
+    "expireat": 1773640861.9634752,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@10]"
+    }
+  },
+  "QUEUE|CPU|11": {
+    "expireat": 1773640861.9648967,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@11]"
+    }
+  },
+  "QUEUE|CPU|12": {
+    "expireat": 1773640861.9658492,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@12]"
+    }
+  },
+  "QUEUE|CPU|13": {
+    "expireat": 1773640861.9648824,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@13]"
+    }
+  },
+  "QUEUE|CPU|14": {
+    "expireat": 1773640861.9655306,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@14]"
+    }
+  },
+  "QUEUE|CPU|15": {
+    "expireat": 1773640861.964703,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@15]"
+    }
+  },
+  "QUEUE|CPU|16": {
+    "expireat": 1773640861.964549,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@16]"
+    }
+  },
+  "QUEUE|CPU|17": {
+    "expireat": 1773640861.9640572,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@17]"
+    }
+  },
+  "QUEUE|CPU|18": {
+    "expireat": 1773640861.9654822,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@18]"
+    }
+  },
+  "QUEUE|CPU|19": {
+    "expireat": 1773640861.9649098,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@19]"
+    }
+  },
+  "QUEUE|CPU|2": {
+    "expireat": 1773640861.9645908,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@2]"
+    }
+  },
+  "QUEUE|CPU|20": {
+    "expireat": 1773640861.9654098,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@20]"
+    }
+  },
+  "QUEUE|CPU|21": {
+    "expireat": 1773640861.9654887,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@21]"
+    }
+  },
+  "QUEUE|CPU|22": {
+    "expireat": 1773640861.9630816,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@22]"
+    }
+  },
+  "QUEUE|CPU|23": {
+    "expireat": 1773640861.9650943,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@23]"
+    }
+  },
+  "QUEUE|CPU|28": {
+    "expireat": 1773640861.9662404,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@28]"
+    }
+  },
+  "QUEUE|CPU|29": {
+    "expireat": 1773640861.9653966,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@29]"
+    }
+  },
+  "QUEUE|CPU|3": {
+    "expireat": 1773640861.9658349,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@3]"
+    }
+  },
+  "QUEUE|CPU|30": {
+    "expireat": 1773640861.962807,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@30]"
+    }
+  },
+  "QUEUE|CPU|4": {
+    "expireat": 1773640861.965757,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@4]"
+    }
+  },
+  "QUEUE|CPU|5": {
+    "expireat": 1773640861.9630034,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@5]"
+    }
+  },
+  "QUEUE|CPU|6": {
+    "expireat": 1773640861.9639843,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@6]"
+    }
+  },
+  "QUEUE|CPU|7": {
+    "expireat": 1773640861.963448,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@7]"
+    }
+  },
+  "QUEUE|CPU|8": {
+    "expireat": 1773640861.9655726,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@8]"
+    }
+  },
+  "QUEUE|CPU|9": {
+    "expireat": 1773640861.9628253,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "scheduler": "[SCHEDULER|copp-scheduler-policy@9]"
+    }
+  },
+  "ROUTE_MAP_SET|DefaultRoute_LEAK_OUT": {
+    "expireat": 1773640861.9653594,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "ROUTE_MAP_SET|MYBLE01VOS41-IN": {
+    "expireat": 1773640861.9660966,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "ROUTE_MAP_SET|Routes_From_Corp_FW": {
+    "expireat": 1773640861.9628983,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "ROUTE_MAP_SET|Routes_From_Default_FW": {
+    "expireat": 1773640861.9640043,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "ROUTE_MAP_SET|Routes_From_EDU_FW": {
+    "expireat": 1773640861.9648473,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "ROUTE_MAP|DefaultRoute_LEAK_OUT|10": {
+    "expireat": 1773640861.9644034,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "match_prefix_set": "DefaultRoute_LEAK_OUT",
+      "route_operation": "permit"
+    }
+  },
+  "ROUTE_MAP|MYBLE01VOS41-IN|10": {
+    "expireat": 1773640861.9663327,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "route_operation": "permit",
+      "set_origin": "IGP"
+    }
+  },
+  "ROUTE_MAP|Routes_From_Corp_FW|10": {
+    "expireat": 1773640861.9629104,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "match_prefix_set": "Routes_From_Corp_FW",
+      "route_operation": "permit"
+    }
+  },
+  "ROUTE_MAP|Routes_From_Default_FW|10": {
+    "expireat": 1773640861.963047,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "match_prefix_set": "Routes_From_Default_FW",
+      "route_operation": "permit"
+    }
+  },
+  "ROUTE_MAP|Routes_From_EDU_FW|10": {
+    "expireat": 1773640861.96587,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "match_prefix_set": "Routes_From_EDU_FW",
+      "route_operation": "permit"
+    }
+  },
+  "SAG_GLOBAL|IP": {
+    "expireat": 1773640861.9624875,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "IPv4": "enable",
+      "IPv6": "enable"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@0": {
+    "expireat": 1773640861.96425,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "type": "WRR",
+      "weight": "1"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@1": {
+    "expireat": 1773640861.9635494,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "100",
+      "type": "WRR",
+      "weight": "1"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@10": {
+    "expireat": 1773640861.9639087,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "3000",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@11": {
+    "expireat": 1773640861.9649649,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "3000",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@12": {
+    "expireat": 1773640861.9648907,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "2000",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@13": {
+    "expireat": 1773640861.965942,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "5000",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@14": {
+    "expireat": 1773640861.9658854,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "10000",
+      "type": "WRR",
+      "weight": "6"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@15": {
+    "expireat": 1773640861.963558,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "5000",
+      "type": "WRR",
+      "weight": "4"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@16": {
+    "expireat": 1773640861.9646497,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "5000",
+      "type": "WRR",
+      "weight": "4"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@17": {
+    "expireat": 1773640861.9624634,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "500",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@18": {
+    "expireat": 1773640861.9660811,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "500",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@19": {
+    "expireat": 1773640861.963992,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "5000",
+      "type": "WRR",
+      "weight": "3"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@2": {
+    "expireat": 1773640861.9629185,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "600",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@20": {
+    "expireat": 1773640861.9633555,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "2000",
+      "type": "WRR",
+      "weight": "10"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@21": {
+    "expireat": 1773640861.9628923,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "16000",
+      "type": "WRR",
+      "weight": "30"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@22": {
+    "expireat": 1773640861.9631429,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "500",
+      "type": "WRR",
+      "weight": "10"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@23": {
+    "expireat": 1773640861.9657438,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "500",
+      "type": "WRR",
+      "weight": "10"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@255": {
+    "expireat": 1773640861.9635642,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@28": {
+    "expireat": 1773640861.9633894,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "100",
+      "type": "WRR",
+      "weight": "1"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@29": {
+    "expireat": 1773640861.9630547,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "200",
+      "type": "WRR",
+      "weight": "1"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@3": {
+    "expireat": 1773640861.964567,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "8000",
+      "type": "WRR",
+      "weight": "1"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@30": {
+    "expireat": 1773640861.9637005,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "5000",
+      "type": "WRR",
+      "weight": "3"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@4": {
+    "expireat": 1773640861.9653277,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "500",
+      "type": "WRR",
+      "weight": "1"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@5": {
+    "expireat": 1773640861.9658573,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "300",
+      "type": "WRR",
+      "weight": "1"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@6": {
+    "expireat": 1773640861.9644554,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "2000",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@7": {
+    "expireat": 1773640861.9646306,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "6000",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@8": {
+    "expireat": 1773640861.9638646,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "1000",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SCHEDULER|copp-scheduler-policy@9": {
+    "expireat": 1773640861.9659843,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "meter_type": "packets",
+      "pir": "300",
+      "type": "WRR",
+      "weight": "2"
+    }
+  },
+  "SNMP_SERVER_COMMUNITY|F0x42Ump1r3": {
+    "expireat": 1773640861.9632595,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "securityName": "None"
+    }
+  },
+  "SNMP_SERVER_COMMUNITY|d311n3t": {
+    "expireat": 1773640861.9636037,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "securityName": "None"
+    }
+  },
+  "SNMP_SERVER_GROUP_ACCESS|V3AdminG|Default|usm|auth-no-priv": {
+    "expireat": 1773640861.9640508,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "contextMatch": "exact",
+      "notifyView": "None",
+      "readView": "systemView",
+      "writeView": "systemView"
+    }
+  },
+  "SNMP_SERVER_GROUP_ACCESS|V3AdminG|Default|usm|auth-priv": {
+    "expireat": 1773640861.9636815,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "contextMatch": "exact",
+      "notifyView": "None",
+      "readView": "systemView",
+      "writeView": "systemView"
+    }
+  },
+  "SNMP_SERVER_GROUP_ACCESS|V3ReadOnly|Default|usm|auth-no-priv": {
+    "expireat": 1773640861.9655952,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "contextMatch": "exact",
+      "notifyView": "None",
+      "readView": "systemView",
+      "writeView": "None"
+    }
+  },
+  "SNMP_SERVER_GROUP_ACCESS|V3ReadOnly|Default|usm|auth-priv": {
+    "expireat": 1773640861.9652157,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "contextMatch": "exact",
+      "notifyView": "None",
+      "readView": "systemView",
+      "writeView": "None"
+    }
+  },
+  "SNMP_SERVER_GROUP_MEMBER|V3AdminG|V3Admin": {
+    "expireat": 1773640861.964082,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "securityModel@": "usm"
+    }
+  },
+  "SNMP_SERVER_GROUP_MEMBER|V3ReadOnly|V3User": {
+    "expireat": 1773640861.9649916,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "securityModel@": "usm"
+    }
+  },
+  "SNMP_SERVER_GROUP|V3AdminG": {
+    "expireat": 1773640861.9628382,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "SNMP_SERVER_GROUP|V3ReadOnly": {
+    "expireat": 1773640861.9647985,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "SNMP_SERVER_USER|V3Admin": {
+    "expireat": 1773640861.9631138,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "aesKey": "*****",
+      "md5Key": "*****"
+    }
+  },
+  "SNMP_SERVER_USER|V3User": {
+    "expireat": 1773640861.9632914,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "aesKey": "*****",
+      "md5Key": "*****"
+    }
+  },
+  "SNMP_SERVER_VIEW|systemView": {
+    "expireat": 1773640861.963165,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "include@": ".1"
+    }
+  },
+  "SNMP_SERVER|SYSTEM": {
+    "expireat": 1773640861.9638567,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "sysContact": "DellNOC@dell.com",
+      "sysLocation": "bayan lepas,apj,pen,DC,R4R9,SI02"
+    }
+  },
+  "SSHD_COMMON|GLOBAL": {
+    "expireat": 1773640861.9645844,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "ciphers": "aes256-ctr",
+      "hostkeyalgorithms": "rsa-sha2-256,rsa-sha2-512,ssh-rsa",
+      "kexalgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384",
+      "macs": "hmac-sha2-256,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-512-etm@openssh.com"
+    }
+  },
+  "STATIC_ROUTE|default|132.237.181.0/24": {
+    "expireat": 1773640861.963149,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "blackhole": "true"
+    }
+  },
+  "STATIC_ROUTE|mgmt|0.0.0.0/0": {
+    "expireat": 1773640861.96349,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "nexthop": "10.92.56.1"
+    }
+  },
+  "STP_PORT|Ethernet0": {
+    "expireat": 1773640861.9658966,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "global",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet1": {
+    "expireat": 1773640861.963893,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "global",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet11": {
+    "expireat": 1773640861.9630136,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "enable",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet2": {
+    "expireat": 1773640861.9654257,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "global",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet20": {
+    "expireat": 1773640861.9660196,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "global",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet21": {
+    "expireat": 1773640861.9663563,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "global",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet22": {
+    "expireat": 1773640861.9636922,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "global",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet27": {
+    "expireat": 1773640861.965475,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "global",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "false",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet3": {
+    "expireat": 1773640861.965454,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "global",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet4": {
+    "expireat": 1773640861.9656904,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "enable",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|Ethernet5": {
+    "expireat": 1773640861.9641933,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "enable",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_PORT|PortChannel100": {
+    "expireat": 1773640861.9627914,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "global",
+      "bpdu_guard": "false",
+      "bpdu_guard_do_disable": "false",
+      "enabled": "true",
+      "link_type": "auto",
+      "portfast": "false",
+      "root_guard": "false",
+      "uplink_fast": "false"
+    }
+  },
+  "STP_VLAN|Vlan1101": {
+    "expireat": 1773640861.9631293,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "max_age": "20",
+      "priority": "4096",
+      "vlanid": "1101"
+    }
+  },
+  "STP_VLAN|Vlan1102": {
+    "expireat": 1773640861.9658277,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "max_age": "20",
+      "priority": "4096",
+      "vlanid": "1102"
+    }
+  },
+  "STP_VLAN|Vlan1120": {
+    "expireat": 1773640861.9657047,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "max_age": "20",
+      "priority": "4096",
+      "vlanid": "1120"
+    }
+  },
+  "STP_VLAN|Vlan2000": {
+    "expireat": 1773640861.962474,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "max_age": "20",
+      "priority": "4096",
+      "vlanid": "2000"
+    }
+  },
+  "STP_VLAN|Vlan677": {
+    "expireat": 1773640861.965653,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "max_age": "20",
+      "priority": "4096",
+      "vlanid": "677"
+    }
+  },
+  "STP_VLAN|Vlan678": {
+    "expireat": 1773640861.963951,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "max_age": "20",
+      "priority": "4096",
+      "vlanid": "678"
+    }
+  },
+  "STP_VLAN|Vlan802": {
+    "expireat": 1773640861.9659061,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "max_age": "20",
+      "priority": "4096",
+      "vlanid": "802"
+    }
+  },
+  "STP_VLAN|Vlan803": {
+    "expireat": 1773640861.963925,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "max_age": "20",
+      "priority": "4096",
+      "vlanid": "803"
+    }
+  },
+  "STP_VLAN|Vlan809": {
+    "expireat": 1773640861.9630756,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "max_age": "20",
+      "priority": "4096",
+      "vlanid": "809"
+    }
+  },
+  "STP|GLOBAL": {
+    "expireat": 1773640861.962563,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "bpdu_filter": "false",
+      "forward_delay": "15",
+      "hello_time": "2",
+      "loop_guard": "false",
+      "max_age": "20",
+      "mode": "rpvst",
+      "priority": "4096",
+      "rootguard_timeout": "30"
+    }
+  },
+  "SWITCH|switch": {
+    "expireat": 1773640861.9634962,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "fdb_aging_time": "600"
+    }
+  },
+  "SYSLOG_SERVER|10.99.93.46": {
+    "expireat": 1773640861.965443,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "message-type": "log",
+      "protocol": "UDP",
+      "remote-port": "514",
+      "severity": "notice",
+      "src_intf": "eth0",
+      "vrf_name": "mgmt"
+    }
+  },
+  "TACPLUS_SERVER|10.24.248.81": {
+    "expireat": 1773640861.9628325,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "passkey": "*****",
+      "tcp_port": "49",
+      "vrf": "mgmt"
+    }
+  },
+  "TACPLUS_SERVER|10.99.5.90": {
+    "expireat": 1773640861.965524,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "passkey": "*****",
+      "tcp_port": "49",
+      "vrf": "mgmt"
+    }
+  },
+  "TACPLUS|global": {
+    "expireat": 1773640861.964575,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "auth_type": "pap",
+      "src_intf": "eth0",
+      "timeout": "5"
+    }
+  },
+  "VERSIONS|DATABASE": {
+    "expireat": 1773640861.9640205,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "VERSION": "version_4_5_3"
+    }
+  },
+  "VLAN_INTERFACE|Vlan1120": {
+    "expireat": 1773640861.9633477,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_INTERFACE|Vlan1120|10.90.30.177/28": {
+    "expireat": 1773640861.9631014,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_INTERFACE|Vlan2000": {
+    "expireat": 1773640861.9650044,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_INTERFACE|Vlan2000|10.90.30.159/31": {
+    "expireat": 1773640861.9633412,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_INTERFACE|Vlan802": {
+    "expireat": 1773640861.9638205,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_INTERFACE|Vlan802|10.99.100.132/28": {
+    "expireat": 1773640861.9639716,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_INTERFACE|Vlan803": {
+    "expireat": 1773640861.9638708,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_INTERFACE|Vlan803|10.92.30.67/29": {
+    "expireat": 1773640861.9661493,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_INTERFACE|Vlan809": {
+    "expireat": 1773640861.963107,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_INTERFACE|Vlan809|10.92.30.235/29": {
+    "expireat": 1773640861.962904,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "NULL": "NULL"
+    }
+  },
+  "VLAN_MEMBER|Vlan1101|Ethernet0": {
+    "expireat": 1773640861.962532,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan1101|Ethernet2": {
+    "expireat": 1773640861.9627504,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan1101|PortChannel100": {
+    "expireat": 1773640861.962969,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan1102|Ethernet0": {
+    "expireat": 1773640861.9633715,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan1102|Ethernet2": {
+    "expireat": 1773640861.9648051,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan1102|Ethernet27": {
+    "expireat": 1773640861.9660726,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "untagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan1102|PortChannel100": {
+    "expireat": 1773640861.963644,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan1120|Ethernet1": {
+    "expireat": 1773640861.964322,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "untagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan1120|Ethernet3": {
+    "expireat": 1773640861.9624805,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "untagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan2000|PortChannel100": {
+    "expireat": 1773640861.9648116,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan677|Ethernet0": {
+    "expireat": 1773640861.965403,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan677|Ethernet2": {
+    "expireat": 1773640861.962954,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan677|Ethernet4": {
+    "expireat": 1773640861.963066,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan677|Ethernet5": {
+    "expireat": 1773640861.963978,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan677|PortChannel100": {
+    "expireat": 1773640861.9658022,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan678|Ethernet11": {
+    "expireat": 1773640861.9643629,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "untagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan678|Ethernet4": {
+    "expireat": 1773640861.965433,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan678|Ethernet5": {
+    "expireat": 1773640861.9657948,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan678|PortChannel100": {
+    "expireat": 1773640861.9636633,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan802|Ethernet20": {
+    "expireat": 1773640861.9651372,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "untagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan802|PortChannel100": {
+    "expireat": 1773640861.9647777,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan803|Ethernet22": {
+    "expireat": 1773640861.9637947,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "untagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan803|PortChannel100": {
+    "expireat": 1773640861.9637673,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan809|Ethernet21": {
+    "expireat": 1773640861.9636226,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "untagged"
+    }
+  },
+  "VLAN_MEMBER|Vlan809|PortChannel100": {
+    "expireat": 1773640861.9632652,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "tagging_mode": "tagged"
+    }
+  },
+  "VLAN|Vlan1101": {
+    "expireat": 1773640861.9660902,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autostate": "enable",
+      "description": "TIME::WAN::10000000::Circuit-ID:ME002807::",
+      "members@": "PortChannel100,Ethernet0,Ethernet2",
+      "vlanid": "1101"
+    }
+  },
+  "VLAN|Vlan1102": {
+    "expireat": 1773640861.9629629,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autostate": "enable",
+      "description": "TM::WAN::10000000::Circuit-ID::LD1030249315::",
+      "members@": "Ethernet0,PortChannel100,Ethernet2,Ethernet27",
+      "vlanid": "1102"
+    }
+  },
+  "VLAN|Vlan1120": {
+    "expireat": 1773640861.9638498,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autostate": "enable",
+      "description": "P2P::MYBLE01-DC-0409-SI02-p2p-VOS40/41::",
+      "members@": "Ethernet1,Ethernet3",
+      "vlanid": "1120"
+    }
+  },
+  "VLAN|Vlan2000": {
+    "expireat": 1773640861.9656205,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autostate": "enable",
+      "description": "P2P::MYBLE01-DC-0408-SI01-p2p-SI02::",
+      "members@": "PortChannel100",
+      "vlanid": "2000"
+    }
+  },
+  "VLAN|Vlan677": {
+    "expireat": 1773640861.962801,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autostate": "enable",
+      "description": "dia1-TM",
+      "members@": "Ethernet5,Ethernet4,PortChannel100,Ethernet0,Ethernet2",
+      "vlanid": "677"
+    }
+  },
+  "VLAN|Vlan678": {
+    "expireat": 1773640861.9637437,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autostate": "enable",
+      "description": "dia2-TIME",
+      "members@": "Ethernet4,Ethernet5,PortChannel100,Ethernet11",
+      "vlanid": "678"
+    }
+  },
+  "VLAN|Vlan802": {
+    "expireat": 1773640861.9651105,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autostate": "enable",
+      "description": "VLN::P2P-Corp-Firewall::",
+      "members@": "PortChannel100,Ethernet20",
+      "mtu": "1500",
+      "vlanid": "802"
+    }
+  },
+  "VLAN|Vlan803": {
+    "expireat": 1773640861.9660294,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autostate": "enable",
+      "description": "VLN::P2P-edu-Firewall::",
+      "members@": "PortChannel100,Ethernet22",
+      "mtu": "1500",
+      "vlanid": "803"
+    }
+  },
+  "VLAN|Vlan809": {
+    "expireat": 1773640861.9638045,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin_status": "up",
+      "autostate": "enable",
+      "description": "VLN::P2P-Default-Firewall::",
+      "members@": "PortChannel100,Ethernet21",
+      "mtu": "1500",
+      "vlanid": "809"
+    }
+  },
+  "VRF|default": {
+    "expireat": 1773640861.9624493,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "enabled": "true"
+    }
+  },
+  "VRRP|Vlan803|83": {
+    "expireat": 1773640861.962934,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "pre_empt": "True",
+      "priority": "105",
+      "vip@": "10.92.30.65",
+      "vrid": "83"
+    }
+  },
+  "ZTP|config": {
+    "expireat": 1773640861.9628847,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "admin-mode": "false"
+    }
+  }
+}

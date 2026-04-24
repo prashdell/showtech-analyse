@@ -1,0 +1,840 @@
+****************************************************************************
+coppmgrd techsupport dump begin at Mon 16 Mar 2026 06:07:41 AM GMT
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c COPPMGRD -e show system internal coppmgr group
+--------------------------------------------------------------------
+------------ COPP Group List ------------ 
+Group       :copp-system-arp
+In use      :true           
+Trap Keys   :copp-system-arp
+Trap IDs    :arp_req,arp_resp,neigh_discovery
+Trap Action :copy           
+Queue       :10             
+Meter Type  :packets        
+Priority    :10             
+Mode        :sr_tcm         
+Color       :               
+CBS         :3000           
+CIR         :3000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-bfd
+In use      :true           
+Trap Keys   :copp-system-bfd
+Trap IDs    :bfd,bfdv6      
+Trap Action :trap           
+Queue       :20             
+Meter Type  :packets        
+Priority    :20             
+Mode        :sr_tcm         
+Color       :               
+CBS         :2000           
+CIR         :2000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-bgp
+In use      :true           
+Trap Keys   :copp-system-bgp
+Trap IDs    :bgp,bgpv6      
+Trap Action :trap           
+Queue       :14             
+Meter Type  :packets        
+Priority    :14             
+Mode        :sr_tcm         
+Color       :               
+CBS         :10000          
+CIR         :10000          
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-cdp
+In use      :true           
+Trap Keys   :copp-system-cdp
+Trap IDs    :cdp            
+Trap Action :drop           
+Queue       :0              
+Meter Type  :packets        
+Priority    :0              
+Mode        :sr_tcm         
+Color       :               
+CBS         :100            
+CIR         :100            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-dhcp
+In use      :false          
+Trap Keys   :               
+Trap IDs    :               
+Trap Action :trap           
+Queue       :9              
+Meter Type  :packets        
+Priority    :9              
+Mode        :sr_tcm         
+Color       :               
+CBS         :300            
+CIR         :300            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-iccp
+In use      :true           
+Trap Keys   :copp-system-iccp
+Trap IDs    :iccp           
+Trap Action :trap           
+Queue       :16             
+Meter Type  :packets        
+Priority    :16             
+Mode        :sr_tcm         
+Color       :               
+CBS         :5000           
+CIR         :5000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-icmp
+In use      :true           
+Trap Keys   :copp-system-icmp
+Trap IDs    :icmp,icmpv6    
+Trap Action :trap           
+Queue       :8              
+Meter Type  :packets        
+Priority    :8              
+Mode        :sr_tcm         
+Color       :               
+CBS         :1000           
+CIR         :1000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-igmp
+In use      :true           
+Trap Keys   :copp-system-igmp
+Trap IDs    :igmp_query     
+Trap Action :trap           
+Queue       :12             
+Meter Type  :packets        
+Priority    :12             
+Mode        :sr_tcm         
+Color       :               
+CBS         :2000           
+CIR         :2000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-ip2me
+In use      :true           
+Trap Keys   :copp-system-ip2me
+Trap IDs    :ip2me          
+Trap Action :trap           
+Queue       :7              
+Meter Type  :packets        
+Priority    :7              
+Mode        :sr_tcm         
+Color       :               
+CBS         :6000           
+CIR         :6000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-lacp
+In use      :true           
+Trap Keys   :copp-system-lacp
+Trap IDs    :lacp           
+Trap Action :trap           
+Queue       :23             
+Meter Type  :packets        
+Priority    :23             
+Mode        :sr_tcm         
+Color       :               
+CBS         :500            
+CIR         :500            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-lldp
+In use      :true           
+Trap Keys   :copp-system-lldp
+Trap IDs    :lldp           
+Trap Action :trap           
+Queue       :18             
+Meter Type  :packets        
+Priority    :18             
+Mode        :sr_tcm         
+Color       :               
+CBS         :500            
+CIR         :500            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-mtu
+In use      :true           
+Trap Keys   :copp-system-mtu
+Trap IDs    :l3_mtu_error   
+Trap Action :trap           
+Queue       :4              
+Meter Type  :packets        
+Priority    :4              
+Mode        :sr_tcm         
+Color       :               
+CBS         :500            
+CIR         :500            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-nat
+In use      :true           
+Trap Keys   :copp-system-nat
+Trap IDs    :src_nat_miss,dest_nat_miss
+Trap Action :trap           
+Queue       :5              
+Meter Type  :packets        
+Priority    :5              
+Mode        :sr_tcm         
+Color       :               
+CBS         :300            
+CIR         :300            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-ospf
+In use      :true           
+Trap Keys   :copp-system-ospf
+Trap IDs    :ospf,ospfv6    
+Trap Action :copy           
+Queue       :15             
+Meter Type  :packets        
+Priority    :15             
+Mode        :sr_tcm         
+Color       :               
+CBS         :5000           
+CIR         :5000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-pim
+In use      :true           
+Trap Keys   :copp-system-pim
+Trap IDs    :pim            
+Trap Action :trap           
+Queue       :13             
+Meter Type  :packets        
+Priority    :13             
+Mode        :sr_tcm         
+Color       :               
+CBS         :5000           
+CIR         :5000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-ptp
+In use      :false          
+Trap Keys   :               
+Trap IDs    :               
+Trap Action :trap           
+Queue       :30             
+Meter Type  :packets        
+Priority    :30             
+Mode        :sr_tcm         
+Color       :               
+CBS         :5000           
+CIR         :5000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-sflow
+In use      :false          
+Trap Keys   :               
+Trap IDs    :               
+Trap Action :trap           
+Queue       :3              
+Meter Type  :packets        
+Priority    :3              
+Mode        :sr_tcm         
+Color       :               
+CBS         :8000           
+CIR         :8000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-stp
+In use      :true           
+Trap Keys   :copp-system-stp
+Trap IDs    :stp,pvrst      
+Trap Action :trap           
+Queue       :21             
+Meter Type  :packets        
+Priority    :21             
+Mode        :sr_tcm         
+Color       :               
+CBS         :16000          
+CIR         :16000          
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-subnet
+In use      :true           
+Trap Keys   :copp-system-subnet
+Trap IDs    :subnet         
+Trap Action :trap           
+Queue       :6              
+Meter Type  :packets        
+Priority    :6              
+Mode        :sr_tcm         
+Color       :               
+CBS         :2000           
+CIR         :2000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :forward        
+
+ExcludeList :               
+
+Group       :copp-system-suppress
+In use      :true           
+Trap Keys   :copp-system-suppress
+Trap IDs    :arp_suppress,nd_suppress
+Trap Action :trap           
+Queue       :11             
+Meter Type  :packets        
+Priority    :11             
+Mode        :sr_tcm         
+Color       :               
+CBS         :3000           
+CIR         :3000           
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-ttl
+In use      :true           
+Trap Keys   :copp-system-ttl
+Trap IDs    :ttl_error      
+Trap Action :trap           
+Queue       :0              
+Meter Type  :packets        
+Priority    :0              
+Mode        :sr_tcm         
+Color       :               
+CBS         :100            
+CIR         :100            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-udld
+In use      :true           
+Trap Keys   :copp-system-udld
+Trap IDs    :udld           
+Trap Action :trap           
+Queue       :22             
+Meter Type  :packets        
+Priority    :22             
+Mode        :sr_tcm         
+Color       :               
+CBS         :500            
+CIR         :500            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :copp-system-vrrp
+In use      :true           
+Trap Keys   :copp-system-vrrp
+Trap IDs    :vrrp,vrrpv6    
+Trap Action :trap           
+Queue       :17             
+Meter Type  :packets        
+Priority    :17             
+Mode        :sr_tcm         
+Color       :               
+CBS         :500            
+CIR         :500            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+Group       :default        
+In use      :true           
+Trap Keys   :               
+Trap IDs    :               
+Trap Action :               
+Queue       :0              
+Meter Type  :packets        
+Priority    :               
+Mode        :sr_tcm         
+Color       :               
+CBS         :100            
+CIR         :100            
+PBS         :               
+PIR         :               
+GreenAction :               
+YellowAction:               
+RedAction   :drop           
+
+ExcludeList :               
+
+*************** Profiling data ***************
+End to End Execution time: 103.84 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.486s
+user	0m0.261s
+sys	0m0.086s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c COPPMGRD -e show system internal coppmgr trap
+--------------------------------------------------------------------
+------------ COPP Trap List ------------ 
+Trap        :copp-system-arp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :arp_req,arp_resp,neigh_discovery
+Group       :copp-system-arp
+
+Trap        :copp-system-bfd
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :bfd,bfdv6      
+Group       :copp-system-bfd
+
+Trap        :copp-system-bgp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :bgp,bgpv6      
+Group       :copp-system-bgp
+
+Trap        :copp-system-cdp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :cdp            
+Group       :copp-system-cdp
+
+Trap        :copp-system-dhcp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :dhcp           
+Group       :copp-system-dhcp
+
+Trap        :copp-system-dhcpl2
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :dhcp_l2        
+Group       :copp-system-dhcp
+
+Trap        :copp-system-dhcpv6
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :dhcpv6         
+Group       :copp-system-dhcp
+
+Trap        :copp-system-dhcpv6l2
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :dhcpv6_l2      
+Group       :copp-system-dhcp
+
+Trap        :copp-system-iccp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :iccp           
+Group       :copp-system-iccp
+
+Trap        :copp-system-icmp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :icmp,icmpv6    
+Group       :copp-system-icmp
+
+Trap        :copp-system-igmp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :igmp_query     
+Group       :copp-system-igmp
+
+Trap        :copp-system-ip2me
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :ip2me          
+Group       :copp-system-ip2me
+
+Trap        :copp-system-lacp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :lacp           
+Group       :copp-system-lacp
+
+Trap        :copp-system-lldp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :lldp           
+Group       :copp-system-lldp
+
+Trap        :copp-system-mtu
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :l3_mtu_error   
+Group       :copp-system-mtu
+
+Trap        :copp-system-nat
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :src_nat_miss,dest_nat_miss
+Group       :copp-system-nat
+
+Trap        :copp-system-ospf
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :ospf,ospfv6    
+Group       :copp-system-ospf
+
+Trap        :copp-system-pim
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :pim            
+Group       :copp-system-pim
+
+Trap        :copp-system-ptp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :ptp            
+Group       :copp-system-ptp
+
+Trap        :copp-system-sflow
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :sample_packet  
+Group       :copp-system-sflow
+
+Trap        :copp-system-stp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :stp,pvrst      
+Group       :copp-system-stp
+
+Trap        :copp-system-subnet
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :subnet         
+Group       :copp-system-subnet
+
+Trap        :copp-system-suppress
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :arp_suppress,nd_suppress
+Group       :copp-system-suppress
+
+Trap        :copp-system-ttl
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :ttl_error      
+Group       :copp-system-ttl
+
+Trap        :copp-system-udld
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :udld           
+Group       :copp-system-udld
+
+Trap        :copp-system-vrrp
+ID Cfg      :true           
+Group Cfg   :true           
+IDs         :vrrp,vrrpv6    
+Group       :copp-system-vrrp
+
+Trap        :default        
+ID Cfg      :false          
+Group Cfg   :true           
+IDs         :               
+Group       :default        
+
+*************** Profiling data ***************
+End to End Execution time: 102.81 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.459s
+user	0m0.268s
+sys	0m0.080s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c COPPMGRD -e show system internal coppmgr feature
+--------------------------------------------------------------------
+------------ COPP Feature List ------------ 
+Feature      :arp            
+State        :enabled        
+Copp Trap    :copp-system-arp
+Copp Group   :copp-system-arp
+
+Feature      :arp-suppress   
+State        :enabled        
+Copp Trap    :copp-system-suppress
+Copp Group   :copp-system-suppress
+
+Feature      :bfd            
+State        :enabled        
+Copp Trap    :copp-system-bfd
+Copp Group   :copp-system-bfd
+
+Feature      :bgp            
+State        :enabled        
+Copp Trap    :copp-system-bgp
+Copp Group   :copp-system-bgp
+
+Feature      :dhcp           
+State        :disabled       
+Copp Trap    :copp-system-dhcp
+Copp Group   :copp-system-dhcp
+
+Feature      :dhcpl2         
+State        :disabled       
+Copp Trap    :copp-system-dhcpl2
+Copp Group   :copp-system-dhcp
+
+Feature      :dhcpv6         
+State        :disabled       
+Copp Trap    :copp-system-dhcpv6
+Copp Group   :copp-system-dhcp
+
+Feature      :dhcpv6l2       
+State        :disabled       
+Copp Trap    :copp-system-dhcpv6l2
+Copp Group   :copp-system-dhcp
+
+Feature      :eapol          
+State        :enabled        
+Copp Trap    :               
+Copp Group   :               
+
+Feature      :iccp           
+State        :enabled        
+Copp Trap    :copp-system-iccp
+Copp Group   :copp-system-iccp
+
+Feature      :icmp           
+State        :enabled        
+Copp Trap    :copp-system-icmp
+Copp Group   :copp-system-icmp
+
+Feature      :igmp           
+State        :enabled        
+Copp Trap    :copp-system-igmp
+Copp Group   :copp-system-igmp
+
+Feature      :ip2me          
+State        :enabled        
+Copp Trap    :copp-system-ip2me
+Copp Group   :copp-system-ip2me
+
+Feature      :ipmc           
+State        :disabled       
+Copp Trap    :               
+Copp Group   :               
+
+Feature      :ipmc-unknown   
+State        :disabled       
+Copp Trap    :               
+Copp Group   :               
+
+Feature      :lacp           
+State        :enabled        
+Copp Trap    :copp-system-lacp
+Copp Group   :copp-system-lacp
+
+Feature      :lldp           
+State        :enabled        
+Copp Trap    :copp-system-lldp
+Copp Group   :copp-system-lldp
+
+Feature      :mtu            
+State        :enabled        
+Copp Trap    :copp-system-mtu
+Copp Group   :copp-system-mtu
+
+Feature      :nat            
+State        :enabled        
+Copp Trap    :copp-system-nat
+Copp Group   :copp-system-nat
+
+Feature      :ospf           
+State        :enabled        
+Copp Trap    :copp-system-ospf
+Copp Group   :copp-system-ospf
+
+Feature      :pim            
+State        :enabled        
+Copp Trap    :copp-system-pim
+Copp Group   :copp-system-pim
+
+Feature      :ptp            
+State        :disabled       
+Copp Trap    :copp-system-ptp
+Copp Group   :copp-system-ptp
+
+Feature      :sflow          
+State        :disabled       
+Copp Trap    :copp-system-sflow
+Copp Group   :copp-system-sflow
+
+Feature      :stp            
+State        :enabled        
+Copp Trap    :copp-system-stp
+Copp Group   :copp-system-stp
+
+Feature      :subnet         
+State        :enabled        
+Copp Trap    :copp-system-subnet
+Copp Group   :copp-system-subnet
+
+Feature      :ttl            
+State        :enabled        
+Copp Trap    :copp-system-ttl
+Copp Group   :copp-system-ttl
+
+Feature      :udld           
+State        :enabled        
+Copp Trap    :copp-system-udld
+Copp Group   :copp-system-udld
+
+Feature      :vrrp           
+State        :enabled        
+Copp Trap    :copp-system-vrrp
+Copp Group   :copp-system-vrrp
+
+*************** Profiling data ***************
+End to End Execution time: 102.73 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.460s
+user	0m0.290s
+sys	0m0.051s
+
+
+
+
+
+****************************************************************************
+coppmgrd techsupport dump ended at Mon 16 Mar 2026 06:07:42 AM GMT
+****************************************************************************

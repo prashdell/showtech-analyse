@@ -1,0 +1,155 @@
+{
+  "customer_patterns": {
+    "Data_Center": {
+      "characteristics": [
+        "High port density",
+        "Low latency requirements",
+        "Automation focus"
+      ],
+      "common_files": [
+        "show interfaces",
+        "docker stats",
+        "perf"
+      ],
+      "typical_issues": [
+        "Interface flapping",
+        "Memory exhaustion",
+        "Performance degradation"
+      ],
+      "resolution_patterns": [
+        "Automated recovery",
+        "Performance tuning",
+        "Capacity planning"
+      ]
+    },
+    "Enterprise": {
+      "characteristics": [
+        "Mixed port speeds",
+        "Security focus",
+        "User experience priority"
+      ],
+      "common_files": [
+        "show vlan",
+        "auth.log",
+        "show interfaces"
+      ],
+      "typical_issues": [
+        "VLAN misconfiguration",
+        "Authentication issues",
+        "User connectivity"
+      ],
+      "resolution_patterns": [
+        "Configuration review",
+        "Security audit",
+        "User training"
+      ]
+    },
+    "Service_Provider": {
+      "characteristics": [
+        "High availability",
+        "Route scale",
+        "Customer isolation"
+      ],
+      "common_files": [
+        "show ip bgp",
+        "show ip route",
+        "core"
+      ],
+      "typical_issues": [
+        "BGP instability",
+        "Route leaks",
+        "Core dumps"
+      ],
+      "resolution_patterns": [
+        "Route optimization",
+        "Hardware upgrade",
+        "Software patches"
+      ]
+    }
+  },
+  "platform_patterns": {
+    "Dell": {
+      "characteristics": [
+        "Broadcom ASICs",
+        "Enterprise features",
+        "Dell support"
+      ],
+      "common_files": [
+        "environment",
+        "sensors",
+        "ethtool"
+      ],
+      "known_issues": [
+        "Temperature management",
+        "Driver compatibility"
+      ],
+      "optimization_tips": [
+        "Firmware updates",
+        "Thermal monitoring"
+      ]
+    },
+    "Mellanox": {
+      "characteristics": [
+        "NVIDIA/MLNX ASICs",
+        "High performance",
+        "Innovative features"
+      ],
+      "common_files": [
+        "sensors",
+        "lspci",
+        "perf"
+      ],
+      "known_issues": [
+        "Driver stability",
+        "Feature compatibility"
+      ],
+      "optimization_tips": [
+        "Driver tuning",
+        "Performance optimization"
+      ]
+    }
+  },
+  "temporal_patterns": {
+    "Q1": {
+      "characteristics": [
+        "Winter maintenance",
+        "Higher error rates"
+      ],
+      "common_issues": [
+        "Maintenance windows",
+        "Cold start issues"
+      ],
+      "recommendations": [
+        "Pre-maintenance checks",
+        "Gradual rollouts"
+      ]
+    },
+    "Q2-Q3": {
+      "characteristics": [
+        "Standard operations",
+        "Stable performance"
+      ],
+      "common_issues": [
+        "Normal operational issues"
+      ],
+      "recommendations": [
+        "Routine monitoring",
+        "Preventive maintenance"
+      ]
+    },
+    "Q4": {
+      "characteristics": [
+        "Year-end stability",
+        "Optimized configurations"
+      ],
+      "common_issues": [
+        "Capacity planning",
+        "Budget constraints"
+      ],
+      "recommendations": [
+        "Performance tuning",
+        "Capacity upgrades"
+      ]
+    }
+  }
+}

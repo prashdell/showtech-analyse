@@ -1,0 +1,1542 @@
+-------------------------------------------------------------------------------
+LLDP statistics:
+-------------------------------------------------------------------------------
+Interface:    eth0
+  Transmitted:  23155
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     45397
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet64
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet72
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet24
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet25
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet26
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet27
+  Transmitted:  6
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     3
+  Discarded:    0
+  Unrecognized: 1
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      1
+-------------------------------------------------------------------------------
+Interface:    Ethernet28
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet29
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet30
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet31
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet32
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet33
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet34
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet35
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet68
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet76
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet0
+  Transmitted:  23155
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     46310
+  Discarded:    0
+  Unrecognized: 1
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet1
+  Transmitted:  23160
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     69473
+  Discarded:    0
+  Unrecognized: 2
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     2
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet2
+  Transmitted:  23159
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     46314
+  Discarded:    0
+  Unrecognized: 1
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet3
+  Transmitted:  23160
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     69474
+  Discarded:    0
+  Unrecognized: 2
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     2
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet4
+  Transmitted:  23157
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     46312
+  Discarded:    0
+  Unrecognized: 1
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet5
+  Transmitted:  23157
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     46312
+  Discarded:    0
+  Unrecognized: 1
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet6
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet7
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet8
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet9
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet10
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet11
+  Transmitted:  23159
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet60
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet56
+  Transmitted:  23160
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     23159
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet12
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet13
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet14
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet15
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet16
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet17
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet18
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet19
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet20
+  Transmitted:  23159
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet21
+  Transmitted:  23134
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet22
+  Transmitted:  23159
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet23
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet36
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet37
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet38
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet39
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet40
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet41
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet42
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet43
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet44
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet45
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet46
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet47
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet48
+  Transmitted:  23158
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     23159
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet52
+  Transmitted:  0
+  tx pfc:       0
+  tx pfc last transmitted: 0
+  tx pfc err:   0
+  tx ets conf:  0
+  tx ets conf last transmitted: 0
+  tx ets conf err: 0
+  tx ets reco:  0
+  tx reco last transmitted: 0
+  tx ets reco err: 0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  rx pfc:       0
+  rx pfc last received: 0
+  rx pfc err:   0
+  rx ets conf:  0
+  rx ets conf last received: 0
+  rx ets conf err: 0
+  rx ets reco:  0
+  rx ets reco last received: 0
+  rx ets reco err: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------

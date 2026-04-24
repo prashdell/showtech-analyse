@@ -1,0 +1,13 @@
+[Unit]
+Description=Critical Memory Threshold Monitoring Service
+After=rc-local.service
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/local/bin/critical-monitoring.sh
+KillSignal=SIGKILL
+SuccessExitStatus=SIGKILL
+
+[Install]
+WantedBy=multi-user.target

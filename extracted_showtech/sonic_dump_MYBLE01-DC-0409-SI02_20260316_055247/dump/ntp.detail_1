@@ -1,0 +1,149 @@
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -p -n
+No association ID's returned
+Command: sudo /usr/bin/ip vrf exec mgmt ntpstat
+unsynchronised
+   polling server every 8 s
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c assoc 
+No association ID's returned
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c rv
+associd=0 status=c016 leap_alarm, sync_unspec, 1 event, restart,
+version="ntpd 4.2.8p15@1.3728-o Mon Sep  9 17:15:35 UTC 2019 (1)",
+processor="x86_64", system="Linux/5.10.0-35-amd64", leap=11, stratum=16,
+precision=-23, rootdelay=0.000, rootdisp=0.000, refid=.,
+reftime=(no time),
+clock=ed6219c4.1774550f  Mon, Mar 16 2026  5:55:16.091, peer=0, tc=3,
+mintc=3, offset=+0.000000, frequency=+0.000, sys_jitter=0.000000,
+clk_jitter=0.000, clk_wander=0.000
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c version
+ntpq 4.2.8p15@1.3728-o Mon Sep  9 17:15:35 UTC 2019 (1)
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c sysinfo
+associd=0 status=c016 leap_alarm, sync_unspec, 1 event, restart,
+system peer:        0.0.0.0:0
+system peer mode:   unspec
+leap indicator:     11
+stratum:            16
+log2 precision:     -23
+root delay:         0.000
+root dispersion:    0.000
+reference ID:       .
+reference time:     (no time)
+system jitter:      0.000000
+clock jitter:       0.000
+clock wander:       0.000
+broadcast delay:    -50.000
+symm. auth. delay:  0.000
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c sysstats
+uptime:                 694443
+sysstats reset:         694443
+packets received:       105
+current version:        0
+older version:          0
+bad length or format:   0
+authentication failed:  0
+declined:               0
+restricted:             0
+rate limited:           0
+KoD responses:          0
+processed for time:     0
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c iostats
+time since reset:       694444
+receive buffers:        64
+free receive buffers:   63
+used receive buffers:   0
+low water refills:      1
+dropped packets:        0
+ignored packets:        0
+received packets:       106
+packets sent:           105
+packet send failures:   0
+input wakeups:          716952
+useful input wakeups:   22509
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c authinfo
+time since reset:  694444
+stored keys:       1
+free keys:         0
+key lookups:       0
+keys not found:    0
+uncached keys:     0
+expired keys:      0
+encryptions:       0
+decryptions:       0
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c assoc 
+No association ID's returned
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c rv
+associd=0 status=c016 leap_alarm, sync_unspec, 1 event, restart,
+version="ntpd 4.2.8p15@1.3728-o Mon Sep  9 17:15:35 UTC 2019 (1)",
+processor="x86_64", system="Linux/5.10.0-35-amd64", leap=11, stratum=16,
+precision=-23, rootdelay=0.000, rootdisp=0.000, refid=.,
+reftime=(no time),
+clock=ed6219c7.529543fa  Mon, Mar 16 2026  5:55:19.322, peer=0, tc=3,
+mintc=3, offset=+0.000000, frequency=+0.000, sys_jitter=0.000000,
+clk_jitter=0.000, clk_wander=0.000
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c version
+ntpq 4.2.8p15@1.3728-o Mon Sep  9 17:15:35 UTC 2019 (1)
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c sysinfo
+associd=0 status=c016 leap_alarm, sync_unspec, 1 event, restart,
+system peer:        0.0.0.0:0
+system peer mode:   unspec
+leap indicator:     11
+stratum:            16
+log2 precision:     -23
+root delay:         0.000
+root dispersion:    0.000
+reference ID:       .
+reference time:     (no time)
+system jitter:      0.000000
+clock jitter:       0.000
+clock wander:       0.000
+broadcast delay:    -50.000
+symm. auth. delay:  0.000
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c sysstats
+uptime:                 694446
+sysstats reset:         694446
+packets received:       112
+current version:        0
+older version:          0
+bad length or format:   0
+authentication failed:  0
+declined:               0
+restricted:             0
+rate limited:           0
+KoD responses:          0
+processed for time:     0
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c iostats
+time since reset:       694447
+receive buffers:        64
+free receive buffers:   63
+used receive buffers:   0
+low water refills:      1
+dropped packets:        0
+ignored packets:        0
+received packets:       113
+packets sent:           112
+packet send failures:   0
+input wakeups:          716962
+useful input wakeups:   22516
+
+Command: sudo /usr/bin/ip vrf exec mgmt ntpq -n -c authinfo
+time since reset:  694447
+stored keys:       1
+free keys:         0
+key lookups:       0
+keys not found:    0
+uncached keys:     0
+expired keys:      0
+encryptions:       0
+decryptions:       0

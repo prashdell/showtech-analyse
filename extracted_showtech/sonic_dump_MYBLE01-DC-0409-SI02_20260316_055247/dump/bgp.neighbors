@@ -1,0 +1,437 @@
+
+Instance default:
+BGP neighbor is 10.90.30.178, remote AS 3614, local AS 4246732825, external link
+ Description: MYBLE01VOS40
+ Member of peer-group eBGP-vCPE for session parameters
+  BGP version 4, remote router ID 10.90.56.156, local router ID 10.90.30.159
+  BGP state = Established, up for 4d17h41m
+  Last read 00:00:04, Last write 00:00:03
+  Hold time is 90, keepalive interval is 30 seconds
+  Neighbor capabilities:
+    4 Byte AS: advertised and received
+    Extended Message: advertised and received
+    AddPath:
+      IPv4 Unicast: RX advertised
+    Long-lived Graceful Restart: advertised
+    Route refresh: advertised and received(old & new)
+    Enhanced Route Refresh: advertised and received
+    Address Family IPv4 Unicast: advertised and received
+    Hostname Capability: advertised (name: MYBLE01-DC-0409-SI02,domain name: n/a) not received
+    Graceful Restart Capability: advertised
+  Graceful restart information:
+    Local GR Mode: Helper*
+    Remote GR Mode: Disable
+    R bit: False
+    Timers:
+      Configured Restart Time(sec): 300
+      Received Restart Time(sec): 0
+  Message statistics:
+    Inq depth is 0
+    Outq depth is 0
+                         Sent       Rcvd
+    Opens:                  3          3
+    Notifications:          4          0
+    Updates:              105         71
+    Keepalives:         23089      26514
+    Route Refresh:          0          0
+    Capability:             0          0
+    Total:              23201      26588
+  Minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  eBGP-vCPE peer-group member
+  Update group 4, subgroup 19
+  Packet Queue length 0
+  Inbound soft reconfiguration allowed
+  Community attribute sent to this neighbor(extended)
+  1 accepted prefixes
+
+  Connections established 3; dropped 2
+  Last reset 4d18h14m,  BFD down received
+Local host: 10.90.30.177, Local port: 38966
+Foreign host: 10.90.30.178, Foreign port: 179
+Nexthop: 10.90.30.177
+Nexthop global: ::
+Nexthop local: ::
+Nexthop intf: Vlan1120
+BGP connection: shared network
+BGP Connect Retry Timer in Seconds: 30
+Estimated round trip time: 2 ms
+Read thread: on  Write thread: on  FD used: 26
+
+  BFD: Type: single hop
+  Detect Multiplier: 3, Min Rx interval: 300, Min Tx interval: 300
+  Status: Up, Last update: 4:17:41:33
+
+BGP neighbor is 10.90.30.179, remote AS 3614, local AS 4246732825, external link
+ Description: MYBLE01VOS41
+ Member of peer-group eBGP-vCPE for session parameters
+  BGP version 4, remote router ID 10.90.56.157, local router ID 10.90.30.159
+  BGP state = Established, up for 4d18h55m
+  Last read 00:00:24, Last write 00:00:01
+  Hold time is 90, keepalive interval is 30 seconds
+  Neighbor capabilities:
+    4 Byte AS: advertised and received
+    Extended Message: advertised and received
+    AddPath:
+      IPv4 Unicast: RX advertised
+    Long-lived Graceful Restart: advertised
+    Route refresh: advertised and received(old & new)
+    Enhanced Route Refresh: advertised and received
+    Address Family IPv4 Unicast: advertised and received
+    Hostname Capability: advertised (name: MYBLE01-DC-0409-SI02,domain name: n/a) not received
+    Graceful Restart Capability: advertised
+  Graceful restart information:
+    Local GR Mode: Helper*
+    Remote GR Mode: Disable
+    R bit: False
+    Timers:
+      Configured Restart Time(sec): 300
+      Received Restart Time(sec): 0
+  Message statistics:
+    Inq depth is 0
+    Outq depth is 0
+                         Sent       Rcvd
+    Opens:                  2          2
+    Notifications:          2          0
+    Updates:              150         70
+    Keepalives:         23155      26606
+    Route Refresh:          0          0
+    Capability:             0          0
+    Total:              23309      26678
+  Minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  eBGP-vCPE peer-group member
+  Update group 4, subgroup 19
+  Packet Queue length 0
+  Inbound soft reconfiguration allowed
+  Community attribute sent to this neighbor(extended)
+  Inbound path policy configured
+  Route map for incoming advertisements is *MYBLE01VOS41-IN
+  1 accepted prefixes
+
+  Connections established 2; dropped 1
+  Last reset 4d18h55m,  No AFI/SAFI activated for peer
+Local host: 10.90.30.177, Local port: 179
+Foreign host: 10.90.30.179, Foreign port: 59380
+Nexthop: 10.90.30.177
+Nexthop global: ::
+Nexthop local: ::
+Nexthop intf: Vlan1120
+BGP connection: shared network
+BGP Connect Retry Timer in Seconds: 30
+Estimated round trip time: 1 ms
+Read thread: on  Write thread: on  FD used: 25
+
+  BFD: Type: single hop
+  Detect Multiplier: 3, Min Rx interval: 300, Min Tx interval: 300
+  Status: Up, Last update: 4:18:55:31
+
+BGP neighbor is 10.90.30.158, remote AS 4246732825, local AS 4246732825, internal link
+ Description: MYBLE01-DC-0409-SI02
+Hostname: MYBLE01-DC-0408-SI01
+ Member of peer-group iBGP-Peering for session parameters
+  BGP version 4, remote router ID 10.90.30.158, local router ID 10.90.30.159
+  BGP state = Established, up for 4d18h55m
+  Last read 00:00:31, Last write 00:00:31
+  Hold time is 180, keepalive interval is 60 seconds
+  Neighbor capabilities:
+    4 Byte AS: advertised and received
+    Extended Message: advertised and received
+    AddPath:
+      IPv4 Unicast: RX advertised and received
+    Long-lived Graceful Restart: advertised and received
+      Address families by peer:
+    Route refresh: advertised and received(old & new)
+    Enhanced Route Refresh: advertised and received
+    Address Family IPv4 Unicast: advertised and received
+    Hostname Capability: advertised (name: MYBLE01-DC-0409-SI02,domain name: n/a) received (name: MYBLE01-DC-0408-SI01,domain name: n/a)
+    Graceful Restart Capability: advertised and received
+      Remote Restart timer is 300 seconds
+      Address families by peer:
+        none
+  Graceful restart information:
+    End-of-RIB send: IPv4 Unicast
+    End-of-RIB received: IPv4 Unicast
+    Local GR Mode: Helper*
+    Remote GR Mode: Helper
+    R bit: False
+    Timers:
+      Configured Restart Time(sec): 300
+      Received Restart Time(sec): 300
+    IPv4 Unicast:
+      F bit: False
+      End-of-RIB sent: Yes
+      End-of-RIB sent after update: No
+      End-of-RIB received: Yes
+      Timers:
+        Configured Stale Path Time(sec): 3
+  Message statistics:
+    Inq depth is 0
+    Outq depth is 0
+                         Sent       Rcvd
+    Opens:                  2          2
+    Notifications:          2          0
+    Updates:               74         79
+    Keepalives:         11578      11578
+    Route Refresh:          0          0
+    Capability:             0          0
+    Total:              11656      11659
+  Minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  iBGP-Peering peer-group member
+  Update group 5, subgroup 20
+  Packet Queue length 0
+  Inbound soft reconfiguration allowed
+  NEXT_HOP is always this router
+  Community attribute sent to this neighbor(extended)
+  12 accepted prefixes
+
+  Connections established 2; dropped 1
+  Last reset 4d18h55m,  User reset
+Local host: 10.90.30.159, Local port: 52870
+Foreign host: 10.90.30.158, Foreign port: 179
+Nexthop: 10.90.30.159
+Nexthop global: ::
+Nexthop local: ::
+Nexthop intf: Vlan2000
+BGP connection: shared network
+BGP Connect Retry Timer in Seconds: 30
+Read thread: on  Write thread: on  FD used: 27
+
+  BFD: Type: single hop
+  Detect Multiplier: 3, Min Rx interval: 300, Min Tx interval: 300
+  Status: Up, Last update: 8:00:57:13
+
+BGP neighbor is 10.92.30.68, remote AS 4248699655, local AS 4246732825, external link
+ Description: EDU-Firewall
+  BGP version 4, remote router ID 2.2.2.2, local router ID 10.90.30.159
+  BGP state = Established, up for 4d18h55m
+  Last read 00:00:02, Last write 00:00:01
+  Hold time is 12, keepalive interval is 4 seconds
+  Neighbor capabilities:
+    4 Byte AS: advertised and received
+    Extended Message: advertised
+    AddPath:
+      IPv4 Unicast: RX advertised
+    Long-lived Graceful Restart: advertised
+    Route refresh: advertised and received(old & new)
+    Enhanced Route Refresh: advertised
+    Address Family IPv4 Unicast: advertised and received
+    Hostname Capability: advertised (name: MYBLE01-DC-0409-SI02,domain name: n/a) not received
+    Graceful Restart Capability: advertised and received
+      Remote Restart timer is 120 seconds
+      Address families by peer:
+        IPv4 Unicast(not preserved)
+  Graceful restart information:
+    End-of-RIB send: IPv4 Unicast
+    End-of-RIB received: IPv4 Unicast
+    Local GR Mode: Helper*
+    Remote GR Mode: Restart
+    R bit: False
+    Timers:
+      Configured Restart Time(sec): 300
+      Received Restart Time(sec): 120
+    IPv4 Unicast:
+      F bit: False
+      End-of-RIB sent: Yes
+      End-of-RIB sent after update: No
+      End-of-RIB received: Yes
+      Timers:
+        Configured Stale Path Time(sec): 3
+  Message statistics:
+    Inq depth is 0
+    Outq depth is 0
+                         Sent       Rcvd
+    Opens:                  3          2
+    Notifications:          2          0
+    Updates:               14          4
+    Keepalives:        173656     200971
+    Route Refresh:          0          0
+    Capability:             0          0
+    Total:             173675     200977
+  Minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  Update group 6, subgroup 21
+  Packet Queue length 0
+  Inbound soft reconfiguration allowed
+  Community attribute sent to this neighbor(extended)
+  Inbound path policy configured
+  Outbound path policy configured
+  Route map for incoming advertisements is *Routes_From_EDU_FW
+  Route map for outgoing advertisements is *DefaultRoute_LEAK_OUT
+  1 accepted prefixes
+
+  Connections established 2; dropped 1
+  Last reset 4d18h55m,  No AFI/SAFI activated for peer
+Local host: 10.92.30.67, Local port: 179
+Foreign host: 10.92.30.68, Foreign port: 42675
+Nexthop: 10.92.30.67
+Nexthop global: ::
+Nexthop local: ::
+Nexthop intf: Vlan803
+BGP connection: shared network
+BGP Connect Retry Timer in Seconds: 30
+Read thread: on  Write thread: on  FD used: 28
+
+  BFD: Type: single hop
+  Detect Multiplier: 3, Min Rx interval: 300, Min Tx interval: 300
+  Status: Up, Last update: 4:18:55:17
+
+BGP neighbor is 10.92.30.236, remote AS 4246733799, local AS 4246732825, external link
+ Description: Default-Firewall
+  BGP version 4, remote router ID 2.2.2.2, local router ID 10.90.30.159
+  BGP state = Established, up for 4d18h55m
+  Last read 00:00:02, Last write 00:00:01
+  Hold time is 12, keepalive interval is 4 seconds
+  Neighbor capabilities:
+    4 Byte AS: advertised and received
+    Extended Message: advertised
+    AddPath:
+      IPv4 Unicast: RX advertised
+    Long-lived Graceful Restart: advertised
+    Route refresh: advertised and received(old & new)
+    Enhanced Route Refresh: advertised
+    Address Family IPv4 Unicast: advertised and received
+    Hostname Capability: advertised (name: MYBLE01-DC-0409-SI02,domain name: n/a) not received
+    Graceful Restart Capability: advertised and received
+      Remote Restart timer is 120 seconds
+      Address families by peer:
+        IPv4 Unicast(not preserved)
+  Graceful restart information:
+    End-of-RIB send: IPv4 Unicast
+    End-of-RIB received: IPv4 Unicast
+    Local GR Mode: Helper*
+    Remote GR Mode: Restart
+    R bit: False
+    Timers:
+      Configured Restart Time(sec): 300
+      Received Restart Time(sec): 120
+    IPv4 Unicast:
+      F bit: False
+      End-of-RIB sent: Yes
+      End-of-RIB sent after update: No
+      End-of-RIB received: Yes
+      Timers:
+        Configured Stale Path Time(sec): 3
+  Message statistics:
+    Inq depth is 0
+    Outq depth is 0
+                         Sent       Rcvd
+    Opens:                 17         16
+    Notifications:          2          0
+    Updates:               42         32
+    Keepalives:        173589     200881
+    Route Refresh:          0          0
+    Capability:             0          0
+    Total:             173650     200929
+  Minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  Update group 6, subgroup 21
+  Packet Queue length 0
+  Inbound soft reconfiguration allowed
+  Community attribute sent to this neighbor(extended)
+  Inbound path policy configured
+  Outbound path policy configured
+  Route map for incoming advertisements is *Routes_From_Default_FW
+  Route map for outgoing advertisements is *DefaultRoute_LEAK_OUT
+  4 accepted prefixes
+
+  Connections established 16; dropped 15
+  Last reset 4d18h55m,  No AFI/SAFI activated for peer
+Local host: 10.92.30.235, Local port: 179
+Foreign host: 10.92.30.236, Foreign port: 34013
+Nexthop: 10.92.30.235
+Nexthop global: ::
+Nexthop local: ::
+Nexthop intf: Vlan809
+BGP connection: shared network
+BGP Connect Retry Timer in Seconds: 30
+Estimated round trip time: 3 ms
+Read thread: on  Write thread: on  FD used: 29
+
+  BFD: Type: single hop
+  Detect Multiplier: 3, Min Rx interval: 300, Min Tx interval: 300
+  Status: Up, Last update: 4:18:55:18
+
+BGP neighbor is 10.99.100.130, remote AS 4248699659, local AS 4246732825, external link
+ Description: Corp-Firewall
+  BGP version 4, remote router ID 2.2.2.2, local router ID 10.90.30.159
+  BGP state = Established, up for 4d18h55m
+  Last read 00:00:02, Last write 00:00:01
+  Hold time is 12, keepalive interval is 4 seconds
+  Neighbor capabilities:
+    4 Byte AS: advertised and received
+    Extended Message: advertised
+    AddPath:
+      IPv4 Unicast: RX advertised
+    Long-lived Graceful Restart: advertised
+    Route refresh: advertised and received(old & new)
+    Enhanced Route Refresh: advertised
+    Address Family IPv4 Unicast: advertised and received
+    Hostname Capability: advertised (name: MYBLE01-DC-0409-SI02,domain name: n/a) not received
+    Graceful Restart Capability: advertised and received
+      Remote Restart timer is 120 seconds
+      Address families by peer:
+        IPv4 Unicast(not preserved)
+  Graceful restart information:
+    End-of-RIB send: IPv4 Unicast
+    End-of-RIB received: IPv4 Unicast
+    Local GR Mode: Helper*
+    Remote GR Mode: Restart
+    R bit: False
+    Timers:
+      Configured Restart Time(sec): 300
+      Received Restart Time(sec): 120
+    IPv4 Unicast:
+      F bit: False
+      End-of-RIB sent: Yes
+      End-of-RIB sent after update: No
+      End-of-RIB received: Yes
+      Timers:
+        Configured Stale Path Time(sec): 3
+  Message statistics:
+    Inq depth is 0
+    Outq depth is 0
+                         Sent       Rcvd
+    Opens:                 14         13
+    Notifications:          2          0
+    Updates:               36         52
+    Keepalives:        173659     200905
+    Route Refresh:          0          0
+    Capability:             0          0
+    Total:             173711     200970
+  Minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  Update group 6, subgroup 21
+  Packet Queue length 0
+  Inbound soft reconfiguration allowed
+  Community attribute sent to this neighbor(extended)
+  Inbound path policy configured
+  Outbound path policy configured
+  Route map for incoming advertisements is *Routes_From_Corp_FW
+  Route map for outgoing advertisements is *DefaultRoute_LEAK_OUT
+  5 accepted prefixes
+
+  Connections established 13; dropped 12
+  Last reset 4d18h55m,  No AFI/SAFI activated for peer
+Local host: 10.99.100.132, Local port: 179
+Foreign host: 10.99.100.130, Foreign port: 38281
+Nexthop: 10.99.100.132
+Nexthop global: ::
+Nexthop local: ::
+Nexthop intf: Vlan802
+BGP connection: shared network
+BGP Connect Retry Timer in Seconds: 30
+Read thread: on  Write thread: on  FD used: 30
+
+  BFD: Type: single hop
+  Detect Multiplier: 3, Min Rx interval: 300, Min Tx interval: 300
+  Status: Up, Last update: 4:18:55:17
+
+

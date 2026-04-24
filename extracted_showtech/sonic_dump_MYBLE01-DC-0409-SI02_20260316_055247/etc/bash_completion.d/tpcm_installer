@@ -1,0 +1,12 @@
+_tpcm_installer_completion() {
+    COMPREPLY=( $( env COMP_WORDS="${COMP_WORDS[*]}" \
+                   COMP_CWORD=$COMP_CWORD \
+                   _TPCM_COMPLETE=complete $1 ) )
+    if [ $COMP_CWORD -eq 1 ]; then
+	COMPREPLY=( $( echo ${COMPREPLY[*]} | sed -E 's/current_image|next_image|ps|save|show_args|exec//g' ) )
+    fi
+    return 0
+}
+
+complete -F _tpcm_installer_completion -o default tpcm;
+

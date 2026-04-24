@@ -1,0 +1,14 @@
+[Unit]
+Description=Memory Histogram
+Before=rc-local.service
+
+[Service]
+Type=forking
+StandardOutput=syslog+console
+ExecStart=/usr/local/bin/histogramd.py --daemon
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

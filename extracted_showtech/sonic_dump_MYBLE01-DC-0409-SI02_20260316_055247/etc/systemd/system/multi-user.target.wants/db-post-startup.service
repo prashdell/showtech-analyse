@@ -1,0 +1,18 @@
+[Unit]
+Description=Restart the database dependent services
+Requires=database.service
+After=database.service
+StartLimitIntervalSec=1200
+StartLimitBurst=3
+
+[Service]
+User=root
+ExecStartPre=/usr/local/bin/db-post-startup.sh start
+ExecStart=/usr/local/bin/db-post-startup.sh wait
+ExecStop=/usr/local/bin/db-post-startup.sh stop
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+

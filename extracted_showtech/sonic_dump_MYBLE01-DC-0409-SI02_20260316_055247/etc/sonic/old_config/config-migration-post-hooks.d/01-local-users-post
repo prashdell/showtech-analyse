@@ -1,0 +1,139 @@
+# Restore local user files and passwords from backup copy
+BACKUP_DIR=/host/backup/users_info
+
+remove_duplicates()
+{
+  SRC_FILE=$1
+  COUNTER=0
+  # Identify and remove rows with same key. Migrated config gets,
+  # priority in the case of duplicates
+  while [ "$(awk -F':' 'a[$1]++{print $1}' $SRC_FILE | wc -l)" != "0" ]; do
+      for dup_key in $(awk -F':' 'a[$1]++{print $1}' $SRC_FILE); do
+          sed -i "0,/^${dup_key}:/{//d;}" ${SRC_FILE}
+      done
+      # Adding protection to safeguard from corrupted data due to errors in previous
+      # incorrect configuration migrations
+      let COUNTER=COUNTER+1
+      if [ "$COUNTER" = "10" ]; then
+         echo "Error! Too many duplicate entries found in the migrated file $SRC_FILE"
+         return 1
+      fi
+  done
+  return 0
+}
+
+# Cleanup migrated configuration content. Remove lines with insufficient columns,
+# remove lines with same keys
+fixup_source_data()
+{
+  SRC_DATA=$1
+  DST_FILE=$2
+  TMP_FILE="${SRC_DATA}.tmp"
+  num_cols=$(awk -F':' '{print NF; exit}' $DST_FILE)
+  while IFS= read -r line
+  do
+     cols=$(echo "$line" | awk -F':' '{print NF; exit}')
+     # Filter out invalid content received in the migrated data
+     if [ "$cols" = "$num_cols" ]; then
+         echo "$line" >> $TMP_FILE
+     fi
+  done <<< $(cat $SRC_DATA)
+
+  remove_duplicates ${TMP_FILE}
+  if [ $? -ne 0 ]; then
+      return 1
+  fi
+
+  # Replace source data with cleansed data
+  [ -e ${TMP_FILE} ] && mv "${TMP_FILE}" "${SRC_DATA}"
+  return 0
+}
+
+# Append new data from SRC file to DST file
+search_and_append()
+{
+  SRC=$1
+  DST=$2
+
+  fixup_source_data $SRC $DST
+  if [ $? -ne 0 ]; then
+      exit_status=1
+      return 1
+  fi
+
+  while IFS= read -r line
+  do
+     if ! grep -Fxq "$line" $DST ; then
+         echo "$line" >> $DST
+     fi
+  done <<< $(cat $SRC)
+
+  # Identify and remove rows with same key. Migrated config gets,
+  # priority in the case of duplicates
+  remove_duplicates  $DST
+  if [ $? -ne 0 ]; then
+      exit_status=1
+      return 1
+  fi
+  return 0
+}
+
+print_alert() {
+    echo "Alert! Skipping migration of Linux users, groups configuration due to errors"
+    echo "Alert! Contact administrator to fix the configuration"
+    echo "Alert! Skipping migration of Linux users, groups configuration due to errors" > /dev/console
+    echo "Alert! Contact administrator to fix the configuration" > /dev/console
+}
+
+migrate_users() {
+    # Take backup copies of original files before modifying them
+    cat /etc/group   > ${BACKUP_DIR}/group.mod
+    cat /etc/shadow  > ${BACKUP_DIR}/shadow.mod
+    cat /etc/passwd  > ${BACKUP_DIR}/passwd.mod
+    cat /etc/gshadow > ${BACKUP_DIR}/gshadow.mod
+    
+    # Remove existing admin password
+    sed -i "/admin:/d" ${BACKUP_DIR}/shadow.mod
+
+    # Copy user and group information from migrated files
+    cat ${BACKUP_DIR}/shadow.mig >>  ${BACKUP_DIR}/shadow.mod && \
+    search_and_append ${BACKUP_DIR}/group.mig ${BACKUP_DIR}/group.mod && \
+    search_and_append ${BACKUP_DIR}/passwd.mig ${BACKUP_DIR}/passwd.mod && \
+    search_and_append ${BACKUP_DIR}/gshadow.mig ${BACKUP_DIR}/gshadow.mod
+
+    # Check if any errors have occured before proceeding to apply the changes
+    if [ $exit_status -eq 0 ]; then
+        cat ${BACKUP_DIR}/group.mod   > /etc/group
+        cat ${BACKUP_DIR}/shadow.mod  > /etc/shadow
+        cat ${BACKUP_DIR}/passwd.mod  > /etc/passwd
+        cat ${BACKUP_DIR}/gshadow.mod > /etc/gshadow
+        # Fix any errors that may have occured during migration
+        pwconv
+        grpconv
+        yes | pwck
+        yes | grpck
+        if [ -e /etc/config-setup/config-migration-post-hooks.d/01-rbac-user-acct-reconcile.py ]; then
+            /usr/bin/python /etc/config-setup/config-migration-post-hooks.d/01-rbac-user-acct-reconcile.py
+        fi
+    else
+        print_alert
+    fi
+
+    [ -e ${BACKUP_DIR}/home.tar.gz ] && tar -C / -zxvf ${BACKUP_DIR}/home.tar.gz
+    [ -e ${BACKUP_DIR}/mail.tar.gz ] && tar -C / -zxvf ${BACKUP_DIR}/mail.tar.gz
+
+    chmod 0750 /home/*
+}
+
+if [ -d ${BACKUP_DIR} ]; then
+    if [ ! -s ${BACKUP_DIR}/group.mig ] || [ ! -s ${BACKUP_DIR}/passwd.mig ] || [ ! -s ${BACKUP_DIR}/gshadow.mig ]; then
+        echo "Alert! Invalid user configuration files migrated"
+        print_alert
+    else
+        migrate_users
+    fi
+
+    [ -e ${BACKUP_DIR}/ssh.tar.gz ] && tar -C / -zxvf ${BACKUP_DIR}/ssh.tar.gz
+    # Destroy all backup data
+    rm  -rf ${BACKUP_DIR}
+fi

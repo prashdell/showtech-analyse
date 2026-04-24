@@ -1,0 +1,21 @@
+alpm projection show
+- Current ALPM route count & resource usage
+		 Routes L1_usage L2_usage L1_used:total L2_used:total
+IPv4 (Private) :     17    0.01    0.01      1:  8192       3: 16384
+IPv4 (Global)  :      0    0.01    0.01      1:  8192       3: 16384
+IPv4 (Override):      0    0.01    0.00      1:  8192       0:     0
+IPv6 (Private) :      2    0.02    0.00      1:  4096       1: 16384
+IPv6 (Global)  :      0    0.02    0.00      1:  4096       1: 16384
+IPv6 (Override):      0    0.02    0.00      1:  4096       0:     0
+
+- Route projection based on current route trend
+      <none>
+
+- Route projection based on test DB result interpolation and configuration
+  (uni-dimensional projection)
+IPv4 (Prv+Glo) : Max:  81904 (max L2_usage:100%)
+IPv4 (Override): Max:  16384 (max L1_usage:100%)
+IPv6 (Prv+Glo) : Max:  32767 (max L2_usage:100%)
+IPv6 (Override): Max:   4096 (max L1_usage:100%)
+
+drivshell>

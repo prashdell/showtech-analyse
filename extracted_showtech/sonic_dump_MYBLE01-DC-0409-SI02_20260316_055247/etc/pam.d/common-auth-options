@@ -1,0 +1,5 @@
+#THIS IS AN AUTO-GENERATED FILE
+# Generated from: /usr/share/sonic/templates/auth-options.j2
+#
+#Include common faillock preauth rule
+@include common-faillock-preauth

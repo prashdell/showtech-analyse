@@ -1,0 +1,17 @@
+BGP table version is 330, local router ID is 10.90.30.159, vrf id 0
+Default local pref 100, local AS 4246732825
+Status codes:  s suppressed, d damped, h history, * valid, > best, = multipath, q queued
+               i internal, r RIB-failure, S Stale, R Removed
+               b backup, : backup-multipath
+Nexthop codes: @NNN nexthop's vrf id, < announce-nh-self
+Origin codes:  i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+   Network          Next Hop            Metric     LocPrf     Weight Path
+*>   10.0.0.0/8       10.99.100.130                                 0 4248699659 4248698957 4248698887 4248698951 64800 64801 65411 65400 e
+*>   132.237.171.0/24 10.99.100.130                                 0 4248699659 i
+*>   132.237.181.0/26 10.99.100.130                                 0 4248699659 i
+*>   152.62.45.0/24   10.99.100.130                                 0 4248699659 i
+*>   172.16.0.0/12    10.99.100.130                                 0 4248699659 4248698957 4248698887 4248698951 64800 64801 65411 65400 e
+
+Displayed  5 routes and 25 total paths

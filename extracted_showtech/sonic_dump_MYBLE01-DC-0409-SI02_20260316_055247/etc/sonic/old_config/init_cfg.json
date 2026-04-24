@@ -1,0 +1,235 @@
+{
+
+    "FEATURE": {
+        "radv": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "dhcp_relay": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "tam": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "sflow": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "telemetry": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "udld": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "l2mcd": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "syncd": {
+            "state": "always_enabled",
+            "has_timer" : false,
+            "has_global_scope": false,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "lldp": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "vrrp": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "snmp": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "mfa": {
+            "state": "disabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "nat": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "bgp": {
+            "state": "always_enabled",
+            "has_timer" : false,
+            "has_global_scope": false,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "pmon": {
+            "state": "always_enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "mgmt-framework": {
+            "state": "always_enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "teamd": {
+            "state": "always_enabled",
+            "has_timer" : false,
+            "has_global_scope": false,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "swss": {
+            "state": "always_enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "database": {
+            "state": "always_enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "check_up_status" : "False"
+        },
+        "eventd": {
+            "state": "always_enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "timesync": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "False"
+        },
+        "iccpd": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        },
+        "stp": {
+            "state": "enabled",
+            "has_timer" : false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "check_up_status" : "True"
+        }
+    },
+    "HOST_FEATURE": {
+        "caclmgrd": {
+            "check_up_status" : "False"
+        },
+        "cron": {
+            "check_up_status" : "False"
+        },
+        "docker": {
+            "check_up_status" : "False"
+        },
+        "xphyd": {
+            "check_up_status" : "True"
+        },
+        "warmboot-finalizer": {
+            "check_up_status" : "True"
+        },
+        "hostcfgd": {
+            "check_up_status" : "False"
+        }
+    },
+    "ECMP_LOADSHARE_TABLE_IPV4": {
+        "ipv4": {
+            "ipv4_dst_ip": "true",
+            "ipv4_l4_dst_port": "true",
+            "ipv4_l4_src_port": "true",
+            "ipv4_protocol": "true",
+            "ipv4_src_ip": "true"
+        }
+    },
+    "ECMP_LOADSHARE_TABLE_IPV6": {
+        "ipv6": {
+            "ipv6_dst_ip": "true",
+            "ipv6_l4_dst_port": "true",
+            "ipv6_l4_src_port": "true",
+            "ipv6_next_hdr": "true",
+            "ipv6_src_ip": "true"
+        }
+    },
+    "SSHD_COMMON": {
+      "GLOBAL": {
+        "ciphers": "aes128-ctr,aes192-ctr,aes256-ctr,chacha20-poly1305@openssh.com,aes128-gcm@openssh.com,aes256-gcm@openssh.com",
+        "kexalgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256",
+        "macs": "umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512",
+        "hostkeyalgorithms": "rsa-sha2-256,rsa-sha2-512,ssh-rsa"
+      }
+    }
+}

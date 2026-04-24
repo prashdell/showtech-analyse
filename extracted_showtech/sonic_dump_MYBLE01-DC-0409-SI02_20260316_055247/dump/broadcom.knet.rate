@@ -1,0 +1,29 @@
+Rate control (unit 0):
+  Rx0 max rate     30000
+  Rx0 max burst    10000
+  Rx0 rate            32
+  Rx0 tokens       10000
+  Rx1 max rate     30000
+  Rx1 max burst    10000
+  Rx1 rate             0
+  Rx1 tokens       10000
+  Rx2 max rate     30000
+  Rx2 max burst    10000
+  Rx2 rate             0
+  Rx2 tokens       10000
+  Rx3 max rate     30000
+  Rx3 max burst    10000
+  Rx3 rate             0
+  Rx3 tokens       10000
+  Rx4 max rate     30000
+  Rx4 max burst    10000
+  Rx4 rate             0
+  Rx4 tokens       10000
+  Rx5 max rate     30000
+  Rx5 max burst    10000
+  Rx5 rate             0
+  Rx5 tokens       10000
+  Rx6 max rate     30000
+  Rx6 max burst    10000
+  Rx6 rate             0
+  Rx6 tokens       10000

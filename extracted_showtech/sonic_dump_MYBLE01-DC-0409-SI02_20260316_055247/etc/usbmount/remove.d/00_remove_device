@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ "$(sonic-db-cli STATE_DB PING)" = "True" ]; then
+    disk_name="$(lsblk -ndo pkname ${UM_DEVICE})"
+    if [ -z $disk_name ]; then
+        sonic-db-cli STATE_DB DEL "USB_DEVICE|${UM_DEVICE}" > /dev/null
+        sonic-db-cli STATE_DB DEL "USB_PARTS|${UM_DEVICE}" > /dev/null
+    else
+        sonic-db-cli STATE_DB DEL "USB_PARTS|${UM_DEVICE}" > /dev/null
+    fi
+fi

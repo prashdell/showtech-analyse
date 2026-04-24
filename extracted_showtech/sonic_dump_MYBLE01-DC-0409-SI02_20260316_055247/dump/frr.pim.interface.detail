@@ -1,0 +1,185 @@
+VRF: default
+Interface  : pimreg
+State      : up
+Address    : 0.0.0.0 (primary)
+
+Designated Router
+-----------------
+Address                : *
+Local DR Priority      : 1
+Neighbors that didn't      
+ advertise DR Priority : 0
+Uptime                 : --:--:--
+Elections              : 0
+Changes                : 0
+
+
+Hellos
+------
+Period         : 30
+HoldTime       : 105
+Timer          : --:--:--
+StatStart      : 193:00:04
+Receive        : 0
+Receive Failed : 0
+Send           : 0
+Send Failed    : 0
+Generation ID  : 00000000
+
+
+Flags
+-----
+All Multicast   : no
+Broadcast       : no
+Deleted         : no
+Interface Index : 24
+Multicast       : no
+Multicast Loop  : 0
+Promiscuous     : no
+
+
+Join Prune Interval
+-------------------
+LAN Delay                    : yes
+Effective Propagation Delay  : 0 msec
+Effective Override Interval  : 0 msec
+Join Prune Override Interval : 0 msec
+
+
+LAN Prune Delay
+---------------
+Propagation Delay           : 500 msec
+Propagation Delay (Highest) : 0 msec
+Override Interval           : 2500 msec
+Override Interval (Highest) : 0 msec
+
+
+BSM Status
+----------
+Bsm Enabled          : yes
+Unicast Bsm Enabled  : yes
+
+
+VRF: mgmt
+Interface  : mgmt
+State      : up
+Address    : 0.0.0.0 (primary)
+
+Designated Router
+-----------------
+Address                : *
+Local DR Priority      : 1
+Neighbors that didn't      
+ advertise DR Priority : 0
+Uptime                 : --:--:--
+Elections              : 0
+Changes                : 0
+
+
+Hellos
+------
+Period         : 30
+HoldTime       : 105
+Timer          : --:--:--
+StatStart      : 193:00:04
+Receive        : 0
+Receive Failed : 0
+Send           : 0
+Send Failed    : 0
+Generation ID  : 7f6d8d16
+
+
+Flags
+-----
+All Multicast   : no
+Broadcast       : no
+Deleted         : no
+Interface Index : 19
+Multicast       : no
+Multicast Loop  : 0
+Promiscuous     : no
+
+
+Join Prune Interval
+-------------------
+LAN Delay                    : yes
+Effective Propagation Delay  : 0 msec
+Effective Override Interval  : 0 msec
+Join Prune Override Interval : 0 msec
+
+
+LAN Prune Delay
+---------------
+Propagation Delay           : 500 msec
+Propagation Delay (Highest) : 0 msec
+Override Interval           : 2500 msec
+Override Interval (Highest) : 0 msec
+
+
+BSM Status
+----------
+Bsm Enabled          : yes
+Unicast Bsm Enabled  : yes
+
+
+Interface  : pimreg5000
+State      : up
+Address    : 0.0.0.0 (primary)
+
+Designated Router
+-----------------
+Address                : *
+Local DR Priority      : 1
+Neighbors that didn't      
+ advertise DR Priority : 0
+Uptime                 : --:--:--
+Elections              : 0
+Changes                : 0
+
+
+Hellos
+------
+Period         : 30
+HoldTime       : 105
+Timer          : --:--:--
+StatStart      : 193:00:04
+Receive        : 0
+Receive Failed : 0
+Send           : 0
+Send Failed    : 0
+Generation ID  : 00000000
+
+
+Flags
+-----
+All Multicast   : yes
+Broadcast       : no
+Deleted         : no
+Interface Index : 25
+Multicast       : no
+Multicast Loop  : 0
+Promiscuous     : no
+
+
+Join Prune Interval
+-------------------
+LAN Delay                    : yes
+Effective Propagation Delay  : 0 msec
+Effective Override Interval  : 0 msec
+Join Prune Override Interval : 0 msec
+
+
+LAN Prune Delay
+---------------
+Propagation Delay           : 500 msec
+Propagation Delay (Highest) : 0 msec
+Override Interval           : 2500 msec
+Override Interval (Highest) : 0 msec
+
+
+BSM Status
+----------
+Bsm Enabled          : yes
+Unicast Bsm Enabled  : yes
+
+

@@ -1,0 +1,426 @@
+****************************************************************************
+ports techsupport dump begin at Mon 16 Mar 2026 06:07:44 AM GMT
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal orchagent ports pending_tasks
+--------------------------------------------------------------------
+------------ Pending Tasks ------------ 
+*************** Profiling data ***************
+End to End Execution time: 102.89 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.458s
+user	0m0.282s
+sys	0m0.057s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c ORCHAGENT -e show system internal port if-reasons
+--------------------------------------------------------------------
+Interface Ethernet0:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet1:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet10:
+============================
+Priority   Reason
+============================
+ 1          NO_TRANSCEIVER
+ 2          ERR_DISABLED
+
+Interface Ethernet11:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet12:
+============================
+Priority   Reason
+============================
+ 1          NO_TRANSCEIVER
+ 2          ERR_DISABLED
+
+Interface Ethernet13:
+============================
+Priority   Reason
+============================
+ 2          ERR_DISABLED
+ 3          PHY_LINK_DOWN
+
+Interface Ethernet14:
+============================
+Priority   Reason
+============================
+ 1          NO_TRANSCEIVER
+ 2          ERR_DISABLED
+
+Interface Ethernet15:
+============================
+Priority   Reason
+============================
+ 2          ERR_DISABLED
+ 3          PHY_LINK_DOWN
+
+Interface Ethernet16:
+============================
+Priority   Reason
+============================
+ 2          ERR_DISABLED
+ 3          PHY_LINK_DOWN
+
+Interface Ethernet17:
+============================
+Priority   Reason
+============================
+ 1          NO_TRANSCEIVER
+ 2          ERR_DISABLED
+
+Interface Ethernet18:
+============================
+Priority   Reason
+============================
+ 2          ERR_DISABLED
+ 3          PHY_LINK_DOWN
+
+Interface Ethernet19:
+============================
+Priority   Reason
+============================
+ 1          NO_TRANSCEIVER
+ 2          ERR_DISABLED
+
+Interface Ethernet2:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet20:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet21:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet22:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet23:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet24:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet25:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet26:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+ 3          PHY_LINK_DOWN
+
+Interface Ethernet27:
+============================
+Priority   Reason
+============================
+ 1          NO_TRANSCEIVER
+ 2          ERR_DISABLED
+ 3          PHY_LINK_DOWN
+
+Interface Ethernet28:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+ 3          PHY_LINK_DOWN
+
+Interface Ethernet29:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet3:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet30:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet31:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet32:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet33:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet34:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet35:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet36:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet37:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet38:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet39:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+ 2          ERR_DISABLED
+
+Interface Ethernet4:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet40:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet41:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet42:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet43:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet44:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet45:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet46:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet47:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet48:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet5:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet52:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet56:
+============================
+Priority   Reason
+============================
+ 3          OPER_UP
+
+Interface Ethernet6:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet60:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet64:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet68:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet7:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet72:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet76:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+Interface Ethernet8:
+============================
+Priority   Reason
+============================
+ 1          NO_TRANSCEIVER
+ 2          ERR_DISABLED
+ 3          PHY_LINK_DOWN
+
+Interface Ethernet9:
+============================
+Priority   Reason
+============================
+ 0          ADMIN_DOWN
+ 1          NO_TRANSCEIVER
+
+*************** Profiling data ***************
+End to End Execution time: 104.47 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.457s
+user	0m0.292s
+sys	0m0.048s
+
+
+
+
+
+****************************************************************************
+ports techsupport dump ended at Mon 16 Mar 2026 06:07:45 AM GMT
+****************************************************************************

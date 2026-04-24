@@ -1,0 +1,29 @@
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 master docker0 
+6: PortChannel100: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 master Bridge state forwarding priority 4 cost 100 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+7: Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9216 master Bridge 
+8: dummy: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 master Bridge state forwarding priority 4 cost 100 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+32: docker-mgmt: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master docker-mgmt 
+34: Ethernet27: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 4444 master Bridge state disabled priority 4 cost 4 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+45: Ethernet0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+46: Ethernet1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+47: Ethernet2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+48: Ethernet3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+49: Ethernet4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+50: Ethernet5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+56: Ethernet11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+67: Ethernet20: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+68: Ethernet21: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 
+69: Ethernet22: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master Bridge state forwarding priority 4 cost 2 
+    hairpin off guard off root_block off fastleave off learning on flood on mcast_flood on mcast_to_unicast off neigh_suppress off vlan_tunnel off isolated off multihomed_df no backup_l2nh 0 

@@ -1,0 +1,1293 @@
+Interface BFDRX is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:00:14.25
+  Link downs:     1    last: 2026/03/08 05:00:14.25
+  Carrier ups:     1   downs:     1
+  vrf: default
+  index 22 metric 0 mtu 1500 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: 92:a0:47:1a:34:72
+  Interface Type VETH
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface BFDTX is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:00:14.25
+  Link downs:     1    last: 2026/03/08 05:00:14.25
+  Carrier ups:     1   downs:     1
+  vrf: default
+  index 23 metric 0 mtu 1500 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: 4a:d3:9e:2c:f7:9b
+  Interface Type VETH
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Bridge is up, line protocol is up
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Bridge
+  index 7 metric 0 mtu 9216 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Bridge
+  Interface Slave Type None
+  Bridge VLAN-aware: yes
+  EVPN-MH:
+  protodown: off 
+Interface CPU is up, line protocol is up
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: CPU
+  index 21 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Drop-Mirror is down
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Drop-Mirror
+  index 27 metric 0 mtu 1500 speed 0 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet0 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:11.47
+  Link downs:     5    last: 2026/03/08 05:00:31.64
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet0
+  index 45 metric 0 mtu 9100 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet1 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:12.26
+  Link downs:     5    last: 2026/03/08 05:00:31.64
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet1
+  index 46 metric 0 mtu 9100 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet2 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:12.58
+  Link downs:     5    last: 2026/03/08 05:00:31.70
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet2
+  index 47 metric 0 mtu 9100 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet3 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:13.00
+  Link downs:     5    last: 2026/03/08 05:00:31.75
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet3
+  index 48 metric 0 mtu 9100 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet4 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:13.36
+  Link downs:     5    last: 2026/03/08 05:00:31.81
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet4
+  index 49 metric 0 mtu 9100 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet5 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:13.64
+  Link downs:     5    last: 2026/03/08 05:00:31.81
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet5
+  index 50 metric 0 mtu 9100 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet6 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet6
+  index 51 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet7 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.87
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet7
+  index 52 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet8 is up, line protocol is down
+  Link ups:       0    last: (never)
+  Link downs:    60    last: 2026/03/12 06:00:42.14
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet8
+  index 53 metric 0 mtu 9100 speed 10000 
+  flags: <UP,BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet9 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.87
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet9
+  index 54 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet10 is up, line protocol is down
+  Link ups:       0    last: (never)
+  Link downs:    58    last: 2026/03/12 05:59:51.60
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet10
+  index 55 metric 0 mtu 9100 speed 1000 
+  flags: <UP,BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet11 is up, line protocol is up
+  Link ups:       2    last: 2026/03/09 02:37:34.59
+  Link downs:     9    last: 2026/03/09 02:37:34.59
+  Carrier ups:     2   downs:     2
+  vrf: default
+  OS Description: Ethernet11
+  index 56 metric 0 mtu 9100 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet12 is down
+  Link ups:       0    last: (never)
+  Link downs:    19    last: 2026/03/16 05:24:12.93
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet12
+  index 59 metric 0 mtu 9100 speed 1000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet13 is up, line protocol is down
+  Link ups:       0    last: (never)
+  Link downs:    22    last: 2026/03/16 05:49:52.01
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet13
+  index 60 metric 0 mtu 7400 speed 10000 
+  flags: <UP,BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet14 is down
+  Link ups:       0    last: (never)
+  Link downs:    34    last: 2026/03/16 05:24:12.93
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet14
+  index 61 metric 0 mtu 9100 speed 1000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet15 is up, line protocol is down
+  Link ups:       0    last: (never)
+  Link downs:    19    last: 2026/03/16 05:41:00.93
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet15
+  index 62 metric 0 mtu 7600 speed 10000 
+  flags: <UP,BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet16 is up, line protocol is down
+  Link ups:       0    last: (never)
+  Link downs:     8    last: 2026/03/16 05:49:52.01
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet16
+  index 63 metric 0 mtu 8700 speed 10000 
+  flags: <UP,BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet17 is down
+  Link ups:       0    last: (never)
+  Link downs:     2    last: 2026/03/16 05:32:39.74
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet17
+  index 64 metric 0 mtu 6666 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet18 is up, line protocol is down
+  Link ups:       0    last: (never)
+  Link downs:     5    last: 2026/03/16 05:41:17.89
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet18
+  index 65 metric 0 mtu 8900 speed 10000 
+  flags: <UP,BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet19 is down
+  Link ups:       0    last: (never)
+  Link downs:     5    last: 2026/03/16 05:32:39.74
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet19
+  index 66 metric 0 mtu 6666 speed 1000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet20 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:14.21
+  Link downs:     5    last: 2026/03/08 05:00:31.70
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet20
+  index 67 metric 0 mtu 1500 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet21 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:14:08.74
+  Link downs:     5    last: 2026/03/08 05:00:31.70
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet21
+  index 68 metric 0 mtu 1500 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet22 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:14.65
+  Link downs:     5    last: 2026/03/08 05:00:31.70
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet22
+  index 69 metric 0 mtu 1500 speed 10000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet23 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.70
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet23
+  index 70 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet24 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.70
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet24
+  index 30 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet25 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.70
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet25
+  index 31 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet26 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.70
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet26
+  index 33 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet27 is up, line protocol is down
+  Link ups:       1    last: 2026/03/08 05:01:33.73
+  Link downs:    10    last: 2026/03/16 05:55:50.43
+  Carrier ups:     1   downs:     2
+  vrf: default
+  OS Description: Ethernet27
+  index 34 metric 0 mtu 4444 speed 1000 
+  flags: <UP,BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet28 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.70
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet28
+  index 35 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet29 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.70
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet29
+  index 36 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet30 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.75
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet30
+  index 37 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet31 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.75
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet31
+  index 38 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet32 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.75
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet32
+  index 39 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet33 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.75
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet33
+  index 40 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet34 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.75
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet34
+  index 41 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet35 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.75
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet35
+  index 42 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet36 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.75
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet36
+  index 71 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet37 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.75
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet37
+  index 72 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet38 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.75
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet38
+  index 73 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet39 is down
+  Link ups:       0    last: (never)
+  Link downs:    10    last: 2026/03/08 05:21:03.52
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet39
+  index 74 metric 0 mtu 9100 speed 10000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet40 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet40
+  index 75 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet41 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet41
+  index 76 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet42 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet42
+  index 77 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet43 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet43
+  index 78 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet44 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet44
+  index 79 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet45 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet45
+  index 80 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet46 is down
+  Link ups:       0    last: (never)
+  Link downs:     2    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet46
+  index 81 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet47 is down
+  Link ups:       0    last: (never)
+  Link downs:     2    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet47
+  index 82 metric 0 mtu 9100 speed 25000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet48 is up, line protocol is up
+  Link ups:       2    last: 2026/03/08 05:01:15.03
+  Link downs:     4    last: 2026/03/08 05:00:31.54
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet48
+  index 83 metric 0 mtu 9100 speed 100000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type bond_slave
+  Interface Slave Type Team
+  Master interface: PortChannel100
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet52 is down
+  Link ups:       0    last: (never)
+  Link downs:     2    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet52
+  index 84 metric 0 mtu 9100 speed 100000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet56 is up, line protocol is up
+  Link ups:       2    last: 2026/03/08 05:01:15.58
+  Link downs:     6    last: 2026/03/08 05:00:26.89
+  Carrier ups:     1   downs:     1
+  vrf: default
+  OS Description: Ethernet56
+  index 58 metric 0 mtu 9100 speed 100000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type bond_slave
+  Interface Slave Type Team
+  Master interface: PortChannel100
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet60 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet60
+  index 57 metric 0 mtu 9100 speed 100000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet64 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.81
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet64
+  index 28 metric 0 mtu 9100 speed 100000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet68 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.87
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet68
+  index 43 metric 0 mtu 9100 speed 100000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet72 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.87
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet72
+  index 29 metric 0 mtu 9100 speed 100000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Ethernet76 is down
+  Link ups:       0    last: (never)
+  Link downs:     1    last: 2026/03/08 05:00:31.87
+  Carrier ups:     0   downs:     1
+  vrf: default
+  OS Description: Ethernet76
+  index 44 metric 0 mtu 9100 speed 100000 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Mirror is down
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Mirror
+  index 26 metric 0 mtu 1500 speed 0 
+  flags: <BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface PortChannel100 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:15.03
+  Link downs:     2    last: 2026/03/08 05:00:31.45
+  Carrier ups:     1   downs:     0
+  vrf: default
+  OS Description: PortChannel100
+  index 6 metric 0 mtu 9100 speed 200000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type bond
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  Type1 ES Partner key 100 mac b4:e9:b8:e7:cd:02
+  protodown: off (n/a)
+Interface SAG is up, line protocol is up
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: SAG
+  index 9 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,RUNNING,NOARP>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface Vlan677 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:11.47
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Vlan677
+  index 14 metric 0 mtu 9100 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Vlan
+  Interface Slave Type None
+  VLAN Id 677
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Bridge
+Interface Vlan678 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:13.36
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Vlan678
+  index 15 metric 0 mtu 9100 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Vlan
+  Interface Slave Type None
+  VLAN Id 678
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Bridge
+Interface Vlan802 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:14.21
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Vlan802
+  index 16 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  inet 10.99.100.132/28
+  Interface Type Vlan
+  Interface Slave Type None
+  VLAN Id 802
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Bridge
+Interface Vlan803 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:14.64
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Vlan803
+  index 17 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  inet 10.92.30.67/29
+  Interface Type Vlan
+  Interface Slave Type None
+  VLAN Id 803
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Bridge
+Interface Vlan809 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:15.03
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Vlan809
+  index 18 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  inet 10.92.30.235/29
+  Interface Type Vlan
+  Interface Slave Type None
+  VLAN Id 809
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Bridge
+Interface Vlan1101 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:11.47
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Vlan1101
+  index 10 metric 0 mtu 9100 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Vlan
+  Interface Slave Type None
+  VLAN Id 1101
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Bridge
+Interface Vlan1102 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:11.47
+  Link downs:     1    last: 2026/03/08 05:00:26.54
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Vlan1102
+  index 11 metric 0 mtu 4444 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  Interface Type Vlan
+  Interface Slave Type None
+  VLAN Id 1102
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Bridge
+Interface Vlan1120 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:12.26
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Vlan1120
+  index 12 metric 0 mtu 9100 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  inet 10.90.30.177/28
+  Interface Type Vlan
+  Interface Slave Type None
+  VLAN Id 1120
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Bridge
+Interface Vlan2000 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:15.03
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: Vlan2000
+  index 13 metric 0 mtu 9100 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:02
+  inet 10.90.30.159/31
+  Interface Type Vlan
+  Interface Slave Type None
+  VLAN Id 2000
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Bridge
+Interface bcm0 is up, line protocol is up
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: bcm0
+  index 5 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: 02:10:18:a9:62:ee
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface docker0 is up, line protocol is down
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  index 4 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: 02:42:54:28:35:61
+  inet6 fd00::1/80
+  inet6 fe80::1/64
+  Interface Type Bridge
+  Interface Slave Type None
+  Bridge VLAN-aware: no
+  EVPN-MH:
+  protodown: off 
+Interface dummy is up, line protocol is up
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  OS Description: dummy
+  index 8 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,RUNNING,NOARP>
+  group: 0
+  Type: Ethernet
+  HWaddr: ae:e0:44:2e:cd:1b
+  Interface Type Other
+  Interface Slave Type Bridge
+  Master interface: Bridge
+  EVPN-MH:
+  protodown: off 
+Interface lo is up, line protocol is up
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  index 1 metric 0 mtu 65536 speed 0 
+  flags: <UP,LOOPBACK,RUNNING>
+  group: 0
+  Type: Loopback
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface pimreg is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:00:15.18
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  index 24 metric 0 mtu 1472 speed 0 
+  flags: <UP,RUNNING,NOARP>
+  group: 0
+  Type: PIMSM registration
+  Interface Type Other
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface vrrp.83 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:01:40.69
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: default
+  index 85 metric 0 mtu 1500 speed 200000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: 00:00:5e:00:01:53
+  Interface Type macvlan
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+  Parent interface: Vlan803
+Interface docker-mgmt is up, line protocol is up
+  Link ups:       2    last: 2026/03/08 05:00:19.45
+  Link downs:     1    last: 2026/03/08 05:00:19.45
+  Carrier ups:     0   downs:     0
+  vrf: mgmt
+  index 32 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: 22:59:ca:f7:2a:ca
+  Interface Type Bridge
+  Interface Slave Type Vrf
+  Bridge VLAN-aware: no
+  EVPN-MH:
+  protodown: off 
+Interface eth0 is up, line protocol is up
+  Link ups:       1    last: 2026/03/08 05:00:32.15
+  Link downs:     3    last: 2026/03/08 05:00:28.64
+  Carrier ups:     1   downs:     1
+  vrf: mgmt
+  index 2 metric 0 mtu 1500 speed 1000 
+  flags: <UP,BROADCAST,RUNNING,MULTICAST>
+  group: 0
+  Type: Ethernet
+  HWaddr: b4:e9:b8:e7:ce:00
+  inet 10.92.56.60/23
+  inet6 fe80::b6e9:b8ff:fee7:ce00/64
+  Interface Type Other
+  Interface Slave Type Vrf
+  EVPN-MH:
+  protodown: off 
+Interface lo-m is up, line protocol is up
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: mgmt
+  index 20 metric 0 mtu 1500 speed 0 
+  flags: <UP,BROADCAST,RUNNING,NOARP>
+  group: 0
+  Type: Ethernet
+  HWaddr: 36:0d:fc:d1:fc:29
+  Interface Type Other
+  Interface Slave Type Vrf
+  EVPN-MH:
+  protodown: off 
+Interface mgmt is up, line protocol is up
+  Link ups:       0    last: (never)
+  Link downs:     0    last: (never)
+  Carrier ups:     0   downs:     0
+  vrf: mgmt
+  index 19 metric 0 mtu 65575 speed 0 
+  flags: <UP,RUNNING,NOARP>
+  group: 0
+  Type: Ethernet
+  HWaddr: 4e:e8:4e:8f:c3:f7
+  Interface Type VRF
+  Interface Slave Type None
+  EVPN-MH:
+  protodown: off 
+Interface pimreg5000 is up, line protocol is up
+  Link ups:       2    last: 2026/03/08 05:00:15.63
+  Link downs:     1    last: 2026/03/08 05:00:15.63
+  Carrier ups:     0   downs:     0
+  vrf: mgmt
+  index 25 metric 0 mtu 1472 speed 0 
+  flags: <UP,RUNNING,NOARP,ALLMULTI>
+  group: 0
+  Type: PIMSM registration
+  Interface Type Other
+  Interface Slave Type Vrf
+  EVPN-MH:
+  protodown: off 

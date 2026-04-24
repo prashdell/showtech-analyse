@@ -1,0 +1,10 @@
+/var/log/watchdog.log
+{
+    size 1M
+    rotate 4
+    copytruncate
+    missingok
+    notifempty
+    compress
+    delaycompress
+}

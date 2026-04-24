@@ -1,0 +1,41 @@
+{
+  "lesson_id": "lesson_show_tech_extractor_20260424_142142",
+  "skill_name": "show_tech_extractor",
+  "lesson_type": "architecture",
+  "content": {
+    "success_patterns": [
+      "modular_design_pattern",
+      "reusable_components_pattern",
+      "extensible_framework_pattern",
+      "performance_optimization_pattern",
+      "error_resilient_pattern"
+    ],
+    "context_factors": {
+      "extraction_capabilities": [
+        "multi_format_support",
+        "streaming_parser",
+        "parallel_processing"
+      ],
+      "parser_framework": [
+        "base_parser_interface",
+        "specialized_parsers",
+        "custom_parser_support"
+      ],
+      "validation_system": [
+        "schema_validation",
+        "integrity_checks",
+        "format_validation"
+      ],
+      "export_capabilities": [
+        "multiple_formats",
+        "streaming_export",
+        "custom_exporters"
+      ]
+    }
+  },
+  "confidence": 0.95,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:21:42.539240",
+  "execution_time": 0.5,
+  "captured_by": "comprehensive_analysis"
+}

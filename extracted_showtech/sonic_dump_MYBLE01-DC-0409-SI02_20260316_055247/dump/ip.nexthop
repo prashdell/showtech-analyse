@@ -1,0 +1,15 @@
+id 4 scope global blackhole proto zebra 
+id 7 dev eth0 scope link proto zebra 
+id 8 dev eth0 scope link proto zebra 
+id 10 via 10.92.56.1 dev eth0 scope link proto zebra 
+id 12 dev Vlan1120 scope link proto zebra 
+id 14 dev Vlan802 scope link proto zebra 
+id 16 dev Vlan803 scope link proto zebra 
+id 19 dev Vlan809 scope link proto zebra 
+id 20 dev Vlan2000 scope link proto zebra 
+id 115 via 10.92.30.236 dev Vlan809 scope link proto zebra 
+id 116 via 10.92.30.68 dev Vlan803 scope link proto zebra 
+id 118 via 10.99.100.130 dev Vlan802 scope link proto zebra 
+id 127 via 10.90.30.178 dev Vlan1120 scope link proto zebra 
+id 144 group 127/145 scope global proto zebra 
+id 145 via 10.90.30.179 dev Vlan1120 scope link proto zebra 

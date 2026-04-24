@@ -1,0 +1,32 @@
+****************************************************************************
+sai_rififpdrop_counters1 techsupport dump begin at Thu 05 Feb 2026 03:58:01 PM +04
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c SYNCD -e show system internal sai vlan ifp drop counters
+--------------------------------------------------------------------
+
+|              Drop entry                    |   Counters  |
+------------------------------------------------------------
+|  DA = SystemMAC, Vlan = SAG-VSI            | 0 |
+|  DA = SystemMAC, Vlan = MclagGW-VSI        | 0 |
+|  MyStationHit, Vlan = L2-VSI               | 0 |
+|  DA = MclagGW-MAC, Vlan = Non-MclagGw-VSI  | 0 |
+*************** Profiling data ***************
+End to End Execution time: 102.20 ms
+Backend execution time: 3 ms
+**********************************************
+
+
+real	0m0.471s
+user	0m0.298s
+sys	0m0.055s
+
+
+
+
+
+****************************************************************************
+sai_rififpdrop_counters1 techsupport dump ended at Thu 05 Feb 2026 03:58:01 PM +04
+****************************************************************************

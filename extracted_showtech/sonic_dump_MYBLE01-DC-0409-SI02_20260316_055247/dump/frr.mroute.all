@@ -1,0 +1,12 @@
+VRF: default
+IP Multicast Routing Table
+Flags: S - Sparse, C - Connected, P - Pruned
+       R - SGRpt Pruned, F - Register flag, T - SPT-bit set
+
+Source          Group           Flags    Proto  Input            Output           TTL  Uptime
+VRF: mgmt
+IP Multicast Routing Table
+Flags: S - Sparse, C - Connected, P - Pruned
+       R - SGRpt Pruned, F - Register flag, T - SPT-bit set
+
+Source          Group           Flags    Proto  Input            Output           TTL  Uptime

@@ -1,0 +1,114 @@
+
+COUNTER                  DESCRIPTION
+-----------------------  --------------------------------------
+RIPD4                    Rx IPv4 L3 discards
+RIPHE4                   Rx IPv4 L3 IP Header Errors
+RIPD6                    Rx IPv6 L3 discards
+RIPHE6                   Rx IPv6 L3 IP Header Errors
+RDISC                    Rx discards
+RPORTD                   Rx PortInDiscards
+RPARITYD                 Rx Parity errors
+IUNHGI_64                Rx unknown HGI pkts
+ING_NIV_RX_FRAMES_ER     VNTAG/ETAG format errors
+ING_NIV_RX_FRAMES_FO     NIV/PE forwarding errors
+ING_ECN_COUNTER_64       Ingress ECN packets
+EGR_ECN_COUNTER_64       ECN errors
+TPCE_64                  Egress purge and cell Error drops
+RFCS                     Rx FCS error frames
+RXUO                     Rx unsupported Opcode frames
+RXUDA                    Rx unsupported DA for PAUSE/PFC
+RXWSA                    Rx wrong SA frames
+RALN                     Rx Alignment Errors
+RFLR                     Rx length out of range
+RERPKT                   Rx code errors
+RFCR                     Rx False carrier
+ROVR                     Rx oversized
+RJBR                     Rx Jabber frames
+RMTUE                    Rx MTU check error frames
+RTRFU                    Rx trauncated frames
+CLMIB_RSCHCRC            Rx SCH CRC Error
+RUND                     Rx undersize
+RFRG                     Rx framents
+RRPKT                    Rx RUNT frames
+TJBR                     Tx Jabbers
+TFCS                     Tx FCS errors
+TEDF                     Tx Multiple Deferral frames
+TSCL                     Tx single collision frames
+TMCL                     Tx Multiple collision frames
+TLCL                     Tx Late collision frames
+TXCL                     Tx Excessive collision frames
+TFRG                     Tx Fragments
+TERR                     Tx Errors
+TRPKT                    Tx RUNT frames
+TUFL                     Tx FIFO underrun
+CLMIB_XTHOL              Tx End-to-End HOL packets
+PERQ_DROP_PKT(0)         Packet drops on queue #0
+PERQ_DROP_PKT(1)         Packet drops on queue #1
+PERQ_DROP_PKT(2)         Packet drops on queue #2
+PERQ_DROP_PKT(3)         Packet drops on queue #3
+PERQ_DROP_PKT(4)         Packet drops on queue #4
+PERQ_DROP_PKT(5)         Packet drops on queue #5
+PERQ_DROP_PKT(6)         Packet drops on queue #6
+PERQ_DROP_PKT(7)         Packet drops on queue #7
+PERQ_DROP_PKT(8)         Packet drops on queue #8
+PERQ_DROP_PKT(9)         Packet drops on queue #9
+PERQ_WRED_DROP_PKT_U(0)  WRED Drops on queue #0
+PERQ_WRED_DROP_PKT_U(1)  WRED Drops on queue #1
+PERQ_WRED_DROP_PKT_U(2)  WRED Drops on queue #2
+PERQ_WRED_DROP_PKT_U(3)  WRED Drops on queue #3
+PERQ_WRED_DROP_PKT_U(4)  WRED Drops on queue #4
+PERQ_WRED_DROP_PKT_U(5)  WRED Drops on queue #5
+PERQ_WRED_DROP_PKT_U(6)  WRED Drops on queue #6
+PERQ_WRED_DROP_PKT_U(7)  WRED Drops on queue #7
+PERQ_WRED_DROP_PKT_U(8)  WRED Drops on queue #8
+PERQ_WRED_DROP_PKT_U(9)  WRED Drops on queue #9
+PERQ_DROP_PKT_UC(0)      Packet drops on UC queue #0
+PERQ_DROP_PKT_UC(1)      Packet drops on UC queue #1
+PERQ_DROP_PKT_UC(2)      Packet drops on UC queue #2
+PERQ_DROP_PKT_UC(3)      Packet drops on UC queue #3
+PERQ_DROP_PKT_UC(4)      Packet drops on UC queue #4
+PERQ_DROP_PKT_UC(5)      Packet drops on UC queue #5
+PERQ_DROP_PKT_UC(6)      Packet drops on UC queue #6
+PERQ_DROP_PKT_UC(7)      Packet drops on UC queue #7
+PERQ_DROP_PKT_UC(8)      Packet drops on UC queue #8
+PERQ_DROP_PKT_UC(9)      Packet drops on UC queue #9
+DROP_PKT_ING             MMU drops due to THDI(input threshold)
+DROP_PKT_YEL             MMU YELLOW drops
+DROP_PKT_RED             MMU RED drops
+OBM_LOSSY_LO_DRP_PKT(0)  OBM Lossy Low drops
+OBM_LOSSY_HI_DRP_PKT(0)  OBM Lossy high drops
+OBM_LOSSLESS0_DRP_PK(0)  OBM lossless0 drops
+OBM_LOSSLESS1_DRP_PK(0)  OBM lossless1 drops
+
+IFACE      COUNTER      COUNT    CHANGE
+---------  ---------  -------  --------
+Ethernet6  RFCS           212      +212
+Ethernet6  RERPKT          34       +34
+
+IFACE       COUNTER    COUNT        CHANGE
+----------  ---------  -----------  ------------
+Ethernet11  RFCS       413,628,906  +413,628,906
+Ethernet11  RERPKT     52,314,335   +52,314,335
+Ethernet11  RFRG       1,842,365    +1,842,365
+Ethernet11  RRPKT      4,343,246    +4,343,246
+
+IFACE       COUNTER      COUNT    CHANGE
+----------  ---------  -------  --------
+Ethernet15  RIPHE4           1        +1
+
+IFACE       COUNTER    COUNT    CHANGE
+----------  ---------  -------  --------
+Ethernet64  RIPD4      6,201    +6,201
+
+IFACE       COUNTER    COUNT    CHANGE
+----------  ---------  -------  --------
+Ethernet68  RIPD4      1,177    +1,177
+
+IFACE       COUNTER    COUNT    CHANGE
+----------  ---------  -------  --------
+Ethernet72  RIPD4      1,698    +1,698
+
+IFACE       COUNTER    COUNT    CHANGE
+----------  ---------  -------  --------
+Ethernet76  RIPD4      1,607    +1,607
+

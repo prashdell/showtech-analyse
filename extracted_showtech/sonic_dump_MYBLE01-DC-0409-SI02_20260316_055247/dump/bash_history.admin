@@ -1,0 +1,4 @@
+Jan 02 26 14:22:35 sudo config ztp disable -y
+Jan 02 26 14:25:37 sonic-cli
+Jan 02 26 14:29:46 exit
+Jan 05 26 10:56:56 sonic-cli

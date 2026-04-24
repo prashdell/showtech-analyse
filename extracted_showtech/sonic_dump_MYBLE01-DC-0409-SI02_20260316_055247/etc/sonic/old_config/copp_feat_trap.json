@@ -1,0 +1,116 @@
+{
+    "COPP_FEATURE_TRAP_MAP": {
+        "eapol": {
+            "trap_ids": "eapol",
+            "state" : "enabled"
+        },
+        "lacp": {
+            "trap_ids": "lacp",
+            "state" : "enabled"
+        },
+        "udld": {
+            "trap_ids": "udld",
+            "state" : "enabled"
+        },
+        "stp": {
+            "trap_ids": "stp,pvrst",
+            "state" : "enabled"
+        },
+        "bfd": {
+            "trap_ids": "bfd,bfdv6",
+            "state" : "enabled"
+        },
+        "ptp": {
+            "trap_ids": "ptp",
+            "state" : "disabled"
+        },
+        "lldp": {
+            "trap_ids": "lldp",
+            "state" : "enabled"
+        },
+        "vrrp": {
+            "trap_ids": "vrrp,vrrpv6",
+            "state" : "disabled"
+        },
+        "iccp": {
+            "trap_ids": "iccp",
+            "state" : "enabled"
+        },
+        "ospf": {
+            "trap_ids": "ospf",
+            "state" : "enabled"
+        },
+        "bgp": {
+            "trap_ids": "bgp,bgpv6",
+            "state" : "enabled"
+        },
+        "pim": {
+            "trap_ids": "pim",
+            "state" : "enabled"
+        },
+        "igmp": {
+            "trap_ids": "igmp_query",
+            "state" : "enabled"
+        },
+        "arp-suppress": {
+            "trap_ids": "arp_suppress,nd_suppress",
+            "state" : "enabled"
+        },
+        "arp": {
+            "trap_ids": "arp_req,arp_resp,neigh_discovery",
+            "state" : "enabled"
+        },
+        "dhcp": {
+            "trap_ids": "dhcp",
+            "state" : "disabled"
+        },
+        "dhcpv6": {
+            "trap_ids": "dhcpv6",
+            "state" : "disabled"
+        },
+        "dhcpl2": {
+            "trap_ids": "dhcp_l2",
+            "state" : "disabled"
+        },
+        "dhcpv6l2": {
+            "trap_ids": "dhcpv6_l2",
+            "state" : "disabled"
+        },
+        "icmp": {
+            "trap_ids": "icmp,icmpv6",
+            "state" : "enabled"
+        },
+        "ip2me": {
+            "trap_ids": "ip2me",
+            "state" : "enabled"
+        },
+        "subnet": {
+            "trap_ids": "subnet",
+            "state" : "enabled"
+        },
+        "nat": {
+            "trap_ids": "src_nat_miss,dest_nat_miss",
+            "state" : "enabled"
+        },
+        "mtu": {
+            "trap_ids": "l3_mtu_error",
+            "state" : "enabled"
+        },
+        "sflow": {
+            "trap_ids": "sample_packet",
+            "state" : "disabled"
+        },
+        "ipmc": {
+            "trap_ids": "known_l3_mc",
+            "state" : "disabled"
+        },
+        "ipmc-unknown": {
+            "trap_ids": "unknown_l3_mc",
+            "state" : "disabled"
+        },
+        "ttl": {
+            "trap_ids": "ttl_error",
+            "state" : "enabled"
+        }
+    }
+}

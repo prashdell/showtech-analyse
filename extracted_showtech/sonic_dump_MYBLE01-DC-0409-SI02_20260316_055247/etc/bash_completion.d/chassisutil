@@ -1,0 +1,12 @@
+_locator_led_completion() {
+    COMPREPLY=( $( env COMP_WORDS="${COMP_WORDS[*]}" \
+                   COMP_CWORD=$COMP_CWORD \
+                   _LOCATOR_LED_COMPLETE=complete $1 ) )
+    if [ $COMP_CWORD -eq 2 ]; then
+	COMPREPLY=( $( echo ${COMPREPLY[*]} | sed -E 's/status//g' ) )
+    fi
+    return 0
+}
+
+complete -F _locator_led_completion -o default locator-led;
+

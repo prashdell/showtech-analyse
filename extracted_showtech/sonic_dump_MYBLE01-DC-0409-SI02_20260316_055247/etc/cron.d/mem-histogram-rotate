@@ -1,0 +1,2 @@
+# Attempt to rotate forcefully the /var/log/mem-histogram.log file for every day
+58 23 * * * root /usr/sbin/logrotate -f /etc/logrotate.d/histogram/mem-histogram-rule  > /dev/null 2>&1

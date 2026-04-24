@@ -1,0 +1,10 @@
+Vlan113  VID: 113	 REORDER_HDR: 1  dev->priv_flags: 1001
+         total frames received     58751175
+          total bytes received   2637837092
+      Broadcast/Multicast Rcvd       278267
+
+      total frames transmitted     12479372
+       total bytes transmitted    524133624
+Device: Bridge
+INGRESS priority mappings: 0:0  1:0  2:0  3:0  4:0  5:0  6:0 7:0
+ EGRESS priority mappings: 

@@ -1,0 +1,15 @@
+[Unit]
+Description=In-memory logging infrastructure
+Before=rc-local.service rsyslog.service
+
+[Service]
+Type=oneshot
+StandardOutput=syslog+console
+ExecStart=/usr/bin/in-memory.sh --mount-ramfs
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutSec=0
+RemainAfterExit=yes
+GuessMainPID=no
+
+[Install]
+WantedBy=multi-user.target

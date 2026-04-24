@@ -1,0 +1,59 @@
+Interface    Media Name               Max Power(W)    Vendor Name    Serial Number    Part Number       QSA        Qualified    Status
+                                      Media | Port                                                      Adapter
+-----------  -----------------------  --------------  -------------  ---------------  ----------------  ---------  -----------  --------
+Ethernet0    SFP+ 10GBASE-SR          2.0   | 2.5     Dell           CN04HG0057M11HG  WTRD1             N/A        True         Ready
+Ethernet1    SFP+ 10GBASE-SR          2.0   | 2.5     Dell           CN04HG0057M111G  WTRD1             N/A        True         Ready
+Ethernet2    SFP+ 10GBASE-SR          2.0   | 2.5     Dell           CN04HG0057M1183  WTRD1             N/A        True         Ready
+Ethernet3    SFP+ 10GBASE-SR          2.0   | 2.5     Dell           CN04HG0057M11K6  WTRD1             N/A        True         Ready
+Ethernet4    SFP+ 10GBASE-SR          2.0   | 2.5     Dell           CN04HG0032O10K0  WTRD1             N/A        True         Ready
+Ethernet5    SFP+ 10GBASE-SR          2.0   | 2.5     Dell           CN04HG0032O12U3  WTRD1             N/A        True         Ready
+Ethernet6    N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet7    N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet8    N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet9    N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet10   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet11   SFP+ 10GBASE-LR          2.0   | 2.5     DELL           AD8AT500LJ       RN84N             N/A        True         Ready
+Ethernet12   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet13   SFP 1000BASE-T           1.5   | 2.5     Dell           MY0F1M0054R002I  FCLF8521P2BTL-DL  N/A        True         N/A
+Ethernet14   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet15   SFP 1000BASE-T           1.5   | 2.5     Dell           MY0F1M0054R002P  FCLF8521P2BTL-DL  N/A        True         N/A
+Ethernet16   SFP+ 10GBASE-T           2.0   | 2.5     DELL           19101007         PGYJT             N/A        True         N/A
+Ethernet17   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet18   SFP+ 10GBASE-T           2.0   | 2.5     DELL           19100881         PGYJT             N/A        True         N/A
+Ethernet19   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet20   SFP+ 10GBASE-SR          2.0   | 2.5     JDSU           C6CSFM1KC        PLRXPLSCS43811    N/A        True         Ready
+Ethernet21   SFP+ 10GBASE-SR          2.0   | 2.5     JDSU           C6CSFM0CA        PLRXPLSCS43811    N/A        True         Ready
+Ethernet22   SFP+ 10GBASE-SR          2.0   | 2.5     DELL EMC       TH04HT0027L31W2  WTRD1             N/A        True         Ready
+Ethernet23   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet24   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet25   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet26   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet27   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet28   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet29   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet30   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet31   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet32   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet33   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet34   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet35   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet36   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet37   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet38   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet39   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet40   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet41   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet42   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet43   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet44   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet45   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet46   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet47   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet48   QSFP28 100GBASE-SR4-NOF  2.0   | 5.0     Dell           CN04HG0058T50GP  14NV5             N/A        True         Ready
+Ethernet52   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet56   QSFP28 100GBASE-SR4-NOF  2.0   | 5.0     Dell           CN04HG0058T50UL  14NV5             N/A        True         Ready
+Ethernet60   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet64   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet68   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet72   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A
+Ethernet76   N/A                      N/A   | N/A     N/A            N/A              N/A               N/A        N/A          N/A

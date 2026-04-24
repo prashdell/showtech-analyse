@@ -1,0 +1,10 @@
+Interface    IPv4 address/mask    Master    Admin/Oper    BGP Neighbor    Neighbor IP    Flags
+-----------  -------------------  --------  ------------  --------------  -------------  -------
+Vlan802      10.99.100.132/28               up/up         N/A             N/A
+Vlan803      10.92.30.67/29                 up/up         N/A             N/A
+Vlan809      10.92.30.235/29                up/up         N/A             N/A
+Vlan1120     10.90.30.177/28                up/up         N/A             N/A
+Vlan2000     10.90.30.159/31                up/up         N/A             N/A
+docker0      240.127.1.1/24                 up/down       N/A             N/A
+eth0         10.92.56.60/23       mgmt      up/up         N/A             N/A
+lo           127.0.0.1/8                    up/up         N/A             N/A

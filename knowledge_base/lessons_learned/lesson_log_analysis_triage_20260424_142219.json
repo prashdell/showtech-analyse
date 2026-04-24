@@ -1,0 +1,39 @@
+{
+  "lesson_id": "lesson_log_analysis_triage_20260424_142219",
+  "skill_name": "sonic_log_analysis_triage",
+  "lesson_type": "log_analysis",
+  "content": {
+    "success_patterns": [
+      "log_inventory_pattern",
+      "error_pattern_detection_pattern",
+      "service_failure_pattern",
+      "timeline_analysis_pattern",
+      "performance_impact_pattern",
+      "root_cause_pattern",
+      "cross_service_correlation_pattern",
+      "temporal_pattern_pattern"
+    ],
+    "context_factors": {
+      "archive_intelligence": "284_archive_production_intelligence",
+      "confidence_range": "92-98%",
+      "source_files_range": "1200-2400_files_per_instance",
+      "analysis_steps": 6,
+      "top_error_signatures": [
+        "error_in_kernel_fdb_add",
+        "no_handlers_for_command",
+        "rx_sock_error"
+      ],
+      "service_error_rates": {
+        "VRRP": "3.7%",
+        "Teamd": "0.48-0.80%",
+        "Orchagent": "0.35-0.55%",
+        "ACL": "0.31-0.40%"
+      }
+    }
+  },
+  "confidence": 0.95,
+  "impact": "high",
+  "timestamp": "2026-04-24T14:22:19.365467",
+  "execution_time": 5.2,
+  "captured_by": "comprehensive_analysis"
+}

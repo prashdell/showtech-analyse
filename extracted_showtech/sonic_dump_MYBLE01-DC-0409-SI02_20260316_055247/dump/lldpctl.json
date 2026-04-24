@@ -1,0 +1,527 @@
+{
+  "lldp": {
+    "interface": [
+      {
+        "eth0": {
+          "via": "LLDP",
+          "rid": "9",
+          "age": "8 days, 00:57:49",
+          "lastupdate": "0 day, 00:00:09",
+          "chassis": {
+            "MYBLE01-DC-0404-OM01": {
+              "id": {
+                "type": "mac",
+                "value": "1c:72:1d:f2:09:9e"
+              },
+              "descr": "Dell EMC Real Time Operating System Software. Dell EMC Operating System Version: 2.0. Dell EMC Application Software Version: 9.14(2.20) Copyright (c) 1999-2021 Dell Inc. All Rights Reserved.Build Time: Fri Apr  7 10:24:16 2023",
+              "capability": [
+                {
+                  "type": "Repeater",
+                  "enabled": true
+                },
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "GigabitEthernet 1/10"
+            },
+            "srcmac": "1c:72:1d:f2:09:a0",
+            "descr": "GigabitEthernet 1/10",
+            "ttl": "30"
+          }
+        }
+      },
+      {
+        "Ethernet0": {
+          "via": "LLDP",
+          "rid": "10",
+          "age": "8 days, 00:57:46",
+          "lastupdate": "0 day, 00:00:08",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:46:11"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:46:11"
+            },
+            "srcmac": "00:50:56:53:2a:34",
+            "ttl": "120"
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,1B,21",
+              "subtype": "2",
+              "len": "51",
+              "value": "02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet1": {
+          "via": "LLDP",
+          "rid": "7",
+          "age": "8 days, 00:57:50",
+          "lastupdate": "0 day, 00:00:16",
+          "chassis": {
+            "MYBLE01VOS40": {
+              "id": {
+                "type": "mac",
+                "value": "0a:56:bb:8c:65:00"
+              },
+              "descr": "versa-flexvnf-20250501-043503-ab88b41-22.1.4-B version 22.1 running on VMware Virtual Platform",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "vni-0/3"
+            },
+            "srcmac": "00:50:56:bb:48:95",
+            "descr": "LAN",
+            "ttl": "120",
+            "mfs": "1500",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "current": "10GigBaseR - R PCS/PMA, unknown PMD."
+            }
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Ethernet1": {
+          "via": "LLDP",
+          "rid": "8",
+          "age": "8 days, 00:57:50",
+          "lastupdate": "0 day, 00:00:16",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:46:13"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:46:13"
+            },
+            "srcmac": "00:50:56:50:2c:a4",
+            "ttl": "120"
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,1B,21",
+              "subtype": "2",
+              "len": "51",
+              "value": "02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet2": {
+          "via": "LLDP",
+          "rid": "3",
+          "age": "8 days, 00:57:51",
+          "lastupdate": "0 day, 00:00:03",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:3a:15"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:3a:15"
+            },
+            "srcmac": "00:50:56:55:53:f2",
+            "ttl": "120"
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,1B,21",
+              "subtype": "2",
+              "len": "51",
+              "value": "02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet3": {
+          "via": "LLDP",
+          "rid": "5",
+          "age": "8 days, 00:57:50",
+          "lastupdate": "0 day, 00:00:16",
+          "chassis": {
+            "MYBLE01VOS41": {
+              "id": {
+                "type": "mac",
+                "value": "0a:56:bb:ab:63:00"
+              },
+              "descr": "versa-flexvnf-20250501-043503-ab88b41-22.1.4-B version 22.1 running on VMware Virtual Platform",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "vni-0/3"
+            },
+            "srcmac": "00:50:56:bb:5e:5e",
+            "descr": "LAN",
+            "ttl": "120",
+            "mfs": "1500",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "current": "10GigBaseR - R PCS/PMA, unknown PMD."
+            }
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Ethernet3": {
+          "via": "LLDP",
+          "rid": "6",
+          "age": "8 days, 00:57:50",
+          "lastupdate": "0 day, 00:00:03",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:3a:17"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:3a:17"
+            },
+            "srcmac": "00:50:56:56:bb:69",
+            "ttl": "120"
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,1B,21",
+              "subtype": "2",
+              "len": "51",
+              "value": "02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet4": {
+          "via": "LLDP",
+          "rid": "1",
+          "age": "8 days, 00:57:51",
+          "lastupdate": "0 day, 00:00:03",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:46:12"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:46:12"
+            },
+            "srcmac": "00:50:56:52:82:7b",
+            "ttl": "120"
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,1B,21",
+              "subtype": "2",
+              "len": "51",
+              "value": "02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet5": {
+          "via": "LLDP",
+          "rid": "2",
+          "age": "8 days, 00:57:51",
+          "lastupdate": "0 day, 00:00:08",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:3a:16"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "40:a6:b7:dc:3a:16"
+            },
+            "srcmac": "00:50:56:55:ac:99",
+            "ttl": "120"
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,1B,21",
+              "subtype": "2",
+              "len": "51",
+              "value": "02,0A,00,00,00,00,00,00,00,00,00,00,04,11,00,00,C0,00,01,23,45,67,0D,0D,0D,0D,0C,0C,0C,0C,08,06,06,00,00,C0,00,00,08,08,0A,00,00,C0,00,89,06,00,1B,21,08"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet56": {
+          "via": "LLDP",
+          "rid": "4",
+          "age": "8 days, 00:57:50",
+          "lastupdate": "0 day, 00:00:03",
+          "chassis": {
+            "MYBLE01-DC-0408-SI01": {
+              "id": {
+                "type": "mac",
+                "value": "b4:e9:b8:e7:cd:00"
+              },
+              "descr": "SONiC Software Version: SONiC.4.5.1-Enterprise_Standard - HwSku: DellEMC-S5248f-P-25G-DPB - Distribution: Debian 11.11 - Kernel: 5.10.0-35-amd64",
+              "mgmt-ip": "10.92.56.59",
+              "src-mac": "b6:e9:b8:e7:cd:02",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Eth1/51"
+            },
+            "srcmac": "b6:e9:b8:e7:cd:02",
+            "descr": "DEL::PCM::100G::MYBLE01-DC-0409-SI02::Eth56",
+            "ttl": "120",
+            "aggregation": "100",
+            "mfs": "9100",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable"
+            }
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              },
+              {
+                "type": "MDI/PD",
+                "available": true
+              },
+              {
+                "type": "Inventory",
+                "available": true
+              }
+            ],
+            "inventory": {
+              "hardware": "3.40.0.9-17",
+              "software": "5.10.0-35-amd64",
+              "firmware": "3.40.0.9-17",
+              "serial": "TH05K640CET0059K0NWZ",
+              "manufacturer": "Dell EMC",
+              "model": "S5248F-ON",
+              "asset": "B4RDSR3"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet48": {
+          "via": "LLDP",
+          "rid": "4",
+          "age": "8 days, 00:57:32",
+          "lastupdate": "0 day, 00:00:16",
+          "chassis": {
+            "MYBLE01-DC-0408-SI01": {
+              "id": {
+                "type": "mac",
+                "value": "b4:e9:b8:e7:cd:00"
+              },
+              "descr": "SONiC Software Version: SONiC.4.5.1-Enterprise_Standard - HwSku: DellEMC-S5248f-P-25G-DPB - Distribution: Debian 11.11 - Kernel: 5.10.0-35-amd64",
+              "mgmt-ip": "10.92.56.59",
+              "src-mac": "b6:e9:b8:e7:cd:02",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Eth1/49"
+            },
+            "srcmac": "b6:e9:b8:e7:cd:02",
+            "descr": "DEL::PCM::100G::MYBLE01-DC-0409-SI02::Eth48",
+            "ttl": "120",
+            "aggregation": "100",
+            "mfs": "9100",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "100GbaseCR10 - 100GBASE-R PCS/PMA over 10 lane shielded copper balanced cable"
+            }
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              },
+              {
+                "type": "MDI/PD",
+                "available": true
+              },
+              {
+                "type": "Inventory",
+                "available": true
+              }
+            ],
+            "inventory": {
+              "hardware": "3.40.0.9-17",
+              "software": "5.10.0-35-amd64",
+              "firmware": "3.40.0.9-17",
+              "serial": "TH05K640CET0059K0NWZ",
+              "manufacturer": "Dell EMC",
+              "model": "S5248F-ON",
+              "asset": "B4RDSR3"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+

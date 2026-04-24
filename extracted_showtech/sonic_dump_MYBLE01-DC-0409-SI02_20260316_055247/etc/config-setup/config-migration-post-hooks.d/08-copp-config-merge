@@ -1,0 +1,85 @@
+PLATFORM=`sonic-cfggen -H -v DEVICE_METADATA.localhost.platform`
+PRESET=(`head -n 1 /usr/share/sonic/device/$PLATFORM/default_sku`)
+HW_KEY=${PRESET[0]}
+COPP_PLATFORM_TEMPLATE="/usr/share/sonic/device/${PLATFORM}/${HW_KEY}/copp_platform_config.j2"
+PLATFORM_COMMON_DIR=/usr/share/sonic/device/x86_64-broadcom_common
+COPP_CHIP_ID="/tmp/copp_chip"
+brcm_sw=$(lspci -d 0x14e4: -n | cut -f3 -d" " | cut -f2 -d: | uniq)
+chip_id=${brcm_sw::3}
+echo $chip_id > ${COPP_CHIP_ID}
+COPP_ASIC_CAPABILITY=$PLATFORM_COMMON_DIR/x86_64-broadcom_${chip_id}/copp_capabilities_config.j2
+COPP_PLATFORM_CAPABILITY=/usr/share/sonic/device/${PLATFORM}/${HW_KEY}/copp_capabilities_config.j2
+COPP_DEFAULT_TEMPLATE="/usr/share/sonic/templates/copp_config.j2"
+COPP_CONFIG_JSON="/etc/sonic/copp_config.json"
+COPP_BASE_CAPABILITY="/tmp/copp_base_capability.j2"
+COPP_BASE_CONFIG_JSON="/tmp/copp_base_config.json"
+
+# Set copp rx rate limit
+function set_copp_rx_rate()
+{
+    if [ -f ${COPP_PLATFORM_CAPABILITY} ]; then
+        # Extract copp_rx_rate
+        KNETRX_RATE=`jq -r '[.copp_rx_rate] | @csv' ${COPP_PLATFORM_CAPABILITY}`
+        if [ ! -z "${KNETRX_RATE}" ]; then
+            if [[ ${KNETRX_RATE} =~ ^[0-9]+$ ]]; then
+                if (( ${KNETRX_RATE} >= 100 && ${KNETRX_RATE} <= 100000 )); then
+                    echo ${KNETRX_RATE} > /etc/sonic/copp_rx_rate
+                    if [ -f /proc/bcm/knet/rate ]; then
+                        # 7 Rx DMA channels
+                        KNETRX_RATE_ARRAY="$KNETRX_RATE,$KNETRX_RATE,$KNETRX_RATE,$KNETRX_RATE,$KNETRX_RATE,$KNETRX_RATE,$KNETRX_RATE"
+                        echo "rx_rate=$KNETRX_RATE_ARRAY" > /proc/bcm/knet/rate
+                    elif [ -f /proc/linux_ngknet/rate_limit ]; then
+                        echo "$KNETRX_RATE" > /proc/linux_ngknet/rate_limit
+                    fi
+                fi
+            fi
+        fi
+    fi
+}
+
+# Generate base copp config considering asic/platform capabilities
+function generate_copp_base_config()
+{
+    if [[ -f ${COPP_ASIC_CAPABILITY} && -f ${COPP_PLATFORM_CAPABILITY} ]]; then
+        set_copp_rx_rate
+        # Merge ASIC and PLATFORM capabilities and generate BASE capabilities
+        jq -s '.[0] * .[1]' ${COPP_ASIC_CAPABILITY} ${COPP_PLATFORM_CAPABILITY} > ${COPP_BASE_CAPABILITY}
+        if [ ! $? = 0 ]; then
+            sonic-cfggen -d -t ${COPP_DEFAULT_TEMPLATE} > ${COPP_BASE_CONFIG_JSON}
+        else
+            # Generate BASE copp config considering merged capabilities
+            sonic-cfggen -j ${COPP_BASE_CAPABILITY} -t ${COPP_DEFAULT_TEMPLATE} > ${COPP_BASE_CONFIG_JSON}
+        fi
+        #rm -f ${COPP_BASE_CAPABILITY}
+    elif [ -f ${COPP_ASIC_CAPABILITY} ]; then
+        # Generate BASE copp config considering asic capabilities
+        sonic-cfggen -j ${COPP_ASIC_CAPABILITY} -t ${COPP_DEFAULT_TEMPLATE} > ${COPP_BASE_CONFIG_JSON}
+    elif [ -f ${COPP_PLATFORM_CAPABILITY} ]; then
+        set_copp_rx_rate
+        # Generate BASE copp config considering platform capabilities
+        sonic-cfggen -j ${COPP_PLATFORM_CAPABILITY} -t ${COPP_DEFAULT_TEMPLATE} > ${COPP_BASE_CONFIG_JSON}
+    else
+        # Generate default CoPP configuration file
+        sonic-cfggen -d -t ${COPP_DEFAULT_TEMPLATE} > ${COPP_BASE_CONFIG_JSON}
+    fi
+}
+
+# Merge base and platform configs
+function generate_copp_platform_config()
+{
+    if [ -f ${COPP_DEFAULT_TEMPLATE} ]; then
+        generate_copp_base_config
+        if [ -f ${COPP_PLATFORM_TEMPLATE} ]; then
+            # Merge BASE copp config and platform  config
+            jq -s '.[0] * .[1]' ${COPP_BASE_CONFIG_JSON} ${COPP_PLATFORM_TEMPLATE} > ${COPP_CONFIG_JSON}
+            if [ ! $? = 0 ]; then
+                cp -f ${COPP_BASE_CONFIG_JSON} ${COPP_CONFIG_JSON}
+            fi
+        else
+            cp -f ${COPP_BASE_CONFIG_JSON} ${COPP_CONFIG_JSON}
+        fi
+        #rm -f ${COPP_BASE_CONFIG_JSON}
+    fi
+}
+
+generate_copp_platform_config

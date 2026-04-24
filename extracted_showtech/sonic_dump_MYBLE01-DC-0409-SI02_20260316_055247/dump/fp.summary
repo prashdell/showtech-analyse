@@ -1,0 +1,3316 @@
+fp show
+FP:	unit 0:
+PIPELINE STAGE INGRESS
+FP:	      :tcam_sz=18432(0x4800), tcam_slices=12, tcam_ext_numb=0,
+PIPELINE STAGE EGRESS
+FP:	      :tcam_sz=2048(0x800), tcam_slices=4, tcam_ext_numb=0,
+PIPELINE STAGE LOOKUP
+FP:	      :tcam_sz=1024(0x400), tcam_slices=4, tcam_ext_numb=0,
+GID          4: gid=0x4, instance=0 mode=Double, stage=Egress lookup=Enabled, ActionResId={-1}, pbmp={0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008878787f87878089fe1e0203e1e1e023}
+         qset={StageEgress, MirrorCopy, CpuQueue, IngressClassField, HiGigDstGport},
+         selcodes[0]=
+{
+         FPF3=KEY6
+         Intraslice=Primary slice.
+ {StageEgress->HiGigDstGport},
+         selcodes[1]=
+{
+         FPF3=KEY4
+         Intraslice=Primary slice.
+ {MirrorCopy->CpuQueue->IngressClassField},
+
+         group_priority= -2147483647
+         slice_primary =  {slice_number=0, Entry count=512(0x200), Entry free=507(0x1fb)},
+         slice_secondary = {slice_number=1}
+         group_status={prio_min=1, prio_max=900, entries_total=1024, entries_free=1019,
+                       counters_total=2048, counters_free=2042, meters_total=1536, meters_free=1530}
+EID 0x00000004: gid=0x4,
+         slice=0, slice_idx=0x4, part =0 prio=0x1, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageEgress 
+ HiGigDstGport 
+    Offset0: 64 Width0: 16 
+    DATA=0x00000000 
+    MASK=0x0000ffff 
+         slice=1, slice_idx=0x4, part =1 prio=0x1, flags=0x10604, Installed, Enabled
+              tcam: color_indep=1, 
+ CpuQueue 
+    Offset0: 194 Width0: 6 
+    DATA=0x00000000 
+    MASK=0x0000003f 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer={pid=0x14, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x64, commit_kbits_burst=0x64, PacketBased=0x1, mode=0, entries=2, Clean}
+         statistics={stat id 27  slice = 0 idx=2 entries=2}{GreenBytes}{GreenPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000000b: gid=0x4,
+         slice=0, slice_idx=0, part =0 prio=0x384, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageEgress 
+ HiGigDstGport 
+    Offset0: 64 Width0: 16 
+    DATA=0x00000000 
+    MASK=0x0000ffff 
+         slice=1, slice_idx=0, part =1 prio=0x384, flags=0x10604, Installed, Enabled
+              tcam: color_indep=1, 
+ IngressClassField 
+    Offset0: 207 Width0: 15 
+    DATA=0x00001e08 
+    MASK=0x00007fff 
+         action={act=Drop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics=NULL
+         Extended statistics=NULL
+EID 0x00000028: gid=0x4,
+         slice=0, slice_idx=0x1, part =0 prio=0x14, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageEgress 
+ HiGigDstGport 
+    Offset0: 64 Width0: 16 
+    DATA=0x00000000 
+    MASK=0x0000ffff 
+         slice=1, slice_idx=0x1, part =1 prio=0x14, flags=0x10604, Installed, Enabled
+              tcam: color_indep=1, 
+ CpuQueue 
+    Offset0: 194 Width0: 6 
+    DATA=0x00000004 
+    MASK=0x0000003f 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer={pid=0xb, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1f4, commit_kbits_burst=0x1f4, PacketBased=0x1, mode=0, entries=2, Clean}
+         statistics={stat id 18  slice = 0 idx=0 entries=2}{GreenBytes}{GreenPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000029: gid=0x4,
+         slice=0, slice_idx=0x2, part =0 prio=0x3, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageEgress 
+ HiGigDstGport 
+    Offset0: 64 Width0: 16 
+    DATA=0x00000000 
+    MASK=0x0000ffff 
+         slice=1, slice_idx=0x2, part =1 prio=0x3, flags=0x10604, Installed, Enabled
+              tcam: color_indep=1, 
+ CpuQueue 
+    Offset0: 194 Width0: 6 
+    DATA=0x00000005 
+    MASK=0x0000003f 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer={pid=0xc, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x12c, commit_kbits_burst=0x12c, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 19  slice = 0 idx=1 entries=2}{GreenBytes}{GreenPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000002a: gid=0x4,
+         slice=0, slice_idx=0x3, part =0 prio=0x3, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageEgress 
+ HiGigDstGport 
+    Offset0: 64 Width0: 16 
+    DATA=0x00000000 
+    MASK=0x0000ffff 
+         slice=1, slice_idx=0x3, part =1 prio=0x3, flags=0x10604, Installed, Enabled
+              tcam: color_indep=1, 
+ CpuQueue 
+    Offset0: 194 Width0: 6 
+    DATA=0x00000005 
+    MASK=0x0000003f 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer={pid=0xc, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x12c, commit_kbits_burst=0x12c, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 19  slice = 0 idx=1 entries=2}{GreenBytes}{GreenPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+Intra-slice double wide group, GID          3: gid=0x3, instance=0 mode=IntraSliceDouble, stage=Lookup lookup=Enabled, ActionResId={-1}, pbmp={0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008878787f87878089fe1e0203e1e1e023}
+         qset={SrcMac, DstMac, InPort, EtherType, StageLookup, IpFrag},
+         selcodes[0]=
+{
+         FPF1=0
+         FPF2=3
+         SrcEntitySelect=9
+         IpHeaderSelect=Outer
+         Intraslice=Primary slice.
+ {StageLookup->InPort->DstMac->SrcMac->EtherType},
+         selcodes[1]=
+{
+         FPF3=0 {IpFrag},
+
+         group_priority= -2147483647
+         slice_primary =  {slice_number=0, Entry count=256(0x100), Entry free=122(0x7a)},
+         group_status={prio_min=0, prio_max=2147483647, entries_total=512, entries_free=506,
+                       counters_total=71680, counters_free=52219, meters_total=0, meters_free=0}
+EID 0x00000003: gid=0x3,
+         slice=0, slice_idx=0x5, part =0 prio=0, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageLookup 
+         slice=0, slice_idx=0x85, part =1 prio=0, flags=0x10702, Installed, Enabled
+              tcam: color_indep=1, 
+ IpFrag 
+    Offset0: 22 Width0: 2 
+    DATA=0x00000000 
+    MASK=0x00000002 
+         action={act=HashSelect1, param0=3856(0xf10), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics=NULL
+         Extended statistics=NULL
+EID 0x00000005: gid=0x3,
+         slice=0, slice_idx=0, part =0 prio=0x7fffffff, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageLookup 
+ InPort 
+    Offset0: 200 Width0: 8 
+    DATA=0x00000000 
+    MASK=0x000000ff 
+ SrcMac 
+    Offset0: 68 Width0: 48 
+    DATA=0x0000b4e9 b8e7ce02 
+    MASK=0x0000ffff ffffffff 
+         slice=0, slice_idx=0x80, part =1 prio=0x7fffffff, flags=0x10702, Installed, Enabled
+              tcam: color_indep=1, 
+         action={act=DoNotLearn, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 3  slice = 1 idx=3 entries=1}{Packets}
+         Extended statistics=NULL
+EID 0x00000006: gid=0x3,
+         slice=0, slice_idx=0x1, part =0 prio=0x7ffffffe, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageLookup 
+ DstMac 
+    Offset0: 116 Width0: 48 
+    DATA=0x00000180 c2000000 
+    MASK=0x0000ffff fffffff0 
+ SrcMac 
+    Offset0: 68 Width0: 48 
+    DATA=0x0000b4e9 b8e7ce02 
+    MASK=0x0000ffff ffffffff 
+         slice=0, slice_idx=0x81, part =1 prio=0x7ffffffe, flags=0x10702, Installed, Enabled
+              tcam: color_indep=1, 
+         action={act=DoNotCheckVlan, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=DoNotLearn, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 4  slice = 1 idx=2 entries=1}{Packets}
+         Extended statistics=NULL
+EID 0x00000007: gid=0x3,
+         slice=0, slice_idx=0x2, part =0 prio=0x7ffffffd, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageLookup 
+ SrcMac 
+    Offset0: 68 Width0: 48 
+    DATA=0x0000b4e9 b8e7ce02 
+    MASK=0x0000ffff ffffffff 
+         slice=0, slice_idx=0x82, part =1 prio=0x7ffffffd, flags=0x10702, Installed, Enabled
+              tcam: color_indep=1, 
+         action={act=DoNotLearn, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 5  slice = 1 idx=7 entries=1}{Packets}
+         Extended statistics=NULL
+EID 0x00000008: gid=0x3,
+         slice=0, slice_idx=0x3, part =0 prio=0x7ffffffc, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageLookup 
+ DstMac 
+    Offset0: 116 Width0: 48 
+    DATA=0x00000180 c2000000 
+    MASK=0x0000ffff fffffff0 
+         slice=0, slice_idx=0x83, part =1 prio=0x7ffffffc, flags=0x10702, Installed, Enabled
+              tcam: color_indep=1, 
+         action={act=DoNotCheckVlan, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=DoNotLearn, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 6  slice = 1 idx=6 entries=1}{Packets}
+         Extended statistics=NULL
+EID 0x00000009: gid=0x3,
+         slice=0, slice_idx=0x4, part =0 prio=0x7ffffffb, flags=0x210602, Installed, Enabled
+              tcam: color_indep=1, 
+ StageLookup 
+ DstMac 
+    Offset0: 116 Width0: 48 
+    DATA=0x00000100 0cccccc0 
+    MASK=0x0000ffff fffffff0 
+         slice=0, slice_idx=0x84, part =1 prio=0x7ffffffb, flags=0x10702, Installed, Enabled
+              tcam: color_indep=1, 
+         action={act=DoNotCheckVlan, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=DoNotLearn, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 7  slice = 1 idx=5 entries=1}{Packets}
+         Extended statistics=NULL
+GID          2: gid=0x2, instance=0 mode=Single, stage=Ingress lookup=Enabled, ActionResId={-1}, pbmp={0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008878787f87878089fe1e0203e1e1e023}
+         qset={DstIp, Stage, StageIngress, Vrf, TunnelTerminated, L3DestRouteHit, MyStationHit, InterfaceClassVPort, OverlayVlanFormat},
+         aset={RedirectIpmc, DropCancel, PolicerGroup, StatGroup, EgressFlowControlEnable},
+
+         group_priority= -2
+         slice_primary =  {slice_number=2, Entry count=1536(0x600), Entry free=1532(0x5fc)},
+         group_status={prio_min=0, prio_max=0, entries_total=15360, entries_free=15356,
+                       counters_total=83968, counters_free=57852, meters_total=6144, meters_free=5376}
+EID 0x0000003d: gid=0x2,
+ slice=2, slice_idx=0, part=0, prio=0, flags=0x810602, Installed, Enabled, color_indep=1
+
+ DstIp 
+    Part:0 Offset0: 80 Width0:   4 
+    Part:0 Offset1: 84 Width1:   4 
+    Part:0 Offset2: 88 Width2:   4 
+    Part:0 Offset3: 92 Width3:   4 
+    Part:0 Offset4: 96 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    DATA=0x0a5a1ebf 
+    MASK=0xffffffff 
+ Vrf 
+    Part:0 Offset0: 124 Width0:   4 
+    Part:0 Offset1: 128 Width1:   4 
+    Part:0 Offset2: 132 Width2:   4 
+    DATA=0x00000000 
+    MASK=0x00000fff 
+ L3DestRouteHit 
+    Part:0 Offset0: 151 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ MyStationHit 
+    Part:0 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+         action={act=RedirectIpmc, param0=33554445(0x200000d), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 28  slice = 9 idx=3 entries=1}{Packets}
+         Extended statistics=NULL
+EID 0x0000003e: gid=0x2,
+ slice=2, slice_idx=0x1, part=0, prio=0, flags=0x810602, Installed, Enabled, color_indep=1
+
+ DstIp 
+    Part:0 Offset0: 80 Width0:   4 
+    Part:0 Offset1: 84 Width1:   4 
+    Part:0 Offset2: 88 Width2:   4 
+    Part:0 Offset3: 92 Width3:   4 
+    Part:0 Offset4: 96 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    DATA=0x0a63648f 
+    MASK=0xffffffff 
+ Vrf 
+    Part:0 Offset0: 124 Width0:   4 
+    Part:0 Offset1: 128 Width1:   4 
+    Part:0 Offset2: 132 Width2:   4 
+    DATA=0x00000000 
+    MASK=0x00000fff 
+ L3DestRouteHit 
+    Part:0 Offset0: 151 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ MyStationHit 
+    Part:0 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+         action={act=RedirectIpmc, param0=33554446(0x200000e), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 29  slice = 9 idx=2 entries=1}{Packets}
+         Extended statistics=NULL
+EID 0x0000003f: gid=0x2,
+ slice=2, slice_idx=0x2, part=0, prio=0, flags=0x810602, Installed, Enabled, color_indep=1
+
+ DstIp 
+    Part:0 Offset0: 80 Width0:   4 
+    Part:0 Offset1: 84 Width1:   4 
+    Part:0 Offset2: 88 Width2:   4 
+    Part:0 Offset3: 92 Width3:   4 
+    Part:0 Offset4: 96 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    DATA=0x0a5c1e47 
+    MASK=0xffffffff 
+ Vrf 
+    Part:0 Offset0: 124 Width0:   4 
+    Part:0 Offset1: 128 Width1:   4 
+    Part:0 Offset2: 132 Width2:   4 
+    DATA=0x00000000 
+    MASK=0x00000fff 
+ L3DestRouteHit 
+    Part:0 Offset0: 151 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ MyStationHit 
+    Part:0 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+         action={act=RedirectIpmc, param0=33554447(0x200000f), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 30  slice = 9 idx=7 entries=1}{Packets}
+         Extended statistics=NULL
+EID 0x00000040: gid=0x2,
+ slice=2, slice_idx=0x3, part=0, prio=0, flags=0x810602, Installed, Enabled, color_indep=1
+
+ DstIp 
+    Part:0 Offset0: 80 Width0:   4 
+    Part:0 Offset1: 84 Width1:   4 
+    Part:0 Offset2: 88 Width2:   4 
+    Part:0 Offset3: 92 Width3:   4 
+    Part:0 Offset4: 96 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    DATA=0x0a5c1eef 
+    MASK=0xffffffff 
+ Vrf 
+    Part:0 Offset0: 124 Width0:   4 
+    Part:0 Offset1: 128 Width1:   4 
+    Part:0 Offset2: 132 Width2:   4 
+    DATA=0x00000000 
+    MASK=0x00000fff 
+ L3DestRouteHit 
+    Part:0 Offset0: 151 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ MyStationHit 
+    Part:0 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+         action={act=RedirectIpmc, param0=33554448(0x2000010), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 31  slice = 9 idx=6 entries=1}{Packets}
+         Extended statistics=NULL
+GID          1: gid=0x1, instance=0 mode=Double, stage=Ingress lookup=Enabled, ActionResId={-1}, pbmp={0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008878787f87878089fe1e0203e1e1e023}
+         qset={DstMac, DstIp, InPorts, L4SrcPort, L4DstPort, EtherType, IpProtocol, Ttl, PacketRes, DstClassL3, IpInfo, IpType, Stage, StageIngress, InterfaceClassL2, TunnelTerminated, L2SrcStatic, L2StationMove, L3DestRouteHit, DstL3Egress, Vpn, MyStationHit, StpState, SysHdrType, _InPorts_1, _InPorts_2},
+         aset={CosQNew, CosQCpuNew, UcastCosQNew, McastCosQNew, PrioPktCopy, PrioPktNew, PrioPktTos, PrioPktCancel, PrioIntCopy, PrioIntNew, PrioIntTos, PrioIntCancel, DscpNew, DscpCancel, EcnNew, CopyToCpu, CopyToCpuCancel, SwitchToCpuCancel, SwitchToCpuReinstate, TimeStampToCpu, TimeStampToCpuCancel, RedirectPort, RedirectTrunk, RedirectCancel, RedirectPbmp, RedirectIpmc, RedirectMcast, RedirectVlan, RedirectBcastPbmp, EgressMask, EgressPortsAdd, Drop, DropCancel, MirrorOverride, MirrorIngress, MirrorEgress, L3Switch, L3SwitchCancel, DropPrecedence, RpDrop, RpDropCancel, RpDropPrecedence, RpCopyToCpu, RpCopyToCpuCancel, RpSwitchToCpuCancel, RpSwitchToCpuReinstate, RpTimeStampToCpu, RpTimeStampToCpuCancel, RpDscpNew, RpDscpCancel, RpEcnNew, RpPrioPktCopy, RpPrioPktNew, RpPrioPktTos, RpPrioPktCancel, RpCosQNew, RpUcastCosQNew, RpMcastCosQNew, RpPrioIntCopy, RpPrioIntNew, RpPrioIntTos, RpPrioIntCancel, YpDrop, YpDropCancel, YpDropPrecedence, YpCopyToCpu, YpCopyToCpuCancel, YpSwitchToCpuCancel, YpSwitchToCpuReinstate, YpTimeStampToCpu, YpTimeStampToCpuCancel, YpDscpNew, YpDscpCancel, YpEcnNew, YpPrioPktCopy, YpPrioPktNew, YpPrioPktTos, YpPrioPktCancel, YpCosQNew, YpUcastCosQNew, YpMcastCosQNew, YpPrioIntCopy, YpPrioIntNew, YpPrioIntTos, YpPrioIntCancel, ColorIndependent, GpDrop, GpDropCancel, GpDropPrecedence, GpCopyToCpu, GpCopyToCpuCancel, GpSwitchToCpuCancel, GpSwitchToCpuReinstate, GpTimeStampToCpu, GpTimeStampToCpuCancel, GpDscpNew, GpDscpCancel, GpEcnNew, GpTosPrecedenceNew, GpTosPrecedenceCopy, GpPrioPktCopy, GpPrioPktNew, GpPrioPktTos, GpPrioPktCancel, GpCosQNew, GpUcastCosQNew, GpMcastCosQNew, GpPrioIntCopy, GpPrioIntNew, GpPrioIntTos, GpPrioIntCancel, DoNotChangeTtl, DoNotCheckUrpf, NewClassId, MultipathHash, FabricQueue, DynamicHgTrunkCancel, ServicePoolIdNew, RedirectEgrNextHop, EcmpLoadBalanceCancel, EgressClassSelect, HiGigClassSelect, PolicerGroup, StatGroup, NatCancel, Nat, NatEgressOverride, FibreChanVsanId, FibreChanZoneCheckActionCancel, FibreChanIntVsanPri, IngSampleEnable, UnmodifiedPacketRedirectPort, PfcClassNew, RpIntCongestionNotificationNew, YpIntCongestionNotificationNew, GpIntCongestionNotificationNew, RecoverableDropCancel, FabricEHAddOrUpdate, Dot1pPreserve, GpDot1pPreserve, YpDot1pPreserve, RpDot1pPreserve, DscpPreserve, GpDscpPreserve, YpDscpPreserve, RpDscpPreserve, ChangeL2FieldsCancel, BFDSessionIdNew, CosMapNew, GpCosMapNew, YpCosMapNew, RpCosMapNew, ChangeL2Fields, HgTrunkRandomRoundRobinHashCancel, TrunkRandomRoundRobinHashCancel, EcmpRandomRoundRobinHashCancel, PacketTraceEnable, UntaggedPacketPriorityNew, DoNotCutThrough, ServicePoolIdPrecedenceNew, EgressTimeStampInsert, IngressTimeStampInsert, IngressTimeStampInsertCancel, EgressTimeStampInsertCancel, DynamicEcmpEnable, Dgm, DgmThreshold, DgmBias, DgmCost, DynamicHgTrunkEnable, TrunkResilientHashEnable, TrunkResilientHashDisable, EcmpResilientHashEnable, EcmpResilientHashDisable, HiGigTrunkResilientHashEnable, HiGigTrunkResilientHashDisable, IntEncapEnable, IntTurnAround, AddIngOuterVlanToEgrOuterVlan, Erspan3HdrVlanCosPktCopy, IntEncapUpdate, LoopbackType, NshEncapEnable, NshServicePathId, NshServiceIndex, GbpClassifierAdd, GbpSrcIdNew, AssignOpaqueObject1, AssignOpaqueObject2, AssignOpaqueObject3, AssignOpaqueObject4, AssignExtractionCtrlId, AssignEditCtrlId, GbpSrcMacMcastBitSet, GbpDstIdNew, LoopbackSubtype, EgressFlowControlEnable, EgressFlowEncapEnable, AssignNatClassId, AssignChangeL2FieldsClassId, EncapIfaMetadataHdr, LoopbackCustomSubtype},
+         Qualifiers in Part-0: {DstMac->InPorts->L4DstPort->Ttl->DstClassL3->IpType->TunnelTerminated->L2StationMove->DstL3Egress->_InPorts_1},
+         Qualifiers in Part-1: {DstIp->L4SrcPort->EtherType->IpProtocol->PacketRes->IpInfo->IpType->InterfaceClassL2->L2SrcStatic->L3DestRouteHit->Vpn->MyStationHit->StpState->SysHdrType->_InPorts_2},
+
+         group_priority= 5000
+         slice_primary =  {slice_number=0, Entry count=768(0x300), Entry free=717(0x2cd)},
+         slice_secondary = {slice_number=1}
+         group_status={prio_min=0, prio_max=2147483647, entries_total=3072, entries_free=3021,
+                       counters_total=83968, counters_free=57796, meters_total=6144, meters_free=6108}
+EID 0x00000001: gid=0x1,
+ slice=0, slice_idx=0, part=0, prio=0, flags=0x810602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0, part=1, prio=0, flags=0x810604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpType 
+    Part:0 Offset0: 154 Width0:   2 
+    Part:0 Offset1: 156 Width1:   2 
+    Part:1 Offset2: 154 Width2:   1 
+    DATA=0x00000008 
+    MASK=0x00000008 
+         action={act=Drop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 1  slice = 8 idx=4 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000002: gid=0x1,
+ slice=0, slice_idx=0x1, part=0, prio=0, flags=0x810602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x1, part=1, prio=0, flags=0x810604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpType 
+    Part:0 Offset0: 154 Width0:   2 
+    Part:0 Offset1: 156 Width1:   2 
+    Part:1 Offset2: 154 Width2:   1 
+    DATA=0x00000008 
+    MASK=0x00000008 
+         action={act=Drop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics={stat id 2  slice = 8 idx=12 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000000a: gid=0x1,
+ slice=0, slice_idx=0x2, part=0, prio=0x7fffffff, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x2, part=1, prio=0x7fffffff, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ SysHdrType 
+    Part:1 Offset0: 92 Width0:   4 
+    Part:1 Offset1: 148 Width1:   2 
+    DATA=0x00000008 
+    MASK=0x00000018 
+         action={act=SwitchToCpuCancel, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CopyToCpuCancel, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics=NULL
+         Extended statistics=NULL
+EID 0x0000000c: gid=0x1,
+ slice=0, slice_idx=0x3, part=0, prio=0x17, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x3, part=1, prio=0x17, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000180 c2000002 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00008809 
+    MASK=0x0000ffff 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=23(0x17), param1=23(0x17), param2=0(0), param3=0(0)}
+         policer={pid=0x9, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1f4, commit_kbits_burst=0x1f4, PacketBased=0x1, mode=0, entries=2, Clean}
+         statistics={stat id 16  slice = 8 idx=48 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000000d: gid=0x1,
+ slice=0, slice_idx=0x7, part=0, prio=0x14, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x7, part=1, prio=0x14, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4DstPort 
+    Part:0 Offset0: 84 Width0:   4 
+    Part:0 Offset1: 88 Width1:   4 
+    Part:0 Offset2: 92 Width2:   4 
+    Part:0 Offset3: 96 Width3:   4 
+    DATA=0x00000ec8 
+    MASK=0x0000ffff 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000011 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=20(0x14), param1=20(0x14), param2=0(0), param3=0(0)}
+         policer={pid=0x2, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x7d0, commit_kbits_burst=0x7d0, PacketBased=0x1, mode=0, entries=5, Clean}
+         statistics={stat id 9  slice = 8 idx=28 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000000e: gid=0x1,
+ slice=0, slice_idx=0x8, part=0, prio=0x14, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x8, part=1, prio=0x14, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4DstPort 
+    Part:0 Offset0: 84 Width0:   4 
+    Part:0 Offset1: 88 Width1:   4 
+    Part:0 Offset2: 92 Width2:   4 
+    Part:0 Offset3: 96 Width3:   4 
+    DATA=0x000012b0 
+    MASK=0x0000ffff 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000011 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=20(0x14), param1=20(0x14), param2=0(0), param3=0(0)}
+         policer={pid=0x2, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x7d0, commit_kbits_burst=0x7d0, PacketBased=0x1, mode=0, entries=5, Clean}
+         statistics={stat id 9  slice = 8 idx=28 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000000f: gid=0x1,
+ slice=0, slice_idx=0x9, part=0, prio=0x14, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x9, part=1, prio=0x14, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4DstPort 
+    Part:0 Offset0: 84 Width0:   4 
+    Part:0 Offset1: 88 Width1:   4 
+    Part:0 Offset2: 92 Width2:   4 
+    Part:0 Offset3: 96 Width3:   4 
+    DATA=0x00000ec8 
+    MASK=0x0000ffff 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000011 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=20(0x14), param1=20(0x14), param2=0(0), param3=0(0)}
+         policer={pid=0x2, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x7d0, commit_kbits_burst=0x7d0, PacketBased=0x1, mode=0, entries=5, Clean}
+         statistics={stat id 9  slice = 8 idx=28 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000010: gid=0x1,
+ slice=0, slice_idx=0xa, part=0, prio=0x14, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0xa, part=1, prio=0x14, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4DstPort 
+    Part:0 Offset0: 84 Width0:   4 
+    Part:0 Offset1: 88 Width1:   4 
+    Part:0 Offset2: 92 Width2:   4 
+    Part:0 Offset3: 96 Width3:   4 
+    DATA=0x000012b0 
+    MASK=0x0000ffff 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000011 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=20(0x14), param1=20(0x14), param2=0(0), param3=0(0)}
+         policer={pid=0x2, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x7d0, commit_kbits_burst=0x7d0, PacketBased=0x1, mode=0, entries=5, Clean}
+         statistics={stat id 9  slice = 8 idx=28 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000011: gid=0x1,
+ slice=0, slice_idx=0x22, part=0, prio=0xa, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x22, part=1, prio=0xa, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x0000ffff ffffffff 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000806 
+    MASK=0x0000ffff 
+ IpType 
+    Part:0 Offset0: 154 Width0:   2 
+    Part:0 Offset1: 156 Width1:   2 
+    Part:1 Offset2: 154 Width2:   1 
+    DATA=0x00000008 
+    MASK=0x0000001f 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=10(0xa), param1=10(0xa), param2=0(0), param3=0(0)}
+         policer={pid=0x1, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 8  slice = 8 idx=8 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000012: gid=0x1,
+ slice=0, slice_idx=0x23, part=0, prio=0xa, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x23, part=1, prio=0xa, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x0000b4e9 b8e7ce02 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000806 
+    MASK=0x0000ffff 
+ IpType 
+    Part:0 Offset0: 154 Width0:   2 
+    Part:0 Offset1: 156 Width1:   2 
+    Part:1 Offset2: 154 Width2:   1 
+    DATA=0x00000008 
+    MASK=0x0000001f 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=10(0xa), param1=10(0xa), param2=0(0), param3=0(0)}
+         policer={pid=0x1, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 8  slice = 8 idx=8 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000013: gid=0x1,
+ slice=0, slice_idx=0x24, part=0, prio=0xa, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x24, part=1, prio=0xa, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x0000b4e9 b8e7ce02 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000806 
+    MASK=0x0000ffff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ TunnelTerminated 
+    Part:0 Offset0: 158 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=10(0xa), param1=10(0xa), param2=0(0), param3=0(0)}
+         policer={pid=0x1, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 8  slice = 8 idx=8 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000014: gid=0x1,
+ slice=0, slice_idx=0x25, part=0, prio=0xa, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x25, part=1, prio=0xa, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x0000ffff ffffffff 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000806 
+    MASK=0x0000ffff 
+ IpType 
+    Part:0 Offset0: 154 Width0:   2 
+    Part:0 Offset1: 156 Width1:   2 
+    Part:1 Offset2: 154 Width2:   1 
+    DATA=0x00000009 
+    MASK=0x0000001f 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=10(0xa), param1=10(0xa), param2=0(0), param3=0(0)}
+         policer={pid=0x1, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 8  slice = 8 idx=8 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000015: gid=0x1,
+ slice=0, slice_idx=0x26, part=0, prio=0xa, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x26, part=1, prio=0xa, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x0000b4e9 b8e7ce02 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000806 
+    MASK=0x0000ffff 
+ IpType 
+    Part:0 Offset0: 154 Width0:   2 
+    Part:0 Offset1: 156 Width1:   2 
+    Part:1 Offset2: 154 Width2:   1 
+    DATA=0x00000009 
+    MASK=0x0000001f 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=10(0xa), param1=10(0xa), param2=0(0), param3=0(0)}
+         policer={pid=0x1, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 8  slice = 8 idx=8 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000016: gid=0x1,
+ slice=0, slice_idx=0x27, part=0, prio=0xa, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x27, part=1, prio=0xa, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4SrcPort 
+    Part:1 Offset0: 64 Width0:  16 
+    DATA=0x00008500 
+    MASK=0x0000ff00 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x0000003a 
+    MASK=0x000000ff 
+ Ttl 
+    Part:0 Offset0: 144 Width0:   4 
+    Part:0 Offset1: 148 Width1:   2 
+    Part:0 Offset2: 150 Width2:   2 
+    DATA=0x000000ff 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=10(0xa), param1=10(0xa), param2=0(0), param3=0(0)}
+         policer={pid=0x1, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 8  slice = 8 idx=8 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000017: gid=0x1,
+ slice=0, slice_idx=0x28, part=0, prio=0xa, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x28, part=1, prio=0xa, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4SrcPort 
+    Part:1 Offset0: 64 Width0:  16 
+    DATA=0x00008600 
+    MASK=0x0000fe00 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x0000003a 
+    MASK=0x000000ff 
+ Ttl 
+    Part:0 Offset0: 144 Width0:   4 
+    Part:0 Offset1: 148 Width1:   2 
+    Part:0 Offset2: 150 Width2:   2 
+    DATA=0x000000ff 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=10(0xa), param1=10(0xa), param2=0(0), param3=0(0)}
+         policer={pid=0x1, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 8  slice = 8 idx=8 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000018: gid=0x1,
+ slice=0, slice_idx=0x29, part=0, prio=0xa, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x29, part=1, prio=0xa, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4SrcPort 
+    Part:1 Offset0: 64 Width0:  16 
+    DATA=0x00008800 
+    MASK=0x0000fe00 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x0000003a 
+    MASK=0x000000ff 
+ Ttl 
+    Part:0 Offset0: 144 Width0:   4 
+    Part:0 Offset1: 148 Width1:   2 
+    Part:0 Offset2: 150 Width2:   2 
+    DATA=0x000000ff 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=10(0xa), param1=10(0xa), param2=0(0), param3=0(0)}
+         policer={pid=0x1, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 8  slice = 8 idx=8 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000019: gid=0x1,
+ slice=0, slice_idx=0x1a, part=0, prio=0xe, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x1a, part=1, prio=0xe, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4SrcPort 
+    Part:1 Offset0: 64 Width0:  16 
+    DATA=0x000000b3 
+    MASK=0x0000ffff 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000006 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=14(0xe), param1=14(0xe), param2=0(0), param3=0(0)}
+         policer={pid=0x3, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x2710, commit_kbits_burst=0x2710, PacketBased=0x1, mode=0, entries=5, Clean}
+         statistics={stat id 10  slice = 8 idx=24 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000001a: gid=0x1,
+ slice=0, slice_idx=0x1b, part=0, prio=0xe, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x1b, part=1, prio=0xe, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4DstPort 
+    Part:0 Offset0: 84 Width0:   4 
+    Part:0 Offset1: 88 Width1:   4 
+    Part:0 Offset2: 92 Width2:   4 
+    Part:0 Offset3: 96 Width3:   4 
+    DATA=0x000000b3 
+    MASK=0x0000ffff 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000006 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=14(0xe), param1=14(0xe), param2=0(0), param3=0(0)}
+         policer={pid=0x3, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x2710, commit_kbits_burst=0x2710, PacketBased=0x1, mode=0, entries=5, Clean}
+         statistics={stat id 10  slice = 8 idx=24 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000001b: gid=0x1,
+ slice=0, slice_idx=0x1c, part=0, prio=0xe, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x1c, part=1, prio=0xe, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4SrcPort 
+    Part:1 Offset0: 64 Width0:  16 
+    DATA=0x000000b3 
+    MASK=0x0000ffff 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000006 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=14(0xe), param1=14(0xe), param2=0(0), param3=0(0)}
+         policer={pid=0x3, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x2710, commit_kbits_burst=0x2710, PacketBased=0x1, mode=0, entries=5, Clean}
+         statistics={stat id 10  slice = 8 idx=24 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000001c: gid=0x1,
+ slice=0, slice_idx=0x1d, part=0, prio=0xe, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x1d, part=1, prio=0xe, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4DstPort 
+    Part:0 Offset0: 84 Width0:   4 
+    Part:0 Offset1: 88 Width1:   4 
+    Part:0 Offset2: 92 Width2:   4 
+    Part:0 Offset3: 96 Width3:   4 
+    DATA=0x000000b3 
+    MASK=0x0000ffff 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000006 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=14(0xe), param1=14(0xe), param2=0(0), param3=0(0)}
+         policer={pid=0x3, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x2710, commit_kbits_burst=0x2710, PacketBased=0x1, mode=0, entries=5, Clean}
+         statistics={stat id 10  slice = 8 idx=24 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000001d: gid=0x1,
+ slice=0, slice_idx=0x30, part=0, prio=0, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x30, part=1, prio=0, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000100 0ccccccc 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00002000 
+    MASK=0x0000ffff 
+         action={act=CosQCpuNew, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=Drop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer={pid=0x4, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x64, commit_kbits_burst=0x64, PacketBased=0x1, mode=0, entries=2, Clean}
+         statistics={stat id 11  slice = 8 idx=20 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000001e: gid=0x1,
+ slice=0, slice_idx=0x10, part=0, prio=0x10, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x10, part=1, prio=0x10, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4DstPort 
+    Part:0 Offset0: 84 Width0:   4 
+    Part:0 Offset1: 88 Width1:   4 
+    Part:0 Offset2: 92 Width2:   4 
+    Part:0 Offset3: 96 Width3:   4 
+    DATA=0x000022b8 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000006 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=16(0x10), param1=16(0x10), param2=0(0), param3=0(0)}
+         policer={pid=0x5, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 12  slice = 8 idx=16 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000001f: gid=0x1,
+ slice=0, slice_idx=0x11, part=0, prio=0x10, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x11, part=1, prio=0x10, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4SrcPort 
+    Part:1 Offset0: 64 Width0:  16 
+    DATA=0x000022b8 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000006 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=16(0x10), param1=16(0x10), param2=0(0), param3=0(0)}
+         policer={pid=0x5, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 12  slice = 8 idx=16 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000020: gid=0x1,
+ slice=0, slice_idx=0x2b, part=0, prio=0x8, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x2b, part=1, prio=0x8, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=8(0x8), param1=8(0x8), param2=0(0), param3=0(0)}
+         policer={pid=0x6, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x3e8, commit_kbits_burst=0x3e8, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 13  slice = 8 idx=60 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000021: gid=0x1,
+ slice=0, slice_idx=0x2c, part=0, prio=0x8, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x2c, part=1, prio=0x8, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x0000003a 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=8(0x8), param1=8(0x8), param2=0(0), param3=0(0)}
+         policer={pid=0x6, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x3e8, commit_kbits_burst=0x3e8, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 13  slice = 8 idx=60 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000022: gid=0x1,
+ slice=0, slice_idx=0x1f, part=0, prio=0xc, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x1f, part=1, prio=0xc, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000002 
+    MASK=0x000000ff 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=12(0xc), param1=12(0xc), param2=0(0), param3=0(0)}
+         policer={pid=0x7, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x7d0, commit_kbits_burst=0x7d0, PacketBased=0x1, mode=0, entries=2, Clean}
+         statistics={stat id 14  slice = 8 idx=56 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000023: gid=0x1,
+ slice=0, slice_idx=0x2e, part=0, prio=0x7, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x2e, part=1, prio=0x7, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=7(0x7), param1=7(0x7), param2=0(0), param3=0(0)}
+         policer={pid=0x8, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1770, commit_kbits_burst=0x1770, PacketBased=0x1, mode=0, entries=2, Clean}
+         statistics={stat id 15  slice = 8 idx=52 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000024: gid=0x1,
+ slice=0, slice_idx=0x2d, part=0, prio=0x8, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x2d, part=1, prio=0x8, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ L4DstPort 
+    Part:0 Offset0: 84 Width0:   4 
+    Part:0 Offset1: 88 Width1:   4 
+    Part:0 Offset2: 92 Width2:   4 
+    Part:0 Offset3: 96 Width3:   4 
+    DATA=0x000012b5 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000011 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ TunnelTerminated 
+    Part:0 Offset0: 158 Width0:   1 
+    DATA=0x00000000 
+    MASK=0x00000001 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+         action={act=CopyToCpuCancel, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=Drop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer=
+         statistics=NULL
+         Extended statistics=NULL
+EID 0x00000025: gid=0x1,
+ slice=0, slice_idx=0xb, part=0, prio=0x12, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0xb, part=1, prio=0x12, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000180 c2000000 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000088cc 
+    MASK=0x0000ffff 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=18(0x12), param1=18(0x12), param2=0(0), param3=0(0)}
+         policer={pid=0xa, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1f4, commit_kbits_burst=0x1f4, PacketBased=0x1, mode=0, entries=4, Clean}
+         statistics={stat id 17  slice = 8 idx=44 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000026: gid=0x1,
+ slice=0, slice_idx=0xc, part=0, prio=0x12, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0xc, part=1, prio=0x12, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000180 c2000003 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000088cc 
+    MASK=0x0000ffff 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=18(0x12), param1=18(0x12), param2=0(0), param3=0(0)}
+         policer={pid=0xa, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1f4, commit_kbits_burst=0x1f4, PacketBased=0x1, mode=0, entries=4, Clean}
+         statistics={stat id 17  slice = 8 idx=44 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000027: gid=0x1,
+ slice=0, slice_idx=0xd, part=0, prio=0x12, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0xd, part=1, prio=0x12, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000180 c200000e 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000088cc 
+    MASK=0x0000ffff 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=18(0x12), param1=18(0x12), param2=0(0), param3=0(0)}
+         policer={pid=0xa, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1f4, commit_kbits_burst=0x1f4, PacketBased=0x1, mode=0, entries=4, Clean}
+         statistics={stat id 17  slice = 8 idx=44 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000002b: gid=0x1,
+ slice=0, slice_idx=0x12, part=0, prio=0xf, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x12, part=1, prio=0xf, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstIp 
+    Part:1 Offset0:  0 Width0:  16 
+    Part:1 Offset1: 20 Width1:  16 
+    DATA=0xe0000004 
+    MASK=0xfffffffc 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000059 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=15(0xf), param1=15(0xf), param2=0(0), param3=0(0)}
+         policer={pid=0xd, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 20  slice = 8 idx=40 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000002c: gid=0x1,
+ slice=0, slice_idx=0x13, part=0, prio=0xf, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x13, part=1, prio=0xf, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000059 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=15(0xf), param1=15(0xf), param2=0(0), param3=0(0)}
+         policer={pid=0xd, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 20  slice = 8 idx=40 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000002d: gid=0x1,
+ slice=0, slice_idx=0x14, part=0, prio=0xf, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x14, part=1, prio=0xf, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00003333 00000005 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000059 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=15(0xf), param1=15(0xf), param2=0(0), param3=0(0)}
+         policer={pid=0xd, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 20  slice = 8 idx=40 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000002e: gid=0x1,
+ slice=0, slice_idx=0x15, part=0, prio=0xf, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x15, part=1, prio=0xf, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00003333 00000006 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000059 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=15(0xf), param1=15(0xf), param2=0(0), param3=0(0)}
+         policer={pid=0xd, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 20  slice = 8 idx=40 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000002f: gid=0x1,
+ slice=0, slice_idx=0x16, part=0, prio=0xf, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x16, part=1, prio=0xf, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000059 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=15(0xf), param1=15(0xf), param2=0(0), param3=0(0)}
+         policer={pid=0xd, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 20  slice = 8 idx=40 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000030: gid=0x1,
+ slice=0, slice_idx=0x17, part=0, prio=0xf, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x17, part=1, prio=0xf, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00003333 00000005 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000032 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=15(0xf), param1=15(0xf), param2=0(0), param3=0(0)}
+         policer={pid=0xd, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 20  slice = 8 idx=40 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000031: gid=0x1,
+ slice=0, slice_idx=0x18, part=0, prio=0xf, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x18, part=1, prio=0xf, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00003333 00000006 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000032 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=15(0xf), param1=15(0xf), param2=0(0), param3=0(0)}
+         policer={pid=0xd, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 20  slice = 8 idx=40 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000032: gid=0x1,
+ slice=0, slice_idx=0x19, part=0, prio=0xf, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x19, part=1, prio=0xf, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000032 
+    MASK=0x000000ff 
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=15(0xf), param1=15(0xf), param2=0(0), param3=0(0)}
+         policer={pid=0xd, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=9, Clean}
+         statistics={stat id 20  slice = 8 idx=40 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000033: gid=0x1,
+ slice=0, slice_idx=0x1e, part=0, prio=0xd, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x1e, part=1, prio=0xd, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000067 
+    MASK=0x000000ff 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=13(0xd), param1=13(0xd), param2=0(0), param3=0(0)}
+         policer={pid=0xe, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1388, commit_kbits_burst=0x1388, PacketBased=0x1, mode=0, entries=2, Clean}
+         statistics={stat id 21  slice = 8 idx=36 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000034: gid=0x1,
+ slice=0, slice_idx=0x5, part=0, prio=0x15, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x5, part=1, prio=0x15, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000180 c2000000 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=21(0x15), param1=21(0x15), param2=0(0), param3=0(0)}
+         policer={pid=0xf, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x3e80, commit_kbits_burst=0x3e80, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 22  slice = 8 idx=32 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000035: gid=0x1,
+ slice=0, slice_idx=0x6, part=0, prio=0x15, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x6, part=1, prio=0x15, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000100 0ccccccd 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=21(0x15), param1=21(0x15), param2=0(0), param3=0(0)}
+         policer={pid=0xf, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x3e80, commit_kbits_burst=0x3e80, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 22  slice = 8 idx=32 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000036: gid=0x1,
+ slice=0, slice_idx=0x2f, part=0, prio=0x6, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x2f, part=1, prio=0x6, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ DstClassL3 
+    Part:0 Offset0: 132 Width0:   4 
+    Part:0 Offset1: 136 Width1:   4 
+    Part:0 Offset2: 140 Width2:   4 
+    DATA=0x00000002 
+    MASK=0x000000ff 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=6(0x6), param1=6(0x6), param2=0(0), param3=0(0)}
+         policer={pid=0x10, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x7d0, commit_kbits_burst=0x7d0, PacketBased=0x1, mode=0, entries=2, Clean}
+         statistics={stat id 23  slice = 8 idx=124 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000037: gid=0x1,
+ slice=0, slice_idx=0x20, part=0, prio=0xb, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x20, part=1, prio=0xb, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000806 
+    MASK=0x0000ffff 
+ IpType 
+    Part:0 Offset0: 154 Width0:   2 
+    Part:0 Offset1: 156 Width1:   2 
+    Part:1 Offset2: 154 Width2:   1 
+    DATA=0x00000008 
+    MASK=0x0000001f 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000002 
+    MASK=0x00000002 
+ TunnelTerminated 
+    Part:0 Offset0: 158 Width0:   1 
+    DATA=0x00000000 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=11(0xb), param1=11(0xb), param2=0(0), param3=0(0)}
+         policer={pid=0x11, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=4, Clean}
+         statistics={stat id 24  slice = 8 idx=120 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000038: gid=0x1,
+ slice=0, slice_idx=0x2a, part=0, prio=0xa, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x2a, part=1, prio=0xa, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x0000ffff ffffffff 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000806 
+    MASK=0x0000ffff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ TunnelTerminated 
+    Part:0 Offset0: 158 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=YpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=10(0xa), param1=0(0), param2=0(0), param3=0(0)}
+         policer={pid=0x11, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=4, Clean}
+         statistics={stat id 24  slice = 8 idx=120 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000039: gid=0x1,
+ slice=0, slice_idx=0x21, part=0, prio=0xb, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x21, part=1, prio=0xb, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ L4SrcPort 
+    Part:1 Offset0: 64 Width0:  16 
+    DATA=0x00008700 
+    MASK=0x0000ff00 
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x0000003a 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000002 
+    MASK=0x00000002 
+ TunnelTerminated 
+    Part:0 Offset0: 158 Width0:   1 
+    DATA=0x00000000 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=11(0xb), param1=11(0xb), param2=0(0), param3=0(0)}
+         policer={pid=0x11, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0xbb8, commit_kbits_burst=0xbb8, PacketBased=0x1, mode=0, entries=4, Clean}
+         statistics={stat id 24  slice = 8 idx=120 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000003a: gid=0x1,
+ slice=0, slice_idx=0x31, part=0, prio=0, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x31, part=1, prio=0, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000000 
+    MASK=0x00000100 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ Ttl 
+    Part:0 Offset0: 144 Width0:   4 
+    Part:0 Offset1: 148 Width1:   2 
+    Part:0 Offset2: 150 Width2:   2 
+    DATA=0x00000000 
+    MASK=0x000000fe 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer={pid=0x12, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x64, commit_kbits_burst=0x64, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 25  slice = 8 idx=116 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000003b: gid=0x1,
+ slice=0, slice_idx=0x32, part=0, prio=0, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x32, part=1, prio=0, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000000 
+    MASK=0x00000100 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ Ttl 
+    Part:0 Offset0: 144 Width0:   4 
+    Part:0 Offset1: 148 Width1:   2 
+    Part:0 Offset2: 150 Width2:   2 
+    DATA=0x00000000 
+    MASK=0x000000fe 
+ MyStationHit 
+    Part:1 Offset0: 153 Width0:   1 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         policer={pid=0x12, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x64, commit_kbits_burst=0x64, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 25  slice = 8 idx=116 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x0000003c: gid=0x1,
+ slice=0, slice_idx=0x4, part=0, prio=0x16, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0x4, part=1, prio=0x16, flags=0x10604, Installed, Enabled, color_indep=1
+
+ DstMac 
+    Part:0 Offset0: 64 Width0:  16 
+    Part:0 Offset1: 36 Width1:   4 
+    Part:0 Offset2: 40 Width2:   4 
+    Part:0 Offset3: 44 Width3:   4 
+    Part:0 Offset4: 80 Width4:   4 
+    Part:0 Offset5: 100 Width5:   4 
+    Part:0 Offset6: 104 Width6:   4 
+    Part:0 Offset7: 108 Width7:   4 
+    Part:0 Offset8: 112 Width8:   4 
+    DATA=0x00000100 0ccccccc 
+    MASK=0x0000ffff ffffffff 
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000111 
+    MASK=0x0000ffff 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=22(0x16), param1=22(0x16), param2=0(0), param3=0(0)}
+         policer={pid=0x13, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1f4, commit_kbits_burst=0x1f4, PacketBased=0x1, mode=0, entries=2, Clean}
+         statistics={stat id 26  slice = 8 idx=112 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000041: gid=0x1,
+ slice=0, slice_idx=0xe, part=0, prio=0x11, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0xe, part=1, prio=0x11, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x00000800 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000070 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=17(0x11), param1=17(0x11), param2=0(0), param3=0(0)}
+         policer={pid=0x15, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1f4, commit_kbits_burst=0x1f4, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 32  slice = 8 idx=108 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+EID 0x00000042: gid=0x1,
+ slice=0, slice_idx=0xf, part=0, prio=0x11, flags=0x10602, Installed, Enabled, color_indep=1
+ slice=1, slice_idx=0xf, part=1, prio=0x11, flags=0x10604, Installed, Enabled, color_indep=1
+
+ InPorts 
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000020000000000000001
+ _InPorts_0 
+   Instance=0
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
+   Instance=1
+     DATA=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+     MASK=0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+ _InPorts_1 
+   Instance=0
+     DATA=0x0
+     MASK=0x0
+   Instance=1
+     DATA=0x0
+     MASK=0x0
+ _InPorts_2 
+   Instance=0
+     DATA=0x0
+     MASK=0x8000
+   Instance=1
+     DATA=0x0
+     MASK=0x8000
+ EtherType 
+    Part:1 Offset0: 48 Width0:  16 
+    DATA=0x000086dd 
+    MASK=0x0000ffff 
+ IpProtocol 
+    Part:1 Offset0: 96 Width0:   4 
+    Part:1 Offset1: 100 Width1:   4 
+    DATA=0x00000070 
+    MASK=0x000000ff 
+ InterfaceClassL2 
+    Part:1 Offset0: 80 Width0:   4 
+    Part:1 Offset1: 84 Width1:   4 
+    Part:1 Offset2: 88 Width2:   4 
+    DATA=0x00000001 
+    MASK=0x00000001 
+ StpState 
+    Part:1 Offset0: 150 Width0:   2 
+    DATA=0x00000003 
+    MASK=0x00000003 
+         action={act=RpDrop, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=UnmodifiedPacketRedirectPort, param0=134217728(0x8000000), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=GpCopyToCpu, param0=0(0), param1=0(0), param2=0(0), param3=0(0)}
+         action={act=CosQCpuNew, param0=17(0x11), param1=17(0x11), param2=0(0), param3=0(0)}
+         policer={pid=0x15, level=0, peak_kbits_sec=0, peak_kbits_burst=0, commit_kbits_sec=0x1f4, commit_kbits_burst=0x1f4, PacketBased=0x1, mode=0, entries=3, Clean}
+         statistics={stat id 32  slice = 8 idx=108 entries=3}{Bytes}{Packets}{GreenBytes}{GreenPackets}{YellowBytes}{YellowPackets}{RedBytes}{RedPackets}
+         Extended statistics=NULL
+drivshell>

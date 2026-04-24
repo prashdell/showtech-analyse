@@ -1,0 +1,47 @@
+****************************************************************************
+syncd techsupport dump begin at Mon 16 Mar 2026 06:06:48 AM GMT
+****************************************************************************
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c SYNCD -e show system internal syncd acl-counter global
+--------------------------------------------------------------------
+ACL Counter thread running:1
+Scheduled size:0
+Completed size:0
+Total counter size:0
+Last processing time:0 ms
+Bulk read size:128
+Polling interval: 5000-10000 ms with 7 multipler
+*************** Profiling data ***************
+End to End Execution time: 102.99 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.467s
+user	0m0.276s
+sys	0m0.063s
+
+
+
+--------------------------------------------------------------------
+debugsh -p -b 16384 -c SYNCD -e show system internal syncd acl-counter counters
+--------------------------------------------------------------------
+*************** Profiling data ***************
+End to End Execution time: 106.80 ms
+Backend execution time: 0 ms
+**********************************************
+
+
+real	0m0.448s
+user	0m0.292s
+sys	0m0.044s
+
+
+
+
+
+****************************************************************************
+syncd techsupport dump ended at Mon 16 Mar 2026 06:06:49 AM GMT
+****************************************************************************

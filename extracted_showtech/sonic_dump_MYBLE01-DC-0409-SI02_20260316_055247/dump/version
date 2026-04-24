@@ -1,0 +1,70 @@
+
+SONiC Software Version: SONiC-OS-4.5.1-Enterprise_Standard
+Product: Enterprise SONiC Distribution by Dell Technologies
+Distribution: Debian 11.11
+Kernel: 5.10.0-35-amd64
+Config DB Version: version_4_5_3
+Build commit: 7ef4c1a1eb
+Build date: Tue Oct 21 06:17:22 UTC 2025
+Built by: sonicbld@bld-lvn-csg-01
+
+Platform: x86_64-dellemc_s5248f_c3538-r0
+HwSKU: DellEMC-S5248f-P-25G-DPB
+ASIC: broadcom
+ASIC Count: 1
+
+Platform: X86_64-dellemc_s5248f_c3538-r0
+Serial Number: TH05K640CET0059K0NX0
+Uptime: 05:58:02 up 8 days, 59 min,  1 user,  load average: 1.91, 2.43, 2.46
+
+Docker images:
+REPOSITORY                    TAG                         IMAGE ID       SIZE
+docker-platform-monitor       4.5.1-Enterprise_Standard   7296319bf218   580MB
+docker-platform-monitor       latest                      7296319bf218   580MB
+docker-snmp                   4.5.1-Enterprise_Standard   4c16e84b1952   431MB
+docker-snmp                   latest                      4c16e84b1952   431MB
+docker-syncd-brcm-ent-base    4.5.1-Enterprise_Standard   df1ab26138b8   912MB
+docker-syncd-brcm-ent-base    latest                      df1ab26138b8   912MB
+docker-gbsyncd-brcm           4.5.1-Enterprise_Standard   6f7c6088b430   949MB
+docker-gbsyncd-brcm           latest                      6f7c6088b430   949MB
+docker-dhcp-relay-ent-base    4.5.1-Enterprise_Standard   b62ddba4ddfe   455MB
+docker-dhcp-relay-ent-base    latest                      b62ddba4ddfe   455MB
+docker-swss-brcm-ent-base     4.5.1-Enterprise_Standard   2fe55f6ba979   451MB
+docker-swss-brcm-ent-base     latest                      2fe55f6ba979   451MB
+docker-vrrp                   4.5.1-Enterprise_Standard   d0de7617002a   460MB
+docker-vrrp                   latest                      d0de7617002a   460MB
+docker-udld                   4.5.1-Enterprise_Standard   3ad3849bd149   457MB
+docker-udld                   latest                      3ad3849bd149   457MB
+docker-teamd                  4.5.1-Enterprise_Standard   c714395f9207   451MB
+docker-teamd                  latest                      c714395f9207   451MB
+docker-fpm-frr                4.5.1-Enterprise_Standard   0dc42bd78e90   489MB
+docker-fpm-frr                latest                      0dc42bd78e90   489MB
+docker-stp                    4.5.1-Enterprise_Standard   616e37e1e37a   455MB
+docker-stp                    latest                      616e37e1e37a   455MB
+docker-lldp                   4.5.1-Enterprise_Standard   c181c0555738   493MB
+docker-lldp                   latest                      c181c0555738   493MB
+docker-sflow                  4.5.1-Enterprise_Standard   d73fda701785   453MB
+docker-sflow                  latest                      d73fda701785   453MB
+docker-l2mcd                  4.5.1-Enterprise_Standard   6cf6449c8582   453MB
+docker-l2mcd                  latest                      6cf6449c8582   453MB
+docker-iccpd                  4.5.1-Enterprise_Standard   c24b176567ab   454MB
+docker-iccpd                  latest                      c24b176567ab   454MB
+docker-nat                    4.5.1-Enterprise_Standard   f2ab8651d3c7   453MB
+docker-nat                    latest                      f2ab8651d3c7   453MB
+docker-sonic-mgmt-framework   4.5.1-Enterprise_Standard   5c3e15235cf6   716MB
+docker-sonic-mgmt-framework   latest                      5c3e15235cf6   716MB
+docker-sonic-telemetry        4.5.1-Enterprise_Standard   f4681475b084   550MB
+docker-sonic-telemetry        latest                      f4681475b084   550MB
+docker-timesync               4.5.1-Enterprise_Standard   f90d51d3a4a1   446MB
+docker-timesync               latest                      f90d51d3a4a1   446MB
+docker-tam                    4.5.1-Enterprise_Standard   dc0a5359b801   443MB
+docker-tam                    latest                      dc0a5359b801   443MB
+docker-eventd                 4.5.1-Enterprise_Standard   c62898e50d31   403MB
+docker-eventd                 latest                      c62898e50d31   403MB
+docker-mfa                    4.5.1-Enterprise_Standard   a342cb439a52   411MB
+docker-mfa                    latest                      a342cb439a52   411MB
+docker-database               4.5.1-Enterprise_Standard   97354b392d2b   402MB
+docker-database               latest                      97354b392d2b   402MB
+docker-router-advertiser      4.5.1-Enterprise_Standard   815458aa8598   402MB
+docker-router-advertiser      latest                      815458aa8598   402MB
+

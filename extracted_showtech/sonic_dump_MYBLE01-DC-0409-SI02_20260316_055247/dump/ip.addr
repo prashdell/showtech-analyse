@@ -1,0 +1,532 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    12591852077 83505302 0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    12591852077 83505302 0       0       0       0       
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq master mgmt state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:00 brd ff:ff:ff:ff:ff:ff
+    inet 10.92.56.60/23 brd 10.92.57.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::b6e9:b8ff:fee7:ce00/64 scope link flags 4000 
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    1014698138 4203869  0       0       0       1800613 
+    TX: bytes  packets  errors  dropped carrier collsns 
+    776081598  1335937  0       0       0       0       
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:54:28:35:61 brd ff:ff:ff:ff:ff:ff
+    inet 240.127.1.1/24 brd 240.127.1.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fd00::1/80 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::1/64 scope link 
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+5: bcm0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 02:10:18:a9:62:ee brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+6: PortChannel100: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 qdisc noqueue master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    511611327  9148247  0       6       0       3518915 
+    TX: bytes  packets  errors  dropped carrier collsns 
+    803642655  11890556 0       0       0       0       
+7: Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9216 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    526375078  9599870  0       0       0       3472577 
+    TX: bytes  packets  errors  dropped carrier collsns 
+    1551595753 21476490 0       0       0       0       
+8: dummy: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue master Bridge state UNKNOWN group default qlen 1000
+    link/ether ae:e0:44:2e:cd:1b brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+9: SAG: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+10: Vlan1101@Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    17366500   347330   0       0       0       347330  
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+11: Vlan1102@Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4444 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    17366500   347330   0       0       0       347330  
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+12: Vlan1120@Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    inet 10.90.30.177/28 brd 10.90.30.191 scope global Vlan1120
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    12086211   184229   0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    747489478  9574896  0       0       0       0       
+13: Vlan2000@Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    inet 10.90.30.159/31 scope global Vlan2000
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    18924982   371943   0       0       0       347330  
+    TX: bytes  packets  errors  dropped carrier collsns 
+    178536879  2700938  0       0       0       0       
+14: Vlan677@Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    17366500   347330   0       0       0       347330  
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+15: Vlan678@Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    17366500   347330   0       0       0       347330  
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+16: Vlan802@Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    inet 10.99.100.132/28 brd 10.99.100.143 scope global Vlan802
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    43188003   758008   0       0       0       347331  
+    TX: bytes  packets  errors  dropped carrier collsns 
+    203739449  3031404  0       0       0       0       
+17: Vlan803@Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    inet 10.92.30.67/29 brd 10.92.30.71 scope global Vlan803
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    303213818  5680150  0       0       0       1041266 
+    TX: bytes  packets  errors  dropped carrier collsns 
+    196239966  2924099  0       0       0       0       
+18: Vlan809@Bridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    inet 10.92.30.235/29 brd 10.92.30.239 scope global Vlan809
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    79496064   1216220  0       0       0       347330  
+    TX: bytes  packets  errors  dropped carrier collsns 
+    225589873  3245151  0       0       0       0       
+19: mgmt: <NOARP,MASTER,UP,LOWER_UP> mtu 65575 qdisc noqueue state UP group default qlen 1000
+    link/ether 4e:e8:4e:8f:c3:f7 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    861405887  3251474  0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    52016      267      0       2       0       0       
+20: lo-m: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue master mgmt state UNKNOWN group default qlen 1000
+    link/ether 36:0d:fc:d1:fc:29 brd ff:ff:ff:ff:ff:ff
+    inet 127.0.0.1/8 scope host lo-m
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+21: CPU: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    1049512    15434    0       0       0       0       
+22: BFDRX@BFDTX: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 xdpgeneric/id:36 qdisc noqueue state UP group default qlen 1000
+    link/ether 92:a0:47:1a:34:72 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    1279181925 15599723 0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+23: BFDTX@BFDRX: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 xdpgeneric/id:33 qdisc noqueue state UP group default qlen 1000
+    link/ether 4a:d3:9e:2c:f7:9b brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    1279181925 15599723 0       0       0       0       
+24: pimreg@NONE: <NOARP,UP,LOWER_UP> mtu 1472 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/pimreg 
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+25: pimreg5000@NONE: <NOARP,ALLMULTI,UP,LOWER_UP> mtu 1472 qdisc noqueue master mgmt state UNKNOWN group default qlen 1000
+    link/pimreg 
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+26: Mirror: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+27: Drop-Mirror: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+28: Ethernet64: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+29: Ethernet72: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+30: Ethernet24: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+31: Ethernet25: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+32: docker-mgmt: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master mgmt state UNKNOWN group default qlen 1000
+    link/ether 22:59:ca:f7:2a:ca brd ff:ff:ff:ff:ff:ff
+    inet 240.127.10.10/24 scope global docker-mgmt
+       valid_lft forever preferred_lft forever
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    246        5        0       0       0       0       
+33: Ethernet26: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+34: Ethernet27: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 4444 xdpgeneric/id:869 qdisc pfifo_fast master Bridge state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    828        6        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    2574       6        0       0       0       0       
+35: Ethernet28: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+36: Ethernet29: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+37: Ethernet30: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+38: Ethernet31: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+39: Ethernet32: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+40: Ethernet33: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+41: Ethernet34: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+42: Ethernet35: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+43: Ethernet68: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+44: Ethernet76: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+45: Ethernet0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 xdpgeneric/id:61 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    8983946    92618    0       1       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    102046542  1065162  0       0       0       0       
+46: Ethernet1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 xdpgeneric/id:69 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    401711324  5570244  0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    977724869  9940991  0       0       0       0       
+47: Ethernet2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 xdpgeneric/id:117 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    8984722    92626    0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    102881672  1065163  0       0       0       0       
+48: Ethernet3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 xdpgeneric/id:157 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    397965172  5537288  0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    977307319  9940985  0       0       0       0       
+49: Ethernet4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 xdpgeneric/id:173 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    8984140    92620    0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    11161175   23156    0       0       0       0       
+50: Ethernet5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 xdpgeneric/id:181 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    8984140    92620    0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    10373859   23156    0       0       0       0       
+51: Ethernet6: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+52: Ethernet7: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+53: Ethernet8: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 9100 xdpgeneric/id:663 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+54: Ethernet9: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+55: Ethernet10: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 9100 xdpgeneric/id:611 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+56: Ethernet11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 xdpgeneric/id:306 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    11115738   23158    0       0       0       0       
+57: Ethernet60: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+58: Ethernet56: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 xdpgeneric/id:45 qdisc pfifo_fast master PortChannel100 state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    772262364  10601276 0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    573258889  6139342  0       0       0       0       
+59: Ethernet12: <BROADCAST,MULTICAST> mtu 9100 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+60: Ethernet13: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 7400 xdpgeneric/id:833 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+61: Ethernet14: <BROADCAST,MULTICAST> mtu 9100 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+62: Ethernet15: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 7600 xdpgeneric/id:817 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+63: Ethernet16: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 8700 xdpgeneric/id:841 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+64: Ethernet17: <BROADCAST,MULTICAST> mtu 6666 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+65: Ethernet18: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 8900 xdpgeneric/id:825 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+66: Ethernet19: <BROADCAST,MULTICAST> mtu 6666 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+67: Ethernet20: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 xdpgeneric/id:125 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    102038304  1422656  0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    302571741  3397375  0       0       0       0       
+68: Ethernet21: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 xdpgeneric/id:133 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    125284512  1658538  0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    329115819  3610068  0       0       0       0       
+69: Ethernet22: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 xdpgeneric/id:141 qdisc pfifo_fast master Bridge state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    293383594  3292255  0       0       0       0       
+70: Ethernet23: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+71: Ethernet36: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+72: Ethernet37: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+73: Ethernet38: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+74: Ethernet39: <BROADCAST,MULTICAST> mtu 9100 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+75: Ethernet40: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+76: Ethernet41: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+77: Ethernet42: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+78: Ethernet43: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+79: Ethernet44: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+80: Ethernet45: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+81: Ethernet46: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+82: Ethernet47: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+83: Ethernet48: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9100 xdpgeneric/id:53 qdisc pfifo_fast master PortChannel100 state UP group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    1871897732 26072402 0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    543618852  5843910  0       0       0       0       
+84: Ethernet52: <BROADCAST,MULTICAST> mtu 9100 qdisc noop state DOWN group default qlen 1000
+    link/ether b4:e9:b8:e7:ce:02 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       
+85: vrrp.83@Vlan803: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:00:5e:00:01:53 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped missed  mcast   
+    694620     717079   0       0       0       11577   
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0       

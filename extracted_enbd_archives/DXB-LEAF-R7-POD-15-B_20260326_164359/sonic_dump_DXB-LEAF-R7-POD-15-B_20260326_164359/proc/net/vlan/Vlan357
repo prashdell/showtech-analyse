@@ -1,0 +1,10 @@
+Vlan357  VID: 357	 REORDER_HDR: 1  dev->priv_flags: 1001
+         total frames received      3598118
+          total bytes received    165806186
+      Broadcast/Multicast Rcvd        29267
+
+      total frames transmitted           38
+       total bytes transmitted         1596
+Device: Bridge
+INGRESS priority mappings: 0:0  1:0  2:0  3:0  4:0  5:0  6:0 7:0
+ EGRESS priority mappings: 

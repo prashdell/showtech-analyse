@@ -1,0 +1,26 @@
+[Unit]
+Description=Per Platform init service
+Before=pmon.service
+Before=watchdog-control.service
+
+Before=opennsl-modules.service
+
+After=sysinit.target
+After=kdump-tools.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/platform_init.sh
+KillSignal=SIGKILL
+SuccessExitStatus=SIGKILL
+
+# Resource Limitations
+LimitCORE=infinity
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=pmon.service
+WantedBy=watchdog-control.service
+
+WantedBy=opennsl-modules.service
+
